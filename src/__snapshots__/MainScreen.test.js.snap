@@ -78,6 +78,7 @@ exports[`Mainscreen rendering, 2 surveys 1`] = `
       >
         <td
           className="Clickable"
+          data-testid="campaign-label"
           onClick={[Function]}
         >
           Mobilité des personnes 2018
@@ -139,6 +140,7 @@ exports[`Mainscreen rendering, 2 surveys 1`] = `
       >
         <td
           className="Clickable"
+          data-testid="campaign-label"
           onClick={[Function]}
         >
           Habitudes de vie 2019

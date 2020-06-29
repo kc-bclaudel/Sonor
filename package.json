@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "cypress:open": "cypress open",
-    "test": "jest"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
