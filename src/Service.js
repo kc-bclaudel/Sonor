@@ -10,7 +10,7 @@ class Service{
 	};
 
 	static getSurveyUnits = function(campaignId, cb){
-		fetch('http://localhost:8080/api/survey-units/')
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units')
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)
@@ -18,8 +18,26 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getSurveyUnit = function(surveyUnitId, cb){
-		fetch('http://localhost:8080/api/survey-unit/' + surveyUnitId)
+	static getInterviewers = function(campaignId, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/interviewers')
+	        .then(res => res.json())
+	        .then((data) => {
+	          cb(data)
+	        })
+	        .catch(console.log)
+	};
+
+	static getInterviewersStateCount = function(campaignId, idep, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/interviewer/' + idep + '/state-count')
+	        .then(res => res.json())
+	        .then((data) => {
+	          cb(data)
+	        })
+	        .catch(console.log)
+	};
+
+	static getStateCount = function(campaignId, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/state-count')
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)

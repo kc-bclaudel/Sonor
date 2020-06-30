@@ -51,36 +51,36 @@ class FollowUpTable extends React.Component {
         	<tr>
         		<th>Total DEM</th>
         		<th className='ColumnSpacing'/>
-        		<th className='YellowHeader'></th>
+        		<th className='YellowHeader'>{(Math.round(this.props.data.total.dem.completionRate * 1000) / 1000)*100}%</th>
         		<th className='ColumnSpacing'/>
-        		<th></th>
-        		<th></th>
-        		<th></th>
-        		<th></th>
-        		<th></th>
-        		<th></th>
+        		<th>{this.props.data.total.dem.total}</th>
+        		<th>{this.props.data.total.dem.notStarted}</th>
+        		<th>{this.props.data.total.dem.onGoing}</th>
+        		<th>{this.props.data.total.dem.waitingForIntValidation}</th>
+        		<th>{this.props.data.total.dem.intValidated}</th>
+        		<th>{this.props.data.total.dem.demValidated}</th>
         		<th className='ColumnSpacing'/>
-        		<th className='YellowHeader'></th>
-        		<th className='YellowHeader'></th>
-        		<th className='YellowHeader'></th>
-        		<th className='YellowHeader'></th>
+        		<th className='YellowHeader'>{this.props.data.total.dem.preparingContact}</th>
+        		<th className='YellowHeader'>{this.props.data.total.dem.atLeastOneContact}</th>
+        		<th className='YellowHeader'>{this.props.data.total.dem.appointmentTaken}</th>
+        		<th className='YellowHeader'>{this.props.data.total.dem.interviewStarted}</th>
         	</tr>
         	<tr>
         		<th>Total France</th>
         		<th className='ColumnSpacing'/>
-        		<th className='YellowHeader'></th>
+        		<th className='YellowHeader'>{(Math.round(this.props.data.total.france.completionRate * 1000) / 1000)*100}%</th>
         		<th className='ColumnSpacing'/>
-        		<th></th>
-        		<th></th>
-        		<th></th>
-        		<th></th>
-        		<th></th>
-        		<th></th>
+        		<th>{this.props.data.total.france.total}</th>
+        		<th>{this.props.data.total.france.notStarted}</th>
+        		<th>{this.props.data.total.france.onGoing}</th>
+        		<th>{this.props.data.total.france.waitingForIntValidation}</th>
+        		<th>{this.props.data.total.france.intValidated}</th>
+        		<th>{this.props.data.total.france.demValidated}</th>
         		<th className='ColumnSpacing'/>
-        		<th className='YellowHeader'></th>
-        		<th className='YellowHeader'></th>
-        		<th className='YellowHeader'></th>
-        		<th className='YellowHeader'></th>
+        		<th className='YellowHeader'>{this.props.data.total.france.preparingContact}</th>
+        		<th className='YellowHeader'>{this.props.data.total.france.atLeastOneContact}</th>
+        		<th className='YellowHeader'>{this.props.data.total.france.appointmentTaken}</th>
+        		<th className='YellowHeader'>{this.props.data.total.france.interviewStarted}</th>
         	</tr>
         </tfoot>
       </table>
@@ -93,21 +93,21 @@ class FollowUpTableLine extends React.Component {
       const lineColor = this.props.oddLine ? 'DarkgreyLine' : 'LightGreyLine'
       return (
             <tr className={lineColor}>
-              	<td></td>
+              	<td>{this.props.interviewer}</td>
         		<td className='ColumnSpacing'/>
-        		<td></td>
+        		<td>{(Math.round(this.props.completionRate * 1000) / 1000)*100}%</td>
         		<td className='ColumnSpacing'/>
-        		<td></td>
-        		<td></td>
-        		<td></td>
-        		<td></td>
-        		<td></td>
-        		<td></td>
+        		<td>{this.props.total}</td>
+        		<td>{this.props.notStarted}</td>
+        		<td>{this.props.onGoing}</td>
+        		<td>{this.props.waitingForIntValidation}</td>
+        		<td>{this.props.intValidated}</td>
+        		<td>{this.props.demValidated}</td>
         		<td className='ColumnSpacing'/>
-        		<td></td>
-        		<td></td>
-        		<td></td>
-        		<td></td>
+        		<td>{this.props.preparingContact}</td>
+        		<td>{this.props.atLeastOneContact}</td>
+        		<td>{this.props.appointmentTaken}</td>
+        		<td>{this.props.interviewStarted}</td>
             </tr>
       );
   }
@@ -115,11 +115,10 @@ class FollowUpTableLine extends React.Component {
 }
 
 function displayFollowUpTableLines(props){
-	console.log(props.data)
   const lines = []
   let key = 0
   let oddLine = true
-  props.data.forEach(lineData =>{
+  props.data.interviewers.forEach(lineData =>{
     lines.push(<FollowUpTableLine key={key} oddLine={oddLine} {...lineData} {...props}/>)
     oddLine = !oddLine
     key = key + 1

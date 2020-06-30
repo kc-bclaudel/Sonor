@@ -5,7 +5,7 @@ import SurveyPortal from './SurveyPortal.js'
 import ListSU from './ListSU.js'
 import MonitoringTable from './MonitoringTable.js'
 import './App.css';
-import Service from './Service.js'
+import DataFormatter from './DataFormatter.js'
 
 
 class View extends React.Component {
@@ -31,7 +31,7 @@ class View extends React.Component {
   }
 
   handleListSUClick(surveyId){
-    getDataForListSU('vqs2021x00',(data)=>{
+    DataFormatter.getDataForListSU(surveyId,(data)=>{
       this.setState({
         currentView: 'listSU',
         currentSurvey: surveyId,
@@ -42,21 +42,21 @@ class View extends React.Component {
   }
 
   handleMonitoringTableClick(surveyId){
-    this.setState({
-      currentView: 'monitoringTable',
-      currentSurvey: surveyId,
+    DataFormatter.getDataForMonitoringTable(surveyId,(data)=>{
+      this.setState({
+        currentView: 'monitoringTable',
+        currentSurvey: surveyId,
+        data: data
+      })
     })
   }
 
   handleReturnButtonClick(){
-    this.setState({
-      currentView: 'mainScreen',
-      currentSurvey: null,
-    })
-
-    getDataForMainScreen((data)=>{
+    DataFormatter.getDataForMainScreen((data)=>{
           this.setState({
-            data: data,
+            currentView: 'mainScreen',
+            currentSurvey: null,
+            data: data
           })
         })
   }
@@ -68,7 +68,7 @@ class View extends React.Component {
       case 'listSU':
         return <ListSU survey={this.state.currentSurvey} data={this.state.data} returnToMainScreen={()=>{this.handleReturnButtonClick()}}/>
       case 'monitoringTable':
-        return <MonitoringTable survey={this.state.currentSurvey} data={[0,0]} returnToMainScreen={()=>{this.handleReturnButtonClick()}}/>
+        return <MonitoringTable survey={this.state.currentSurvey} data={this.state.data} returnToMainScreen={()=>{this.handleReturnButtonClick()}}/>
       default:
           return <MainScreen 
                 data={this.state.data}
@@ -79,44 +79,6 @@ class View extends React.Component {
     }
   }
 }
-
-
-function getDataForMainScreen(cb){
-  Service.getSurveys((data)=>{
-    cb(data)
-  });
-}
-
-function getDataForListSU(survey, cb){
-  Service.getSurveyUnits(survey, (res)=>{
-    const promises = []
-    res.forEach(su=>{
-      if(su.campaign===survey){
-        promises.push(
-            new Promise((resolve, reject) => {
-              Service.getSurveyUnit(su.id,(data)=>{resolve(data)})
-            })
-          )
-      }
-    })
-    Promise.all(promises).then(data=>{
-      const processedData=[]
-      data.forEach(su=>{
-        const suLine = {}
-        suLine.id = su.id
-        suLine.ssech = su.sampleIdentifiers.ssech
-        suLine.departement = su.geographicalLocation.id
-        suLine.city = su.geographicalLocation.label
-        suLine.interviewer = 'NA'
-        suLine.idep = 'NA'
-        processedData.push(suLine)
-      })
-      cb(processedData)
-    })
-
-  })
-}
-
 
 
 
