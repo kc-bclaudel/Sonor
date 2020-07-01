@@ -1,4 +1,5 @@
 import React from 'react';
+import convertDate from './Utils';
 
 
 class MainScreen extends React.Component {
@@ -50,22 +51,37 @@ function displaySurveyLines(props){
   return lines
 }
 
+function getCampaignPhase(collectionStartDate, collectionEndDate, treatmentEndDate){
+  let now = new Date().getTime();
+  let phase = '';
+  if(!collectionStartDate || now < collectionStartDate){
+    phase = 'Affectation initiale';
+  } else if(!collectionEndDate || (now > collectionStartDate && now < collectionEndDate)){
+    phase = 'Collecte en cours';
+  } else if(!treatmentEndDate || now < treatmentEndDate){
+    phase = 'Collecte terminée';
+  } else {
+    phase = 'Traitement terminée';
+  }
+  return phase;
+}
+
 class SurveyListLine extends React.Component {
 
   render() {
       const lineColor = this.props.oddLine ? 'DarkgreyLine' : 'LightGreyLine'
-      const goToPortal = ()=>{this.props.goToCampaignPortal(this.props.id, this.props.label, this.props.collectionStart, this.props.collectionEnd, this.props.endOfTreatment)}
+      const goToPortal = ()=>{this.props.goToCampaignPortal(this.props.id, this.props.label, this.props.collectionStartDate, this.props.collectionEndDate, this.props.treatmentEndDate)}
       const goToListSU = ()=>{this.props.goToListSU(this.props.id)}
       const goToMonitoringTable = ()=>{this.props.goToMonitoringTable(this.props.label)}
       return (
             <tr className={lineColor}>
               <td onClick={goToPortal} className='Clickable' data-testid='campaign-label'>{this.props.label}</td>
               <td className='ColumnSpacing'/>
-              <td onClick={goToPortal} className='Clickable'>{this.props.collectionStart}</td>
-              <td onClick={goToPortal} className='Clickable'>{this.props.collectionEnd}</td>
-              <td onClick={goToPortal} className='Clickable'>{this.props.endOfTreatment}</td>
+              <td onClick={goToPortal} className='Clickable'>{convertDate(this.props.collectionStartDate)}</td>
+              <td onClick={goToPortal} className='Clickable'>{convertDate(this.props.collectionEndDate)}</td>
+              <td onClick={goToPortal} className='Clickable'>{convertDate(this.props.treatmentEndDate)}</td>
               <td className='ColumnSpacing'/>
-              <td onClick={goToPortal} className='Clickable'>{getCampaignPhase(this.props.affected, this.props.toAffect, this.props.inProgress, this.props.toControl)}</td>
+              <td onClick={goToPortal} className='Clickable'>{getCampaignPhase(this.props.collectionStartDate, this.props.collectionEndDate, this.props.treatmentEndDate)}</td>
               <td className='ColumnSpacing'/>
               <td onClick={goToListSU} className='Clickable'>{this.props.affected}</td>
               <td>{this.props.toAffect}</td>
@@ -75,18 +91,6 @@ class SurveyListLine extends React.Component {
       );
   }
 
-}
-
-function getCampaignPhase(affected, toAffect, inProgress, toControl){
-  let phase = '';
-  if(inProgress < 0 && toControl < 0 && toAffect > 0){
-    phase = 'Affectation initiale';
-  } else if(affected > 0 || inProgress > 0){
-    phase = 'Collecte en cours';
-  } else if(inProgress < 0 && toAffect < 0 && inProgress < 0 && toControl > 0){
-    phase = 'Collecte terminée';
-  }
-  return phase;
 }
 
 export default MainScreen;

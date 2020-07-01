@@ -1,4 +1,5 @@
 import React from 'react';
+import convertDate from './Utils';
 
 
 
@@ -27,9 +28,9 @@ class TimeLine extends React.Component {
         <div id='TimeLine'>
           <div id='PhaseMilestones'>
             <div>N/A</div>
-            <div className='DateCenter'>{this.props.data.collectionStartDate}</div>
-            <div className='DateCenter'>{this.props.data.collectionEndDate}</div>
-            <div className='DateRight'>{this.props.data.treatmentEndDate}</div>
+            <div className='DateCenter'>{convertDate(this.props.data.collectionStartDate)}</div>
+            <div className='DateCenter'>{convertDate(this.props.data.collectionEndDate)}</div>
+            <div className='DateRight'>{convertDate(this.props.data.treatmentEndDate)}</div>
           </div>
           <div id='PhaseDisplay'>
             <div>Affectation initiale</div>
