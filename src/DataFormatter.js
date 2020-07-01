@@ -67,6 +67,22 @@ class DataFormatter{
 	  });
 	}
 
+
+	static getDataForCampaignPortal(campaignId, cb){
+		const p1 = new Promise((resolve, reject) => {Service.getInterviewersByCampaign(campaignId, 
+		  (data)=>{resolve(data);});
+		});
+		const p2 = new Promise((resolve, reject) => {Service.getNotAttributedByCampaign(campaignId, 
+		  (data)=>{resolve(data);});
+		});
+		const p3 = new Promise((resolve, reject) => {Service.getTotalDemByCampaign(campaignId, 
+		  (data)=>{resolve(data);});
+		});
+		Promise.all([p1,p2,p3]).then(data=>{
+		  cb({interviewers: data[0], notAttributed: data[1], total: data[2]})
+		});
+  	}
+
 }
 
 function formatForMonitoringTable(line, stateCount){

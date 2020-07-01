@@ -54,7 +54,7 @@ class SurveyListLine extends React.Component {
 
   render() {
       const lineColor = this.props.oddLine ? 'DarkgreyLine' : 'LightGreyLine'
-      const goToPortal = ()=>{this.props.goToSurveyPortal(this.props.label)}
+      const goToPortal = ()=>{this.props.goToCampaignPortal(this.props.id, this.props.label, this.props.collectionStart, this.props.collectionEnd, this.props.endOfTreatment)}
       const goToListSU = ()=>{this.props.goToListSU(this.props.id)}
       const goToMonitoringTable = ()=>{this.props.goToMonitoringTable(this.props.label)}
       return (
