@@ -1,7 +1,7 @@
 class Service{
 
 	static getSurveys = function(cb){
-		fetch('http://localhost:7777/api/mockMainScreen')
+		fetch('http://localhost:7777/api/campaigns/')
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)

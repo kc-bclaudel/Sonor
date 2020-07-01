@@ -54,28 +54,39 @@ class SurveyListLine extends React.Component {
 
   render() {
       const lineColor = this.props.oddLine ? 'DarkgreyLine' : 'LightGreyLine'
-      const goToPortal = ()=>{this.props.goToSurveyPortal(this.props.study)}
-      const goToListSU = ()=>{this.props.goToListSU(this.props.study)}
-      const goToMonitoringTable = ()=>{this.props.goToMonitoringTable(this.props.study)}
+      const goToPortal = ()=>{this.props.goToSurveyPortal(this.props.label)}
+      const goToListSU = ()=>{this.props.goToListSU(this.props.id)}
+      const goToMonitoringTable = ()=>{this.props.goToMonitoringTable(this.props.label)}
       return (
             <tr className={lineColor}>
-              <td onClick={goToPortal} className='Clickable' data-testid='campaign-label'>{this.props.study}</td>
+              <td onClick={goToPortal} className='Clickable' data-testid='campaign-label'>{this.props.label}</td>
               <td className='ColumnSpacing'/>
               <td onClick={goToPortal} className='Clickable'>{this.props.collectionStart}</td>
               <td onClick={goToPortal} className='Clickable'>{this.props.collectionEnd}</td>
-              <td onClick={goToPortal} className='Clickable'>{this.props.endOfProcess}</td>
+              <td onClick={goToPortal} className='Clickable'>{this.props.endOfTreatment}</td>
               <td className='ColumnSpacing'/>
-              <td onClick={goToPortal} className='Clickable'>{this.props.phase}</td>
+              <td onClick={goToPortal} className='Clickable'>{getCampaignPhase(this.props.affected, this.props.toAffect, this.props.inProgress, this.props.toControl)}</td>
               <td className='ColumnSpacing'/>
               <td onClick={goToListSU} className='Clickable'>{this.props.affected}</td>
-              <td>{this.props.toBeAffected}</td>
-              <td onClick={goToMonitoringTable} className='Clickable'>{this.props.ongoing}</td>
-              <td>{this.props.toBeControled}</td>
+              <td>{this.props.toAffect}</td>
+              <td onClick={goToMonitoringTable} className='Clickable'>{this.props.inProgress}</td>
+              <td>{this.props.toControl}</td>
             </tr>
       );
   }
 
 }
 
+function getCampaignPhase(affected, toAffect, inProgress, toControl){
+  let phase = '';
+  if(inProgress < 0 && toControl < 0 && toAffect > 0){
+    phase = 'Affectation initiale';
+  } else if(affected > 0 || inProgress > 0){
+    phase = 'Collecte en cours';
+  } else if(inProgress < 0 && toAffect < 0 && inProgress < 0 && toControl > 0){
+    phase = 'Collecte terminée';
+  }
+  return phase;
+}
 
 export default MainScreen;
