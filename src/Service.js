@@ -56,8 +56,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getInterviewersStateCount = function(campaignId, idep, cb){
-		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/interviewer/' + idep + '/state-count')
+	static getInterviewersStateCount = function(campaignId, idep, date, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/interviewer/' + idep + '/state-count?date=' + date)
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)
@@ -65,8 +65,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getStateCount = function(campaignId, cb){
-		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/state-count')
+	static getStateCount = function(campaignId, date, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/state-count?date=' + date)
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)

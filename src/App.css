@@ -198,4 +198,14 @@ button{
   color: blue;
 }
 
+#datePicker{
+  display:inline;
+}
 
+#dateDisplay{
+  
+}
+
+.DateDisplay{
+  display: inline;
+}

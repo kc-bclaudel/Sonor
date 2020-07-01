@@ -47,8 +47,10 @@ class View extends React.Component {
     
   }
 
-  handleMonitoringTableClick(surveyId){
-    DataFormatter.getDataForMonitoringTable(surveyId,(data)=>{
+  handleMonitoringTableClick(surveyId, date){
+    const dateToUse =  date ? date : new Date().toISOString().slice(0,10)
+    DataFormatter.getDataForMonitoringTable(surveyId, dateToUse, (data)=>{
+      data.date = dateToUse
       this.setState({
         currentView: 'monitoringTable',
         currentSurvey: surveyId,
@@ -74,9 +76,12 @@ class View extends React.Component {
       case 'listSU':
         return <ListSU survey={this.state.currentSurvey} data={this.state.data} returnToMainScreen={()=>{this.handleReturnButtonClick()}}/>
       case 'monitoringTable':
-        return <MonitoringTable survey={this.state.currentSurvey} data={this.state.data} returnToMainScreen={()=>{this.handleReturnButtonClick()}}/>
+        return <MonitoringTable survey={this.state.currentSurvey} data={this.state.data} 
+                  returnToMainScreen={()=>{this.handleReturnButtonClick()}}
+                  goToMonitoringTable={(surveyId, date)=>{this.handleMonitoringTableClick(surveyId, date)}}
+                />
       default:
-          return <MainScreen 
+        return <MainScreen 
                 data={this.state.data}
                 goToCampaignPortal={(campaignId,campaignName,collectionStartDate,collectionEndDate,treatmentEndDate)=>{this.handleCampaignClick(campaignId,campaignName,collectionStartDate,collectionEndDate,treatmentEndDate)}}
                 goToListSU={(surveyId)=>{this.handleListSUClick(surveyId)}}

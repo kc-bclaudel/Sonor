@@ -9,7 +9,10 @@ class MonitoringTable extends React.Component {
       <div id='MonitoringTable'>
         <button className='YellowButton' onClick={()=>this.props.returnToMainScreen()}>Retour</button>
         <div className='SurveyTitle'>{this.props.survey}</div>
-        <div className='Title'>Avancement selon l'état des unitées enquêtées en date du: {'01/01/2020'}</div>
+        <div id='dateDisplay' className='Title'>
+	        <div className='DateDisplay'>Avancement selon l'état des unitées enquêtées en date du: </div>
+	        <input id='datePicker' className='DateDisplay' type='date' value={this.props.data.date} onChange={(e)=>this.props.goToMonitoringTable(this.props.survey, e.target.value)}/>
+        </div>
         <FollowUpTable {...this.props}/>
       </div>
     );

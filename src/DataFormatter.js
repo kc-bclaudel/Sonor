@@ -25,14 +25,14 @@ class DataFormatter{
 	  })
 	}
 
-	static getDataForMonitoringTable(survey, cb){
+	static getDataForMonitoringTable(survey, date, cb){
 	  const p1 = new Promise((resolve, reject) => {
 	    Service.getInterviewers(survey, (res)=>{
 	      const promises = []
 	      res.forEach(interviewer=>{
 	          promises.push(
 	              new Promise((resolve2, reject2) => {
-	                Service.getInterviewersStateCount(survey, interviewer.idep,(data)=>{resolve2({interviewer: interviewer, state_count: data})})
+	                Service.getInterviewersStateCount(survey, interviewer.idep, date, (data)=>{resolve2({interviewer: interviewer, state_count: data})})
 	              })
 	            )
 	      })
@@ -50,13 +50,12 @@ class DataFormatter{
 	  });
 
 	  const p2 = new Promise((resolve, reject) => {
-	    Service.getStateCount(survey, (data)=>{
+	    Service.getStateCount(survey, date, (data)=>{
 	      const totalDem = {}
 	      formatForMonitoringTable(totalDem, data.DEM)
 
 	      const totalFrance= {}
 	      formatForMonitoringTable(totalFrance, data.France)
-
 
 	      resolve({dem:totalDem, france:totalFrance})
 	    })
