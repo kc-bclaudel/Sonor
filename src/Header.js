@@ -12,7 +12,7 @@ class Header extends React.Component {
         <button className='HeaderButton RedButton'>Affecter</button>
         <button className='HeaderButton RedButton'>Suivre</button>
         <button className='HeaderButton RedButton'>Contrôler</button>
-        <UserZone userName='Yves Hantala' date='08/06/2020'/>
+        <UserZone userName={this.props.keycloak.idTokenParsed.name} date='08/06/2020'/>
       </header>
     );
   }

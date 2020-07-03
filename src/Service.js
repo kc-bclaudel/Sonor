@@ -1,7 +1,17 @@
 class Service{
 
-	static getSurveys = function(cb){
-		fetch('http://localhost:7777/api/campaigns/')
+	constructor(token){
+		this.options = {
+			method: 'GET',
+			headers: new Headers({
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer ' + token
+			  })
+		}
+	}
+
+	getSurveys = function(cb){
+		fetch('http://localhost:7777/api/campaigns', this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)
@@ -9,8 +19,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getInterviewersByCampaign = function(campaignId, cb){
-		fetch('http://localhost:7777/api/campaign/' + campaignId + '/interviewers')
+	getInterviewersByCampaign = function(campaignId, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/interviewers', this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 			  cb(data)
@@ -18,8 +28,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getNotAttributedByCampaign = function(campaignId, cb){
-		fetch('http://localhost:7777/api/campaign/'+campaignId+'/survey-units/not-attributed')
+	getNotAttributedByCampaign = function(campaignId, cb){
+		fetch('http://localhost:7777/api/campaign/'+campaignId+'/survey-units/not-attributed', this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 			  cb(data)
@@ -27,8 +37,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getTotalDemByCampaign = function(campaignId, cb){
-		fetch('http://localhost:7777/api/campaign/'+campaignId+'/survey-units/state-count')
+	getTotalDemByCampaign = function(campaignId, cb){
+		fetch('http://localhost:7777/api/campaign/'+campaignId+'/survey-units/state-count', this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 				console.log(data)
@@ -38,8 +48,8 @@ class Service{
 	};
 
 
-	static getSurveyUnits = function(campaignId, cb){
-		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units')
+	getSurveyUnits = function(campaignId, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units', this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)
@@ -47,8 +57,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getInterviewers = function(campaignId, cb){
-		fetch('http://localhost:7777/api/campaign/' + campaignId + '/interviewers')
+	getInterviewers = function(campaignId, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/interviewers', this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)
@@ -56,8 +66,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getInterviewersStateCount = function(campaignId, idep, date, cb){
-		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/interviewer/' + idep + '/state-count?date=' + date)
+	getInterviewersStateCount = function(campaignId, idep, date, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/interviewer/' + idep + '/state-count?date=' + date, this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)
@@ -65,8 +75,8 @@ class Service{
 	        .catch(console.log)
 	};
 
-	static getStateCount = function(campaignId, date, cb){
-		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/state-count?date=' + date)
+	getStateCount = function(campaignId, date, cb){
+		fetch('http://localhost:7777/api/campaign/' + campaignId + '/survey-units/state-count?date=' + date, this.options)
 	        .then(res => res.json())
 	        .then((data) => {
 	          cb(data)

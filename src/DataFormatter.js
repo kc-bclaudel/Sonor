@@ -2,14 +2,18 @@ import Service from './Service.js'
 
 class DataFormatter{
 
-	static getDataForMainScreen(cb){
-	  Service.getSurveys((data)=>{
+	constructor(token){
+		this.service = new Service(token)
+	}
+
+	getDataForMainScreen(cb){
+	  this.service.getSurveys((data)=>{
 	    cb(data)
 	  });
 	}
 
-	static getDataForListSU(survey, cb){
-	  Service.getSurveyUnits(survey, (res)=>{
+	getDataForListSU(survey, cb){
+	  this.service.getSurveyUnits(survey, (res)=>{
 	      const processedData=[]
 	      res.forEach(su=>{
 	        const suLine = {}
@@ -25,14 +29,14 @@ class DataFormatter{
 	  })
 	}
 
-	static getDataForMonitoringTable(survey, date, cb){
+	getDataForMonitoringTable(survey, date, cb){
 	  const p1 = new Promise((resolve, reject) => {
-	    Service.getInterviewers(survey, (res)=>{
+	    this.service.getInterviewers(survey, (res)=>{
 	      const promises = []
 	      res.forEach(interviewer=>{
 	          promises.push(
 	              new Promise((resolve2, reject2) => {
-	                Service.getInterviewersStateCount(survey, interviewer.idep, date, (data)=>{resolve2({interviewer: interviewer, state_count: data})})
+	                this.service.getInterviewersStateCount(survey, interviewer.idep, date, (data)=>{resolve2({interviewer: interviewer, state_count: data})})
 	              })
 	            )
 	      })
@@ -50,7 +54,7 @@ class DataFormatter{
 	  });
 
 	  const p2 = new Promise((resolve, reject) => {
-	    Service.getStateCount(survey, date, (data)=>{
+	    this.service.getStateCount(survey, date, (data)=>{
 	      const totalDem = {}
 	      formatForMonitoringTable(totalDem, data.DEM)
 
@@ -67,14 +71,14 @@ class DataFormatter{
 	}
 
 
-	static getDataForCampaignPortal(campaignId, cb){
-		const p1 = new Promise((resolve, reject) => {Service.getInterviewersByCampaign(campaignId, 
+	getDataForCampaignPortal(campaignId, cb){
+		const p1 = new Promise((resolve, reject) => {this.service.getInterviewersByCampaign(campaignId, 
 		  (data)=>{resolve(data);});
 		});
-		const p2 = new Promise((resolve, reject) => {Service.getNotAttributedByCampaign(campaignId, 
+		const p2 = new Promise((resolve, reject) => {this.service.getNotAttributedByCampaign(campaignId, 
 		  (data)=>{resolve(data);});
 		});
-		const p3 = new Promise((resolve, reject) => {Service.getTotalDemByCampaign(campaignId, 
+		const p3 = new Promise((resolve, reject) => {this.service.getTotalDemByCampaign(campaignId, 
 		  (data)=>{resolve(data);});
 		});
 		Promise.all([p1,p2,p3]).then(data=>{
