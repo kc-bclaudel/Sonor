@@ -1,5 +1,4 @@
 import React from 'react';
-import convertDate from './Utils';
 
 
 class MainScreen extends React.Component {
@@ -44,49 +43,36 @@ function displaySurveyLines(props){
   let key = 0
   let oddLine = true
   props.data.forEach(lineData =>{
-    lines.push(<SurveyListLine key={key} oddLine={oddLine} {...lineData} {...props}/>)
+    lines.push(<SurveyListLine key={key} oddLine={oddLine} lineData={lineData} {...props}/>)
     oddLine = !oddLine
     key = key + 1
   })
   return lines
 }
 
-function getCampaignPhase(collectionStartDate, collectionEndDate, treatmentEndDate){
-  let now = new Date().getTime();
-  let phase = '';
-  if(!collectionStartDate || now < collectionStartDate){
-    phase = 'Affectation initiale';
-  } else if(!collectionEndDate || (now > collectionStartDate && now < collectionEndDate)){
-    phase = 'Collecte en cours';
-  } else if(!treatmentEndDate || now < treatmentEndDate){
-    phase = 'Collecte terminée';
-  } else {
-    phase = 'Traitement terminée';
-  }
-  return phase;
-}
 
 class SurveyListLine extends React.Component {
 
   render() {
+      const data = this.props.lineData
       const lineColor = this.props.oddLine ? 'DarkgreyLine' : 'LightGreyLine'
-      const goToPortal = ()=>{this.props.goToCampaignPortal(this.props.id, this.props.label, this.props.collectionStartDate, this.props.collectionEndDate, this.props.treatmentEndDate)}
-      const goToListSU = ()=>{this.props.goToListSU(this.props.id)}
-      const goToMonitoringTable = ()=>{this.props.goToMonitoringTable(this.props.label)}
+      const goToPortal = ()=>{this.props.goToCampaignPortal(data)}
+      const goToListSU = ()=>{this.props.goToListSU(data.id)}
+      const goToMonitoringTable = ()=>{this.props.goToMonitoringTable(data.label)}
       return (
             <tr className={lineColor}>
-              <td onClick={goToPortal} className='Clickable' data-testid='campaign-label'>{this.props.label}</td>
+              <td onClick={goToPortal} className='Clickable' data-testid='campaign-label'>{data.label}</td>
               <td className='ColumnSpacing'/>
-              <td onClick={goToPortal} className='Clickable'>{convertDate(this.props.collectionStartDate)}</td>
-              <td onClick={goToPortal} className='Clickable'>{convertDate(this.props.collectionEndDate)}</td>
-              <td onClick={goToPortal} className='Clickable'>{convertDate(this.props.treatmentEndDate)}</td>
+              <td onClick={goToPortal} className='Clickable'>{data.collectionStartDate}</td>
+              <td onClick={goToPortal} className='Clickable'>{data.collectionEndDate}</td>
+              <td onClick={goToPortal} className='Clickable'>{data.treatmentEndDate}</td>
               <td className='ColumnSpacing'/>
-              <td onClick={goToPortal} className='Clickable'>{getCampaignPhase(this.props.collectionStartDate, this.props.collectionEndDate, this.props.treatmentEndDate)}</td>
+              <td onClick={goToPortal} className='Clickable'>{data.phase}</td>
               <td className='ColumnSpacing'/>
-              <td onClick={goToListSU} className='Clickable'>{this.props.affected}</td>
-              <td>{this.props.toAffect}</td>
-              <td onClick={goToMonitoringTable} className='Clickable'>{this.props.inProgress}</td>
-              <td>{this.props.toControl}</td>
+              <td onClick={goToListSU} className='Clickable'>{data.affected}</td>
+              <td>{data.toAffect}</td>
+              <td onClick={goToMonitoringTable} className='Clickable'>{data.inProgress}</td>
+              <td>{data.toControl}</td>
             </tr>
       );
   }

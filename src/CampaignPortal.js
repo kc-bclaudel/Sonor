@@ -1,16 +1,13 @@
 import React from 'react';
-import convertDate from './Utils';
 
 
 
 class CampaignPortal extends React.Component {
   render() {
-    console.log(this.props.data);
-
     return (
       <div id='CampaignPortal'>
         <button className='YellowButton' onClick={()=>this.props.returnToMainScreen()} data-testid='return-button'>Retour</button>
-        <div className='SurveyTitle'>{this.props.data.campaignName}</div>
+        <div className='SurveyTitle'>{this.props.data.label}</div>
         <TimeLine {...this.props}/>
         <div id='CampaignPortalView'>
           {/* <Contacts/> */}
@@ -28,9 +25,9 @@ class TimeLine extends React.Component {
         <div id='TimeLine'>
           <div id='PhaseMilestones'>
             <div>N/A</div>
-            <div className='DateCenter'>{convertDate(this.props.data.collectionStartDate)}</div>
-            <div className='DateCenter'>{convertDate(this.props.data.collectionEndDate)}</div>
-            <div className='DateRight'>{convertDate(this.props.data.treatmentEndDate)}</div>
+            <div className='DateCenter'>{this.props.data.collectionStartDate}</div>
+            <div className='DateCenter'>{this.props.data.collectionEndDate}</div>
+            <div className='DateRight'>{this.props.data.treatmentEndDate}</div>
           </div>
           <div id='PhaseDisplay'>
             <div>Affectation initiale</div>
@@ -121,7 +118,7 @@ class SurveyUnits extends React.Component {
 function displayInterviewersLines(props){
   const lines = []
   props.data.interviewers.forEach(interviewer =>{
-    lines.push(<InterviewerLine key={interviewer.idep} {...interviewer} {...props}/>)
+    lines.push(<InterviewerLine key={interviewer.id} {...interviewer} {...props}/>)
   })
   return lines
 }
@@ -130,9 +127,9 @@ class InterviewerLine extends React.Component {
   render() {
       return (
         <tr>
-          <td className='LightGreyLine'>{this.props.interviewer_first_name} {this.props.interviewer_last_name}</td>
-          <td className='LightGreyLine'>{this.props.idep}</td>
-          <td className='LightGreyLine'>{this.props.survey_unit_count}</td>
+          <td className='LightGreyLine'>{this.props.interviewerFirstName} {this.props.interviewerLastName}</td>
+          <td className='LightGreyLine'>{this.props.id}</td>
+          <td className='LightGreyLine'>{this.props.surveyUnitCount}</td>
         </tr>
       );
   }

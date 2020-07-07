@@ -1,9 +1,7 @@
-const convertDate = function(inputDate) {
-    let d = new Date(inputDate);
-    let format = 'DD/MM/YYYY';
-    if(format === 'DD/MM/YYYY'){
-        return d.toLocaleDateString();
+class Utils{
+    static convertToDateString = function(timestamp, locales, options) {
+        return new Date(timestamp).toLocaleDateString(locales, options);
     }
 }
 
-export default convertDate;
+export default Utils;

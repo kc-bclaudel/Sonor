@@ -1,4 +1,5 @@
 import Service from './Service.js'
+import Utils from './Utils.js';
 
 class DataFormatter{
 
@@ -8,9 +9,17 @@ class DataFormatter{
 
 	getDataForMainScreen(cb){
 	  this.service.getSurveys((data)=>{
-	    cb(data)
+		  data.forEach(survey=>{
+			survey.phase = getCampaignPhase(survey.collectionStartDate, survey.collectionEndDate, survey.treatmentEndDate)
+			survey.collectionStartDate = Utils.convertToDateString(survey.collectionStartDate)
+			survey.collectionEndDate = Utils.convertToDateString(survey.collectionEndDate)
+			survey.treatmentEndDate = Utils.convertToDateString(survey.treatmentEndDate)
+		  })
+		cb(data)
 	  });
 	}
+
+
 
 	getDataForListSU(survey, cb){
 	  this.service.getSurveyUnits(survey, (res)=>{
@@ -21,8 +30,8 @@ class DataFormatter{
 	        suLine.ssech = su.ssech
 	        suLine.departement = su.location
 	        suLine.city = su.city
-	        suLine.interviewer = su.interviewer.first_name + ' ' + su.interviewer.last_name
-	        suLine.idep = su.interviewer.idep
+	        suLine.interviewer = su.interviewer.firstName + ' ' + su.interviewer.lastName
+	        suLine.idep = su.interviewer.id
 	        processedData.push(suLine)
 	      })
 	      cb(processedData)
@@ -36,7 +45,7 @@ class DataFormatter{
 	      res.forEach(interviewer=>{
 	          promises.push(
 	              new Promise((resolve2, reject2) => {
-	                this.service.getInterviewersStateCount(survey, interviewer.idep, date, (data)=>{resolve2({interviewer: interviewer, state_count: data})})
+	                this.service.getInterviewersStateCount(survey, interviewer.id, date, (data)=>{resolve2({interviewer: interviewer, stateCount: data})})
 	              })
 	            )
 	      })
@@ -44,8 +53,8 @@ class DataFormatter{
 	        const processedData=[]
 	        data.forEach(data=>{
 	          const line = {}
-	          line.interviewer = data.interviewer.interviewer_first_name + ' ' + data.interviewer.interviewer_last_name
-	          formatForMonitoringTable(line, data.state_count)
+	          line.interviewer = data.interviewer.interviewerFirstName + ' ' + data.interviewer.interviewerLastName
+	          formatForMonitoringTable(line, data.stateCount)
 	          processedData.push(line)
 	        })
 	        resolve(processedData)
@@ -91,24 +100,40 @@ class DataFormatter{
 function formatForMonitoringTable(line, stateCount){
   line.completionRate = calculateCompletionRate(stateCount)
   line.total = stateCount.total
-  line.notStarted = stateCount.ANS_count
+  line.notStarted = stateCount.ansCount
   line.onGoing = calculateOngoing(stateCount)
-  line.waitingForIntValidation = stateCount.WFT_count + stateCount.WFS_count
-  line.intValidated = stateCount.TBR_count
-  line.demValidated = stateCount.FIN_count
-  line.preparingContact = stateCount.PRC_count
-  line.atLeastOneContact = stateCount.AOC_count
-  line.appointmentTaken = stateCount.APS_count
-  line.interviewStarted = stateCount.INS_count
+  line.waitingForIntValidation = stateCount.wftCount + stateCount.wfsCount
+  line.intValidated = stateCount.tbrCound
+  line.demValidated = stateCount.finCount
+  line.preparingContact = stateCount.prcCount
+  line.atLeastOneContact = stateCount.aocCount
+  line.appointmentTaken = stateCount.apsCount
+  line.interviewStarted = stateCount.insCount
 }
 
 function calculateCompletionRate(data){
-  return (data.total - data.INI_count - data.ANS_count)/data.total
+  return (data.total - data.ansCount)/data.total
 }
 
 function calculateOngoing(data){
-  return data.PRC_count + data.AOC_count + data.APS_count + data.INS_count + data.WFT_count + data.WFS_count
+  return data.prcCount + data.aocCount + data.apsCount + data.insCount + data.wftCount + data.wfsCount
 }
+
+
+function getCampaignPhase(collectionStartDate, collectionEndDate, treatmentEndDate){
+	let now = new Date().getTime();
+	let phase = '';
+	if(!collectionStartDate || now < collectionStartDate){
+	  phase = 'Affectation initiale';
+	} else if(!collectionEndDate || now < collectionEndDate){
+	  phase = 'Collecte en cours';
+	} else if(!treatmentEndDate || now < treatmentEndDate){
+	  phase = 'Collecte terminée';
+	} else {
+	  phase = 'Traitement terminée';
+	}
+	return phase;
+  }
 
 
 

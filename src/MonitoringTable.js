@@ -1,4 +1,7 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -7,13 +10,16 @@ class MonitoringTable extends React.Component {
   render() {
     return (
       <div id='MonitoringTable'>
-        <button className='YellowButton' onClick={()=>this.props.returnToMainScreen()}>Retour</button>
+        <Button className='YellowButton ReturnButton' onClick={()=>this.props.returnToMainScreen()}>Retour</Button>
         <div className='SurveyTitle'>{this.props.survey}</div>
-        <div id='dateDisplay' className='Title'>
-	        <div className='DateDisplay'>Avancement selon l'état des unitées enquêtées en date du: </div>
-	        <input id='datePicker' className='DateDisplay' type='date' value={this.props.data.date} onChange={(e)=>this.props.goToMonitoringTable(this.props.survey, e.target.value)}/>
-        </div>
-        <FollowUpTable {...this.props}/>
+        <Card className='ViewCard'>
+          <Card.Title>
+            <div className='DateDisplay'>Avancement selon l'état des unités enquêtées en date du: </div>
+            <input id='datePicker' className='DateDisplay' type='date' value={this.props.data.date} onChange={(e)=>this.props.goToMonitoringTable(this.props.survey, e.target.value)}/>
+          </Card.Title>
+        
+          <FollowUpTable {...this.props}/>
+        </Card>
       </div>
     );
   }
@@ -23,7 +29,7 @@ class FollowUpTable extends React.Component {
 
   render() {
     return (
-      <table id='FollowUpTable'>
+      <Table id='FollowUpTable' className='CustomTable' bordered striped hover responsive size="sm">
         <thead>
           <tr>
             <th rowSpan='2'>Enquêteur</th>
@@ -86,7 +92,7 @@ class FollowUpTable extends React.Component {
         		<th className='YellowHeader'>{this.props.data.total.france.interviewStarted}</th>
         	</tr>
         </tfoot>
-      </table>
+      </Table>
     );
   }
 }

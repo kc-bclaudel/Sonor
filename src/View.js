@@ -21,13 +21,9 @@ class View extends React.Component {
     this.handleReturnButtonClick()
   }
 
-  handleCampaignClick(campaignId, campaignName,collectionStartDate,collectionEndDate,treatmentEndDate){
-    this.state.dataRetreiver.getDataForCampaignPortal(campaignId, (data)=>{
-      data.campaignId= campaignId;
-      data.campaignName= campaignName;
-      data.collectionEndDate= collectionEndDate;
-      data.collectionStartDate= collectionStartDate;
-      data.treatmentEndDate= treatmentEndDate;
+  handleCampaignClick(mainScreenData){
+    this.state.dataRetreiver.getDataForCampaignPortal(mainScreenData.campaignId, (data)=>{
+      Object.assign(data, mainScreenData);
       this.setState({
           currentView: 'campaignPortal',
           data: data
@@ -82,7 +78,7 @@ class View extends React.Component {
       default:
         return <MainScreen 
                 data={this.state.data}
-                goToCampaignPortal={(campaignId,campaignName,collectionStartDate,collectionEndDate,treatmentEndDate)=>{this.handleCampaignClick(campaignId,campaignName,collectionStartDate,collectionEndDate,treatmentEndDate)}}
+                goToCampaignPortal={(mainScreenData)=>{this.handleCampaignClick(mainScreenData)}}
                 goToListSU={(surveyId)=>{this.handleListSUClick(surveyId)}}
                 goToMonitoringTable={(surveyId)=>{this.handleMonitoringTableClick(surveyId)}}
               />
