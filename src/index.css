@@ -11,3 +11,317 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+html{
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+
+  background-color: #0f417a !important;
+  background-image: url("/logo-insee-fond.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 600px auto;
+  /* background-image: url(/population.png);
+  background-color: #3467ae !important;
+  background-size: inherit;
+  background-position: left bottom; 
+  background-repeat: no-repeat; */
+}
+.CustomTable{
+  font-size: 13px;
+}
+
+.ReturnButton{
+  margin-left: 20px;
+  position: absolute;
+}
+
+
+.ViewCard{
+  padding:20px;
+  margin:10px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+#App-header{
+  background: rgb(245,245,245);
+  /* border-bottom: 3px solid #0084ff; */
+  margin-bottom: 28px;
+  position:sticky;
+  top:0;
+  right:0;
+  width:100%;
+  z-index: 2;
+
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+
+
+
+
+
+
+
+  /* background-color: #0f417a;
+  background-image: url("/logo-insee-fond.png");
+  background-repeat: no-repeat;
+  background-position: center 35px;
+  background-size: 600px auto; */
+
+
+}
+
+
+.RedButton{
+  background: rgb(140,6,46);
+  color: rgb(254,195,45);
+}
+
+.YellowButton{
+  background: rgb(254,195,45);
+  color: rgb(140,6,46);
+}
+.HeaderButton{
+  margin:3px 5px 3px 0;
+}
+
+.YellowHaderButton{
+  color: rgb(19,66,120) !important;
+  background-color: rgb(254,195,45) !important;
+  border-color: #007bff !important;
+}
+#UserZone{
+  float:right;
+  padding:10px;
+  margin:10px;
+  min-width: 310px;
+  background-color: antiquewhite;
+}
+
+#InseeLogo{
+  max-height: 100px;
+  margin:10px;
+}
+
+#SurveyList{
+  border:none !important
+}
+#SurveyListTitle{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px
+}
+
+.Title{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px
+}
+
+th{
+  background: rgb(19,66,120);
+  color: rgb(240,196,46);
+}
+
+th.YellowHeader{
+  background: rgb(240,196,46);
+  color: rgb(19,66,120);
+}
+
+.ColumnSpacing{
+  width: 8px;
+  background: white !important;
+  border:none !important;
+}
+
+
+/* .DarkgreyLine{
+  background: rgb(202,202,202);
+  color: rgb(84,91,153);
+}
+
+.LightGreyLine{
+  background: rgb(239,239,239);
+  color: rgb(84,91,153);
+} */
+
+.SurveyTitle{
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(254,195,45);
+  margin:auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#PhaseDisplay{
+  position: relative;
+  width: 100%;
+  margin-left:1.5%;
+}
+
+#PhaseDisplay div{
+  border: 2px solid black;
+  position: relative;
+  display: inline-block;
+  width:32%;
+  text-align: center;
+
+}
+
+#PhaseMilestones{
+  position: relative;
+  width: 100%;
+  margin-left:1.5%;
+  white-space: nowrap;
+}
+
+#PhaseMilestones div{
+  position: relative;
+  display: inline-flex;
+  margin: auto;
+  width:32%;
+ 
+}
+
+#PhaseMilestones div.DateCenter{
+  text-indent: -32px;
+}
+
+#PhaseMilestones div.DateRight{
+  text-indent: -72px;
+}
+
+#PhaseMilestones div.LabelCenter{
+  text-indent: -50px;
+}
+
+#PhaseMilestones div.LabelRight{
+  text-indent: -110px;
+}
+
+#TimeLine{
+  position: relative;
+}
+
+#SurveyPortalView{
+ position: relative;
+ margin:5%;
+}
+
+#Contacts{
+  position: absolute;
+
+}
+
+
+
+#SUTable{
+
+}
+
+button{
+  cursor: pointer;
+}
+
+.Clickable{
+  cursor: pointer;
+}
+
+.Clickable:hover{
+  /* color: blue; */
+}
+
+#datePicker{
+  display:inline;
+}
+
+#dateDisplay{
+  
+}
+
+.DateDisplay{
+  display: inline;
+}
+
+
+@media (max-width: 830px) {
+  #InseeLogo {
+      display:none;
+  }
+}
+
+#headerButtonContainer{
+  position: absolute;
+  bottom: 20px;
+}
+
+.paginationNav{
+  position: absolute;
+  right:0;
+}
+
+.paginationNavWrapper{
+  position: relative;
+  height:30px;
+}
+
+#searchField{
+  position:absolute;
+  right:20px;
+}
+
+#searchParametersContainer{
+  height: 30px;
+  margin-bottom:5px;
+}
+
+#pageSizeSelector{
+  display: inline-block;
+  width: 60px;
+}
