@@ -18,6 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    "linebreak-style": 0,
     "react/prop-types": 0,
     "jsx-a11y/control-has-associated-label": 0,
     "jsx-a11y/click-events-have-key-events": 0,

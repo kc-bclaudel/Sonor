@@ -6,6 +6,10 @@ class DataFormatter {
     this.service = new Service(token);
   }
 
+  getUserInfo(cb) {
+    this.service.getUser((data) => { cb(data); });
+  }
+
   getDataForMainScreen(cb) {
     this.service.getSurveys((data) => {
       const formattedData = [];

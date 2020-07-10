@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from './logo_com_externe_semi_bold.png';
 
-function Header({ keycloak }) {
+function Header({ user }) {
   return (
     <header id="App-header" className="shadow">
       <Container fluid>
@@ -21,21 +21,23 @@ function Header({ keycloak }) {
               <Button className="HeaderButton YellowHeaderButton">Contrôler</Button>
             </div>
           </Col>
-          <Col><UserZone userName={keycloak.idTokenParsed.name} date="08/06/2020" /></Col>
+          <Col><UserZone user={user} date={new Date()} /></Col>
         </Row>
       </Container>
     </header>
   );
 }
 
-function UserZone({ userName, date }) {
+function UserZone({ user, date }) {
   return (
     <Card id="UserZone">
       <Card.Title>
         { 'Bienvenue '}
-        {userName}
+        {user.firstname}
+        &nbsp;
+        {user.lastname}
       </Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
+      <Card.Subtitle className="mb-2 text-muted">{date.toLocaleDateString()}</Card.Subtitle>
       <div className="UserZoneButtons">
         <Button className="HeaderButton">Mes enquêteurs</Button>
         <Button className="HeaderButton">Mes enquêtes</Button>

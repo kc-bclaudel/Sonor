@@ -9,6 +9,15 @@ class Service {
     };
   }
 
+  getUser(cb) {
+    fetch('http://localhost:7777/api/user', this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch(console.log);
+  }
+
   getSurveys(cb) {
     fetch('http://localhost:7777/api/campaigns', this.options)
       .then((res) => res.json())
