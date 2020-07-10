@@ -1,3 +1,5 @@
+const baseUrl = window.configs.url + window.configs.port;
+
 class Service {
   constructor(token) {
     this.options = {
@@ -10,7 +12,7 @@ class Service {
   }
 
   getUser(cb) {
-    fetch('http://localhost:7777/api/user', this.options)
+    fetch(`${baseUrl}/api/user`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -19,7 +21,7 @@ class Service {
   }
 
   getSurveys(cb) {
-    fetch('http://localhost:7777/api/campaigns', this.options)
+    fetch(`${baseUrl}/api/campaigns`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -28,7 +30,7 @@ class Service {
   }
 
   getInterviewersByCampaign(campaignId, cb) {
-    fetch(`http://localhost:7777/api/campaign/${campaignId}/interviewers`, this.options)
+    fetch(`${baseUrl}/api/campaign/${campaignId}/interviewers`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -37,7 +39,7 @@ class Service {
   }
 
   getNotAttributedByCampaign(campaignId, cb) {
-    fetch(`http://localhost:7777/api/campaign/${campaignId}/survey-units/not-attributed`, this.options)
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/not-attributed`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -46,7 +48,7 @@ class Service {
   }
 
   getTotalDemByCampaign(campaignId, cb) {
-    fetch(`http://localhost:7777/api/campaign/${campaignId}/survey-units/state-count`, this.options)
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -55,7 +57,7 @@ class Service {
   }
 
   getSurveyUnits(campaignId, cb) {
-    fetch(`http://localhost:7777/api/campaign/${campaignId}/survey-units`, this.options)
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -64,7 +66,7 @@ class Service {
   }
 
   getInterviewers(campaignId, cb) {
-    fetch(`http://localhost:7777/api/campaign/${campaignId}/interviewers`, this.options)
+    fetch(`${baseUrl}/api/campaign/${campaignId}/interviewers`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -73,7 +75,7 @@ class Service {
   }
 
   getInterviewersStateCount(campaignId, idep, date, cb) {
-    fetch(`http://localhost:7777/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.options)
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -82,7 +84,7 @@ class Service {
   }
 
   getStateCount(campaignId, date, cb) {
-    fetch(`http://localhost:7777/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.options)
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
