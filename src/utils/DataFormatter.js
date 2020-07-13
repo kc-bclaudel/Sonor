@@ -19,9 +19,6 @@ class DataFormatter {
         formattedSurvey.phase = Utils.getCampaignPhase(
           survey.collectionStartDate, survey.collectionEndDate, survey.treatmentEndDate,
         );
-        formattedSurvey.collectionStartDate = Utils.convertToDateString(survey.collectionStartDate);
-        formattedSurvey.collectionEndDate = Utils.convertToDateString(survey.collectionEndDate);
-        formattedSurvey.treatmentEndDate = Utils.convertToDateString(survey.treatmentEndDate);
         formattedData.push(formattedSurvey);
       });
       cb(formattedData);

@@ -2,8 +2,9 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import Pagination from 'react-bootstrap/Pagination';
 import Form from 'react-bootstrap/Form';
+import PaginationNav from '../PaginationNav/PaginationNav';
+//import '../MainScreen/MainScreen.css';
 
 function getMatchingInterviewers(interviewers, str) {
   const matchingInterviewers = [];
@@ -40,30 +41,15 @@ function MonitoringTable({
           />
         </Card.Title>
         <div id="searchParametersContainer">
-          <span>Afficher </span>
-          <span>
-            <Form id="pageSizeSelector">
-              <Form.Group controlId="exampleForm.SelectCustom">
-                <Form.Control
-                  as="select"
-                  size="sm"
-                  custom
-                  onChange={(e) => updateInterviewersDetail(
-                    survey,
-                    data.date,
-                    { size: e.target.value, page: 1 },
-                    data.relevantInterviewers,
-                  )}
-                >
-                  <option>5</option>
-                  <option>10</option>
-                  <option>20</option>
-                  <option>50</option>
-                </Form.Control>
-              </Form.Group>
-            </Form>
-            <span> éléments</span>
-          </span>
+
+          <PaginationNav.SizeSelector
+            updateFunc={(pagination) => updateInterviewersDetail(
+              survey,
+              data.date,
+              pagination,
+              data.relevantInterviewers,
+            )}
+          />
           <span id="searchField">
             <span>Rechercher: </span>
             <input
@@ -79,10 +65,15 @@ function MonitoringTable({
           </span>
         </div>
         <FollowUpTable data={data} />
-        <PaginationNav
-          survey={survey}
-          data={data}
-          updateInterviewersDetail={updateInterviewersDetail}
+        <PaginationNav.PageSelector
+          pagination={data.pagination}
+          updateFunc={(pagination) => updateInterviewersDetail(
+            survey,
+            data.date,
+            pagination,
+            data.relevantInterviewers,
+          )}
+          numberOfItems={data.relevantInterviewers.length}
         />
       </Card>
     </div>
@@ -213,67 +204,6 @@ function FollowUpTableLine({ data, oddLine }) {
       <td>{appointmentTaken}</td>
       <td>{interviewStarted}</td>
     </tr>
-  );
-}
-
-function makePaginationItem(pageNumber, activePage, survey, data, updateFunc) {
-  return (
-    <Pagination.Item
-      key={pageNumber}
-      active={activePage === pageNumber}
-      onClick={() => updateFunc(survey,
-        data.date,
-        { size: data.pagination.size, page: pageNumber },
-        data.relevantInterviewers)}
-    >
-      {pageNumber}
-    </Pagination.Item>
-  );
-}
-
-function PaginationNav({ survey, data, updateInterviewersDetail }) {
-  const update = updateInterviewersDetail;
-  const numberOfPages = Math.floor(data.relevantInterviewers.length / data.pagination.size);
-  const active = data.pagination.page;
-  const items = [];
-
-  if (numberOfPages < 8) {
-    for (let number = 1; number <= 1 + numberOfPages; number += 1) {
-      items.push(makePaginationItem(number, active, survey, data, update));
-    }
-  } else {
-    const activeForCalc = Math.min(Math.max(active, 4), numberOfPages - 3);
-    let numbers = [1, activeForCalc - 1, activeForCalc, activeForCalc + 1, numberOfPages];
-    numbers = numbers.slice(0, numbers.indexOf(numberOfPages) + 1);
-    numbers = numbers.slice(numbers.lastIndexOf(1));
-    numbers.forEach((number) => {
-      if (number === numberOfPages) {
-        if (activeForCalc < numberOfPages - 3) {
-          items.push(
-            <Pagination.Item key={-1} active={false}>...</Pagination.Item>,
-          );
-        } else {
-          items.push(makePaginationItem(numberOfPages - 1, active, survey, data, update));
-        }
-      }
-      items.push(makePaginationItem(number, active, survey, data, update));
-
-      if (number === 1) {
-        if (activeForCalc > 4) {
-          items.push(
-            <Pagination.Item key={2} active={false}>...</Pagination.Item>,
-          );
-        } else {
-          items.push(makePaginationItem(2, active, survey, data, update));
-        }
-      }
-    });
-  }
-
-  return (
-    <div className="paginationNavWrapper">
-      <Pagination size="sm" className="paginationNav">{items}</Pagination>
-    </div>
   );
 }
 

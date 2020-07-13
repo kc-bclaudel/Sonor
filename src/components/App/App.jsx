@@ -21,15 +21,14 @@ class App extends React.Component {
     });
   }
 
-
   render() {
     const { keycloak, authenticated, data } = this.state;
     if (keycloak) {
       if (authenticated) {
         return (
           <div className="App">
-            <Header user={data} />
-            <View currentView="mainScreen" keycloak={keycloak} />
+            <Header user={data} returnFunc={() => { this.content.handleReturnButtonClick(); }} />
+            <View keycloak={keycloak} ref={(instance) => { this.content = instance; }} />
           </div>
         );
       }

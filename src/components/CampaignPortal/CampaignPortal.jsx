@@ -5,8 +5,13 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Utils from '../../utils/Utils';
+import SortIcon from '../SortIcon/SortIcon';
+import PaginationNav from '../PaginationNav/PaginationNav';
 
-function CampaignPortal({ data, returnToMainScreen }) {
+function CampaignPortal({
+  data, returnToMainScreen, sort, handleSort,
+}) {
   return (
     <div id="CampaignPortal">
       <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">Retour</Button>
@@ -25,7 +30,7 @@ function CampaignPortal({ data, returnToMainScreen }) {
               <Contacts />
             </Col>
             <Col>
-              <SurveyUnits props={data} />
+              <SurveyUnits data={data} sort={sort} handleSortfunc={handleSort} />
             </Col>
           </Row>
         </Container>
@@ -35,19 +40,21 @@ function CampaignPortal({ data, returnToMainScreen }) {
 }
 
 function TimeLine({ props }) {
-  const { collectionStartDate, collectionEndDate, treatmentEndDate } = props;
+  const {
+    collectionStartDate, collectionEndDate, treatmentEndDate, phase,
+  } = props;
   return (
     <div id="TimeLine">
       <div id="PhaseMilestones">
         <div>N/A</div>
-        <div className="DateCenter">{collectionStartDate}</div>
-        <div className="DateCenter">{collectionEndDate}</div>
-        <div className="DateRight">{treatmentEndDate}</div>
+        <div className="DateCenter">{Utils.convertToDateString(collectionStartDate)}</div>
+        <div className="DateCenter">{Utils.convertToDateString(collectionEndDate)}</div>
+        <div className="DateRight">{Utils.convertToDateString(treatmentEndDate)}</div>
       </div>
       <div id="PhaseDisplay">
-        <div>Affectation initiale</div>
-        <div>Collecte en cours</div>
-        <div>Collecte terminée</div>
+        <div className={`${phase === 0 ? ' CurrentPhase' : ''}`}>Affectation initiale</div>
+        <div className={`${phase === 1 ? ' CurrentPhase' : ''}`}>Collecte en cours</div>
+        <div className={`${phase > 1 ? ' CurrentPhase' : ''}`}>Collecte terminée</div>
       </div>
       <div id="PhaseMilestones">
         <div>integration</div>
@@ -92,42 +99,78 @@ function Contacts() {
   );
 }
 
-function displayInterviewersLines({ props }) {
+function displayInterviewersLines({ interviewers, pagination }) {
   const lines = [];
-  props.interviewers.forEach((interviewer) => {
-    lines.push(<InterviewerLine key={interviewer.id} interviewer={interviewer} />);
-  });
+  for (let i = (pagination.page - 1) * pagination.size;
+    i < pagination.page * pagination.size && i < interviewers.length;
+    i += 1
+  ) {
+    lines.push(<InterviewerLine key={i} interviewer={interviewers[i]} />);
+  }
   return lines;
 }
 
-function SurveyUnits({ props }) {
-  const { notAttributed, total } = props;
-  return (
-    <Card className="ViewCard">
-      <div className="Title">Unités enquêtées</div>
-      <Table className="CustomTable" bordered striped hover responsive size="sm">
-        <tbody>
-          <tr>
-            <th>Enquêteur</th>
-            <th>Idep</th>
-            <th>UE</th>
-          </tr>
-          {displayInterviewersLines({ props })}
-          <tr>
-            <th>Non attribuée(s)</th>
-            <th />
-            <th>{notAttributed.count}</th>
-          </tr>
-          <tr>
-            <th>Total DEM</th>
-            <th />
-            <th>{total.DEM.total}</th>
-          </tr>
-        </tbody>
-      </Table>
-    </Card>
+class SurveyUnits extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pagination: { size: 5, page: 1 },
+    };
+  }
 
-  );
+  handlePageChange(pagination) {
+    this.setState({ pagination });
+  }
+
+  render() {
+    const { data, sort, handleSortfunc } = this.props;
+    const { notAttributed, total, interviewers } = data;
+    const { pagination } = this.state;
+    function handleSort(property) { return () => { handleSortfunc(property); }; }
+    return (
+      <Card className="ViewCard">
+        <div className="Title">Unités enquêtées</div>
+        <PaginationNav.SizeSelector
+          updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+        />
+        <Table className="CustomTable" bordered striped hover responsive size="sm">
+          <tbody>
+            <tr>
+              <th onClick={handleSort('CPinterviewer')} className="Clickable">
+                <SortIcon val="CPinterviewer" sort={sort} />
+                Enquêteur
+              </th>
+              <th onClick={handleSort('CPidep')} className="Clickable">
+                <SortIcon val="CPidep" sort={sort} />
+                Idep
+              </th>
+              <th onClick={handleSort('CPue')} className="Clickable">
+                <SortIcon val="CPue" sort={sort} />
+                UE
+              </th>
+            </tr>
+            {displayInterviewersLines({ interviewers, pagination })}
+            <tr>
+              <th>Non attribuée(s)</th>
+              <th />
+              <th>{notAttributed.count}</th>
+            </tr>
+            <tr>
+              <th>Total DEM</th>
+              <th />
+              <th>{total.DEM.total}</th>
+            </tr>
+          </tbody>
+        </Table>
+        <PaginationNav.PageSelector
+          pagination={pagination}
+          updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+          numberOfItems={interviewers.length}
+        />
+      </Card>
+
+    );
+  }
 }
 
 function InterviewerLine({ interviewer }) {

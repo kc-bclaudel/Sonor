@@ -6,17 +6,23 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from './logo_com_externe_semi_bold.png';
 
-function Header({ user }) {
+function Header({ user, returnFunc }) {
   return (
     <header id="App-header" className="shadow">
       <Container fluid>
         <Row>
           <Col md="auto">
-            <img src={logo} id="InseeLogo" alt="logo" />
+            <img
+              src={logo}
+              id="InseeLogo"
+              alt="logo"
+              className="Clickable"
+              onClick={() => returnFunc()}
+            />
           </Col>
           <Col>
             <div id="headerButtonContainer">
-              <Button className="HeaderButton YellowHeaderButton">Affecter</Button>
+              <Button className="HeaderButton YellowHeaderButton test">Affecter</Button>
               <Button className="HeaderButton YellowHeaderButton">Suivre</Button>
               <Button className="HeaderButton YellowHeaderButton">Contrôler</Button>
             </div>

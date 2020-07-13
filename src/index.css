@@ -166,6 +166,8 @@ body {
 th{
   background: rgb(19,66,120);
   color: rgb(240,196,46);
+  position:relative;
+  word-wrap: normal;
 }
 
 th.YellowHeader{
@@ -212,6 +214,11 @@ th.YellowHeader{
   width:32%;
   text-align: center;
 
+}
+
+.CurrentPhase {
+  background: rgb(249,191,63);
+  color: rgb(19,66,120);
 }
 
 #PhaseMilestones{
@@ -324,4 +331,25 @@ button{
 #pageSizeSelector{
   display: inline-block;
   width: 60px;
+}
+
+.sortIcon{
+  float: right;
+  position:relative;
+  margin-bottom: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+.sortIconDown{
+  position:absolute;
+  top:4px;
+}
+.sortIconUp{
+  position:absolute;
+  top: -3px;
+}
+
+.iconInactive{
+  opacity: 0.4;
 }

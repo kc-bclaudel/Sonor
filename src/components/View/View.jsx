@@ -5,6 +5,7 @@ import CampaignPortal from '../CampaignPortal/CampaignPortal';
 import ListSU from '../ListSU/ListSU';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
 import DataFormatter from '../../utils/DataFormatter';
+import Utils from '../../utils/Utils';
 
 class View extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class View extends React.Component {
       currentSurvey: null,
       data: [],
       dataRetreiver: new DataFormatter(props.keycloak.token),
+      sort: { sortOn: null, asc: null },
     };
     const { dataRetreiver } = this.state;
     this.updateFunc = (
@@ -92,14 +94,38 @@ class View extends React.Component {
     });
   }
 
+  handleSort(sortOn) {
+    const { data, sort, currentView } = this.state;
+    const newOrder = sortOn !== sort.sortOn || !sort.asc;
+    let sortedData = {};
+    switch (currentView) {
+      case 'mainScreen':
+        sortedData = Utils.sortData(data, sortOn, newOrder);
+        break;
+      case 'campaignPortal':
+        Object.assign(sortedData, data);
+        sortedData.interviewers = Utils.sortData(data.interviewers, sortOn, newOrder);
+        break;
+      default:
+        Object.assign(sortedData, data);
+        break;
+    }
+
+    this.setState({ data: sortedData, sort: { sortOn, asc: newOrder } });
+  }
+
   render() {
-    const { currentView, currentSurvey, data } = this.state;
+    const {
+      currentView, currentSurvey, data, sort,
+    } = this.state;
     switch (currentView) {
       case 'campaignPortal':
         return (
           <CampaignPortal
             data={data}
+            sort={sort}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
+            handleSort={(sortOn) => this.handleSort(sortOn)}
           />
         );
       case 'listSU':
@@ -132,9 +158,11 @@ class View extends React.Component {
         return (
           <MainScreen
             data={data}
+            sort={sort}
             goToCampaignPortal={(mainScreenData) => { this.handleCampaignClick(mainScreenData); }}
             goToListSU={(surveyId) => { this.handleListSUClick(surveyId); }}
             goToMonitoringTable={(surveyId) => { this.handleMonitoringTableClick(surveyId); }}
+            handleSort={(sortOn) => this.handleSort(sortOn)}
           />
         );
     }

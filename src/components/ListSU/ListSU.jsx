@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
+import PaginationNav from '../PaginationNav/PaginationNav';
 
 function ListSU({ survey, data, returnToMainScreen }) {
   return (
@@ -19,36 +20,63 @@ function ListSU({ survey, data, returnToMainScreen }) {
   );
 }
 
-function displaySurveyLines({ data }) {
+function displaySurveyLines({ data, pagination }) {
   const lines = [];
-  let key = 0;
   let oddLine = true;
-  data.forEach((lineData) => {
-    lines.push(<SurveyUnitLine key={key} oddLine={oddLine} lineData={lineData} />);
+  for (let i = (pagination.page - 1) * pagination.size;
+    i < pagination.page * pagination.size && i < data.length;
+    i += 1
+  ) {
+    lines.push(<SurveyUnitLine key={i} oddLine={oddLine} lineData={data[i]} />);
     oddLine = !oddLine;
-    key += 1;
-  });
+  }
+
   return lines;
 }
 
-function SUTable({ data }) {
-  return (
-    <Table id="SUTable" className="CustomTable" bordered striped hover responsive size="sm">
-      <thead>
-        <tr>
-          <th>Identifiant</th>
-          <th>Ssech</th>
-          <th>Département</th>
-          <th>Commune</th>
-          <th>Enquêteur</th>
-          <th>Idep</th>
-        </tr>
-      </thead>
-      <tbody>
-        {displaySurveyLines({ data })}
-      </tbody>
-    </Table>
-  );
+class SUTable extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pagination: { size: 5, page: 1 },
+    };
+  }
+
+  handlePageChange(pagination) {
+    this.setState({ pagination });
+  }
+
+  render() {
+    const { data } = this.props;
+    const { pagination } = this.state;
+    return (
+      <div>
+        <PaginationNav.SizeSelector
+          updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+        />
+        <Table id="SUTable" className="CustomTable" bordered striped hover responsive size="sm">
+          <thead>
+            <tr>
+              <th>Identifiant</th>
+              <th>Ssech</th>
+              <th>Département</th>
+              <th>Commune</th>
+              <th>Enquêteur</th>
+              <th>Idep</th>
+            </tr>
+          </thead>
+          <tbody>
+            {displaySurveyLines({ data, pagination })}
+          </tbody>
+        </Table>
+        <PaginationNav.PageSelector
+          pagination={pagination}
+          updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+          numberOfItems={data.length}
+        />
+      </div>
+    );
+  }
 }
 
 function SurveyUnitLine({ lineData, oddLine }) {

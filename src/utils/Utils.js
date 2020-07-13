@@ -36,17 +36,58 @@ class Utils {
 
   static getCampaignPhase(collectionStartDate, collectionEndDate, treatmentEndDate) {
     const now = new Date().getTime();
-    let phase = '';
     if (!collectionStartDate || now < collectionStartDate) {
-      phase = 'Affectation initiale';
-    } else if (!collectionEndDate || now < collectionEndDate) {
-      phase = 'Collecte en cours';
-    } else if (!treatmentEndDate || now < treatmentEndDate) {
-      phase = 'Collecte terminée';
-    } else {
-      phase = 'Traitement terminée';
+      return 0;
     }
-    return phase;
+    if (!collectionEndDate || now < collectionEndDate) {
+      return 1;
+    }
+    if (!treatmentEndDate || now < treatmentEndDate) {
+      return 2;
+    }
+    return 3;
+  }
+
+  static displayCampaignPhase(campaignPhase) {
+    switch (campaignPhase) {
+      case 0:
+        return 'Affectation initiale';
+      case 1:
+        return 'Collecte en cours';
+      case 2:
+        return 'Collecte terminée';
+      case 3:
+        return 'Traitement terminée';
+      default:
+        return '';
+    }
+  }
+
+  static getSortFunction(sortOn) {
+    if (['label', 'id'].includes(sortOn)) {
+      return (a, b) => (a[sortOn] < b[sortOn] ? -1 : 1);
+    }
+    if (sortOn === 'CPinterviewer') {
+      return (a, b) => (
+        (a.interviewerFirstName + a.interviewerLastName)
+        < (b.interviewerFirstName + b.interviewerLastName) ? -1 : 1
+      );
+    }
+    return (a, b) => a[sortOn] - b[sortOn];
+  }
+
+  static sortData(data, sortOn, asc) {
+    const sortedData = Object.assign(data);
+    const attrs = {
+      CPue: 'surveyUnitCount',
+      CPidep: 'id',
+    };
+    const sortBy = attrs[sortOn] || sortOn;
+    sortedData.sort(this.getSortFunction(sortBy));
+    if (sortOn && !asc) {
+      sortedData.reverse();
+    }
+    return sortedData;
   }
 }
 
