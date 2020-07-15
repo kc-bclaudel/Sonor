@@ -65,6 +65,7 @@ hideMenu(){
 }
 
   render(){
+    const appVersion = window.configs.appVersion;
     const {
       returnFunc, user, goToMonitoringTable
     } = this.props
@@ -80,6 +81,7 @@ hideMenu(){
                 className="Clickable"
                 onClick={() => returnFunc()}
               />
+              <div style={{'textAlign': 'center', 'fontSize': '0.75rem', 'fontWeight': 'bold', 'color': '#575453'}}>{appVersion}</div>
             </Col>
             <Col>
               <div className="d-inline-flex classTest" id="headerButtonContainer">
