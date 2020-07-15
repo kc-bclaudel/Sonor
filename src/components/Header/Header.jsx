@@ -5,33 +5,98 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from './logo_com_externe_semi_bold.png';
+import './Header.css';
 
-function Header({ user, returnFunc }) {
-  return (
-    <header id="App-header" className="shadow">
-      <Container fluid>
-        <Row>
-          <Col md="auto">
-            <img
-              src={logo}
-              id="InseeLogo"
-              alt="logo"
-              className="Clickable"
-              onClick={() => returnFunc()}
-            />
-          </Col>
-          <Col>
-            <div id="headerButtonContainer">
-              <Button className="HeaderButton YellowHeaderButton test">Affecter</Button>
-              <Button className="HeaderButton YellowHeaderButton">Suivre</Button>
-              <Button className="HeaderButton YellowHeaderButton">Contrôler</Button>
-            </div>
-          </Col>
-          <Col><UserZone user={user} date={new Date()} /></Col>
-        </Row>
-      </Container>
-    </header>
-  );
+class Header extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      toggleFirstMenu: false,
+      toggleSecondMenu: false,
+    }
+  }
+
+  toggleFirstDropDownMenu(e){
+    e.stopPropagation();
+    this.setState({
+      toggleFirstMenu: !this.state.toggleFirstMenu
+    })
+  }
+
+  toggleSecondDropDownMenu(e) {
+    e.stopPropagation();
+    this.setState({
+     toggleSecondMenu: !this.state.toggleSecondMenu
+   })
+ }
+
+ displayFirstSubMenu(toggle){
+  if(toggle){
+    return(
+    <ul className="dropdown-menu">
+      <li >
+        <a onClick={(e)=>{this.toggleSecondDropDownMenu(e)}} className="selectedSubeMenu" href="#" >Enquêtes<i style={{'marginLeft':'40px'}} className="fa fa-caret-right fa-xs"></i></a>
+        {this.displaySecondSubMenu(this.state.toggleSecondMenu)}
+      </li>
+      <li>
+        <a onClick={(e)=>{this.toggleSecondDropDownMenu(e)}} id="selectedSubeMenu" className="selectedSubeMenu" href="#" >Enquêteurs<i style={{'marginLeft':'25px'}} className="fa fa-caret-right fa-xs"></i></a>
+        {this.displaySecondSubMenu(this.state.toggleSecondMenu)}
+      </li>
+    </ul>
+    );
+  }
+}
+
+displaySecondSubMenu(toggle){
+  if(toggle){
+    return(
+    <ul className="dropdown-menu sub-menu" id="BtnSuivre"> 
+      <li><a onClick={() => this.props.goToMonitoringTable()} className="selectedSubeMenu" href="#">Avancement</a></li>
+    </ul>
+    );
+  }
+}
+
+hideMenu(){
+  this.setState({
+    toggleFirstMenu : false,
+    toggleSecondMenu : false,
+  })
+}
+
+  render(){
+    const {
+      returnFunc, user, goToMonitoringTable
+    } = this.props
+    return (
+      <header id="App-header" className="shadow">
+        <Container fluid>
+          <Row onClick={()=> {this.hideMenu()}}>
+            <Col md="auto">
+              <img
+                src={logo}
+                id="InseeLogo"
+                alt="logo"
+                className="Clickable"
+                onClick={() => returnFunc()}
+              />
+            </Col>
+            <Col>
+              <div className="d-inline-flex classTest" id="headerButtonContainer">
+                <Button className="HeaderButton">Relancer</Button>
+                <li className="dropdown" id="BtnSuivreParent">
+                  <Button data-toggle="dropdown" className="HeaderButton dropdown-toggle" href="#" onClick={(e)=>{this.toggleFirstDropDownMenu(e)}}>Suivre <b className="caret"></b></Button>
+                  {this.displayFirstSubMenu(this.state.toggleFirstMenu)}
+                </li>
+                <Button className="HeaderButton">Lire</Button>
+              </div>
+            </Col>
+            <Col><UserZone user={user} date={new Date()} /></Col>
+          </Row>
+        </Container>
+      </header>
+    );
+  }
 }
 
 function UserZone({ user, date }) {
@@ -51,5 +116,10 @@ function UserZone({ user, date }) {
     </Card>
   );
 }
+
+
+
+
+  
 
 export default Header;

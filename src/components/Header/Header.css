@@ -1,0 +1,61 @@
+.selectedSubeMenu:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    text-decoration: none !important;
+    margin: 0 !important;
+
+}
+a {
+    display: block;
+    padding: 0 16px;
+    line-height: inherit;
+    cursor: pointer;
+    }
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+
+li {
+    list-style: none;
+    }
+
+ .dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: -1px;
+  }
+  
+  .dropdown-menu{
+    display: block !important;
+  }
+
+  .nav-tabs .dropdown-menu,
+  .nav-pills .dropdown-menu,
+  .navbar .dropdown-menu {
+    margin-top: 0;
+  }
+  
+  .navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+  }
+  
+  .navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+  } 

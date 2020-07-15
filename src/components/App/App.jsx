@@ -27,7 +27,7 @@ class App extends React.Component {
       if (authenticated) {
         return (
           <div className="App">
-            <Header user={data} returnFunc={() => { this.content.handleReturnButtonClick(); }} />
+            <Header user={data} returnFunc={() => { this.content.handleReturnButtonClick(); }} goToMonitoringTable={(surveyId) => { this.content.handleMonitoringTableClick(surveyId); }} />
             <View keycloak={keycloak} ref={(instance) => { this.content = instance; }} />
           </div>
         );
