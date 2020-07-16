@@ -5,17 +5,55 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
 import Utils from '../../utils/Utils';
 import SortIcon from '../SortIcon/SortIcon';
 import PaginationNav from '../PaginationNav/PaginationNav';
+import SearchField from '../SearchField/SearchField';
+import D from '../../i18n';
+
+function createSelectOptions(campaigns, currentId) {
+  const options = [];
+  campaigns.forEach((campaign, index) => {
+    if (campaign.id !== currentId) {
+      options.push(<option value={index}>{campaign.label}</option>);
+    }
+  });
+  return options;
+}
 
 function CampaignPortal({
-  data, returnToMainScreen, sort, handleSort,
+  data, returnToMainScreen, sort, handleSort, handleCampaignClick,
 }) {
   return (
     <div id="CampaignPortal">
-      <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">Retour</Button>
-      <div className="SurveyTitle">{data.label}</div>
+      <Container fluid>
+        <Row>
+          <Col>
+            <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">{D.back}</Button>
+          </Col>
+          <Col xs={6}>
+            <div className="SurveyTitle">{data.label}</div>
+          </Col>
+          <Col>
+            <Form>
+              <Form.Group controlId="exampleForm.SelectCustom">
+                <Form.Control
+                  as="select"
+                  size="sm"
+                  custom
+                  placeholder="Choisir une enquête"
+                  value={-1}
+                  onChange={(e) => handleCampaignClick(data.campaigns[e.target.value])}
+                >
+                  <option disabled value={-1} key={-1}>{D.chooseASurvey}</option>
+                  {createSelectOptions(data.campaigns, data.id)}
+                </Form.Control>
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
       <Card className="ViewCard">
         <Container fluid>
           <Row>
@@ -52,15 +90,15 @@ function TimeLine({ props }) {
         <div className="DateRight">{Utils.convertToDateString(treatmentEndDate)}</div>
       </div>
       <div id="PhaseDisplay">
-        <div className={`${phase === 0 ? ' CurrentPhase' : ''}`}>Affectation initiale</div>
-        <div className={`${phase === 1 ? ' CurrentPhase' : ''}`}>Collecte en cours</div>
-        <div className={`${phase > 1 ? ' CurrentPhase' : ''}`}>Collecte terminée</div>
+        <div className={`${phase === 0 ? ' CurrentPhase' : ''}`}>{D.initialAssignment}</div>
+        <div className={`${phase === 1 ? ' CurrentPhase' : ''}`}>{D.collectionInProgress}</div>
+        <div className={`${phase > 1 ? ' CurrentPhase' : ''}`}>{D.collectionOver}</div>
       </div>
       <div id="PhaseMilestones">
-        <div>integration</div>
-        <div className="LabelCenter">début de collecte</div>
-        <div className="LabelCenter">fin de collecte</div>
-        <div className="LabelRight">fin de traitement</div>
+        <div>{D.integration}</div>
+        <div className="LabelCenter">{D.startOfCollection}</div>
+        <div className="LabelCenter">{D.endOfCollection}</div>
+        <div className="LabelRight">{D.endOfTreatment}</div>
       </div>
     </div>
   );
@@ -70,23 +108,23 @@ function Contacts() {
   return (
     <Card className="ViewCard">
       <div>
-        <Card.Title className="Title">Contacts</Card.Title>
+        <Card.Title className="Title">{D.contacts}</Card.Title>
 
         <Table className="CustomTable" bordered striped hover responsive size="sm">
           <tbody>
             <tr>
-              <th>Enquête</th>
+              <th>{D.survey}</th>
               <td className="LightGreyLine">gestion-enquete-mobilités</td>
             </tr>
             <tr>
-              <th rowSpan="2">CPOS</th>
+              <th rowSpan="2">{D.cpos}</th>
               <td className="LightGreyLine">Chloé Berlin</td>
             </tr>
             <tr>
               <td className="LightGreyLine">01 87 69 64 53</td>
             </tr>
             <tr>
-              <th rowSpan="2">Adjoint CPOS</th>
+              <th rowSpan="2">{D.deputyCpos}</th>
               <td className="LightGreyLine">Thierry Fabres</td>
             </tr>
             <tr>
@@ -99,13 +137,13 @@ function Contacts() {
   );
 }
 
-function displayInterviewersLines({ interviewers, pagination }) {
+function displayInterviewersLines({ displayedInterviewers, pagination }) {
   const lines = [];
   for (let i = (pagination.page - 1) * pagination.size;
-    i < pagination.page * pagination.size && i < interviewers.length;
+    i < pagination.page * pagination.size && i < displayedInterviewers.length;
     i += 1
   ) {
-    lines.push(<InterviewerLine key={i} interviewer={interviewers[i]} />);
+    lines.push(<InterviewerLine key={i} interviewer={displayedInterviewers[i]} />);
   }
   return lines;
 }
@@ -115,6 +153,7 @@ class SurveyUnits extends React.Component {
     super(props);
     this.state = {
       pagination: { size: 5, page: 1 },
+      displayedInterviewers: props.data.interviewers,
     };
   }
 
@@ -122,41 +161,57 @@ class SurveyUnits extends React.Component {
     this.setState({ pagination });
   }
 
+  updateInterviewers(matchingInterviewers) {
+    const { pagination } = this.state;
+    this.setState({
+      pagination: { size: pagination.size, page: 1 },
+      displayedInterviewers: matchingInterviewers,
+    });
+  }
+
   render() {
     const { data, sort, handleSortfunc } = this.props;
     const { notAttributed, total, interviewers } = data;
-    const { pagination } = this.state;
+    const { pagination, displayedInterviewers } = this.state;
     function handleSort(property) { return () => { handleSortfunc(property); }; }
     return (
       <Card className="ViewCard">
-        <div className="Title">Unités enquêtées</div>
-        <PaginationNav.SizeSelector
-          updateFunc={(newPagination) => this.handlePageChange(newPagination)}
-        />
+        <div className="Title">{D.surveyUnits}</div>
+        <div id="searchParametersContainerCP">
+          <PaginationNav.SizeSelector
+            updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+          />
+          <SearchField
+            data={interviewers}
+            firstName="interviewerFirstName"
+            lastName="interviewerLastName"
+            updateFunc={(a) => this.updateInterviewers(a)}
+          />
+        </div>
         <Table className="CustomTable" bordered striped hover responsive size="sm">
           <tbody>
             <tr>
               <th onClick={handleSort('CPinterviewer')} className="Clickable">
                 <SortIcon val="CPinterviewer" sort={sort} />
-                Enquêteur
+                {D.interviewer}
               </th>
               <th onClick={handleSort('CPidep')} className="Clickable">
                 <SortIcon val="CPidep" sort={sort} />
-                Idep
+                {D.idep}
               </th>
               <th onClick={handleSort('CPue')} className="Clickable">
                 <SortIcon val="CPue" sort={sort} />
-                UE
+                {D.SU}
               </th>
             </tr>
-            {displayInterviewersLines({ interviewers, pagination })}
+            {displayInterviewersLines({ displayedInterviewers, pagination })}
             <tr>
-              <th>Non attribuée(s)</th>
+              <th>{D.unassigned}</th>
               <th />
               <th>{notAttributed.count}</th>
             </tr>
             <tr>
-              <th>Total DEM</th>
+              <th>{D.totalDEM}</th>
               <th />
               <th>{total.DEM.total}</th>
             </tr>
@@ -165,7 +220,7 @@ class SurveyUnits extends React.Component {
         <PaginationNav.PageSelector
           pagination={pagination}
           updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-          numberOfItems={interviewers.length}
+          numberOfItems={displayedInterviewers.length}
         />
       </Card>
 

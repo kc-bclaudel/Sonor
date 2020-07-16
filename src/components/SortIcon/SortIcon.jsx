@@ -5,8 +5,8 @@ function SortIcon({ val, sort }) {
   const descActive = (val === sort.sortOn && !sort.asc) ? 'iconActive' : 'iconInactive';
   return (
     <span className="sortIcon">
-      <i className={`fa fa-fw fa-caret-down sortIconDown ${ascActive}`} />
-      <i className={`fa fa-fw fa-caret-up sortIconUp ${descActive}`} />
+      <i className={`fa fa-fw fa-caret-down sortIconDown ${descActive}`} />
+      <i className={`fa fa-fw fa-caret-up sortIconUp ${ascActive}`} />
     </span>
   );
 }

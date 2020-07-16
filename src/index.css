@@ -318,7 +318,7 @@ button{
   height:30px;
 }
 
-#searchField{
+.SearchField{
   position:absolute;
   right:20px;
 }
@@ -328,7 +328,16 @@ button{
   margin-bottom:5px;
 }
 
-#pageSizeSelector{
+#searchParametersContainerCP{
+  height: 30px;
+  margin-bottom:5px;
+}
+
+#searchParametersContainerCP .SearchFieldInput{
+  width:105px;
+}
+
+.PageSizeSelector{
   display: inline-block;
   width: 60px;
 }

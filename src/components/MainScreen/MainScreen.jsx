@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import SortIcon from '../SortIcon/SortIcon';
 import Utils from '../../utils/Utils';
 import PaginationNav from '../PaginationNav/PaginationNav';
+import D from '../../i18n';
 
 function displaySurveyLines(props, pagination) {
   const lines = [];
@@ -17,7 +18,7 @@ function displaySurveyLines(props, pagination) {
     oddLine = !oddLine;
   }
   return lines;
-};
+}
 
 class MainScreen extends React.Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class MainScreen extends React.Component {
     return (
       <div id="MainScreen">
         <Card className="ViewCard">
-          <Card.Title>Liste des enquêtes</Card.Title>
+          <Card.Title>{D.surveyList}</Card.Title>
           <PaginationNav.SizeSelector
             updateFunc={(newPagination) => this.handlePageChange(newPagination)}
           />
@@ -47,45 +48,45 @@ class MainScreen extends React.Component {
               <tr>
                 <th rowSpan="2" onClick={handleSortFunct('label')}>
                   <SortIcon val="label" sort={sort} />
-                  Enquête
+                  {D.survey}
                 </th>
                 <th rowSpan="2" className="ColumnSpacing" />
                 <th rowSpan="2" onClick={handleSortFunct('collectionStartDate')}>
                   <SortIcon val="collectionStartDate" sort={sort} />
-                  Début collecte
+                  {D.collectionStartDate}
                 </th>
                 <th rowSpan="2" onClick={handleSortFunct('collectionEndDate')}>
                   <SortIcon val="collectionEndDate" sort={sort} />
-                  Fin collecte
+                  {D.collectionEndDate}
                 </th>
                 <th rowSpan="2" onClick={handleSortFunct('treatmentEndDate')}>
                   <SortIcon val="treatmentEndDate" sort={sort} />
-                  Fin traitement
+                  {D.treatmentEndDate}
                 </th>
                 <th rowSpan="2" className="ColumnSpacing" />
                 <th rowSpan="2" onClick={handleSortFunct('phase')} className="Clickable">
                   <SortIcon val="phase" sort={sort} />
-                  Phase
+                  {D.phase}
                 </th>
                 <th rowSpan="2" className="ColumnSpacing" />
-                <th colSpan="4">Unités enquêtées</th>
+                <th colSpan="4">{D.surveyUnits}</th>
               </tr>
               <tr>
                 <th onClick={handleSortFunct('affected')} className="Clickable">
                   <SortIcon val="affected" sort={sort} />
-                  Confiées
+                  {D.allocated}
                 </th>
                 <th onClick={handleSortFunct('toAffect')} className="Clickable">
                   <SortIcon val="toAffect" sort={sort} />
-                  À affecter
+                  {D.toBeAssigned}
                 </th>
                 <th onClick={handleSortFunct('inProgress')} className="Clickable">
                   <SortIcon val="inProgress" sort={sort} />
-                  En cours
+                  {D.inProgress}
                 </th>
                 <th onClick={handleSortFunct('toControl')} className="Clickable">
                   <SortIcon val="toControl" sort={sort} />
-                  À contrôler
+                  {D.toBeReviewed}
                 </th>
               </tr>
             </thead>

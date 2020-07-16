@@ -2,31 +2,20 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import PaginationNav from '../PaginationNav/PaginationNav';
-//import '../MainScreen/MainScreen.css';
-
-function getMatchingInterviewers(interviewers, str) {
-  const matchingInterviewers = [];
-  const s = str.toLowerCase();
-  interviewers.forEach((interviewer) => {
-    if ((`${interviewer.interviewerFirstName} ${interviewer.interviewerLastName}`).toLowerCase().includes(s)) {
-      matchingInterviewers.push(interviewer);
-    }
-  });
-  return matchingInterviewers;
-}
+import SearchField from '../SearchField/SearchField';
+import D from '../../i18n';
 
 function MonitoringTable({
   survey, data, returnToMainScreen, updateInterviewersDetail,
 }) {
   return (
     <div id="MonitoringTable">
-      <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()}>Retour</Button>
+      <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()}>{D.back}</Button>
       <div className="SurveyTitle">{survey}</div>
       <Card className="ViewCard">
         <Card.Title>
-          <div className="DateDisplay">Avancement selon l&apos;état des unités enquêtées en date du: </div>
+          <div className="DateDisplay">{D.monitoringTableIntroductionSentence}</div>
           <input
             id="datePicker"
             className="DateDisplay"
@@ -50,19 +39,18 @@ function MonitoringTable({
               data.relevantInterviewers,
             )}
           />
-          <span id="searchField">
-            <span>Rechercher: </span>
-            <input
-              type="text"
-              onChange={(e) => updateInterviewersDetail(
-                survey,
-                data.date,
-                { size: data.pagination.size, page: 1 },
-                getMatchingInterviewers(data.interviewers, e.target.value),
-                true,
-              )}
-            />
-          </span>
+          <SearchField
+            data={data.interviewers}
+            firstName="interviewerFirstName"
+            lastName="interviewerLastName"
+            updateFunc={(matchingInterviewers) => updateInterviewersDetail(
+              survey,
+              data.date,
+              { size: data.pagination.size, page: 1 },
+              matchingInterviewers,
+              true,
+            )}
+          />
         </div>
         <FollowUpTable data={data} />
         <PaginationNav.PageSelector
@@ -97,25 +85,25 @@ function FollowUpTable({ data }) {
     <Table id="FollowUpTable" className="CustomTable" bordered striped hover responsive size="sm">
       <thead>
         <tr>
-          <th rowSpan="2">Enquêteur</th>
+          <th rowSpan="2">{D.interviewer}</th>
           <th rowSpan="2" className="ColumnSpacing" />
-          <th rowSpan="2" className="YellowHeader">Taux d&apos;avancement</th>
+          <th rowSpan="2" className="YellowHeader">{D.completionRate}</th>
           <th rowSpan="2" className="ColumnSpacing" />
-          <th colSpan="6">Nombre d&apos;unités enquêtées</th>
+          <th colSpan="6">{D.numberOfSurveyUnits}</th>
           <th rowSpan="2" className="ColumnSpacing" />
-          <th colSpan="4" className="YellowHeader">Unités enquêtées en cours de collecte</th>
+          <th colSpan="4" className="YellowHeader">{D.suCollectionsOngoing}</th>
         </tr>
         <tr>
-          <th>Confiées</th>
-          <th>Non commencées</th>
-          <th>En cours</th>
-          <th>En attente de validation enquêteur</th>
-          <th>Valiées enquêteur</th>
-          <th>Validées DEM</th>
-          <th className="YellowHeader">En préparation</th>
-          <th className="YellowHeader">Au moins un contact</th>
-          <th className="YellowHeader">RDV pris</th>
-          <th className="YellowHeader">Questionnaire démarré</th>
+          <th>{D.allocated}</th>
+          <th>{D.notStarted}</th>
+          <th>{D.inProgress}</th>
+          <th>{D.waitingForIntReview}</th>
+          <th>{D.reviewedByInterviewer}</th>
+          <th>{D.reviewedByDEM}</th>
+          <th className="YellowHeader">{D.preparingContact}</th>
+          <th className="YellowHeader">{D.atLeastOneContact}</th>
+          <th className="YellowHeader">{D.appointmentTaken}</th>
+          <th className="YellowHeader">{D.interviewStarted}</th>
         </tr>
       </thead>
       <tbody>
@@ -123,7 +111,7 @@ function FollowUpTable({ data }) {
       </tbody>
       <tfoot>
         <tr>
-          <th>Total DEM</th>
+          <th>{D.totalDEM}</th>
           <th className="ColumnSpacing" />
           <th className="YellowHeader">
             {(Math.round(data.total.dem.completionRate * 1000) / 1000) * 100}
@@ -143,7 +131,7 @@ function FollowUpTable({ data }) {
           <th className="YellowHeader">{data.total.dem.interviewStarted}</th>
         </tr>
         <tr>
-          <th>Total France</th>
+          <th>{D.totalFrance}</th>
           <th className="ColumnSpacing" />
           <th className="YellowHeader">
             {(Math.round(data.total.france.completionRate * 1000) / 1000) * 100}

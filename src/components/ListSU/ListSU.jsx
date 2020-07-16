@@ -3,15 +3,16 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import PaginationNav from '../PaginationNav/PaginationNav';
+import D from '../../i18n';
 
 function ListSU({ survey, data, returnToMainScreen }) {
   return (
     <div id="ListSU">
-      <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()}>Retour</Button>
+      <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()}>{D.back}</Button>
       <div className="SurveyTitle">{survey}</div>
       <Card className="ViewCard">
         <Card.Title>
-          {'Unitées enquêtées confiées à la DEM: '}
+          {D.surveyUnitsAllocatedToTheDEM}
           {108}
         </Card.Title>
         <SUTable data={data} />
@@ -57,12 +58,12 @@ class SUTable extends React.Component {
         <Table id="SUTable" className="CustomTable" bordered striped hover responsive size="sm">
           <thead>
             <tr>
-              <th>Identifiant</th>
-              <th>Ssech</th>
-              <th>Département</th>
-              <th>Commune</th>
-              <th>Enquêteur</th>
-              <th>Idep</th>
+              <th>{D.identifier}</th>
+              <th>{D.ssech}</th>
+              <th>{D.department}</th>
+              <th>{D.town}</th>
+              <th>{D.interviewer}</th>
+              <th>{D.idep}</th>
             </tr>
           </thead>
           <tbody>

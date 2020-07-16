@@ -5,74 +5,86 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from './logo_com_externe_semi_bold.png';
+import D from '../../i18n';
+import { version } from '../../../package.json';
 import './Header.css';
 
 class Header extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       toggleFirstMenu: false,
       toggleSecondMenu: false,
-    }
+    };
   }
 
-  toggleFirstDropDownMenu(e){
+  toggleFirstDropDownMenu(e) {
+    const { toggleFirstMenu } = this.state;
     e.stopPropagation();
-    this.setState({
-      toggleFirstMenu: !this.state.toggleFirstMenu
-    })
+    this.setState({ toggleFirstMenu: !toggleFirstMenu });
   }
 
   toggleSecondDropDownMenu(e) {
+    const { toggleSecondMenu } = this.state;
     e.stopPropagation();
+    this.setState({ toggleSecondMenu: !toggleSecondMenu });
+  }
+
+  displayFirstSubMenu(toggle) {
+    const { toggleSecondMenu } = this.state;
+    if (toggle) {
+      return (
+        <ul className="dropdown-menu">
+          <li>
+            <a onClick={(e) => { this.toggleSecondDropDownMenu(e); }} className="selectedSubeMenu" href="#">
+              {D.surveys}
+              <i style={{ marginLeft: '40px' }} className="fa fa-caret-right fa-xs" />
+            </a>
+            {this.displaySecondSubMenu(toggleSecondMenu)}
+          </li>
+          <li>
+            <a onClick={(e) => { this.toggleSecondDropDownMenu(e); }} id="selectedSubeMenu" className="selectedSubeMenu" href="#">
+              {D.interviewers}
+              <i style={{ marginLeft: '25px' }} className="fa fa-caret-right fa-xs" />
+            </a>
+            {this.displaySecondSubMenu(toggleSecondMenu)}
+          </li>
+        </ul>
+      );
+    }
+    return null;
+  }
+
+  displaySecondSubMenu(toggle) {
+    const { goToMonitoringTable } = this.props;
+    if (toggle) {
+      return (
+        <ul className="dropdown-menu sub-menu" id="BtnSuivre">
+          <li>
+            <a onClick={() => goToMonitoringTable()} className="selectedSubeMenu" href="#">{D.progression}</a>
+          </li>
+        </ul>
+      );
+    }
+    return null;
+  }
+
+  hideMenu() {
     this.setState({
-     toggleSecondMenu: !this.state.toggleSecondMenu
-   })
- }
-
- displayFirstSubMenu(toggle){
-  if(toggle){
-    return(
-    <ul className="dropdown-menu">
-      <li >
-        <a onClick={(e)=>{this.toggleSecondDropDownMenu(e)}} className="selectedSubeMenu" href="#" >Enquêtes<i style={{'marginLeft':'40px'}} className="fa fa-caret-right fa-xs"></i></a>
-        {this.displaySecondSubMenu(this.state.toggleSecondMenu)}
-      </li>
-      <li>
-        <a onClick={(e)=>{this.toggleSecondDropDownMenu(e)}} id="selectedSubeMenu" className="selectedSubeMenu" href="#" >Enquêteurs<i style={{'marginLeft':'25px'}} className="fa fa-caret-right fa-xs"></i></a>
-        {this.displaySecondSubMenu(this.state.toggleSecondMenu)}
-      </li>
-    </ul>
-    );
+      toggleFirstMenu: false,
+      toggleSecondMenu: false,
+    });
   }
-}
 
-displaySecondSubMenu(toggle){
-  if(toggle){
-    return(
-    <ul className="dropdown-menu sub-menu" id="BtnSuivre"> 
-      <li><a onClick={() => this.props.goToMonitoringTable()} className="selectedSubeMenu" href="#">Avancement</a></li>
-    </ul>
-    );
-  }
-}
-
-hideMenu(){
-  this.setState({
-    toggleFirstMenu : false,
-    toggleSecondMenu : false,
-  })
-}
-
-  render(){
-    const appVersion = window.configs.appVersion;
+  render() {
     const {
-      returnFunc, user, goToMonitoringTable
-    } = this.props
+      returnFunc, user,
+    } = this.props;
+    const { toggleFirstMenu } = this.state;
     return (
       <header id="App-header" className="shadow">
         <Container fluid>
-          <Row onClick={()=> {this.hideMenu()}}>
+          <Row onClick={() => { this.hideMenu(); }}>
             <Col md="auto">
               <img
                 src={logo}
@@ -81,16 +93,24 @@ hideMenu(){
                 className="Clickable"
                 onClick={() => returnFunc()}
               />
-              <div style={{'textAlign': 'center', 'fontSize': '0.75rem', 'fontWeight': 'bold', 'color': '#575453'}}>{appVersion}</div>
+              <div style={{
+                textAlign: 'center', fontSize: '0.75rem', fontWeight: 'bold', color: '#575453',
+              }}
+              >
+                {version}
+              </div>
             </Col>
             <Col>
               <div className="d-inline-flex classTest" id="headerButtonContainer">
-                <Button className="HeaderButton">Relancer</Button>
+                <Button className="HeaderButton">{D.dun}</Button>
                 <li className="dropdown" id="BtnSuivreParent">
-                  <Button data-toggle="dropdown" className="HeaderButton dropdown-toggle" href="#" onClick={(e)=>{this.toggleFirstDropDownMenu(e)}}>Suivre <b className="caret"></b></Button>
-                  {this.displayFirstSubMenu(this.state.toggleFirstMenu)}
+                  <Button data-toggle="dropdown" className="HeaderButton dropdown-toggle" href="#" onClick={(e) => { this.toggleFirstDropDownMenu(e); }}>
+                    {D.follow}
+                    <b className="caret" />
+                  </Button>
+                  {this.displayFirstSubMenu(toggleFirstMenu)}
                 </li>
-                <Button className="HeaderButton">Lire</Button>
+                <Button className="HeaderButton">{D.read}</Button>
               </div>
             </Col>
             <Col><UserZone user={user} date={new Date()} /></Col>
@@ -112,16 +132,11 @@ function UserZone({ user, date }) {
       </Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{date.toLocaleDateString()}</Card.Subtitle>
       <div className="UserZoneButtons">
-        <Button className="HeaderButton">Mes enquêteurs</Button>
-        <Button className="HeaderButton">Mes enquêtes</Button>
+        <Button className="HeaderButton">{D.myInterviewers}</Button>
+        <Button className="HeaderButton">{D.mySurveys}</Button>
       </div>
     </Card>
   );
 }
-
-
-
-
-  
 
 export default Header;

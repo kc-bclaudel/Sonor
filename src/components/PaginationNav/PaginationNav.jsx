@@ -1,6 +1,7 @@
 import React from 'react';
 import Pagination from 'react-bootstrap/Pagination';
 import Form from 'react-bootstrap/Form';
+import D from '../../i18n';
 
 function makePaginationItem(pageNumber, activePage, paginationSize, updateFunc) {
   return (
@@ -64,8 +65,10 @@ class PaginationNav {
   static SizeSelector({ updateFunc }) {
     return (
       <span>
-        <span>Afficher </span>
-        <Form id="pageSizeSelector">
+        <span>
+          {`${D.display} `}
+        </span>
+        <Form className="PageSizeSelector">
           <Form.Group controlId="exampleForm.SelectCustom">
             <Form.Control
               as="select"
@@ -80,7 +83,7 @@ class PaginationNav {
             </Form.Control>
           </Form.Group>
         </Form>
-        <span> éléments</span>
+        <span>{` ${D.elements}`}</span>
       </span>
     );
   }

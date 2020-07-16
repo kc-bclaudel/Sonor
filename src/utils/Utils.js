@@ -1,3 +1,5 @@
+import D from '../i18n';
+
 class Utils {
   static convertToDateString(timestamp, locales, options) {
     return new Date(timestamp).toLocaleDateString(locales, options);
@@ -51,13 +53,13 @@ class Utils {
   static displayCampaignPhase(campaignPhase) {
     switch (campaignPhase) {
       case 0:
-        return 'Affectation initiale';
+        return D.initialAssignment;
       case 1:
-        return 'Collecte en cours';
+        return D.collectionInProgress;
       case 2:
-        return 'Collecte terminée';
+        return D.collectionOver;
       case 3:
-        return 'Traitement terminée';
+        return D.treatmentOver;
       default:
         return '';
     }

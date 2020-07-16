@@ -1,14 +1,18 @@
-const baseUrl = window.configs.url + window.configs.port;
+import { PEARL_JAM_HOST, PEARL_JAM_PORT } from '../config.json';
+
+const baseUrl = `${PEARL_JAM_HOST}:${PEARL_JAM_PORT}`;
 
 class Service {
   constructor(token) {
-    this.options = {
-      method: 'GET',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      }),
-    };
+    if (token) {
+      this.options = {
+        method: 'GET',
+        headers: new Headers({
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        }),
+      };
+    }
   }
 
   getUser(cb) {

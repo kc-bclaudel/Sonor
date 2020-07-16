@@ -14,7 +14,7 @@ class View extends React.Component {
       currentView: 'mainScreen',
       currentSurvey: null,
       data: [],
-      dataRetreiver: new DataFormatter(props.keycloak.token),
+      dataRetreiver: new DataFormatter(props.token),
       sort: { sortOn: null, asc: null },
     };
     const { dataRetreiver } = this.state;
@@ -29,12 +29,15 @@ class View extends React.Component {
   }
 
   handleCampaignClick(mainScreenData) {
-    const { dataRetreiver } = this.state;
-    dataRetreiver.getDataForCampaignPortal(mainScreenData.campaignId, (data) => {
-      Object.assign(data, mainScreenData);
+    const { dataRetreiver, data } = this.state;
+    dataRetreiver.getDataForCampaignPortal(mainScreenData.campaignId, (res) => {
+      const newData = {};
+      Object.assign(newData, res);
+      Object.assign(newData, mainScreenData);
+      newData.campaigns = data.campaigns || data;
       this.setState({
         currentView: 'campaignPortal',
-        data,
+        data: newData,
       });
     });
   }
@@ -91,12 +94,13 @@ class View extends React.Component {
         currentSurvey: null,
         data,
       });
+      this.handleSort('label', true);
     });
   }
 
-  handleSort(sortOn) {
+  handleSort(sortOn, asc) {
     const { data, sort, currentView } = this.state;
-    const newOrder = sortOn !== sort.sortOn || !sort.asc;
+    const newOrder = asc || sortOn !== sort.sortOn || !sort.asc;
     let sortedData = {};
     switch (currentView) {
       case 'mainScreen':
@@ -126,6 +130,7 @@ class View extends React.Component {
             sort={sort}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
             handleSort={(sortOn) => this.handleSort(sortOn)}
+            handleCampaignClick={(mainScreenData) => this.handleCampaignClick(mainScreenData)}
           />
         );
       case 'listSU':
