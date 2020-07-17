@@ -9,13 +9,16 @@ import D from '../../i18n';
 function displaySurveyLines(props, pagination) {
   const lines = [];
   const { data } = props;
+  const now = new Date().getTime();
   let oddLine = true;
   for (let i = (pagination.page - 1) * pagination.size;
     i < pagination.page * pagination.size && i < data.length;
     i += 1
   ) {
-    lines.push(<SurveyListLine key={i} oddLine={oddLine} lineData={data[i]} props={props} />);
-    oddLine = !oddLine;
+    if (data[i].visibilityStartDate < now && data[i].treatmentEndDate > now){
+      lines.push(<SurveyListLine key={i} oddLine={oddLine} lineData={data[i]} props={props} />);
+      oddLine = !oddLine;
+    }
   }
   return lines;
 }
@@ -69,24 +72,32 @@ class MainScreen extends React.Component {
                   {D.phase}
                 </th>
                 <th rowSpan="2" className="ColumnSpacing" />
-                <th colSpan="4">{D.surveyUnits}</th>
+                <th colSpan="6">{D.surveyUnits}</th>
               </tr>
               <tr>
                 <th onClick={handleSortFunct('affected')} className="Clickable">
                   <SortIcon val="affected" sort={sort} />
                   {D.allocated}
                 </th>
-                <th onClick={handleSortFunct('toAffect')} className="Clickable">
-                  <SortIcon val="toAffect" sort={sort} />
-                  {D.toBeAssigned}
-                </th>
                 <th onClick={handleSortFunct('inProgress')} className="Clickable">
                   <SortIcon val="inProgress" sort={sort} />
                   {D.inProgress}
                 </th>
+                <th onClick={handleSortFunct('terminated')} className="Clickable">
+                  <SortIcon val="terminated" sort={sort} />
+                  {D.toBeAssigned}
+                </th>
+                <th onClick={handleSortFunct('toAffect')} className="Clickable">
+                  <SortIcon val="toAffect" sort={sort} />
+                  {D.toRemind}
+                </th>
+                <th onClick={handleSortFunct('inProgress')} className="Clickable">
+                  <SortIcon val="inProgress" sort={sort} />
+                  {D.toBeReviewed}
+                </th>
                 <th onClick={handleSortFunct('toControl')} className="Clickable">
                   <SortIcon val="toControl" sort={sort} />
-                  {D.toBeReviewed}
+                  {D.terminated}
                 </th>
               </tr>
             </thead>
@@ -122,8 +133,10 @@ function SurveyListLine({ lineData, oddLine, props }) {
       <td onClick={goToPortal} className="Clickable">{Utils.displayCampaignPhase(data.phase)}</td>
       <td className="ColumnSpacing" />
       <td onClick={goToListSU} className="Clickable">{data.affected}</td>
-      <td>{data.toAffect}</td>
       <td onClick={goToMonitoringTable} className="Clickable">{data.inProgress}</td>
+      <td>{data.terminated}</td>
+      <td>{data.toAffect}</td>
+      <td>{data.toFollowUp}</td>
       <td>{data.toControl}</td>
     </tr>
   );

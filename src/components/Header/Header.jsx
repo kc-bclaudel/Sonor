@@ -14,8 +14,7 @@ class Header extends React.Component {
     super(props);
     this.state = {
       toggleFirstMenu: false,
-      toggleSecondMenu: false,
-    };
+    }
   }
 
   toggleFirstDropDownMenu(e) {
@@ -24,57 +23,32 @@ class Header extends React.Component {
     this.setState({ toggleFirstMenu: !toggleFirstMenu });
   }
 
-  toggleSecondDropDownMenu(e) {
-    const { toggleSecondMenu } = this.state;
-    e.stopPropagation();
-    this.setState({ toggleSecondMenu: !toggleSecondMenu });
-  }
-
-  displayFirstSubMenu(toggle) {
-    const { toggleSecondMenu } = this.state;
-    if (toggle) {
-      return (
-        <ul className="dropdown-menu">
-          <li>
-            <a onClick={(e) => { this.toggleSecondDropDownMenu(e); }} className="selectedSubeMenu" href="#">
-              {D.surveys}
-              <i style={{ marginLeft: '40px' }} className="fa fa-caret-right fa-xs" />
-            </a>
-            {this.displaySecondSubMenu(toggleSecondMenu)}
-          </li>
-          <li>
-            <a onClick={(e) => { this.toggleSecondDropDownMenu(e); }} id="selectedSubeMenu" className="selectedSubeMenu" href="#">
-              {D.interviewers}
-              <i style={{ marginLeft: '25px' }} className="fa fa-caret-right fa-xs" />
-            </a>
-            {this.displaySecondSubMenu(toggleSecondMenu)}
-          </li>
-        </ul>
+  displayFirstSubMenu(toggle){
+    if(toggle){
+      return(
+      <ul className="dropdown-menu">
+        <li >
+          <a className="selectedSubeMenu" href="#" >{D.surveys}<i style={{'marginLeft':'40px'}} className="fa fa-caret-right fa-xs"></i></a>
+          <ul className="dropdown-menu sub-menu" id="BtnSuivre"> 
+            <li><a onClick={() => this.props.goToMonitoringTable()} className="selectedSubeMenu" href="#">{D.progression}</a></li>
+          </ul>
+        </li>
+        <li>
+          <a onClick={(e)=>{this.toggleSecondDropDownMenu(e)}} id="selectedSubeMenu" className="selectedSubeMenu" href="#" >{D.interviewers}<i style={{'marginLeft':'25px'}} className="fa fa-caret-right fa-xs"></i></a>
+          <ul className="dropdown-menu sub-menu" style={{'top': '23px'}} id="BtnSuivre"> 
+            <li><a onClick={() => this.props.goToMonitoringTable()} className="selectedSubeMenu" href="#">{D.progression}</a></li>
+          </ul>
+        </li>
+      </ul>
       );
     }
-    return null;
   }
 
-  displaySecondSubMenu(toggle) {
-    const { goToMonitoringTable } = this.props;
-    if (toggle) {
-      return (
-        <ul className="dropdown-menu sub-menu" id="BtnSuivre">
-          <li>
-            <a onClick={() => goToMonitoringTable()} className="selectedSubeMenu" href="#">{D.progression}</a>
-          </li>
-        </ul>
-      );
-    }
-    return null;
-  }
-
-  hideMenu() {
-    this.setState({
-      toggleFirstMenu: false,
-      toggleSecondMenu: false,
-    });
-  }
+hideMenu(){
+  this.setState({
+    toggleFirstMenu : false
+  })
+}
 
   render() {
     const {
@@ -137,6 +111,6 @@ function UserZone({ user, date }) {
       </div>
     </Card>
   );
-}
+}  
 
 export default Header;

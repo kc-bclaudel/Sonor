@@ -42,6 +42,14 @@ const mainscreen = {
 	"toBeReviewed":{
 		"fr": "À contrôler",
 		"en": "To be reviewed"
+	},
+	"toRemind":{
+		"fr": "À relancer",
+		"en": "To remind"
+	},
+	"terminated":{
+		"fr": "Terminées",
+		"en": "Terminated"
 	}
 }
 
