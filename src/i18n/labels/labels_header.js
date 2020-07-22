@@ -21,7 +21,7 @@ const header = {
 	},
 	"read":{
 		"fr": "Lire",
-		"en": "Read"
+		"en": "Review"
 	},
 	"myInterviewers":{
 		"fr": "Mes enquêteurs",

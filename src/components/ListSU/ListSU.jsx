@@ -9,7 +9,7 @@ function ListSU({ survey, data, returnToMainScreen }) {
   return (
     <div id="ListSU">
       <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()}>{D.back}</Button>
-      <div className="SurveyTitle">{survey}</div>
+      <div className="SurveyTitle">{survey.label}</div>
       <Card className="ViewCard">
         <Card.Title>
           {D.surveyUnitsAllocatedToTheDEM}

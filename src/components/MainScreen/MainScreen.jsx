@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import SortIcon from '../SortIcon/SortIcon';
 import Utils from '../../utils/Utils';
 import PaginationNav from '../PaginationNav/PaginationNav';
+import { BY_SITE } from '../../utils/constants.json';
 import D from '../../i18n';
 
 function displaySurveyLines(props, pagination) {
@@ -15,7 +16,7 @@ function displaySurveyLines(props, pagination) {
     i < pagination.page * pagination.size && i < data.length;
     i += 1
   ) {
-    if (data[i].visibilityStartDate < now && data[i].treatmentEndDate > now){
+    if (data[i].visibilityStartDate < now && data[i].treatmentEndDate > now) {
       lines.push(<SurveyListLine key={i} oddLine={oddLine} lineData={data[i]} props={props} />);
       oddLine = !oddLine;
     }
@@ -119,12 +120,18 @@ class MainScreen extends React.Component {
 function SurveyListLine({ lineData, oddLine, props }) {
   const data = lineData;
   const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
-  const goToPortal = () => { props.goToCampaignPortal(data); };
-  const goToListSU = () => { props.goToListSU(data.id); };
-  const goToMonitoringTable = () => { props.goToMonitoringTable(data.label); };
+  const survey = {
+    id: data.id,
+    label: data.label,
+    allSurveys: props.data,
+  };
+  const goToPortal = () => { props.goToCampaignPortal(survey, data); };
+  const goToListSU = () => { props.goToListSU(survey); };
+  const goToMonitoringTable = () => { props.goToMonitoringTable(survey); };
+  const goToMonitoringTableSites = () => { props.goToMonitoringTable(survey, BY_SITE); };
   return (
     <tr className={lineColor}>
-      <td onClick={goToPortal} className="Clickable" data-testid="campaign-label">{data.label}</td>
+      <td onClick={goToMonitoringTableSites} className="Clickable" data-testid="campaign-label">{data.label}</td>
       <td className="ColumnSpacing" />
       <td onClick={goToPortal} className="Clickable">{Utils.convertToDateString(data.collectionStartDate)}</td>
       <td onClick={goToPortal} className="Clickable">{Utils.convertToDateString(data.collectionEndDate)}</td>

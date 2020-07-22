@@ -1,5 +1,6 @@
 import Service from './Service';
 import Utils from './Utils';
+import {BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE} from './constants.json';
 
 class DataFormatter {
   constructor(token) {
@@ -11,22 +12,27 @@ class DataFormatter {
   }
 
   getDataForMainScreen(cb) {
-    this.service.getSurveys((data) => {
-      const formattedData = [];
-      data.forEach((survey) => {
-        const formattedSurvey = {};
-        Object.assign(formattedSurvey, survey);
-        formattedSurvey.phase = Utils.getCampaignPhase(
-          survey.collectionStartDate, survey.collectionEndDate, survey.treatmentEndDate,
-        );
-        formattedData.push(formattedSurvey);
+    return new Promise((resolve) => {
+      this.service.getSurveys((data) => {
+        const formattedData = [];
+        data.forEach((survey) => {
+          const formattedSurvey = {};
+          Object.assign(formattedSurvey, survey);
+          formattedSurvey.phase = Utils.getCampaignPhase(
+            survey.collectionStartDate, survey.collectionEndDate, survey.treatmentEndDate,
+          );
+          formattedData.push(formattedSurvey);
+        });
+        if (cb) {
+          cb(formattedData);
+        }
+        resolve(formattedData);
       });
-      cb(formattedData);
     });
   }
 
   getDataForListSU(survey, cb) {
-    this.service.getSurveyUnits(survey, (res) => {
+    this.service.getSurveyUnits(survey.id, (res) => {
       const processedData = [];
       res.forEach((su) => {
         const suLine = {};
@@ -42,59 +48,139 @@ class DataFormatter {
     });
   }
 
-  getInterviewersDetail(survey, interviewers, date, pagination) {
+  getInterviewersDetail(survey, interviewers, date, mode) {
     return new Promise((resolve) => {
       const promises = [];
-      for (let i = (pagination.page - 1) * pagination.size;
-        i < pagination.page * pagination.size && i < interviewers.length;
-        i += 1
-      ) {
+      interviewers.forEach((interv) => {
         promises.push(
           new Promise((resolve2) => {
-            this.service.getInterviewersStateCount(survey, interviewers[i].id, date, (data) => {
-              resolve2({ interviewer: interviewers[i], stateCount: data });
-            });
+            this.service.getInterviewersStateCount(
+              survey || interv.survey,
+              interv.id,
+              date,
+              (data) => {
+                const interviewer = {};
+                Object.assign(interviewer, interv);
+                interviewer.survey = survey;
+                resolve2({ interviewer, stateCount: data });
+              },
+            );
           }),
         );
-      }
-
-      Promise.all(promises).then((data) => {
-        const processedData = [];
-        data.forEach((intData) => {
-          const line = Utils.formatForMonitoringTable(intData.stateCount);
-          line.interviewer = `${intData.interviewer.interviewerFirstName} ${intData.interviewer.interviewerLastName}`;
-          processedData.push(line);
-        });
-        resolve(processedData);
       });
+      if (mode === BY_SURVEY) {
+        Promise.all(promises).then((data) => {
+          const sum = Utils.getStateCountSum(data);
+          sum.survey = survey;
+          resolve(sum);
+        });
+      } else {
+        Promise.all(promises).then((data) => {
+          const processedData = [];
+          data.forEach((intData) => {
+            const line = {};
+            Object.assign(line, intData);
+            line.interviewerFirstName = intData.interviewer.interviewerFirstName;
+            line.interviewerLastName = intData.interviewer.interviewerLastName;
+            line.interviewerId = intData.interviewer.id;
+            processedData.push(line);
+          });
+          resolve(processedData);
+        });
+      }
     });
   }
 
-  getDataForMonitoringTable(survey, date, pagination, cb) {
-    let interviewers;
-    const p1 = new Promise((resolve) => {
-      this.service.getInterviewers(survey, (res) => {
-        interviewers = res;
-        this.getInterviewersDetail(survey, res, date, pagination).then((data) => resolve(data));
-      });
-    });
+  getDataForMonitoringTable(survey, date, pagination, mode, cb) {
+    const interviewers = [];
+    const getDataForSingleSurvey = typeof survey === 'string';
+    let p1;
 
-    const p2 = new Promise((resolve) => {
-      this.service.getStateCount(survey, date, (data) => {
-        const totalDem = Utils.formatForMonitoringTable(data.DEM);
-        const totalFrance = Utils.formatForMonitoringTable(data.France);
-        resolve({ dem: totalDem, france: totalFrance });
-      });
-    });
+    if (mode !== BY_SITE) {
+      p1 = new Promise((resolve) => {
+        const surveysToGetInterviewersFrom = getDataForSingleSurvey
+          ? [{ id: survey }]
+          : survey;
 
-    Promise.all([p1, p2]).then((data) => {
-      cb({
-        interviewers,
-        interviewersDetail: data[0],
-        total: data[1],
-        relevantInterviewers: interviewers,
+        const promises = [];
+        surveysToGetInterviewersFrom.forEach((surv) => {
+          promises.push(new Promise((resolve2) => {
+            this.service.getInterviewers(survey, (res) => {
+              res.forEach((interviewer) => {
+                Utils.addIfNotAlreadyPresent(interviewers, interviewer);
+              });
+              this.getInterviewersDetail(surv.id, res, date, mode).then((data) => resolve2(data));
+            });
+          }));
+        });
+        Promise.all(promises).then((data) => {
+          if (mode === BY_SURVEY) {
+            resolve(data);
+          } else {
+            resolve(Utils.sumOn(data.flat(), 'interviewerId'));
+          }
+        });
       });
-    });
+    }
+
+    if (mode === BY_INTERVIEWER_ONE_SURVEY || mode === BY_SITE) {
+      const p2 = new Promise((resolve) => {
+        this.service.getStateCount(survey, date, (data) => {
+          if (mode === BY_INTERVIEWER_ONE_SURVEY) {
+            this.service.getUser((userInfo) => {
+              const userOUs = userInfo.organisationalUnits.map((x) => x.id);
+              const demStateCounts = [];
+              data.organizationunits.forEach((dem) => {
+                if (userOUs.includes(dem.idDem)) {
+                  demStateCounts.push({ stateCount: dem });
+                }
+              });
+              const totalDem = Utils.getStateCountSum(demStateCounts);
+              const totalFrance = Utils.formatForMonitoringTable(data.France);
+              resolve({ dem: totalDem, france: totalFrance });
+            });
+          }
+          if (mode === BY_SITE) {
+            const demDatas = [];
+            data.organizationunits.forEach((dem) => {
+              const demToPush = Utils.formatForMonitoringTable(dem);
+              demToPush.site = dem.idDem;
+              demDatas.push(demToPush);
+            });
+            const totalFrance = Utils.formatForMonitoringTable(data.France);
+            resolve({ dem: demDatas, france: totalFrance });
+          }
+        });
+      });
+      if (mode === BY_INTERVIEWER_ONE_SURVEY) {
+        Promise.all([p1, p2]).then((data) => {
+          cb({
+            interviewers,
+            interviewersDetail: data[0],
+            total: data[1],
+            relevantInterviewers: interviewers,
+            singleSurvey: true,
+          });
+        });
+      }
+      if (mode === BY_SITE) {
+        p2.then((data) => {
+          cb({
+            interviewersDetail: data.dem,
+            total: data,
+          });
+        });
+      }
+    } else {
+      p1.then((data) => {
+        cb({
+          interviewers,
+          interviewersDetail: data,
+          relevantInterviewers: interviewers,
+          singleSurvey: false,
+        });
+      });
+    }
   }
 
   getDataForCampaignPortal(campaignId, cb) {
@@ -107,8 +193,19 @@ class DataFormatter {
         (data) => { resolve(data); });
     });
     const p3 = new Promise((resolve) => {
-      this.service.getTotalDemByCampaign(campaignId,
-        (data) => { resolve(data); });
+      this.service.getTotalDemByCampaign(campaignId, (data) => {
+        this.service.getUser((userInfo) => {
+          const userOUs = userInfo.organisationalUnits.map((x) => x.id);
+          const demStateCounts = [];
+          data.organizationunits.forEach((dem) => {
+            if (userOUs.includes(dem.idDem)) {
+              demStateCounts.push({ stateCount: dem });
+            }
+          });
+          const totalDem = Utils.getStateCountSum(demStateCounts);
+          resolve(totalDem);
+        });
+      });
     });
     Promise.all([p1, p2, p3]).then((data) => {
       cb({ interviewers: data[0], notAttributed: data[1], total: data[2] });

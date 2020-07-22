@@ -74,7 +74,7 @@ class PaginationNav {
               as="select"
               size="sm"
               custom
-              onChange={(e) => updateFunc({ size: e.target.value, page: 1 })}
+              onChange={(e) => updateFunc({ size: parseInt(e.target.value, 10), page: 1 })}
             >
               <option>5</option>
               <option>10</option>

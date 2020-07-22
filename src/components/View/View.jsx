@@ -1,89 +1,85 @@
 import React from 'react';
-import AwesomeDebouncePromise from 'awesome-debounce-promise';
 import MainScreen from '../MainScreen/MainScreen';
 import CampaignPortal from '../CampaignPortal/CampaignPortal';
 import ListSU from '../ListSU/ListSU';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
 import DataFormatter from '../../utils/DataFormatter';
 import Utils from '../../utils/Utils';
+import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from '../../utils/constants.json';
 
 class View extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       currentView: 'mainScreen',
-      currentSurvey: null,
+      survey: null,
       data: [],
       dataRetreiver: new DataFormatter(props.token),
       sort: { sortOn: null, asc: null },
     };
-    const { dataRetreiver } = this.state;
-    this.updateFunc = (
-      surveyId, interviewersToFetched, date, pagination,
-    ) => dataRetreiver.getInterviewersDetail(surveyId, interviewersToFetched, date, pagination);
-    this.updateInterviewersDetailDebounced = AwesomeDebouncePromise(this.updateFunc, 250);
   }
 
   componentDidMount() {
     this.handleReturnButtonClick();
   }
 
-  handleCampaignClick(mainScreenData) {
-    const { dataRetreiver, data } = this.state;
-    dataRetreiver.getDataForCampaignPortal(mainScreenData.campaignId, (res) => {
+  handleCampaignClick(survey, mainScreenData) {
+    const { dataRetreiver } = this.state;
+    dataRetreiver.getDataForCampaignPortal(survey.id, (res) => {
       const newData = {};
       Object.assign(newData, res);
       Object.assign(newData, mainScreenData);
-      newData.campaigns = data.campaigns || data;
       this.setState({
         currentView: 'campaignPortal',
         data: newData,
+        survey,
       });
     });
   }
 
-  handleListSUClick(surveyId) {
+  handleListSUClick(survey) {
     const { dataRetreiver } = this.state;
-    dataRetreiver.getDataForListSU(surveyId, (data) => {
+    dataRetreiver.getDataForListSU(survey.id, (data) => {
       this.setState({
         currentView: 'listSU',
-        currentSurvey: surveyId,
+        survey,
         data,
       });
     });
   }
 
-  handleMonitoringTableClick(surveyId, date, pagination) {
+  async handleMonitoringTableClick(survey, date, mode) {
     const { dataRetreiver } = this.state;
     const dateToUse = date || new Date().toISOString().slice(0, 10);
-    const paginationToUse = pagination || { size: 5, page: 1 };
-    dataRetreiver.getDataForMonitoringTable(surveyId, dateToUse, paginationToUse, (newData) => {
-      const data = {};
-      Object.assign(data, newData);
-      data.date = dateToUse;
-      data.pagination = paginationToUse;
+    const modeToUse = mode || BY_INTERVIEWER_ONE_SURVEY;
+    const paginationToUse = { size: 5, page: 1 };
+    let surveyToUse;
+    if (!survey) {
+      surveyToUse = await dataRetreiver.getDataForMainScreen();
+    } else {
+      surveyToUse = survey.id;
+    }
+    dataRetreiver.getDataForMonitoringTable(surveyToUse, dateToUse, paginationToUse, modeToUse, (res) => {
+      const newData = {};
+      Object.assign(newData, res);
+      newData.date = dateToUse;
+      newData.pagination = paginationToUse;
       this.setState({
         currentView: 'monitoringTable',
-        currentSurvey: surveyId,
-        data,
+        survey,
+        monitoringTableMode: modeToUse,
+        data: newData,
       });
+      let firstColumnSortAttribute;
+      if (modeToUse === BY_SURVEY) {
+        firstColumnSortAttribute = 'survey';
+      } else if (modeToUse === BY_SITE) {
+        firstColumnSortAttribute = 'site';
+      } else {
+        firstColumnSortAttribute = 'CPinterviewer';
+      }
+      this.handleSort(firstColumnSortAttribute, true);
     });
-  }
-
-  updateInterviewersDetail(surveyId, date, pagination, interviewersToFetched, useDebounce) {
-    const { dataRetreiver, data } = this.state;
-    (useDebounce
-      ? this.updateInterviewersDetailDebounced(surveyId, interviewersToFetched, date, pagination)
-      : dataRetreiver.getInterviewersDetail(surveyId, interviewersToFetched, date, pagination))
-      .then((interviewersDetail) => {
-        const newData = {};
-        Object.assign(newData, data);
-        newData.interviewersDetail = interviewersDetail;
-        newData.relevantInterviewers = interviewersToFetched;
-        newData.pagination = pagination;
-        newData.date = date;
-        this.setState({ data: newData });
-      });
   }
 
   handleReturnButtonClick() {
@@ -91,7 +87,7 @@ class View extends React.Component {
     dataRetreiver.getDataForMainScreen((data) => {
       this.setState({
         currentView: 'mainScreen',
-        currentSurvey: null,
+        survey: null,
         data,
       });
       this.handleSort('label', true);
@@ -100,7 +96,10 @@ class View extends React.Component {
 
   handleSort(sortOn, asc) {
     const { data, sort, currentView } = this.state;
-    const newOrder = asc || sortOn !== sort.sortOn || !sort.asc;
+    let newOrder = asc;
+    if (asc === undefined) {
+      newOrder = sortOn !== sort.sortOn || !sort.asc;
+    }
     let sortedData = {};
     switch (currentView) {
       case 'mainScreen':
@@ -109,6 +108,10 @@ class View extends React.Component {
       case 'campaignPortal':
         Object.assign(sortedData, data);
         sortedData.interviewers = Utils.sortData(data.interviewers, sortOn, newOrder);
+        break;
+      case 'monitoringTable':
+        Object.assign(sortedData, data);
+        sortedData.interviewersDetail = Utils.sortData(data.interviewersDetail, sortOn, newOrder);
         break;
       default:
         Object.assign(sortedData, data);
@@ -120,7 +123,7 @@ class View extends React.Component {
 
   render() {
     const {
-      currentView, currentSurvey, data, sort,
+      currentView, survey, data, sort, monitoringTableMode,
     } = this.state;
     switch (currentView) {
       case 'campaignPortal':
@@ -128,15 +131,18 @@ class View extends React.Component {
           <CampaignPortal
             data={data}
             sort={sort}
+            survey={survey}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
             handleSort={(sortOn) => this.handleSort(sortOn)}
-            handleCampaignClick={(mainScreenData) => this.handleCampaignClick(mainScreenData)}
+            handleCampaignClick={
+              (newSurvey, mainScreenData) => this.handleCampaignClick(newSurvey, mainScreenData)
+            }
           />
         );
       case 'listSU':
         return (
           <ListSU
-            survey={currentSurvey}
+            survey={survey}
             data={data}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
           />
@@ -144,19 +150,15 @@ class View extends React.Component {
       case 'monitoringTable':
         return (
           <MonitoringTable
-            survey={currentSurvey}
+            survey={survey}
             data={data}
+            sort={sort}
+            mode={monitoringTableMode}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
-            goToMonitoringTable={(surveyId, date, pagination) => {
-              this.handleMonitoringTableClick(surveyId, date, pagination);
+            goToMonitoringTable={(surveyId, date, pagination, mode) => {
+              this.handleMonitoringTableClick(surveyId, date, pagination, mode);
             }}
-            updateInterviewersDetail={
-              (surveyId, date, pagination, interviewersToFetched, useDebounce) => {
-                this.updateInterviewersDetail(
-                  surveyId, date, pagination, interviewersToFetched, useDebounce,
-                );
-              }
-            }
+            handleSort={(sortOn) => this.handleSort(sortOn)}
           />
         );
       default:
@@ -164,9 +166,13 @@ class View extends React.Component {
           <MainScreen
             data={data}
             sort={sort}
-            goToCampaignPortal={(mainScreenData) => { this.handleCampaignClick(mainScreenData); }}
+            goToCampaignPortal={(newSurvey, mainScreenData) => { 
+              this.handleCampaignClick(newSurvey, mainScreenData); 
+            }}
             goToListSU={(surveyId) => { this.handleListSUClick(surveyId); }}
-            goToMonitoringTable={(surveyId) => { this.handleMonitoringTableClick(surveyId); }}
+            goToMonitoringTable={(surveyId, mode) => { 
+              this.handleMonitoringTableClick(surveyId, null, mode); 
+            }}
             handleSort={(sortOn) => this.handleSort(sortOn)}
           />
         );

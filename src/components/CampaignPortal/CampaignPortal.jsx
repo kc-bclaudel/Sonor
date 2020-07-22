@@ -5,25 +5,15 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
 import Utils from '../../utils/Utils';
 import SortIcon from '../SortIcon/SortIcon';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import SearchField from '../SearchField/SearchField';
+import SurveySelector from '../SurveySelector/SurveySelector';
 import D from '../../i18n';
 
-function createSelectOptions(campaigns, currentId) {
-  const options = [];
-  campaigns.forEach((campaign, index) => {
-    if (campaign.id !== currentId) {
-      options.push(<option value={index}>{campaign.label}</option>);
-    }
-  });
-  return options;
-}
-
 function CampaignPortal({
-  data, returnToMainScreen, sort, handleSort, handleCampaignClick,
+  survey, data, returnToMainScreen, sort, handleSort, handleCampaignClick,
 }) {
   return (
     <div id="CampaignPortal">
@@ -36,21 +26,13 @@ function CampaignPortal({
             <div className="SurveyTitle">{data.label}</div>
           </Col>
           <Col>
-            <Form>
-              <Form.Group controlId="exampleForm.SelectCustom">
-                <Form.Control
-                  as="select"
-                  size="sm"
-                  custom
-                  placeholder="Choisir une enquête"
-                  value={-1}
-                  onChange={(e) => handleCampaignClick(data.campaigns[e.target.value])}
-                >
-                  <option disabled value={-1} key={-1}>{D.chooseASurvey}</option>
-                  {createSelectOptions(data.campaigns, data.id)}
-                </Form.Control>
-              </Form.Group>
-            </Form>
+            <SurveySelector
+              survey={survey}
+              updateFunc={(newSurvey, index) => handleCampaignClick(
+                newSurvey,
+                newSurvey.allSurveys[index],
+              )}
+            />
           </Col>
         </Row>
       </Container>
@@ -183,8 +165,7 @@ class SurveyUnits extends React.Component {
           />
           <SearchField
             data={interviewers}
-            firstName="interviewerFirstName"
-            lastName="interviewerLastName"
+            searchBy={['interviewerFirstName', 'interviewerLastName']}
             updateFunc={(a) => this.updateInterviewers(a)}
           />
         </div>
@@ -213,7 +194,7 @@ class SurveyUnits extends React.Component {
             <tr>
               <th>{D.totalDEM}</th>
               <th />
-              <th>{total.DEM.total}</th>
+              <th>{total.total}</th>
             </tr>
           </tbody>
         </Table>
@@ -232,9 +213,9 @@ function InterviewerLine({ interviewer }) {
   return (
     <tr>
       <td className="LightGreyLine">
-        {interviewer.interviewerFirstName}
-        {' '}
         {interviewer.interviewerLastName}
+        {' '}
+        {interviewer.interviewerFirstName}
       </td>
       <td className="LightGreyLine">{interviewer.id}</td>
       <td className="LightGreyLine">{interviewer.surveyUnitCount}</td>

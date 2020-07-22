@@ -7,6 +7,7 @@
 
 }
 a {
+    position: relative;
     display: block;
     padding: 0 16px;
     line-height: inherit;
@@ -64,3 +65,20 @@ li {
   top: 11px;
   left: -6px;
 } 
+
+.subMenucaret { 
+  position: absolute;
+  right: 28px;
+  top: 4px;
+}
+
+#BtnSuivre {
+  top: 23px;
+}
+
+#appVersion {
+  text-align: center;
+  font-size: 0.75rem; 
+  font-weight: bold;
+  color: #575453;
+}

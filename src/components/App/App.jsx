@@ -39,8 +39,8 @@ class App extends React.Component {
             <Header
               user={data}
               returnFunc={() => { this.content.handleReturnButtonClick(); }}
-              goToMonitoringTable={(surveyId) => {
-                this.content.handleMonitoringTableClick(surveyId);
+              goToMonitoringTable={(mode) => {
+                this.content.handleMonitoringTableClick(null,null,mode);
               }}
             />
             <View

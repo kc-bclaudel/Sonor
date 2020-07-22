@@ -50,6 +50,47 @@ const monitoringTable = {
 	"totalFrance":{
 		"fr": "Total France",
 		"en": "Total France"
+	},
+	// Monitoring Table by Survey
+	"monitoringTableSurveyTitle":{
+		"fr": "Avancement des enquêtes selon l'état des unitées enquêtées (en %) en date du :",
+		"en": "Progression of surveys in regard of the state of survey units (in %) at the date:"
+	},
+	"completed":{
+		"fr": "Terminées",
+		"en": "Completed"
+	},
+	"started":{
+		"fr": "Démarrées",
+		"en": "Started"
+	},
+	"contacted":{
+		"fr": "Contactées",
+		"en": "Contacted"
+	},
+	"interviewed":{
+		"fr": "Enquêtées",
+		"en": "Interviewed"
+	},
+	"questionnaireFinalized":{
+		"fr": "Questionnaires finalisés",
+		"en": "Questionnaires finalized"
+	},
+	"transmitted":{
+		"fr": "Transmis",
+		"en": "Transmitted"
+	},
+	"synchronized":{
+		"fr": "Synchronisés",
+		"en": "Synchronized"
+	},
+	"reviewed":{
+		"fr": "Relus",
+		"en": "Synchronized"
+	},
+	"site":{
+		"fr": "Site",
+		"en": "Site"
 	}
 }
 

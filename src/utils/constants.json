@@ -1,5 +1,11 @@
 {
   "KEYCLOAK": "keycloak",
-  "NO_AUTH": "no-auth"
+  "NO_AUTH": "no-auth",
+  
+  "BY_INTERVIEWER_ONE_SURVEY":0,
+  "BY_INTERVIEWER":1,
+  "BY_SURVEY":2,
+  "BY_SITE": 3
+  
 }
 

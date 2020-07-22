@@ -27,6 +27,11 @@ const app = {
 		"fr": "Rechercher",
 		"en": "Search"
 	},
+	// Survey selector
+	"chooseASurvey": {
+		"fr": "Choisir une enquête",
+		"en": "Choose a survey"
+	},
 	
 }
 
