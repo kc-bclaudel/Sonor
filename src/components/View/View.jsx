@@ -3,6 +3,7 @@ import MainScreen from '../MainScreen/MainScreen';
 import CampaignPortal from '../CampaignPortal/CampaignPortal';
 import ListSU from '../ListSU/ListSU';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
+import Review from '../Review/Review';
 import DataFormatter from '../../utils/DataFormatter';
 import Utils from '../../utils/Utils';
 import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from '../../utils/constants.json';
@@ -59,27 +60,58 @@ class View extends React.Component {
     } else {
       surveyToUse = survey.id;
     }
-    dataRetreiver.getDataForMonitoringTable(surveyToUse, dateToUse, paginationToUse, modeToUse, (res) => {
-      const newData = {};
-      Object.assign(newData, res);
-      newData.date = dateToUse;
-      newData.pagination = paginationToUse;
-      this.setState({
-        currentView: 'monitoringTable',
-        survey,
-        monitoringTableMode: modeToUse,
-        data: newData,
+    dataRetreiver.getDataForMonitoringTable(surveyToUse, dateToUse, paginationToUse, modeToUse,
+      (res) => {
+        const newData = {};
+        Object.assign(newData, res);
+        newData.date = dateToUse;
+        newData.pagination = paginationToUse;
+        this.setState({
+          currentView: 'monitoringTable',
+          survey,
+          monitoringTableMode: modeToUse,
+          data: newData,
+        });
+        let firstColumnSortAttribute;
+        if (modeToUse === BY_SURVEY) {
+          firstColumnSortAttribute = 'survey';
+        } else if (modeToUse === BY_SITE) {
+          firstColumnSortAttribute = 'site';
+        } else {
+          firstColumnSortAttribute = 'CPinterviewer';
+        }
+        this.handleSort(firstColumnSortAttribute, true);
       });
-      let firstColumnSortAttribute;
-      if (modeToUse === BY_SURVEY) {
-        firstColumnSortAttribute = 'survey';
-      } else if (modeToUse === BY_SITE) {
-        firstColumnSortAttribute = 'site';
-      } else {
-        firstColumnSortAttribute = 'CPinterviewer';
-      }
-      this.handleSort(firstColumnSortAttribute, true);
+  }
+
+  handleReviewClick(lstSUFinalized, error) {
+    const { dataRetreiver } = this.state;
+    dataRetreiver.getDataForReview((data) => {
+      const datas = {};
+      datas.listSU = data;
+      datas.lstSUFinalized = lstSUFinalized;
+      datas.errorOccurred = error;
+      this.setState({
+        currentView: 'review',
+        data: datas,
+      });
     });
+  }
+
+  updateInterviewersDetail(surveyId, date, pagination, interviewersToFetched, useDebounce) {
+    const { dataRetreiver, data } = this.state;
+    (useDebounce
+      ? this.updateInterviewersDetailDebounced(surveyId, interviewersToFetched, date, pagination)
+      : dataRetreiver.getInterviewersDetail(surveyId, interviewersToFetched, date, pagination))
+      .then((interviewersDetail) => {
+        const newData = {};
+        Object.assign(newData, data);
+        newData.interviewersDetail = interviewersDetail;
+        newData.relevantInterviewers = interviewersToFetched;
+        newData.pagination = pagination;
+        newData.date = date;
+        this.setState({ data: newData });
+      });
   }
 
   handleReturnButtonClick() {
@@ -112,6 +144,10 @@ class View extends React.Component {
       case 'monitoringTable':
         Object.assign(sortedData, data);
         sortedData.interviewersDetail = Utils.sortData(data.interviewersDetail, sortOn, newOrder);
+        break;
+      case 'review':
+        Object.assign(sortedData, data);
+        sortedData = Utils.sortData(data, sortOn, newOrder);
         break;
       default:
         Object.assign(sortedData, data);
@@ -147,6 +183,15 @@ class View extends React.Component {
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
           />
         );
+      case 'review':
+        return (
+          <Review
+            data={data}
+            sort={sort}
+            handleSort={(sortOn) => this.handleSort(sortOn)}
+            handleReviewClick={(lstSUFinalized, error) => this.handleReviewClick(lstSUFinalized, error)}
+          />
+        );
       case 'monitoringTable':
         return (
           <MonitoringTable
@@ -166,12 +211,13 @@ class View extends React.Component {
           <MainScreen
             data={data}
             sort={sort}
-            goToCampaignPortal={(newSurvey, mainScreenData) => { 
-              this.handleCampaignClick(newSurvey, mainScreenData); 
+            goToCampaignPortal={(newSurvey, mainScreenData) => {
+              this.handleCampaignClick(newSurvey, mainScreenData);
             }}
+            goToReview={() => { this.handleReviewClick(null, false); }}
             goToListSU={(surveyId) => { this.handleListSUClick(surveyId); }}
-            goToMonitoringTable={(surveyId, mode) => { 
-              this.handleMonitoringTableClick(surveyId, null, mode); 
+            goToMonitoringTable={(surveyId, mode) => {
+              this.handleMonitoringTableClick(surveyId, null, mode);
             }}
             handleSort={(sortOn) => this.handleSort(sortOn)}
           />

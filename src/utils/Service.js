@@ -6,13 +6,25 @@ class Service {
   constructor(token) {
     if (token) {
       this.options = {
-        method: 'GET',
         headers: new Headers({
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         }),
       };
     }
+  }
+
+  putSurveyUnitsToValidate(suToFinalize, cb) {
+    const options = {};
+    Object.assign(options, this.options);
+    options.method = 'PUT';
+    options.body = JSON.stringify(suToFinalize);
+    fetch(`${baseUrl}/api/validateSU`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch(console.log);
   }
 
   getUser(cb) {

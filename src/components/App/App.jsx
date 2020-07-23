@@ -40,7 +40,10 @@ class App extends React.Component {
               user={data}
               returnFunc={() => { this.content.handleReturnButtonClick(); }}
               goToMonitoringTable={(mode) => {
-                this.content.handleMonitoringTableClick(null,null,mode);
+                this.content.handleMonitoringTableClick(null, null, mode);
+              }}
+              goToReview={() => {
+                this.content.handleReviewClick(null, false);
               }}
             />
             <View

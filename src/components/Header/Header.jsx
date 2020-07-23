@@ -89,7 +89,7 @@ class Header extends React.Component {
                   </Button>
                   {this.displayFirstSubMenu(toggleFirstMenu)}
                 </li>
-                <Button className="HeaderButton">{D.read}</Button>
+                <Button onClick={() => this.props.goToReview()} className="HeaderButton">{D.read}</Button>
               </div>
             </Col>
             <Col><UserZone user={user} date={new Date()} /></Col>

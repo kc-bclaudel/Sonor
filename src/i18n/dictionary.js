@@ -3,6 +3,7 @@ import header from './labels/labels_header';
 import mainscreen from './labels/labels_mainscreen';
 import campaignPortal from './labels/labels_campaignPortal';
 import listSU from './labels/labels_listSU';
+import review from './labels/labels_review';
 import monitoringTable from './labels/labels_monitoringTable';
 
 const dictionary = {
@@ -11,6 +12,7 @@ const dictionary = {
   ...mainscreen,
   ...campaignPortal,
   ...listSU,
+  ...review,
   ...monitoringTable,
 };
 

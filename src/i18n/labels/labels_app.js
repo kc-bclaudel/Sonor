@@ -32,6 +32,16 @@ const app = {
 		"fr": "Choisir une enquête",
 		"en": "Choose a survey"
 	},
+	// Validate button
+	"validate": {
+		"fr": "Valider",
+		"en": "Validate"
+	},
+	// Close button
+	"close": {
+		"fr": "Annuler",
+		"en": "Close"
+	},
 	
 }
 

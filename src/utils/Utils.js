@@ -71,7 +71,7 @@ class Utils {
   }
 
   static getSortFunction(sortOn) {
-    if (['label', 'id', 'survey', 'site'].includes(sortOn)) {
+    if (['campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site'].includes(sortOn)) {
       return (a, b) => (a[sortOn] < b[sortOn] ? -1 : 1);
     }
     if (sortOn === 'CPinterviewer') {

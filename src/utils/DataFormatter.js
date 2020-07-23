@@ -1,6 +1,6 @@
 import Service from './Service';
 import Utils from './Utils';
-import {BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE} from './constants.json';
+import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from './constants.json';
 
 class DataFormatter {
   constructor(token) {
@@ -45,6 +45,53 @@ class DataFormatter {
         processedData.push(suLine);
       });
       cb(processedData);
+    });
+  }
+
+  getDataForReview(cb) {
+    this.getListSUToReview().then((data) => {
+      cb(data);
+    });
+  }
+
+  finalizeSurveyUnits(suToFinalize, cb) {
+    return new Promise((resolve) => {
+      this.service.putSurveyUnitsToValidate(suToFinalize, (data) => {
+        if (cb) {
+          cb(data);
+        }
+        resolve(data);
+      });
+    });
+  }
+
+  getListSUToReview() {
+    return new Promise((resolve) => {
+      const promises = [];
+      this.service.getSurveys((res) => {
+        res.forEach((campaign) => {
+          promises.push(
+            new Promise((resolve2) => {
+              this.service.getSurveyUnits(campaign.id, (res2) => {
+                const lstSU = [];
+                res2.forEach((su) => {
+                  const suLine = {};
+                  suLine.campaignLabel = campaign.label;
+                  suLine.interviewer = `${su.interviewer.lastName} ${su.interviewer.firstName}`;
+                  suLine.idep = su.interviewer.id;
+                  suLine.id = su.id;
+                  lstSU.push(suLine);
+                });
+                lstSU.sort((a, b) => ((a.interviewer > b.interviewer) ? 1 : -1));
+                resolve2(lstSU);
+              });
+            }),
+          );
+        });
+        Promise.all(promises).then((data) => {
+          resolve(data.flat());
+        });
+      });
     });
   }
 
