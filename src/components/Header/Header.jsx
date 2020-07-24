@@ -105,9 +105,9 @@ function UserZone({ user, date }) {
     <Card id="UserZone">
       <Card.Title>
         { 'Bienvenue '}
-        {user.firstname}
+        {user.firstName}
         &nbsp;
-        {user.lastname}
+        {user.lastName}
       </Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{date.toLocaleDateString()}</Card.Subtitle>
       <div className="UserZoneButtons">

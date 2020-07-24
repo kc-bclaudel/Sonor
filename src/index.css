@@ -311,11 +311,12 @@ button{
 .paginationNav{
   position: absolute;
   right:0;
+  top: 0;
 }
 
-.paginationNavWrapper{
+.tableOptionsWrapper{
   position: relative;
-  height:30px;
+  min-height:30px;
 }
 
 .SearchField{

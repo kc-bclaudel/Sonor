@@ -198,11 +198,13 @@ class SurveyUnits extends React.Component {
             </tr>
           </tbody>
         </Table>
-        <PaginationNav.PageSelector
-          pagination={pagination}
-          updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-          numberOfItems={displayedInterviewers.length}
-        />
+        <div className="tableOptionsWrapper">
+          <PaginationNav.PageSelector
+            pagination={pagination}
+            updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+            numberOfItems={displayedInterviewers.length}
+          />
+        </div>
       </Card>
 
     );

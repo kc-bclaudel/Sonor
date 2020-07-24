@@ -56,9 +56,7 @@ class PaginationNav {
     }
 
     return (
-      <div className="paginationNavWrapper">
-        <Pagination size="sm" className="paginationNav">{items}</Pagination>
-      </div>
+      <Pagination size="sm" className="paginationNav">{items}</Pagination>
     );
   }
 

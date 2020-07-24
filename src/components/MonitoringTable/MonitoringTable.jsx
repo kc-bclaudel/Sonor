@@ -33,6 +33,27 @@ class MonitoringTable extends React.Component {
     });
   }
 
+  handleExport() {
+    const { data, mode, survey } = this.props;
+    let fileLabel;
+    if (mode === BY_SURVEY) {
+      fileLabel = `${data.site}_Avancement enquetes`;
+    } else if (mode === BY_SITE) {
+      fileLabel = `${survey.label}_Avancement site`;
+    } else {
+      fileLabel = `${data.site}_Avancement enqueteurs`;
+    }
+    const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`;
+    const table = makeTableForExport(data, mode);
+    const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', title);
+    document.body.appendChild(link);
+    link.click();
+  }
+
   render() {
     const {
       survey, data, sort, returnToMainScreen, goToMonitoringTable, mode, handleSort,
@@ -109,11 +130,14 @@ class MonitoringTable extends React.Component {
             handleSort={handleSort}
             sort={sort}
           />
-          <PaginationNav.PageSelector
-            pagination={pagination}
-            updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-            numberOfItems={displayedLines.length}
-          />
+          <div className="tableOptionsWrapper">
+            <Button onClick={() => this.handleExport()}>Export</Button>
+            <PaginationNav.PageSelector
+              pagination={pagination}
+              updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+              numberOfItems={displayedLines.length}
+            />
+          </div>
         </Card>
       </div>
     );
@@ -311,6 +335,110 @@ function FollowUpTableLine({ data, oddLine }) {
       <td>{interviewStarted}</td>
     </tr>
   );
+}
+
+function makeTableForExport(data, mode) {
+  const table = [];
+  const header = getHeaderForExport(mode);
+  const body = getBodyForExport(data.interviewersDetail);
+  const footer = getFooterForExport(data, mode);
+
+  table.push(header);
+  body.forEach((line) => table.push(line));
+  footer.forEach((line) => table.push(line));
+
+  return table;
+}
+
+function getHeaderForExport(mode) {
+  let firstColumnTitle;
+  if (mode === BY_SURVEY) {
+    firstColumnTitle = D.survey;
+  } else if (mode === BY_SITE) {
+    firstColumnTitle = D.site;
+  } else {
+    firstColumnTitle = D.interviewer;
+  }
+
+  return [
+    firstColumnTitle,
+    D.completionRate,
+    D.allocated,
+    D.notStarted,
+    D.inProgress,
+    D.waitingForIntReview,
+    D.reviewedByInterviewer,
+    D.reviewedByDEM,
+    D.preparingContact,
+    D.atLeastOneContact,
+    D.appointmentTaken,
+    D.interviewStarted,
+  ];
+}
+
+function getFooterForExport(data, mode) {
+  const footer = [];
+  if (mode === BY_INTERVIEWER_ONE_SURVEY) {
+    footer.push([
+      D.totalDEM,
+      `${(Math.round(data.total.dem.completionRate * 1000) / 1000) * 100}%`,
+      data.total.dem.total,
+      data.total.dem.notStarted,
+      data.total.dem.onGoing,
+      data.total.dem.waitingForIntValidation,
+      data.total.dem.intValidated,
+      data.total.dem.demValidated,
+      data.total.dem.preparingContact,
+      data.total.dem.atLeastOneContact,
+      data.total.dem.appointmentTaken,
+      data.total.dem.interviewStarted,
+    ]);
+  }
+  if (mode === BY_INTERVIEWER_ONE_SURVEY || mode === BY_SITE) {
+    footer.push([
+      D.totalFrance,
+      `${(Math.round(data.total.france.completionRate * 1000) / 1000) * 100}%`,
+      data.total.france.total,
+      data.total.france.notStarted,
+      data.total.france.onGoing,
+      data.total.france.waitingForIntValidation,
+      data.total.france.intValidated,
+      data.total.france.demValidated,
+      data.total.france.preparingContact,
+      data.total.france.atLeastOneContact,
+      data.total.france.appointmentTaken,
+      data.total.france.interviewStarted,
+    ]);
+  }
+  return footer;
+}
+
+function getBodyForExport(data) {
+  const table = [];
+  data.forEach((elm) => {
+
+    const interviewerName = elm.interviewerFirstName
+      ? `${elm.interviewerLastName} ${elm.interviewerFirstName}`
+      : null;
+
+    const line = [
+      interviewerName || elm.survey || elm.site,
+      `${(Math.round(elm.completionRate * 1000) / 1000) * 100}%`,
+      elm.total,
+      elm.notStarted,
+      elm.onGoing,
+      elm.waitingForIntValidation,
+      elm.intValidated,
+      elm.demValidated,
+      elm.preparingContact,
+      elm.atLeastOneContact,
+      elm.appointmentTaken,
+      elm.interviewStarted,
+    ]
+
+    table.push(line);
+  });
+  return table;
 }
 
 export default MonitoringTable;

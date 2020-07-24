@@ -186,11 +186,13 @@ class ReviewTable extends React.Component {
             })}
           </tbody>
         </Table>
-        <PaginationNav.PageSelector
-          pagination={pagination}
-          updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-          numberOfItems={displayedLines.length}
-        />
+        <div className="tableOptionsWrapper">
+          <PaginationNav.PageSelector
+            pagination={pagination}
+            updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+            numberOfItems={displayedLines.length}
+          />
+        </div>
         <button type="button" className="btn btn-primary" disabled={this.isDisabled()} onClick={() => this.handleShow()}>
           {D.validate}
         </button>

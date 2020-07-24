@@ -138,12 +138,14 @@ class DataFormatter {
     });
   }
 
-  getDataForMonitoringTable(survey, date, pagination, mode, cb) {
+  async getDataForMonitoringTable(survey, date, pagination, mode, cb) {
     const interviewers = [];
     const getDataForSingleSurvey = typeof survey === 'string';
     let p1;
+    let site;
 
     if (mode !== BY_SITE) {
+      site = (await this.service.getUser()).organizationUnit.label;
       p1 = new Promise((resolve) => {
         const surveysToGetInterviewersFrom = getDataForSingleSurvey
           ? [{ id: survey }]
@@ -175,7 +177,7 @@ class DataFormatter {
         this.service.getStateCount(survey, date, (data) => {
           if (mode === BY_INTERVIEWER_ONE_SURVEY) {
             this.service.getUser((userInfo) => {
-              const userOUs = userInfo.organisationalUnits.map((x) => x.id);
+              const userOUs = userInfo.localOrganizationUnits.map((x) => x.id);
               const demStateCounts = [];
               data.organizationunits.forEach((dem) => {
                 if (userOUs.includes(dem.idDem)) {
@@ -203,10 +205,10 @@ class DataFormatter {
         Promise.all([p1, p2]).then((data) => {
           cb({
             interviewers,
+            site,
             interviewersDetail: data[0],
             total: data[1],
             relevantInterviewers: interviewers,
-            singleSurvey: true,
           });
         });
       }
@@ -222,9 +224,9 @@ class DataFormatter {
       p1.then((data) => {
         cb({
           interviewers,
+          site,
           interviewersDetail: data,
           relevantInterviewers: interviewers,
-          singleSurvey: false,
         });
       });
     }
@@ -242,7 +244,7 @@ class DataFormatter {
     const p3 = new Promise((resolve) => {
       this.service.getTotalDemByCampaign(campaignId, (data) => {
         this.service.getUser((userInfo) => {
-          const userOUs = userInfo.organisationalUnits.map((x) => x.id);
+          const userOUs = userInfo.localOrganizationUnits.map((x) => x.id);
           const demStateCounts = [];
           data.organizationunits.forEach((dem) => {
             if (userOUs.includes(dem.idDem)) {

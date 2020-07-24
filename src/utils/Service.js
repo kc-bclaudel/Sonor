@@ -28,12 +28,15 @@ class Service {
   }
 
   getUser(cb) {
-    fetch(`${baseUrl}/api/user`, this.options)
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch(console.log);
+    return new Promise((resolve) => {
+      fetch(`${baseUrl}/api/user`, this.options)
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) { cb(data); }
+          resolve(data);
+        })
+        .catch(console.log);
+    });
   }
 
   getSurveys(cb) {

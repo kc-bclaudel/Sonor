@@ -106,11 +106,13 @@ class MainScreen extends React.Component {
               {displaySurveyLines(this.props, pagination)}
             </tbody>
           </Table>
-          <PaginationNav.PageSelector
-            pagination={pagination}
-            updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-            numberOfItems={data.length}
-          />
+          <div className="tableOptionsWrapper">
+            <PaginationNav.PageSelector
+              pagination={pagination}
+              updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+              numberOfItems={data.length}
+            />
+          </div>
         </Card>
       </div>
     );
