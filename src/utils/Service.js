@@ -19,7 +19,7 @@ class Service {
     Object.assign(options, this.options);
     options.method = 'PUT';
     options.body = JSON.stringify(suToFinalize);
-    fetch(`${baseUrl}/api/validateSU`, this.options)
+    fetch(`${baseUrl}/api/survey-units/state/FIN`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);

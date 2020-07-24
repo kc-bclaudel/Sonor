@@ -31,8 +31,8 @@ class DataFormatter {
     });
   }
 
-  getDataForListSU(survey, cb) {
-    this.service.getSurveyUnits(survey.id, (res) => {
+  getDataForListSU(surveyId, cb) {
+    this.service.getSurveyUnits(surveyId, (res) => {
       const processedData = [];
       res.forEach((su) => {
         const suLine = {};

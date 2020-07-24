@@ -82,7 +82,7 @@ class MainScreen extends React.Component {
                 </th>
                 <th onClick={handleSortFunct('inProgress')} className="Clickable">
                   <SortIcon val="inProgress" sort={sort} />
-                  {D.inProgress}
+                  {D.toTreatInterviewer}
                 </th>
                 <th onClick={handleSortFunct('terminated')} className="Clickable">
                   <SortIcon val="terminated" sort={sort} />

@@ -104,6 +104,7 @@ class MonitoringTable extends React.Component {
               className="DateDisplay"
               type="date"
               value={data.date}
+              max={new Date().toJSON().split('T')[0]}
               onChange={(e) => goToMonitoringTable(
                 survey,
                 e.target.value,
@@ -250,7 +251,7 @@ function FollowUpTable({
             <SortIcon val="notStarted" sort={sort} />
           </th>
           <th onClick={handleSortFunct('onGoing')}>
-            {D.inProgress}
+            {D.inProgressInterviewer}
             <SortIcon val="onGoing" sort={sort} />
           </th>
           <th onClick={handleSortFunct('waitingForIntValidation')}>
@@ -262,7 +263,7 @@ function FollowUpTable({
             <SortIcon val="intValidated" sort={sort} />
           </th>
           <th onClick={handleSortFunct('demValidated')}>
-            {D.reviewedByDEM}
+            {D.reviewedEnded}
             <SortIcon val="demValidated" sort={sort} />
           </th>
           <th className="YellowHeader" onClick={handleSortFunct('preparingContact')}>

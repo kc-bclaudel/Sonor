@@ -225,7 +225,7 @@ function SurveyUnitLine({
   const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
   return (
     <tr className={lineColor}>
-      <td onClick={() => { window.open('', '_blank'); }} className="Clickable"><input key={id} type="checkbox" checked={isChecked} name={id} value={id} onChange={() => updateFunc()} /></td>
+      <td className="Clickable"><input key={id} type="checkbox" checked={isChecked} name={id} value={id} onChange={() => updateFunc()} /></td>
       <td onClick={() => { window.open('', '_blank'); }} className="Clickable">{campaignLabel}</td>
       <td onClick={() => { window.open('', '_blank'); }} className="Clickable">{interviewer}</td>
       <td onClick={() => { window.open('', '_blank'); }} className="Clickable">{id}</td>

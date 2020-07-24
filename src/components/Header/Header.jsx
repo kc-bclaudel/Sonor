@@ -81,7 +81,7 @@ class Header extends React.Component {
             </Col>
             <Col>
               <div className="d-inline-flex classTest" id="headerButtonContainer">
-                <Button className="HeaderButton">{D.dun}</Button>
+                <Button className="HeaderButton">{D.remind}</Button>
                 <li className="dropdown" id="BtnSuivreParent">
                   <Button data-toggle="dropdown" className="HeaderButton dropdown-toggle" href="#" onClick={(e) => { this.toggleFirstDropDownMenu(e); }}>
                     {D.follow}
@@ -111,8 +111,8 @@ function UserZone({ user, date }) {
       </Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{date.toLocaleDateString()}</Card.Subtitle>
       <div className="UserZoneButtons">
-        <Button className="HeaderButton">{D.myInterviewers}</Button>
         <Button className="HeaderButton">{D.mySurveys}</Button>
+        <a className="HeaderDocLink" href="" target="_blank"><i className="fa fa-question-circle fa-2x" /></a>
       </div>
     </Card>
   );

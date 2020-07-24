@@ -11,9 +11,9 @@ const header = {
 		"fr": "Avancement",
 		"en": "Progression"
 	},
-	"dun":{
+	"remind":{
 		"fr": "Relancer",
-		"en": "Dun"
+		"en": "Remind"
 	},
 	"follow":{
 		"fr": "Suivre",

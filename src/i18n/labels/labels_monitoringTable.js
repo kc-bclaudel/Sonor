@@ -11,6 +11,10 @@ const monitoringTable = {
 		"fr": "Nombre d'unités enquêtées",
 		"en": "Number of survey units"
 	},
+	"inProgressInterviewer":{
+		"fr": "En cours enquêteur",
+		"en": "In progress by interviewer"
+	},
 	"suCollectionsOngoing":{
 		"fr": "Unités enquêtées en cours de collecte",
 		"en": "Survey units collections ongoing"
@@ -27,9 +31,9 @@ const monitoringTable = {
 		"fr": "Validées enquêteur",
 		"en": "Reviewed by interviewer"
 	},
-	"reviewedByDEM":{
-		"fr": "Validées DEM",
-		"en": "Reviewed by DEM"
+	"reviewedEnded":{
+		"fr": "Validées terminées",
+		"en": "Reviewed ended"
 	},
 	"preparingContact":{
 		"fr": "En préparation",

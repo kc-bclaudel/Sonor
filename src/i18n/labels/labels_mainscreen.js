@@ -35,12 +35,12 @@ const mainscreen = {
 		"fr": "À affecter",
 		"en": "To be assigned"
 	},
-	"inProgress":{
-		"fr": "En cours",
-		"en": "In progress"
+	"toTreatInterviewer":{
+		"fr": "À taiter enquêteur",
+		"en": "to treat by interviewer"
 	},
 	"toBeReviewed":{
-		"fr": "À contrôler",
+		"fr": "À lire",
 		"en": "To be reviewed"
 	},
 	"toRemind":{
