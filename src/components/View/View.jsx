@@ -4,9 +4,11 @@ import CampaignPortal from '../CampaignPortal/CampaignPortal';
 import ListSU from '../ListSU/ListSU';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
 import Review from '../Review/Review';
+import AlertContainer from '../AlertContainer/AlertContainer';
 import DataFormatter from '../../utils/DataFormatter';
 import Utils from '../../utils/Utils';
 import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from '../../utils/constants.json';
+import ModalPreferences from '../ModalPreferences/ModalPreferences';
 
 class View extends React.Component {
   constructor(props) {
@@ -15,13 +17,24 @@ class View extends React.Component {
       currentView: 'mainScreen',
       survey: null,
       data: [],
+      alerts: [],
       dataRetreiver: new DataFormatter(props.token),
       sort: { sortOn: null, asc: null },
+      showPreferences: false,
+      preferences: {},
     };
   }
 
   componentDidMount() {
-    this.handleReturnButtonClick();
+    this.loadPreferences();
+  }
+
+  loadPreferences() {
+    const { dataRetreiver } = this.state;
+    dataRetreiver.getPreferences((preferences) => {
+      this.setState({ preferences });
+      this.handleReturnButtonClick();
+    });
   }
 
   handleCampaignClick(survey, mainScreenData) {
@@ -115,15 +128,40 @@ class View extends React.Component {
   }
 
   handleReturnButtonClick() {
-    const { dataRetreiver } = this.state;
+    const { dataRetreiver, preferences } = this.state;
     dataRetreiver.getDataForMainScreen((data) => {
+      const dataToUse = [];
+      data.forEach((survey) => {
+        if (preferences[survey.id] && preferences[survey.id].preference) {
+          dataToUse.push(survey);
+        }
+      });
       this.setState({
         currentView: 'mainScreen',
         survey: null,
-        data,
+        data: dataToUse,
       });
       this.handleSort('label', true);
     });
+  }
+
+  updatePreferences(newPreferences) {
+    const { dataRetreiver } = this.state;
+    dataRetreiver.updatePreferences(newPreferences, (res) => {
+      if (res.status === 200 || res.status === 201 || res.status === 204) {
+        this.addAlert({ variant: 'success', heading: '', text: 'Your preferences have been updated' });
+      } else {
+        this.addAlert({ variant: 'danger', heading: '', text: 'Your preferences could not be updated' });
+      }
+      this.handleReturnButtonClick();
+    });
+  }
+
+  addAlert(alert) {
+    const { alerts } = this.state;
+    const newAlerts = alerts;
+    newAlerts.push(alert);
+    this.setState({ alerts: newAlerts });
   }
 
   handleSort(sortOn, asc) {
@@ -157,13 +195,22 @@ class View extends React.Component {
     this.setState({ data: sortedData, sort: { sortOn, asc: newOrder } });
   }
 
+  showPreferences() {
+    this.setState({ showPreferences: true });
+  }
+
+  hidePreferences() {
+    this.setState({ showPreferences: false });
+  }
+
   render() {
     const {
-      currentView, survey, data, sort, monitoringTableMode,
+      currentView, survey, data, sort, monitoringTableMode, showPreferences, preferences, alerts,
     } = this.state;
+    let selectedView;
     switch (currentView) {
       case 'campaignPortal':
-        return (
+        selectedView = (
           <CampaignPortal
             data={data}
             sort={sort}
@@ -175,25 +222,30 @@ class View extends React.Component {
             }
           />
         );
+        break;
       case 'listSU':
-        return (
+        selectedView = (
           <ListSU
             survey={survey}
             data={data}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
           />
         );
+        break;
       case 'review':
-        return (
+        selectedView = (
           <Review
             data={data}
             sort={sort}
             handleSort={(sortOn) => this.handleSort(sortOn)}
-            handleReviewClick={(lstSUFinalized, error) => this.handleReviewClick(lstSUFinalized, error)}
+            handleReviewClick={
+              (lstSUFinalized, error) => this.handleReviewClick(lstSUFinalized, error)
+            }
           />
         );
+        break;
       case 'monitoringTable':
-        return (
+        selectedView = (
           <MonitoringTable
             survey={survey}
             data={data}
@@ -206,8 +258,9 @@ class View extends React.Component {
             handleSort={(sortOn) => this.handleSort(sortOn)}
           />
         );
+        break;
       default:
-        return (
+        selectedView = (
           <MainScreen
             data={data}
             sort={sort}
@@ -223,6 +276,18 @@ class View extends React.Component {
           />
         );
     }
+    return (
+      <div>
+        {selectedView}
+        <ModalPreferences
+          preferences={preferences}
+          showPreferences={showPreferences}
+          hidePreferences={() => this.hidePreferences()}
+          updatePreferences={(prefs) => this.updatePreferences(prefs)}
+        />
+        <AlertContainer alerts={alerts} />
+      </div>
+    );
   }
 }
 

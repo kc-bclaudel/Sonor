@@ -60,7 +60,7 @@ class Header extends React.Component {
 
   render() {
     const {
-      returnFunc, user,
+      returnFunc, user, showPreferences, goToReview,
     } = this.props;
     const { toggleFirstMenu } = this.state;
     return (
@@ -89,10 +89,10 @@ class Header extends React.Component {
                   </Button>
                   {this.displayFirstSubMenu(toggleFirstMenu)}
                 </li>
-                <Button onClick={() => this.props.goToReview()} className="HeaderButton">{D.read}</Button>
+                <Button onClick={() => goToReview()} className="HeaderButton">{D.read}</Button>
               </div>
             </Col>
-            <Col><UserZone user={user} date={new Date()} /></Col>
+            <Col><UserZone user={user} date={new Date()} showPreferences={showPreferences} /></Col>
           </Row>
         </Container>
       </header>
@@ -100,7 +100,7 @@ class Header extends React.Component {
   }
 }
 
-function UserZone({ user, date }) {
+function UserZone({ user, date, showPreferences }) {
   return (
     <Card id="UserZone">
       <Card.Title>
@@ -111,7 +111,7 @@ function UserZone({ user, date }) {
       </Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{date.toLocaleDateString()}</Card.Subtitle>
       <div className="UserZoneButtons">
-        <Button className="HeaderButton">{D.mySurveys}</Button>
+        <Button className="HeaderButton" onClick={() => showPreferences()}>{D.mySurveys}</Button>
         <a className="HeaderDocLink" href="" target="_blank"><i className="fa fa-question-circle fa-2x" /></a>
       </div>
     </Card>

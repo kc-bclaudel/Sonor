@@ -27,6 +27,16 @@ class Service {
       .catch(console.log);
   }
 
+  putPreferences(preferences, cb) {
+    const options = {};
+    Object.assign(options, this.options);
+    options.method = 'PUT';
+    options.body = JSON.stringify(preferences);
+    fetch(`${baseUrl}/api/preferences`, this.options)
+      .then((res) => cb(res))
+      .catch(console.log);
+  }
+
   getUser(cb) {
     return new Promise((resolve) => {
       fetch(`${baseUrl}/api/user`, this.options)

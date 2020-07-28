@@ -50,7 +50,7 @@ function CampaignPortal({
               <Contacts />
             </Col>
             <Col>
-              <SurveyUnits data={data} sort={sort} handleSortfunc={handleSort} />
+              <SurveyUnits data={data} survey={survey} sort={sort} handleSortfunc={handleSort} />
             </Col>
           </Row>
         </Container>
@@ -151,6 +151,21 @@ class SurveyUnits extends React.Component {
     });
   }
 
+  handleExport() {
+    const { data, survey } = this.props;
+    const fileLabel = `${data.site}_${survey.label}_Repartition enqueteurs`;
+
+    const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`;
+    const table = makeTableForExport(data);
+    const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', title);
+    document.body.appendChild(link);
+    link.click();
+  }
+
   render() {
     const { data, sort, handleSortfunc } = this.props;
     const { notAttributed, total, interviewers } = data;
@@ -199,6 +214,7 @@ class SurveyUnits extends React.Component {
           </tbody>
         </Table>
         <div className="tableOptionsWrapper">
+          <Button onClick={() => this.handleExport()}>Export</Button>
           <PaginationNav.PageSelector
             pagination={pagination}
             updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
@@ -223,6 +239,44 @@ function InterviewerLine({ interviewer }) {
       <td className="LightGreyLine">{interviewer.surveyUnitCount}</td>
     </tr>
   );
+}
+
+function makeTableForExport(data) {
+  const { notAttributed, total, interviewers } = data;
+  const table = [];
+
+  const header = [
+    D.interviewer,
+    D.idep,
+    D.SU,
+  ];
+
+  const footer = [
+    [
+      D.unassigned,
+      ' ',
+      notAttributed.count,
+    ],
+    [
+      D.unassigned,
+      ' ',
+      total.total,
+    ],
+  ];
+
+  table.push(header);
+  interviewers.forEach((line) => {
+    table.push([
+      `${line.interviewerLastName} ${line.interviewerFirstName}`,
+      line.id,
+      line.surveyUnitCount,
+    ]);
+  });
+  footer.forEach((line) => {
+    table.push(line);
+  });
+
+  return table;
 }
 
 export default CampaignPortal;

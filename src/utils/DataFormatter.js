@@ -11,6 +11,24 @@ class DataFormatter {
     this.service.getUser((data) => { cb(data); });
   }
 
+  getPreferences(cb) {
+    return new Promise((resolve) => {
+      this.service.getSurveys((data) => {
+        const formattedData = {};
+        data.forEach((survey) => {
+          formattedData[survey.id] = {
+            label: survey.label,
+            preference: survey.preference,
+          };
+        });
+        if (cb) {
+          cb(formattedData);
+        }
+        resolve(formattedData);
+      });
+    });
+  }
+
   getDataForMainScreen(cb) {
     return new Promise((resolve) => {
       this.service.getSurveys((data) => {
@@ -32,19 +50,29 @@ class DataFormatter {
   }
 
   getDataForListSU(surveyId, cb) {
-    this.service.getSurveyUnits(surveyId, (res) => {
-      const processedData = [];
-      res.forEach((su) => {
-        const suLine = {};
-        suLine.id = su.id;
-        suLine.ssech = su.ssech;
-        suLine.departement = su.location;
-        suLine.city = su.city;
-        suLine.interviewer = `${su.interviewer.firstName} ${su.interviewer.lastName}`;
-        suLine.idep = su.interviewer.id;
-        processedData.push(suLine);
+    const p1 = new Promise((resolve) => {
+      this.service.getUser((res) => {
+        resolve(res.organizationUnit.label);
       });
-      cb(processedData);
+    });
+    const p2 = new Promise((resolve) => {
+      this.service.getSurveyUnits(surveyId, (res) => {
+        const processedData = [];
+        res.forEach((su) => {
+          const suLine = {};
+          suLine.id = su.id;
+          suLine.ssech = su.ssech;
+          suLine.departement = su.location;
+          suLine.city = su.city;
+          suLine.interviewer = `${su.interviewer.firstName} ${su.interviewer.lastName}`;
+          suLine.idep = su.interviewer.id;
+          processedData.push(suLine);
+        });
+        resolve(processedData);
+      });
+    });
+    Promise.all([p1, p2]).then((data) => {
+      cb({ site: data[0], surveyUnits: data[1] });
     });
   }
 
@@ -60,6 +88,15 @@ class DataFormatter {
         if (cb) {
           cb(data);
         }
+        resolve(data);
+      });
+    });
+  }
+
+  updatePreferences(preferences, cb) {
+    return new Promise((resolve) => {
+      this.service.putPreferences(preferences, (data) => {
+        if (cb) { cb(data); }
         resolve(data);
       });
     });
@@ -256,8 +293,15 @@ class DataFormatter {
         });
       });
     });
-    Promise.all([p1, p2, p3]).then((data) => {
-      cb({ interviewers: data[0], notAttributed: data[1], total: data[2] });
+    const p4 = new Promise((resolve) => {
+      this.service.getUser((res) => {
+        resolve(res.organizationUnit.label);
+      });
+    });
+    Promise.all([p1, p2, p3, p4]).then((data) => {
+      cb({
+        interviewers: data[0], notAttributed: data[1], total: data[2], site: data[3],
+      });
     });
   }
 }

@@ -338,19 +338,6 @@ function FollowUpTableLine({ data, oddLine }) {
   );
 }
 
-function makeTableForExport(data, mode) {
-  const table = [];
-  const header = getHeaderForExport(mode);
-  const body = getBodyForExport(data.interviewersDetail);
-  const footer = getFooterForExport(data, mode);
-
-  table.push(header);
-  body.forEach((line) => table.push(line));
-  footer.forEach((line) => table.push(line));
-
-  return table;
-}
-
 function getHeaderForExport(mode) {
   let firstColumnTitle;
   if (mode === BY_SURVEY) {
@@ -417,7 +404,6 @@ function getFooterForExport(data, mode) {
 function getBodyForExport(data) {
   const table = [];
   data.forEach((elm) => {
-
     const interviewerName = elm.interviewerFirstName
       ? `${elm.interviewerLastName} ${elm.interviewerFirstName}`
       : null;
@@ -435,10 +421,23 @@ function getBodyForExport(data) {
       elm.atLeastOneContact,
       elm.appointmentTaken,
       elm.interviewStarted,
-    ]
+    ];
 
     table.push(line);
   });
+  return table;
+}
+
+function makeTableForExport(data, mode) {
+  const table = [];
+  const header = getHeaderForExport(mode);
+  const body = getBodyForExport(data.interviewersDetail);
+  const footer = getFooterForExport(data, mode);
+
+  table.push(header);
+  body.forEach((line) => table.push(line));
+  footer.forEach((line) => table.push(line));
+
   return table;
 }
 

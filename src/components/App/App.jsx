@@ -45,6 +45,9 @@ class App extends React.Component {
               goToReview={() => {
                 this.content.handleReviewClick(null, false);
               }}
+              showPreferences={() => {
+                this.content.showPreferences();
+              }}
             />
             <View
               token={keycloak ? keycloak.token : null}

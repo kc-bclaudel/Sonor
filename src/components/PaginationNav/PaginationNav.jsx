@@ -18,7 +18,7 @@ function makePaginationItem(pageNumber, activePage, paginationSize, updateFunc) 
 class PaginationNav {
   static PageSelector({ pagination, updateFunc, numberOfItems }) {
     const update = updateFunc;
-    const numberOfPages = Math.floor(numberOfItems / pagination.size);
+    const numberOfPages = Math.floor((Math.max(numberOfItems, 1) - 1) / pagination.size);
     const active = pagination.page;
     const items = [];
 
