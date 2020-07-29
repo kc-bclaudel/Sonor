@@ -5,18 +5,15 @@ import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
 import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
-import ReviewAlert from '../ReviewAlert/ReviewAlert';
-import DataFormatter from '../../utils/DataFormatter';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import D from '../../i18n';
 
 function Review({
-  data, sort, handleSort, handleReviewClick,
+  data, sort, handleSort, validateSU,
 }) {
   return (
     <div id="Review">
       <Card className="ViewCard">
-        <ReviewAlert data={data} />
         <Card.Title>
           {D.surveyUnitsToReview}
           {data.length}
@@ -25,7 +22,7 @@ function Review({
           data={data}
           sort={sort}
           handleSort={handleSort}
-          handleReviewClick={handleReviewClick}
+          validateSU={validateSU}
         />
       </Card>
     </div>
@@ -63,7 +60,6 @@ class ReviewTable extends React.Component {
       checkboxArray[element.id] = false;
     });
     this.state = {
-      dataRetreiver: new DataFormatter(props.token),
       pagination: { size: 5, page: 1 },
       checkboxArray,
       checkAll: false,
@@ -101,18 +97,15 @@ class ReviewTable extends React.Component {
   }
 
   validate() {
-    const { handleReviewClick } = this.props;
-    const { checkboxArray, dataRetreiver } = this.state;
+    const { validateSU } = this.props;
+    const { checkboxArray } = this.state;
     const lstSUFinalized = [];
     Object.entries(checkboxArray).forEach((su) => {
       if (su[1]) {
         lstSUFinalized.push(su[0]);
       }
     });
-    dataRetreiver.finalizeSurveyUnits(lstSUFinalized)
-      .then(() => {
-        handleReviewClick(lstSUFinalized, false);
-      });
+    validateSU(lstSUFinalized);
   }
 
   handleCheckAll(e) {

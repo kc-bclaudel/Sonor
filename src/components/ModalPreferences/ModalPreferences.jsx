@@ -46,7 +46,7 @@ class ModalPreferences extends React.Component {
     const { updatePreferences } = this.props;
     const dataToSend = [];
     Object.keys(selectedPreferences).forEach((id) => {
-      if (updatePreferences[id].preference) {
+      if (selectedPreferences[id].preference) {
         dataToSend.push(id);
       }
     });

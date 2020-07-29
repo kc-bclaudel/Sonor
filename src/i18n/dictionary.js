@@ -5,6 +5,7 @@ import campaignPortal from './labels/labels_campaignPortal';
 import listSU from './labels/labels_listSU';
 import review from './labels/labels_review';
 import monitoringTable from './labels/labels_monitoringTable';
+import alert from './labels/labels_alert';
 
 const dictionary = {
   ...app,
@@ -14,6 +15,7 @@ const dictionary = {
   ...listSU,
   ...review,
   ...monitoringTable,
+  ...alert,
 };
 
 export default dictionary;

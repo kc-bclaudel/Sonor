@@ -382,18 +382,17 @@ button{
   left: 0;
   top: 0;
   z-index: 2;
-  /* background: blue; */
   width: 70%;
   height: 500px;
   pointer-events: none;
 }
 
 .alert {
-  /* height: 50px;
-  transition: 0.5s;
-  overflow: hidden; */
-  opacity: 0.9;
   pointer-events: auto;
   margin-bottom: 5px !important;
 
+ }
+
+ .alert > p {
+  margin-bottom: 0;
  }

@@ -9,6 +9,7 @@ import DataFormatter from '../../utils/DataFormatter';
 import Utils from '../../utils/Utils';
 import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from '../../utils/constants.json';
 import ModalPreferences from '../ModalPreferences/ModalPreferences';
+import D from '../../i18n';
 
 class View extends React.Component {
   constructor(props) {
@@ -18,11 +19,11 @@ class View extends React.Component {
       survey: null,
       data: [],
       alerts: [],
-      dataRetreiver: new DataFormatter(props.token),
       sort: { sortOn: null, asc: null },
       showPreferences: false,
       preferences: {},
     };
+    this.dataRetreiver = new DataFormatter(props.token);
   }
 
   componentDidMount() {
@@ -30,16 +31,14 @@ class View extends React.Component {
   }
 
   loadPreferences() {
-    const { dataRetreiver } = this.state;
-    dataRetreiver.getPreferences((preferences) => {
+    this.dataRetreiver.getPreferences((preferences) => {
       this.setState({ preferences });
       this.handleReturnButtonClick();
     });
   }
 
   handleCampaignClick(survey, mainScreenData) {
-    const { dataRetreiver } = this.state;
-    dataRetreiver.getDataForCampaignPortal(survey.id, (res) => {
+    this.dataRetreiver.getDataForCampaignPortal(survey.id, (res) => {
       const newData = {};
       Object.assign(newData, res);
       Object.assign(newData, mainScreenData);
@@ -52,8 +51,7 @@ class View extends React.Component {
   }
 
   handleListSUClick(survey) {
-    const { dataRetreiver } = this.state;
-    dataRetreiver.getDataForListSU(survey.id, (data) => {
+    this.dataRetreiver.getDataForListSU(survey.id, (data) => {
       this.setState({
         currentView: 'listSU',
         survey,
@@ -63,17 +61,16 @@ class View extends React.Component {
   }
 
   async handleMonitoringTableClick(survey, date, mode) {
-    const { dataRetreiver } = this.state;
     const dateToUse = date || new Date().toISOString().slice(0, 10);
     const modeToUse = mode || BY_INTERVIEWER_ONE_SURVEY;
     const paginationToUse = { size: 5, page: 1 };
     let surveyToUse;
     if (!survey) {
-      surveyToUse = await dataRetreiver.getDataForMainScreen();
+      surveyToUse = await this.dataRetreiver.getDataForMainScreen();
     } else {
       surveyToUse = survey.id;
     }
-    dataRetreiver.getDataForMonitoringTable(surveyToUse, dateToUse, paginationToUse, modeToUse,
+    this.dataRetreiver.getDataForMonitoringTable(surveyToUse, dateToUse, paginationToUse, modeToUse,
       (res) => {
         const newData = {};
         Object.assign(newData, res);
@@ -98,8 +95,7 @@ class View extends React.Component {
   }
 
   handleReviewClick(lstSUFinalized, error) {
-    const { dataRetreiver } = this.state;
-    dataRetreiver.getDataForReview((data) => {
+    this.dataRetreiver.getDataForReview((data) => {
       const datas = {};
       datas.listSU = data;
       datas.lstSUFinalized = lstSUFinalized;
@@ -112,10 +108,10 @@ class View extends React.Component {
   }
 
   updateInterviewersDetail(surveyId, date, pagination, interviewersToFetched, useDebounce) {
-    const { dataRetreiver, data } = this.state;
+    const { data } = this.state;
     (useDebounce
       ? this.updateInterviewersDetailDebounced(surveyId, interviewersToFetched, date, pagination)
-      : dataRetreiver.getInterviewersDetail(surveyId, interviewersToFetched, date, pagination))
+      : this.dataRetreiver.getInterviewersDetail(surveyId, interviewersToFetched, date, pagination))
       .then((interviewersDetail) => {
         const newData = {};
         Object.assign(newData, data);
@@ -128,8 +124,8 @@ class View extends React.Component {
   }
 
   handleReturnButtonClick() {
-    const { dataRetreiver, preferences } = this.state;
-    dataRetreiver.getDataForMainScreen((data) => {
+    const { preferences } = this.state;
+    this.dataRetreiver.getDataForMainScreen((data) => {
       const dataToUse = [];
       data.forEach((survey) => {
         if (preferences[survey.id] && preferences[survey.id].preference) {
@@ -146,22 +142,34 @@ class View extends React.Component {
   }
 
   updatePreferences(newPreferences) {
-    const { dataRetreiver } = this.state;
-    dataRetreiver.updatePreferences(newPreferences, (res) => {
+    this.dataRetreiver.updatePreferences(newPreferences, (res) => {
       if (res.status === 200 || res.status === 201 || res.status === 204) {
-        this.addAlert({ variant: 'success', heading: '', text: 'Your preferences have been updated' });
+        this.addAlert({ variant: 'success', text: D.preferencesUpdated });
       } else {
-        this.addAlert({ variant: 'danger', heading: '', text: 'Your preferences could not be updated' });
+        this.addAlert({ variant: 'danger', text: D.preferencesNotUpdated });
       }
       this.handleReturnButtonClick();
     });
   }
 
+  validateSU(lstSUFinalized) {
+    this.dataRetreiver.finalizeSurveyUnits(lstSUFinalized)
+      .then((res) => {
+        if (res.status === 200 || res.status === 201 || res.status === 204) {
+          this.addAlert({ variant: 'success', text: `${D.reviewAlertSuccess}: ${lstSUFinalized.join(', ')}.` });
+        } else {
+          this.addAlert({ variant: 'danger', text: D.reviewAlertError });
+        }
+        this.handleReviewClick();
+      });
+  }
+
   addAlert(alert) {
     const { alerts } = this.state;
-    const newAlerts = alerts;
-    newAlerts.push(alert);
-    this.setState({ alerts: newAlerts });
+    const alertToAdd = {};
+    Object.assign(alertToAdd, alert);
+    alertToAdd.id = Math.random().toString(36).replace(/[^a-z]+/g, '');
+    this.setState({ alerts: alerts.concat([alertToAdd]) });
   }
 
   handleSort(sortOn, asc) {
@@ -238,8 +246,8 @@ class View extends React.Component {
             data={data}
             sort={sort}
             handleSort={(sortOn) => this.handleSort(sortOn)}
-            handleReviewClick={
-              (lstSUFinalized, error) => this.handleReviewClick(lstSUFinalized, error)
+            validateSU={
+              (lstSUFinalized) => this.validateSU(lstSUFinalized)
             }
           />
         );
