@@ -17,7 +17,7 @@ const mainscreen = {
 	},
 	"treatmentEndDate":{
 		"fr": "Fin traitement",
-		"en": "Treatment end date"
+		"en": "Processing end date"
 	},
 	"phase":{
 		"fr": "Phase",

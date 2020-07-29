@@ -13,7 +13,7 @@ const header = {
 	},
 	"remind":{
 		"fr": "Relancer",
-		"en": "Remind"
+		"en": "Follow up"
 	},
 	"follow":{
 		"fr": "Suivre",

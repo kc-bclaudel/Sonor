@@ -1,7 +1,7 @@
 const listSU = {
 	"surveyUnitsAllocatedToTheDEM":{
 		"fr": "Unités enquêtées confiées à la DEM: ",
-		"en": "Survey units allocated to the DEM: "
+		"en": "Survey units allocated to the organizational unit: "
 	},
 	"identifier":{
 		"fr": "Identifiant",

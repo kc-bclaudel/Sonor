@@ -17,7 +17,7 @@ const campaignPortal = {
 	},
 	"treatmentOver":{
 		"fr": "Traitement terminée",
-		"en": "Treatment over"
+		"en": "Processing over"
 	},
 	"startOfCollection":{
 		"fr": "Début de collecte",
@@ -29,7 +29,7 @@ const campaignPortal = {
 	},
 	"endOfTreatment":{
 		"fr": "Fin de traitement",
-		"en": "End of treatment"
+		"en": "End of processing"
 	},
 	"contacts":{
 		"fr": "Contacts",
@@ -65,7 +65,7 @@ const campaignPortal = {
 	},
 	"totalDEM":{
 		"fr": "Total DEM",
-		"en": "Total DEM"
+		"en": "Total organizational unit"
 	}
 }
 
