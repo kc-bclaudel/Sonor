@@ -129,6 +129,7 @@ function SurveyListLine({ lineData, oddLine, props }) {
   };
   const goToPortal = () => { props.goToCampaignPortal(survey, data); };
   const goToListSU = () => { props.goToListSU(survey); };
+  const goToReview = () => { props.goToReview(survey); };
   const goToMonitoringTable = () => { props.goToMonitoringTable(survey); };
   const goToMonitoringTableSites = () => { props.goToMonitoringTable(survey, BY_SITE); };
   return (
@@ -143,10 +144,10 @@ function SurveyListLine({ lineData, oddLine, props }) {
       <td className="ColumnSpacing" />
       <td onClick={goToListSU} className="Clickable">{data.affected}</td>
       <td onClick={goToMonitoringTable} className="Clickable">{data.inProgress}</td>
-      <td>{data.terminated}</td>
       <td>{data.toAffect}</td>
       <td>{data.toFollowUp}</td>
-      <td>{data.toControl}</td>
+      <td onClick={goToReview} className="Clickable">{data.toControl}</td>
+      <td>{data.terminated}</td>
     </tr>
   );
 }

@@ -1,18 +1,44 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
 import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
+import SurveySelector from '../SurveySelector/SurveySelector';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import D from '../../i18n';
 
 function Review({
-  data, sort, handleSort, validateSU,
+  survey, data, sort, handleSort, goToReview, validateSU, returnToMainScreen,
 }) {
+  const surveyTitle = !survey
+      || (<div className="SurveyTitle">{survey.label}</div>);
+  const surveySelector = !survey
+      || (
+        <SurveySelector
+          survey={survey}
+          updateFunc={(newSurvey) => goToReview(newSurvey)}
+        />
+      );
   return (
     <div id="Review">
+      <Container fluid>
+        <Row>
+          <Col>
+            <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">{D.back}</Button>
+          </Col>
+          <Col xs={6}>
+            {surveyTitle}
+          </Col>
+          <Col>
+            {surveySelector}
+          </Col>
+        </Row>
+      </Container>
       <Card className="ViewCard">
         <Card.Title>
           {D.surveyUnitsToReview}
@@ -21,8 +47,10 @@ function Review({
         <ReviewTable
           data={data}
           sort={sort}
+          survey={survey}
           handleSort={handleSort}
           validateSU={validateSU}
+          goToReview={goToReview}
         />
       </Card>
     </div>
@@ -68,6 +96,17 @@ class ReviewTable extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    const { survey, data } = this.props;
+    const checkboxArray = {};
+    if (prevProps.survey.id !== survey.id) {
+      data.listSU.forEach((element) => {
+        checkboxArray[element.id] = false;
+      });
+      this.setState({ checkboxArray });
+    }
+  }
+
   handlePageChange(pagination) {
     this.setState({ pagination });
   }
@@ -97,7 +136,7 @@ class ReviewTable extends React.Component {
   }
 
   validate() {
-    const { validateSU } = this.props;
+    const { survey, validateSU } = this.props;
     const { checkboxArray } = this.state;
     const lstSUFinalized = [];
     Object.entries(checkboxArray).forEach((su) => {
@@ -105,7 +144,7 @@ class ReviewTable extends React.Component {
         lstSUFinalized.push(su[0]);
       }
     });
-    validateSU(lstSUFinalized);
+    validateSU(survey, lstSUFinalized);
   }
 
   handleCheckAll(e) {

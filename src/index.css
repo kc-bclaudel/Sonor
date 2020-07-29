@@ -379,8 +379,8 @@ button{
 
 #AlertContainer{
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 10px;
+  top: 3px;
   z-index: 2;
   width: 70%;
   height: 500px;

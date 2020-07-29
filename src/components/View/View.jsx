@@ -94,14 +94,15 @@ class View extends React.Component {
       });
   }
 
-  handleReviewClick(lstSUFinalized, error) {
-    this.dataRetreiver.getDataForReview((data) => {
+  async handleReviewClick(survey) {
+    let surveyId = null;
+    if (survey) surveyId = survey.id;
+    this.dataRetreiver.getDataForReview(surveyId, (data) => {
       const datas = {};
       datas.listSU = data;
-      datas.lstSUFinalized = lstSUFinalized;
-      datas.errorOccurred = error;
       this.setState({
         currentView: 'review',
+        survey,
         data: datas,
       });
     });
@@ -152,7 +153,7 @@ class View extends React.Component {
     });
   }
 
-  validateSU(lstSUFinalized) {
+  validateSU(survey, lstSUFinalized) {
     this.dataRetreiver.finalizeSurveyUnits(lstSUFinalized)
       .then((res) => {
         if (res.status === 200 || res.status === 201 || res.status === 204) {
@@ -160,7 +161,7 @@ class View extends React.Component {
         } else {
           this.addAlert({ variant: 'danger', text: D.reviewAlertError });
         }
-        this.handleReviewClick();
+        this.handleReviewClick(survey);
       });
   }
 
@@ -245,10 +246,13 @@ class View extends React.Component {
           <Review
             data={data}
             sort={sort}
+            survey={survey}
             handleSort={(sortOn) => this.handleSort(sortOn)}
             validateSU={
-              (lstSUFinalized) => this.validateSU(lstSUFinalized)
+              (surveyId, lstSUFinalized) => this.validateSU(surveyId, lstSUFinalized)
             }
+            goToReview={(surveyId) => this.handleReviewClick(surveyId)}
+            returnToMainScreen={() => { this.handleReturnButtonClick(); }}
           />
         );
         break;
@@ -275,7 +279,7 @@ class View extends React.Component {
             goToCampaignPortal={(newSurvey, mainScreenData) => {
               this.handleCampaignClick(newSurvey, mainScreenData);
             }}
-            goToReview={() => { this.handleReviewClick(null, false); }}
+            goToReview={(newSurvey) => { this.handleReviewClick(newSurvey, null, false); }}
             goToListSU={(surveyId) => { this.handleListSUClick(surveyId); }}
             goToMonitoringTable={(surveyId, mode) => {
               this.handleMonitoringTableClick(surveyId, null, mode);

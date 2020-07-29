@@ -1,6 +1,10 @@
-import Service from './Service';
-import Utils from './Utils';
-import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from './constants.json';
+import Service from "./Service";
+import Utils from "./Utils";
+import {
+  BY_INTERVIEWER_ONE_SURVEY,
+  BY_SURVEY,
+  BY_SITE,
+} from "./constants.json";
 
 class DataFormatter {
   constructor(token) {
@@ -8,7 +12,9 @@ class DataFormatter {
   }
 
   getUserInfo(cb) {
-    this.service.getUser((data) => { cb(data); });
+    this.service.getUser((data) => {
+      cb(data);
+    });
   }
 
   getPreferences(cb) {
@@ -37,7 +43,9 @@ class DataFormatter {
           const formattedSurvey = {};
           Object.assign(formattedSurvey, survey);
           formattedSurvey.phase = Utils.getCampaignPhase(
-            survey.collectionStartDate, survey.collectionEndDate, survey.treatmentEndDate,
+            survey.collectionStartDate,
+            survey.collectionEndDate,
+            survey.treatmentEndDate
           );
           formattedData.push(formattedSurvey);
         });
@@ -76,8 +84,8 @@ class DataFormatter {
     });
   }
 
-  getDataForReview(cb) {
-    this.getListSUToReview().then((data) => {
+  getDataForReview(surveyId, cb) {
+    this.getListSUToReview(surveyId).then((data) => {
       cb(data);
     });
   }
@@ -102,28 +110,30 @@ class DataFormatter {
     });
   }
 
-  getListSUToReview() {
+  getListSUToReview(surveyId) {
     return new Promise((resolve) => {
       const promises = [];
       this.service.getSurveys((res) => {
         res.forEach((campaign) => {
-          promises.push(
-            new Promise((resolve2) => {
-              this.service.getSurveyUnits(campaign.id, (res2) => {
-                const lstSU = [];
-                res2.forEach((su) => {
-                  const suLine = {};
-                  suLine.campaignLabel = campaign.label;
-                  suLine.interviewer = `${su.interviewer.lastName} ${su.interviewer.firstName}`;
-                  suLine.idep = su.interviewer.id;
-                  suLine.id = su.id;
-                  lstSU.push(suLine);
+          if (surveyId === null || campaign.id === surveyId) {
+            promises.push(
+              new Promise((resolve2) => {
+                this.service.getSurveyUnits(campaign.id, (res2) => {
+                  const lstSU = [];
+                  res2.forEach((su) => {
+                    const suLine = {};
+                    suLine.campaignLabel = campaign.label;
+                    suLine.interviewer = `${su.interviewer.lastName} ${su.interviewer.firstName}`;
+                    suLine.idep = su.interviewer.id;
+                    suLine.id = su.id;
+                    lstSU.push(suLine);
+                  });
+                  lstSU.sort((a, b) => (a.interviewer > b.interviewer ? 1 : -1));
+                  resolve2(lstSU);
                 });
-                lstSU.sort((a, b) => ((a.interviewer > b.interviewer) ? 1 : -1));
-                resolve2(lstSU);
-              });
-            }),
-          );
+              }),
+            );
+          }
         });
         Promise.all(promises).then((data) => {
           resolve(data.flat());
@@ -147,9 +157,9 @@ class DataFormatter {
                 Object.assign(interviewer, interv);
                 interviewer.survey = survey;
                 resolve2({ interviewer, stateCount: data });
-              },
+              }
             );
-          }),
+          })
         );
       });
       if (mode === BY_SURVEY) {
@@ -164,7 +174,8 @@ class DataFormatter {
           data.forEach((intData) => {
             const line = {};
             Object.assign(line, intData);
-            line.interviewerFirstName = intData.interviewer.interviewerFirstName;
+            line.interviewerFirstName =
+              intData.interviewer.interviewerFirstName;
             line.interviewerLastName = intData.interviewer.interviewerLastName;
             line.interviewerId = intData.interviewer.id;
             processedData.push(line);
@@ -177,7 +188,7 @@ class DataFormatter {
 
   async getDataForMonitoringTable(survey, date, pagination, mode, cb) {
     const interviewers = [];
-    const getDataForSingleSurvey = typeof survey === 'string';
+    const getDataForSingleSurvey = typeof survey === "string";
     let p1;
     let site;
 
@@ -190,20 +201,27 @@ class DataFormatter {
 
         const promises = [];
         surveysToGetInterviewersFrom.forEach((surv) => {
-          promises.push(new Promise((resolve2) => {
-            this.service.getInterviewers(survey, (res) => {
-              res.forEach((interviewer) => {
-                Utils.addIfNotAlreadyPresent(interviewers, interviewer);
+          promises.push(
+            new Promise((resolve2) => {
+              this.service.getInterviewers(survey, (res) => {
+                res.forEach((interviewer) => {
+                  Utils.addIfNotAlreadyPresent(interviewers, interviewer);
+                });
+                this.getInterviewersDetail(
+                  surv.id,
+                  res,
+                  date,
+                  mode
+                ).then((data) => resolve2(data));
               });
-              this.getInterviewersDetail(surv.id, res, date, mode).then((data) => resolve2(data));
-            });
-          }));
+            })
+          );
         });
         Promise.all(promises).then((data) => {
           if (mode === BY_SURVEY) {
             resolve(data);
           } else {
-            resolve(Utils.sumOn(data.flat(), 'interviewerId'));
+            resolve(Utils.sumOn(data.flat(), "interviewerId"));
           }
         });
       });
@@ -271,12 +289,14 @@ class DataFormatter {
 
   getDataForCampaignPortal(campaignId, cb) {
     const p1 = new Promise((resolve) => {
-      this.service.getInterviewersByCampaign(campaignId,
-        (data) => { resolve(data); });
+      this.service.getInterviewersByCampaign(campaignId, (data) => {
+        resolve(data);
+      });
     });
     const p2 = new Promise((resolve) => {
-      this.service.getNotAttributedByCampaign(campaignId,
-        (data) => { resolve(data); });
+      this.service.getNotAttributedByCampaign(campaignId, (data) => {
+        resolve(data);
+      });
     });
     const p3 = new Promise((resolve) => {
       this.service.getTotalDemByCampaign(campaignId, (data) => {

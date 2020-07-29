@@ -43,7 +43,7 @@ class App extends React.Component {
                 this.content.handleMonitoringTableClick(null, null, mode);
               }}
               goToReview={() => {
-                this.content.handleReviewClick(null, false);
+                this.content.handleReviewClick(null);
               }}
               showPreferences={() => {
                 this.content.showPreferences();
