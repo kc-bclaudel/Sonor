@@ -1,4 +1,4 @@
-.selectedSubeMenu:hover {
+.selectedSubeMenu:hover ,  li:hover > .selectedSubeMenu {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
@@ -16,10 +16,13 @@ a {
 
 ul {
     list-style: none;
-    padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
     }
+
+ul.dropdown-menu{
+  padding: 3px 0;
+}
 
 li {
     list-style: none;
@@ -72,8 +75,8 @@ li {
   top: 4px;
 }
 
-#BtnSuivre {
-  top: 23px;
+#SecondDropdown {
+  top: 23px !important;
 }
 
 #appVersion {
@@ -81,4 +84,17 @@ li {
   font-size: 0.75rem; 
   font-weight: bold;
   color: #575453;
+}
+
+.ButtonActive, .HeaderFocusableButton:focus, .HeaderFocusableButton:hover{
+  background-color: #f0c42e !important;
+  color: #007bfe !important;
+}
+
+.HeaderFocusableButton:not(:focus) + ul{
+  visibility: hidden;
+}
+
+#FollowButton{
+  margin-bottom: 0;
 }

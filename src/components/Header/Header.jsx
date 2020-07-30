@@ -35,17 +35,25 @@ class Header extends React.Component {
               {D.surveys}
               <i className="fa fa-caret-right fa-xs subMenucaret" />
             </a>
-            <ul className="dropdown-menu sub-menu" id="BtnSuivre">
-              <li><a onClick={() => goToMonitoringTable(BY_SURVEY)} className="selectedSubeMenu" href="#">{D.progression}</a></li>
+            <ul className="dropdown-menu sub-menu">
+              <li>
+                <a onClick={() => goToMonitoringTable(BY_SURVEY)} className="selectedSubeMenu" href="#">
+                  {D.progression}
+                </a>
+              </li>
             </ul>
           </li>
           <li>
-            <a onClick={(e) => { this.toggleSecondDropDownMenu(e); }} id="selectedSubeMenu" className="selectedSubeMenu" href="#">
+            <a id="selectedSubeMenu" className="selectedSubeMenu" href="#">
               {D.interviewers}
               <i className="fa fa-caret-right fa-xs subMenucaret" />
             </a>
-            <ul className="dropdown-menu sub-menu" id="BtnSuivre">
-              <li><a onClick={() => goToMonitoringTable(BY_INTERVIEWER)} className="selectedSubeMenu" href="#">{D.progression}</a></li>
+            <ul className="dropdown-menu sub-menu" id="SecondDropdown">
+              <li>
+                <a onClick={() => goToMonitoringTable(BY_INTERVIEWER)} className="selectedSubeMenu" href="#">
+                  {D.progression}
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -60,7 +68,7 @@ class Header extends React.Component {
 
   render() {
     const {
-      returnFunc, user, showPreferences, goToReview,
+      returnFunc, user, showPreferences, goToReview, currentView,
     } = this.props;
     const { toggleFirstMenu } = this.state;
     return (
@@ -83,13 +91,24 @@ class Header extends React.Component {
               <div className="d-inline-flex classTest" id="headerButtonContainer">
                 <Button className="HeaderButton">{D.remind}</Button>
                 <li className="dropdown" id="BtnSuivreParent">
-                  <Button data-toggle="dropdown" className="HeaderButton dropdown-toggle" href="#" onClick={(e) => { this.toggleFirstDropDownMenu(e); }}>
+                  <Button
+                    id="FollowButton"
+                    className={` HeaderButton HeaderFocusableButton dropdown-toggle ${currentView === 'monitoringTable' ? ' ButtonActive' : ''}`}
+                    data-toggle="dropdown"
+                    href="#"
+                    onClick={(e) => { this.toggleFirstDropDownMenu(e); }}
+                  >
                     {D.follow}
                     <b className="caret" />
                   </Button>
                   {this.displayFirstSubMenu(toggleFirstMenu)}
                 </li>
-                <Button onClick={() => goToReview()} className="HeaderButton">{D.read}</Button>
+                <Button
+                  onClick={() => goToReview()}
+                  className={` HeaderButton HeaderFocusableButton ${currentView === 'review' ? ' ButtonActive' : ''}`}
+                >
+                  {D.read}
+                </Button>
               </div>
             </Col>
             <Col><UserZone user={user} date={new Date()} showPreferences={showPreferences} /></Col>

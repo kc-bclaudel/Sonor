@@ -10,8 +10,10 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { keycloak: null, authenticated: false, data: null };
+    this.state = { keycloak: null, authenticated: false, data: null, currentView: null };
   }
+
+
 
   componentDidMount() {
     if (AUTHENTICATION_MODE === NO_AUTH) {
@@ -30,14 +32,21 @@ class App extends React.Component {
     }
   }
 
+  setCurrentView(currentView) {
+    this.setState({ currentView });
+  }
+
   render() {
-    const { keycloak, authenticated, data } = this.state;
+    const {
+      keycloak, authenticated, data, currentView,
+    } = this.state;
     if (keycloak || authenticated) {
       if (authenticated) {
         return (
           <div className="App">
             <Header
               user={data}
+              currentView={currentView}
               returnFunc={() => { this.content.handleReturnButtonClick(); }}
               goToMonitoringTable={(mode) => {
                 this.content.handleMonitoringTableClick(null, null, mode);
@@ -50,6 +59,8 @@ class App extends React.Component {
               }}
             />
             <View
+              currentView={currentView}
+              setCurrentView={(view) => this.setCurrentView(view)}
               token={keycloak ? keycloak.token : null}
               ref={(instance) => { this.content = instance; }}
             />

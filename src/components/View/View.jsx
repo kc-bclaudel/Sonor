@@ -1,10 +1,10 @@
 import React from 'react';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import MainScreen from '../MainScreen/MainScreen';
 import CampaignPortal from '../CampaignPortal/CampaignPortal';
 import ListSU from '../ListSU/ListSU';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
 import Review from '../Review/Review';
-import AlertContainer from '../AlertContainer/AlertContainer';
 import DataFormatter from '../../utils/DataFormatter';
 import Utils from '../../utils/Utils';
 import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from '../../utils/constants.json';
@@ -15,19 +15,25 @@ class View extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentView: 'mainScreen',
       survey: null,
       data: [],
-      alerts: [],
       sort: { sortOn: null, asc: null },
       showPreferences: false,
       preferences: {},
+      loading: false,
     };
     this.dataRetreiver = new DataFormatter(props.token);
   }
 
   componentDidMount() {
     this.loadPreferences();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { currentView } = this.props;
+    if (prevProps.currentView !== currentView) {
+      this.setState({ loading: false });
+    }
   }
 
   loadPreferences() {
@@ -38,29 +44,34 @@ class View extends React.Component {
   }
 
   handleCampaignClick(survey, mainScreenData) {
+    const { setCurrentView, currentView } = this.props;
     this.dataRetreiver.getDataForCampaignPortal(survey.id, (res) => {
       const newData = {};
       Object.assign(newData, res);
       Object.assign(newData, mainScreenData);
       this.setState({
-        currentView: 'campaignPortal',
         data: newData,
         survey,
+        loading: (currentView !== 'campaignPortal'),
       });
+      setCurrentView('campaignPortal');
     });
   }
 
   handleListSUClick(survey) {
+    const { setCurrentView, currentView } = this.props;
     this.dataRetreiver.getDataForListSU(survey.id, (data) => {
       this.setState({
-        currentView: 'listSU',
         survey,
         data,
+        loading: (currentView !== 'listSU'),
       });
+      setCurrentView('listSU');
     });
   }
 
   async handleMonitoringTableClick(survey, date, mode) {
+    const { setCurrentView, currentView } = this.props;
     const dateToUse = date || new Date().toISOString().slice(0, 10);
     const modeToUse = mode || BY_INTERVIEWER_ONE_SURVEY;
     const paginationToUse = { size: 5, page: 1 };
@@ -77,11 +88,12 @@ class View extends React.Component {
         newData.date = dateToUse;
         newData.pagination = paginationToUse;
         this.setState({
-          currentView: 'monitoringTable',
           survey,
           monitoringTableMode: modeToUse,
           data: newData,
+          loading: (currentView !== 'monitoringTable'),
         });
+        setCurrentView('monitoringTable');
         let firstColumnSortAttribute;
         if (modeToUse === BY_SURVEY) {
           firstColumnSortAttribute = 'survey';
@@ -95,16 +107,18 @@ class View extends React.Component {
   }
 
   async handleReviewClick(survey) {
+    const { setCurrentView, currentView } = this.props;
     let surveyId = null;
     if (survey) surveyId = survey.id;
     this.dataRetreiver.getDataForReview(surveyId, (data) => {
       const datas = {};
       datas.listSU = data;
       this.setState({
-        currentView: 'review',
         survey,
         data: datas,
+        loading: (currentView !== 'review'),
       });
+      setCurrentView('review');
     });
   }
 
@@ -125,6 +139,7 @@ class View extends React.Component {
   }
 
   handleReturnButtonClick() {
+    const { setCurrentView, currentView } = this.props;
     const { preferences } = this.state;
     this.dataRetreiver.getDataForMainScreen((data) => {
       const dataToUse = [];
@@ -134,10 +149,11 @@ class View extends React.Component {
         }
       });
       this.setState({
-        currentView: 'mainScreen',
         survey: null,
         data: dataToUse,
+        loading: (currentView !== 'mainScreen'),
       });
+      setCurrentView('mainScreen');
       this.handleSort('label', true);
     });
   }
@@ -145,9 +161,9 @@ class View extends React.Component {
   updatePreferences(newPreferences) {
     this.dataRetreiver.updatePreferences(newPreferences, (res) => {
       if (res.status === 200 || res.status === 201 || res.status === 204) {
-        this.addAlert({ variant: 'success', text: D.preferencesUpdated });
+        NotificationManager.success(D.preferencesUpdated, D.updateSuccess, 3500);
       } else {
-        this.addAlert({ variant: 'danger', text: D.preferencesNotUpdated });
+        NotificationManager.error(D.preferencesNotUpdated, D.error, 3500);
       }
       this.handleReturnButtonClick();
     });
@@ -157,24 +173,17 @@ class View extends React.Component {
     this.dataRetreiver.finalizeSurveyUnits(lstSUFinalized)
       .then((res) => {
         if (res.status === 200 || res.status === 201 || res.status === 204) {
-          this.addAlert({ variant: 'success', text: `${D.reviewAlertSuccess}: ${lstSUFinalized.join(', ')}.` });
+          NotificationManager.success(`${D.reviewAlertSuccess}: ${lstSUFinalized.join(', ')}.`, D.updateSuccess, 3500);
         } else {
-          this.addAlert({ variant: 'danger', text: D.reviewAlertError });
+          NotificationManager.error(D.reviewAlertError, D.error, 3500);
         }
         this.handleReviewClick(survey);
       });
   }
 
-  addAlert(alert) {
-    const { alerts } = this.state;
-    const alertToAdd = {};
-    Object.assign(alertToAdd, alert);
-    alertToAdd.id = Math.random().toString(36).replace(/[^a-z]+/g, '');
-    this.setState({ alerts: alerts.concat([alertToAdd]) });
-  }
-
   handleSort(sortOn, asc) {
-    const { data, sort, currentView } = this.state;
+    const { data, sort } = this.state;
+    const { currentView } = this.props;
     let newOrder = asc;
     if (asc === undefined) {
       newOrder = sortOn !== sort.sortOn || !sort.asc;
@@ -214,8 +223,9 @@ class View extends React.Component {
 
   render() {
     const {
-      currentView, survey, data, sort, monitoringTableMode, showPreferences, preferences, alerts,
+      survey, data, sort, monitoringTableMode, showPreferences, preferences, loading,
     } = this.state;
+    const { currentView } = this.props;
     let selectedView;
     switch (currentView) {
       case 'campaignPortal':
@@ -288,6 +298,7 @@ class View extends React.Component {
           />
         );
     }
+    selectedView = loading || selectedView;
     return (
       <div>
         {selectedView}
@@ -297,7 +308,7 @@ class View extends React.Component {
           hidePreferences={() => this.hidePreferences()}
           updatePreferences={(prefs) => this.updatePreferences(prefs)}
         />
-        <AlertContainer alerts={alerts} />
+        <NotificationContainer />
       </div>
     );
   }
