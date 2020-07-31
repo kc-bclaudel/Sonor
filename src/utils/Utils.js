@@ -147,6 +147,17 @@ class Utils {
 
     return this.formatForMonitoringTable(result);
   }
+
+  static isVisible(survey, date) {
+    let dateToUse = date || new Date().getTime();
+    if (typeof dateToUse === 'string') {
+      dateToUse = new Date(dateToUse).getTime();
+    }
+    return (
+      survey.visibilityStartDate < dateToUse
+      && (!survey.treatmentEndDate || survey.treatmentEndDate > dateToUse)
+    );
+  }
 }
 
 export default Utils;

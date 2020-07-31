@@ -141,7 +141,7 @@ class View extends React.Component {
   handleReturnButtonClick() {
     const { setCurrentView, currentView } = this.props;
     const { preferences } = this.state;
-    this.dataRetreiver.getDataForMainScreen((data) => {
+    this.dataRetreiver.getDataForMainScreen(null, (data) => {
       const dataToUse = [];
       data.forEach((survey) => {
         if (preferences[survey.id] && preferences[survey.id].preference) {

@@ -15,8 +15,11 @@ function createSelectOptions(campaigns, currentId) {
 function switchCurrent(surveyObj, indexToSwitch) {
   const switched = {};
   Object.assign(switched, surveyObj);
-  switched.id = surveyObj.allSurveys[indexToSwitch].id;
-  switched.label = surveyObj.allSurveys[indexToSwitch].label;
+  const newSurvey = surveyObj.allSurveys[indexToSwitch];
+  switched.id = newSurvey.id;
+  switched.label = newSurvey.label;
+  switched.visibilityStartDate = newSurvey.visibilityStartDate;
+  switched.treatmentEndDate = newSurvey.treatmentEndDate;
   return switched;
 }
 

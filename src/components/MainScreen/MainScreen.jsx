@@ -10,13 +10,12 @@ import D from '../../i18n';
 function displaySurveyLines(props, pagination) {
   const lines = [];
   const { data } = props;
-  const now = new Date().getTime();
   let oddLine = true;
   for (let i = (pagination.page - 1) * pagination.size;
     i < pagination.page * pagination.size && i < data.length;
     i += 1
   ) {
-    if (data[i].visibilityStartDate < now && data[i].treatmentEndDate > now) {
+    if (Utils.isVisible(data[i])) {
       lines.push(<SurveyListLine key={i} oddLine={oddLine} lineData={data[i]} props={props} />);
       oddLine = !oddLine;
     }
@@ -125,6 +124,8 @@ function SurveyListLine({ lineData, oddLine, props }) {
   const survey = {
     id: data.id,
     label: data.label,
+    visibilityStartDate: data.visibilityStartDate,
+    treatmentEndDate: data.treatmentEndDate,
     allSurveys: props.data,
   };
   const goToPortal = () => { props.goToCampaignPortal(survey, data); };

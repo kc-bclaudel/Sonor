@@ -105,6 +105,7 @@ class MonitoringTable extends React.Component {
               type="date"
               value={data.date}
               max={new Date().toJSON().split('T')[0]}
+              min={survey ? new Date(survey.visibilityStartDate).toJSON().split('T')[0] : null}
               onChange={(e) => goToMonitoringTable(
                 survey,
                 e.target.value,

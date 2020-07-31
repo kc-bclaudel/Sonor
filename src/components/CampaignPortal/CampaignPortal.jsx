@@ -61,12 +61,12 @@ function CampaignPortal({
 
 function TimeLine({ props }) {
   const {
-    collectionStartDate, collectionEndDate, treatmentEndDate, phase,
+    visibilityStartDate, collectionStartDate, collectionEndDate, treatmentEndDate, phase,
   } = props;
   return (
     <div id="TimeLine">
       <div id="PhaseMilestones">
-        <div>N/A</div>
+        <div>{Utils.convertToDateString(visibilityStartDate)}</div>
         <div className="DateCenter">{Utils.convertToDateString(collectionStartDate)}</div>
         <div className="DateCenter">{Utils.convertToDateString(collectionEndDate)}</div>
         <div className="DateRight">{Utils.convertToDateString(treatmentEndDate)}</div>
