@@ -73,6 +73,15 @@ class Service {
       .catch(console.log);
   }
 
+  getAbandonedByCampaign(campaignId, cb) {
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/abandoned`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch(console.log);
+  }
+
   getTotalDemByCampaign(campaignId, cb) {
     fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count`, this.options)
       .then((res) => res.json())

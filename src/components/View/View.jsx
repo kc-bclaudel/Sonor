@@ -205,6 +205,10 @@ class View extends React.Component {
         Object.assign(sortedData, data);
         sortedData = Utils.sortData(data, sortOn, newOrder);
         break;
+      case 'listSU':
+        Object.assign(sortedData, data);
+        sortedData.surveyUnits = Utils.sortData(data.surveyUnits, sortOn, newOrder);
+        break;
       default:
         Object.assign(sortedData, data);
         break;
@@ -247,6 +251,8 @@ class View extends React.Component {
           <ListSU
             survey={survey}
             data={data}
+            sort={sort}
+            handleSort={(sortOn) => this.handleSort(sortOn)}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
           />
         );

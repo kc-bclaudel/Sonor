@@ -31,6 +31,14 @@ const campaignPortal = {
 		"fr": "Fin de traitement",
 		"en": "End of processing"
 	},
+	"functionalBox":{
+		"fr": "Boite fonctionnelle",
+		"en": "Functional box"
+	},
+	"sendMail":{
+		"fr": "Envoyer un message",
+		"en": "Send mail"
+	},
 	"contacts":{
 		"fr": "Contacts",
 		"en": "Contacts"
@@ -62,6 +70,10 @@ const campaignPortal = {
 	"unassigned":{
 		"fr": "Non attribuée(s)",
 		"en": "Unassigned"
+	},
+	"abandoned":{
+		"fr": "Abandonnée(s)",
+		"en": "Abandoned"
 	},
 	"totalDEM":{
 		"fr": "Total DEM",

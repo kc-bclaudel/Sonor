@@ -50,7 +50,7 @@ class SearchField extends React.Component {
   render() {
     const { inputValue } = this.state;
     return (
-      <span className="SearchField">
+      <span>
         <input
           className="SearchFieldInput"
           type="text"

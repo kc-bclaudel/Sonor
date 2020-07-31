@@ -1,12 +1,15 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Col, Row } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
+import SortIcon from '../SortIcon/SortIcon';
+import SearchField from '../SearchField/SearchField';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import D from '../../i18n';
 
 function ListSU({
-  survey, data, returnToMainScreen, site,
+  survey, data, returnToMainScreen, site, sort, handleSort,
 }) {
   return (
     <div id="ListSU">
@@ -14,10 +17,10 @@ function ListSU({
       <div className="SurveyTitle">{survey.label}</div>
       <Card className="ViewCard">
         <Card.Title>
-          {D.surveyUnitsAllocatedToTheDEM}
-          {108}
+          {D.surveyUnitsAllocatedToTheOU}
+          {data.surveyUnits.length}
         </Card.Title>
-        <SUTable data={data} survey={survey} site={site} />
+        <SUTable sort={sort} handleSort={handleSort} data={data} survey={survey} site={site} />
       </Card>
     </div>
   );
@@ -37,11 +40,37 @@ function displaySurveyLines(data, pagination) {
   return lines;
 }
 
+function makeTableForExport(data) {
+  const table = [];
+  const header = [
+    D.identifier,
+    D.ssech,
+    D.department,
+    D.town,
+    D.interviewer,
+    D.idep,
+  ];
+  table.push(header);
+  data.forEach((line) => {
+    table.push([
+      line.id,
+      line.ssech,
+      line.departement,
+      line.city,
+      line.interviewer,
+      line.idep,
+    ]);
+  });
+
+  return table;
+}
+
 class SUTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       pagination: { size: 5, page: 1 },
+      displayedLines: props.data.surveyUnits,
     };
   }
 
@@ -64,27 +93,73 @@ class SUTable extends React.Component {
     link.click();
   }
 
-  render() {
-    const { data } = this.props;
+  updateLines(matchingLines) {
     const { pagination } = this.state;
+    this.setState({
+      pagination: { size: pagination.size, page: 1 },
+      displayedLines: matchingLines,
+    });
+  }
+
+  render() {
+    const { data, sort, handleSort } = this.props;
+    const { surveyUnits } = data;
+    const fieldsToSearch = ['city', 'interviewer', 'id'];
+    const { pagination, displayedLines } = this.state;
+    function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div>
-        <PaginationNav.SizeSelector
-          updateFunc={(newPagination) => this.handlePageChange(newPagination)}
-        />
+        <Row>
+          <Col xs="12" className="text-right">
+            <SearchField
+              data={surveyUnits}
+              searchBy={fieldsToSearch}
+              updateFunc={(matchinglines) => this.updateLines(matchinglines)}
+            />
+          </Col>
+          <Col xs="6">
+            <PaginationNav.SizeSelector
+              updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+            />
+          </Col>
+          <Col xs="6" className="text-right">
+            <span>
+              {D.result}
+              {displayedLines.length}
+              /
+              {surveyUnits.length}
+              &nbsp;
+              {D.units}
+            </span>
+          </Col>
+        </Row>
         <Table id="SUTable" className="CustomTable" bordered striped hover responsive size="sm">
           <thead>
             <tr>
-              <th>{D.identifier}</th>
-              <th>{D.ssech}</th>
-              <th>{D.department}</th>
-              <th>{D.town}</th>
-              <th>{D.interviewer}</th>
-              <th>{D.idep}</th>
+              <th onClick={handleSortFunct('id')}>
+                {D.identifier}
+                <SortIcon val="id" sort={sort} />
+              </th>
+              <th onClick={handleSortFunct('ssech')}>
+                {D.ssech}
+                <SortIcon val="ssech" sort={sort} />
+              </th>
+              <th onClick={handleSortFunct('departement')}>
+                {D.department}
+                <SortIcon val="departement" sort={sort} />
+              </th>
+              <th onClick={handleSortFunct('city')}>
+                {D.town}
+                <SortIcon val="city" sort={sort} />
+              </th>
+              <th onClick={handleSortFunct('interviewer')}>
+                {D.interviewer}
+                <SortIcon val="interviewer" sort={sort} />
+              </th>
             </tr>
           </thead>
           <tbody>
-            {displaySurveyLines( data.surveyUnits, pagination )}
+            {displaySurveyLines(displayedLines, pagination)}
           </tbody>
         </Table>
         <div className="tableOptionsWrapper">
@@ -92,7 +167,7 @@ class SUTable extends React.Component {
           <PaginationNav.PageSelector
             pagination={pagination}
             updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-            numberOfItems={data.surveyUnits.length}
+            numberOfItems={displayedLines.length}
           />
         </div>
       </div>
@@ -102,7 +177,7 @@ class SUTable extends React.Component {
 
 function SurveyUnitLine({ lineData, oddLine }) {
   const {
-    id, ssech, departement, city, interviewer, idep,
+    id, ssech, departement, city, interviewer,
   } = lineData;
   const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
   return (
@@ -112,35 +187,8 @@ function SurveyUnitLine({ lineData, oddLine }) {
       <td>{departement}</td>
       <td>{city}</td>
       <td>{interviewer}</td>
-      <td>{idep}</td>
     </tr>
   );
-}
-
-function makeTableForExport(data) {
-  const table = [];
-  const header = [
-    D.identifier,
-    D.ssech,
-    D.department,
-    D.town,
-    D.interviewer,
-    D.idep,
-  ];
-
-  table.push(header);
-  data.forEach((line) => {
-    table.push([
-      line.id,
-      line.ssech,
-      line.departement,
-      line.city,
-      line.interviewer,
-      line.idep,
-    ]);
-  });
-
-  return table;
 }
 
 export default ListSU;

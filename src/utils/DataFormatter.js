@@ -76,7 +76,7 @@ class DataFormatter {
           suLine.ssech = su.ssech;
           suLine.departement = su.location;
           suLine.city = su.city;
-          suLine.interviewer = `${su.interviewer.firstName} ${su.interviewer.lastName}`;
+          suLine.interviewer = `${su.interviewer.lastName} ${su.interviewer.firstName}`;
           suLine.idep = su.interviewer.id;
           processedData.push(suLine);
         });
@@ -305,6 +305,11 @@ class DataFormatter {
       });
     });
     const p3 = new Promise((resolve) => {
+      this.service.getAbandonedByCampaign(campaignId, (data) => {
+        resolve(data);
+      });
+    });
+    const p4 = new Promise((resolve) => {
       this.service.getTotalDemByCampaign(campaignId, (data) => {
         this.service.getUser((userInfo) => {
           const userOUs = userInfo.localOrganizationUnits.map((x) => x.id);
@@ -319,14 +324,18 @@ class DataFormatter {
         });
       });
     });
-    const p4 = new Promise((resolve) => {
+    const p5 = new Promise((resolve) => {
       this.service.getUser((res) => {
         resolve(res.organizationUnit.label);
       });
     });
-    Promise.all([p1, p2, p3, p4]).then((data) => {
+    Promise.all([p1, p2, p3, p4, p5]).then((data) => {
       cb({
-        interviewers: data[0], notAttributed: data[1], total: data[2], site: data[3],
+        interviewers: data[0],
+        notAttributed: data[1],
+        abandoned: data[2],
+        total: data[3],
+        site: data[4],
       });
     });
   }

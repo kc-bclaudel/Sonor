@@ -324,11 +324,6 @@ button{
   min-height:30px;
 }
 
-.SearchField{
-  position:absolute;
-  right:20px;
-}
-
 #searchParametersContainer{
   height: 30px;
   margin-bottom:5px;

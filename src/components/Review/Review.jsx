@@ -119,14 +119,6 @@ class ReviewTable extends React.Component {
     });
   }
 
-  updateInterviewers(matchingLines) {
-    const { pagination } = this.state;
-    this.setState({
-      pagination: { size: pagination.size, page: 1 },
-      displayedLines: matchingLines,
-    });
-  }
-
   handleClose() {
     this.setState({ show: false });
   }
@@ -185,16 +177,20 @@ class ReviewTable extends React.Component {
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div>
-        <div id="searchParametersContainer">
-          <PaginationNav.SizeSelector
-            updateFunc={(newPagination) => this.handlePageChange(newPagination)}
-          />
-          <SearchField
-            data={listSU}
-            searchBy={fieldsToSearch}
-            updateFunc={(matchinglines) => this.updateLines(matchinglines)}
-          />
-        </div>
+        <Row>
+          <Col xs="6" >
+            <PaginationNav.SizeSelector
+              updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+            />
+          </Col>
+          <Col xs="6" className="text-right">
+            <SearchField
+              data={listSU}
+              searchBy={fieldsToSearch}
+              updateFunc={(matchinglines) => this.updateLines(matchinglines)}
+            />
+          </Col>
+        </Row>
         <Table id="SUTable" className="CustomTable" bordered striped hover responsive size="sm">
           <thead>
             <tr>

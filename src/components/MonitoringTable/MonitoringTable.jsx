@@ -113,17 +113,20 @@ class MonitoringTable extends React.Component {
               )}
             />
           </Card.Title>
-          <div id="searchParametersContainer">
-
-            <PaginationNav.SizeSelector
-              updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-            />
-            <SearchField
-              data={data.interviewersDetail}
-              searchBy={fieldsToSearch}
-              updateFunc={(matchingInterviewers) => this.updateInterviewers(matchingInterviewers)}
-            />
-          </div>
+          <Row>
+            <Col xs="6" >
+              <PaginationNav.SizeSelector
+                updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+              />
+            </Col>
+            <Col xs="6" className="text-right">
+              <SearchField
+                data={data.interviewersDetail}
+                searchBy={fieldsToSearch}
+                updateFunc={(matchingInterviewers) => this.updateInterviewers(matchingInterviewers)}
+              />
+            </Col>
+          </Row>
           <FollowUpTable
             data={data}
             pagination={pagination}

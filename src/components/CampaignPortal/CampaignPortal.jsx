@@ -2,6 +2,8 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -87,17 +89,26 @@ function TimeLine({ props }) {
 }
 
 function Contacts() {
+  const renderTooltip = (
+    <Popover id="popover-basic">
+      <Popover.Content>
+        {D.sendMail}
+      </Popover.Content>
+    </Popover>
+  );
   return (
     <Card className="ViewCard">
       <div>
         <Card.Title className="Title">{D.contacts}</Card.Title>
 
-        <Table className="CustomTable" bordered striped hover responsive size="sm">
+        <Table className="CustomTable" bordered striped responsive size="sm">
           <tbody>
-            <tr>
-              <th>{D.survey}</th>
-              <td className="LightGreyLine">gestion-enquete-mobilités</td>
-            </tr>
+            <OverlayTrigger placement="top" overlay={renderTooltip}>
+              <tr className="Clickable" onClick={() => { window.location = 'mailto:gestion-enquete-mobilite@insee.fr'; }}>
+                <th>{D.functionalBox}</th>
+                <td className=" LightGreyLine">gestion-enquete-mobilite@insee.fr</td>
+              </tr>
+            </OverlayTrigger>
             <tr>
               <th rowSpan="2">{D.cpos}</th>
               <td className="LightGreyLine">Chloé Berlin</td>
@@ -168,22 +179,29 @@ class SurveyUnits extends React.Component {
 
   render() {
     const { data, sort, handleSortfunc } = this.props;
-    const { notAttributed, total, interviewers } = data;
+    const {
+      abandoned, notAttributed, total, interviewers,
+    } = data;
     const { pagination, displayedInterviewers } = this.state;
+    const fieldsToSearch = ['interviewerFirstName', 'interviewerLastName'];
     function handleSort(property) { return () => { handleSortfunc(property); }; }
     return (
       <Card className="ViewCard">
-        <div className="Title">{D.surveyUnits}</div>
-        <div id="searchParametersContainerCP">
-          <PaginationNav.SizeSelector
-            updateFunc={(newPagination) => this.handlePageChange(newPagination)}
-          />
-          <SearchField
-            data={interviewers}
-            searchBy={['interviewerFirstName', 'interviewerLastName']}
-            updateFunc={(a) => this.updateInterviewers(a)}
-          />
-        </div>
+        <div className="Title">{D.interviewers}</div>
+        <Row>
+          <Col xs="6" >
+            <PaginationNav.SizeSelector
+              updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+            />
+          </Col>
+          <Col xs="6" className="text-right">
+            <SearchField
+              data={interviewers}
+              searchBy={fieldsToSearch}
+              updateFunc={(a) => this.updateInterviewers(a)}
+            />
+          </Col>
+        </Row>
         <Table className="CustomTable" bordered striped hover responsive size="sm">
           <tbody>
             <tr>
@@ -205,6 +223,11 @@ class SurveyUnits extends React.Component {
               <th>{D.unassigned}</th>
               <th />
               <th>{notAttributed.count}</th>
+            </tr>
+            <tr>
+              <th>{D.abandoned}</th>
+              <th />
+              <th>{abandoned.count}</th>
             </tr>
             <tr>
               <th>{D.totalDEM}</th>
@@ -242,7 +265,9 @@ function InterviewerLine({ interviewer }) {
 }
 
 function makeTableForExport(data) {
-  const { notAttributed, total, interviewers } = data;
+  const {
+    abandoned, notAttributed, total, interviewers,
+  } = data;
   const table = [];
 
   const header = [
@@ -258,7 +283,12 @@ function makeTableForExport(data) {
       notAttributed.count,
     ],
     [
-      D.unassigned,
+      D.abandoned,
+      ' ',
+      abandoned.count,
+    ],
+    [
+      D.totalDEM,
       ' ',
       total.total,
     ],
