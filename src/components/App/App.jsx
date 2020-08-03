@@ -3,25 +3,29 @@ import Keycloak from 'keycloak-js';
 import View from '../View/View';
 import Header from '../Header/Header';
 import DataFormatter from '../../utils/DataFormatter';
-import { AUTHENTICATION_MODE } from '../../config.json';
 import { KEYCLOAK, NO_AUTH } from '../../utils/constants.json';
 import './App.css';
+import initConfiguration from '../../initConfiguration';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { keycloak: null, authenticated: false, data: null, currentView: null };
+    this.state = {
+      keycloak: null,
+      authenticated: false,
+      data: null,
+      currentView: null,
+    };
   }
 
-
-
   componentDidMount() {
-    if (AUTHENTICATION_MODE === NO_AUTH) {
+    initConfiguration();
+    if (window.localStorage.getItem('AUTHENTICATION_MODE') === NO_AUTH) {
       const dataRetreiver = new DataFormatter();
       dataRetreiver.getUserInfo((data) => {
         this.setState({ authenticated: true, data });
       });
-    } else if (AUTHENTICATION_MODE === KEYCLOAK) {
+    } else if (window.localStorage.getItem('AUTHENTICATION_MODE') === KEYCLOAK) {
       const keycloak = Keycloak('/keycloak.json');
       keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
         const dataRetreiver = new DataFormatter(keycloak.token);

@@ -265,6 +265,7 @@ class View extends React.Component {
             survey={survey}
             data={data}
             sort={sort}
+            goToListSU={(surveyId) => this.handleListSUClick(surveyId)}
             handleSort={(sortOn) => this.handleSort(sortOn)}
             returnToMainScreen={() => { this.handleReturnButtonClick(); }}
           />

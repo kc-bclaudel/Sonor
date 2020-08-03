@@ -6,15 +6,34 @@ import Table from 'react-bootstrap/Table';
 import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
 import PaginationNav from '../PaginationNav/PaginationNav';
+import SurveySelector from '../SurveySelector/SurveySelector';
 import D from '../../i18n';
 
 function ListSU({
-  survey, data, returnToMainScreen, site, sort, handleSort,
+  survey, data, returnToMainScreen, site, sort, handleSort, goToListSU,
 }) {
+  const surveyTitle = !survey
+      || (<div className="SurveyTitle">{survey.label}</div>);
+  const surveySelector = !survey
+      || (
+        <SurveySelector
+          survey={survey}
+          updateFunc={(newSurvey) => goToListSU(newSurvey)}
+        />
+      );
   return (
     <div id="ListSU">
-      <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()}>{D.back}</Button>
-      <div className="SurveyTitle">{survey.label}</div>
+      <Row>
+        <Col>
+          <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">{D.back}</Button>
+        </Col>
+        <Col xs={6}>
+          {surveyTitle}
+        </Col>
+        <Col>
+          {surveySelector}
+        </Col>
+      </Row>
       <Card className="ViewCard">
         <Card.Title>
           {D.surveyUnitsAllocatedToTheOU}

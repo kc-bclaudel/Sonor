@@ -1,6 +1,4 @@
-import { PEARL_JAM_HOST, PEARL_JAM_PORT } from '../config.json';
-
-const baseUrl = `${PEARL_JAM_HOST}:${PEARL_JAM_PORT}`;
+const baseUrl = `${window.localStorage.getItem('PEARL_JAM_HOST')}:${window.localStorage.getItem('PEARL_JAM_PORT')}`;
 
 class Service {
   constructor(token) {
