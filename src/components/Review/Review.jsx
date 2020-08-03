@@ -10,7 +10,7 @@ import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
 import SurveySelector from '../SurveySelector/SurveySelector';
 import PaginationNav from '../PaginationNav/PaginationNav';
-import D from '../../i18n'; 
+import D from '../../i18n';
 
 function Review({
   survey, data, sort, handleSort, goToReview, validateSU, returnToMainScreen,

@@ -131,6 +131,7 @@ function SurveyListLine({ lineData, oddLine, props }) {
   const goToPortal = () => { props.goToCampaignPortal(survey, data); };
   const goToListSU = () => { props.goToListSU(survey); };
   const goToReview = () => { props.goToReview(survey); };
+  const goToRemind = () => { props.goToRemind(survey); };
   const goToMonitoringTable = () => { props.goToMonitoringTable(survey); };
   const goToMonitoringTableSites = () => { props.goToMonitoringTable(survey, BY_SITE); };
   return (
@@ -146,7 +147,7 @@ function SurveyListLine({ lineData, oddLine, props }) {
       <td onClick={goToListSU} className="Clickable">{data.affected}</td>
       <td onClick={goToMonitoringTable} className="Clickable">{data.inProgress}</td>
       <td>{data.toAffect}</td>
-      <td>{data.toFollowUp}</td>
+      <td onClick={goToRemind} className="Clickable">{data.toFollowUp}</td>
       <td onClick={goToReview} className="Clickable">{data.toControl}</td>
       <td>{data.terminated}</td>
     </tr>

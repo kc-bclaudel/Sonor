@@ -68,7 +68,7 @@ class Header extends React.Component {
 
   render() {
     const {
-      returnFunc, user, showPreferences, goToReview, currentView,
+      returnFunc, user, showPreferences, goToReview, goToRemind, currentView,
     } = this.props;
     const { toggleFirstMenu } = this.state;
     return (
@@ -89,11 +89,16 @@ class Header extends React.Component {
             </Col>
             <Col>
               <div className="d-inline-flex classTest" id="headerButtonContainer">
-                <Button className="HeaderButton">{D.remind}</Button>
+                <Button
+                  onClick={() => goToRemind()}
+                  className={`HeaderButton HeaderFocusableButton ${currentView === 'remind' ? ' ButtonActive' : ''}`}
+                >
+                  {D.remind}
+                </Button>
                 <li className="dropdown" id="BtnSuivreParent">
                   <Button
                     id="FollowButton"
-                    className={` HeaderButton HeaderFocusableButton dropdown-toggle ${currentView === 'monitoringTable' ? ' ButtonActive' : ''}`}
+                    className={`HeaderButton HeaderFocusableButton dropdown-toggle ${currentView === 'monitoringTable' ? ' ButtonActive' : ''}`}
                     data-toggle="dropdown"
                     href="#"
                     onClick={(e) => { this.toggleFirstDropDownMenu(e); }}
@@ -105,7 +110,7 @@ class Header extends React.Component {
                 </li>
                 <Button
                   onClick={() => goToReview()}
-                  className={` HeaderButton HeaderFocusableButton ${currentView === 'review' ? ' ButtonActive' : ''}`}
+                  className={`HeaderButton HeaderFocusableButton ${currentView === 'review' ? ' ButtonActive' : ''}`}
                 >
                   {D.read}
                 </Button>
@@ -130,8 +135,21 @@ function UserZone({ user, date, showPreferences }) {
       </Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{date.toLocaleDateString()}</Card.Subtitle>
       <div className="UserZoneButtons">
-        <Button className="HeaderButton" onClick={() => showPreferences()}>{D.mySurveys}</Button>
-        <a className="HeaderDocLink" href="" target="_blank"><i className="fa fa-question-circle fa-2x" /></a>
+        <Row>
+          <Col xs="8">
+            <Button className="HeaderButton" onClick={() => showPreferences()}>{D.mySurveys}</Button>
+          </Col>
+          <Col xs="4">
+            <div
+              className="HeaderDocLink Clickable"
+              onClick={() => window.open('', '_blank')}
+              role="link"
+              tabIndex="0"
+            >
+              <i className="fa fa-question-circle fa-2x" />
+            </div>
+          </Col>
+        </Row>
       </div>
     </Card>
   );

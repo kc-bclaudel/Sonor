@@ -42,6 +42,10 @@ const app = {
     fr: 'Annuler',
     en: 'Close',
   },
+  developmentInProgress: {
+    fr: 'Page en cours de développement',
+    en: 'Page in development',
+  },
 };
 
 export default app;

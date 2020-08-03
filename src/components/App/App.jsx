@@ -54,6 +54,9 @@ class App extends React.Component {
               goToReview={() => {
                 this.content.handleReviewClick(null);
               }}
+              goToRemind={() => {
+                this.content.handleRemindClick(null);
+              }}
               showPreferences={() => {
                 this.content.showPreferences();
               }}

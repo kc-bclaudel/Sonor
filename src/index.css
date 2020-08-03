@@ -133,7 +133,14 @@ body {
 .HeaderDocLink{
   display: inline-block;
   vertical-align: middle;
+  color:#007bff;
+  margin-top: 6px;
 }
+
+.HeaderDocLink:hover{
+  color:#0069d9;
+}
+
 
 .YellowHaderButton{
   color: rgb(19,66,120) !important;

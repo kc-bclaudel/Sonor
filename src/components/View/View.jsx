@@ -5,6 +5,7 @@ import CampaignPortal from '../CampaignPortal/CampaignPortal';
 import ListSU from '../ListSU/ListSU';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
 import Review from '../Review/Review';
+import Remind from '../Remind/Remind';
 import DataFormatter from '../../utils/DataFormatter';
 import Utils from '../../utils/Utils';
 import { BY_INTERVIEWER_ONE_SURVEY, BY_SURVEY, BY_SITE } from '../../utils/constants.json';
@@ -122,6 +123,15 @@ class View extends React.Component {
     });
   }
 
+  async handleRemindClick(survey) {
+    const { setCurrentView, currentView } = this.props;
+    this.setState({
+      survey,
+      loading: (currentView !== 'remind'),
+    });
+    setCurrentView('remind');
+  }
+
   updateInterviewersDetail(surveyId, date, pagination, interviewersToFetched, useDebounce) {
     const { data } = this.state;
     (useDebounce
@@ -205,6 +215,9 @@ class View extends React.Component {
         Object.assign(sortedData, data);
         sortedData = Utils.sortData(data, sortOn, newOrder);
         break;
+      case 'remind':
+        Object.assign(sortedData, data);
+        break;
       case 'listSU':
         Object.assign(sortedData, data);
         sortedData.surveyUnits = Utils.sortData(data.surveyUnits, sortOn, newOrder);
@@ -272,6 +285,15 @@ class View extends React.Component {
           />
         );
         break;
+      case 'remind':
+        selectedView = (
+          <Remind
+            survey={survey}
+            goToRemind={(surveyId) => this.handleRemindClick(surveyId)}
+            returnToMainScreen={() => { this.handleReturnButtonClick(); }}
+          />
+        );
+        break;
       case 'monitoringTable':
         selectedView = (
           <MonitoringTable
@@ -296,6 +318,7 @@ class View extends React.Component {
               this.handleCampaignClick(newSurvey, mainScreenData);
             }}
             goToReview={(newSurvey) => { this.handleReviewClick(newSurvey, null, false); }}
+            goToRemind={(newSurvey) => { this.handleRemindClick(newSurvey, null, false); }}
             goToListSU={(surveyId) => { this.handleListSUClick(surveyId); }}
             goToMonitoringTable={(surveyId, mode) => {
               this.handleMonitoringTableClick(surveyId, null, mode);
