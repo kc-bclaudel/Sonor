@@ -19,8 +19,8 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    initConfiguration();
+  async componentDidMount() {
+    await initConfiguration();
     if (window.localStorage.getItem('AUTHENTICATION_MODE') === NO_AUTH) {
       const dataRetreiver = new DataFormatter();
       dataRetreiver.getUserInfo((data) => {
