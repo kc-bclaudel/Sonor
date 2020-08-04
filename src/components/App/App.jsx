@@ -6,6 +6,7 @@ import DataFormatter from '../../utils/DataFormatter';
 import { KEYCLOAK, NO_AUTH } from '../../utils/constants.json';
 import './App.css';
 import initConfiguration from '../../initConfiguration';
+import D from '../../i18n';
 
 class App extends React.Component {
   constructor(props) {
@@ -74,10 +75,10 @@ class App extends React.Component {
           </div>
         );
       }
-      return (<div>Unable to authenticate!</div>);
+      return (<div>{D.unableToAuthenticate}</div>);
     }
     return (
-      <div>Initializing...</div>
+      <div>{D.initializing}</div>
     );
   }
 }

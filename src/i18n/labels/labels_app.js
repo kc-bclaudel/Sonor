@@ -46,6 +46,14 @@ const app = {
     fr: 'Page en cours de développement',
     en: 'Page in development',
   },
+  unableToAuthenticate: {
+    fr: 'Authentification impossible!',
+    en: 'Unable to authenticate!',
+  },
+  initializing: {
+    fr: 'Initialisation ...',
+    en: 'Initializing...',
+  },
 };
 
 export default app;
