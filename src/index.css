@@ -63,15 +63,10 @@ body {
   margin: 0;
 
   background-color: #0f417a !important;
-  background-image: url("/logo-insee-fond.png");
+  background-image: url("/static/images/logo-insee-fond.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 600px auto;
-  /* background-image: url(/population.png);
-  background-color: #3467ae !important;
-  background-size: inherit;
-  background-position: left bottom; 
-  background-repeat: no-repeat; */
 }
 .CustomTable{
   font-size: 13px;

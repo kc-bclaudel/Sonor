@@ -1,6 +1,6 @@
 {
   "KEYCLOAK": "keycloak",
-  "NO_AUTH": "no-auth",
+  "ANONYMOUS": "anonymous",
   
   "BY_INTERVIEWER_ONE_SURVEY":0,
   "BY_INTERVIEWER":1,

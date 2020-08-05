@@ -3,7 +3,7 @@
 ## Installation
 ### Requirements
 
-- Node.js
+- Node.js (version > 10.15)
 - npm 
 
 ### Install dependencies
@@ -27,28 +27,15 @@ You will also see any lint errors in the console.
 
 ### Start mock servers
 
-To test the application at this point you need to use the server *mocked_apis_server* to serve the pearlJam mocked APIs.
+To test the application at this point you need to use the server *mocked_apis_server* to serve the pearlJam APIs.
+You will find it at root project : mocked_apis_server.zip
 
+Unzip it anywhere
 Go to the *mocked_apis_server* folder and run
 
 `npm install` 
 
 `npm start` 
-
-You will also need to start the keycloak server configured for this app, in the *keycloak-sonor/bin* folder, run
-
-If you are using Windows:
-
-`sh standalone.sh`
-
-For Unix based systems:
-
-`./standalone.sh`
-
-
-Once the keycloak server is up, you will be able to connect to the sonor apps with the following credentials:
-
-- Login: guest / Password: guest
 
 
 ### Run unit tests with jest

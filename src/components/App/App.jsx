@@ -3,7 +3,7 @@ import Keycloak from 'keycloak-js';
 import View from '../View/View';
 import Header from '../Header/Header';
 import DataFormatter from '../../utils/DataFormatter';
-import { KEYCLOAK, NO_AUTH } from '../../utils/constants.json';
+import { KEYCLOAK, ANONYMOUS } from '../../utils/constants.json';
 import './App.css';
 import initConfiguration from '../../initConfiguration';
 import D from '../../i18n';
@@ -21,7 +21,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     await initConfiguration();
-    if (window.localStorage.getItem('AUTHENTICATION_MODE') === NO_AUTH) {
+    if (window.localStorage.getItem('AUTHENTICATION_MODE') === ANONYMOUS) {
       const dataRetreiver = new DataFormatter();
       dataRetreiver.getUserInfo((data) => {
         this.setState({ authenticated: true, data });
