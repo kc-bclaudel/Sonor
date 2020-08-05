@@ -166,7 +166,7 @@ class SurveyUnits extends React.Component {
     const { data, survey } = this.props;
     const fileLabel = `${data.site}_${survey.label}_Repartition enqueteurs`;
 
-    const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`;
+    const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data);
     const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);

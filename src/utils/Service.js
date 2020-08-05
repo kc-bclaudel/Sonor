@@ -77,7 +77,10 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((err) => {
+        console.log(err);
+        cb({ count: null });// To be able to access campaign portal while API is unavailable (to remove after dev)
+      });
   }
 
   getTotalDemByCampaign(campaignId, cb) {

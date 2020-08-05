@@ -45,11 +45,11 @@ const mainscreen = {
 	},
 	"toRemind":{
 		"fr": "À relancer",
-		"en": "To remind"
+		"en": "To follow up"
 	},
 	"terminated":{
 		"fr": "Terminées",
-		"en": "Terminated"
+		"en": "Finalized"
 	}
 }
 

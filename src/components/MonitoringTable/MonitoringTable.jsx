@@ -43,7 +43,7 @@ class MonitoringTable extends React.Component {
     } else {
       fileLabel = `${data.site}_Avancement enqueteurs`;
     }
-    const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`;
+    const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data, mode);
     const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);

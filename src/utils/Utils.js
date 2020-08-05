@@ -6,28 +6,24 @@ class Utils {
   }
 
   static calculateCompletionRate(data) {
-    return (data.total - data.ansCount) / data.total;
+    return (data.tbrCount + data.finCount) / data.total;
   }
 
   static calculateOngoing(data) {
     return data.prcCount
           + data.aocCount
           + data.apsCount
-          + data.insCount
-          + data.wftCount
-          + data.wfsCount;
+          + data.insCount;
   }
 
   static formatForMonitoringTable(stateCount) {
     const line = {};
-
-    // TODO: apply bussiness rules
     line.completionRate = this.calculateCompletionRate(stateCount);
     line.total = stateCount.total;
-    line.notStarted = stateCount.ansCount;
+    line.notStarted = stateCount.vicCount;
     line.onGoing = this.calculateOngoing(stateCount);
-    line.waitingForIntValidation = stateCount.wftCount + stateCount.wfsCount;
-    line.intValidated = stateCount.tbrCount;
+    line.waitingForIntValidation = stateCount.wftCount;
+    line.intValidated = stateCount.tbrCount + stateCount.wfsCount;
     line.demValidated = stateCount.finCount;
     line.preparingContact = stateCount.prcCount;
     line.atLeastOneContact = stateCount.aocCount;
