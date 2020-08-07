@@ -2,13 +2,11 @@ import React from 'react';
 import D from '../../i18n';
 
 function getMatchingLines(data, searchBy, str) {
-  const matchingLines = [];
   const s = str.toLowerCase().split(' ');
-  data.forEach((line) => {
+
+  const matchingLines = data.filter((line) => {
     const toSearch = searchBy.map((fieldName) => line[fieldName].toLowerCase());
-    if (!s.some((word) => !toSearch.some((field) => field.includes(word)))) {
-      matchingLines.push(line);
-    }
+    return (!s.some((word) => !toSearch.some((field) => field.includes(word))));
   });
   return matchingLines;
 }

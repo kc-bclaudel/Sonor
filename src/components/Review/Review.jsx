@@ -101,36 +101,12 @@ function Review({
     );
 }
 
-function displaySurveyLines({
-  displayedLines, pagination, checkboxArray, toggleCheckBox,
-}) {
-  const lines = [];
-  let oddLine = true;
-  for (let i = (pagination.page - 1) * pagination.size;
-    i < pagination.page * pagination.size && i < displayedLines.length;
-    i += 1
-  ) {
-    lines.push(
-      <SurveyUnitLine
-        key={i}
-        oddLine={oddLine}
-        lineData={displayedLines[i]}
-        isChecked={checkboxArray[displayedLines[i].id]}
-        updateFunc={() => toggleCheckBox(displayedLines[i].id)}
-      />,
-    );
-    oddLine = !oddLine;
-  }
-  return lines;
-}
-
 class ReviewTable extends React.Component {
   constructor(props) {
     super(props);
-    const checkboxArray = {};
-    props.data.forEach((element) => {
-      checkboxArray[element.id] = false;
-    });
+    const checkboxArray = props.data.reduce(
+      (acc, curr) => { acc[curr.id] = false; return acc; }, {},
+    );
     this.state = {
       pagination: { size: 5, page: 1 },
       checkboxArray,
@@ -142,11 +118,8 @@ class ReviewTable extends React.Component {
 
   componentDidUpdate(prevProps) {
     const { survey, data } = this.props;
-    const checkboxArray = {};
     if (prevProps.survey !== survey || prevProps.data !== data) {
-      data.forEach((element) => {
-        checkboxArray[element.id] = false;
-      });
+      const checkboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});
       this.setState({ checkboxArray, checkAll: false, displayedLines: data });
     }
   }
@@ -174,21 +147,19 @@ class ReviewTable extends React.Component {
   validate() {
     const { survey, validateSU } = this.props;
     const { checkboxArray } = this.state;
-    const lstSUFinalized = [];
-    Object.entries(checkboxArray).forEach((su) => {
-      if (su[1]) {
-        lstSUFinalized.push(su[0]);
-      }
-    });
+
+    const lstSUFinalized = Object.entries(checkboxArray)
+      .filter((su) => (su[1]))
+      .map((su) => (su[0]));
+
     validateSU(survey, lstSUFinalized);
   }
 
   handleCheckAll(e) {
     const { checkboxArray } = this.state;
-    const newCheckboxArray = { ...checkboxArray };
-    Object.entries(newCheckboxArray).forEach((elm) => {
-      newCheckboxArray[elm[0]] = e.target.checked;
-    });
+    const newCheckboxArray = Object.keys(checkboxArray).reduce(
+      (acc, curr) => { acc[curr] = e.target.checked; return acc; }, {},
+    );
     this.setState({
       checkboxArray: newCheckboxArray,
       checkAll: e.target.checked,
@@ -252,9 +223,19 @@ class ReviewTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {displaySurveyLines({
-              displayedLines, pagination, checkboxArray, toggleCheckBox,
-            })}
+            {displayedLines
+              .slice(
+                (pagination.page - 1) * pagination.size,
+                Math.min(pagination.page * pagination.size, displayedLines.length),
+              )
+              .map((line) => (
+                <SurveyUnitLine
+                  key={line.id}
+                  lineData={line}
+                  isChecked={checkboxArray[line.id]}
+                  updateFunc={() => toggleCheckBox(line.id)}
+                />
+              ))}
           </tbody>
         </Table>
         <div className="tableOptionsWrapper">
@@ -288,14 +269,13 @@ class ReviewTable extends React.Component {
 }
 
 function SurveyUnitLine({
-  lineData, oddLine, isChecked, updateFunc,
+  lineData, isChecked, updateFunc,
 }) {
   const {
     campaignLabel, interviewer, id,
   } = lineData;
-  const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
   return (
-    <tr className={lineColor}>
+    <tr>
       <td className="Clickable"><input key={id} type="checkbox" checked={isChecked} name={id} value={id} onChange={() => updateFunc()} /></td>
       <td onClick={() => { window.open('', '_blank'); }} className="Clickable">{campaignLabel}</td>
       <td onClick={() => { window.open('', '_blank'); }} className="Clickable">{interviewer}</td>

@@ -101,28 +101,26 @@ class Utils {
   }
 
   static sumOn(data, groupBy) {
-    const finalArray = [];
     const result = {};
 
     data.forEach((elm) => {
       if (!Object.prototype.hasOwnProperty.call(result, elm[groupBy])) {
         result[elm[groupBy]] = elm;
       } else {
-        Object.keys(elm.stateCount).forEach((key) => {
-          if (!isNaN(elm.stateCount[key])) {
-            result[elm[groupBy]].stateCount[key] += elm.stateCount[key];
-          }
-        });
+        Object.entries(elm.stateCount)
+          .filter((x) => !isNaN(x[1]))
+          .forEach(([key, val]) => {
+            result[elm[groupBy]].stateCount[key] += val;
+          });
       }
     });
 
-    Object.keys(result).forEach((key) => {
+    const finalArray = Object.keys(result).map((key) => {
       const formattedData = this.formatForMonitoringTable(result[key].stateCount);
       formattedData.interviewerFirstName = result[key].interviewerFirstName;
       formattedData.interviewerLastName = result[key].interviewerLastName;
       formattedData.interviewerId = result[key].interviewerId;
-
-      finalArray.push(formattedData);
+      return formattedData;
     });
 
     return finalArray;
@@ -135,11 +133,11 @@ class Utils {
       if (Object.keys(result).length < 1) {
         Object.assign(result, elm.stateCount);
       }
-      Object.keys(elm.stateCount).forEach((key) => {
-        if (!isNaN(elm.stateCount[key])) {
+      Object.keys(elm.stateCount)
+        .filter((key) => !isNaN(elm.stateCount[key]))
+        .forEach((key) => {
           result[key] += elm.stateCount[key];
-        }
-      });
+        });
     });
 
     return this.formatForMonitoringTable(result);

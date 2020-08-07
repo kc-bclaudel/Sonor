@@ -65,43 +65,24 @@ function ListSU({
     );
 }
 
-function displaySurveyLines(data, pagination) {
-  const lines = [];
-  let oddLine = true;
-  for (let i = (pagination.page - 1) * pagination.size;
-    i < pagination.page * pagination.size && i < data.length;
-    i += 1
-  ) {
-    lines.push(<SurveyUnitLine key={i} oddLine={oddLine} lineData={data[i]} />);
-    oddLine = !oddLine;
-  }
-
-  return lines;
-}
-
 function makeTableForExport(data) {
-  const table = [];
-  const header = [
+  const header = [[
     D.identifier,
     D.ssech,
     D.department,
     D.town,
     D.interviewer,
     D.idep,
-  ];
-  table.push(header);
-  data.forEach((line) => {
-    table.push([
-      line.id,
-      line.ssech,
-      line.departement,
-      line.city,
-      line.interviewer,
-      line.idep,
-    ]);
-  });
+  ]];
 
-  return table;
+  return header.concat(data.map((line) => ([
+    line.id,
+    line.ssech,
+    line.departement,
+    line.city,
+    line.interviewer,
+    line.idep,
+  ])));
 }
 
 class SUTable extends React.Component {
@@ -118,8 +99,8 @@ class SUTable extends React.Component {
   }
 
   handleExport() {
-    const { data, survey } = this.props;
-    const fileLabel = `${data.site}_${survey.label}_UE_confiees`;
+    const { data, survey, site } = this.props;
+    const fileLabel = `${site}_${survey.label}_UE_confiees`;
 
     const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data);
@@ -197,7 +178,12 @@ class SUTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {displaySurveyLines(displayedLines, pagination)}
+            {displayedLines
+              .slice(
+                (pagination.page - 1) * pagination.size,
+                Math.min(pagination.page * pagination.size, displayedLines.length),
+              )
+              .map((line) => (<SurveyUnitLine key={line.id} lineData={line} />))}
           </tbody>
         </Table>
         <div className="tableOptionsWrapper">
@@ -213,13 +199,12 @@ class SUTable extends React.Component {
   }
 }
 
-function SurveyUnitLine({ lineData, oddLine }) {
+function SurveyUnitLine({ lineData }) {
   const {
     id, ssech, departement, city, interviewer,
   } = lineData;
-  const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
   return (
-    <tr className={lineColor}>
+    <tr>
       <td>{id}</td>
       <td>{ssech}</td>
       <td>{departement}</td>

@@ -20,15 +20,15 @@ class DataFormatter {
   getPreferences(cb) {
     return new Promise((resolve) => {
       this.service.getSurveys((data) => {
-        const formattedData = {};
-        data.forEach((survey) => {
-          if (Utils.isVisible(survey)) {
-            formattedData[survey.id] = {
+        const formattedData = data
+          .filter((survey) => Utils.isVisible(survey))
+          .reduce((acc, survey) => {
+            acc[survey.id] = {
               label: survey.label,
               preference: survey.preference,
             };
-          }
-        });
+            return acc;
+          }, {});
         if (cb) {
           cb(formattedData);
         }
@@ -40,9 +40,9 @@ class DataFormatter {
   getDataForMainScreen(date, cb) {
     return new Promise((resolve) => {
       this.service.getSurveys((data) => {
-        const formattedData = [];
-        data.forEach((survey) => {
-          if (Utils.isVisible(survey, date)) {
+        const formattedData = data
+          .filter((survey) => Utils.isVisible(survey, date))
+          .map((survey) => {
             const formattedSurvey = {};
             Object.assign(formattedSurvey, survey);
             formattedSurvey.phase = Utils.getCampaignPhase(
@@ -50,9 +50,8 @@ class DataFormatter {
               survey.collectionEndDate,
               survey.treatmentEndDate,
             );
-            formattedData.push(formattedSurvey);
-          }
-        });
+            return formattedSurvey;
+          });
         if (cb) {
           cb(formattedData);
         }
@@ -69,17 +68,14 @@ class DataFormatter {
     });
     const p2 = new Promise((resolve) => {
       this.service.getSurveyUnits(surveyId, (res) => {
-        const processedData = [];
-        res.forEach((su) => {
-          const suLine = {};
-          suLine.id = su.id;
-          suLine.ssech = su.ssech;
-          suLine.departement = su.location;
-          suLine.city = su.city;
-          suLine.interviewer = `${su.interviewer.lastName} ${su.interviewer.firstName}`;
-          suLine.idep = su.interviewer.id;
-          processedData.push(suLine);
-        });
+        const processedData = res.map((su) => ({
+          id: su.id,
+          ssech: su.ssech,
+          departement: su.location,
+          city: su.city,
+          interviewer: `${su.interviewer.lastName} ${su.interviewer.firstName}`,
+          idep: su.interviewer.id,
+        }));
         resolve(processedData);
       });
     });
@@ -116,29 +112,22 @@ class DataFormatter {
 
   getListSUToReview(surveyId) {
     return new Promise((resolve) => {
-      const promises = [];
       this.service.getSurveys((res) => {
-        res.forEach((campaign) => {
-          if (surveyId === null || campaign.id === surveyId) {
-            promises.push(
-              new Promise((resolve2) => {
-                this.service.getSurveyUnits(campaign.id, (res2) => {
-                  const lstSU = [];
-                  res2.forEach((su) => {
-                    const suLine = {};
-                    suLine.campaignLabel = campaign.label;
-                    suLine.interviewer = `${su.interviewer.lastName} ${su.interviewer.firstName}`;
-                    suLine.idep = su.interviewer.id;
-                    suLine.id = su.id;
-                    lstSU.push(suLine);
-                  });
-                  lstSU.sort((a, b) => (a.interviewer > b.interviewer ? 1 : -1));
-                  resolve2(lstSU);
-                });
-              }),
-            );
-          }
-        });
+        const promises = res.filter((campaign) => (surveyId === null || campaign.id === surveyId))
+          .map((campaign) => (
+            new Promise((resolve2) => {
+              this.service.getSurveyUnits(campaign.id, (res2) => {
+                const lstSU = res2.map((su) => ({
+                  campaignLabel: campaign.label,
+                  interviewer: `${su.interviewer.lastName} ${su.interviewer.firstName}`,
+                  idep: su.interviewer.id,
+                  id: su.id,
+                }))
+                  .sort((a, b) => (a.interviewer > b.interviewer ? 1 : -1));
+                resolve2(lstSU);
+              });
+            })
+          ));
         Promise.all(promises).then((data) => {
           resolve(data.flat());
         });
@@ -149,24 +138,21 @@ class DataFormatter {
   getInterviewersDetail(survey, interviewers, date, mode) {
     const surveyId = !survey || survey.id;
     return new Promise((resolve) => {
-      const promises = [];
-      interviewers.forEach((interv) => {
-        promises.push(
-          new Promise((resolve2) => {
-            this.service.getInterviewersStateCount(
-              surveyId || interv.survey,
-              interv.id,
-              date,
-              (data) => {
-                const interviewer = {};
-                Object.assign(interviewer, interv);
-                interviewer.survey = surveyId;
-                resolve2({ interviewer, stateCount: data });
-              },
-            );
-          }),
-        );
-      });
+      const promises = interviewers.map((interv) => (
+        new Promise((resolve2) => {
+          this.service.getInterviewersStateCount(
+            surveyId || interv.survey,
+            interv.id,
+            date,
+            (data) => {
+              const interviewer = {};
+              Object.assign(interviewer, interv);
+              interviewer.survey = surveyId;
+              resolve2({ interviewer, stateCount: data });
+            },
+          );
+        })
+      ));
       if (mode === BY_SURVEY) {
         Promise.all(promises).then((data) => {
           const sum = Utils.getStateCountSum(data);
@@ -175,14 +161,13 @@ class DataFormatter {
         });
       } else {
         Promise.all(promises).then((data) => {
-          const processedData = [];
-          data.forEach((intData) => {
+          const processedData = data.map((intData) => {
             const line = {};
             Object.assign(line, intData);
             line.interviewerFirstName = intData.interviewer.interviewerFirstName;
             line.interviewerLastName = intData.interviewer.interviewerLastName;
             line.interviewerId = intData.interviewer.id;
-            processedData.push(line);
+            return line;
           });
           resolve(processedData);
         });
@@ -205,24 +190,21 @@ class DataFormatter {
       }
       site = (await this.service.getUser()).organizationUnit.label;
       p1 = new Promise((resolve) => {
-        const promises = [];
-        surveysToGetInterviewersFrom.forEach((surv) => {
-          promises.push(
-            new Promise((resolve2) => {
-              this.service.getInterviewers(survey, (res) => {
-                res.forEach((interviewer) => {
-                  Utils.addIfNotAlreadyPresent(interviewers, interviewer);
-                });
-                this.getInterviewersDetail(
-                  surv,
-                  res,
-                  date,
-                  mode,
-                ).then((data) => resolve2(data));
+        const promises = surveysToGetInterviewersFrom.map((surv) => (
+          new Promise((resolve2) => {
+            this.service.getInterviewers(survey, (res) => {
+              res.forEach((interviewer) => {
+                Utils.addIfNotAlreadyPresent(interviewers, interviewer);
               });
-            })
-          );
-        });
+              this.getInterviewersDetail(
+                surv,
+                res,
+                date,
+                mode,
+              ).then((data) => resolve2(data));
+            });
+          })
+        ));
         Promise.all(promises).then((data) => {
           if (mode === BY_SURVEY) {
             resolve(data);
@@ -239,23 +221,19 @@ class DataFormatter {
           if (mode === BY_INTERVIEWER_ONE_SURVEY) {
             this.service.getUser((userInfo) => {
               const userOUs = userInfo.localOrganizationUnits.map((x) => x.id);
-              const demStateCounts = [];
-              data.organizationunits.forEach((dem) => {
-                if (userOUs.includes(dem.idDem)) {
-                  demStateCounts.push({ stateCount: dem });
-                }
-              });
+              const demStateCounts = data.organizationunits
+                .filter((dem) => userOUs.includes(dem.idDem))
+                .map((dem) => ({ stateCount: dem }));
               const totalDem = Utils.getStateCountSum(demStateCounts);
               const totalFrance = Utils.formatForMonitoringTable(data.France);
               resolve({ dem: totalDem, france: totalFrance });
             });
           }
           if (mode === BY_SITE) {
-            const demDatas = [];
-            data.organizationunits.forEach((dem) => {
+            const demDatas = data.organizationunits.map((dem) => {
               const demToPush = Utils.formatForMonitoringTable(dem);
               demToPush.site = dem.idDem;
-              demDatas.push(demToPush);
+              return demToPush;
             });
             const totalFrance = Utils.formatForMonitoringTable(data.France);
             resolve({ dem: demDatas, france: totalFrance });
@@ -313,12 +291,9 @@ class DataFormatter {
       this.service.getTotalDemByCampaign(campaignId, (data) => {
         this.service.getUser((userInfo) => {
           const userOUs = userInfo.localOrganizationUnits.map((x) => x.id);
-          const demStateCounts = [];
-          data.organizationunits.forEach((dem) => {
-            if (userOUs.includes(dem.idDem)) {
-              demStateCounts.push({ stateCount: dem });
-            }
-          });
+          const demStateCounts = data.organizationunits
+            .filter((dem) => userOUs.includes(dem.idDem))
+            .map((dem) => ({ stateCount: dem }));
           const totalDem = Utils.getStateCountSum(demStateCounts);
           resolve(totalDem);
         });

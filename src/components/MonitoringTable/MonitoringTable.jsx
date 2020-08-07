@@ -226,19 +226,6 @@ class MonitoringTable extends React.Component {
   }
 }
 
-function displayFollowUpTableLines(interviewersDetail, pagination) {
-  const lines = [];
-  let oddLine = true;
-  for (let i = (pagination.page - 1) * pagination.size;
-    i < pagination.page * pagination.size && i < interviewersDetail.length;
-    i += 1
-  ) {
-    lines.push(<FollowUpTableLine key={i} oddLine={oddLine} data={interviewersDetail[i]} />);
-    oddLine = !oddLine;
-  }
-  return lines;
-}
-
 function FollowUpTable({
   data, sort, displayedLines, pagination, mode, handleSort,
 }) {
@@ -366,14 +353,19 @@ function FollowUpTable({
         </tr>
       </thead>
       <tbody>
-        {displayFollowUpTableLines(displayedLines, pagination)}
+        {displayedLines
+          .slice(
+            (pagination.page - 1) * pagination.size,
+            Math.min(pagination.page * pagination.size, displayedLines.length),
+          )
+          .map((line) => (<FollowUpTableLine data={line} />))}
       </tbody>
       {tableFooter}
     </Table>
   );
 }
 
-function FollowUpTableLine({ data, oddLine }) {
+function FollowUpTableLine({ data }) {
   const {
     interviewerFirstName,
     interviewerLastName,
@@ -394,9 +386,8 @@ function FollowUpTableLine({ data, oddLine }) {
   const interviewerName = interviewerFirstName
     ? `${interviewerLastName} ${interviewerFirstName}`
     : null;
-  const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
   return (
-    <tr className={lineColor}>
+    <tr>
       <td>{interviewerName || survey || site}</td>
       <td className="ColumnSpacing" />
       <td>
@@ -483,14 +474,10 @@ function getFooterForExport(data, mode) {
 }
 
 function getBodyForExport(data) {
-  const table = [];
-  data.forEach((elm) => {
-    const interviewerName = elm.interviewerFirstName
-      ? `${elm.interviewerLastName} ${elm.interviewerFirstName}`
-      : null;
-
-    const line = [
-      interviewerName || elm.survey || elm.site,
+  return data.map((elm) => (
+    [
+      (elm.interviewerFirstName ? `${elm.interviewerLastName} ${elm.interviewerFirstName}` : null)
+      || elm.survey || elm.site,
       `${(Math.round(elm.completionRate * 1000) / 1000) * 100}%`,
       elm.total,
       elm.notStarted,
@@ -502,24 +489,16 @@ function getBodyForExport(data) {
       elm.atLeastOneContact,
       elm.appointmentTaken,
       elm.interviewStarted,
-    ];
-
-    table.push(line);
-  });
-  return table;
+    ]
+  ));
 }
 
 function makeTableForExport(data, mode) {
-  const table = [];
   const header = getHeaderForExport(mode);
   const body = getBodyForExport(data.interviewersDetail);
   const footer = getFooterForExport(data, mode);
 
-  table.push(header);
-  body.forEach((line) => table.push(line));
-  footer.forEach((line) => table.push(line));
-
-  return table;
+  return [header].concat(body, footer);
 }
 
 export default MonitoringTable;

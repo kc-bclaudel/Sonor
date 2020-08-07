@@ -7,21 +7,6 @@ import Utils from '../../utils/Utils';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import D from '../../i18n';
 
-function displaySurveyLines(data, pagination) {
-  const lines = [];
-  let oddLine = true;
-  for (let i = (pagination.page - 1) * pagination.size;
-    i < pagination.page * pagination.size && i < data.length;
-    i += 1
-  ) {
-    if (Utils.isVisible(data[i])) {
-      lines.push(<SurveyListLine key={i} oddLine={oddLine} lineData={data[i]} allData={data} />);
-      oddLine = !oddLine;
-    }
-  }
-  return lines;
-}
-
 class MainScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -36,14 +21,10 @@ class MainScreen extends React.Component {
   componentDidMount() {
     const { preferences, dataRetreiver } = this.props;
     dataRetreiver.getDataForMainScreen(null, (data) => {
-      const dataToUse = [];
-      data.forEach((survey) => {
-        if (preferences[survey.id] && preferences[survey.id].preference) {
-          dataToUse.push(survey);
-        }
-      });
       this.setState({
-        data: dataToUse,
+        data: data.filter(
+          (survey) => (preferences[survey.id] && preferences[survey.id].preference),
+        ),
       }, () => { this.handleSort('label', true); });
     });
   }
@@ -125,7 +106,12 @@ class MainScreen extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {displaySurveyLines(data, pagination)}
+              {data
+                .slice(
+                  (pagination.page - 1) * pagination.size,
+                  Math.min(pagination.page * pagination.size, data.length),
+                )
+                .map((line) => (<SurveyListLine key={line.id} lineData={line} allData={data} />))}
             </tbody>
           </Table>
           <div className="tableOptionsWrapper">
@@ -141,9 +127,8 @@ class MainScreen extends React.Component {
   }
 }
 
-function SurveyListLine({ lineData, oddLine, allData }) {
+function SurveyListLine({ lineData, allData }) {
   const data = lineData;
-  const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
   const survey = {
     id: data.id,
     label: data.label,
@@ -164,7 +149,7 @@ function SurveyListLine({ lineData, oddLine, allData }) {
   };
 
   return (
-    <tr className={lineColor}>
+    <tr>
       <td>
         <Link to={monitoringTablebySite} className="TableLink">
           {data.label}

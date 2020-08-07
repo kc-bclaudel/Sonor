@@ -3,13 +3,9 @@ import Form from 'react-bootstrap/Form';
 import D from '../../i18n';
 
 function createSelectOptions(campaigns, currentId) {
-  const options = [];
-  campaigns.forEach((campaign, index) => {
-    if (campaign.id !== currentId) {
-      options.push(<option key={campaign.id} value={index}>{campaign.label}</option>);
-    }
-  });
-  return options;
+  return campaigns
+    .filter((campaign) => (campaign.id !== currentId))
+    .map((campaign, index) => (<option key={campaign.id} value={index}>{campaign.label}</option>));
 }
 
 function switchCurrent(surveyObj, indexToSwitch) {

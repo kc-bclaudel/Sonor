@@ -28,10 +28,11 @@ You will also see any lint errors in the console.
 ### Start mock servers
 
 To test the application at this point you need to use the server *mocked_apis_server* to serve the pearlJam APIs.
-You will find it at root project : mocked_apis_server.zip
+You will find it at the root of this project : /mocked_apis_server
 
-Unzip it anywhere
-Go to the *mocked_apis_server* folder and run
+`cd ./mocked_apis_server` 
+
+Run the following commands to install and start the server:
 
 `npm install` 
 

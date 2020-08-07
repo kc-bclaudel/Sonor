@@ -161,17 +161,6 @@ function Contacts() {
   );
 }
 
-function displayInterviewersLines({ displayedInterviewers, pagination }) {
-  const lines = [];
-  for (let i = (pagination.page - 1) * pagination.size;
-    i < pagination.page * pagination.size && i < displayedInterviewers.length;
-    i += 1
-  ) {
-    lines.push(<InterviewerLine key={i} interviewer={displayedInterviewers[i]} />);
-  }
-  return lines;
-}
-
 class SurveyUnits extends React.Component {
   constructor(props) {
     super(props);
@@ -249,7 +238,12 @@ class SurveyUnits extends React.Component {
                 {D.SU}
               </th>
             </tr>
-            {displayInterviewersLines({ displayedInterviewers, pagination })}
+            {displayedInterviewers
+              .slice(
+                (pagination.page - 1) * pagination.size,
+                Math.min(pagination.page * pagination.size, displayedInterviewers.length),
+              )
+              .map((line) => (<InterviewerLine key={line.id} interviewer={line} />))}
             <tr>
               <th>{D.unassigned}</th>
               <th />
@@ -299,13 +293,12 @@ function makeTableForExport(data) {
   const {
     abandoned, notAttributed, total, interviewers,
   } = data;
-  const table = [];
 
-  const header = [
+  const header = [[
     D.interviewer,
     D.idep,
     D.SU,
-  ];
+  ]];
 
   const footer = [
     [
@@ -325,19 +318,14 @@ function makeTableForExport(data) {
     ],
   ];
 
-  table.push(header);
-  interviewers.forEach((line) => {
-    table.push([
+  return header.concat(
+    interviewers.map((line) => ([
       `${line.interviewerLastName} ${line.interviewerFirstName}`,
       line.id,
       line.surveyUnitCount,
-    ]);
-  });
-  footer.forEach((line) => {
-    table.push(line);
-  });
-
-  return table;
+    ])),
+    footer,
+  );
 }
 
 export default CampaignPortal;
