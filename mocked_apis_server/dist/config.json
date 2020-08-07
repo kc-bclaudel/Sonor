@@ -1,5 +1,0 @@
-{
-	"port": 7777,
-	"bodyLimit": "100kb",
-	"corsHeaders": ["Link"]
-}
