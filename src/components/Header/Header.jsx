@@ -1,127 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link, useLocation } from 'react-router-dom';
 import logo from './logo_com_externe_semi_bold.png';
 import D from '../../i18n';
 import { version } from '../../../package.json';
-import { BY_INTERVIEWER, BY_SURVEY } from '../../utils/constants.json';
 
 import './Header.css';
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      toggleFirstMenu: false,
-    };
-  }
+function Header({
+  user, showPreferences,
+}) {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const { pathname } = useLocation();
 
-  toggleFirstDropDownMenu(e) {
-    const { toggleFirstMenu } = this.state;
-    e.stopPropagation();
-    this.setState({ toggleFirstMenu: !toggleFirstMenu });
-  }
-
-  displayFirstSubMenu(toggle) {
-    const { goToMonitoringTable } = this.props;
-    if (toggle) {
-      return (
-        <ul className="dropdown-menu">
-          <li>
-            <a className="selectedSubeMenu" href="#">
-              {D.surveys}
-              <i className="fa fa-caret-right fa-xs subMenucaret" />
-            </a>
-            <ul className="dropdown-menu sub-menu">
-              <li>
-                <a onClick={() => goToMonitoringTable(BY_SURVEY)} className="selectedSubeMenu" href="#">
-                  {D.progression}
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a id="selectedSubeMenu" className="selectedSubeMenu" href="#">
-              {D.interviewers}
-              <i className="fa fa-caret-right fa-xs subMenucaret" />
-            </a>
-            <ul className="dropdown-menu sub-menu" id="SecondDropdown">
-              <li>
-                <a onClick={() => goToMonitoringTable(BY_INTERVIEWER)} className="selectedSubeMenu" href="#">
-                  {D.progression}
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      );
-    }
-    return null;
-  }
-
-  hideMenu() {
-    this.setState({ toggleFirstMenu: false });
-  }
-
-  render() {
-    const {
-      returnFunc, user, showPreferences, goToReview, goToRemind, currentView,
-    } = this.props;
-    const { toggleFirstMenu } = this.state;
-    return (
-      <header id="App-header" className="shadow">
-        <Container fluid>
-          <Row onClick={() => { this.hideMenu(); }}>
-            <Col md="auto">
+  return (
+    <header id="App-header" className="shadow">
+      <Container fluid>
+        <Row>
+          <Col md="auto">
+            <Link to="/" className="ButtonLink">
               <img
                 src={logo}
                 id="InseeLogo"
                 alt="logo"
-                className="Clickable"
-                onClick={() => returnFunc()}
               />
               <div id="appVersion">
                 {version}
               </div>
-            </Col>
-            <Col>
-              <div className="d-inline-flex classTest" id="headerButtonContainer">
+            </Link>
+          </Col>
+          <Col>
+            <div className="d-inline-flex classTest" id="headerButtonContainer">
+              <Link to="/followUp" className="ButtonLink">
                 <Button
-                  onClick={() => goToRemind()}
-                  className={`HeaderButton HeaderFocusableButton ${currentView === 'remind' ? ' ButtonActive' : ''}`}
+                  className={`HeaderButton HeaderFocusableButton ${pathname.includes('/followUp') ? ' ButtonActive' : ''}`}
                 >
                   {D.remind}
                 </Button>
-                <li className="dropdown" id="BtnSuivreParent">
-                  <Button
-                    id="FollowButton"
-                    className={`HeaderButton HeaderFocusableButton dropdown-toggle ${currentView === 'monitoringTable' ? ' ButtonActive' : ''}`}
-                    data-toggle="dropdown"
-                    href="#"
-                    onClick={(e) => { this.toggleFirstDropDownMenu(e); }}
-                  >
-                    {D.follow}
-                    <b className="caret" />
-                  </Button>
-                  {this.displayFirstSubMenu(toggleFirstMenu)}
-                </li>
+              </Link>
+              <li className="dropdown" id="BtnSuivreParent">
                 <Button
-                  onClick={() => goToReview()}
-                  className={`HeaderButton HeaderFocusableButton ${currentView === 'review' ? ' ButtonActive' : ''}`}
+                  id="FollowButton"
+                  className={`HeaderButton HeaderFocusableButton dropdown-toggle ${pathname.includes('/follow/') ? ' ButtonActive' : ''}`}
+                  data-toggle="dropdown"
+                  onClick={() => { setShowDropdown(!showDropdown); }}
+                >
+                  {D.follow}
+                  <b className="caret" />
+                </Button>
+                {!showDropdown || displayFirstSubMenu(setShowDropdown)}
+              </li>
+              <Link to="/review" className="ButtonLink">
+                <Button
+                  className={`HeaderButton HeaderFocusableButton ${pathname.includes('/review') ? ' ButtonActive' : ''}`}
                 >
                   {D.read}
                 </Button>
-              </div>
-            </Col>
-            <Col><UserZone user={user} date={new Date()} showPreferences={showPreferences} /></Col>
-          </Row>
-        </Container>
-      </header>
-    );
-  }
+              </Link>
+            </div>
+          </Col>
+          <Col><UserZone user={user} date={new Date()} showPreferences={showPreferences} /></Col>
+        </Row>
+      </Container>
+    </header>
+  );
 }
 
 function UserZone({ user, date, showPreferences }) {
@@ -152,6 +98,39 @@ function UserZone({ user, date, showPreferences }) {
         </Row>
       </div>
     </Card>
+  );
+}
+
+function displayFirstSubMenu(toggle) {
+  return (
+    <ul className="dropdown-menu" onClick={() => toggle(false)}>
+      <li>
+        <a className="selectedSubeMenu">
+          {D.surveys}
+          <i className="fa fa-caret-right fa-xs subMenucaret" />
+        </a>
+        <ul className="dropdown-menu sub-menu">
+          <li>
+            <Link to="/follow/campaigns" className="selectedSubeMenu">
+              {D.progression}
+            </Link>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a id="selectedSubeMenu" className="selectedSubeMenu">
+          {D.interviewers}
+          <i className="fa fa-caret-right fa-xs subMenucaret" />
+        </a>
+        <ul className="dropdown-menu sub-menu" id="SecondDropdown">
+          <li>
+            <Link to="/follow/interviewers" className="selectedSubeMenu">
+              {D.progression}
+            </Link>
+          </li>
+        </ul>
+      </li>
+    </ul>
   );
 }
 

@@ -1,22 +1,21 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import SortIcon from '../SortIcon/SortIcon';
 import Utils from '../../utils/Utils';
 import PaginationNav from '../PaginationNav/PaginationNav';
-import { BY_SITE } from '../../utils/constants.json';
 import D from '../../i18n';
 
-function displaySurveyLines(props, pagination) {
+function displaySurveyLines(data, pagination) {
   const lines = [];
-  const { data } = props;
   let oddLine = true;
   for (let i = (pagination.page - 1) * pagination.size;
     i < pagination.page * pagination.size && i < data.length;
     i += 1
   ) {
     if (Utils.isVisible(data[i])) {
-      lines.push(<SurveyListLine key={i} oddLine={oddLine} lineData={data[i]} props={props} />);
+      lines.push(<SurveyListLine key={i} oddLine={oddLine} lineData={data[i]} allData={data} />);
       oddLine = !oddLine;
     }
   }
@@ -26,18 +25,42 @@ function displaySurveyLines(props, pagination) {
 class MainScreen extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
+      data: [],
       pagination: { size: 5, page: 1 },
+      sort: { sortOn: null, asc: null },
     };
+  }
+
+  componentDidMount() {
+    const { preferences, dataRetreiver } = this.props;
+    dataRetreiver.getDataForMainScreen(null, (data) => {
+      const dataToUse = [];
+      data.forEach((survey) => {
+        if (preferences[survey.id] && preferences[survey.id].preference) {
+          dataToUse.push(survey);
+        }
+      });
+      this.setState({
+        data: dataToUse,
+      }, () => { this.handleSort('label', true); });
+    });
   }
 
   handlePageChange(pagination) {
     this.setState({ pagination });
   }
 
+  handleSort(property, asc) {
+    const { data, sort } = this.state;
+    const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'mainScreen', asc);
+    this.setState({ data: sortedData, sort: newSort });
+  }
+
   render() {
-    const { sort, handleSort, data } = this.props;
-    const { pagination } = this.state;
+    const handleSort = (property) => this.handleSort(property);
+    const { pagination, data, sort } = this.state;
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div id="MainScreen">
@@ -102,7 +125,7 @@ class MainScreen extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {displaySurveyLines(this.props, pagination)}
+              {displaySurveyLines(data, pagination)}
             </tbody>
           </Table>
           <div className="tableOptionsWrapper">
@@ -118,7 +141,7 @@ class MainScreen extends React.Component {
   }
 }
 
-function SurveyListLine({ lineData, oddLine, props }) {
+function SurveyListLine({ lineData, oddLine, allData }) {
   const data = lineData;
   const lineColor = oddLine ? 'DarkgreyLine' : 'LightGreyLine';
   const survey = {
@@ -126,30 +149,74 @@ function SurveyListLine({ lineData, oddLine, props }) {
     label: data.label,
     visibilityStartDate: data.visibilityStartDate,
     treatmentEndDate: data.treatmentEndDate,
-    allSurveys: props.data,
+    allSurveys: allData,
   };
-  const goToPortal = () => { props.goToCampaignPortal(survey, data); };
-  const goToListSU = () => { props.goToListSU(survey); };
-  const goToReview = () => { props.goToReview(survey); };
-  const goToRemind = () => { props.goToRemind(survey); };
-  const goToMonitoringTable = () => { props.goToMonitoringTable(survey); };
-  const goToMonitoringTableSites = () => { props.goToMonitoringTable(survey, BY_SITE); };
+
+  const listSU = { pathname: `/listSU/${data.id}`, survey };
+  const review = { pathname: `/review/${data.id}`, survey };
+  const followUp = { pathname: `/followUp/${data.id}`, survey };
+  const monitoringTable = { pathname: `/follow/campaign/${data.id}`, survey };
+  const monitoringTablebySite = { pathname: `/follow/sites/${data.id}`, survey };
+
+  const portal = {
+    pathname: `/portal/${data.id}`,
+    surveyInfos: { survey, surveyInfo: data },
+  };
+
   return (
     <tr className={lineColor}>
-      <td onClick={goToMonitoringTableSites} className="Clickable" data-testid="campaign-label">{data.label}</td>
+      <td>
+        <Link to={monitoringTablebySite} className="TableLink">
+          {data.label}
+        </Link>
+      </td>
       <td className="ColumnSpacing" />
-      <td onClick={goToPortal} className="Clickable">{Utils.convertToDateString(data.collectionStartDate)}</td>
-      <td onClick={goToPortal} className="Clickable">{Utils.convertToDateString(data.collectionEndDate)}</td>
-      <td onClick={goToPortal} className="Clickable">{Utils.convertToDateString(data.treatmentEndDate)}</td>
+      <td>
+        <Link to={portal} className="TableLink">
+          {Utils.convertToDateString(data.collectionStartDate)}
+        </Link>
+      </td>
+      <td>
+        <Link to={portal} className="TableLink">
+          {Utils.convertToDateString(data.collectionEndDate)}
+        </Link>
+      </td>
+      <td>
+        <Link to={portal} className="TableLink">
+          {Utils.convertToDateString(data.treatmentEndDate)}
+        </Link>
+      </td>
       <td className="ColumnSpacing" />
-      <td onClick={goToPortal} className="Clickable">{Utils.displayCampaignPhase(data.phase)}</td>
+      <td>
+        <Link to={portal} className="TableLink">
+          {Utils.displayCampaignPhase(data.phase)}
+        </Link>
+      </td>
       <td className="ColumnSpacing" />
-      <td onClick={goToListSU} className="Clickable">{data.allocated}</td>
-      <td onClick={goToMonitoringTable} className="Clickable">{data.toProcessInterviewer}</td>
+      <td>
+        <Link to={listSU} className="TableLink">
+          {data.allocated}
+        </Link>
+      </td>
+      <td>
+        <Link to={monitoringTable} className="TableLink">
+          {data.toProcessInterviewer}
+        </Link>
+      </td>
       <td>{data.toAffect}</td>
-      <td onClick={goToRemind} className="Clickable">{data.toFollowUp}</td>
-      <td onClick={goToReview} className="Clickable">{data.toReview}</td>
-      <td>{data.finalized}</td>
+      <td>
+        <Link to={followUp} className="TableLink">
+          {data.toFollowUp}
+        </Link>
+      </td>
+      <td>
+        <Link to={review} className="TableLink">
+          {data.toReview}
+        </Link>
+      </td>
+      <td>
+        {data.finalized}
+      </td>
     </tr>
   );
 }

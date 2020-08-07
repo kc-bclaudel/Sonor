@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -8,15 +9,16 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import D from '../../i18n';
 
 function Remind({
-  survey, returnToMainScreen, goToRemind,
+  location,
 }) {
+  const [survey, setSurvey] = useState(location.survey);
   const surveyTitle = !survey
       || (<div className="SurveyTitle">{survey.label}</div>);
   const surveySelector = !survey
       || (
         <SurveySelector
           survey={survey}
-          updateFunc={(newSurvey) => goToRemind(newSurvey)}
+          updateFunc={(newSurvey) => setSurvey(newSurvey)}
         />
       );
   return (
@@ -24,7 +26,9 @@ function Remind({
       <Container fluid>
         <Row>
           <Col>
-            <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">{D.back}</Button>
+            <Link to="/" className="ButtonLink">
+              <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+            </Link>
           </Col>
           <Col xs={6}>
             {surveyTitle}

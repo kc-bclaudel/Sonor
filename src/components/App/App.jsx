@@ -1,7 +1,6 @@
 import React from 'react';
 import Keycloak from 'keycloak-js';
 import View from '../View/View';
-import Header from '../Header/Header';
 import DataFormatter from '../../utils/DataFormatter';
 import { KEYCLOAK, ANONYMOUS } from '../../utils/constants.json';
 import './App.css';
@@ -49,28 +48,13 @@ class App extends React.Component {
       if (authenticated) {
         return (
           <div className="App">
-            <Header
-              user={data}
-              currentView={currentView}
-              returnFunc={() => { this.content.handleReturnButtonClick(); }}
-              goToMonitoringTable={(mode) => {
-                this.content.handleMonitoringTableClick(null, null, mode);
-              }}
-              goToReview={() => {
-                this.content.handleReviewClick(null);
-              }}
-              goToRemind={() => {
-                this.content.handleRemindClick(null);
-              }}
-              showPreferences={() => {
-                this.content.showPreferences();
-              }}
-            />
+
             <View
               currentView={currentView}
               setCurrentView={(view) => this.setCurrentView(view)}
               token={keycloak ? keycloak.token : null}
               ref={(instance) => { this.content = instance; }}
+              userData={data}
             />
           </div>
         );

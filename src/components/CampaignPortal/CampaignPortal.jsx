@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Popover from "react-bootstrap/Popover";
+import { Link, Redirect } from 'react-router-dom';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,50 +16,80 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import D from '../../i18n';
 
 function CampaignPortal({
-  survey, data, returnToMainScreen, sort, handleSort, handleCampaignClick,
+  location, dataRetreiver,
 }) {
-  return (
-    <div id="CampaignPortal">
-      <Container fluid>
-        <Row>
-          <Col>
-            <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">{D.back}</Button>
-          </Col>
-          <Col xs={6}>
-            <div className="SurveyTitle">{data.label}</div>
-          </Col>
-          <Col>
-            <SurveySelector
-              survey={survey}
-              updateFunc={(newSurvey, index) => handleCampaignClick(
-                newSurvey,
-                newSurvey.allSurveys[index],
-              )}
-            />
-          </Col>
-        </Row>
-      </Container>
-      <Card className="ViewCard">
+  const initialData = {};
+  initialData.interviewers = [];
+  initialData.displayedInterviewers = [];
+  initialData.notAttributed = { count: null };
+  initialData.abandoned = { count: null };
+  initialData.total = { total: null };
+  const survey = location.surveyInfos ? location.surveyInfos.survey : null;
+  const surveyInfo = location.surveyInfos ? location.surveyInfos.surveyInfo : null;
+
+  const [data, setData] = useState(initialData);
+  const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [redirect, setRedirect] = useState(!survey ? '/' : null);
+
+  useEffect(() => {
+    dataRetreiver.getDataForCampaignPortal(!survey || survey.id, (res) => {
+      setData(res);
+      setRedirect(null);
+    });
+  }, [redirect]);
+
+  function handleSort(property, asc) {
+    const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'campaignPortal', asc);
+    setSort(newSort);
+    setData(sortedData);
+  }
+
+  return redirect
+    ? <Redirect to={redirect} />
+    : (
+      <div id="CampaignPortal">
         <Container fluid>
           <Row>
             <Col>
-              <Card className="ViewCard">
-                <TimeLine props={data} />
-              </Card>
+              <Link to="/" className="ButtonLink">
+                <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+              </Link>
             </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Contacts />
+            <Col xs={6}>
+              <div className="SurveyTitle">{survey.label}</div>
             </Col>
             <Col>
-              <SurveyUnits data={data} survey={survey} sort={sort} handleSortfunc={handleSort} />
+              <SurveySelector
+                survey={survey}
+                updateFunc={(newSurvey, index) => setRedirect({
+                  pathname: `/portal/${newSurvey.id}`,
+                  surveyInfos: { survey: newSurvey, surveyInfo: newSurvey.allSurveys[index] },
+                })}
+              />
             </Col>
           </Row>
         </Container>
-      </Card>
-    </div>
-  );
+        <Card className="ViewCard">
+          <Container fluid>
+            <Row>
+              <Col>
+                <Card className="ViewCard">
+                  <TimeLine props={surveyInfo} />
+                </Card>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Contacts />
+              </Col>
+              <Col>
+                <SurveyUnits data={data} survey={survey} sort={sort} handleSortfunc={handleSort} />
+              </Col>
+            </Row>
+          </Container>
+        </Card>
+      </div>
+    );
 }
 
 function TimeLine({ props }) {
@@ -189,7 +220,7 @@ class SurveyUnits extends React.Component {
       <Card className="ViewCard">
         <div className="Title">{D.interviewers}</div>
         <Row>
-          <Col xs="6" >
+          <Col xs="6">
             <PaginationNav.SizeSelector
               updateFunc={(newPagination) => this.handlePageChange(newPagination)}
             />

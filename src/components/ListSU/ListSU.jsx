@@ -1,48 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Col, Row } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
+import { Link, Redirect } from 'react-router-dom';
 import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import SurveySelector from '../SurveySelector/SurveySelector';
+import Utils from '../../utils/Utils';
 import D from '../../i18n';
 
 function ListSU({
-  survey, data, returnToMainScreen, site, sort, handleSort, goToListSU,
+  location, dataRetreiver,
 }) {
-  const surveyTitle = !survey
-      || (<div className="SurveyTitle">{survey.label}</div>);
-  const surveySelector = !survey
-      || (
-        <SurveySelector
-          survey={survey}
-          updateFunc={(newSurvey) => goToListSU(newSurvey)}
-        />
-      );
-  return (
-    <div id="ListSU">
-      <Row>
-        <Col>
-          <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">{D.back}</Button>
-        </Col>
-        <Col xs={6}>
-          {surveyTitle}
-        </Col>
-        <Col>
-          {surveySelector}
-        </Col>
-      </Row>
-      <Card className="ViewCard">
-        <Card.Title>
-          {D.surveyUnitsAllocatedToTheOU}
-          {data.surveyUnits.length}
-        </Card.Title>
-        <SUTable sort={sort} handleSort={handleSort} data={data} survey={survey} site={site} />
-      </Card>
-    </div>
-  );
+  const { survey } = location;
+
+  const [data, setData] = useState([]);
+  const [site, setSite] = useState('');
+  const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [redirect, setRedirect] = useState(!survey ? '/' : null);
+
+  useEffect(() => {
+    dataRetreiver.getDataForListSU(!survey || survey.id, (res) => {
+      setData(res.surveyUnits);
+      setSite(res.site);
+      setRedirect(null);
+    });
+  }, [redirect]);
+
+  function handleSort(property, asc) {
+    const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'listSU', asc);
+    setSort(newSort);
+    setData(sortedData);
+  }
+  return redirect
+    ? <Redirect to={redirect} />
+    : (
+      <div id="ListSU">
+        <Row>
+          <Col>
+            <Link to="/" className="ButtonLink">
+              <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+            </Link>
+          </Col>
+          <Col xs={6}>
+            <div className="SurveyTitle">{survey.label}</div>
+          </Col>
+          <Col>
+            <SurveySelector
+              survey={survey}
+              updateFunc={(newSurvey) => setRedirect({ pathname: `/listSU/${newSurvey.id}`, survey: newSurvey })}
+            />
+          </Col>
+        </Row>
+        <Card className="ViewCard">
+          <Card.Title>
+            {D.surveyUnitsAllocatedToTheOU}
+            {data.length}
+          </Card.Title>
+          <SUTable sort={sort} handleSort={handleSort} data={data} survey={survey} site={site} />
+        </Card>
+      </div>
+    );
 }
 
 function displaySurveyLines(data, pagination) {
@@ -89,7 +109,7 @@ class SUTable extends React.Component {
     super(props);
     this.state = {
       pagination: { size: 5, page: 1 },
-      displayedLines: props.data.surveyUnits,
+      displayedLines: props.data,
     };
   }
 
@@ -102,7 +122,7 @@ class SUTable extends React.Component {
     const fileLabel = `${data.site}_${survey.label}_UE_confiees`;
 
     const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
-    const table = makeTableForExport(data.surveyUnits);
+    const table = makeTableForExport(data);
     const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
@@ -122,7 +142,6 @@ class SUTable extends React.Component {
 
   render() {
     const { data, sort, handleSort } = this.props;
-    const { surveyUnits } = data;
     const fieldsToSearch = ['city', 'interviewer', 'id'];
     const { pagination, displayedLines } = this.state;
     function handleSortFunct(property) { return () => { handleSort(property); }; }
@@ -131,7 +150,7 @@ class SUTable extends React.Component {
         <Row>
           <Col xs="12" className="text-right">
             <SearchField
-              data={surveyUnits}
+              data={data}
               searchBy={fieldsToSearch}
               updateFunc={(matchinglines) => this.updateLines(matchinglines)}
             />
@@ -146,7 +165,7 @@ class SUTable extends React.Component {
               {D.result}
               {displayedLines.length}
               /
-              {surveyUnits.length}
+              {data.length}
               &nbsp;
               {D.units}
             </span>

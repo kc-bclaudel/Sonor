@@ -393,3 +393,13 @@ button{
  .alert > p {
   margin-bottom: 0;
  }
+
+ a.TableLink, a.ButtonLink {
+  padding: 0 !important;
+ }
+ a.TableLink{
+  color: #212529 !important;
+ }
+ a:hover {
+  text-decoration: none !important;
+ }

@@ -1,4 +1,5 @@
 import D from '../i18n';
+import C from './constants.json';
 
 class Utils {
   static convertToDateString(timestamp, locales, options) {
@@ -144,6 +145,19 @@ class Utils {
     return this.formatForMonitoringTable(result);
   }
 
+  static getMonitoringTableModeFromPath(path) {
+    if (path.includes('/sites/')) {
+      return C.BY_SITE;
+    }
+    if (path.includes('/campaigns')) {
+      return C.BY_SURVEY;
+    }
+    if (path.includes('/interviewers')) {
+      return C.BY_INTERVIEWERS;
+    }
+    return C.BY_INTERVIEWER_ONE_SURVEY;
+  }
+
   static isVisible(survey, date) {
     let dateToUse = date || new Date().getTime();
     if (typeof dateToUse === 'string') {
@@ -153,6 +167,42 @@ class Utils {
       survey.visibilityStartDate < dateToUse
       && (!survey.treatmentEndDate || survey.treatmentEndDate > dateToUse)
     );
+  }
+
+  static handleSort(sortOn, data, sort, view, asc) {
+    let newOrder = asc;
+    if (asc === undefined) {
+      newOrder = sortOn !== sort.sortOn || !sort.asc;
+    }
+    let sortedData = {};
+    switch (view) {
+      case 'mainScreen':
+        sortedData = this.sortData(data, sortOn, newOrder);
+        break;
+      case 'campaignPortal':
+        Object.assign(sortedData, data);
+        sortedData.interviewers = this.sortData(data.interviewers, sortOn, newOrder);
+        break;
+      case 'monitoringTable':
+        Object.assign(sortedData, data);
+        sortedData.interviewersDetail = this.sortData(data.interviewersDetail, sortOn, newOrder);
+        break;
+      case 'review':
+        Object.assign(sortedData, data);
+        sortedData = this.sortData(data, sortOn, newOrder);
+        break;
+      case 'remind':
+        Object.assign(sortedData, data);
+        break;
+      case 'listSU':
+        sortedData = this.sortData(data, sortOn, newOrder);
+        break;
+      default:
+        Object.assign(sortedData, data);
+        break;
+    }
+
+    return [sortedData, { sortOn, asc: newOrder }];
   }
 }
 

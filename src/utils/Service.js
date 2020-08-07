@@ -79,7 +79,8 @@ class Service {
       })
       .catch((err) => {
         console.log(err);
-        cb({ count: null });// To be able to access campaign portal while API is unavailable (to remove after dev)
+        // To be able to access campaign portal while API is unavailable (to remove after dev)
+        cb({ count: null });
       });
   }
 

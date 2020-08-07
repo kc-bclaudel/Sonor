@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -6,55 +6,99 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
+import { Link, Redirect } from 'react-router-dom';
+import { NotificationManager } from 'react-notifications';
 import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
 import SurveySelector from '../SurveySelector/SurveySelector';
 import PaginationNav from '../PaginationNav/PaginationNav';
+import Utils from '../../utils/Utils';
 import D from '../../i18n';
 
 function Review({
-  survey, data, sort, handleSort, goToReview, validateSU, returnToMainScreen,
+  location, dataRetreiver, match,
 }) {
+  const { survey } = location;
+  const { id } = match.params;
+  const [data, setData] = useState([]);
+  const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [redirect, setRedirect] = useState(!survey && id ? '/' : null);
+
+  function fetchData() {
+    let surveyId = null;
+    if (survey) surveyId = survey.id;
+    dataRetreiver.getDataForReview(surveyId, (res) => {
+      setData(res);
+      setRedirect(null);
+    });
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [redirect]);
+
+  function validateSU(lstSUFinalized) {
+    dataRetreiver.finalizeSurveyUnits(lstSUFinalized)
+      .then((res) => {
+        if (res.status === 200 || res.status === 201 || res.status === 204) {
+          NotificationManager.success(`${D.reviewAlertSuccess}: ${lstSUFinalized.join(', ')}.`, D.updateSuccess, 3500);
+        } else {
+          NotificationManager.error(D.reviewAlertError, D.error, 3500);
+        }
+        fetchData();
+      });
+  }
+
+  function handleSort(property, asc) {
+    const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'review', asc);
+    setSort(newSort);
+    setData(sortedData);
+  }
+
   const surveyTitle = !survey
       || (<div className="SurveyTitle">{survey.label}</div>);
   const surveySelector = !survey
       || (
         <SurveySelector
           survey={survey}
-          updateFunc={(newSurvey) => goToReview(newSurvey)}
+          updateFunc={(newSurvey) => setRedirect({ pathname: `/review/${newSurvey.id}`, survey: newSurvey })}
         />
       );
-  return (
-    <div id="Review">
-      <Container fluid>
-        <Row>
-          <Col>
-            <Button className="YellowButton ReturnButton" onClick={() => returnToMainScreen()} data-testid="return-button">{D.back}</Button>
-          </Col>
-          <Col xs={6}>
-            {surveyTitle}
-          </Col>
-          <Col>
-            {surveySelector}
-          </Col>
-        </Row>
-      </Container>
-      <Card className="ViewCard">
-        <Card.Title>
-          {D.surveyUnitsToReview}
-          {data.length}
-        </Card.Title>
-        <ReviewTable
-          data={data}
-          sort={sort}
-          survey={survey}
-          handleSort={handleSort}
-          validateSU={validateSU}
-          goToReview={goToReview}
-        />
-      </Card>
-    </div>
-  );
+
+  return redirect
+    ? <Redirect to={redirect} />
+    : (
+      <div id="Review">
+        <Container fluid>
+          <Row>
+            <Col>
+              <Link to="/" className="ButtonLink">
+                <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+              </Link>
+            </Col>
+            <Col xs={6}>
+              {surveyTitle}
+            </Col>
+            <Col>
+              {surveySelector}
+            </Col>
+          </Row>
+        </Container>
+        <Card className="ViewCard">
+          <Card.Title>
+            {D.surveyUnitsToReview}
+            {data.length}
+          </Card.Title>
+          <ReviewTable
+            data={data}
+            sort={sort}
+            survey={survey}
+            handleSort={handleSort}
+            validateSU={validateSU}
+          />
+        </Card>
+      </div>
+    );
 }
 
 function displaySurveyLines({
@@ -84,7 +128,7 @@ class ReviewTable extends React.Component {
   constructor(props) {
     super(props);
     const checkboxArray = {};
-    props.data.listSU.forEach((element) => {
+    props.data.forEach((element) => {
       checkboxArray[element.id] = false;
     });
     this.state = {
@@ -92,18 +136,18 @@ class ReviewTable extends React.Component {
       checkboxArray,
       checkAll: false,
       show: false,
-      displayedLines: props.data.listSU,
+      displayedLines: props.data,
     };
   }
 
   componentDidUpdate(prevProps) {
     const { survey, data } = this.props;
     const checkboxArray = {};
-    if (prevProps.survey !== survey) {
-      data.listSU.forEach((element) => {
+    if (prevProps.survey !== survey || prevProps.data !== data) {
+      data.forEach((element) => {
         checkboxArray[element.id] = false;
       });
-      this.setState({ checkboxArray, checkAll: false });
+      this.setState({ checkboxArray, checkAll: false, displayedLines: data });
     }
   }
 
@@ -167,25 +211,24 @@ class ReviewTable extends React.Component {
   }
 
   render() {
-    const { sort, handleSort, data } = this.props;
+    const { sort, data, handleSort } = this.props;
     const {
       displayedLines, pagination, checkboxArray, checkAll, show,
     } = this.state;
-    const { listSU } = data;
     const fieldsToSearch = ['campaignLabel', 'interviewer', 'id'];
     const toggleCheckBox = (i) => { this.toggleCheckBox(i); };
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div>
         <Row>
-          <Col xs="6" >
+          <Col xs="6">
             <PaginationNav.SizeSelector
               updateFunc={(newPagination) => this.handlePageChange(newPagination)}
             />
           </Col>
           <Col xs="6" className="text-right">
             <SearchField
-              data={listSU}
+              data={data}
               searchBy={fieldsToSearch}
               updateFunc={(matchinglines) => this.updateLines(matchinglines)}
             />

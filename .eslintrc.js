@@ -24,6 +24,9 @@ module.exports = {
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "jsx-a11y/anchor-is-valid": 0,
+    "no-use-before-define": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-did-update-set-state": 0,
 
   },
 };
