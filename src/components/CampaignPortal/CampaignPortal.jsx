@@ -152,7 +152,7 @@ function Contacts() {
               <td className="LightGreyLine">Thierry Fabres</td>
             </tr>
             <tr>
-              <td className="LightGreyLine">06 23 55 88 22</td>
+              <td className="LightGreyLine">01 22 55 13 09</td>
             </tr>
           </tbody>
         </Table>
