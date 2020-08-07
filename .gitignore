@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /mocked_apis_server/node_modules
+/mocked_apis_server/dist
 
 # testing
 /coverage
