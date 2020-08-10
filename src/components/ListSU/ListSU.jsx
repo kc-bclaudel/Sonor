@@ -27,7 +27,7 @@ function ListSU({
       setSite(res.site);
       setRedirect(null);
     });
-  }, [redirect]);
+  }, [redirect, dataRetreiver, survey]);
 
   function handleSort(property, asc) {
     const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'listSU', asc);

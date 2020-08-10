@@ -36,7 +36,7 @@ function CampaignPortal({
       setData(res);
       setRedirect(null);
     });
-  }, [redirect]);
+  }, [redirect, dataRetreiver, survey]);
 
   function handleSort(property, asc) {
     const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'campaignPortal', asc);
@@ -135,24 +135,24 @@ function Contacts() {
         <Table className="CustomTable" bordered striped responsive size="sm">
           <tbody>
             <OverlayTrigger placement="top" overlay={renderTooltip}>
-              <tr className="Clickable" onClick={() => { window.location = 'mailto:gestion-enquete-mobilite@insee.fr'; }}>
+              <tr className="Clickable" onClick={() => { window.location = 'mailto:survey@mail.com'; }}>
                 <th>{D.functionalBox}</th>
-                <td className=" LightGreyLine">gestion-enquete-mobilite@insee.fr</td>
+                <td className=" LightGreyLine">survey@mail.com</td>
               </tr>
             </OverlayTrigger>
             <tr>
               <th rowSpan="2">{D.cpos}</th>
-              <td className="LightGreyLine">Chloé Berlin</td>
+              <td className="LightGreyLine">Chloé Dupont</td>
             </tr>
             <tr>
-              <td className="LightGreyLine">01 87 69 64 53</td>
+              <td className="LightGreyLine">01 01 01 01 01</td>
             </tr>
             <tr>
               <th rowSpan="2">{D.deputyCpos}</th>
               <td className="LightGreyLine">Thierry Fabres</td>
             </tr>
             <tr>
-              <td className="LightGreyLine">01 22 55 13 09</td>
+              <td className="LightGreyLine">02 01 01 01 01</td>
             </tr>
           </tbody>
         </Table>

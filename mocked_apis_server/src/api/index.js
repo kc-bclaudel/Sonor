@@ -1,7 +1,6 @@
 import { version } from '../../package.json';
 import { Router } from 'express';
 import facets from './facets';
-import test from './testWS.js';
 
 export default ({ config, db }) => {
 	let api = Router();
@@ -13,7 +12,7 @@ export default ({ config, db }) => {
 	api.get('/user', (req, res) => {
 		const mockResponse = {
 		    firstName:"Chloé",
-		    lastName:"Berlin",
+		    lastName:"Dupont",
 		    id: "USR1",
 		    organizationUnit: {
 			      "id": "OU-NATIONAL",
@@ -189,7 +188,7 @@ export default ({ config, db }) => {
 		    {
 		        id:"INTW5",
 		        interviewerFirstName: "Chloé",
-		        interviewerLastName: "Berlin",
+		        interviewerLastName: "Dupont",
 		        surveyUnitCount: 84,
 		    },
 		    {
@@ -219,7 +218,7 @@ export default ({ config, db }) => {
 		    {
 		        id:"INTW10",
 		        interviewerFirstName: "Renée",
-		        interviewerLastName: "Berlin",
+		        interviewerLastName: "Dupont",
 		        surveyUnitCount: 84,
 		    },
 		    {
@@ -237,8 +236,8 @@ export default ({ config, db }) => {
 	api.get('/campaign/:id/contacts', (req, res) => {
 
 		const mockResponse = {
-		    cpos_first_name:"Chloé Berlin",
-		    cpos_last_name:"Chloé Berlin",
+		    cpos_first_name:"Chloé Dupont",
+		    cpos_last_name:"Chloé Dupont",
 		    cpos_phone_number: "01 87 69 64 53",
 		    deputy_cpos_first_name: "Thierry",
 		    deputy_cpos_last_name: "Fabres",
@@ -260,7 +259,7 @@ export default ({ config, db }) => {
 		        interviewer : {
 		            id : "INTW5",
 		            firstName : "Chloé",
-		            lastName : "Berlin"
+		            lastName : "Dupont"
 		        }
 		    },
 		    {
@@ -282,7 +281,7 @@ export default ({ config, db }) => {
 		        interviewer : {
 		            id : "INTW5",
 		            firstName : "Chloé",
-		            lastName : "Berlin"
+		            lastName : "Dupont"
 		        }
 		    },
 		    {
@@ -304,7 +303,7 @@ export default ({ config, db }) => {
 		        interviewer : {
 		            id : "INTW5",
 		            firstName : "Chloé",
-		            lastName : "Berlin"
+		            lastName : "Dupont"
 		        }
 		    },
 		    {
@@ -326,7 +325,7 @@ export default ({ config, db }) => {
 		        interviewer : {
 		            id : "INTW5",
 		            firstName : "Chloé",
-		            lastName : "Berlin"
+		            lastName : "Dupont"
 		        }
 		    },
 		    {
@@ -348,7 +347,7 @@ export default ({ config, db }) => {
 		        interviewer : {
 		            id : "INTW5",
 		            firstName : "Chloé",
-		            lastName : "Berlin"
+		            lastName : "Dupont"
 		        }
 		    },
 		    {
@@ -392,7 +391,7 @@ export default ({ config, db }) => {
 		        interviewer : {
 		            id : "INTW5",
 		            firstName : "Chloé",
-		            lastName : "Berlin"
+		            lastName : "Dupont"
 		        }
 		    },
 		    {
@@ -414,7 +413,7 @@ export default ({ config, db }) => {
 		        interviewer : {
 		            id : "INTW5",
 		            firstName : "Chloé",
-		            lastName : "Berlin"
+		            lastName : "Dupont"
 		        }
 		    },
 		    {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -24,18 +24,18 @@ function Review({
   const [sort, setSort] = useState({ sortOn: null, asc: null });
   const [redirect, setRedirect] = useState(!survey && id ? '/' : null);
 
-  function fetchData() {
+  const fetchData = useCallback(() => {
     let surveyId = null;
     if (survey) surveyId = survey.id;
     dataRetreiver.getDataForReview(surveyId, (res) => {
       setData(res);
       setRedirect(null);
     });
-  }
+  }, [dataRetreiver, survey]);
 
   useEffect(() => {
     fetchData();
-  }, [redirect]);
+  }, [fetchData]);
 
   function validateSU(lstSUFinalized) {
     dataRetreiver.finalizeSurveyUnits(lstSUFinalized)

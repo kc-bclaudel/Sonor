@@ -1,6 +1,5 @@
 {
-  "PEARL_JAM_HOST": "http://localhost",
-  "PEARL_JAM_PORT": 7777,
+  "PEARL_JAM_URL": "http://localhost:7777",
 
   "AUTHENTICATION_MODE": "anonymous",
   "_AUTHENTICATION_MODE_COMMENT_": "Use 'keycloak' or 'anonymous'"

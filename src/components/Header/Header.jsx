@@ -105,10 +105,10 @@ function displayFirstSubMenu(toggle) {
   return (
     <ul className="dropdown-menu" onClick={() => toggle(false)}>
       <li>
-        <a className="selectedSubeMenu">
+        <span className="selectedSubeMenu">
           {D.surveys}
           <i className="fa fa-caret-right fa-xs subMenucaret" />
-        </a>
+        </span>
         <ul className="dropdown-menu sub-menu">
           <li>
             <Link to="/follow/campaigns" className="selectedSubeMenu">
@@ -118,10 +118,10 @@ function displayFirstSubMenu(toggle) {
         </ul>
       </li>
       <li>
-        <a id="selectedSubeMenu" className="selectedSubeMenu">
+        <span id="selectedSubeMenu" className="selectedSubeMenu">
           {D.interviewers}
           <i className="fa fa-caret-right fa-xs subMenucaret" />
-        </a>
+        </span>
         <ul className="dropdown-menu sub-menu" id="SecondDropdown">
           <li>
             <Link to="/follow/interviewers" className="selectedSubeMenu">

@@ -1,4 +1,4 @@
-const baseUrl = `${window.localStorage.getItem('PEARL_JAM_HOST')}:${window.localStorage.getItem('PEARL_JAM_PORT')}`;
+const baseUrl = `${window.localStorage.getItem('PEARL_JAM_URL')}`;
 
 class Service {
   constructor(token) {
