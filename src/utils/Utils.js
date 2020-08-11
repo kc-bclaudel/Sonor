@@ -6,6 +6,10 @@ class Utils {
     return new Date(timestamp).toLocaleDateString(locales, options);
   }
 
+  static convertMsToHoursMinutes(millis) {
+    var date = new Date(millis);
+    return date.getHours() + ":" + date.getMinutes();
+  }
   static calculateCompletionRate(data) {
     return (data.tbrCount + data.finCount) / data.total;
   }
@@ -193,6 +197,9 @@ class Utils {
         Object.assign(sortedData, data);
         break;
       case 'listSU':
+        sortedData = this.sortData(data, sortOn, newOrder);
+        break;
+      case 'terminated':
         sortedData = this.sortData(data, sortOn, newOrder);
         break;
       default:

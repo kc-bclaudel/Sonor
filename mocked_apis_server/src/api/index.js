@@ -433,6 +433,134 @@ export default ({ config, db }) => {
 		res.json(mockResponse);
 	});
 
+	api.get('/survey-units/:id/states', (req, res) => {
+
+		const mockResponse = [
+			{
+				id : 1, 
+				date : 1596188129587,
+				type : 'ANS',
+			},
+			{
+				id : 2, 
+				date : 1596120310000,
+				type : 'ANS',
+			},
+			{
+				id : 3, 
+				date : 1595657530000,
+				type : 'AOC',
+			},
+		]
+		
+
+		res.json(mockResponse);
+	});
+	
+	api.get('/campaign/:id/survey-units?state=FIN', (req, res) => {
+
+		const mockResponse = [
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            firstName : "Chloé",
+		            lastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            firstName : "Jacques",
+		            lastName : "Boulanger"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            firstName : "Chloé",
+		            lastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            firstName : "Jacques",
+		            lastName : "Boulanger"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            firstName : "Chloé",
+		            lastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            firstName : "Jacques",
+		            lastName : "Boulanger"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            firstName : "Chloé",
+		            lastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            firstName : "Jacques",
+		            lastName : "Boulanger"
+		        }
+		    }
+		]
+		
+		res.json(mockResponse);
+	});
+
 	api.get('/campaign/:id/survey-units/not-attributed', (req, res) => {
 
 		const mockResponse = {

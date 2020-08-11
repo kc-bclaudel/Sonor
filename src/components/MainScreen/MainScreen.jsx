@@ -142,6 +142,7 @@ function SurveyListLine({ lineData, allData }) {
   const followUp = { pathname: `/followUp/${data.id}`, survey };
   const monitoringTable = { pathname: `/follow/campaign/${data.id}`, survey };
   const monitoringTablebySite = { pathname: `/follow/sites/${data.id}`, survey };
+  const terminated = { pathname: `/terminated/${data.id}`, survey };
 
   const portal = {
     pathname: `/portal/${data.id}`,
@@ -200,7 +201,9 @@ function SurveyListLine({ lineData, allData }) {
         </Link>
       </td>
       <td>
-        {data.finalized}
+        <Link to={terminated} className="TableLink">
+          {data.finalized}
+        </Link>
       </td>
     </tr>
   );

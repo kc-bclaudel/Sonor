@@ -84,6 +84,24 @@ class Service {
       });
   }
 
+  getTerminatedByCampaign(campaignId, cb) {
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units?state=FIN`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+          cb(data);
+      })
+      .catch(console.log);
+  }
+    
+  getStatesBySurveyId(surveyId, cb) {
+    fetch(`${baseUrl}/api/survey-units/${surveyId}/states`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch(console.log);
+  }
+
   getTotalDemByCampaign(campaignId, cb) {
     fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count`, this.options)
       .then((res) => res.json())

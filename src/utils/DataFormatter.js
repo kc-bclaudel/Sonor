@@ -110,6 +110,33 @@ class DataFormatter {
     });
   }
 
+  getListSuTerminated(campaignId, cb) {
+    return new Promise((resolve) => {
+      let processedData = [];
+      this.service.getTerminatedByCampaign(campaignId, (data) => {
+        processedData = data.map((intData) => {
+          const line = {};
+          Object.assign(line, intData);
+          line.interviewerFirstName =
+          intData.interviewer.firstName;
+          line.interviewerLastName = intData.interviewer.lastName;
+          return line;
+        });
+        if (cb) { cb(processedData);}
+            resolve(processedData);
+        });
+    });
+  }
+    
+  getStatesSurvey(surveyId, cb) {
+    return new Promise((resolve) => {
+      this.service.getStatesBySurveyId(surveyId, (data) => {
+        if (cb) { cb(data); }
+          resolve(data);
+        });
+    });
+  }
+
   getListSUToReview(surveyId) {
     return new Promise((resolve) => {
       this.service.getSurveys((res) => {
