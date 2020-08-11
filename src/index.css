@@ -1,0 +1,405 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+html{
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+
+  background-color: #0f417a !important;
+  background-image: url("/static/images/logo-insee-fond.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 600px auto;
+}
+.CustomTable{
+  font-size: 13px;
+}
+
+.ReturnButton{
+  margin-left: 20px;
+  /* position: absolute; */
+}
+
+
+.ViewCard{
+  padding:20px;
+  margin:10px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+#App-header{
+  background: rgb(245,245,245);
+  /* border-bottom: 3px solid #0084ff; */
+  margin-bottom: 28px;
+  position:sticky;
+  top:0;
+  right:0;
+  width:100%;
+  z-index: 2;
+
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+
+
+
+
+
+
+
+  /* background-color: #0f417a;
+  background-image: url("/logo-insee-fond.png");
+  background-repeat: no-repeat;
+  background-position: center 35px;
+  background-size: 600px auto; */
+
+
+}
+
+
+.RedButton{
+  background: rgb(140,6,46);
+  color: rgb(254,195,45);
+}
+
+.YellowButton{
+  background: rgb(254,195,45);
+  color: rgb(140,6,46);
+}
+.HeaderButton{
+  margin:3px 5px 3px 0;
+}
+
+.HeaderDocLink{
+  display: inline-block;
+  vertical-align: middle;
+  color:#007bff;
+  margin-top: 6px;
+}
+
+.HeaderDocLink:hover{
+  color:#0069d9;
+}
+
+
+.YellowHaderButton{
+  color: rgb(19,66,120) !important;
+  background-color: rgb(254,195,45) !important;
+  border-color: #007bff !important;
+}
+#UserZone{
+  float:right;
+  padding:10px;
+  margin:10px;
+  min-width: 310px;
+  background-color: antiquewhite;
+}
+
+#InseeLogo{
+  max-height: 100px;
+  margin:10px 10px 0px 10px;
+}
+
+#SurveyList{
+  border:none !important
+}
+#SurveyListTitle{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px
+}
+
+.Title{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px
+}
+
+th{
+  background: rgb(19,66,120);
+  color: rgb(240,196,46);
+  position:relative;
+  word-wrap: normal;
+}
+
+th.YellowHeader{
+  background: rgb(240,196,46);
+  color: rgb(19,66,120);
+}
+
+.ColumnSpacing{
+  width: 8px;
+  background: white !important;
+  border:none !important;
+}
+
+
+/* .DarkgreyLine{
+  background: rgb(202,202,202);
+  color: rgb(84,91,153);
+}
+
+.LightGreyLine{
+  background: rgb(239,239,239);
+  color: rgb(84,91,153);
+} */
+
+.SurveyTitle{
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(254,195,45);
+  margin:auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#PhaseDisplay{
+  position: relative;
+  width: 100%;
+  margin-left:1.5%;
+}
+
+#PhaseDisplay div{
+  border: 2px solid black;
+  position: relative;
+  display: inline-block;
+  width:32%;
+  text-align: center;
+
+}
+
+.CurrentPhase {
+  background: rgb(249,191,63);
+  color: rgb(19,66,120);
+}
+
+#PhaseMilestones{
+  position: relative;
+  width: 100%;
+  margin-left:1.5%;
+  white-space: nowrap;
+}
+
+#PhaseMilestones div{
+  position: relative;
+  display: inline-flex;
+  margin: auto;
+  width:32%;
+ 
+}
+
+#PhaseMilestones div.DateCenter{
+  text-indent: -32px;
+}
+
+#PhaseMilestones div.DateRight{
+  text-indent: -72px;
+}
+
+#PhaseMilestones div.LabelCenter{
+  text-indent: -50px;
+}
+
+#PhaseMilestones div.LabelRight{
+  text-indent: -110px;
+}
+
+#TimeLine{
+  position: relative;
+}
+
+#SurveyPortalView{
+ position: relative;
+ margin:5%;
+}
+
+#Contacts{
+  position: absolute;
+
+}
+
+
+
+#SUTable{
+
+}
+
+button{
+  cursor: pointer;
+}
+
+.Clickable{
+  cursor: pointer;
+}
+
+.Clickable:hover{
+  /* color: blue; */
+}
+
+#datePicker{
+  display:inline;
+}
+
+#dateDisplay{
+  
+}
+
+.DateDisplay{
+  display: inline;
+}
+
+
+@media (max-width: 830px) {
+  #InseeLogo {
+      display:none;
+  }
+}
+
+#headerButtonContainer{
+  position: absolute;
+  bottom: 20px;
+}
+
+.paginationNav{
+  position: absolute;
+  right:0;
+  top: 0;
+}
+
+.tableOptionsWrapper{
+  position: relative;
+  min-height:30px;
+}
+
+#searchParametersContainer{
+  height: 30px;
+  margin-bottom:5px;
+}
+
+#searchParametersContainerCP{
+  height: 30px;
+  margin-bottom:5px;
+}
+
+#searchParametersContainerCP .SearchFieldInput{
+  width:105px;
+}
+
+.PageSizeSelector{
+  display: inline-block;
+  width: 60px;
+}
+
+.sortIcon{
+  float: right;
+  position:relative;
+  margin-bottom: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+.sortIconDown{
+  position:absolute;
+  top:4px;
+}
+.sortIconUp{
+  position:absolute;
+  top: -3px;
+}
+
+.iconInactive{
+  opacity: 0.4;
+}
+
+.PreferenceCheckbox{
+  padding: 0 20px 0 15px
+}
+
+.PreferenceRow {
+  height: 28px;
+}
+
+#AlertContainer{
+  position: fixed;
+  left: 10px;
+  top: 3px;
+  z-index: 2;
+  width: 70%;
+  height: 500px;
+  pointer-events: none;
+}
+
+.alert {
+  pointer-events: auto;
+  margin-bottom: 5px !important;
+
+ }
+
+ .alert > p {
+  margin-bottom: 0;
+ }
+
+ a.TableLink, a.ButtonLink {
+  padding: 0 !important;
+ }
+ a.TableLink{
+  color: #212529 !important;
+ }
+ a:hover {
+  text-decoration: none !important;
+ }

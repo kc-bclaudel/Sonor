@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mainscreen rendering, 2 surveys 1`] = `
+<div
+  id="MainScreen"
+>
+  <div
+    id="SurveyListTitle"
+  >
+    Liste des enquêtes
+  </div>
+  <table
+    id="SurveyList"
+  >
+    <thead>
+      <tr>
+        <th
+          rowSpan="2"
+        >
+          Enquête
+        </th>
+        <th
+          className="ColumnSpacing"
+          rowSpan="2"
+        />
+        <th
+          rowSpan="2"
+        >
+          Début collecte
+        </th>
+        <th
+          rowSpan="2"
+        >
+          Fin collecte 
+        </th>
+        <th
+          rowSpan="2"
+        >
+          Fin traitement
+        </th>
+        <th
+          className="ColumnSpacing"
+          rowSpan="2"
+        />
+        <th
+          rowSpan="2"
+        >
+          Phase
+        </th>
+        <th
+          className="ColumnSpacing"
+          rowSpan="2"
+        />
+        <th
+          colSpan="4"
+        >
+          Unités enquêtées
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Confiées
+        </th>
+        <th>
+          À affecter
+        </th>
+        <th>
+          En cours
+        </th>
+        <th>
+          À controler
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="DarkgreyLine"
+      >
+        <td
+          className="Clickable"
+          data-testid="campaign-label"
+          onClick={[Function]}
+        >
+          Mobilité des personnes 2018
+        </td>
+        <td
+          className="ColumnSpacing"
+        />
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          15/10/2019
+        </td>
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          15/10/2019
+        </td>
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          15/10/2019
+        </td>
+        <td
+          className="ColumnSpacing"
+        />
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          Collecte en cours
+        </td>
+        <td
+          className="ColumnSpacing"
+        />
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          108
+        </td>
+        <td>
+          0
+        </td>
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          99
+        </td>
+        <td>
+          0
+        </td>
+      </tr>
+      <tr
+        className="LightGreyLine"
+      >
+        <td
+          className="Clickable"
+          data-testid="campaign-label"
+          onClick={[Function]}
+        >
+          Habitudes de vie 2019
+        </td>
+        <td
+          className="ColumnSpacing"
+        />
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          07/01/2019
+        </td>
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          12/03/2019
+        </td>
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          17/11/2019
+        </td>
+        <td
+          className="ColumnSpacing"
+        />
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          Collecte en cours
+        </td>
+        <td
+          className="ColumnSpacing"
+        />
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          134
+        </td>
+        <td>
+          21
+        </td>
+        <td
+          className="Clickable"
+          onClick={[Function]}
+        >
+          55
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Mainscreen rendering, no data 1`] = `
+<div
+  id="MainScreen"
+>
+  <div
+    id="SurveyListTitle"
+  >
+    Liste des enquêtes
+  </div>
+  <table
+    id="SurveyList"
+  >
+    <thead>
+      <tr>
+        <th
+          rowSpan="2"
+        >
+          Enquête
+        </th>
+        <th
+          className="ColumnSpacing"
+          rowSpan="2"
+        />
+        <th
+          rowSpan="2"
+        >
+          Début collecte
+        </th>
+        <th
+          rowSpan="2"
+        >
+          Fin collecte 
+        </th>
+        <th
+          rowSpan="2"
+        >
+          Fin traitement
+        </th>
+        <th
+          className="ColumnSpacing"
+          rowSpan="2"
+        />
+        <th
+          rowSpan="2"
+        >
+          Phase
+        </th>
+        <th
+          className="ColumnSpacing"
+          rowSpan="2"
+        />
+        <th
+          colSpan="4"
+        >
+          Unités enquêtées
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Confiées
+        </th>
+        <th>
+          À affecter
+        </th>
+        <th>
+          En cours
+        </th>
+        <th>
+          À controler
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
