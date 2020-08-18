@@ -7,9 +7,10 @@ class Utils {
   }
 
   static convertMsToHoursMinutes(millis) {
-    var date = new Date(millis);
-    return date.getHours() + ":" + date.getMinutes();
+    const date = new Date(millis);
+    return `${date.getHours()}:${date.getMinutes()}`;
   }
+
   static calculateCompletionRate(data) {
     return (data.tbrCount + data.finCount) / data.total;
   }
@@ -132,15 +133,11 @@ class Utils {
 
   static getStateCountSum(data) {
     const result = {};
-
     data.forEach((elm) => {
-      if (Object.keys(result).length < 1) {
-        Object.assign(result, elm.stateCount);
-      }
       Object.keys(elm.stateCount)
         .filter((key) => !isNaN(elm.stateCount[key]))
         .forEach((key) => {
-          result[key] += elm.stateCount[key];
+          result[key] = (result[key] + elm.stateCount[key]) || elm.stateCount[key];
         });
     });
 

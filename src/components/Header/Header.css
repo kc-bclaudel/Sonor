@@ -6,7 +6,7 @@
     margin: 0 !important;
 
 }
-a {
+li>span, a {
     position: relative;
     display: block;
     padding: 0 16px;

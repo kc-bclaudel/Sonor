@@ -5,7 +5,7 @@ function getMatchingLines(data, searchBy, str) {
   const s = str.toLowerCase().split(' ');
 
   const matchingLines = data.filter((line) => {
-    const toSearch = searchBy.map((fieldName) => line[fieldName].toLowerCase());
+    const toSearch = searchBy.map((fieldName) => (line[fieldName] ? line[fieldName].toLowerCase() : ''));
     return (!s.some((word) => !toSearch.some((field) => field.includes(word))));
   });
   return matchingLines;

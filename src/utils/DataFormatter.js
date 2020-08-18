@@ -67,13 +67,13 @@ class DataFormatter {
       });
     });
     const p2 = new Promise((resolve) => {
-      this.service.getSurveyUnits(surveyId, (res) => {
+      this.service.getSurveyUnits(surveyId, null, (res) => {
         const processedData = res.map((su) => ({
           id: su.id,
           ssech: su.ssech,
           departement: su.location,
           city: su.city,
-          interviewer: `${su.interviewer.lastName} ${su.interviewer.firstName}`,
+          interviewer: `${su.interviewer.interviewerLastName} ${su.interviewer.interviewerFirstName}`,
           idep: su.interviewer.id,
         }));
         resolve(processedData);
@@ -92,7 +92,15 @@ class DataFormatter {
 
   finalizeSurveyUnits(suToFinalize, cb) {
     return new Promise((resolve) => {
-      this.service.putSurveyUnitsToValidate(suToFinalize, (data) => {
+      const promises = suToFinalize.map((su) => (
+        new Promise((resolve2) => {
+          this.service.putSurveyUnitToValidate(su, (data) => {
+            resolve2(data);
+          });
+        })
+      ));
+
+      Promise.all(promises).then((data) => {
         if (cb) {
           cb(data);
         }
@@ -117,23 +125,22 @@ class DataFormatter {
         processedData = data.map((intData) => {
           const line = {};
           Object.assign(line, intData);
-          line.interviewerFirstName =
-          intData.interviewer.firstName;
+          line.interviewerFirstName = intData.interviewer.firstName;
           line.interviewerLastName = intData.interviewer.lastName;
           return line;
         });
-        if (cb) { cb(processedData);}
-            resolve(processedData);
-        });
+        if (cb) { cb(processedData); }
+        resolve(processedData);
+      });
     });
   }
-    
+
   getStatesSurvey(surveyId, cb) {
     return new Promise((resolve) => {
       this.service.getStatesBySurveyId(surveyId, (data) => {
-        if (cb) { cb(data); }
-          resolve(data);
-        });
+        if (cb) { cb(data.states); }
+        resolve(data.states);
+      });
     });
   }
 
@@ -143,10 +150,10 @@ class DataFormatter {
         const promises = res.filter((campaign) => (surveyId === null || campaign.id === surveyId))
           .map((campaign) => (
             new Promise((resolve2) => {
-              this.service.getSurveyUnits(campaign.id, (res2) => {
+              this.service.getSurveyUnits(campaign.id, 'TBR', (res2) => {
                 const lstSU = res2.map((su) => ({
                   campaignLabel: campaign.label,
-                  interviewer: `${su.interviewer.lastName} ${su.interviewer.firstName}`,
+                  interviewer: `${su.interviewer.interviewerLastName} ${su.interviewer.interviewerFirstName}`,
                   idep: su.interviewer.id,
                   id: su.id,
                 }))
@@ -219,7 +226,7 @@ class DataFormatter {
       p1 = new Promise((resolve) => {
         const promises = surveysToGetInterviewersFrom.map((surv) => (
           new Promise((resolve2) => {
-            this.service.getInterviewers(survey, (res) => {
+            this.service.getInterviewers(surv.id, (res) => {
               res.forEach((interviewer) => {
                 Utils.addIfNotAlreadyPresent(interviewers, interviewer);
               });
@@ -244,25 +251,27 @@ class DataFormatter {
 
     if (mode === BY_INTERVIEWER_ONE_SURVEY || mode === BY_SITE) {
       const p2 = new Promise((resolve) => {
-        this.service.getStateCount(survey, date, (data) => {
+        this.service.getStateCount(survey.id, date, (data) => {
           if (mode === BY_INTERVIEWER_ONE_SURVEY) {
             this.service.getUser((userInfo) => {
               const userOUs = userInfo.localOrganizationUnits.map((x) => x.id);
-              const demStateCounts = data.organizationunits
+              const demStateCounts = data.organizationUnits
                 .filter((dem) => userOUs.includes(dem.idDem))
                 .map((dem) => ({ stateCount: dem }));
               const totalDem = Utils.getStateCountSum(demStateCounts);
-              const totalFrance = Utils.formatForMonitoringTable(data.France);
+              const totalFrance = Utils.formatForMonitoringTable(data.france);
               resolve({ dem: totalDem, france: totalFrance });
             });
           }
           if (mode === BY_SITE) {
-            const demDatas = data.organizationunits.map((dem) => {
-              const demToPush = Utils.formatForMonitoringTable(dem);
-              demToPush.site = dem.idDem;
-              return demToPush;
-            });
-            const totalFrance = Utils.formatForMonitoringTable(data.France);
+            const demDatas = data.organizationUnits
+              .filter((dem) => dem.total != null)
+              .map((dem) => {
+                const demToPush = Utils.formatForMonitoringTable(dem);
+                demToPush.site = dem.idDem;
+                return demToPush;
+              });
+            const totalFrance = Utils.formatForMonitoringTable(data.france);
             resolve({ dem: demDatas, france: totalFrance });
           }
         });
@@ -318,7 +327,7 @@ class DataFormatter {
       this.service.getTotalDemByCampaign(campaignId, (data) => {
         this.service.getUser((userInfo) => {
           const userOUs = userInfo.localOrganizationUnits.map((x) => x.id);
-          const demStateCounts = data.organizationunits
+          const demStateCounts = data.organizationUnits
             .filter((dem) => userOUs.includes(dem.idDem))
             .map((dem) => ({ stateCount: dem }));
           const totalDem = Utils.getStateCountSum(demStateCounts);

@@ -96,6 +96,16 @@ const monitoringTable = {
 		"fr": "Site",
 		"en": "Site"
 	}
+	,
+	"firstName":{
+		"fr": "Prénom",
+		"en": "First name"
+	}
+	,
+	"lastName":{
+		"fr": "Nom",
+		"en": "Last name"
+	}
 }
 
 export default monitoringTable;
