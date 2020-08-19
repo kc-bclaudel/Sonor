@@ -26,7 +26,7 @@ function FollowUpTableLine({ data }) {
       <td>{interviewerName || survey || site}</td>
       <td className="ColumnSpacing" />
       <td>
-        {(Math.round(completionRate * 1000) / 1000) * 100}
+        {(completionRate * 100).toFixed(1)}
         %
       </td>
       <td className="ColumnSpacing" />

@@ -13,7 +13,7 @@ function FollowUpTable({
       <th>{D.totalDEM}</th>
       <th className="ColumnSpacing" />
       <th className="YellowHeader">
-        {(Math.round(data.total.dem.completionRate * 1000) / 1000) * 100}
+        {(data.total.dem.completionRate * 100).toFixed(1)}
         %
       </th>
       <th className="ColumnSpacing" />
@@ -38,7 +38,7 @@ function FollowUpTable({
         <th>{D.totalFrance}</th>
         <th className="ColumnSpacing" />
         <th className="YellowHeader">
-          {(Math.round(data.total.france.completionRate * 1000) / 1000) * 100}
+          {(data.total.france.completionRate * 100).toFixed(1)}
           %
         </th>
         <th className="ColumnSpacing" />
@@ -137,7 +137,7 @@ function FollowUpTable({
             (pagination.page - 1) * pagination.size,
             Math.min(pagination.page * pagination.size, displayedLines.length),
           )
-          .map((line) => (<FollowUpTableLine data={line} />))}
+          .map((line) => (<FollowUpTableLine key={line.interviewerId || line.survey || line.site} data={line} />))}
       </tbody>
       {tableFooter}
     </Table>

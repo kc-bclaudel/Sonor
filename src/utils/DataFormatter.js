@@ -268,7 +268,7 @@ class DataFormatter {
               .filter((dem) => dem.total != null)
               .map((dem) => {
                 const demToPush = Utils.formatForMonitoringTable(dem);
-                demToPush.site = dem.idDem;
+                demToPush.site = dem.labelDem;
                 return demToPush;
               });
             const totalFrance = Utils.formatForMonitoringTable(data.france);

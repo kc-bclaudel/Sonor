@@ -637,7 +637,8 @@ export default ({ config, db }) => {
 					{
 				    organizationUnits: [
 				        {
-				        idDem: 'OU-SOUTH',
+                idDem: 'OU-SOUTH',
+                labelDem: "South region organizational unit",
 				        isLocal: true,
 				        nnsCount : 22,
 				        ansCount : day,
@@ -655,7 +656,8 @@ export default ({ config, db }) => {
 				        total : 104
 				        },
 				        {
-				        idDem: 'OU-NORTH',
+                idDem: 'OU-NORTH',
+                labelDem: "North region organizational unit",
 				        isLocal: true,
 				        nnsCount : 22,
 				        ansCount : day,
@@ -673,7 +675,8 @@ export default ({ config, db }) => {
 				        total : 104
 				        },
 				        {
-				        idDem: 'OU-NATIONAL',
+                idDem: 'OU-NATIONAL',
+                labelDem: "National organizational unit",
 				        isLocal: false,
 				        nnsCount : 22,
 				        ansCount : day,

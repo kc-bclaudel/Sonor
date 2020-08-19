@@ -266,7 +266,7 @@ function getFooterForExport(data, mode) {
       D.totalDEM,
       '',
       '',
-      `${(Math.round(data.total.dem.completionRate * 1000) / 1000) * 100}%`,
+      `${(data.total.dem.completionRate * 100).toFixed(1)}%`,
       data.total.dem.total,
       data.total.dem.notStarted,
       data.total.dem.onGoing,
@@ -282,7 +282,7 @@ function getFooterForExport(data, mode) {
   if (mode === C.BY_INTERVIEWER_ONE_SURVEY || mode === C.BY_SITE) {
     footer.push([
       mode === C.BY_INTERVIEWER_ONE_SURVEY ? [D.totalFrance, '', ''] : D.totalFrance,
-      `${(Math.round(data.total.france.completionRate * 1000) / 1000) * 100}%`,
+      `${(data.total.france.completionRate * 100).toFixed(1)}%`,
       data.total.france.total,
       data.total.france.notStarted,
       data.total.france.onGoing,
@@ -306,7 +306,7 @@ function getBodyForExport(data) {
         : null
       )
       || elm.survey || elm.site,
-      `${(Math.round(elm.completionRate * 1000) / 1000) * 100}%`,
+      `${(elm.completionRate * 100).toFixed(1)}%`,
       elm.total,
       elm.notStarted,
       elm.onGoing,
