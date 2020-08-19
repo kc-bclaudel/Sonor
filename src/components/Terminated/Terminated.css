@@ -1,0 +1,8 @@
+.HistoryDisplayIcon{
+  padding-left: 5px;
+}
+
+#TerminatedTableContainer, #StateHistoryTableContainer{
+  width: -webkit-fill-available;
+}
+

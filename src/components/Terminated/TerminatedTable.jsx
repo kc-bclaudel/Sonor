@@ -49,54 +49,59 @@ class TerminatedTable extends React.Component {
     });
   }
 
-  surveyListLine(key, lineData) {
-    const data = lineData;
+  surveyListLine(data, survey) {
     return (
-      <tr key={key}>
+      <tr key={data.id}>
         <td className="Clickable" data-testid="campaign-label">{data.id}</td>
-        <td className="Clickable">{data.campaignLabel}</td>
-        <td className="Clickable">{data.interviewer.lastName} {data.interviewer.firstName}</td>
+        <td className="Clickable">{survey.label}</td>
+        <td className="Clickable">{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
         <td className="Clickable">
           <i className="fa fa-pencil" aria-hidden="true" onClick={() => { window.open('', '_blank'); }} />
           <span />
-          <i className="fa fa-history" aria-hidden="true" style={{'padding-left': '5px'}} onClick={(e) => { this.toggleStateHistoryTable(e, data.id);}} />
+          <i className="fa fa-history HistoryDisplayIcon" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
         </td>
       </tr>
     );
   }
 
   displayStateHistoryTable(toggle, lineData) {
+    const { stateId } = this.state;
     if (toggle) {
       return (
-        <div style={{'width': '-webkit-fill-available'}}>
+        <div id="StateHistoryTableContainer">
           <Card.Title>
-            <i class="fa fa-times fa-sm Clickable" onClick={() => { this.hideStateHistoryTable(); }} />
-            {D.titleStateSu}{this.state.stateId}
+            <i
+              className="fa fa-times fa-sm Clickable"
+              role="button"
+              tabIndex={0}
+              onClick={() => { this.hideStateHistoryTable(); }}
+            />
+            {`${D.titleStateSu}${stateId}`}
           </Card.Title>
-            <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
-              <thead>
-                  <tr>
-                    <th rowSpan="2">
-                      {D.stateSuDate}
-                    </th>
-                    <th rowSpan="2">
-                      {D.stateSuHour}
-                    </th>
-                    <th rowSpan="2">
-                      {D.stateSuState}
-                    </th>
-                  </tr>
-              </thead>
-              <tbody>
-                {lineData.map((data) => (
-                  <tr key={data.id}>
-                    <td className="Clickable" data-testid="campaign-label">{Utils.convertToDateString(data.date)}</td>
-                    <td className="Clickable">{Utils.convertMsToHoursMinutes(data.date)}</td>
-                    <td className="Clickable">{data.type}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
+          <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
+            <thead>
+              <tr>
+                <th rowSpan="2">
+                  {D.stateSuDate}
+                </th>
+                <th rowSpan="2">
+                  {D.stateSuHour}
+                </th>
+                <th rowSpan="2">
+                  {D.stateSuState}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {lineData.map((data) => (
+                <tr key={data.id}>
+                  <td className="Clickable" data-testid="campaign-label">{Utils.convertToDateString(data.date)}</td>
+                  <td className="Clickable">{Utils.convertMsToHoursMinutes(data.date)}</td>
+                  <td className="Clickable">{data.type}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         </div>
       );
     }
@@ -104,8 +109,12 @@ class TerminatedTable extends React.Component {
   }
 
   render() {
-    const { pagination, displayData, stateData } = this.state;
-    const { data, handleSort, sort } = this.props;
+    const {
+      pagination, displayData, stateData, toggleStateHistory,
+    } = this.state;
+    const {
+      data, survey, handleSort, sort,
+    } = this.props;
     const fieldsToSearch = ['interviewerFirstName', 'interviewerLastName', 'id'];
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
@@ -124,7 +133,7 @@ class TerminatedTable extends React.Component {
             />
           </Col>
         </Row>
-        <div style={{'width': '-webkit-fill-available'}}>
+        <div id="TerminatedTableContainer">
           <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
             <thead>
               <tr>
@@ -152,7 +161,7 @@ class TerminatedTable extends React.Component {
                   Math.min(pagination.page * pagination.size, displayData.length),
                 )
                 .map((line) => (
-                  this.surveyListLine(line.id, line)
+                  this.surveyListLine(line, survey)
                 ))}
             </tbody>
           </Table>
@@ -164,7 +173,7 @@ class TerminatedTable extends React.Component {
             />
           </div>
         </div>
-        {this.displayStateHistoryTable(this.state.toggleStateHistory, stateData)}
+        {this.displayStateHistoryTable(toggleStateHistory, stateData)}
       </div>
     );
   }
