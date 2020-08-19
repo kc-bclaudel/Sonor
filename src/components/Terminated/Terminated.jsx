@@ -9,6 +9,7 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import TerminatedTable from './TerminatedTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
+import './Terminated.css';
 
 function Terminated({
   location, dataRetreiver, match,
