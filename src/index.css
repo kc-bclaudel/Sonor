@@ -308,6 +308,9 @@ button{
   #InseeLogo {
       display:none;
   }
+  #appVersion {
+    display:none;
+}
 }
 
 #headerButtonContainer{

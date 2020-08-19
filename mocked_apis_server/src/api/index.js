@@ -258,8 +258,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW5",
-		            firstName : "Chloé",
-		            lastName : "Dupont"
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Dupont"
 		        }
 		    },
 		    {
@@ -269,8 +269,8 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW6",
-		            firstName : "Jacques",
-		            lastName : "Boulanger"
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
 		        }
 		    },
 		    {
@@ -280,8 +280,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW5",
-		            firstName : "Chloé",
-		            lastName : "Dupont"
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Dupont"
 		        }
 		    },
 		    {
@@ -291,8 +291,8 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW6",
-		            firstName : "Jacques",
-		            lastName : "Boulanger"
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
 		        }
 		    },
 		    {
@@ -302,8 +302,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW5",
-		            firstName : "Chloé",
-		            lastName : "Dupont"
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Dupont"
 		        }
 		    },
 		    {
@@ -313,8 +313,8 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW6",
-		            firstName : "Jacques",
-		            lastName : "Boulanger"
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
 		        }
 		    },
 		    {
@@ -324,8 +324,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW5",
-		            firstName : "Chloé",
-		            lastName : "Dupont"
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Dupont"
 		        }
 		    },
 		    {
@@ -335,8 +335,8 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW7",
-		            firstName : "Thierry",
-		            lastName : "Fabres"
+		            interviewerFirstName : "Thierry",
+		            interviewerLastName : "Fabres"
 		        }
 		    },
 		    {
@@ -346,8 +346,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW5",
-		            firstName : "Chloé",
-		            lastName : "Dupont"
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Dupont"
 		        }
 		    },
 		    {
@@ -357,8 +357,8 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW6",
-		            firstName : "Jacques",
-		            lastName : "Boulanger"
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
 		        }
 		    },
 		    {
@@ -368,8 +368,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW7",
-		            firstName : "Thierry",
-		            lastName : "Fabres"
+		            interviewerFirstName : "Thierry",
+		            interviewerLastName : "Fabres"
 		        }
 		    },
 		    {
@@ -379,8 +379,8 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW6",
-		            firstName : "Jacques",
-		            lastName : "Boulanger"
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
 		        }
 		    },
 		    {
@@ -390,8 +390,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW5",
-		            firstName : "Chloé",
-		            lastName : "Dupont"
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Dupont"
 		        }
 		    },
 		    {
@@ -401,8 +401,8 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW6",
-		            firstName : "Jacques",
-		            lastName : "Boulanger"
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
 		        }
 		    },
 		    {
@@ -412,8 +412,8 @@ export default ({ config, db }) => {
 		        city : "MONTMORENCY",
 		        interviewer : {
 		            id : "INTW5",
-		            firstName : "Chloé",
-		            lastName : "Dupont"
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Dupont"
 		        }
 		    },
 		    {
@@ -423,13 +423,144 @@ export default ({ config, db }) => {
 		        city : "BELFORT",
 		        interviewer : {
 		            id : "INTW6",
-		            firstName : "Jacques",
-		            lastName : "Boulanger"
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
 		        }
 		    }
 		]
 		
 
+		res.json(mockResponse);
+	});
+
+	api.get('/survey-unit/:id/states', (req, res) => {
+
+		const mockResponse = {
+      id: 'ue432',
+      states: [
+        {
+          id : 1, 
+          date : 1596188129587,
+          type : 'ANS',
+        },
+        {
+          id : 2, 
+          date : 1596120310000,
+          type : 'ANS',
+        },
+        {
+          id : 3, 
+          date : 1595657530000,
+          type : 'AOC',
+        },
+      ]
+    }
+		
+
+		res.json(mockResponse);
+	});
+	
+	api.get('/campaign/:id/survey-units?state=FIN', (req, res) => {
+
+		const mockResponse = [
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "1023",
+		        ssech : "hgSkR29",
+		        location : "95160",
+		        city : "MONTMORENCY",
+		        interviewer : {
+		            id : "INTW5",
+		            interviewerFirstName : "Chloé",
+		            interviewerLastName : "Berlin"
+		        }
+		    },
+		    {
+				campaignLabel : "simpsons2020x00",
+		        id : "4811",
+		        ssech : "dlcB55jdf",
+		        location : "90000",
+		        city : "BELFORT",
+		        interviewer : {
+		            id : "INTW6",
+		            interviewerFirstName : "Jacques",
+		            interviewerLastName : "Boulanger"
+		        }
+		    }
+		]
+		
 		res.json(mockResponse);
 	});
 
@@ -504,9 +635,10 @@ export default ({ config, db }) => {
 
 		const mockResponse = 
 					{
-				    organizationunits: [
+				    organizationUnits: [
 				        {
-				        idDem: 'OU-SOUTH',
+                idDem: 'OU-SOUTH',
+                labelDem: "South region organizational unit",
 				        isLocal: true,
 				        nnsCount : 22,
 				        ansCount : day,
@@ -524,7 +656,8 @@ export default ({ config, db }) => {
 				        total : 104
 				        },
 				        {
-				        idDem: 'OU-NORTH',
+                idDem: 'OU-NORTH',
+                labelDem: "North region organizational unit",
 				        isLocal: true,
 				        nnsCount : 22,
 				        ansCount : day,
@@ -542,7 +675,8 @@ export default ({ config, db }) => {
 				        total : 104
 				        },
 				        {
-				        idDem: 'OU-NATIONAL',
+                idDem: 'OU-NATIONAL',
+                labelDem: "National organizational unit",
 				        isLocal: false,
 				        nnsCount : 22,
 				        ansCount : day,
@@ -560,7 +694,7 @@ export default ({ config, db }) => {
 				        total : 104
 				        }
 				    ],
-				    France: {
+				    france: {
 				        nnsCount : 22,
 				        ansCount : 22,
 				        vicCount : month,

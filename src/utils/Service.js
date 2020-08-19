@@ -12,12 +12,11 @@ class Service {
     }
   }
 
-  putSurveyUnitsToValidate(suToFinalize, cb) {
+  putSurveyUnitToValidate(su, cb) {
     const options = {};
     Object.assign(options, this.options);
     options.method = 'PUT';
-    options.body = JSON.stringify(suToFinalize);
-    fetch(`${baseUrl}/api/survey-units/state/FIN`, this.options)
+    fetch(`${baseUrl}/api/survey-unit/${su}/state/FIN`, options)
       .then((res) => cb(res))
       .catch(console.log);
   }
@@ -27,7 +26,7 @@ class Service {
     Object.assign(options, this.options);
     options.method = 'PUT';
     options.body = JSON.stringify(preferences);
-    fetch(`${baseUrl}/api/preferences`, this.options)
+    fetch(`${baseUrl}/api/preferences`, options)
       .then((res) => cb(res))
       .catch(console.log);
   }
@@ -84,6 +83,24 @@ class Service {
       });
   }
 
+  getTerminatedByCampaign(campaignId, cb) {
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units?state=FIN`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch(console.log);
+  }
+
+  getStatesBySurveyId(surveyId, cb) {
+    fetch(`${baseUrl}/api/survey-unit/${surveyId}/states`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch(console.log);
+  }
+
   getTotalDemByCampaign(campaignId, cb) {
     fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count`, this.options)
       .then((res) => res.json())
@@ -93,8 +110,8 @@ class Service {
       .catch(console.log);
   }
 
-  getSurveyUnits(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units`, this.options)
+  getSurveyUnits(campaignId, state, cb) {
+    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units${state ? `?state=${state}` : ''}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);

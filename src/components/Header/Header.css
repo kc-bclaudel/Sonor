@@ -6,7 +6,7 @@
     margin: 0 !important;
 
 }
-a {
+li>span, a {
     position: relative;
     display: block;
     padding: 0 16px;
@@ -80,8 +80,9 @@ li {
 }
 
 #appVersion {
-  text-align: center;
+  text-align: right;
   font-size: 0.75rem; 
+  margin-right: 10px;
   font-weight: bold;
   color: #575453;
 }

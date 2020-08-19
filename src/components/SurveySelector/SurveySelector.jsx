@@ -5,13 +5,13 @@ import D from '../../i18n';
 function createSelectOptions(campaigns, currentId) {
   return campaigns
     .filter((campaign) => (campaign.id !== currentId))
-    .map((campaign, index) => (<option key={campaign.id} value={index}>{campaign.label}</option>));
+    .map((campaign) => (<option key={campaign.id} value={campaign.id}>{campaign.label}</option>));
 }
 
-function switchCurrent(surveyObj, indexToSwitch) {
+function switchCurrent(surveyObj, idToSwitch) {
   const switched = {};
   Object.assign(switched, surveyObj);
-  const newSurvey = surveyObj.allSurveys[indexToSwitch];
+  const newSurvey = surveyObj.allSurveys.find((survey) => survey.id === idToSwitch);
   switched.id = newSurvey.id;
   switched.label = newSurvey.label;
   switched.visibilityStartDate = newSurvey.visibilityStartDate;
