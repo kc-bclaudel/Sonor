@@ -6,6 +6,11 @@ class Utils {
     return new Date(timestamp).toLocaleDateString(locales, options);
   }
 
+  static convertMsToHoursMinutes(millis) {
+    const date = new Date(millis);
+    return `${date.getHours()}:${date.getMinutes()}`;
+  }
+
   static calculateCompletionRate(data) {
     return (data.tbrCount + data.finCount) / data.total;
   }
@@ -128,15 +133,11 @@ class Utils {
 
   static getStateCountSum(data) {
     const result = {};
-
     data.forEach((elm) => {
-      if (Object.keys(result).length < 1) {
-        Object.assign(result, elm.stateCount);
-      }
       Object.keys(elm.stateCount)
         .filter((key) => !isNaN(elm.stateCount[key]))
         .forEach((key) => {
-          result[key] += elm.stateCount[key];
+          result[key] = (result[key] + elm.stateCount[key]) || elm.stateCount[key];
         });
     });
 
@@ -193,6 +194,9 @@ class Utils {
         Object.assign(sortedData, data);
         break;
       case 'listSU':
+        sortedData = this.sortData(data, sortOn, newOrder);
+        break;
+      case 'terminated':
         sortedData = this.sortData(data, sortOn, newOrder);
         break;
       default:

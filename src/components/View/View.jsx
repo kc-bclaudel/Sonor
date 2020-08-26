@@ -11,6 +11,7 @@ import Remind from '../Remind/Remind';
 import DataFormatter from '../../utils/DataFormatter';
 import ModalPreferences from '../ModalPreferences/ModalPreferences';
 import D from '../../i18n';
+import Terminated from '../Terminated/Terminated';
 
 class View extends React.Component {
   constructor(props) {
@@ -69,6 +70,7 @@ class View extends React.Component {
               <Route path="/review/:id?" component={(routeProps) => <Review dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/followUp" component={(routeProps) => <Remind dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/follow" component={(routeProps) => <MonitoringTable dataRetreiver={this.dataRetreiver} {...routeProps} />} />
+              <Route path="/terminated/:id" component={(routeProps) => <Terminated dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/listSU/:id" component={(routeProps) => <ListSU dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/portal/:id" component={(routeProps) => <CampaignPortal dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/" component={() => <MainScreen preferences={preferences} dataRetreiver={this.dataRetreiver} />} />

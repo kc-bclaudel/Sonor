@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, Redirect } from 'react-router-dom';
-import { NotificationManager } from 'react-notifications';
 import SurveySelector from '../SurveySelector/SurveySelector';
-import ReviewTable from './ReviewTable';
+import TerminatedTable from './TerminatedTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
+import './Terminated.css';
 
-function Review({
+function Terminated({
   location, dataRetreiver, match,
 }) {
   const { survey } = location;
@@ -23,7 +23,7 @@ function Review({
   const fetchData = useCallback(() => {
     let surveyId = null;
     if (survey) surveyId = survey.id;
-    dataRetreiver.getDataForReview(surveyId, (res) => {
+    dataRetreiver.getListSuTerminated(surveyId, (res) => {
       setData(res);
       setRedirect(null);
     });
@@ -33,40 +33,23 @@ function Review({
     fetchData();
   }, [fetchData]);
 
-  function validateSU(lstSUFinalized) {
-    dataRetreiver.finalizeSurveyUnits(lstSUFinalized)
-      .then((response) => {
-        if (response.some(
-          (res) => !(res.status === 200 || res.status === 201 || res.status === 204),
-        )) {
-          NotificationManager.error(D.reviewAlertError, D.error, 3500);
-        } else {
-          NotificationManager.success(`${D.reviewAlertSuccess}: ${lstSUFinalized.join(', ')}.`, D.updateSuccess, 3500);
-        }
-        fetchData();
-      });
-  }
-
   function handleSort(property, asc) {
-    const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'review', asc);
+    const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'terminated', asc);
     setSort(newSort);
     setData(sortedData);
   }
 
-  const surveyTitle = !survey
-      || (<div className="SurveyTitle">{survey.label}</div>);
-  const surveySelector = !survey
-      || (
-        <SurveySelector
-          survey={survey}
-          updateFunc={(newSurvey) => setRedirect({ pathname: `/review/${newSurvey.id}`, survey: newSurvey })}
-        />
-      );
+  const surveyTitle = !survey || (<div className="SurveyTitle">{survey.label}</div>);
+  const surveySelector = !survey || (
+    <SurveySelector
+      survey={survey}
+      updateFunc={(newSurvey) => setRedirect({ pathname: `/terminated/${newSurvey.id}`, survey: newSurvey })}
+    />
+  );
 
-  return redirect
-    ? <Redirect to={redirect} />
+  return redirect ? <Redirect to={redirect} />
     : (
-      <div id="Review">
+      <div>
         <Container fluid>
           <Row>
             <Col>
@@ -84,19 +67,19 @@ function Review({
         </Container>
         <Card className="ViewCard">
           <Card.Title>
-            {D.surveyUnitsToReview}
+            {D.titleListSu}
             {data.length}
           </Card.Title>
-          <ReviewTable
+          <TerminatedTable
             data={data}
             sort={sort}
             survey={survey}
+            dataRetreiver={dataRetreiver}
             handleSort={handleSort}
-            validateSU={validateSU}
           />
         </Card>
       </div>
     );
 }
 
-export default Review;
+export default Terminated;
