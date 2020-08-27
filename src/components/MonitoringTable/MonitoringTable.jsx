@@ -198,38 +198,46 @@ class MonitoringTable extends React.Component {
               onChange={(e) => this.setState({ date: e.target.value }, () => this.refreshData())}
             />
           </Card.Title>
-          <Row>
-            <Col xs="6">
-              <PaginationNav.SizeSelector
-                updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-              />
-            </Col>
-            <Col xs="6" className="text-right">
-              <SearchField
-                data={data.interviewersDetail}
-                searchBy={fieldsToSearch}
-                updateFunc={
-                  (matchingInterviewers) => this.updateInterviewers(matchingInterviewers)
-                }
-              />
-            </Col>
-          </Row>
-          <FollowUpTable
-            data={data}
-            pagination={pagination}
-            displayedLines={displayedLines}
-            mode={mode}
-            handleSort={(property) => this.handleSort(property)}
-            sort={sort}
-          />
-          <div className="tableOptionsWrapper">
-            <Button data-testid="export-button" onClick={() => this.handleExport()}>Export</Button>
-            <PaginationNav.PageSelector
-              pagination={pagination}
-              updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-              numberOfItems={displayedLines.length}
-            />
-          </div>
+          {
+            data.interviewersDetail.length > 0
+              ? (
+                <>
+                  <Row>
+                    <Col xs="6">
+                      <PaginationNav.SizeSelector
+                        updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                      />
+                    </Col>
+                    <Col xs="6" className="text-right">
+                      <SearchField
+                        data={data.interviewersDetail}
+                        searchBy={fieldsToSearch}
+                        updateFunc={
+                          (matchingInterviewers) => this.updateInterviewers(matchingInterviewers)
+                        }
+                      />
+                    </Col>
+                  </Row>
+                  <FollowUpTable
+                    data={data}
+                    pagination={pagination}
+                    displayedLines={displayedLines}
+                    mode={mode}
+                    handleSort={(property) => this.handleSort(property)}
+                    sort={sort}
+                  />
+                  <div className="tableOptionsWrapper">
+                    <Button data-testid="export-button" onClick={() => this.handleExport()}>Export</Button>
+                    <PaginationNav.PageSelector
+                      pagination={pagination}
+                      updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                      numberOfItems={displayedLines.length}
+                    />
+                  </div>
+                </>
+              )
+              : <span>{D.nothingToDisplay}</span>
+        }
         </Card>
       </div>
     );

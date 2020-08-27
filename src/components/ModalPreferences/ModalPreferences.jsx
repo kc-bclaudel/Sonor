@@ -75,7 +75,7 @@ class ModalPreferences extends React.Component {
         onEnter={() => updatePreferencesFromProps()}
       >
         <Modal.Header closeButton>
-          <Modal.Title>{D.myInterviewers}</Modal.Title>
+          <Modal.Title>{D.mySurveys}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{displaySurveys(selectedPreferences, toggleCheckbox)}</Modal.Body>
         <Modal.Footer>

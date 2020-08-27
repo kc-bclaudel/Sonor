@@ -113,18 +113,19 @@ class Utils {
 
   static sumOn(data, groupBy) {
     const result = {};
-
-    data.forEach((elm) => {
-      if (!Object.prototype.hasOwnProperty.call(result, elm[groupBy])) {
-        result[elm[groupBy]] = JSON.parse(JSON.stringify(elm));
-      } else {
-        Object.entries(elm.stateCount)
-          .filter((x) => !isNaN(x[1]))
-          .forEach(([key, val]) => {
-            result[elm[groupBy]].stateCount[key] += val;
-          });
-      }
-    });
+    data
+      .filter((elm) => elm.stateCount)
+      .forEach((elm) => {
+        if (!Object.prototype.hasOwnProperty.call(result, elm[groupBy])) {
+          result[elm[groupBy]] = JSON.parse(JSON.stringify(elm));
+        } else {
+          Object.entries(elm.stateCount)
+            .filter((x) => !isNaN(x[1]))
+            .forEach(([key, val]) => {
+              result[elm[groupBy]].stateCount[key] += val;
+            });
+        }
+      });
 
     const finalArray = Object.keys(result).map((key) => {
       const formattedData = this.formatForMonitoringTable(result[key].stateCount);
@@ -139,13 +140,15 @@ class Utils {
 
   static getStateCountSum(data) {
     const result = {};
-    data.forEach((elm) => {
-      Object.keys(elm.stateCount)
-        .filter((key) => !isNaN(elm.stateCount[key]))
-        .forEach((key) => {
-          result[key] = (result[key] + elm.stateCount[key]) || elm.stateCount[key];
-        });
-    });
+    data
+      .filter((elm) => elm.stateCount)
+      .forEach((elm) => {
+        Object.keys(elm.stateCount)
+          .filter((key) => !isNaN(elm.stateCount[key]))
+          .forEach((key) => {
+            result[key] = (result[key] + elm.stateCount[key]) || elm.stateCount[key];
+          });
+      });
 
     return this.formatForMonitoringTable(result);
   }

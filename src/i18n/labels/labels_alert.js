@@ -23,6 +23,14 @@ const alert = {
     fr: 'Une erreur est survenue. Les unitées enquêtées n\'ont pas pu être validées.',
     en: 'An error occured. The survey units could not be validated.',
   },
+  verifyInternetCo:  {
+    fr: 'Veuillez vérifier votre connexion internet.',
+    en: 'Please check your internet connection.',
+  },
+  cannotRetreiveData: {
+    fr: 'Impossible de récupérer les données depuis le serveur.',
+    en: 'Could not retreive data from the server.',
+  },
 };
 
 export default alert;

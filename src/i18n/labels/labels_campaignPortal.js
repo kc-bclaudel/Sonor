@@ -78,6 +78,10 @@ const campaignPortal = {
 	"totalDEM":{
 		"fr": "Total DEM",
 		"en": "Total organizational unit"
+	},
+	"noInterviewers": {
+		"fr": "Aucun enquêteur n'est associé à cette enquête",
+		"en": "The is no interviewer associated with this survey"
 	}
 }
 

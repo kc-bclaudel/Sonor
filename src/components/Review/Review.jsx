@@ -87,13 +87,19 @@ function Review({
             {D.surveyUnitsToReview}
             {data.length}
           </Card.Title>
-          <ReviewTable
-            data={data}
-            sort={sort}
-            survey={survey}
-            handleSort={handleSort}
-            validateSU={validateSU}
-          />
+          {
+            data.length > 0
+              ? (
+                <ReviewTable
+                  data={data}
+                  sort={sort}
+                  survey={survey}
+                  handleSort={handleSort}
+                  validateSU={validateSU}
+                />
+              )
+              : <span>{D.noSuToReview}</span>
+          }
         </Card>
       </div>
     );

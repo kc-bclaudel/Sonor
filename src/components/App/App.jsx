@@ -13,16 +13,26 @@ class App extends React.Component {
     this.state = {
       keycloak: null,
       authenticated: false,
+      contactFailed: false,
+      initialisationFailed: false,
       data: null,
     };
   }
 
   async componentDidMount() {
-    await initConfiguration();
+    try {
+      await initConfiguration();
+    } catch (e) {
+      this.setState({ initialisationFailed: true });
+    }
     if (window.localStorage.getItem('AUTHENTICATION_MODE') === ANONYMOUS) {
       const dataRetreiver = new DataFormatter();
       dataRetreiver.getUserInfo((data) => {
-        this.setState({ authenticated: true, data });
+        if (data.error) {
+          this.setState({ contactFailed: true });
+        } else {
+          this.setState({ authenticated: true, data });
+        }
       });
     } else if (window.localStorage.getItem('AUTHENTICATION_MODE') === KEYCLOAK) {
       const keycloak = Keycloak('/keycloak.json');
@@ -37,7 +47,7 @@ class App extends React.Component {
 
   render() {
     const {
-      keycloak, authenticated, data,
+      keycloak, authenticated, data, contactFailed, initialisationFailed,
     } = this.state;
     if (keycloak || authenticated) {
       if (authenticated) {
@@ -52,6 +62,12 @@ class App extends React.Component {
         );
       }
       return (<div>{D.unableToAuthenticate}</div>);
+    }
+    if (initialisationFailed) {
+      return (<div>{D.initializationFailed}</div>);
+    }
+    if (contactFailed) {
+      return (<div>{D.cannotContactServer}</div>);
     }
     return (
       <div>{D.initializing}</div>

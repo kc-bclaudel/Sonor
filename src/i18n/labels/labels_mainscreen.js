@@ -51,6 +51,10 @@ const mainscreen = {
     fr: 'Terminées',
     en: 'Finalized',
   },
+  noSurveysToDisplay: {
+    fr: 'Aucune enquête à afficher',
+    en: 'No surveys to display',
+  },
 };
 
 export default mainscreen;

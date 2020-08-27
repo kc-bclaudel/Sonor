@@ -15,7 +15,7 @@ class ReviewTable extends React.Component {
     super(props);
     this.state = {
       pagination: { size: 5, page: 1 },
-      checkboxArray: {},
+      checkboxArray: props.data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {}),
       checkAll: false,
       show: false,
       displayedLines: props.data,
