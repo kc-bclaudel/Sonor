@@ -22,7 +22,11 @@ const terminated = {
     stateSuState: {
         fr: 'Etat',
         en: 'State',
-    }
+    },
+    noSuFinalized: {
+    fr: 'Aucune unité enquêtée n\'est terminée pour cette étude',
+    en: 'There are no survey units finalized for this survey',
+  }
 };
       
 export default terminated;

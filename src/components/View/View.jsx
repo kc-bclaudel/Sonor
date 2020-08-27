@@ -40,8 +40,8 @@ class View extends React.Component {
       } else {
         NotificationManager.error(D.preferencesNotUpdated, D.error, 3500);
       }
+      this.loadPreferences();
     });
-    this.loadPreferences();
   }
 
   showPreferences() {

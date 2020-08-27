@@ -39,7 +39,7 @@ class ModalPreferences extends React.Component {
   validateNewPreferences() {
     const { selectedPreferences } = this.state;
     const { updatePreferences } = this.props;
-    updatePreferences(Object.keys(selectedPreferences).filter((id) => selectedPreferences[id]));
+    updatePreferences(Object.keys(selectedPreferences).filter((id) => selectedPreferences[id].preference));
   }
 
   updatePreferencesFromProps() {
@@ -75,17 +75,21 @@ class ModalPreferences extends React.Component {
         onEnter={() => updatePreferencesFromProps()}
       >
         <Modal.Header closeButton>
-          <Modal.Title>{D.myInterviewers}</Modal.Title>
+          <Modal.Title>{D.mySurveys}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{displaySurveys(selectedPreferences, toggleCheckbox)}</Modal.Body>
         <Modal.Footer>
           <Button
+            data-testid="validate-pref-modif"
             disabled={!prefsChanged}
             onClick={() => { this.validateNewPreferences(); hidePreferences(); }}
           >
             {D.validate}
           </Button>
-          <Button onClick={() => hidePreferences()}>
+          <Button
+            data-testid="close-preferences-button"
+            onClick={() => hidePreferences()}
+          >
             {D.close}
           </Button>
         </Modal.Footer>

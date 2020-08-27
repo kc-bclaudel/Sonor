@@ -4,9 +4,17 @@ const app = {
     fr: 'Autentification impossible',
     en: 'Unable to authenticate',
   },
+  cannotContactServer: {
+    fr: 'Impossible de contacter le serveur',
+    en: 'Could not contact server',
+  },
   initializingKeycloak: {
     fr: 'Initialisation de Keycloak',
     en: 'Initializing Keycloak',
+  },
+  initializationFailed: {
+    fr: 'Le chargement de la configuration a échoué.',
+    en: 'Could not load settings',
   },
   // Common buttons
   back: {

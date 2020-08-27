@@ -21,7 +21,11 @@ function Contacts() {
         <Table className="CustomTable" bordered striped responsive size="sm">
           <tbody>
             <OverlayTrigger placement="top" overlay={renderTooltip}>
-              <tr className="Clickable" onClick={() => { window.location = 'mailto:survey@mail.com'; }}>
+              <tr
+                className="Clickable"
+                data-testid="mail-button"
+                onClick={() => { window.location.assign('mailto:survey@mail.com'); }}
+              >
                 <th>{D.functionalBox}</th>
                 <td className=" LightGreyLine">survey@mail.com</td>
               </tr>

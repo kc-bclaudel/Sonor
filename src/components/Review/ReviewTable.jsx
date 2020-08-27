@@ -13,12 +13,9 @@ import D from '../../i18n';
 class ReviewTable extends React.Component {
   constructor(props) {
     super(props);
-    const checkboxArray = props.data.reduce(
-      (acc, curr) => { acc[curr.id] = false; return acc; }, {},
-    );
     this.state = {
       pagination: { size: 5, page: 1 },
-      checkboxArray,
+      checkboxArray: props.data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {}),
       checkAll: false,
       show: false,
       displayedLines: props.data,
@@ -122,7 +119,10 @@ class ReviewTable extends React.Component {
                 <SortIcon val="campaignLabel" sort={sort} />
                 {D.survey}
               </th>
-              <th onClick={handleSortFunct('interviewer')}>
+              <th
+                onClick={handleSortFunct('interviewer')}
+                data-testid="TableHeader_interviewer_name_review"
+              >
                 <SortIcon val="interviewer" sort={sort} />
                 {D.interviewer}
               </th>
@@ -154,7 +154,13 @@ class ReviewTable extends React.Component {
             numberOfItems={displayedLines.length}
           />
         </div>
-        <button type="button" className="btn btn-primary" disabled={this.isDisabled()} onClick={() => this.handleShow()}>
+        <button
+          type="button"
+          className="btn btn-primary"
+          disabled={this.isDisabled()}
+          data-testid="validate-su"
+          onClick={() => this.handleShow()}
+        >
           {D.validate}
         </button>
 
@@ -164,10 +170,18 @@ class ReviewTable extends React.Component {
           </Modal.Header>
           <Modal.Body>{D.reviewValidatePopupBody}</Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={() => this.handleClose()}>
+            <Button
+              variant="secondary"
+              data-testid="close-modal"
+              onClick={() => this.handleClose()}
+            >
               {D.close}
             </Button>
-            <Button variant="primary" onClick={() => { this.validate(); this.handleClose(); }}>
+            <Button
+              variant="primary"
+              data-testid="confirm-validate"
+              onClick={() => { this.validate(); this.handleClose(); }}
+            >
               {D.validate}
             </Button>
           </Modal.Footer>

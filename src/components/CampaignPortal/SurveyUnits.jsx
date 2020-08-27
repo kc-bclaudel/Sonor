@@ -19,6 +19,13 @@ class SurveyUnits extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    const { survey, data } = this.props;
+    if (prevProps.survey !== survey || prevProps.data !== data) {
+      this.setState({ displayedInterviewers: data.interviewers });
+    }
+  }
+
   handlePageChange(pagination) {
     this.setState({ pagination });
   }
@@ -57,67 +64,79 @@ class SurveyUnits extends React.Component {
     return (
       <Card className="ViewCard">
         <div className="Title">{D.interviewers}</div>
-        <Row>
-          <Col xs="6">
-            <PaginationNav.SizeSelector
-              updateFunc={(newPagination) => this.handlePageChange(newPagination)}
-            />
-          </Col>
-          <Col xs="6" className="text-right">
-            <SearchField
-              data={interviewers}
-              searchBy={fieldsToSearch}
-              updateFunc={(a) => this.updateInterviewers(a)}
-            />
-          </Col>
-        </Row>
-        <Table className="CustomTable" bordered striped hover responsive size="sm">
-          <tbody>
-            <tr>
-              <th onClick={handleSort('CPinterviewer')} className="Clickable">
-                <SortIcon val="CPinterviewer" sort={sort} />
-                {D.interviewer}
-              </th>
-              <th onClick={handleSort('CPidep')} className="Clickable">
-                <SortIcon val="CPidep" sort={sort} />
-                {D.idep}
-              </th>
-              <th onClick={handleSort('CPue')} className="Clickable">
-                <SortIcon val="CPue" sort={sort} />
-                {D.SU}
-              </th>
-            </tr>
-            {displayedInterviewers
-              .slice(
-                (pagination.page - 1) * pagination.size,
-                Math.min(pagination.page * pagination.size, displayedInterviewers.length),
-              )
-              .map((line) => (<InterviewerLine key={line.id} interviewer={line} />))}
-            <tr>
-              <th>{D.unassigned}</th>
-              <th />
-              <th>{notAttributed.count}</th>
-            </tr>
-            <tr>
-              <th>{D.abandoned}</th>
-              <th />
-              <th>{abandoned.count}</th>
-            </tr>
-            <tr>
-              <th>{D.totalDEM}</th>
-              <th />
-              <th>{total.total}</th>
-            </tr>
-          </tbody>
-        </Table>
-        <div className="tableOptionsWrapper">
-          <Button onClick={() => this.handleExport()}>Export</Button>
-          <PaginationNav.PageSelector
-            pagination={pagination}
-            updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-            numberOfItems={displayedInterviewers.length}
-          />
-        </div>
+        {
+          interviewers.length > 0
+          ? (
+            <>
+              <Row>
+                <Col xs="6">
+                  <PaginationNav.SizeSelector
+                    updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+                  />
+                </Col>
+                <Col xs="6" className="text-right">
+                  <SearchField
+                    data={interviewers}
+                    searchBy={fieldsToSearch}
+                    updateFunc={(a) => this.updateInterviewers(a)}
+                  />
+                </Col>
+              </Row>
+              <Table className="CustomTable" bordered striped hover responsive size="sm">
+                <tbody>
+                  <tr>
+                    <th
+                      data-testid="TableHeader_interviewer_name_portal"
+                      onClick={handleSort('CPinterviewer')}
+                      className="Clickable"
+                    >
+                      <SortIcon val="CPinterviewer" sort={sort} />
+                      {D.interviewer}
+                    </th>
+                    <th onClick={handleSort('CPidep')} className="Clickable">
+                      <SortIcon val="CPidep" sort={sort} />
+                      {D.idep}
+                    </th>
+                    <th onClick={handleSort('CPue')} className="Clickable">
+                      <SortIcon val="CPue" sort={sort} />
+                      {D.SU}
+                    </th>
+                  </tr>
+                  {displayedInterviewers
+                    .slice(
+                      (pagination.page - 1) * pagination.size,
+                      Math.min(pagination.page * pagination.size, displayedInterviewers.length),
+                    )
+                    .map((line) => (<InterviewerLine key={line.id} interviewer={line} />))}
+                  <tr>
+                    <th>{D.unassigned}</th>
+                    <th />
+                    <th>{notAttributed.count}</th>
+                  </tr>
+                  <tr>
+                    <th>{D.abandoned}</th>
+                    <th />
+                    <th>{abandoned.count}</th>
+                  </tr>
+                  <tr>
+                    <th>{D.totalDEM}</th>
+                    <th />
+                    <th>{total.total}</th>
+                  </tr>
+                </tbody>
+              </Table>
+              <div className="tableOptionsWrapper">
+                <Button onClick={() => this.handleExport()}>Export</Button>
+                <PaginationNav.PageSelector
+                  pagination={pagination}
+                  updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                  numberOfItems={displayedInterviewers.length}
+                />
+              </div>
+            </>
+            )
+            : <span>{D.noInterviewers}</span>
+        }
       </Card>
 
     );

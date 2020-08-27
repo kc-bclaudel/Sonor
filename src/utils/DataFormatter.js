@@ -125,8 +125,8 @@ class DataFormatter {
         processedData = data.map((intData) => {
           const line = {};
           Object.assign(line, intData);
-          line.interviewerFirstName = intData.interviewer.firstName;
-          line.interviewerLastName = intData.interviewer.lastName;
+          line.interviewerFirstName = intData.interviewer.interviewerFirstName;
+          line.interviewerLastName = intData.interviewer.interviewerLastName;
           return line;
         });
         if (cb) { cb(processedData); }
@@ -175,7 +175,7 @@ class DataFormatter {
       const promises = interviewers.map((interv) => (
         new Promise((resolve2) => {
           this.service.getInterviewersStateCount(
-            surveyId || interv.survey,
+            surveyId,
             interv.id,
             date,
             (data) => {
@@ -309,7 +309,7 @@ class DataFormatter {
 
   getDataForCampaignPortal(campaignId, cb) {
     const p1 = new Promise((resolve) => {
-      this.service.getInterviewersByCampaign(campaignId, (data) => {
+      this.service.getInterviewers(campaignId, (data) => {
         resolve(data);
       });
     });

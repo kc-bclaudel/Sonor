@@ -30,6 +30,7 @@ function SurveySelector({ survey, updateFunc }) {
           placeholder={D.chooseASurvey}
           value={-1}
           onChange={(e) => updateFunc(switchCurrent(survey, e.target.value), e.target.value)}
+          data-testid="Survey_selector"
         >
           <option disabled value={-1} key={-1}>{D.chooseASurvey}</option>
           {createSelectOptions(survey.allSurveys, survey.id)}

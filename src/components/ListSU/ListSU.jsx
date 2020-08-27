@@ -31,6 +31,7 @@ function ListSU({
     setSort(newSort);
     setData(sortedData);
   }
+
   return redirect
     ? <Redirect to={redirect} />
     : (
@@ -44,7 +45,7 @@ function ListSU({
           <Col xs={6}>
             <div className="SurveyTitle">{survey.label}</div>
           </Col>
-          <Col>
+          <Col id="RightCoListSU">
             <SurveySelector
               survey={survey}
               updateFunc={(newSurvey) => setRedirect({ pathname: `/listSU/${newSurvey.id}`, survey: newSurvey })}
@@ -56,8 +57,20 @@ function ListSU({
             {D.surveyUnitsAllocatedToTheOU}
             {data.length}
           </Card.Title>
-          <SUTable sort={sort} handleSort={handleSort} data={data} survey={survey} site={site} />
-        </Card>
+          {
+            data.length > 0
+              ? (
+                <SUTable
+                  sort={sort}
+                  handleSort={handleSort}
+                  data={data}
+                  survey={survey}
+                  site={site}
+                />
+              )
+              : <span>{D.noListSuToDisplay}</span>
+          }
+          </Card>
       </div>
     );
 }

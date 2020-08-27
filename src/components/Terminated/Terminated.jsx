@@ -70,13 +70,19 @@ function Terminated({
             {D.titleListSu}
             {data.length}
           </Card.Title>
-          <TerminatedTable
-            data={data}
-            sort={sort}
-            survey={survey}
-            dataRetreiver={dataRetreiver}
-            handleSort={handleSort}
-          />
+          {
+            data.length > 0
+              ? (
+                <TerminatedTable
+                  data={data}
+                  sort={sort}
+                  survey={survey}
+                  dataRetreiver={dataRetreiver}
+                  handleSort={handleSort}
+                />
+              )
+              : <span>{D.noSuFinalized}</span>
+          }
         </Card>
       </div>
     );
