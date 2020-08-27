@@ -1,0 +1,1491 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page selector display: 2 items / size = 5 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            1
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          1
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Page selector display: 8 items / size = 5 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            1
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            2
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          1
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          2
+        </a>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Page selector display: 16 items / size = 5 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            1
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            2
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            3
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            4
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          1
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          2
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          3
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          4
+        </a>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Page selector display: 22 items / size = 5 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            1
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            2
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            3
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            4
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            5
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          1
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          2
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          3
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          4
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          5
+        </a>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Page selector display: 28 items / size = 5 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            1
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            2
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            3
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            4
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            5
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            6
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          1
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          2
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          3
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          4
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          5
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          6
+        </a>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Page selector display: 105 items / size = 5 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            1
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            2
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            3
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            4
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            5
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            ...
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            20
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          1
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          2
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          3
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          4
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          5
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          ...
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          20
+        </a>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Page selector display: 105 items / size = 5 on page 10 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            1
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            ...
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            9
+          </a>
+        </li>
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            10
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            11
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            ...
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            20
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          1
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          ...
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          9
+        </a>
+      </li>
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          10
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          11
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          ...
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          20
+        </a>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Page selector display: 105 items / size = 5 on page 20 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="paginationNav pagination pagination-sm"
+        data-testid="pagination-nav"
+      >
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            1
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            ...
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            16
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            17
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            18
+          </a>
+        </li>
+        <li
+          class="page-item"
+        >
+          <a
+            class="page-link"
+            href="#"
+            role="button"
+          >
+            19
+          </a>
+        </li>
+        <li
+          class="page-item active"
+        >
+          <span
+            class="page-link"
+          >
+            20
+            <span
+              class="sr-only"
+            >
+              (current)
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="paginationNav pagination pagination-sm"
+      data-testid="pagination-nav"
+    >
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          1
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          ...
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          16
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          17
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          18
+        </a>
+      </li>
+      <li
+        class="page-item"
+      >
+        <a
+          class="page-link"
+          href="#"
+          role="button"
+        >
+          19
+        </a>
+      </li>
+      <li
+        class="page-item active"
+      >
+        <span
+          class="page-link"
+        >
+          20
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -56,7 +56,11 @@ class TerminatedTable extends React.Component {
         <td className="Clickable">{survey.label}</td>
         <td className="Clickable">{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
         <td className="Clickable">
-          <i className="fa fa-pencil" aria-hidden="true" onClick={() => { window.open('', '_blank'); }} />
+          <i
+            className="fa fa-pencil EditLink"
+            aria-hidden="true"
+            onClick={() => { window.open('', '_blank'); }}
+          />
           <span />
           <i className="fa fa-history HistoryDisplayIcon" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
         </td>
@@ -73,6 +77,7 @@ class TerminatedTable extends React.Component {
             <i
               className="fa fa-times fa-sm Clickable"
               role="button"
+              data-testid="close-history"
               tabIndex={0}
               onClick={() => { this.hideStateHistoryTable(); }}
             />
@@ -137,7 +142,11 @@ class TerminatedTable extends React.Component {
           <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
             <thead>
               <tr>
-                <th rowSpan="2" onClick={handleSortFunct('id')}>
+                <th
+                  data-testid="TableHeader_id_terminated"
+                  rowSpan="2"
+                  onClick={handleSortFunct('id')}
+                >
                   <SortIcon val="id" sort={sort} />
                   {D.identifier}
                 </th>
@@ -145,8 +154,11 @@ class TerminatedTable extends React.Component {
                   <SortIcon val="campaignLabel" sort={sort} />
                   {D.survey}
                 </th>
-                <th rowSpan="2" onClick={handleSortFunct('interviewer')}>
-                  <SortIcon val="interviewer" sort={sort} />
+                <th
+                  rowSpan="2"
+                  onClick={handleSortFunct('interviewer_terminated')}
+                >
+                  <SortIcon val="interviewer_terminated" sort={sort} />
                   {D.interviewer}
                 </th>
                 <th rowSpan="2">

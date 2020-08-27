@@ -14,7 +14,6 @@ class App extends React.Component {
       keycloak: null,
       authenticated: false,
       data: null,
-      currentView: null,
     };
   }
 
@@ -36,13 +35,9 @@ class App extends React.Component {
     }
   }
 
-  setCurrentView(currentView) {
-    this.setState({ currentView });
-  }
-
   render() {
     const {
-      keycloak, authenticated, data, currentView,
+      keycloak, authenticated, data,
     } = this.state;
     if (keycloak || authenticated) {
       if (authenticated) {
@@ -50,10 +45,7 @@ class App extends React.Component {
           <div className="App">
 
             <View
-              currentView={currentView}
-              setCurrentView={(view) => this.setCurrentView(view)}
               token={keycloak ? keycloak.token : null}
-              ref={(instance) => { this.content = instance; }}
               userData={data}
             />
           </div>

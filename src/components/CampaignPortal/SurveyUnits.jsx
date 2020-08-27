@@ -74,7 +74,11 @@ class SurveyUnits extends React.Component {
         <Table className="CustomTable" bordered striped hover responsive size="sm">
           <tbody>
             <tr>
-              <th onClick={handleSort('CPinterviewer')} className="Clickable">
+              <th
+                data-testid="TableHeader_interviewer_name_portal"
+                onClick={handleSort('CPinterviewer')}
+                className="Clickable"
+              >
                 <SortIcon val="CPinterviewer" sort={sort} />
                 {D.interviewer}
               </th>

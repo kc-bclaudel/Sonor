@@ -82,6 +82,12 @@ class Utils {
         < (b.interviewerLastName + b.interviewerFirstName) ? -1 : 1
       );
     }
+    if (sortOn === 'interviewer_terminated') {
+      return (a, b) => (
+        (a.interviewer.interviewerLastName + a.interviewer.interviewerFirstName)
+        < (b.interviewer.interviewerLastName + b.interviewer.interviewerFirstName) ? -1 : 1
+      );
+    }
     return (a, b) => a[sortOn] - b[sortOn];
   }
 
@@ -110,7 +116,7 @@ class Utils {
 
     data.forEach((elm) => {
       if (!Object.prototype.hasOwnProperty.call(result, elm[groupBy])) {
-        result[elm[groupBy]] = elm;
+        result[elm[groupBy]] = JSON.parse(JSON.stringify(elm));
       } else {
         Object.entries(elm.stateCount)
           .filter((x) => !isNaN(x[1]))
@@ -152,7 +158,7 @@ class Utils {
       return C.BY_SURVEY;
     }
     if (path.includes('/interviewers')) {
-      return C.BY_INTERVIEWERS;
+      return C.BY_INTERVIEWER;
     }
     return C.BY_INTERVIEWER_ONE_SURVEY;
   }
@@ -189,9 +195,6 @@ class Utils {
       case 'review':
         Object.assign(sortedData, data);
         sortedData = this.sortData(data, sortOn, newOrder);
-        break;
-      case 'remind':
-        Object.assign(sortedData, data);
         break;
       case 'listSU':
         sortedData = this.sortData(data, sortOn, newOrder);

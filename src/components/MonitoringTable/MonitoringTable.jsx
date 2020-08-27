@@ -66,7 +66,7 @@ class MonitoringTable extends React.Component {
             displayedLines: newData.interviewersDetail,
             data: newData,
             mode: modeToUse,
-            redirect: !survey && (modeToUse === C.BY_INTERVIEWER_ONE_SURVEY || modeToUse === C.BY_SITE) ? '/' : null,
+            redirect: null,
             loading: false,
             sort: { sortOn: null, asc: null },
           }, () => {
@@ -105,9 +105,11 @@ class MonitoringTable extends React.Component {
     if (mode === C.BY_SURVEY) {
       fileLabel = `${data.site}_Avancement enquetes`;
     } else if (mode === C.BY_SITE) {
-      fileLabel = `${survey.label}_Avancement site`;
-    } else {
+      fileLabel = `${survey.label}_Avancement sites`;
+    } else if (mode === C.BY_INTERVIEWER) {
       fileLabel = `${data.site}_Avancement enqueteurs`;
+    } else {
+      fileLabel = `${data.site}_${survey.label}_Avancement enqueteurs`;
     }
     const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data, mode);
@@ -149,7 +151,7 @@ class MonitoringTable extends React.Component {
             redirect: {
               pathname: mode === C.BY_SITE
                 ? `/follow/sites/${newSurvey.id}`
-                : `/follow/${newSurvey.id}`,
+                : `/follow/campaign/${newSurvey.id}`,
               survey: newSurvey,
             },
           })}
@@ -187,6 +189,7 @@ class MonitoringTable extends React.Component {
             <div className="DateDisplay">{D.monitoringTableIntroductionSentence}</div>
             <input
               id="datePicker"
+              data-testid="date-picker"
               className="DateDisplay"
               type="date"
               value={date}
@@ -220,7 +223,7 @@ class MonitoringTable extends React.Component {
             sort={sort}
           />
           <div className="tableOptionsWrapper">
-            <Button onClick={() => this.handleExport()}>Export</Button>
+            <Button data-testid="export-button" onClick={() => this.handleExport()}>Export</Button>
             <PaginationNav.PageSelector
               pagination={pagination}
               updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}

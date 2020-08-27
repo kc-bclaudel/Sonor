@@ -74,7 +74,7 @@ function FollowUpTable({
     <Table id="FollowUpTable" className="CustomTable" bordered striped hover responsive size="sm">
       <thead>
         <tr>
-          <th rowSpan="2" onClick={handleSortFunct(firstColumnSortAttribute)}>
+          <th rowSpan="2" data-testid="TableHeader_label" onClick={handleSortFunct(firstColumnSortAttribute)}>
             {firstColumnTitle}
             <SortIcon val={firstColumnSortAttribute} sort={sort} />
           </th>

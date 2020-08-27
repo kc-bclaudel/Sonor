@@ -62,7 +62,11 @@ class MainScreen extends React.Component {
                   <SortIcon val="collectionStartDate" sort={sort} />
                   {D.collectionStartDate}
                 </th>
-                <th rowSpan="2" onClick={handleSortFunct('collectionEndDate')}>
+                <th
+                  rowSpan="2"
+                  data-testid="Header-collection-end-date"
+                  onClick={handleSortFunct('collectionEndDate')}
+                >
                   <SortIcon val="collectionEndDate" sort={sort} />
                   {D.collectionEndDate}
                 </th>

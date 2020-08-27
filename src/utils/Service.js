@@ -52,14 +52,14 @@ class Service {
       .catch(console.log);
   }
 
-  getInterviewersByCampaign(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/interviewers`, this.options)
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch(console.log);
-  }
+  // getInterviewersByCampaign(campaignId, cb) {
+  //   fetch(`${baseUrl}/api/campaign/${campaignId}/interviewers`, this.options)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       cb(data);
+  //     })
+  //     .catch(console.log);
+  // }
 
   getNotAttributedByCampaign(campaignId, cb) {
     fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/not-attributed`, this.options)
@@ -76,11 +76,11 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch((err) => {
-        console.log(err);
-        // To be able to access campaign portal while API is unavailable (to remove after dev)
-        cb({ count: null });
-      });
+      // .catch((err) => {
+      //   console.log(err);
+      //   // To be able to access campaign portal while API is unavailable (to remove after dev)
+      //   cb({ count: null });
+      // });
   }
 
   getTerminatedByCampaign(campaignId, cb) {

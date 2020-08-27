@@ -31,6 +31,7 @@ function ListSU({
     setSort(newSort);
     setData(sortedData);
   }
+
   return redirect
     ? <Redirect to={redirect} />
     : (

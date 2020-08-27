@@ -114,7 +114,7 @@ class SUTable extends React.Component {
                 {D.town}
                 <SortIcon val="city" sort={sort} />
               </th>
-              <th onClick={handleSortFunct('interviewer')}>
+              <th data-testid="TableHeader_interviewer_name" onClick={handleSortFunct('interviewer')}>
                 {D.interviewer}
                 <SortIcon val="interviewer" sort={sort} />
               </th>
@@ -130,7 +130,7 @@ class SUTable extends React.Component {
           </tbody>
         </Table>
         <div className="tableOptionsWrapper">
-          <Button onClick={() => this.handleExport()}>Export</Button>
+          <Button data-testid="export-button" onClick={() => this.handleExport()}>Export</Button>
           <PaginationNav.PageSelector
             pagination={pagination}
             updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
@@ -141,6 +141,5 @@ class SUTable extends React.Component {
     );
   }
 }
-
 
 export default SUTable;
