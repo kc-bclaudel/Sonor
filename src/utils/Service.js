@@ -1,3 +1,6 @@
+import { NotificationManager } from 'react-notifications';
+import D from '../i18n';
+
 const baseUrl = `${window.localStorage.getItem('PEARL_JAM_URL')}`;
 
 class Service {
@@ -7,6 +10,12 @@ class Service {
         headers: new Headers({
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
+        }),
+      };
+    } else {
+      this.options = {
+        headers: new Headers({
+          'Content-Type': 'application/json',
         }),
       };
     }
@@ -39,7 +48,14 @@ class Service {
           if (cb) { cb(data); }
           resolve(data);
         })
-        .catch(console.log);
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb({ error: true });
+          }
+          resolve({ error: true });
+          NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+        });
     });
   }
 
@@ -49,7 +65,10 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
   }
 
   getInterviewersByCampaign(campaignId, cb) {
@@ -67,7 +86,11 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((err) => {
+        console.log(err);
+        // To be able to access campaign portal while API is unavailable (to remove after dev)
+        cb({ count: null });
+      });
   }
 
   getAbandonedByCampaign(campaignId, cb) {
@@ -89,7 +112,10 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
   }
 
   getStatesBySurveyId(surveyId, cb) {
@@ -98,7 +124,10 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
   }
 
   getTotalDemByCampaign(campaignId, cb) {
@@ -107,7 +136,10 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
   }
 
   getSurveyUnits(campaignId, state, cb) {
@@ -116,7 +148,10 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
   }
 
   getInterviewers(campaignId, cb) {
@@ -134,7 +169,10 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+        cb(null);
+      });
   }
 
   getStateCount(campaignId, date, cb) {
@@ -143,7 +181,9 @@ class Service {
       .then((data) => {
         cb(data);
       })
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+      });
   }
 }
 

@@ -105,6 +105,10 @@ const monitoringTable = {
 	"lastName":{
 		"fr": "Nom",
 		"en": "Last name"
+	},
+	"nothingToDisplay":{
+		"fr": "Aucun élément à afficher",
+		"en": "There is no data to display"
 	}
 }
 

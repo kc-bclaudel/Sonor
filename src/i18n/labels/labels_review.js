@@ -10,6 +10,10 @@ const review = {
   reviewValidatePopupBody: {
     fr: 'Voulez-vous valider les unités d\'enquête séléctionnées ?',
     en: 'Do you want to validate the selected survey units?',
+  },
+  noSuToReview: {
+    fr: 'Aucune unité enquêtée n\'est à relire',
+    en: 'There are no survey unit to review',
   }
 };
 

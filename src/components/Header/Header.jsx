@@ -37,6 +37,7 @@ function Header({
             <div className="d-inline-flex classTest" id="headerButtonContainer">
               <Link to="/followUp" className="ButtonLink">
                 <Button
+                  data-testid="follow-up"
                   className={`HeaderButton HeaderFocusableButton ${pathname.includes('/followUp') ? ' ButtonActive' : ''}`}
                 >
                   {D.remind}
@@ -56,6 +57,7 @@ function Header({
               </li>
               <Link to="/review" className="ButtonLink">
                 <Button
+                  data-testid="review"
                   className={`HeaderButton HeaderFocusableButton ${pathname.includes('/review') ? ' ButtonActive' : ''}`}
                 >
                   {D.read}
@@ -80,7 +82,11 @@ function displayFirstSubMenu(toggle) {
         </span>
         <ul className="dropdown-menu sub-menu">
           <li>
-            <Link to="/follow/campaigns" className="selectedSubeMenu">
+            <Link
+              to="/follow/campaigns"
+              className="selectedSubeMenu"
+              data-testid="follow-by-survey"
+            >
               {D.progression}
             </Link>
           </li>
@@ -93,7 +99,11 @@ function displayFirstSubMenu(toggle) {
         </span>
         <ul className="dropdown-menu sub-menu" id="SecondDropdown">
           <li>
-            <Link to="/follow/interviewers" className="selectedSubeMenu">
+            <Link
+              to="/follow/interviewers"
+              className="selectedSubeMenu"
+              data-testid="follow-by-interviewer"
+            >
               {D.progression}
             </Link>
           </li>

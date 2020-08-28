@@ -27,6 +27,10 @@ const listSU = {
     fr: 'Commune',
     en: 'Town',
   },
+  noListSuToDisplay: {
+    fr: 'Aucune unité enquêtée à afficher',
+    en: 'There are no survey units to display',
+  },
 };
 
 export default listSU;

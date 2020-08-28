@@ -18,7 +18,13 @@ function UserZone({ user, date, showPreferences }) {
       <div className="UserZoneButtons">
         <Row>
           <Col xs="8">
-            <Button className="HeaderButton" onClick={() => showPreferences()}>{D.mySurveys}</Button>
+            <Button
+              className="HeaderButton"
+              data-testid="preferences"
+              onClick={() => showPreferences()}
+            >
+              {D.mySurveys}
+            </Button>
           </Col>
           <Col xs="4">
             <div

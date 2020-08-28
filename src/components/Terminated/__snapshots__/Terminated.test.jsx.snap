@@ -1,0 +1,4650 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Change page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <a
+                class="ButtonLink"
+                href="/"
+              >
+                <button
+                  class="YellowButton ReturnButton btn btn-primary"
+                  data-testid="return-button"
+                  type="button"
+                >
+                  Back
+                </button>
+              </a>
+            </div>
+            <div
+              class="col-6"
+            >
+              <div
+                class="SurveyTitle"
+              >
+                Everyday life and health survey 2021
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="Survey_selector"
+                    placeholder="Choose a survey"
+                  >
+                    <option
+                      disabled=""
+                      value="-1"
+                    >
+                      Choose a survey
+                    </option>
+                    <option
+                      value="simpsons2020x00"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="card-title h5"
+          >
+            Survey units terminated : 
+            16
+          </div>
+          <div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-6"
+              >
+                <span>
+                  <span>
+                    Display 
+                  </span>
+                  <form
+                    class="PageSizeSelector"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <select
+                        class="custom-select custom-select-sm"
+                        data-testid="pagination-size-selector"
+                        id="exampleForm.SelectCustom"
+                      >
+                        <option>
+                          5
+                        </option>
+                        <option>
+                          10
+                        </option>
+                        <option>
+                          20
+                        </option>
+                        <option>
+                          50
+                        </option>
+                      </select>
+                    </div>
+                  </form>
+                  <span>
+                     elements
+                  </span>
+                </span>
+              </div>
+              <div
+                class="text-right col-6"
+              >
+                <span>
+                  <input
+                    class="SearchFieldInput"
+                    placeholder="Search"
+                    type="text"
+                    value=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              id="TerminatedTableContainer"
+            >
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="SurveyList"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        data-testid="TableHeader_id_terminated"
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Identifier
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Survey
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Interviewer
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4819
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tableOptionsWrapper"
+              >
+                <ul
+                  class="paginationNav pagination pagination-sm"
+                  data-testid="pagination-nav"
+                >
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      1
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      2
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      3
+                    </a>
+                  </li>
+                  <li
+                    class="page-item active"
+                  >
+                    <span
+                      class="page-link"
+                    >
+                      4
+                      <span
+                        class="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink"
+              href="/"
+            >
+              <button
+                class="YellowButton ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="card-title h5"
+        >
+          Survey units terminated : 
+          16
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-6"
+            >
+              <span>
+                <span>
+                  Display 
+                </span>
+                <form
+                  class="PageSizeSelector"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <select
+                      class="custom-select custom-select-sm"
+                      data-testid="pagination-size-selector"
+                      id="exampleForm.SelectCustom"
+                    >
+                      <option>
+                        5
+                      </option>
+                      <option>
+                        10
+                      </option>
+                      <option>
+                        20
+                      </option>
+                      <option>
+                        50
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <span>
+                   elements
+                </span>
+              </span>
+            </div>
+            <div
+              class="text-right col-6"
+            >
+              <span>
+                <input
+                  class="SearchFieldInput"
+                  placeholder="Search"
+                  type="text"
+                  value=""
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            id="TerminatedTableContainer"
+          >
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="SurveyList"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      data-testid="TableHeader_id_terminated"
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Survey
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Interviewer
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4819
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    1
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    2
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    3
+                  </a>
+                </li>
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    4
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Change pagination size 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <a
+                class="ButtonLink"
+                href="/"
+              >
+                <button
+                  class="YellowButton ReturnButton btn btn-primary"
+                  data-testid="return-button"
+                  type="button"
+                >
+                  Back
+                </button>
+              </a>
+            </div>
+            <div
+              class="col-6"
+            >
+              <div
+                class="SurveyTitle"
+              >
+                Everyday life and health survey 2021
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="Survey_selector"
+                    placeholder="Choose a survey"
+                  >
+                    <option
+                      disabled=""
+                      value="-1"
+                    >
+                      Choose a survey
+                    </option>
+                    <option
+                      value="simpsons2020x00"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="card-title h5"
+          >
+            Survey units terminated : 
+            16
+          </div>
+          <div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-6"
+              >
+                <span>
+                  <span>
+                    Display 
+                  </span>
+                  <form
+                    class="PageSizeSelector"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <select
+                        class="custom-select custom-select-sm"
+                        data-testid="pagination-size-selector"
+                        id="exampleForm.SelectCustom"
+                      >
+                        <option>
+                          5
+                        </option>
+                        <option>
+                          10
+                        </option>
+                        <option>
+                          20
+                        </option>
+                        <option>
+                          50
+                        </option>
+                      </select>
+                    </div>
+                  </form>
+                  <span>
+                     elements
+                  </span>
+                </span>
+              </div>
+              <div
+                class="text-right col-6"
+              >
+                <span>
+                  <input
+                    class="SearchFieldInput"
+                    placeholder="Search"
+                    type="text"
+                    value=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              id="TerminatedTableContainer"
+            >
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="SurveyList"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        data-testid="TableHeader_id_terminated"
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Identifier
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Survey
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Interviewer
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1023
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4811
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1024
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4812
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1025
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4813
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1027
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4815
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Fabres Thierry
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1028
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4816
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tableOptionsWrapper"
+              >
+                <ul
+                  class="paginationNav pagination pagination-sm"
+                  data-testid="pagination-nav"
+                >
+                  <li
+                    class="page-item active"
+                  >
+                    <span
+                      class="page-link"
+                    >
+                      1
+                      <span
+                        class="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      2
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink"
+              href="/"
+            >
+              <button
+                class="YellowButton ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="card-title h5"
+        >
+          Survey units terminated : 
+          16
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-6"
+            >
+              <span>
+                <span>
+                  Display 
+                </span>
+                <form
+                  class="PageSizeSelector"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <select
+                      class="custom-select custom-select-sm"
+                      data-testid="pagination-size-selector"
+                      id="exampleForm.SelectCustom"
+                    >
+                      <option>
+                        5
+                      </option>
+                      <option>
+                        10
+                      </option>
+                      <option>
+                        20
+                      </option>
+                      <option>
+                        50
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <span>
+                   elements
+                </span>
+              </span>
+            </div>
+            <div
+              class="text-right col-6"
+            >
+              <span>
+                <input
+                  class="SearchFieldInput"
+                  placeholder="Search"
+                  type="text"
+                  value=""
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            id="TerminatedTableContainer"
+          >
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="SurveyList"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      data-testid="TableHeader_id_terminated"
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Survey
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Interviewer
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1023
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4811
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1024
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4812
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1025
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4813
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1027
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4815
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Fabres Thierry
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1028
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4816
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    1
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    2
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Component is correctly displayed 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <a
+                class="ButtonLink"
+                href="/"
+              >
+                <button
+                  class="YellowButton ReturnButton btn btn-primary"
+                  data-testid="return-button"
+                  type="button"
+                >
+                  Back
+                </button>
+              </a>
+            </div>
+            <div
+              class="col-6"
+            >
+              <div
+                class="SurveyTitle"
+              >
+                Everyday life and health survey 2021
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="Survey_selector"
+                    placeholder="Choose a survey"
+                  >
+                    <option
+                      disabled=""
+                      value="-1"
+                    >
+                      Choose a survey
+                    </option>
+                    <option
+                      value="simpsons2020x00"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="card-title h5"
+          >
+            Survey units terminated : 
+            16
+          </div>
+          <div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-6"
+              >
+                <span>
+                  <span>
+                    Display 
+                  </span>
+                  <form
+                    class="PageSizeSelector"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <select
+                        class="custom-select custom-select-sm"
+                        data-testid="pagination-size-selector"
+                        id="exampleForm.SelectCustom"
+                      >
+                        <option>
+                          5
+                        </option>
+                        <option>
+                          10
+                        </option>
+                        <option>
+                          20
+                        </option>
+                        <option>
+                          50
+                        </option>
+                      </select>
+                    </div>
+                  </form>
+                  <span>
+                     elements
+                  </span>
+                </span>
+              </div>
+              <div
+                class="text-right col-6"
+              >
+                <span>
+                  <input
+                    class="SearchFieldInput"
+                    placeholder="Search"
+                    type="text"
+                    value=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              id="TerminatedTableContainer"
+            >
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="SurveyList"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        data-testid="TableHeader_id_terminated"
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Identifier
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Survey
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Interviewer
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1023
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4811
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1024
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4812
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1025
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tableOptionsWrapper"
+              >
+                <ul
+                  class="paginationNav pagination pagination-sm"
+                  data-testid="pagination-nav"
+                >
+                  <li
+                    class="page-item active"
+                  >
+                    <span
+                      class="page-link"
+                    >
+                      1
+                      <span
+                        class="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      2
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      3
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      4
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink"
+              href="/"
+            >
+              <button
+                class="YellowButton ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="card-title h5"
+        >
+          Survey units terminated : 
+          16
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-6"
+            >
+              <span>
+                <span>
+                  Display 
+                </span>
+                <form
+                  class="PageSizeSelector"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <select
+                      class="custom-select custom-select-sm"
+                      data-testid="pagination-size-selector"
+                      id="exampleForm.SelectCustom"
+                    >
+                      <option>
+                        5
+                      </option>
+                      <option>
+                        10
+                      </option>
+                      <option>
+                        20
+                      </option>
+                      <option>
+                        50
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <span>
+                   elements
+                </span>
+              </span>
+            </div>
+            <div
+              class="text-right col-6"
+            >
+              <span>
+                <input
+                  class="SearchFieldInput"
+                  placeholder="Search"
+                  type="text"
+                  value=""
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            id="TerminatedTableContainer"
+          >
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="SurveyList"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      data-testid="TableHeader_id_terminated"
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Survey
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Interviewer
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1023
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4811
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1024
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4812
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1025
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    1
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    2
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    3
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    4
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Display and hide history 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <a
+                class="ButtonLink"
+                href="/"
+              >
+                <button
+                  class="YellowButton ReturnButton btn btn-primary"
+                  data-testid="return-button"
+                  type="button"
+                >
+                  Back
+                </button>
+              </a>
+            </div>
+            <div
+              class="col-6"
+            >
+              <div
+                class="SurveyTitle"
+              >
+                Everyday life and health survey 2021
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="Survey_selector"
+                    placeholder="Choose a survey"
+                  >
+                    <option
+                      disabled=""
+                      value="-1"
+                    >
+                      Choose a survey
+                    </option>
+                    <option
+                      value="simpsons2020x00"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="card-title h5"
+          >
+            Survey units terminated : 
+            16
+          </div>
+          <div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-6"
+              >
+                <span>
+                  <span>
+                    Display 
+                  </span>
+                  <form
+                    class="PageSizeSelector"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <select
+                        class="custom-select custom-select-sm"
+                        data-testid="pagination-size-selector"
+                        id="exampleForm.SelectCustom"
+                      >
+                        <option>
+                          5
+                        </option>
+                        <option>
+                          10
+                        </option>
+                        <option>
+                          20
+                        </option>
+                        <option>
+                          50
+                        </option>
+                      </select>
+                    </div>
+                  </form>
+                  <span>
+                     elements
+                  </span>
+                </span>
+              </div>
+              <div
+                class="text-right col-6"
+              >
+                <span>
+                  <input
+                    class="SearchFieldInput"
+                    placeholder="Search"
+                    type="text"
+                    value=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              id="TerminatedTableContainer"
+            >
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="SurveyList"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        data-testid="TableHeader_id_terminated"
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Identifier
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Survey
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Interviewer
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1023
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4811
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1024
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4812
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1025
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tableOptionsWrapper"
+              >
+                <ul
+                  class="paginationNav pagination pagination-sm"
+                  data-testid="pagination-nav"
+                >
+                  <li
+                    class="page-item active"
+                  >
+                    <span
+                      class="page-link"
+                    >
+                      1
+                      <span
+                        class="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      2
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      3
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      4
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              id="StateHistoryTableContainer"
+            >
+              <div
+                class="card-title h5"
+              >
+                <i
+                  class="fa fa-times fa-sm Clickable"
+                  data-testid="close-history"
+                  role="button"
+                  tabindex="0"
+                />
+                History of : 1023
+              </div>
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="SurveyList"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        rowspan="2"
+                      >
+                        Date
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        Hour
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        State
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        7/31/2020
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        9:35
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        ANS
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        7/30/2020
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        14:45
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        ANS
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        7/25/2020
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        6:12
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        AOC
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink"
+              href="/"
+            >
+              <button
+                class="YellowButton ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="card-title h5"
+        >
+          Survey units terminated : 
+          16
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-6"
+            >
+              <span>
+                <span>
+                  Display 
+                </span>
+                <form
+                  class="PageSizeSelector"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <select
+                      class="custom-select custom-select-sm"
+                      data-testid="pagination-size-selector"
+                      id="exampleForm.SelectCustom"
+                    >
+                      <option>
+                        5
+                      </option>
+                      <option>
+                        10
+                      </option>
+                      <option>
+                        20
+                      </option>
+                      <option>
+                        50
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <span>
+                   elements
+                </span>
+              </span>
+            </div>
+            <div
+              class="text-right col-6"
+            >
+              <span>
+                <input
+                  class="SearchFieldInput"
+                  placeholder="Search"
+                  type="text"
+                  value=""
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            id="TerminatedTableContainer"
+          >
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="SurveyList"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      data-testid="TableHeader_id_terminated"
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Survey
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Interviewer
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1023
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4811
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1024
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4812
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1025
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    1
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    2
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    3
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    4
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            id="StateHistoryTableContainer"
+          >
+            <div
+              class="card-title h5"
+            >
+              <i
+                class="fa fa-times fa-sm Clickable"
+                data-testid="close-history"
+                role="button"
+                tabindex="0"
+              />
+              History of : 1023
+            </div>
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="SurveyList"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      rowspan="2"
+                    >
+                      Date
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      Hour
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      State
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      7/31/2020
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      9:35
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      ANS
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      7/30/2020
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      14:45
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      ANS
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      7/25/2020
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      6:12
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      AOC
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Select another survey 1`] = `
+<div
+  data-testid="Redirect-survey"
+>
+  {"allSurveys":[{"id":"vqs2021x00","label":"Everyday life and health survey 2021","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504564383},{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504561350}],"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","visibilityStartDate":1590504561350}
+</div>
+`;
+
+exports[`Sort by su id 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <a
+                class="ButtonLink"
+                href="/"
+              >
+                <button
+                  class="YellowButton ReturnButton btn btn-primary"
+                  data-testid="return-button"
+                  type="button"
+                >
+                  Back
+                </button>
+              </a>
+            </div>
+            <div
+              class="col-6"
+            >
+              <div
+                class="SurveyTitle"
+              >
+                Everyday life and health survey 2021
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="Survey_selector"
+                    placeholder="Choose a survey"
+                  >
+                    <option
+                      disabled=""
+                      value="-1"
+                    >
+                      Choose a survey
+                    </option>
+                    <option
+                      value="simpsons2020x00"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="card-title h5"
+          >
+            Survey units terminated : 
+            16
+          </div>
+          <div>
+            <div
+              class="row"
+            >
+              <div
+                class="col-6"
+              >
+                <span>
+                  <span>
+                    Display 
+                  </span>
+                  <form
+                    class="PageSizeSelector"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <select
+                        class="custom-select custom-select-sm"
+                        data-testid="pagination-size-selector"
+                        id="exampleForm.SelectCustom"
+                      >
+                        <option>
+                          5
+                        </option>
+                        <option>
+                          10
+                        </option>
+                        <option>
+                          20
+                        </option>
+                        <option>
+                          50
+                        </option>
+                      </select>
+                    </div>
+                  </form>
+                  <span>
+                     elements
+                  </span>
+                </span>
+              </div>
+              <div
+                class="text-right col-6"
+              >
+                <span>
+                  <input
+                    class="SearchFieldInput"
+                    placeholder="Search"
+                    type="text"
+                    value=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              id="TerminatedTableContainer"
+            >
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="SurveyList"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        data-testid="TableHeader_id_terminated"
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                          />
+                        </span>
+                        Identifier
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Survey
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Interviewer
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1023
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1024
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1025
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1027
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1028
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tableOptionsWrapper"
+              >
+                <ul
+                  class="paginationNav pagination pagination-sm"
+                  data-testid="pagination-nav"
+                >
+                  <li
+                    class="page-item active"
+                  >
+                    <span
+                      class="page-link"
+                    >
+                      1
+                      <span
+                        class="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      2
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      3
+                    </a>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      4
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink"
+              href="/"
+            >
+              <button
+                class="YellowButton ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="card-title h5"
+        >
+          Survey units terminated : 
+          16
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-6"
+            >
+              <span>
+                <span>
+                  Display 
+                </span>
+                <form
+                  class="PageSizeSelector"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <select
+                      class="custom-select custom-select-sm"
+                      data-testid="pagination-size-selector"
+                      id="exampleForm.SelectCustom"
+                    >
+                      <option>
+                        5
+                      </option>
+                      <option>
+                        10
+                      </option>
+                      <option>
+                        20
+                      </option>
+                      <option>
+                        50
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <span>
+                   elements
+                </span>
+              </span>
+            </div>
+            <div
+              class="text-right col-6"
+            >
+              <span>
+                <input
+                  class="SearchFieldInput"
+                  placeholder="Search"
+                  type="text"
+                  value=""
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            id="TerminatedTableContainer"
+          >
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="SurveyList"
+              >
+                <thead>
+                  <tr>
+                    <th
+                      data-testid="TableHeader_id_terminated"
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Survey
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Interviewer
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1023
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1024
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1025
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1027
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1028
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    1
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    2
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    3
+                  </a>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    4
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

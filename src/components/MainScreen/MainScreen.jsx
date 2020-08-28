@@ -47,80 +47,92 @@ class MainScreen extends React.Component {
       <div id="MainScreen">
         <Card className="ViewCard">
           <Card.Title>{D.surveyList}</Card.Title>
-          <PaginationNav.SizeSelector
-            updateFunc={(newPagination) => this.handlePageChange(newPagination)}
-          />
-          <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
-            <thead>
-              <tr>
-                <th rowSpan="2" onClick={handleSortFunct('label')}>
-                  <SortIcon val="label" sort={sort} />
-                  {D.survey}
-                </th>
-                <th rowSpan="2" className="ColumnSpacing" />
-                <th rowSpan="2" onClick={handleSortFunct('collectionStartDate')}>
-                  <SortIcon val="collectionStartDate" sort={sort} />
-                  {D.collectionStartDate}
-                </th>
-                <th rowSpan="2" onClick={handleSortFunct('collectionEndDate')}>
-                  <SortIcon val="collectionEndDate" sort={sort} />
-                  {D.collectionEndDate}
-                </th>
-                <th rowSpan="2" onClick={handleSortFunct('treatmentEndDate')}>
-                  <SortIcon val="treatmentEndDate" sort={sort} />
-                  {D.treatmentEndDate}
-                </th>
-                <th rowSpan="2" className="ColumnSpacing" />
-                <th rowSpan="2" onClick={handleSortFunct('phase')} className="Clickable">
-                  <SortIcon val="phase" sort={sort} />
-                  {D.phase}
-                </th>
-                <th rowSpan="2" className="ColumnSpacing" />
-                <th colSpan="6">{D.surveyUnits}</th>
-              </tr>
-              <tr>
-                <th onClick={handleSortFunct('allocated')} className="Clickable">
-                  <SortIcon val="allocated" sort={sort} />
-                  {D.allocated}
-                </th>
-                <th onClick={handleSortFunct('toProcessInterviewer')} className="Clickable">
-                  <SortIcon val="toProcessInterviewer" sort={sort} />
-                  {D.toTreatInterviewer}
-                </th>
-                <th onClick={handleSortFunct('toAffect')} className="Clickable">
-                  <SortIcon val="toAffect" sort={sort} />
-                  {D.toBeAssigned}
-                </th>
-                <th onClick={handleSortFunct('toFollowUp')} className="Clickable">
-                  <SortIcon val="toFollowUp" sort={sort} />
-                  {D.toRemind}
-                </th>
-                <th onClick={handleSortFunct('toReview')} className="Clickable">
-                  <SortIcon val="toReview" sort={sort} />
-                  {D.toBeReviewed}
-                </th>
-                <th onClick={handleSortFunct('finalized')} className="Clickable">
-                  <SortIcon val="finalized" sort={sort} />
-                  {D.terminated}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {data
-                .slice(
-                  (pagination.page - 1) * pagination.size,
-                  Math.min(pagination.page * pagination.size, data.length),
-                )
-                .map((line) => (<SurveyListLine key={line.id} lineData={line} allData={data} />))}
-            </tbody>
-          </Table>
-          <div className="tableOptionsWrapper">
-            <PaginationNav.PageSelector
-              pagination={pagination}
-              updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-              numberOfItems={data.length}
-            />
-          </div>
+          {
+            data.length > 0
+              ? (
+                <>
+                  <PaginationNav.SizeSelector
+                    updateFunc={(newPagination) => this.handlePageChange(newPagination)}
+                  />
+                  <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
+                    <thead>
+                      <tr>
+                        <th rowSpan="2" onClick={handleSortFunct('label')}>
+                          <SortIcon val="label" sort={sort} />
+                          {D.survey}
+                        </th>
+                        <th rowSpan="2" className="ColumnSpacing" />
+                        <th rowSpan="2" onClick={handleSortFunct('collectionStartDate')}>
+                          <SortIcon val="collectionStartDate" sort={sort} />
+                          {D.collectionStartDate}
+                        </th>
+                        <th
+                          rowSpan="2"
+                          data-testid="Header-collection-end-date"
+                          onClick={handleSortFunct('collectionEndDate')}
+                        >
+                          <SortIcon val="collectionEndDate" sort={sort} />
+                          {D.collectionEndDate}
+                        </th>
+                        <th rowSpan="2" onClick={handleSortFunct('treatmentEndDate')}>
+                          <SortIcon val="treatmentEndDate" sort={sort} />
+                          {D.treatmentEndDate}
+                        </th>
+                        <th rowSpan="2" className="ColumnSpacing" />
+                        <th rowSpan="2" onClick={handleSortFunct('phase')} className="Clickable">
+                          <SortIcon val="phase" sort={sort} />
+                          {D.phase}
+                        </th>
+                        <th rowSpan="2" className="ColumnSpacing" />
+                        <th colSpan="6">{D.surveyUnits}</th>
+                      </tr>
+                      <tr>
+                        <th onClick={handleSortFunct('allocated')} className="Clickable">
+                          <SortIcon val="allocated" sort={sort} />
+                          {D.allocated}
+                        </th>
+                        <th onClick={handleSortFunct('toProcessInterviewer')} className="Clickable">
+                          <SortIcon val="toProcessInterviewer" sort={sort} />
+                          {D.toTreatInterviewer}
+                        </th>
+                        <th onClick={handleSortFunct('toAffect')} className="Clickable">
+                          <SortIcon val="toAffect" sort={sort} />
+                          {D.toBeAssigned}
+                        </th>
+                        <th onClick={handleSortFunct('toFollowUp')} className="Clickable">
+                          <SortIcon val="toFollowUp" sort={sort} />
+                          {D.toRemind}
+                        </th>
+                        <th onClick={handleSortFunct('toReview')} className="Clickable">
+                          <SortIcon val="toReview" sort={sort} />
+                          {D.toBeReviewed}
+                        </th>
+                        <th onClick={handleSortFunct('finalized')} className="Clickable">
+                          <SortIcon val="finalized" sort={sort} />
+                          {D.terminated}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data
+                        .slice(
+                          (pagination.page - 1) * pagination.size,
+                          Math.min(pagination.page * pagination.size, data.length),
+                        )
+                        .map((line) => (<SurveyListLine key={line.id} lineData={line} allData={data} />))}
+                    </tbody>
+                  </Table>
+                  <div className="tableOptionsWrapper">
+                    <PaginationNav.PageSelector
+                      pagination={pagination}
+                      updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                      numberOfItems={data.length}
+                    />
+                  </div>
+                </>
+              )
+              : <span>{D.noSurveysToDisplay}</span>
+          }
         </Card>
       </div>
     );

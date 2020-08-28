@@ -334,6 +334,10 @@ button{
   margin-bottom:5px;
 }
 
+#RightCoListSU{
+  padding-right: 25px;
+}
+
 #searchParametersContainerCP{
   height: 30px;
   margin-bottom:5px;
@@ -341,6 +345,10 @@ button{
 
 #searchParametersContainerCP .SearchFieldInput{
   width:105px;
+}
+
+.SearchFieldInput{
+  max-width: 100%;
 }
 
 .PageSizeSelector{

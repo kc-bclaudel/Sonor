@@ -56,7 +56,7 @@ class PaginationNav {
     }
 
     return (
-      <Pagination size="sm" className="paginationNav">{items}</Pagination>
+      <Pagination size="sm" className="paginationNav" data-testid="pagination-nav">{items}</Pagination>
     );
   }
 
@@ -72,6 +72,7 @@ class PaginationNav {
               as="select"
               size="sm"
               custom
+              data-testid="pagination-size-selector"
               onChange={(e) => updateFunc({ size: parseInt(e.target.value, 10), page: 1 })}
             >
               <option>5</option>

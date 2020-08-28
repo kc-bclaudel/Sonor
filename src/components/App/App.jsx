@@ -13,17 +13,26 @@ class App extends React.Component {
     this.state = {
       keycloak: null,
       authenticated: false,
+      contactFailed: false,
+      initialisationFailed: false,
       data: null,
-      currentView: null,
     };
   }
 
   async componentDidMount() {
-    await initConfiguration();
+    try {
+      await initConfiguration();
+    } catch (e) {
+      this.setState({ initialisationFailed: true });
+    }
     if (window.localStorage.getItem('AUTHENTICATION_MODE') === ANONYMOUS) {
       const dataRetreiver = new DataFormatter();
       dataRetreiver.getUserInfo((data) => {
-        this.setState({ authenticated: true, data });
+        if (data.error) {
+          this.setState({ contactFailed: true });
+        } else {
+          this.setState({ authenticated: true, data });
+        }
       });
     } else if (window.localStorage.getItem('AUTHENTICATION_MODE') === KEYCLOAK) {
       const keycloak = Keycloak('/keycloak.json');
@@ -36,13 +45,9 @@ class App extends React.Component {
     }
   }
 
-  setCurrentView(currentView) {
-    this.setState({ currentView });
-  }
-
   render() {
     const {
-      keycloak, authenticated, data, currentView,
+      keycloak, authenticated, data, contactFailed, initialisationFailed,
     } = this.state;
     if (keycloak || authenticated) {
       if (authenticated) {
@@ -50,16 +55,19 @@ class App extends React.Component {
           <div className="App">
 
             <View
-              currentView={currentView}
-              setCurrentView={(view) => this.setCurrentView(view)}
               token={keycloak ? keycloak.token : null}
-              ref={(instance) => { this.content = instance; }}
               userData={data}
             />
           </div>
         );
       }
       return (<div>{D.unableToAuthenticate}</div>);
+    }
+    if (initialisationFailed) {
+      return (<div>{D.initializationFailed}</div>);
+    }
+    if (contactFailed) {
+      return (<div>{D.cannotContactServer}</div>);
     }
     return (
       <div>{D.initializing}</div>
