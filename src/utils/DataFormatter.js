@@ -209,7 +209,8 @@ class DataFormatter {
     });
   }
 
-  async getDataForMonitoringTable(survey, date, pagination, mode, cb) {
+  async getDataForMonitoringTable(survey, givenDate, pagination, mode, cb) {
+    const date = givenDate + 86400000;
     const interviewers = [];
     const getDataForSingleSurvey = !Array.isArray(survey);
     let p1;
