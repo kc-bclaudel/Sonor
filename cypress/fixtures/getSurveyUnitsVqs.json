@@ -1,0 +1,25 @@
+[
+    {
+        "id" : "1032",
+        "ssech" : "hgSkR29",
+        "location" : "95160",
+        "city" : "MONTMORENCY",
+        "interviewer" : {
+            "id" : "INTW5",
+            "interviewerFirstName" : "Chloé",
+            "interviewerLastName" : "Dupont"
+        }
+    },
+    {
+        "id" : "4819",
+        "ssech" : "dlcB55jdf",
+        "location" : "90000",
+        "city" : "BELFORT",
+        "interviewer" : {
+            "id" : "INTW6",
+            "interviewerFirstName" : "Jacques",
+            "interviewerLastName" : "Boulanger"
+        }
+    }
+]
+

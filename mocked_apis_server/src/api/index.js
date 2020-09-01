@@ -618,18 +618,14 @@ export default ({ config, db }) => {
 			    nvmCount : 0,
 			    total : 104
 			}
-
 		}
-		
-		
 
 		res.json(mockResponse);
 	});
 
 
 	api.get('/campaign/:id/survey-units/state-count', (req, res) => {
-
-		const date = new Date(req.query.date)
+		const date = new Date(Number(req.query.date))
 		const day = date.getDay()
 		const month = date.getMonth()
 
