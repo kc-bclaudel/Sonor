@@ -56,6 +56,9 @@ Service.mockImplementation(() => ({
     (id, idep, date, cb) => (cb(pearlJamMocks.interviewerStateCount)),
   ),
   getStateCount: jest.fn((id, date, cb) => (cb(pearlJamMocks.stateCountTotal))),
+  getStateCountByCampaign: jest.fn((date, cb) => (cb(pearlJamMocks.stateCountByCampaign))),
+  getStateCountByInterviewer: jest.fn((date, cb) => (cb(pearlJamMocks.stateCountByInterv))),
+
 }));
 
 const dataRetreiver = new DataFormatter();

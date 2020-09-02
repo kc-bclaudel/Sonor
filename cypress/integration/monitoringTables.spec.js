@@ -62,6 +62,14 @@ context('sonor', () => {
       .as('get-campaign-state-count');
 
     cy.server()
+      .route('GET', '**/api/interviewers/survey-units/state-count**', 'fixture:stateCountByInterviewer.json')
+      .as('get-state-count-by-interviewer');
+
+    cy.server()
+      .route('GET', '**/api/campaigns/survey-units/state-count**', 'fixture:stateCountByCampaign.json')
+      .as('get-state-count-by-campaign');
+
+    cy.server()
       .route('GET', '**/follow/sites/null/api/campaign/vqs202fgd1x00/survey-units/state-count?date=1598918400000', 'fixture:campaignStateCountVqsotherdate.json')
       .as('get-campaign-state-count-other-date');
 
@@ -189,7 +197,7 @@ context('sonor', () => {
     // Go to monitoring table by survey
     cy.get('button').contains('Suivre').click();
     cy.get('a').contains('Avancement').first().click({ force: true });
-    cy.wait(6000);
+    cy.wait(1500);
     cy.get('tbody').find('td').eq(2).should('have.text', '24.2%');
 
     // Testing search field filter by survey label
@@ -202,7 +210,7 @@ context('sonor', () => {
     // Go to monitoring table by interviewer all surveys
     cy.get('button').contains('Suivre').click();
     cy.get('a[data-testid="follow-by-interviewer"]').click({ force: true });
-    cy.wait(10000);
+    cy.wait(1500);
     cy.get('tbody').find('td').eq(2).should('have.text', '24.2%');
 
     // Testing page change

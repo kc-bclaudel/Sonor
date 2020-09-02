@@ -169,43 +169,34 @@ class DataFormatter {
     });
   }
 
-  getInterviewersDetail(survey, interviewers, date, mode) {
-    const surveyId = !survey || survey.id;
+  getInterviewersDetail(survey, interviewers, date) {
     return new Promise((resolve) => {
       const promises = interviewers.map((interv) => (
         new Promise((resolve2) => {
           this.service.getInterviewersStateCount(
-            surveyId,
+            survey.id,
             interv.id,
             date,
             (data) => {
               const interviewer = {};
               Object.assign(interviewer, interv);
-              interviewer.survey = surveyId;
+              interviewer.survey = survey.id;
               resolve2({ interviewer, stateCount: data });
             },
           );
         })
       ));
-      if (mode === BY_SURVEY) {
-        Promise.all(promises).then((data) => {
-          const sum = Utils.getStateCountSum(data);
-          sum.survey = survey.label;
-          resolve(sum);
+      Promise.all(promises).then((data) => {
+        const processedData = data.map((intData) => {
+          const line = {};
+          Object.assign(line, intData);
+          line.interviewerFirstName = intData.interviewer.interviewerFirstName;
+          line.interviewerLastName = intData.interviewer.interviewerLastName;
+          line.interviewerId = intData.interviewer.id;
+          return line;
         });
-      } else {
-        Promise.all(promises).then((data) => {
-          const processedData = data.map((intData) => {
-            const line = {};
-            Object.assign(line, intData);
-            line.interviewerFirstName = intData.interviewer.interviewerFirstName;
-            line.interviewerLastName = intData.interviewer.interviewerLastName;
-            line.interviewerId = intData.interviewer.id;
-            return line;
-          });
-          resolve(processedData);
-        });
-      }
+        resolve(processedData);
+      });
     });
   }
 
@@ -226,28 +217,43 @@ class DataFormatter {
       }
       site = (await this.service.getUser()).organizationUnit.label;
       p1 = new Promise((resolve) => {
-        const promises = surveysToGetInterviewersFrom.map((surv) => (
-          new Promise((resolve2) => {
-            this.service.getInterviewers(surv.id, (res) => {
-              res.forEach((interviewer) => {
-                Utils.addIfNotAlreadyPresent(interviewers, interviewer);
+        if (mode === BY_INTERVIEWER_ONE_SURVEY) {
+          const promises = surveysToGetInterviewersFrom.map((surv) => (
+            new Promise((resolve2) => {
+              this.service.getInterviewers(surv.id, (res) => {
+                res.forEach((interviewer) => {
+                  Utils.addIfNotAlreadyPresent(interviewers, interviewer);
+                });
+                this.getInterviewersDetail(
+                  surv,
+                  res,
+                  date,
+                ).then((data) => resolve2(data));
               });
-              this.getInterviewersDetail(
-                surv,
-                res,
-                date,
-                mode,
-              ).then((data) => resolve2(data));
-            });
-          })
-        ));
-        Promise.all(promises).then((data) => {
-          if (mode === BY_SURVEY) {
-            resolve(data);
-          } else {
+            })
+          ));
+          Promise.all(promises).then((data) => {
             resolve(Utils.sumOn(data.flat(), 'interviewerId'));
-          }
-        });
+          });
+        } else if (mode === BY_SURVEY) {
+          this.service.getStateCountByCampaign(date, (res) => {
+            resolve(res.map((x) => {
+              const obj = Utils.formatForMonitoringTable(x);
+              obj.survey = x.campaign.label;
+              return obj;
+            }));
+          });
+        } else {
+          this.service.getStateCountByInterviewer(date, (res) => {
+            resolve(res.map((x) => {
+              const obj = Utils.formatForMonitoringTable(x);
+              obj.interviewerFirstName = x.interviewer.interviewerFirstName;
+              obj.interviewerLastName = x.interviewer.interviewerLastName;
+              obj.interviewerId = x.interviewer.id;
+              return obj;
+            }));
+          });
+        }
       });
     }
 
@@ -300,10 +306,8 @@ class DataFormatter {
     } else {
       p1.then((data) => {
         cb({
-          interviewers,
           site,
           interviewersDetail: data,
-          relevantInterviewers: interviewers,
         });
       });
     }
