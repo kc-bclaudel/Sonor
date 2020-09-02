@@ -29,7 +29,7 @@ it('Test function convertToDateString', async () => {
 });
 
 it('Test function convertMsToHoursMinutes', async () => {
-  // Should equal '16:49'
+  // Should equal '14:49'
   expect(Utils.convertMsToHoursMinutes(1590504561350)).toEqual('14:49');
 });
 
@@ -67,6 +67,6 @@ it('Test getCampaignPhase treatment over', async () => {
 });
 
 it('Test handleSort default case', async () => {
-  // Should return correct
+  // Should return correct object
   expect(Utils.handleSort('sortOn', [], {}, null, null)).toEqual([{}, { asc: null, sortOn: 'sortOn' }]);
 });

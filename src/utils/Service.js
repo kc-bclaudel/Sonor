@@ -49,11 +49,10 @@ class Service {
           resolve(data);
         })
         .catch((e) => {
-          console.log(e);
           if (cb) {
-            cb({ error: true });
+            cb({ error: true, message: e });
           }
-          resolve({ error: true });
+          resolve({ error: true, message: e });
           NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
         });
     });

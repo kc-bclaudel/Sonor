@@ -210,6 +210,7 @@ class DataFormatter {
   }
 
   async getDataForMonitoringTable(survey, givenDate, pagination, mode, cb) {
+    // Adding 24h to take all states added before the next day into account
     const date = givenDate + 86400000;
     const interviewers = [];
     const getDataForSingleSurvey = !Array.isArray(survey);
