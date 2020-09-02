@@ -567,10 +567,17 @@ export default ({ config, db }) => {
 	api.get('/campaign/:id/survey-units/not-attributed', (req, res) => {
 
 		const mockResponse = {
-			    count: 14,
+			    count: 0,
 			}
 		
 
+		res.json(mockResponse);
+	});
+
+	api.get('/campaign/:id/survey-units/abandoned', (req, res) => {
+		const mockResponse = {
+			    count: 0,
+			}
 		res.json(mockResponse);
 	});
 

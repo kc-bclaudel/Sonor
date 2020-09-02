@@ -88,8 +88,6 @@ class Service {
       })
       .catch((err) => {
         console.log(err);
-        // To be able to access campaign portal while API is unavailable (to remove after dev)
-        cb({ count: null });
       });
   }
 
@@ -101,8 +99,6 @@ class Service {
       })
       .catch((err) => {
         console.log(err);
-        // To be able to access campaign portal while API is unavailable (to remove after dev)
-        cb({ count: null });
       });
   }
 
