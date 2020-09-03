@@ -87,8 +87,6 @@ class Service {
       })
       .catch((err) => {
         console.log(err);
-        // To be able to access campaign portal while API is unavailable (to remove after dev)
-        cb({ count: null });
       });
   }
 
@@ -100,8 +98,6 @@ class Service {
       })
       .catch((err) => {
         console.log(err);
-        // To be able to access campaign portal while API is unavailable (to remove after dev)
-        cb({ count: null });
       });
   }
 
@@ -176,6 +172,28 @@ class Service {
 
   getStateCount(campaignId, date, cb) {
     fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+  getStateCountByCampaign(date, cb) {
+    fetch(`${baseUrl}/api/campaigns/survey-units/state-count?date=${date}`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+  getStateCountByInterviewer(date, cb) {
+    fetch(`${baseUrl}/api/interviewers/survey-units/state-count?date=${date}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);

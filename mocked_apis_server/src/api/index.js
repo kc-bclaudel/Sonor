@@ -567,10 +567,17 @@ export default ({ config, db }) => {
 	api.get('/campaign/:id/survey-units/not-attributed', (req, res) => {
 
 		const mockResponse = {
-			    count: 14,
+			    count: 0,
 			}
 		
 
+		res.json(mockResponse);
+	});
+
+	api.get('/campaign/:id/survey-units/abandoned', (req, res) => {
+		const mockResponse = {
+			    count: 0,
+			}
 		res.json(mockResponse);
 	});
 
@@ -711,6 +718,313 @@ export default ({ config, db }) => {
 
 		
 
+		res.json(mockResponse);
+  });
+  
+  api.get('/campaigns/survey-units/state-count', (req, res) => {
+		const date = new Date(Number(req.query.date))
+		const day = date.getDay()
+		const month = date.getMonth()
+
+    const mockResponse = [
+      {
+        "campaign": {
+                    "id": "simpsons2020x00",
+            "label": "Survey on the Simpsons tv show 2020"
+                },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "campaign": {
+                   "id": "simpsosfqns2020x00",
+            "label": "Survey on something 2020"
+                },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "campaign": {
+               "id": "vqs2fsqe021x00",
+            "label": "Everyday life and health survey 2022"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "campaign": {
+               "id": "simpsonqsdfsqes2020x00",
+            "label": "Survey on something else 2020"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "campaign": {
+                "id": "vqs2qfsdfsqe021x00",
+            "label": "Everyday life and health survey 2026"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "campaign": {
+                "id": "simpsonkgs2020x00",
+            "label": "Survey on the Simpsons tv show 2021"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "campaign":  {
+                "id": "vqs202fgd1x00",
+            "label": "Everyday life and health survey 2018"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      }
+    ]
+		res.json(mockResponse);
+  });
+  
+  api.get('/interviewers/survey-units/state-count', (req, res) => {
+		const date = new Date(Number(req.query.date))
+		const day = date.getDay()
+		const month = date.getMonth()
+
+    const mockResponse = [
+      {
+        "interviewer": {
+                    "id" : "INTW5",
+                    "interviewerFirstName" : "Chloé",
+                    "interviewerLastName" : "Dupont"
+                },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "interviewer": {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "interviewer": {
+                "id":"INTW7",
+                "interviewerFirstName": "Thierry",
+                "interviewerLastName": "Fabres"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "interviewer": {
+                "id":"INTW8",
+                "interviewerFirstName": "Bertrand",
+                "interviewerLastName": "Renard"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "interviewer": {
+                "id":"INTW9",
+                "interviewerFirstName": "Emilie",
+                "interviewerLastName": "Boulanger"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "interviewer": {
+                "id":"INTW10",
+                "interviewerFirstName": "Renée",
+                "interviewerLastName": "Dupont"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      },
+        {
+        "interviewer":  {
+                "id":"INTW11",
+                "interviewerFirstName": "Alphonse",
+                "interviewerLastName": "Delmarre"
+            },
+        "nnsCount": 1,
+        "ansCount" : 7,
+        "vicCount": 4,
+        "prcCount" : 2,
+        "aocCount" : 4,
+        "apsCount" : 4,
+        "insCount" : 6,
+        "wftCount" : 3,
+        "wfsCount" : 3,
+        "tbrCount" : 21,
+        "finCount" : 2,
+        "nviCount" : 3,
+        "nvmCount" : 8,
+        "total" : 95
+      }
+    ]
 		res.json(mockResponse);
 	});
 
