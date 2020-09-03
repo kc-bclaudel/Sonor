@@ -1,0 +1,149 @@
+[
+  {
+    "interviewer": {
+                "id" : "INTW5",
+                "interviewerFirstName" : "Chloé",
+                "interviewerLastName" : "Dupont"
+            },
+    "nnsCount": 1,
+    "ansCount" : 7,
+    "vicCount": 4,
+    "prcCount" : 2,
+    "aocCount" : 4,
+    "apsCount" : 4,
+    "insCount" : 6,
+    "wftCount" : 3,
+    "wfsCount" : 3,
+    "tbrCount" : 21,
+    "finCount" : 2,
+    "nviCount" : 3,
+    "nvmCount" : 8,
+    "total" : 95
+  },
+    {
+    "interviewer": {
+                "id" : "INTW6",
+                "interviewerFirstName" : "Jacques",
+                "interviewerLastName" : "Boulanger"
+            },
+    "nnsCount": 1,
+    "ansCount" : 7,
+    "vicCount": 4,
+    "prcCount" : 2,
+    "aocCount" : 4,
+    "apsCount" : 4,
+    "insCount" : 6,
+    "wftCount" : 3,
+    "wfsCount" : 3,
+    "tbrCount" : 21,
+    "finCount" : 2,
+    "nviCount" : 3,
+    "nvmCount" : 8,
+    "total" : 95
+  },
+    {
+    "interviewer": {
+            "id":"INTW7",
+            "interviewerFirstName": "Thierry",
+            "interviewerLastName": "Fabres"
+        },
+    "nnsCount": 1,
+    "ansCount" : 7,
+    "vicCount": 4,
+    "prcCount" : 2,
+    "aocCount" : 4,
+    "apsCount" : 4,
+    "insCount" : 6,
+    "wftCount" : 3,
+    "wfsCount" : 3,
+    "tbrCount" : 21,
+    "finCount" : 2,
+    "nviCount" : 3,
+    "nvmCount" : 8,
+    "total" : 95
+  },
+    {
+    "interviewer": {
+            "id":"INTW8",
+            "interviewerFirstName": "Bertrand",
+            "interviewerLastName": "Renard"
+        },
+    "nnsCount": 1,
+    "ansCount" : 7,
+    "vicCount": 4,
+    "prcCount" : 2,
+    "aocCount" : 4,
+    "apsCount" : 4,
+    "insCount" : 6,
+    "wftCount" : 3,
+    "wfsCount" : 3,
+    "tbrCount" : 21,
+    "finCount" : 2,
+    "nviCount" : 3,
+    "nvmCount" : 8,
+    "total" : 95
+  },
+    {
+    "interviewer": {
+            "id":"INTW9",
+            "interviewerFirstName": "Emilie",
+            "interviewerLastName": "Boulanger"
+        },
+    "nnsCount": 1,
+    "ansCount" : 7,
+    "vicCount": 4,
+    "prcCount" : 2,
+    "aocCount" : 4,
+    "apsCount" : 4,
+    "insCount" : 6,
+    "wftCount" : 3,
+    "wfsCount" : 3,
+    "tbrCount" : 21,
+    "finCount" : 2,
+    "nviCount" : 3,
+    "nvmCount" : 8,
+    "total" : 95
+  },
+    {
+    "interviewer": {
+            "id":"INTW10",
+            "interviewerFirstName": "Renée",
+            "interviewerLastName": "Dupont"
+        },
+    "nnsCount": 1,
+    "ansCount" : 7,
+    "vicCount": 4,
+    "prcCount" : 2,
+    "aocCount" : 4,
+    "apsCount" : 4,
+    "insCount" : 6,
+    "wftCount" : 3,
+    "wfsCount" : 3,
+    "tbrCount" : 21,
+    "finCount" : 2,
+    "nviCount" : 3,
+    "nvmCount" : 8,
+    "total" : 95
+  },
+    {
+    "interviewer":  {
+            "id":"INTW11",
+            "interviewerFirstName": "Alphonse",
+            "interviewerLastName": "Delmarre"
+        },
+    "nnsCount": 1,
+    "ansCount" : 7,
+    "vicCount": 4,
+    "prcCount" : 2,
+    "aocCount" : 4,
+    "apsCount" : 4,
+    "insCount" : 6,
+    "wftCount" : 3,
+    "wfsCount" : 3,
+    "tbrCount" : 21,
+    "finCount" : 2,
+    "nviCount" : 3,
+    "nvmCount" : 8,
+    "total" : 95
+  }
+]

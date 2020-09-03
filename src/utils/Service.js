@@ -180,6 +180,28 @@ class Service {
         console.log(e);
       });
   }
+
+  getStateCountByCampaign(date, cb) {
+    fetch(`${baseUrl}/api/campaigns/survey-units/state-count?date=${date}`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+  getStateCountByInterviewer(date, cb) {
+    fetch(`${baseUrl}/api/interviewers/survey-units/state-count?date=${date}`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
 }
 
 export default Service;
