@@ -31,7 +31,7 @@ const service = new Service();
 
 it('Test option creation', async () => {
   const s = new Service('ABC');
-  // Should return the data fetched
+  // Should return correct options
   expect(s.options).toEqual({"headers": {"map": {"authorization": "Bearer ABC", "content-type": "application/json"}}});
 });
 
