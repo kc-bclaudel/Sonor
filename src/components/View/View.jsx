@@ -27,6 +27,13 @@ class View extends React.Component {
     this.loadPreferences();
   }
 
+  componentDidUpdate(prevProps) {
+    const { token } = this.props;
+    if (token !== prevProps.token) {
+      this.dataRetreiver = new DataFormatter(token);
+    }
+  }
+
   loadPreferences() {
     this.dataRetreiver.getPreferences((preferences) => {
       this.setState({ preferences });
