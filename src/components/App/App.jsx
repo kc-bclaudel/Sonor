@@ -41,6 +41,15 @@ class App extends React.Component {
         dataRetreiver.getUserInfo((data) => {
           this.setState({ keycloak, authenticated, data });
         });
+        setInterval(() => {
+          keycloak.updateToken(100).success((refreshed) => {
+            if (refreshed) {
+              this.setState({ keycloak });
+            }
+          }).error(() => {
+            console.error('Failed to refresh token');
+          });
+        }, 250000);
       });
     }
   }
