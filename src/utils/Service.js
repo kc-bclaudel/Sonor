@@ -1,7 +1,8 @@
 import { NotificationManager } from 'react-notifications';
 import D from '../i18n';
 
-const baseUrl = `${window.localStorage.getItem('PEARL_JAM_URL')}`;
+const baseUrlPearlJam = `${window.localStorage.getItem('PEARL_JAM_URL')}`;
+const baseUrlQueen = `${window.localStorage.getItem('QUEEN_URL')}`;
 
 class Service {
   constructor(token) {
@@ -25,7 +26,7 @@ class Service {
     const options = {};
     Object.assign(options, this.options);
     options.method = 'PUT';
-    fetch(`${baseUrl}/api/survey-unit/${su}/state/FIN`, options)
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/state/FIN`, options)
       .then((res) => cb(res))
       .catch(console.log);
   }
@@ -35,14 +36,14 @@ class Service {
     Object.assign(options, this.options);
     options.method = 'PUT';
     options.body = JSON.stringify(preferences);
-    fetch(`${baseUrl}/api/preferences`, options)
+    fetch(`${baseUrlPearlJam}/api/preferences`, options)
       .then((res) => cb(res))
       .catch(console.log);
   }
 
   getUser(cb) {
     return new Promise((resolve) => {
-      fetch(`${baseUrl}/api/user`, this.options)
+      fetch(`${baseUrlPearlJam}/api/user`, this.options)
         .then((res) => res.json())
         .then((data) => {
           if (cb) { cb(data); }
@@ -59,7 +60,7 @@ class Service {
   }
 
   getSurveys(cb) {
-    fetch(`${baseUrl}/api/campaigns`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaigns`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -71,7 +72,7 @@ class Service {
   }
 
   getInterviewersByCampaign(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/interviewers`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -80,7 +81,7 @@ class Service {
   }
 
   getNotAttributedByCampaign(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/not-attributed`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -91,7 +92,7 @@ class Service {
   }
 
   getAbandonedByCampaign(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/abandoned`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/abandoned`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -102,7 +103,7 @@ class Service {
   }
 
   getTerminatedByCampaign(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units?state=FIN`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units?state=FIN`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -114,7 +115,7 @@ class Service {
   }
 
   getStatesBySurveyId(surveyId, cb) {
-    fetch(`${baseUrl}/api/survey-unit/${surveyId}/states`, this.options)
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${surveyId}/states`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -126,7 +127,7 @@ class Service {
   }
 
   getTotalDemByCampaign(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -138,7 +139,7 @@ class Service {
   }
 
   getSurveyUnits(campaignId, state, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units${state ? `?state=${state}` : ''}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units${state ? `?state=${state}` : ''}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -150,7 +151,7 @@ class Service {
   }
 
   getInterviewers(campaignId, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/interviewers`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -159,7 +160,7 @@ class Service {
   }
 
   getInterviewersStateCount(campaignId, idep, date, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -171,7 +172,7 @@ class Service {
   }
 
   getStateCount(campaignId, date, cb) {
-    fetch(`${baseUrl}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -182,7 +183,7 @@ class Service {
   }
 
   getStateCountByCampaign(date, cb) {
-    fetch(`${baseUrl}/api/campaigns/survey-units/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaigns/survey-units/state-count?date=${date}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -193,13 +194,25 @@ class Service {
   }
 
   getStateCountByInterviewer(date, cb) {
-    fetch(`${baseUrl}/api/interviewers/survey-units/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/interviewers/survey-units/state-count?date=${date}`, this.options)
       .then((res) => res.json())
       .then((data) => {
         cb(data);
       })
       .catch((e) => {
         console.log(e);
+      });
+  }
+
+  getQuestionnaireId(campaignId, cb) {
+    fetch(`${baseUrlQueen}/api/campaign/${campaignId}/questionnaire-id`, this.options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        cb();
       });
   }
 }

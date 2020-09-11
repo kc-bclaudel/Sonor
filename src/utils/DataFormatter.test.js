@@ -44,6 +44,7 @@ Service.mockImplementation(() => ({
   }),
   putSurveyUnitToValidate: jest.fn((su, cb) => (cb({ status: 200 }))),
   putPreferences: jest.fn((prefs, cb) => (cb({ status: 200 }))),
+  getQuestionnaireId: jest.fn((id, c) => (c({ questionnaireId: 'QXT55' }))),
   getSurveys: jest.fn((cb) => (cb(mainScreenData))),
   getInterviewers: jest.fn((id, cb) => (cb(pearlJamMocks.interviewersByCampaign))),
   getNotAttributedByCampaign: jest.fn((id, cb) => (cb(pearlJamMocks.notAttributed))),

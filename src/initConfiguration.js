@@ -7,6 +7,7 @@ const initConfiguration = async () => {
     configuration.AUTHENTICATION_MODE,
   );
   window.localStorage.setItem('PEARL_JAM_URL', configuration.PEARL_JAM_URL);
+  window.localStorage.setItem('QUEEN_URL', configuration.QUEEN_URL);
 };
 
 export default initConfiguration;

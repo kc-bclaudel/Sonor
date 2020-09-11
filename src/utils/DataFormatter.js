@@ -121,16 +121,21 @@ class DataFormatter {
   getListSuTerminated(campaignId, cb) {
     return new Promise((resolve) => {
       let processedData = [];
-      this.service.getTerminatedByCampaign(campaignId, (data) => {
-        processedData = data.map((intData) => {
-          const line = {};
-          Object.assign(line, intData);
-          line.interviewerFirstName = intData.interviewer.interviewerFirstName;
-          line.interviewerLastName = intData.interviewer.interviewerLastName;
-          return line;
+      this.service.getQuestionnaireId(campaignId, (queenRes) => {
+        this.service.getTerminatedByCampaign(campaignId, (data) => {
+          processedData = data.map((intData) => {
+            const line = {};
+            Object.assign(line, intData);
+            line.interviewerFirstName = intData.interviewer.interviewerFirstName;
+            line.interviewerLastName = intData.interviewer.interviewerLastName;
+            if (queenRes) {
+              line.questionnaireId = queenRes.questionnaireId;
+            }
+            return line;
+          });
+          if (cb) { cb(processedData); }
+          resolve(processedData);
         });
-        if (cb) { cb(processedData); }
-        resolve(processedData);
       });
     });
   }
@@ -150,15 +155,18 @@ class DataFormatter {
         const promises = res.filter((campaign) => (surveyId === null || campaign.id === surveyId))
           .map((campaign) => (
             new Promise((resolve2) => {
-              this.service.getSurveyUnits(campaign.id, 'TBR', (res2) => {
-                const lstSU = res2.map((su) => ({
-                  campaignLabel: campaign.label,
-                  interviewer: `${su.interviewer.interviewerLastName} ${su.interviewer.interviewerFirstName}`,
-                  idep: su.interviewer.id,
-                  id: su.id,
-                }))
-                  .sort((a, b) => (a.interviewer > b.interviewer ? 1 : -1));
-                resolve2(lstSU);
+              this.service.getQuestionnaireId(campaign.id, (queenRes) => {
+                this.service.getSurveyUnits(campaign.id, 'TBR', (res2) => {
+                  const lstSU = res2.map((su) => ({
+                    campaignLabel: campaign.label,
+                    questionnaireId: queenRes ? queenRes.questionnaireId : null,
+                    interviewer: `${su.interviewer.interviewerLastName} ${su.interviewer.interviewerFirstName}`,
+                    idep: su.interviewer.id,
+                    id: su.id,
+                  }))
+                    .sort((a, b) => (a.interviewer > b.interviewer ? 1 : -1));
+                  resolve2(lstSU);
+                });
               });
             })
           ));

@@ -572,6 +572,16 @@ export default ({ config, db }) => {
 		
 
 		res.json(mockResponse);
+  });
+  
+  api.get('/campaign/:id/questionnaire-id', (req, res) => {
+
+		const mockResponse = {
+			    questionnaireId: "QXT55",
+			}
+		
+
+		res.json(mockResponse);
 	});
 
 	api.get('/campaign/:id/survey-units/abandoned', (req, res) => {
