@@ -1191,7 +1191,7 @@ const mocks ={
       }
    ],
    "formattedDataMonitoringTableByInterv":{ site: 'National organizational unit',
-        interviewersDetail:
+        linesDetails:
          [ { completionRate: 0.24210526315789474,
              total: 95,
              notStarted: 4,
@@ -1335,7 +1335,7 @@ const mocks ={
             "surveyUnitCount":55
          }
       ],
-      "interviewersDetail":[
+      "linesDetails":[
          {
             "appointmentTaken":8,
             "atLeastOneContact":8,
@@ -1528,7 +1528,7 @@ const mocks ={
       }
    },
    "formattedDataMonitoringTableBysurvey":{ site: 'National organizational unit',
-        interviewersDetail:
+        linesDetails:
          [ { completionRate: 0.24210526315789474,
              total: 95,
              notStarted: 4,
@@ -1628,7 +1628,7 @@ const mocks ={
              interviewerId: undefined,
              survey: 'Everyday life and health survey 2018' } ] },
    "formattedDataMonitoringTableBySite":{
-      "interviewersDetail":[
+      "linesDetails":[
          {
             "completionRate":0.028846153846153848,
             "total":104,
@@ -2341,7 +2341,7 @@ const mocks ={
          }
       ],
       "site":"National organizational unit",
-      "interviewersDetail":[
+      "linesDetails":[
          {
             "completionRate":0.16666666666666666,
             "total":96,
@@ -2529,7 +2529,7 @@ const mocks ={
       ]
    },
    "respModeBySite":{
-      "interviewersDetail":[
+      "linesDetails":[
          {
             "completionRate":0.028846153846153848,
             "total":104,
@@ -2679,7 +2679,7 @@ const mocks ={
          }
       ],
       "site":"National organizational unit",
-      "interviewersDetail":[
+      "linesDetails":[
          {
             "completionRate":0.04722222222222222,
             "total":720,
@@ -2884,7 +2884,7 @@ const mocks ={
          }
       ],
       "site":"National organizational unit",
-      "interviewersDetail":[
+      "linesDetails":[
          {
             "completionRate":0.16666666666666666,
             "total":768,

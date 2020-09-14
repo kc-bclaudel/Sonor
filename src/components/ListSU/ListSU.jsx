@@ -70,7 +70,7 @@ function ListSU({
               )
               : <span>{D.noListSuToDisplay}</span>
           }
-          </Card>
+        </Card>
       </div>
     );
 }

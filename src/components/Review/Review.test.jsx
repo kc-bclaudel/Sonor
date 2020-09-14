@@ -307,7 +307,7 @@ it('Select a survey unit and validate (error response)', async () => {
 
   // Notification manager should have been called to display error
   await wait(() => expect(mockError).toHaveBeenLastCalledWith(
-    D.reviewAlertError,
+    `${D.reviewAlertError}: 4818.`,
     D.error,
     3500,
   ));

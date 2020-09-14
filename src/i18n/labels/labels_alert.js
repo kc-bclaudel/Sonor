@@ -20,8 +20,8 @@ const alert = {
     en: 'The following survey units were validated successfully',
   },
   reviewAlertError: {
-    fr: 'Une erreur est survenue. Les unitées enquêtées n\'ont pas pu être validées.',
-    en: 'An error occured. The survey units could not be validated.',
+    fr: 'Une erreur est survenue. Les unitées enquêtées suivantes n\'ont pas pu être validées',
+    en: 'An error occured. The following survey units could not be validated',
   },
   verifyInternetCo:  {
     fr: 'Veuillez vérifier votre connexion internet.',

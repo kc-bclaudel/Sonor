@@ -144,6 +144,10 @@ it('Export table', async () => {
     </Router>,
   );
 
+  const realRemoveFunc = HTMLAnchorElement.prototype.remove;
+  const removeElmMock = jest.fn();
+  HTMLAnchorElement.prototype.remove = removeElmMock;
+
   const fileTitle = 'National_organizational_unit_Everyday_life_and_health_survey_2021_UE_confiees_8202020.csv';
   const fileContent = 'data:text/csv;charset=utf-8,Identifier;Ssech;Department;Town;Interviewer;Idep%0A20;1;59620;Aulnoye-Aimeries;Lucas%20Margie;INTW1%0A21;1;38200;Vienne;Campbell%20Carlton;INTW2%0A22;2;62000;Arras;Xern%20Fabrice;INTW4%0A29;1;65000;Belfort;Delmare%20Mathilde;INTW12%0A33;1;75000;Paris;Antoine%20Tarje;INTW14%0A55;2;62000;Arras;Bertrand%20Ulysse;INTW4%0A23;1;35000;Rennes;Grant%20Melody;INTW4';
   screen.getByTestId('export-button').click();
@@ -158,5 +162,9 @@ it('Export table', async () => {
   // Should match snapshot (with link attached)
   expect(component).toMatchSnapshot();
 
+  // Link should have been removed
+  expect(removeElmMock).toHaveBeenCalled();
+
+  HTMLAnchorElement.prototype.remove = realRemoveFunc;
   downnloadLink.remove();
 });

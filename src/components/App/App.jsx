@@ -3,7 +3,6 @@ import Keycloak from 'keycloak-js';
 import View from '../View/View';
 import DataFormatter from '../../utils/DataFormatter';
 import { KEYCLOAK, ANONYMOUS } from '../../utils/constants.json';
-import './App.css';
 import initConfiguration from '../../initConfiguration';
 import D from '../../i18n';
 
@@ -41,6 +40,8 @@ class App extends React.Component {
         dataRetreiver.getUserInfo((data) => {
           this.setState({ keycloak, authenticated, data });
         });
+        // Update 20 seconds before expiracy
+        const updateInterval = (keycloak.tokenParsed.exp + keycloak.timeSkew) * 1000 - new Date().getTime() - 20000;
         setInterval(() => {
           keycloak.updateToken(100).success((refreshed) => {
             if (refreshed) {
@@ -49,7 +50,7 @@ class App extends React.Component {
           }).error(() => {
             console.error('Failed to refresh token');
           });
-        }, 250000);
+        }, updateInterval);
       });
     }
   }

@@ -28,7 +28,10 @@ class Service {
     options.method = 'PUT';
     fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/state/FIN`, options)
       .then((res) => cb(res))
-      .catch(console.log);
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
   }
 
   putPreferences(preferences, cb) {

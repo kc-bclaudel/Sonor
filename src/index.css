@@ -13,45 +13,6 @@ code {
 }
 
 
-/*.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
 html{
   overflow-x: hidden;
 }
@@ -95,20 +56,6 @@ body {
   z-index: 2;
 
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
-
-
-
-
-
-
-
-  /* background-color: #0f417a;
-  background-image: url("/logo-insee-fond.png");
-  background-repeat: no-repeat;
-  background-position: center 35px;
-  background-size: 600px auto; */
-
-
 }
 
 
@@ -187,17 +134,6 @@ th.YellowHeader{
   background: white !important;
   border:none !important;
 }
-
-
-/* .DarkgreyLine{
-  background: rgb(202,202,202);
-  color: rgb(84,91,153);
-}
-
-.LightGreyLine{
-  background: rgb(239,239,239);
-  color: rgb(84,91,153);
-} */
 
 .SurveyTitle{
   font-size: 25px;
@@ -285,10 +221,6 @@ button{
 
 .Clickable{
   cursor: pointer;
-}
-
-.Clickable:hover{
-  /* color: blue; */
 }
 
 #datePicker{
@@ -405,12 +337,22 @@ button{
   margin-bottom: 0;
  }
 
- a.TableLink, a.ButtonLink {
+ .WithTableLink > td > a{
   padding: 0 !important;
- }
- a.TableLink{
   color: #212529 !important;
- }
+}
+  a.ButtonLink {
+    padding: 0 !important;
+  }
+
  a:hover {
   text-decoration: none !important;
  }
+ 
+ .HistoryDisplayIcon{
+  padding-left: 5px;
+}
+
+#TerminatedTableContainer, #StateHistoryTableContainer{
+  width: -webkit-fill-available;
+}
