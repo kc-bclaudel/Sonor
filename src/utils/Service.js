@@ -2,7 +2,7 @@ import { NotificationManager } from 'react-notifications';
 import D from '../i18n';
 
 const baseUrlPearlJam = `${window.localStorage.getItem('PEARL_JAM_URL')}`;
-const baseUrlQueen = `${window.localStorage.getItem('QUEEN_URL')}`;
+const baseUrlQueen = `${window.localStorage.getItem('QUEEN_URL_BACK_END')}`;
 
 class Service {
   constructor(token) {
