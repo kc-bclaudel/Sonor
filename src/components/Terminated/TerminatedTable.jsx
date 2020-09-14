@@ -18,7 +18,7 @@ class TerminatedTable extends React.Component {
       stateData: [],
       stateId: '',
     };
-    this.queenUrl = `${window.localStorage.getItem('QUEEN_URL')}`;
+    this.queenUrl = `${window.localStorage.getItem('QUEEN_URL_FRONT_END')}`;
   }
 
   toggleStateHistoryTable(e, newStateTitle) {

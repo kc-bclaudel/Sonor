@@ -6,7 +6,8 @@ function SurveyUnitLine({
   const {
     campaignLabel, interviewer, id,
   } = lineData;
-  const queenUrl = `${window.localStorage.getItem('QUEEN_URL')}`;
+  const queenUrl = `${window.localStorage.getItem('QUEEN_URL_FRONT_END')}`;
+
   return (
     <tr>
       <td className="Clickable">
