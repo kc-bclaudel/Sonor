@@ -88,7 +88,7 @@ class ReviewTable extends React.Component {
   }
 
   render() {
-    const { sort, data, handleSort, survey } = this.props;
+    const { survey, sort, data, handleSort } = this.props;
     const {
       displayedLines, pagination, checkboxArray, checkAll, show,
     } = this.state;
