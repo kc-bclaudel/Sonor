@@ -60,7 +60,7 @@ class TerminatedTable extends React.Component {
           <i
             className="fa fa-pencil EditLink"
             aria-hidden="true"
-            onClick={() => { window.open(`${this.queenUrl}/queen/readonly/questionnaire/${data.questionnaireId}/survey-unit/${data.id}`); }}
+            onClick={() => { window.open(`${this.queenUrl}/queen/readonly/questionnaire/${survey.id}/survey-unit/${data.id}`); }}
           />
           <span />
           <i className="fa fa-history HistoryDisplayIcon" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
