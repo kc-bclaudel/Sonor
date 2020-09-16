@@ -402,7 +402,7 @@ it('Close modal with button', async () => {
   await wait(() => expect(component.baseElement.querySelector('.modal-dialog')).not.toBeTruthy());
 });
 
-/* it('Click on the 3 cells of a SU line', async () => {
+it('Click on the 3 cells of a SU line', async () => {
   history.push('/review');
   const component = render(
     <TestingRouter
@@ -428,4 +428,4 @@ it('Close modal with button', async () => {
 
   // window.open should have been called 3 times
   expect(window.open).toHaveBeenCalledTimes(3);
-}); */
+});

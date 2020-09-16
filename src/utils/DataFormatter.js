@@ -159,6 +159,7 @@ class DataFormatter {
                 this.service.getSurveyUnits(campaign.id, 'TBR', (res2) => {
                   const lstSU = res2.map((su) => ({
                     campaignLabel: campaign.label,
+                    campaignId: campaign.id,
                     questionnaireId: queenRes ? queenRes.questionnaireId : null,
                     interviewer: `${su.interviewer.interviewerLastName} ${su.interviewer.interviewerFirstName}`,
                     idep: su.interviewer.id,
