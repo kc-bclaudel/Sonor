@@ -1,3 +1,5 @@
+import D from '../../src/i18n';
+
 context('sonor', () => {
   it('Test finalized', () => {
     cy.server()
@@ -67,7 +69,7 @@ context('sonor', () => {
     cy.get('#MainScreen');
     // Click on the review cell of first row to go to review
     cy.get('tbody').within(() => {
-      cy.get('td').eq(12).click();
+      cy.get('td').eq(12).find('a').click();
     });
 
     // Survey title should be correct
@@ -91,21 +93,21 @@ context('sonor', () => {
     });
 
     // Go to review all surveys
-    cy.get('button').contains('Lire').click();
+    cy.get('button').contains(D.read).click();
 
     // Verify we now have 16 SUs
-    cy.get('div.card-title').eq(1).should('have.text', 'Unités enquêtées à relire : 16');
+    cy.get('div.card-title').eq(1).should('have.text', `${D.surveyUnitsToReview}16`);
 
     // Testing sort by id
-    cy.get('th').contains('Enquête').click();
+    cy.get('th').contains(D.survey).click();
     cy.get('tbody').find('td').eq(1).should('have.text', 'Everyday life and health survey 2018');
-    cy.get('th').contains('Enquête').click();
+    cy.get('th').contains(D.survey).click();
     cy.get('tbody').find('td').eq(1).should('have.text', 'Survey on something 2020');
 
     // Testing sort by interviewer
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').find('td').eq(2).should('have.text', 'Boulanger Jacques');
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').find('td').eq(2).should('have.text', 'Fabres Thierry');
 
     // Testing page change
@@ -148,14 +150,15 @@ context('sonor', () => {
     // Testing validation
     cy.get('[type="checkbox"]').eq(2).check();
     cy.get('[type="checkbox"]').eq(4).check();
-    cy.get('button').contains('Valider').click();
+    cy.get('button').contains(D.validate).click();
     cy.get('[data-testid="confirm-validate"]').click();
-    cy.wait(1300);
+    cy.wait(['@get-tbr-vqs','@get-tbr-vqs', '@get-tbr-vqs']);
+    cy.wait(500);
     cy.get('[type="checkbox"]').eq(2).should('not.be.checked');
     cy.get('[type="checkbox"]').eq(4).should('not.be.checked');
 
     // Testing return button
-    cy.get('a').contains('Retour').click();
+    cy.get('a').contains(D.back).click();
     cy.get('#MainScreen');
 
   });

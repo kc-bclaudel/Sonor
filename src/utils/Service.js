@@ -90,6 +90,7 @@ class Service {
         cb(data);
       })
       .catch((err) => {
+        cb({ count: null });
         console.log(err);
       });
   }
@@ -101,6 +102,7 @@ class Service {
         cb(data);
       })
       .catch((err) => {
+        cb({ count: null });
         console.log(err);
       });
   }
