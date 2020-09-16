@@ -19,6 +19,7 @@ class TerminatedTable extends React.Component {
       stateData: [],
       stateId: '',
     };
+    this.queenUrl = `${window.localStorage.getItem('QUEEN_URL_FRONT_END')}`;
   }
 
   toggleStateHistoryTable(e, newStateTitle) {
@@ -59,7 +60,7 @@ class TerminatedTable extends React.Component {
           <i
             className="fa fa-pencil EditLink"
             aria-hidden="true"
-            onClick={() => { window.open('', '_blank'); }}
+            onClick={() => { window.open(`${this.queenUrl}/queen/readonly/questionnaire/${survey.id}/survey-unit/${data.id}`); }}
           />
           <span />
           <i className="fa fa-history HistoryDisplayIcon" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
