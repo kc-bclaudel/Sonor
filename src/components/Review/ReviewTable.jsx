@@ -88,7 +88,7 @@ class ReviewTable extends React.Component {
   }
 
   render() {
-    const { survey, sort, data, handleSort } = this.props;
+    const { sort, data, handleSort } = this.props;
     const {
       displayedLines, pagination, checkboxArray, checkAll, show,
     } = this.state;
@@ -140,7 +140,6 @@ class ReviewTable extends React.Component {
               .map((line) => (
                 <SurveyUnitLine
                   key={line.id}
-                  survey={survey}
                   lineData={line}
                   isChecked={checkboxArray[line.id]}
                   updateFunc={() => toggleCheckBox(line.id)}
