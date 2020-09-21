@@ -43,7 +43,7 @@ context('sonor', () => {
     // Phase in timeline should be correct
     cy.get('.CurrentPhase').should('have.text', D.collectionOver);
     // Interviewers should be correct
-    cy.wait(300);
+    cy.wait(1000);
     cy.get('td').contains('Corrine');
 
     // Select another survey
@@ -54,7 +54,7 @@ context('sonor', () => {
 
     // Phase should have changed
     cy.get('.CurrentPhase').should('have.text', D.initialAssignment);
-    cy.wait(300);
+    cy.wait(1000);
 
     // Interviewers should have changed
     cy.get('tbody').eq(1).within(() => {

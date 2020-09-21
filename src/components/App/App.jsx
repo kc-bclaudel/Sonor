@@ -35,7 +35,7 @@ class App extends React.Component {
       });
     } else if (window.localStorage.getItem('AUTHENTICATION_MODE') === KEYCLOAK) {
       const keycloak = Keycloak('/keycloak.json');
-      keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
+      keycloak.init({ onLoad: 'login-required', checkLoginIframe: false }).then((authenticated) => {
         const dataRetreiver = new DataFormatter(keycloak.token);
         dataRetreiver.getUserInfo((data) => {
           this.setState({ keycloak, authenticated, data });
