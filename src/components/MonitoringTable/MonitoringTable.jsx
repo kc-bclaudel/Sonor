@@ -174,7 +174,7 @@ class MonitoringTable extends React.Component {
           <Row>
             <Col>
               <Link to="/" className="ButtonLink">
-                <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+                <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
               </Link>
             </Col>
             <Col xs={6}>

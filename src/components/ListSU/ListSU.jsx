@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback} from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Col, Row } from 'react-bootstrap';
@@ -26,11 +26,17 @@ function ListSU({
     });
   }, [redirect, dataRetreiver, survey]);
 
-  function handleSort(property, asc) {
+  const handleSort = useCallback((property, asc) => {
     const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'listSU', asc);
     setSort(newSort);
     setData(sortedData);
-  }
+  }, [data, sort]);
+
+  useEffect(() => {
+    if (sort.sortOn === null) {
+      handleSort('id', true);
+    }
+  }, [data, handleSort, sort.sortOn]);
 
   return redirect
     ? <Redirect to={redirect} />
@@ -39,7 +45,7 @@ function ListSU({
         <Row>
           <Col>
             <Link to="/" className="ButtonLink">
-              <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+              <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
             </Link>
           </Col>
           <Col xs={6}>

@@ -70,9 +70,10 @@ context('sonor', () => {
 
     // Testing sort by id
     cy.get('th').contains(D.identifier).click();
+    cy.get('tbody').find('td').first().should('have.text', '4818');
+    cy.get('th').contains(D.identifier).click();
     cy.get('tbody').find('td').first().should('have.text', '1023');
     cy.get('th').contains(D.identifier).click();
-    cy.get('tbody').find('td').first().should('have.text', '4818');
 
     // Testing sort by ssech
     cy.get('th').contains(D.ssech).click();
@@ -82,9 +83,9 @@ context('sonor', () => {
 
     // Testing sort by départemnent
     cy.get('th').contains(D.department).click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '90000');
+    cy.get('tbody').find('td').eq(2).should('have.text', '90');
     cy.get('th').contains(D.department).click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '95160');
+    cy.get('tbody').find('td').eq(2).should('have.text', '95');
 
     // Testing sort by commune
     cy.get('th').contains(D.town).click();

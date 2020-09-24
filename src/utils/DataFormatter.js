@@ -7,8 +7,8 @@ import {
 } from './constants.json';
 
 class DataFormatter {
-  constructor(token) {
-    this.service = new Service(token);
+  constructor(keycloak) {
+    this.service = new Service(keycloak);
   }
 
   getUserInfo(cb) {

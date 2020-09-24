@@ -29,9 +29,9 @@ const {
 const service = new Service();
 
 it('Test option creation', async () => {
-  const s = new Service('ABC');
+  const s = new Service({ token: 'ABC' });
   // Should return correct options
-  expect(s.options).toEqual({"headers": {"map": {"authorization": "Bearer ABC", "content-type": "application/json"}}});
+  expect(s.makeOptions()).toEqual({"headers": {"map": {"authorization": "Bearer ABC", "content-type": "application/json"}}});
 });
 
 it('Test getUser', async () => {

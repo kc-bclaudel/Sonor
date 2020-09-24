@@ -50,7 +50,7 @@ Keycloak.init = jest.fn(() => (Promise.resolve({ token: 'abc' })));
 
 Keycloak.mockImplementation(() => ({
   init: jest.fn(() => (Promise.resolve({ token: 'abc' }))),
-  updateToken: (() => ({ success: jest.fn(() => ({ error: (() => {}) })) })),
+  updateToken: (() => ({ error: (() => {}) })),
   tokenParsed: { exp: 300 },
   timeSkew: 0,
 }));

@@ -23,18 +23,11 @@ class View extends React.Component {
       preferences: {},
       prefsUpdated: false,
     };
-    this.dataRetreiver = new DataFormatter(props.token);
+    this.dataRetreiver = new DataFormatter(props.keycloak);
   }
 
   componentDidMount() {
     this.loadPreferences();
-  }
-
-  componentDidUpdate(prevProps) {
-    const { token } = this.props;
-    if (token !== prevProps.token) {
-      this.dataRetreiver = new DataFormatter(token);
-    }
   }
 
   loadPreferences() {

@@ -5,26 +5,29 @@ const baseUrlPearlJam = `${window.localStorage.getItem('PEARL_JAM_URL')}`;
 const baseUrlQueen = `${window.localStorage.getItem('QUEEN_URL')}`;
 
 class Service {
-  constructor(token) {
-    if (token) {
-      this.options = {
+  constructor(keycloak) {
+    this.keycloak = keycloak;
+  }
+
+  makeOptions() {
+    if (this.keycloak) {
+      return {
         headers: new Headers({
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        }),
-      };
-    } else {
-      this.options = {
-        headers: new Headers({
-          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.keycloak.token}`,
         }),
       };
     }
+    return {
+      headers: new Headers({
+        'Content-Type': 'application/json',
+      }),
+    };
   }
 
   putSurveyUnitToValidate(su, cb) {
     const options = {};
-    Object.assign(options, this.options);
+    Object.assign(options, this.makeOptions());
     options.method = 'PUT';
     fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/state/FIN`, options)
       .then((res) => cb(res))
@@ -36,7 +39,7 @@ class Service {
 
   putPreferences(preferences, cb) {
     const options = {};
-    Object.assign(options, this.options);
+    Object.assign(options, this.makeOptions());
     options.method = 'PUT';
     options.body = JSON.stringify(preferences);
     fetch(`${baseUrlPearlJam}/api/preferences`, options)
@@ -46,7 +49,7 @@ class Service {
 
   getUser(cb) {
     return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/user`, this.options)
+      fetch(`${baseUrlPearlJam}/api/user`, this.makeOptions())
         .then((res) => res.json())
         .then((data) => {
           if (cb) { cb(data); }
@@ -63,7 +66,7 @@ class Service {
   }
 
   getSurveys(cb) {
-    fetch(`${baseUrlPearlJam}/api/campaigns`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaigns`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -75,7 +78,7 @@ class Service {
   }
 
   getInterviewersByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -84,7 +87,7 @@ class Service {
   }
 
   getNotAttributedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -96,7 +99,7 @@ class Service {
   }
 
   getAbandonedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/abandoned`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/abandoned`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -108,7 +111,7 @@ class Service {
   }
 
   getTerminatedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units?state=FIN`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units?state=FIN`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -120,7 +123,7 @@ class Service {
   }
 
   getStatesBySurveyId(surveyId, cb) {
-    fetch(`${baseUrlPearlJam}/api/survey-unit/${surveyId}/states`, this.options)
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${surveyId}/states`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -132,7 +135,7 @@ class Service {
   }
 
   getTotalDemByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -144,7 +147,7 @@ class Service {
   }
 
   getSurveyUnits(campaignId, state, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units${state ? `?state=${state}` : ''}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units${state ? `?state=${state}` : ''}`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -156,7 +159,7 @@ class Service {
   }
 
   getInterviewers(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -165,7 +168,7 @@ class Service {
   }
 
   getInterviewersStateCount(campaignId, idep, date, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -177,7 +180,7 @@ class Service {
   }
 
   getStateCount(campaignId, date, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -188,7 +191,7 @@ class Service {
   }
 
   getStateCountByCampaign(date, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaigns/survey-units/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/campaigns/survey-units/state-count?date=${date}`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -199,7 +202,7 @@ class Service {
   }
 
   getStateCountByInterviewer(date, cb) {
-    fetch(`${baseUrlPearlJam}/api/interviewers/survey-units/state-count?date=${date}`, this.options)
+    fetch(`${baseUrlPearlJam}/api/interviewers/survey-units/state-count?date=${date}`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
@@ -210,7 +213,7 @@ class Service {
   }
 
   getQuestionnaireId(campaignId, cb) {
-    fetch(`${baseUrlQueen}/api/campaign/${campaignId}/questionnaire-id`, this.options)
+    fetch(`${baseUrlQueen}/api/campaign/${campaignId}/questionnaire-id`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
