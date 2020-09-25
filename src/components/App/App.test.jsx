@@ -133,7 +133,7 @@ it('Could not authenticate with keycloak', async () => {
 
   Keycloak.mockImplementation(() => ({
     init: jest.fn(() => (Promise.resolve(false))),
-    updateToken: (() => ({ success: jest.fn(() => ({ error: (() => {}) })) })),
+    updateToken: (() => ({ error: (() => {}) })),
     tokenParsed: { exp: 300 },
     timeSkew: 0,
   }));
