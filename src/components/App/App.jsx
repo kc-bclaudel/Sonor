@@ -3,7 +3,6 @@ import Keycloak from 'keycloak-js';
 import View from '../View/View';
 import DataFormatter from '../../utils/DataFormatter';
 import { KEYCLOAK, ANONYMOUS } from '../../utils/constants.json';
-import './App.css';
 import initConfiguration from '../../initConfiguration';
 import D from '../../i18n';
 
@@ -36,20 +35,18 @@ class App extends React.Component {
       });
     } else if (window.localStorage.getItem('AUTHENTICATION_MODE') === KEYCLOAK) {
       const keycloak = Keycloak('/keycloak.json');
-      keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
-        const dataRetreiver = new DataFormatter(keycloak.token);
+      keycloak.init({ onLoad: 'login-required', checkLoginIframe: false }).then((authenticated) => {
+        const dataRetreiver = new DataFormatter(keycloak);
         dataRetreiver.getUserInfo((data) => {
           this.setState({ keycloak, authenticated, data });
         });
+        // Update 20 seconds before expiracy
+        const updateInterval = (keycloak.tokenParsed.exp + keycloak.timeSkew) * 1000 - new Date().getTime() - 20000;
         setInterval(() => {
-          keycloak.updateToken(100).success((refreshed) => {
-            if (refreshed) {
-              this.setState({ keycloak });
-            }
-          }).error(() => {
+          keycloak.updateToken(100).error(() => {
             console.error('Failed to refresh token');
           });
-        }, 250000);
+        }, updateInterval);
       });
     }
   }
@@ -64,7 +61,7 @@ class App extends React.Component {
           <div className="App">
 
             <View
-              token={keycloak ? keycloak.token : null}
+              keycloak={keycloak}
               userData={data}
             />
           </div>

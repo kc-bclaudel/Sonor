@@ -1,7 +1,8 @@
 // Link.react.test.js
 import React from 'react';
+import { act } from 'react-dom/test-utils';
 import {
-  render, screen, fireEvent, cleanup,
+  render, screen, fireEvent, cleanup, waitForElement,
 } from '@testing-library/react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
@@ -50,7 +51,7 @@ const TestingRouter = ({ ComponentWithRedirection }) => (
 );
 
 DataFormatter.mockImplementation(() => ({
-  getDataForListSU: (a, c) => (c(resp)),
+  getDataForListSU: (a, c) => (setTimeout(() => { c(resp); }, 3)),
 }));
 
 const mockDataRetreiver = new DataFormatter();
@@ -61,6 +62,7 @@ it('Component is correctly displayed', async () => {
       <ListSU location={{ survey }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
+  await waitForElement(() => screen.getByTestId('TableHeader_interviewer_name'));
   // Should match snapshot (rows displayed)
   expect(component).toMatchSnapshot();
 });
@@ -71,7 +73,7 @@ it('Sort by interviewer name', async () => {
       <ListSU location={{ survey }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
-
+  await waitForElement(() => screen.getByTestId('TableHeader_interviewer_name'));
   screen.getByTestId('TableHeader_interviewer_name').click();
   // Should match snapshot (rows sorted by name)
   expect(component).toMatchSnapshot();
@@ -84,6 +86,7 @@ it('Change page', async () => {
     </Router>,
   );
 
+  await waitForElement(() => screen.getByTestId('TableHeader_interviewer_name'));
   screen.getByTestId('pagination-nav').lastChild.firstChild.click();
 
   // Should match snapshot (rows displayed have changed)
@@ -96,15 +99,15 @@ it('Change pagination size', async () => {
       <ListSU location={{ survey }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
-
-  fireEvent.change(component.getByTestId('pagination-size-selector'), { target: { value: '10' } });
-
+  await waitForElement(() => screen.getByTestId('TableHeader_interviewer_name'));
+  act(() => {
+    fireEvent.change(component.getByTestId('pagination-size-selector'), { target: { value: '10' } });
+  });
   // Should match snapshot (all 8 rows are now displayed)
   expect(component).toMatchSnapshot();
 });
 
 it('Select another survey', async () => {
-
   const redirectUrl = '/listSU/simpsons2020x00';
   const component = render(
     <TestingRouter
@@ -113,9 +116,10 @@ it('Select another survey', async () => {
       }
     />,
   );
-
-  fireEvent.change(component.getByTestId('Survey_selector'), { target: { value: 'simpsons2020x00' } });
-
+  await waitForElement(() => screen.getByTestId('TableHeader_interviewer_name'));
+  act(() => {
+    fireEvent.change(component.getByTestId('Survey_selector'), { target: { value: 'simpsons2020x00' } });
+  });
   // Should redirect to '/listSU/simpsons2020x00'
   expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`);
 
@@ -127,11 +131,13 @@ it('Select another survey', async () => {
 it('Reloading the page with no survey set (F5)', async () => {
 
   const redirectUrl = '/';
-  render(
-    <TestingRouter
-      ComponentWithRedirection={() => <ListSU location={{ }} dataRetreiver={mockDataRetreiver} />}
-    />,
-  );
+  act(() => {
+    render(
+      <TestingRouter
+        ComponentWithRedirection={() => <ListSU location={{ }} dataRetreiver={mockDataRetreiver} />}
+      />,
+    );
+  });
 
   // Should redirect to '/'
   expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`);
@@ -143,6 +149,10 @@ it('Export table', async () => {
       <ListSU location={{ survey }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
+  await waitForElement(() => screen.getByTestId('TableHeader_interviewer_name'));
+  const realRemoveFunc = HTMLAnchorElement.prototype.remove;
+  const removeElmMock = jest.fn();
+  HTMLAnchorElement.prototype.remove = removeElmMock;
 
   const fileTitle = 'National_organizational_unit_Everyday_life_and_health_survey_2021_UE_confiees_8202020.csv';
   const fileContent = 'data:text/csv;charset=utf-8,Identifier;Ssech;Department;Town;Interviewer;Idep%0A20;1;59620;Aulnoye-Aimeries;Lucas%20Margie;INTW1%0A21;1;38200;Vienne;Campbell%20Carlton;INTW2%0A22;2;62000;Arras;Xern%20Fabrice;INTW4%0A29;1;65000;Belfort;Delmare%20Mathilde;INTW12%0A33;1;75000;Paris;Antoine%20Tarje;INTW14%0A55;2;62000;Arras;Bertrand%20Ulysse;INTW4%0A23;1;35000;Rennes;Grant%20Melody;INTW4';
@@ -158,5 +168,9 @@ it('Export table', async () => {
   // Should match snapshot (with link attached)
   expect(component).toMatchSnapshot();
 
+  // Link should have been removed
+  expect(removeElmMock).toHaveBeenCalled();
+
+  HTMLAnchorElement.prototype.remove = realRemoveFunc;
   downnloadLink.remove();
 });

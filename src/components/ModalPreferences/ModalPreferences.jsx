@@ -39,7 +39,9 @@ class ModalPreferences extends React.Component {
   validateNewPreferences() {
     const { selectedPreferences } = this.state;
     const { updatePreferences } = this.props;
-    updatePreferences(Object.keys(selectedPreferences).filter((id) => selectedPreferences[id].preference));
+    updatePreferences(Object.keys(selectedPreferences).filter(
+      (id) => selectedPreferences[id].preference,
+    ));
   }
 
   updatePreferencesFromProps() {

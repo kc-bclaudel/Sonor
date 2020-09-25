@@ -1,3 +1,5 @@
+import D from '../../src/i18n';
+
 context('sonor', () => {
   it('Test portal', () => {
     cy.server()
@@ -67,33 +69,34 @@ context('sonor', () => {
     });
 
     // Testing sort by id
-    cy.get('th').contains('Identifiant').click();
-    cy.get('tbody').find('td').first().should('have.text', '1023');
-    cy.get('th').contains('Identifiant').click();
+    cy.get('th').contains(D.identifier).click();
     cy.get('tbody').find('td').first().should('have.text', '4818');
+    cy.get('th').contains(D.identifier).click();
+    cy.get('tbody').find('td').first().should('have.text', '1023');
+    cy.get('th').contains(D.identifier).click();
 
     // Testing sort by ssech
-    cy.get('th').contains('Ssech').click();
+    cy.get('th').contains(D.ssech).click();
     cy.get('tbody').find('td').eq(1).should('have.text', 'dlcB55jdf');
-    cy.get('th').contains('Ssech').click();
+    cy.get('th').contains(D.ssech).click();
     cy.get('tbody').find('td').eq(1).should('have.text', 'hgSkR29');
 
     // Testing sort by départemnent
-    cy.get('th').contains('Département').click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '90000');
-    cy.get('th').contains('Département').click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '95160');
+    cy.get('th').contains(D.department).click();
+    cy.get('tbody').find('td').eq(2).should('have.text', '90');
+    cy.get('th').contains(D.department).click();
+    cy.get('tbody').find('td').eq(2).should('have.text', '95');
 
     // Testing sort by commune
-    cy.get('th').contains('Commune').click();
+    cy.get('th').contains(D.town).click();
     cy.get('tbody').find('td').eq(3).should('have.text', 'BELFORT');
-    cy.get('th').contains('Commune').click();
+    cy.get('th').contains(D.town).click();
     cy.get('tbody').find('td').eq(3).should('have.text', 'MONTMORENCY');
 
     // Testing sort by enquêteur
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').find('td').eq(4).should('have.text', 'Boulanger Jacques');
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').find('td').eq(4).should('have.text', 'Fabres Thierry');
 
     // Testing page change
@@ -121,7 +124,7 @@ context('sonor', () => {
     cy.get('tbody').find('td').eq(4).should('have.text', 'Fabres Thierry');
 
     // Testing return button
-    cy.get('a').contains('Retour').click();
+    cy.get('a').contains(D.back).click();
     cy.get('#MainScreen');
 
   });

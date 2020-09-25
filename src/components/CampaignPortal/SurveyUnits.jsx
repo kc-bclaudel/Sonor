@@ -51,6 +51,7 @@ class SurveyUnits extends React.Component {
     link.setAttribute('download', title);
     document.body.appendChild(link);
     link.click();
+    link.remove();
   }
 
   render() {

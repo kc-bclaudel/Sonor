@@ -50,6 +50,9 @@ Keycloak.init = jest.fn(() => (Promise.resolve({ token: 'abc' })));
 
 Keycloak.mockImplementation(() => ({
   init: jest.fn(() => (Promise.resolve({ token: 'abc' }))),
+  updateToken: (() => ({ error: (() => {}) })),
+  tokenParsed: { exp: 300 },
+  timeSkew: 0,
 }));
 
 const updatePreferences = jest.fn((newPrefs, cb) => {
@@ -130,6 +133,9 @@ it('Could not authenticate with keycloak', async () => {
 
   Keycloak.mockImplementation(() => ({
     init: jest.fn(() => (Promise.resolve(false))),
+    updateToken: (() => ({ success: jest.fn(() => ({ error: (() => {}) })) })),
+    tokenParsed: { exp: 300 },
+    timeSkew: 0,
   }));
 
   const component = render(
@@ -139,199 +145,3 @@ it('Could not authenticate with keycloak', async () => {
   // Should match snapshot
   expect(component).toMatchSnapshot();
 });
-
-
-// it('Component is correctly displayed', async () => {
-//   const component = render(
-//     <App />,
-//   );
-
-//   // Should match snapshot
-//   expect(component).toMatchSnapshot();
-// });
-
-// var localStorageMock = (function() {
-//   var store = {};
-//   return {
-//     getItem: function(key) {
-//       return store[key];
-//     },
-//     setItem: function(key, value) {
-//       store[key] = value.toString();
-//     },
-//     clear: function() {
-//       store = {};
-//     },
-//     removeItem: function(key) {
-//       delete store[key];
-//     }
-//   };
-// })();
-// Object.defineProperty(window, 'localStorage', { value: localStorageMock });
-
-// it('Go to portal', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   screen.getAllByText('5/26/2020')[0].click();
-//   // Should match snapshot (portal)
-//   expect(component).toMatchSnapshot();
-  
-// });
-
-
-// it('Go to review', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   screen.getByTestId('review').click();
-//   // Should match snapshot (review)
-//   expect(component).toMatchSnapshot();
-
-// });
-
-// it('Go to follow-up', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   screen.getByTestId('follow-up').click();
-//   // Should match snapshot (follow up)
-//   expect(component).toMatchSnapshot();
-
-// });
-
-// it('Go to follow by survey', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   component.baseElement.querySelector('#FollowButton').click();
-//   screen.getByTestId('follow-by-survey').click();
-//   await waitForElement(() => screen.getByTestId('return-button'));
-//   // Should match snapshot (follow)
-//   expect(component).toMatchSnapshot();
-
-// });
-
-// it('Go to finalized', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   await waitForElement(() => screen.getByTestId('return-button'));
-//   screen.getByTestId('return-button').click();
-
-//   const firstLineCells = component.baseElement.querySelector('tbody').querySelectorAll('tr')[0].querySelectorAll('td');
-//   firstLineCells[firstLineCells.length - 1].firstChild.click();
-//   await waitForElement(() => screen.getByTestId('return-button'));
-//   // Should match snapshot (terminated)
-//   expect(component).toMatchSnapshot();
-
-// });
-
-// it('Go to listSU', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   component.baseElement.querySelector('tbody').querySelectorAll('tr')[0].querySelectorAll('td')[8].firstChild.click();
-//   // Should match snapshot (listSU)
-//   expect(component).toMatchSnapshot();
-
-// });
-
-// it('Change preferences', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   screen.getByTestId('preferences').click();
-
-//   await waitForElement(() => screen.getByTestId('close-preferences-button'));
-
-//   const boxes = component.baseElement.querySelectorAll('input[type="checkbox"]');
-
-//   boxes[1].click();
-//   boxes[2].click();
-
-//   const newPrefs = [
-//     'simpsons2020x00',
-//     'simpsonqsdfsqes2020x00',
-//     'vqs2qfsdfsqe021x00',
-//     'vqs202fgd1x00',
-//   ];
-
-//   screen.getByTestId('validate-pref-modif').click();
-
-//   // updatePreferences should have been called with the new pref surveys in argument
-//   expect(updatePreferences).toHaveBeenLastCalledWith(newPrefs, expect.anything());
-
-//   // Notification.success should have been called
-//   expect(mockSuccess).toHaveBeenLastCalledWith(D.preferencesUpdated, D.updateSuccess, 3500);
-
-// });
-
-// it('Change preferences (error response)', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   screen.getByTestId('preferences').click();
-
-//   const boxes = component.baseElement.querySelectorAll('input[type="checkbox"]');
-
-//   boxes[6].click();
-
-//   screen.getByTestId('validate-pref-modif').click();
-
-//   // Notification.error should have been called
-//   expect(mockError).toHaveBeenLastCalledWith(D.preferencesNotUpdated, D.error, 3500);
-
-// });
-
-// it('Open and close preference modal', async () => {
-//   const component = render(
-//     <View
-//       token={null}
-//       userData={userData}
-//     />,
-//   );
-
-//   screen.getByTestId('preferences').click();
-
-//   // Modal dialog should show
-//   expect(component.baseElement.querySelector('.modal-dialog')).toBeTruthy();
-
-//   component.baseElement.querySelector('button.close').click();
-
-//   // Modal dialog should close
-//   await wait(() => expect(component.baseElement.querySelector('.modal-dialog')).not.toBeTruthy());
-
-// });

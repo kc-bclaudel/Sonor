@@ -316,7 +316,7 @@ it('Reloading the page with no survey set (F5) by interviewers', async () => {
 
 it('Reloading the page with no survey set (F5) by survey', async () => {
   const pathname = '/follow/campaigns';
-  history.push(pathname)
+  history.push(pathname);
 
   const component = render(
     <Router history={history}>
@@ -341,6 +341,10 @@ it('Export table by interviewer one survey', async () => {
     </Router>,
   );
 
+  const realRemoveFunc = HTMLAnchorElement.prototype.remove;
+  const removeElmMock = jest.fn();
+  HTMLAnchorElement.prototype.remove = removeElmMock;
+
   const fileTitle = 'National_organizational_unit_Everyday_life_and_health_survey_2021_Avancement_enqueteurs_8202020.csv';
   const fileContent = 'data:text/csv;charset=utf-8,Last%20name;First%20name;Idep;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;Reviewed%20by%20interviewer;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;2.9%25;104;3;34;0;2;1;29;;;5%0ABoulanger;Jacques;INTW6;2.9%25;104;3;34;0;2;1;29;;;5%0ADelmarre;Alphonse;INTW11;2.9%25;104;3;34;0;2;1;29;;;5%0ADupont;Chlo%C3%A9;INTW5;16.7%25;96;3;7;2;10;7;4;;;3%0ADupont;Ren%C3%A9e;INTW10;2.9%25;104;3;34;0;2;1;29;;;5%0AFabres;Thierry;INTW7;2.9%25;104;3;34;0;2;1;29;;;5%0ARenard;Bertrand;INTW8;2.9%25;104;3;34;0;2;1;29;;;5%0ATotal%20organizational%20unit;;;2.9%25;208;22;111;;4;2;29;60;12;10%0ATotal%20France;;;2.9%25;104;;34;0;2;1;29;;;5';
   screen.getByTestId('export-button').click();
@@ -355,6 +359,10 @@ it('Export table by interviewer one survey', async () => {
   // Should match snapshot (with link attached)
   expect(component).toMatchSnapshot();
 
+  // Link should have been removed
+  expect(removeElmMock).toHaveBeenCalled();
+
+  HTMLAnchorElement.prototype.remove = realRemoveFunc;
   downnloadLink.remove();
 });
 
@@ -367,6 +375,10 @@ it('Export table by site', async () => {
       <MonitoringTable location={{ survey, pathname }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
+
+  const realRemoveFunc = HTMLAnchorElement.prototype.remove;
+  const removeElmMock = jest.fn();
+  HTMLAnchorElement.prototype.remove = removeElmMock;
 
   const fileTitle = 'Everyday_life_and_health_survey_2021_Avancement_sites_8202020.csv';
   const fileContent = 'data:text/csv;charset=utf-8,Site;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;Reviewed%20by%20interviewer;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ANational%20organizational%20unit;2.9%25;104;22;47;0;2;1;;30;12;5%0ANorth%20region%20organizational%20unit;2.9%25;104;22;47;;2;1;;30;12;5%0ASouth%20region%20organizational%20unit;2.9%25;104;;64;0;2;1;29;30;;5%0ATotal%20France;2.9%25;104;;34;0;2;1;29;;;5';
@@ -382,6 +394,10 @@ it('Export table by site', async () => {
   // Should match snapshot (with link attached)
   expect(component).toMatchSnapshot();
 
+  // Link should have been removed
+  expect(removeElmMock).toHaveBeenCalled();
+
+  HTMLAnchorElement.prototype.remove = realRemoveFunc;
   downnloadLink.remove();
 });
 
@@ -394,6 +410,10 @@ it('Export table by interviewer', async () => {
       <MonitoringTable location={{ survey, pathname }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
+
+  const realRemoveFunc = HTMLAnchorElement.prototype.remove;
+  const removeElmMock = jest.fn();
+  HTMLAnchorElement.prototype.remove = removeElmMock;
 
   await waitForElement(() => screen.getByTestId('pagination-nav'));
 
@@ -411,6 +431,10 @@ it('Export table by interviewer', async () => {
   // Should match snapshot (with link attached)
   expect(component).toMatchSnapshot();
 
+  // Link should have been removed
+  expect(removeElmMock).toHaveBeenCalled();
+
+  HTMLAnchorElement.prototype.remove = realRemoveFunc;
   downnloadLink.remove();
 });
 
@@ -423,6 +447,10 @@ it('Export table by survey', async () => {
       <MonitoringTable location={{ survey, pathname }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
+
+  const realRemoveFunc = HTMLAnchorElement.prototype.remove;
+  const removeElmMock = jest.fn();
+  HTMLAnchorElement.prototype.remove = removeElmMock;
 
   await waitForElement(() => screen.getByTestId('pagination-nav'));
 
@@ -440,5 +468,9 @@ it('Export table by survey', async () => {
   // Should match snapshot (with link attached)
   expect(component).toMatchSnapshot();
 
+  // Link should have been removed
+  expect(removeElmMock).toHaveBeenCalled();
+
+  HTMLAnchorElement.prototype.remove = realRemoveFunc;
   downnloadLink.remove();
 });

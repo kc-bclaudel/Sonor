@@ -7,8 +7,8 @@ import {
 } from './constants.json';
 
 class DataFormatter {
-  constructor(token) {
-    this.service = new Service(token);
+  constructor(keycloak) {
+    this.service = new Service(keycloak);
   }
 
   getUserInfo(cb) {
@@ -178,7 +178,7 @@ class DataFormatter {
     });
   }
 
-  getInterviewersDetail(survey, interviewers, date) {
+  getlinesDetails(survey, interviewers, date) {
     return new Promise((resolve) => {
       const promises = interviewers.map((interv) => (
         new Promise((resolve2) => {
@@ -233,7 +233,7 @@ class DataFormatter {
                 res.forEach((interviewer) => {
                   Utils.addIfNotAlreadyPresent(interviewers, interviewer);
                 });
-                this.getInterviewersDetail(
+                this.getlinesDetails(
                   surv,
                   res,
                   date,
@@ -298,7 +298,7 @@ class DataFormatter {
           cb({
             interviewers,
             site,
-            interviewersDetail: data[0],
+            linesDetails: data[0],
             total: data[1],
             relevantInterviewers: interviewers,
           });
@@ -307,7 +307,7 @@ class DataFormatter {
       if (mode === BY_SITE) {
         p2.then((data) => {
           cb({
-            interviewersDetail: data.dem,
+            linesDetails: data.dem,
             total: data,
           });
         });
@@ -316,7 +316,7 @@ class DataFormatter {
       p1.then((data) => {
         cb({
           site,
-          interviewersDetail: data,
+          linesDetails: data,
         });
       });
     }

@@ -76,7 +76,7 @@ const campaignPortal = {
 		"en": "Abandoned"
 	},
 	"totalDEM":{
-		"fr": "Total DEM",
+		"fr": "Total Site",
 		"en": "Total organizational unit"
 	},
 	"noInterviewers": {

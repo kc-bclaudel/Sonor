@@ -427,10 +427,9 @@ export default ({ config, db }) => {
 		            interviewerLastName : "Boulanger"
 		        }
 		    }
-		]
-		
+    ]
 
-		res.json(mockResponse);
+		res.json([...mockResponse,...mockResponse,...mockResponse,...mockResponse,...mockResponse,...mockResponse,...mockResponse,...mockResponse]);
 	});
 
 	api.get('/survey-unit/:id/states', (req, res) => {

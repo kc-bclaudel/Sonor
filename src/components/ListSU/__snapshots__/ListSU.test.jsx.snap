@@ -19,7 +19,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -161,7 +161,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                     </th>
@@ -230,7 +230,7 @@ Object {
                       2
                     </td>
                     <td>
-                      62000
+                      62
                     </td>
                     <td>
                       Arras
@@ -247,7 +247,7 @@ Object {
                       1
                     </td>
                     <td>
-                      35000
+                      35
                     </td>
                     <td>
                       Rennes
@@ -320,7 +320,7 @@ Object {
             href="/"
           >
             <button
-              class="YellowButton ReturnButton btn btn-primary"
+              class="ReturnButton btn btn-primary"
               data-testid="return-button"
               type="button"
             >
@@ -462,7 +462,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                   </th>
@@ -531,7 +531,7 @@ Object {
                     2
                   </td>
                   <td>
-                    62000
+                    62
                   </td>
                   <td>
                     Arras
@@ -548,7 +548,7 @@ Object {
                     1
                   </td>
                   <td>
-                    35000
+                    35
                   </td>
                   <td>
                     Rennes
@@ -678,7 +678,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -820,7 +820,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                     </th>
@@ -889,7 +889,7 @@ Object {
                       1
                     </td>
                     <td>
-                      59620
+                      59
                     </td>
                     <td>
                       Aulnoye-Aimeries
@@ -906,7 +906,7 @@ Object {
                       1
                     </td>
                     <td>
-                      38200
+                      38
                     </td>
                     <td>
                       Vienne
@@ -923,7 +923,7 @@ Object {
                       2
                     </td>
                     <td>
-                      62000
+                      62
                     </td>
                     <td>
                       Arras
@@ -940,7 +940,7 @@ Object {
                       1
                     </td>
                     <td>
-                      65000
+                      65
                     </td>
                     <td>
                       Belfort
@@ -957,7 +957,7 @@ Object {
                       1
                     </td>
                     <td>
-                      75000
+                      75
                     </td>
                     <td>
                       Paris
@@ -974,7 +974,7 @@ Object {
                       2
                     </td>
                     <td>
-                      62000
+                      62
                     </td>
                     <td>
                       Arras
@@ -991,7 +991,7 @@ Object {
                       1
                     </td>
                     <td>
-                      35000
+                      35
                     </td>
                     <td>
                       Rennes
@@ -1053,7 +1053,7 @@ Object {
             href="/"
           >
             <button
-              class="YellowButton ReturnButton btn btn-primary"
+              class="ReturnButton btn btn-primary"
               data-testid="return-button"
               type="button"
             >
@@ -1195,7 +1195,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                   </th>
@@ -1264,7 +1264,7 @@ Object {
                     1
                   </td>
                   <td>
-                    59620
+                    59
                   </td>
                   <td>
                     Aulnoye-Aimeries
@@ -1281,7 +1281,7 @@ Object {
                     1
                   </td>
                   <td>
-                    38200
+                    38
                   </td>
                   <td>
                     Vienne
@@ -1298,7 +1298,7 @@ Object {
                     2
                   </td>
                   <td>
-                    62000
+                    62
                   </td>
                   <td>
                     Arras
@@ -1315,7 +1315,7 @@ Object {
                     1
                   </td>
                   <td>
-                    65000
+                    65
                   </td>
                   <td>
                     Belfort
@@ -1332,7 +1332,7 @@ Object {
                     1
                   </td>
                   <td>
-                    75000
+                    75
                   </td>
                   <td>
                     Paris
@@ -1349,7 +1349,7 @@ Object {
                     2
                   </td>
                   <td>
-                    62000
+                    62
                   </td>
                   <td>
                     Arras
@@ -1366,7 +1366,7 @@ Object {
                     1
                   </td>
                   <td>
-                    35000
+                    35
                   </td>
                   <td>
                     Rennes
@@ -1485,7 +1485,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -1627,7 +1627,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                     </th>
@@ -1696,7 +1696,7 @@ Object {
                       1
                     </td>
                     <td>
-                      59620
+                      59
                     </td>
                     <td>
                       Aulnoye-Aimeries
@@ -1713,7 +1713,7 @@ Object {
                       1
                     </td>
                     <td>
-                      38200
+                      38
                     </td>
                     <td>
                       Vienne
@@ -1730,7 +1730,7 @@ Object {
                       2
                     </td>
                     <td>
-                      62000
+                      62
                     </td>
                     <td>
                       Arras
@@ -1747,7 +1747,7 @@ Object {
                       1
                     </td>
                     <td>
-                      65000
+                      65
                     </td>
                     <td>
                       Belfort
@@ -1764,7 +1764,7 @@ Object {
                       1
                     </td>
                     <td>
-                      75000
+                      75
                     </td>
                     <td>
                       Paris
@@ -1837,7 +1837,7 @@ Object {
             href="/"
           >
             <button
-              class="YellowButton ReturnButton btn btn-primary"
+              class="ReturnButton btn btn-primary"
               data-testid="return-button"
               type="button"
             >
@@ -1979,7 +1979,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                   </th>
@@ -2048,7 +2048,7 @@ Object {
                     1
                   </td>
                   <td>
-                    59620
+                    59
                   </td>
                   <td>
                     Aulnoye-Aimeries
@@ -2065,7 +2065,7 @@ Object {
                     1
                   </td>
                   <td>
-                    38200
+                    38
                   </td>
                   <td>
                     Vienne
@@ -2082,7 +2082,7 @@ Object {
                     2
                   </td>
                   <td>
-                    62000
+                    62
                   </td>
                   <td>
                     Arras
@@ -2099,7 +2099,7 @@ Object {
                     1
                   </td>
                   <td>
-                    65000
+                    65
                   </td>
                   <td>
                     Belfort
@@ -2116,7 +2116,7 @@ Object {
                     1
                   </td>
                   <td>
-                    75000
+                    75
                   </td>
                   <td>
                     Paris
@@ -2246,7 +2246,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -2388,7 +2388,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                     </th>
@@ -2457,7 +2457,7 @@ Object {
                       1
                     </td>
                     <td>
-                      59620
+                      59
                     </td>
                     <td>
                       Aulnoye-Aimeries
@@ -2474,7 +2474,7 @@ Object {
                       1
                     </td>
                     <td>
-                      38200
+                      38
                     </td>
                     <td>
                       Vienne
@@ -2491,7 +2491,7 @@ Object {
                       2
                     </td>
                     <td>
-                      62000
+                      62
                     </td>
                     <td>
                       Arras
@@ -2508,7 +2508,7 @@ Object {
                       1
                     </td>
                     <td>
-                      65000
+                      65
                     </td>
                     <td>
                       Belfort
@@ -2525,7 +2525,7 @@ Object {
                       1
                     </td>
                     <td>
-                      75000
+                      75
                     </td>
                     <td>
                       Paris
@@ -2602,7 +2602,7 @@ Object {
             href="/"
           >
             <button
-              class="YellowButton ReturnButton btn btn-primary"
+              class="ReturnButton btn btn-primary"
               data-testid="return-button"
               type="button"
             >
@@ -2744,7 +2744,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                   </th>
@@ -2813,7 +2813,7 @@ Object {
                     1
                   </td>
                   <td>
-                    59620
+                    59
                   </td>
                   <td>
                     Aulnoye-Aimeries
@@ -2830,7 +2830,7 @@ Object {
                     1
                   </td>
                   <td>
-                    38200
+                    38
                   </td>
                   <td>
                     Vienne
@@ -2847,7 +2847,7 @@ Object {
                     2
                   </td>
                   <td>
-                    62000
+                    62
                   </td>
                   <td>
                     Arras
@@ -2864,7 +2864,7 @@ Object {
                     1
                   </td>
                   <td>
-                    65000
+                    65
                   </td>
                   <td>
                     Belfort
@@ -2881,7 +2881,7 @@ Object {
                     1
                   </td>
                   <td>
-                    75000
+                    75
                   </td>
                   <td>
                     Paris
@@ -3019,7 +3019,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -3230,7 +3230,7 @@ Object {
                       1
                     </td>
                     <td>
-                      75000
+                      75
                     </td>
                     <td>
                       Paris
@@ -3247,7 +3247,7 @@ Object {
                       2
                     </td>
                     <td>
-                      62000
+                      62
                     </td>
                     <td>
                       Arras
@@ -3264,7 +3264,7 @@ Object {
                       1
                     </td>
                     <td>
-                      38200
+                      38
                     </td>
                     <td>
                       Vienne
@@ -3281,7 +3281,7 @@ Object {
                       1
                     </td>
                     <td>
-                      65000
+                      65
                     </td>
                     <td>
                       Belfort
@@ -3298,7 +3298,7 @@ Object {
                       1
                     </td>
                     <td>
-                      35000
+                      35
                     </td>
                     <td>
                       Rennes
@@ -3371,7 +3371,7 @@ Object {
             href="/"
           >
             <button
-              class="YellowButton ReturnButton btn btn-primary"
+              class="ReturnButton btn btn-primary"
               data-testid="return-button"
               type="button"
             >
@@ -3582,7 +3582,7 @@ Object {
                     1
                   </td>
                   <td>
-                    75000
+                    75
                   </td>
                   <td>
                     Paris
@@ -3599,7 +3599,7 @@ Object {
                     2
                   </td>
                   <td>
-                    62000
+                    62
                   </td>
                   <td>
                     Arras
@@ -3616,7 +3616,7 @@ Object {
                     1
                   </td>
                   <td>
-                    38200
+                    38
                   </td>
                   <td>
                     Vienne
@@ -3633,7 +3633,7 @@ Object {
                     1
                   </td>
                   <td>
-                    65000
+                    65
                   </td>
                   <td>
                     Belfort
@@ -3650,7 +3650,7 @@ Object {
                     1
                   </td>
                   <td>
-                    35000
+                    35
                   </td>
                   <td>
                     Rennes

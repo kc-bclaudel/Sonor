@@ -63,7 +63,7 @@ class MonitoringTable extends React.Component {
           this.setState({
             date: dateToUse,
             survey,
-            displayedLines: newData.interviewersDetail,
+            displayedLines: newData.linesDetails,
             data: newData,
             mode: modeToUse,
             redirect: null,
@@ -120,6 +120,7 @@ class MonitoringTable extends React.Component {
     link.setAttribute('download', title);
     document.body.appendChild(link);
     link.click();
+    link.remove();
   }
 
   handleSort(property, asc) {
@@ -173,7 +174,7 @@ class MonitoringTable extends React.Component {
           <Row>
             <Col>
               <Link to="/" className="ButtonLink">
-                <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+                <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
               </Link>
             </Col>
             <Col xs={6}>
@@ -199,7 +200,7 @@ class MonitoringTable extends React.Component {
             />
           </Card.Title>
           {
-            data.interviewersDetail.length > 0
+            data.linesDetails.length > 0
               ? (
                 <>
                   <Row>
@@ -210,7 +211,7 @@ class MonitoringTable extends React.Component {
                     </Col>
                     <Col xs="6" className="text-right">
                       <SearchField
-                        data={data.interviewersDetail}
+                        data={data.linesDetails}
                         searchBy={fieldsToSearch}
                         updateFunc={
                           (matchingInterviewers) => this.updateInterviewers(matchingInterviewers)
@@ -334,7 +335,7 @@ function getBodyForExport(data) {
 
 function makeTableForExport(data, mode) {
   const header = getHeaderForExport(mode);
-  const body = getBodyForExport(data.interviewersDetail);
+  const body = getBodyForExport(data.linesDetails);
   const footer = getFooterForExport(data, mode);
 
   return [header].concat(body, footer);

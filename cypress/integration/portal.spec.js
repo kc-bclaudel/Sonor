@@ -1,3 +1,5 @@
+import D from '../../src/i18n';
+
 context('sonor', () => {
   it('Test portal', () => {
     cy.server()
@@ -34,14 +36,14 @@ context('sonor', () => {
     // Main screen view is initially displayed
     cy.get('#MainScreen');
     // Click on the phase cell of first row to go to portal
-    cy.get('tr').contains('Collecte terminée').first().click();
+    cy.get('tr').contains(D.collectionOver).first().click();
 
     // Survey title should be correct
     cy.get('.SurveyTitle').should('have.text', 'Everyday life and health survey 2018');
     // Phase in timeline should be correct
-    cy.get('.CurrentPhase').should('have.text', 'Collecte terminée');
+    cy.get('.CurrentPhase').should('have.text', D.collectionOver);
     // Interviewers should be correct
-    cy.wait(300);
+    cy.wait(1000);
     cy.get('td').contains('Corrine');
 
     // Select another survey
@@ -51,8 +53,8 @@ context('sonor', () => {
     cy.get('.SurveyTitle').should('have.text', 'Survey on something 2020');
 
     // Phase should have changed
-    cy.get('.CurrentPhase').should('have.text', 'Affectation initiale');
-    cy.wait(300);
+    cy.get('.CurrentPhase').should('have.text', D.initialAssignment);
+    cy.wait(1000);
 
     // Interviewers should have changed
     cy.get('tbody').eq(1).within(() => {
@@ -69,21 +71,21 @@ context('sonor', () => {
     cy.get('tbody').eq(1).find('td').first().should('have.text', 'Dupont Chloé');
 
     // Testing sort by interviewer name
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').eq(1).find('td').first().should('have.text', 'Boulanger Emilie');
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').eq(1).find('td').first().should('have.text', 'Renard Bertrand');
 
     // Testing sort by idep
-    cy.get('th').contains('Idep').click();
+    cy.get('th').contains(D.idep).click();
     cy.get('tbody').eq(1).find('td').eq(1).should('have.text', 'INTW10');
-    cy.get('th').contains('Idep').click();
+    cy.get('th').contains(D.idep).click();
     cy.get('tbody').eq(1).find('td').eq(1).should('have.text', 'INTW9');
 
     // Testing sort by UE number
-    cy.get('th').contains('UE').click();
+    cy.get('th').contains(D.SU).click();
     cy.get('tbody').eq(1).find('td').eq(2).should('have.text', '55');
-    cy.get('th').contains('UE').click();
+    cy.get('th').contains(D.SU).click();
     cy.get('tbody').eq(1).find('td').eq(2).should('have.text', '84');
 
     // Testing search field
@@ -92,7 +94,7 @@ context('sonor', () => {
     cy.get('tbody').eq(1).find('tr').should('have.length', 6);
 
     // Testing return button
-    cy.get('a').contains('Retour').click();
+    cy.get('a').contains(D.back).click();
     cy.get('#MainScreen');
   });
 });

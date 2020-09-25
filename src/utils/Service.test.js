@@ -14,12 +14,11 @@ jest
   .mockImplementation((a) => (a ? new OriginalDate(a) : new OriginalDate('2020-08-20T11:01:58.135Z')));
 Date.now = jest.fn(() => 1597916474000);
 
-const makeResponse = function(obj){
-  const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
-
-  const init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
+const makeResponse = function (obj) {
+  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
+  const init = { status: 200 };
   return new Response(blob, init);
-}
+};
 
 const {
   mainScreenData,
@@ -30,9 +29,9 @@ const {
 const service = new Service();
 
 it('Test option creation', async () => {
-  const s = new Service('ABC');
+  const s = new Service({ token: 'ABC' });
   // Should return correct options
-  expect(s.options).toEqual({"headers": {"map": {"authorization": "Bearer ABC", "content-type": "application/json"}}});
+  expect(s.makeOptions()).toEqual({"headers": {"map": {"authorization": "Bearer ABC", "content-type": "application/json"}}});
 });
 
 it('Test getUser', async () => {

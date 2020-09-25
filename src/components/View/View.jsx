@@ -1,6 +1,8 @@
 import React from 'react';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Switch, Route, Redirect,
+} from 'react-router-dom';
 import Header from '../Header/Header';
 import MainScreen from '../MainScreen/MainScreen';
 import CampaignPortal from '../CampaignPortal/CampaignPortal';
@@ -19,24 +21,18 @@ class View extends React.Component {
     this.state = {
       showPreferences: false,
       preferences: {},
+      prefsUpdated: false,
     };
-    this.dataRetreiver = new DataFormatter(props.token);
+    this.dataRetreiver = new DataFormatter(props.keycloak);
   }
 
   componentDidMount() {
     this.loadPreferences();
   }
 
-  componentDidUpdate(prevProps) {
-    const { token } = this.props;
-    if (token !== prevProps.token) {
-      this.dataRetreiver = new DataFormatter(token);
-    }
-  }
-
   loadPreferences() {
     this.dataRetreiver.getPreferences((preferences) => {
-      this.setState({ preferences });
+      this.setState({ preferences, prefsUpdated: true });
     });
   }
 
@@ -60,12 +56,17 @@ class View extends React.Component {
   }
 
   render() {
-    const { showPreferences, preferences } = this.state;
+    const { showPreferences, preferences, prefsUpdated } = this.state;
     const { userData } = this.props;
-
+    let redirect;
+    if (prefsUpdated) {
+      redirect = <Redirect to="/" />;
+      this.setState({ prefsUpdated: false });
+    }
     return (
       <div>
         <Router>
+          {redirect}
           <div>
             <Header
               user={userData}

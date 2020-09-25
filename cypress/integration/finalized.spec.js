@@ -1,3 +1,6 @@
+import D from '../../src/i18n';
+
+
 context('sonor', () => {
   it('Test finalized', () => {
     cy.server()
@@ -59,7 +62,7 @@ context('sonor', () => {
     cy.get('#MainScreen');
     // Click on the allocated cell of first row to go to list su
     cy.get('tbody').within(() => {
-      cy.get('td').eq(13).click();
+      cy.get('td').eq(13).find('a').click();
     });
 
     // Survey title should be correct
@@ -83,19 +86,19 @@ context('sonor', () => {
     });
 
     // Testing sort by id
-    cy.get('th').contains('Identifiant').click();
+    cy.get('th').contains(D.identifier).click();
     cy.get('tbody').find('td').first().should('have.text', '1023');
-    cy.get('th').contains('Identifiant').click();
+    cy.get('th').contains(D.identifier).click();
     cy.get('tbody').find('td').first().should('have.text', '4818');
 
     // Testing sort by interviewerf
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').find('td').eq(2).should('have.text', 'Boulanger Jacques');
-    cy.get('th').contains('Enquêteur').click();
+    cy.get('th').contains(D.interviewer).click();
     cy.get('tbody').find('td').eq(2).should('have.text', 'Fabres Thierry');
 
     // Testing state history display
-    cy.get('th').contains('Identifiant').click();
+    cy.get('th').contains(D.identifier).click();
     cy.get('.HistoryDisplayIcon').first().click();
     cy.wait(150);
     cy.get('tbody').eq(1).find('td').eq(2).should('have.text', 'ANS');
@@ -128,7 +131,7 @@ context('sonor', () => {
     cy.get('tbody').find('td').eq(2).should('have.text', 'Fabres Thierry');
 
     // Testing return button
-    cy.get('a').contains('Retour').click();
+    cy.get('a').contains(D.back).click();
     cy.get('#MainScreen');
 
   });

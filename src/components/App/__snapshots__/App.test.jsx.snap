@@ -388,10 +388,11 @@ Object {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/vqs202fgd1x00"
                           >
                             Everyday life and health survey 2018
@@ -402,7 +403,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           >
                             5/26/2020
@@ -410,7 +410,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           >
                             7/7/2020
@@ -418,7 +417,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           >
                             5/26/2021
@@ -429,7 +427,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           />
                         </td>
@@ -438,7 +435,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/vqs202fgd1x00"
                           >
                             4
@@ -446,7 +442,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/vqs202fgd1x00"
                           >
                             0
@@ -457,7 +452,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/vqs202fgd1x00"
                           >
                             0
@@ -465,7 +459,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/vqs202fgd1x00"
                           >
                             0
@@ -473,17 +466,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/vqs202fgd1x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/vqs2021x00"
                           >
                             Everyday life and health survey 2021
@@ -494,7 +487,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           >
                             5/26/2020
@@ -502,7 +494,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           >
                             7/7/2020
@@ -510,7 +501,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           >
                             5/26/2021
@@ -521,7 +511,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           />
                         </td>
@@ -530,7 +519,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/vqs2021x00"
                           >
                             4
@@ -538,7 +526,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/vqs2021x00"
                           >
                             0
@@ -549,7 +536,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/vqs2021x00"
                           >
                             0
@@ -557,7 +543,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/vqs2021x00"
                           >
                             0
@@ -565,17 +550,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/vqs2021x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/vqs2qfsdfsqe021x00"
                           >
                             Everyday life and health survey 2026
@@ -586,7 +571,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           >
                             5/26/2020
@@ -594,7 +578,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           >
                             7/7/2020
@@ -602,7 +585,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           >
                             5/26/2021
@@ -613,7 +595,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           />
                         </td>
@@ -622,7 +603,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/vqs2qfsdfsqe021x00"
                           >
                             4
@@ -630,7 +610,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/vqs2qfsdfsqe021x00"
                           >
                             0
@@ -641,7 +620,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/vqs2qfsdfsqe021x00"
                           >
                             0
@@ -649,7 +627,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/vqs2qfsdfsqe021x00"
                           >
                             0
@@ -657,17 +634,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/vqs2qfsdfsqe021x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/simpsosfqns2020x00"
                           >
                             Survey on something 2020
@@ -678,7 +655,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           >
                             5/14/2021
@@ -686,7 +662,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           >
                             1/13/2022
@@ -694,7 +669,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           >
                             12/26/2022
@@ -705,7 +679,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           />
                         </td>
@@ -714,7 +687,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/simpsosfqns2020x00"
                           >
                             4
@@ -722,7 +694,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/simpsosfqns2020x00"
                           >
                             0
@@ -733,7 +704,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/simpsosfqns2020x00"
                           >
                             0
@@ -741,7 +711,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/simpsosfqns2020x00"
                           >
                             0
@@ -749,17 +718,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/simpsosfqns2020x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/simpsonqsdfsqes2020x00"
                           >
                             Survey on something else 2020
@@ -770,7 +739,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           >
                             5/26/2020
@@ -778,7 +746,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           >
                             5/26/2021
@@ -786,7 +753,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           >
                             5/26/2021
@@ -797,7 +763,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           />
                         </td>
@@ -806,7 +771,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/simpsonqsdfsqes2020x00"
                           >
                             4
@@ -814,7 +778,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -825,7 +788,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -833,7 +795,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -841,7 +802,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -1276,10 +1236,11 @@ Object {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/vqs202fgd1x00"
                         >
                           Everyday life and health survey 2018
@@ -1290,7 +1251,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         >
                           5/26/2020
@@ -1298,7 +1258,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         >
                           7/7/2020
@@ -1306,7 +1265,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         >
                           5/26/2021
@@ -1317,7 +1275,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         />
                       </td>
@@ -1326,7 +1283,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/vqs202fgd1x00"
                         >
                           4
@@ -1334,7 +1290,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/vqs202fgd1x00"
                         >
                           0
@@ -1345,7 +1300,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/vqs202fgd1x00"
                         >
                           0
@@ -1353,7 +1307,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/vqs202fgd1x00"
                         >
                           0
@@ -1361,17 +1314,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/vqs202fgd1x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/vqs2021x00"
                         >
                           Everyday life and health survey 2021
@@ -1382,7 +1335,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         >
                           5/26/2020
@@ -1390,7 +1342,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         >
                           7/7/2020
@@ -1398,7 +1349,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         >
                           5/26/2021
@@ -1409,7 +1359,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         />
                       </td>
@@ -1418,7 +1367,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/vqs2021x00"
                         >
                           4
@@ -1426,7 +1374,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/vqs2021x00"
                         >
                           0
@@ -1437,7 +1384,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/vqs2021x00"
                         >
                           0
@@ -1445,7 +1391,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/vqs2021x00"
                         >
                           0
@@ -1453,17 +1398,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/vqs2021x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/vqs2qfsdfsqe021x00"
                         >
                           Everyday life and health survey 2026
@@ -1474,7 +1419,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         >
                           5/26/2020
@@ -1482,7 +1426,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         >
                           7/7/2020
@@ -1490,7 +1433,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         >
                           5/26/2021
@@ -1501,7 +1443,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         />
                       </td>
@@ -1510,7 +1451,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/vqs2qfsdfsqe021x00"
                         >
                           4
@@ -1518,7 +1458,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/vqs2qfsdfsqe021x00"
                         >
                           0
@@ -1529,7 +1468,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/vqs2qfsdfsqe021x00"
                         >
                           0
@@ -1537,7 +1475,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/vqs2qfsdfsqe021x00"
                         >
                           0
@@ -1545,17 +1482,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/vqs2qfsdfsqe021x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/simpsosfqns2020x00"
                         >
                           Survey on something 2020
@@ -1566,7 +1503,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         >
                           5/14/2021
@@ -1574,7 +1510,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         >
                           1/13/2022
@@ -1582,7 +1517,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         >
                           12/26/2022
@@ -1593,7 +1527,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         />
                       </td>
@@ -1602,7 +1535,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/simpsosfqns2020x00"
                         >
                           4
@@ -1610,7 +1542,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/simpsosfqns2020x00"
                         >
                           0
@@ -1621,7 +1552,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/simpsosfqns2020x00"
                         >
                           0
@@ -1629,7 +1559,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/simpsosfqns2020x00"
                         >
                           0
@@ -1637,17 +1566,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/simpsosfqns2020x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/simpsonqsdfsqes2020x00"
                         >
                           Survey on something else 2020
@@ -1658,7 +1587,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         >
                           5/26/2020
@@ -1666,7 +1594,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         >
                           5/26/2021
@@ -1674,7 +1601,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         >
                           5/26/2021
@@ -1685,7 +1611,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         />
                       </td>
@@ -1694,7 +1619,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/simpsonqsdfsqes2020x00"
                         >
                           4
@@ -1702,7 +1626,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/simpsonqsdfsqes2020x00"
                         >
                           0
@@ -1713,7 +1636,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/simpsonqsdfsqes2020x00"
                         >
                           0
@@ -1721,7 +1643,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/simpsonqsdfsqes2020x00"
                         >
                           0
@@ -1729,7 +1650,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/simpsonqsdfsqes2020x00"
                         >
                           0
@@ -2290,10 +2210,11 @@ Object {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/vqs202fgd1x00"
                           >
                             Everyday life and health survey 2018
@@ -2304,7 +2225,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           >
                             5/26/2020
@@ -2312,7 +2232,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           >
                             7/7/2020
@@ -2320,7 +2239,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           >
                             5/26/2021
@@ -2331,7 +2249,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs202fgd1x00"
                           />
                         </td>
@@ -2340,7 +2257,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/vqs202fgd1x00"
                           >
                             4
@@ -2348,7 +2264,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/vqs202fgd1x00"
                           >
                             0
@@ -2359,7 +2274,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/vqs202fgd1x00"
                           >
                             0
@@ -2367,7 +2281,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/vqs202fgd1x00"
                           >
                             0
@@ -2375,17 +2288,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/vqs202fgd1x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/vqs2021x00"
                           >
                             Everyday life and health survey 2021
@@ -2396,7 +2309,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           >
                             5/26/2020
@@ -2404,7 +2316,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           >
                             7/7/2020
@@ -2412,7 +2323,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           >
                             5/26/2021
@@ -2423,7 +2333,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2021x00"
                           />
                         </td>
@@ -2432,7 +2341,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/vqs2021x00"
                           >
                             4
@@ -2440,7 +2348,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/vqs2021x00"
                           >
                             0
@@ -2451,7 +2358,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/vqs2021x00"
                           >
                             0
@@ -2459,7 +2365,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/vqs2021x00"
                           >
                             0
@@ -2467,17 +2372,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/vqs2021x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/vqs2qfsdfsqe021x00"
                           >
                             Everyday life and health survey 2026
@@ -2488,7 +2393,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           >
                             5/26/2020
@@ -2496,7 +2400,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           >
                             7/7/2020
@@ -2504,7 +2407,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           >
                             5/26/2021
@@ -2515,7 +2417,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/vqs2qfsdfsqe021x00"
                           />
                         </td>
@@ -2524,7 +2425,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/vqs2qfsdfsqe021x00"
                           >
                             4
@@ -2532,7 +2432,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/vqs2qfsdfsqe021x00"
                           >
                             0
@@ -2543,7 +2442,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/vqs2qfsdfsqe021x00"
                           >
                             0
@@ -2551,7 +2449,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/vqs2qfsdfsqe021x00"
                           >
                             0
@@ -2559,17 +2456,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/vqs2qfsdfsqe021x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/simpsosfqns2020x00"
                           >
                             Survey on something 2020
@@ -2580,7 +2477,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           >
                             5/14/2021
@@ -2588,7 +2484,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           >
                             1/13/2022
@@ -2596,7 +2491,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           >
                             12/26/2022
@@ -2607,7 +2501,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsosfqns2020x00"
                           />
                         </td>
@@ -2616,7 +2509,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/simpsosfqns2020x00"
                           >
                             4
@@ -2624,7 +2516,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/simpsosfqns2020x00"
                           >
                             0
@@ -2635,7 +2526,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/simpsosfqns2020x00"
                           >
                             0
@@ -2643,7 +2533,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/simpsosfqns2020x00"
                           >
                             0
@@ -2651,17 +2540,17 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/simpsosfqns2020x00"
                           >
                             0
                           </a>
                         </td>
                       </tr>
-                      <tr>
+                      <tr
+                        class="WithTableLink"
+                      >
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/sites/simpsonqsdfsqes2020x00"
                           >
                             Survey on something else 2020
@@ -2672,7 +2561,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           >
                             5/26/2020
@@ -2680,7 +2568,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           >
                             5/26/2021
@@ -2688,7 +2575,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           >
                             5/26/2021
@@ -2699,7 +2585,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/portal/simpsonqsdfsqes2020x00"
                           />
                         </td>
@@ -2708,7 +2593,6 @@ Object {
                         />
                         <td>
                           <a
-                            class="TableLink"
                             href="/listSU/simpsonqsdfsqes2020x00"
                           >
                             4
@@ -2716,7 +2600,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/follow/campaign/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -2727,7 +2610,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/followUp/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -2735,7 +2617,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/review/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -2743,7 +2624,6 @@ Object {
                         </td>
                         <td>
                           <a
-                            class="TableLink"
                             href="/terminated/simpsonqsdfsqes2020x00"
                           >
                             0
@@ -3178,10 +3058,11 @@ Object {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/vqs202fgd1x00"
                         >
                           Everyday life and health survey 2018
@@ -3192,7 +3073,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         >
                           5/26/2020
@@ -3200,7 +3080,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         >
                           7/7/2020
@@ -3208,7 +3087,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         >
                           5/26/2021
@@ -3219,7 +3097,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs202fgd1x00"
                         />
                       </td>
@@ -3228,7 +3105,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/vqs202fgd1x00"
                         >
                           4
@@ -3236,7 +3112,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/vqs202fgd1x00"
                         >
                           0
@@ -3247,7 +3122,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/vqs202fgd1x00"
                         >
                           0
@@ -3255,7 +3129,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/vqs202fgd1x00"
                         >
                           0
@@ -3263,17 +3136,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/vqs202fgd1x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/vqs2021x00"
                         >
                           Everyday life and health survey 2021
@@ -3284,7 +3157,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         >
                           5/26/2020
@@ -3292,7 +3164,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         >
                           7/7/2020
@@ -3300,7 +3171,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         >
                           5/26/2021
@@ -3311,7 +3181,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2021x00"
                         />
                       </td>
@@ -3320,7 +3189,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/vqs2021x00"
                         >
                           4
@@ -3328,7 +3196,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/vqs2021x00"
                         >
                           0
@@ -3339,7 +3206,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/vqs2021x00"
                         >
                           0
@@ -3347,7 +3213,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/vqs2021x00"
                         >
                           0
@@ -3355,17 +3220,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/vqs2021x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/vqs2qfsdfsqe021x00"
                         >
                           Everyday life and health survey 2026
@@ -3376,7 +3241,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         >
                           5/26/2020
@@ -3384,7 +3248,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         >
                           7/7/2020
@@ -3392,7 +3255,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         >
                           5/26/2021
@@ -3403,7 +3265,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/vqs2qfsdfsqe021x00"
                         />
                       </td>
@@ -3412,7 +3273,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/vqs2qfsdfsqe021x00"
                         >
                           4
@@ -3420,7 +3280,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/vqs2qfsdfsqe021x00"
                         >
                           0
@@ -3431,7 +3290,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/vqs2qfsdfsqe021x00"
                         >
                           0
@@ -3439,7 +3297,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/vqs2qfsdfsqe021x00"
                         >
                           0
@@ -3447,17 +3304,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/vqs2qfsdfsqe021x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/simpsosfqns2020x00"
                         >
                           Survey on something 2020
@@ -3468,7 +3325,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         >
                           5/14/2021
@@ -3476,7 +3332,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         >
                           1/13/2022
@@ -3484,7 +3339,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         >
                           12/26/2022
@@ -3495,7 +3349,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsosfqns2020x00"
                         />
                       </td>
@@ -3504,7 +3357,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/simpsosfqns2020x00"
                         >
                           4
@@ -3512,7 +3364,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/simpsosfqns2020x00"
                         >
                           0
@@ -3523,7 +3374,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/simpsosfqns2020x00"
                         >
                           0
@@ -3531,7 +3381,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/simpsosfqns2020x00"
                         >
                           0
@@ -3539,17 +3388,17 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/simpsosfqns2020x00"
                         >
                           0
                         </a>
                       </td>
                     </tr>
-                    <tr>
+                    <tr
+                      class="WithTableLink"
+                    >
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/sites/simpsonqsdfsqes2020x00"
                         >
                           Survey on something else 2020
@@ -3560,7 +3409,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         >
                           5/26/2020
@@ -3568,7 +3416,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         >
                           5/26/2021
@@ -3576,7 +3423,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         >
                           5/26/2021
@@ -3587,7 +3433,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/portal/simpsonqsdfsqes2020x00"
                         />
                       </td>
@@ -3596,7 +3441,6 @@ Object {
                       />
                       <td>
                         <a
-                          class="TableLink"
                           href="/listSU/simpsonqsdfsqes2020x00"
                         >
                           4
@@ -3604,7 +3448,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/follow/campaign/simpsonqsdfsqes2020x00"
                         >
                           0
@@ -3615,7 +3458,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/followUp/simpsonqsdfsqes2020x00"
                         >
                           0
@@ -3623,7 +3465,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/review/simpsonqsdfsqes2020x00"
                         >
                           0
@@ -3631,7 +3472,6 @@ Object {
                       </td>
                       <td>
                         <a
-                          class="TableLink"
                           href="/terminated/simpsonqsdfsqes2020x00"
                         >
                           0
