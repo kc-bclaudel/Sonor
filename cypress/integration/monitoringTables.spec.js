@@ -1,3 +1,5 @@
+import D from '../../src/i18n';
+
 context('sonor', () => {
   it('Test monitoring tables', () => {
 
@@ -101,69 +103,69 @@ context('sonor', () => {
     cy.get('tbody').find('td').first().should('have.text', 'South region organizational unit');
 
     // Testing sort by progress
-    cy.get('th').contains('Taux d\'avancement').click();
+    cy.get('th').contains(D.completionRate).click();
     cy.get('tbody').find('td').eq(2).should('have.text', '1.9%');
-    cy.get('th').contains('Taux d\'avancement').click();
+    cy.get('th').contains(D.completionRate).click();
     cy.get('tbody').find('td').eq(2).should('have.text', '5.8%');
 
     // Testing sort by allocated
-    cy.get('th').contains('Confiées').click();
+    cy.get('th').contains(D.allocated).click();
     cy.get('tbody').find('td').eq(4).should('have.text', '88');
-    cy.get('th').contains('Confiées').click();
+    cy.get('th').contains(D.allocated).click();
     cy.get('tbody').find('td').eq(4).should('have.text', '104');
 
     // Testing sort by not started
-    cy.get('th').contains('Non commencées').click();
+    cy.get('th').contains(D.notStarted).click();
     cy.get('tbody').find('td').eq(5).should('have.text', '4');
-    cy.get('th').contains('Non commencées').click();
+    cy.get('th').contains(D.notStarted).click();
     cy.get('tbody').find('td').eq(5).should('have.text', '22');
 
     // Testing sort by ongoing interviewer
-    cy.get('th').contains('En cours enquêteur').click();
+    cy.get('th').contains(D.inProgressInterviewer).click();
     cy.get('tbody').find('td').eq(6).should('have.text', '31');
-    cy.get('th').contains('En cours enquêteur').click();
+    cy.get('th').contains(D.inProgressInterviewer).click();
     cy.get('tbody').find('td').eq(6).should('have.text', '75');
 
     // Testing sort by waiting for interviewer validation
-    cy.get('th').contains('En attente de validation enquêteur').click();
+    cy.get('th').contains(D.waitingForIntReview).click();
     cy.get('tbody').find('td').eq(7).should('have.text', '0');
-    cy.get('th').contains('En attente de validation enquêteur').click();
+    cy.get('th').contains(D.waitingForIntReview).click();
     cy.get('tbody').find('td').eq(7).should('have.text', '5');
 
     // Testing sort by validated by interviewer
-    cy.get('th').contains('Validées enquêteur').click();
+    cy.get('th').contains(D.reviewedByInterviewer).click();
     cy.get('tbody').find('td').eq(8).should('have.text', '1');
-    cy.get('th').contains('Validées enquêteur').click();
+    cy.get('th').contains(D.reviewedByInterviewer).click();
     cy.get('tbody').find('td').eq(8).should('have.text', '2');
 
     // Testing sort by validated and finalized
-    cy.get('th').contains('Validées terminées').click();
+    cy.get('th').contains(D.reviewedEnded).click();
     cy.get('tbody').find('td').eq(9).should('have.text', '1');
-    cy.get('th').contains('Validées terminées').click();
+    cy.get('th').contains(D.reviewedEnded).click();
     cy.get('tbody').find('td').eq(9).should('have.text', '4');
 
     // Testing sort by preparing contact
-    cy.get('th').contains('En préparation').click();
+    cy.get('th').contains(D.preparingContact).click();
     cy.get('tbody').find('td').eq(11).should('have.text', '2');
-    cy.get('th').contains('En préparation').click();
+    cy.get('th').contains(D.preparingContact).click();
     cy.get('tbody').find('td').eq(11).should('have.text', '29');
 
     // Testing sort by at least one contact
-    cy.get('th').contains('Au moins un contact').click();
+    cy.get('th').contains(D.atLeastOneContact).click();
     cy.get('tbody').find('td').eq(12).should('have.text', '12');
-    cy.get('th').contains('Au moins un contact').click();
+    cy.get('th').contains(D.atLeastOneContact).click();
     cy.get('tbody').find('td').eq(12).should('have.text', '30');
 
     // Testing sort by appointment taken
-    cy.get('th').contains('RDV pris').click();
+    cy.get('th').contains(D.appointmentTaken).click();
     cy.get('tbody').find('td').eq(13).should('have.text', '11');
-    cy.get('th').contains('RDV pris').click();
+    cy.get('th').contains(D.appointmentTaken).click();
     cy.get('tbody').find('td').eq(13).should('have.text', '12');
 
     // Testing sort by interview started
-    cy.get('th').contains('Questionnaire démarré').click();
+    cy.get('th').contains(D.interviewStarted).click();
     cy.get('tbody').find('td').eq(14).should('have.text', '5');
-    cy.get('th').contains('Questionnaire démarré').click();
+    cy.get('th').contains(D.interviewStarted).click();
     cy.get('tbody').find('td').eq(14).should('have.text', '8');
 
     // Testing search field filter by site
@@ -175,11 +177,11 @@ context('sonor', () => {
     cy.get('tbody').find('td').eq(5).should('have.text', '3');
 
     // Return to main screen
-    cy.get('a').contains('Retour').click();
+    cy.get('a').contains(D.back).click();
     cy.get('#MainScreen');
 
     // Go to monitoring table by interviewers for the first survey
-    cy.get('tbody').find('td').eq(9).click();
+    cy.get('tbody').find('td').eq(9).find('a').click({force: true});
 
     cy.get('tbody').find('td').eq(2).should('have.text', '2.9%');
 
@@ -195,8 +197,9 @@ context('sonor', () => {
     cy.get('.SearchFieldInput').clear();
 
     // Go to monitoring table by survey
-    cy.get('button').contains('Suivre').click();
-    cy.get('a').contains('Avancement').first().click({ force: true });
+    cy.get('#BtnSuivreParent').click();
+    cy.get('a').contains(D.progression).first().click({ force: true });
+    cy.wait(['@get-state-count-by-campaign']);
     cy.wait(1500);
     cy.get('tbody').find('td').eq(2).should('have.text', '24.2%');
 
@@ -208,8 +211,9 @@ context('sonor', () => {
     cy.get('.SearchFieldInput').clear();
 
     // Go to monitoring table by interviewer all surveys
-    cy.get('button').contains('Suivre').click();
+    cy.get('#BtnSuivreParent').click();
     cy.get('a[data-testid="follow-by-interviewer"]').click({ force: true });
+    cy.wait(['@get-state-count-by-interviewer']);
     cy.wait(1500);
     cy.get('tbody').find('td').eq(2).should('have.text', '24.2%');
 

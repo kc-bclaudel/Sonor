@@ -185,6 +185,8 @@ class Utils {
     let sortedData = {};
     switch (view) {
       case 'mainScreen':
+      case 'listSU':
+      case 'terminated':
         sortedData = this.sortData(data, sortOn, newOrder);
         break;
       case 'campaignPortal':
@@ -193,16 +195,10 @@ class Utils {
         break;
       case 'monitoringTable':
         Object.assign(sortedData, data);
-        sortedData.interviewersDetail = this.sortData(data.interviewersDetail, sortOn, newOrder);
+        sortedData.linesDetails = this.sortData(data.linesDetails, sortOn, newOrder);
         break;
       case 'review':
         Object.assign(sortedData, data);
-        sortedData = this.sortData(data, sortOn, newOrder);
-        break;
-      case 'listSU':
-        sortedData = this.sortData(data, sortOn, newOrder);
-        break;
-      case 'terminated':
         sortedData = this.sortData(data, sortOn, newOrder);
         break;
       default:

@@ -8,7 +8,7 @@ function SurveyUnitLine({ lineData }) {
     <tr>
       <td>{id}</td>
       <td>{ssech}</td>
-      <td>{departement}</td>
+      <td>{departement.substring(0, 2)}</td>
       <td>{city}</td>
       <td>{interviewer}</td>
     </tr>

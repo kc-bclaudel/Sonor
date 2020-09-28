@@ -19,6 +19,17 @@ class MainScreen extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { preferences } = this.props;
+    if (prevProps.preferences !== preferences) {
+      this.fetchData();
+    }
+  }
+
+  fetchData() {
     const { preferences, dataRetreiver } = this.props;
     dataRetreiver.getDataForMainScreen(null, (data) => {
       this.setState({
@@ -119,7 +130,9 @@ class MainScreen extends React.Component {
                           (pagination.page - 1) * pagination.size,
                           Math.min(pagination.page * pagination.size, data.length),
                         )
-                        .map((line) => (<SurveyListLine key={line.id} lineData={line} allData={data} />))}
+                        .map((line) => (
+                          <SurveyListLine key={line.id} lineData={line} allData={data} />
+                        ))}
                     </tbody>
                   </Table>
                   <div className="tableOptionsWrapper">

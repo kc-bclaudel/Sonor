@@ -25,58 +25,58 @@ function SurveyListLine({ lineData, allData }) {
   };
 
   return (
-    <tr>
+    <tr className="WithTableLink">
       <td>
-        <Link to={monitoringTablebySite} className="TableLink">
+        <Link to={monitoringTablebySite}>
           {data.label}
         </Link>
       </td>
       <td className="ColumnSpacing" />
       <td>
-        <Link to={portal} className="TableLink">
+        <Link to={portal}>
           {Utils.convertToDateString(data.collectionStartDate)}
         </Link>
       </td>
       <td>
-        <Link to={portal} className="TableLink">
+        <Link to={portal}>
           {Utils.convertToDateString(data.collectionEndDate)}
         </Link>
       </td>
       <td>
-        <Link to={portal} className="TableLink">
+        <Link to={portal}>
           {Utils.convertToDateString(data.treatmentEndDate)}
         </Link>
       </td>
       <td className="ColumnSpacing" />
       <td>
-        <Link to={portal} className="TableLink">
+        <Link to={portal}>
           {Utils.displayCampaignPhase(data.phase)}
         </Link>
       </td>
       <td className="ColumnSpacing" />
       <td>
-        <Link to={listSU} className="TableLink">
+        <Link to={listSU}>
           {data.allocated}
         </Link>
       </td>
       <td>
-        <Link to={monitoringTable} className="TableLink">
+        <Link to={monitoringTable}>
           {data.toProcessInterviewer}
         </Link>
       </td>
       <td>{data.toAffect}</td>
       <td>
-        <Link to={followUp} className="TableLink">
+        <Link to={followUp}>
           {data.toFollowUp}
         </Link>
       </td>
       <td>
-        <Link to={review} className="TableLink">
+        <Link to={review}>
           {data.toReview}
         </Link>
       </td>
       <td>
-        <Link to={terminated} className="TableLink">
+        <Link to={terminated}>
           {data.finalized}
         </Link>
       </td>

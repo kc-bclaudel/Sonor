@@ -158,9 +158,6 @@ it('Go to finalized', async () => {
     />,
   );
 
-  await waitForElement(() => screen.getByTestId('return-button'));
-  screen.getByTestId('return-button').click();
-
   const firstLineCells = component.baseElement.querySelector('tbody').querySelectorAll('tr')[0].querySelectorAll('td');
   firstLineCells[firstLineCells.length - 1].firstChild.click();
   await waitForElement(() => screen.getByTestId('return-button'));

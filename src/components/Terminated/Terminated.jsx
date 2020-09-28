@@ -9,7 +9,6 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import TerminatedTable from './TerminatedTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
-import './Terminated.css';
 
 function Terminated({
   location, dataRetreiver, match,
@@ -54,7 +53,7 @@ function Terminated({
           <Row>
             <Col>
               <Link to="/" className="ButtonLink">
-                <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+                <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
               </Link>
             </Col>
             <Col xs={6}>

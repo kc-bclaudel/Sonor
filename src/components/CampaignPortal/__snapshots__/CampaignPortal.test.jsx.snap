@@ -22,7 +22,7 @@ Object {
                 href="/"
               >
                 <button
-                  class="YellowButton ReturnButton btn btn-primary"
+                  class="ReturnButton btn btn-primary"
                   data-testid="return-button"
                   type="button"
                 >
@@ -486,7 +486,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -1007,7 +1007,7 @@ Object {
                 href="/"
               >
                 <button
-                  class="YellowButton ReturnButton btn btn-primary"
+                  class="ReturnButton btn btn-primary"
                   data-testid="return-button"
                   type="button"
                 >
@@ -1555,7 +1555,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -2160,7 +2160,7 @@ Object {
                 href="/"
               >
                 <button
-                  class="YellowButton ReturnButton btn btn-primary"
+                  class="ReturnButton btn btn-primary"
                   data-testid="return-button"
                   type="button"
                 >
@@ -2681,7 +2681,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -3259,7 +3259,7 @@ Object {
                 href="/"
               >
                 <button
-                  class="YellowButton ReturnButton btn btn-primary"
+                  class="ReturnButton btn btn-primary"
                   data-testid="return-button"
                   type="button"
                 >
@@ -3784,7 +3784,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -4370,7 +4370,7 @@ Object {
                 href="/"
               >
                 <button
-                  class="YellowButton ReturnButton btn btn-primary"
+                  class="ReturnButton btn btn-primary"
                   data-testid="return-button"
                   type="button"
                 >
@@ -4891,7 +4891,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -5469,7 +5469,7 @@ Object {
                 href="/"
               >
                 <button
-                  class="YellowButton ReturnButton btn btn-primary"
+                  class="ReturnButton btn btn-primary"
                   data-testid="return-button"
                   type="button"
                 >
@@ -5990,7 +5990,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >
@@ -6568,7 +6568,7 @@ Object {
                 href="/"
               >
                 <button
-                  class="YellowButton ReturnButton btn btn-primary"
+                  class="ReturnButton btn btn-primary"
                   data-testid="return-button"
                   type="button"
                 >
@@ -7089,7 +7089,7 @@ Object {
               href="/"
             >
               <button
-                class="YellowButton ReturnButton btn btn-primary"
+                class="ReturnButton btn btn-primary"
                 data-testid="return-button"
                 type="button"
               >

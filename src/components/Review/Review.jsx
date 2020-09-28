@@ -39,7 +39,8 @@ function Review({
         if (response.some(
           (res) => !(res.status === 200 || res.status === 201 || res.status === 204),
         )) {
-          NotificationManager.error(D.reviewAlertError, D.error, 3500);
+          NotificationManager.error(`${D.reviewAlertError}: ${lstSUFinalized
+            .filter((x, index) => !(response[index].status === 200 || response[index].status === 201 || response[index].status === 204)).join(', ')}.`, D.error, 3500);
         } else {
           NotificationManager.success(`${D.reviewAlertSuccess}: ${lstSUFinalized.join(', ')}.`, D.updateSuccess, 3500);
         }
@@ -71,7 +72,7 @@ function Review({
           <Row>
             <Col>
               <Link to="/" className="ButtonLink">
-                <Button className="YellowButton ReturnButton" data-testid="return-button">{D.back}</Button>
+                <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
               </Link>
             </Col>
             <Col xs={6}>
