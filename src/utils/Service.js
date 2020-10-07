@@ -223,6 +223,47 @@ class Service {
         cb();
       });
   }
+
+  postMessage(body, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'POST';
+    options.body = JSON.stringify(body);
+
+    fetch(`${baseUrlPearlJam}/api/message`, options)
+      .then((data) => {
+        cb(data);
+      });
+  }
+
+  verifyName(text, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'POST';
+    options.body = JSON.stringify({ text });
+
+    fetch(`${baseUrlPearlJam}/api/verify-name`, options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        cb([]);
+      });
+  }
+
+  getMessageHistory(cb) {
+    fetch(`${baseUrlPearlJam}/api/message-history`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        cb([]);
+      });
+  }
 }
 
 export default Service;
