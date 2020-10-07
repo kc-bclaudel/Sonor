@@ -63,6 +63,14 @@ function Header({
                   {D.read}
                 </Button>
               </Link>
+              <Link to="/notifications" className="ButtonLink">
+                <Button
+                  data-testid="notifications"
+                  className={`HeaderButton HeaderFocusableButton ${pathname.includes('/notifications') ? ' ButtonActive' : ''}`}
+                >
+                  {D.notify}
+                </Button>
+              </Link>
             </div>
           </Col>
           <Col><UserZone user={user} date={new Date()} showPreferences={showPreferences} /></Col>

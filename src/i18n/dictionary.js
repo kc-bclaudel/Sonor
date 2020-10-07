@@ -7,6 +7,7 @@ import review from './labels/labels_review';
 import monitoringTable from './labels/labels_monitoringTable';
 import alert from './labels/labels_alert';
 import terminated from './labels/labels_terminated';
+import notifications from './labels/labels_notifications';
 
 const dictionary = {
   ...app,
@@ -18,6 +19,7 @@ const dictionary = {
   ...monitoringTable,
   ...alert,
   ...terminated,
+  ...notifications,
 };
 
 export default dictionary;

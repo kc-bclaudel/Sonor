@@ -30,7 +30,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.1.3
+                  0.1.4
                 </div>
               </a>
             </div>
@@ -79,6 +79,18 @@ Object {
                     type="button"
                   >
                     Review
+                  </button>
+                </a>
+                <a
+                  class="ButtonLink"
+                  href="/notifications"
+                >
+                  <button
+                    class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                    data-testid="notifications"
+                    type="button"
+                  >
+                    Notify
                   </button>
                 </a>
               </div>
@@ -175,7 +187,7 @@ Object {
               <div
                 id="appVersion"
               >
-                0.1.3
+                0.1.4
               </div>
             </a>
           </div>
@@ -224,6 +236,18 @@ Object {
                   type="button"
                 >
                   Review
+                </button>
+              </a>
+              <a
+                class="ButtonLink"
+                href="/notifications"
+              >
+                <button
+                  class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                  data-testid="notifications"
+                  type="button"
+                >
+                  Notify
                 </button>
               </a>
             </div>
