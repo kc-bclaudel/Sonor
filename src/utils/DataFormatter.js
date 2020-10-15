@@ -365,6 +365,18 @@ class DataFormatter {
       });
     });
   }
+
+  postMessage(body, cb) {
+    this.service.postMessage(body, (data) => cb(data));
+  }
+
+  verifyName(text, cb) {
+    this.service.verifyName(text, (data) => cb(data));
+  }
+
+  getMessageHistory(cb) {
+    this.service.getMessageHistory((data) => cb(data));
+  }
 }
 
 export default DataFormatter;

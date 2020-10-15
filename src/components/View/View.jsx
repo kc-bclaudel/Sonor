@@ -10,6 +10,7 @@ import ListSU from '../ListSU/ListSU';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
 import Review from '../Review/Review';
 import Remind from '../Remind/Remind';
+import Notifications from '../Notifications/Notifications';
 import DataFormatter from '../../utils/DataFormatter';
 import ModalPreferences from '../ModalPreferences/ModalPreferences';
 import D from '../../i18n';
@@ -81,6 +82,7 @@ class View extends React.Component {
               <Route path="/terminated/:id" component={(routeProps) => <Terminated dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/listSU/:id" component={(routeProps) => <ListSU dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/portal/:id" component={(routeProps) => <CampaignPortal dataRetreiver={this.dataRetreiver} {...routeProps} />} />
+              <Route path="/notifications" component={(routeProps) => <Notifications dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/" component={() => <MainScreen preferences={preferences} dataRetreiver={this.dataRetreiver} />} />
             </Switch>
           </div>
