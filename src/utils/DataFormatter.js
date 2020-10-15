@@ -48,7 +48,7 @@ class DataFormatter {
             formattedSurvey.phase = Utils.getCampaignPhase(
               survey.collectionStartDate,
               survey.collectionEndDate,
-              survey.treatmentEndDate,
+              survey.endDate,
             );
             return formattedSurvey;
           });
@@ -216,7 +216,6 @@ class DataFormatter {
     const getDataForSingleSurvey = !Array.isArray(survey);
     let p1;
     let site;
-
     if (mode !== BY_SITE) {
       let surveysToGetInterviewersFrom;
       if (getDataForSingleSurvey) {

@@ -92,7 +92,7 @@ Object {
                       id="PhaseMilestones"
                     >
                       <div>
-                        1/1/2020
+                        8/20/2020
                       </div>
                       <div
                         class="DateCenter"
@@ -107,7 +107,7 @@ Object {
                       <div
                         class="DateRight"
                       >
-                        5/26/2021
+                        8/20/2020
                       </div>
                     </div>
                     <div
@@ -556,7 +556,7 @@ Object {
                     id="PhaseMilestones"
                   >
                     <div>
-                      1/1/2020
+                      8/20/2020
                     </div>
                     <div
                       class="DateCenter"
@@ -571,7 +571,7 @@ Object {
                     <div
                       class="DateRight"
                     >
-                      5/26/2021
+                      8/20/2020
                     </div>
                   </div>
                   <div
@@ -1077,7 +1077,7 @@ Object {
                       id="PhaseMilestones"
                     >
                       <div>
-                        1/1/2020
+                        8/20/2020
                       </div>
                       <div
                         class="DateCenter"
@@ -1092,7 +1092,7 @@ Object {
                       <div
                         class="DateRight"
                       >
-                        5/26/2021
+                        8/20/2020
                       </div>
                     </div>
                     <div
@@ -1625,7 +1625,7 @@ Object {
                     id="PhaseMilestones"
                   >
                     <div>
-                      1/1/2020
+                      8/20/2020
                     </div>
                     <div
                       class="DateCenter"
@@ -1640,7 +1640,7 @@ Object {
                     <div
                       class="DateRight"
                     >
-                      5/26/2021
+                      8/20/2020
                     </div>
                   </div>
                   <div
@@ -2230,7 +2230,7 @@ Object {
                       id="PhaseMilestones"
                     >
                       <div>
-                        1/1/2020
+                        8/20/2020
                       </div>
                       <div
                         class="DateCenter"
@@ -2245,7 +2245,7 @@ Object {
                       <div
                         class="DateRight"
                       >
-                        5/26/2021
+                        8/20/2020
                       </div>
                     </div>
                     <div
@@ -2751,7 +2751,7 @@ Object {
                     id="PhaseMilestones"
                   >
                     <div>
-                      1/1/2020
+                      8/20/2020
                     </div>
                     <div
                       class="DateCenter"
@@ -2766,7 +2766,7 @@ Object {
                     <div
                       class="DateRight"
                     >
-                      5/26/2021
+                      8/20/2020
                     </div>
                   </div>
                   <div
@@ -3329,7 +3329,7 @@ Object {
                       id="PhaseMilestones"
                     >
                       <div>
-                        1/1/2020
+                        8/20/2020
                       </div>
                       <div
                         class="DateCenter"
@@ -3344,7 +3344,7 @@ Object {
                       <div
                         class="DateRight"
                       >
-                        5/26/2021
+                        8/20/2020
                       </div>
                     </div>
                     <div
@@ -3854,7 +3854,7 @@ Object {
                     id="PhaseMilestones"
                   >
                     <div>
-                      1/1/2020
+                      8/20/2020
                     </div>
                     <div
                       class="DateCenter"
@@ -3869,7 +3869,7 @@ Object {
                     <div
                       class="DateRight"
                     >
-                      5/26/2021
+                      8/20/2020
                     </div>
                   </div>
                   <div
@@ -4344,7 +4344,7 @@ exports[`Select another survey 1`] = `
 <div
   data-testid="Redirect-surveyInfos"
 >
-  {"survey":{"allSurveys":[{"id":"vqs2021x00","label":"Everyday life and health survey 2021","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504564383},{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504561350}],"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","visibilityStartDate":1590504561350},"surveyInfo":{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504561350}}
+  {"survey":{"allSurveys":[{"id":"vqs2021x00","label":"Everyday life and health survey 2021","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000},{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000}],"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000},"surveyInfo":{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000}}
 </div>
 `;
 
@@ -4440,7 +4440,7 @@ Object {
                       id="PhaseMilestones"
                     >
                       <div>
-                        1/1/2020
+                        8/20/2020
                       </div>
                       <div
                         class="DateCenter"
@@ -4455,7 +4455,7 @@ Object {
                       <div
                         class="DateRight"
                       >
-                        5/26/2021
+                        8/20/2020
                       </div>
                     </div>
                     <div
@@ -4961,7 +4961,7 @@ Object {
                     id="PhaseMilestones"
                   >
                     <div>
-                      1/1/2020
+                      8/20/2020
                     </div>
                     <div
                       class="DateCenter"
@@ -4976,7 +4976,7 @@ Object {
                     <div
                       class="DateRight"
                     >
-                      5/26/2021
+                      8/20/2020
                     </div>
                   </div>
                   <div
@@ -5539,7 +5539,7 @@ Object {
                       id="PhaseMilestones"
                     >
                       <div>
-                        5/26/2020
+                        8/20/2020
                       </div>
                       <div
                         class="DateCenter"
@@ -5554,7 +5554,7 @@ Object {
                       <div
                         class="DateRight"
                       >
-                        12/26/2022
+                        8/20/2020
                       </div>
                     </div>
                     <div
@@ -6060,7 +6060,7 @@ Object {
                     id="PhaseMilestones"
                   >
                     <div>
-                      5/26/2020
+                      8/20/2020
                     </div>
                     <div
                       class="DateCenter"
@@ -6075,7 +6075,7 @@ Object {
                     <div
                       class="DateRight"
                     >
-                      12/26/2022
+                      8/20/2020
                     </div>
                   </div>
                   <div
@@ -6638,7 +6638,7 @@ Object {
                       id="PhaseMilestones"
                     >
                       <div>
-                        1/1/2020
+                        8/20/2020
                       </div>
                       <div
                         class="DateCenter"
@@ -6653,7 +6653,7 @@ Object {
                       <div
                         class="DateRight"
                       >
-                        5/26/2021
+                        8/20/2020
                       </div>
                     </div>
                     <div
@@ -7159,7 +7159,7 @@ Object {
                     id="PhaseMilestones"
                   >
                     <div>
-                      1/1/2020
+                      8/20/2020
                     </div>
                     <div
                       class="DateCenter"
@@ -7174,7 +7174,7 @@ Object {
                     <div
                       class="DateRight"
                     >
-                      5/26/2021
+                      8/20/2020
                     </div>
                   </div>
                   <div

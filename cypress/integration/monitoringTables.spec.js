@@ -2,7 +2,6 @@ import D from '../../src/i18n';
 
 context('sonor', () => {
   it('Test monitoring tables', () => {
-
     cy.server()
       .route('GET', '**/api/user', 'fixture:getUser.json')
       .as('get-user');
@@ -16,35 +15,67 @@ context('sonor', () => {
       .as('get-config');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/interviewers', 'fixture:getInterviewersVqs.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/interviewers',
+        'fixture:getInterviewersVqs.json'
+      )
       .as('get-interviewers-vqs');
 
     cy.server()
-      .route('GET', '**/api/campaign/simpsosfqns2020x00/interviewers', 'fixture:getInterviewersSurveyOnSomething.json')
+      .route(
+        'GET',
+        '**/api/campaign/simpsosfqns2020x00/interviewers',
+        'fixture:getInterviewersSurveyOnSomething.json'
+      )
       .as('get-interviewers-SurveyOnSomething');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/survey-units', 'fixture:getSurveyUnitsVqs.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/survey-units',
+        'fixture:getSurveyUnitsVqs.json'
+      )
       .as('get-interviewers-vqs');
 
     cy.server()
-      .route('GET', '**/api/campaign/simpsosfqns2020x00/survey-units', 'fixture:getSurveyUnitsSurveyOnSomething.json')
+      .route(
+        'GET',
+        '**/api/campaign/simpsosfqns2020x00/survey-units',
+        'fixture:getSurveyUnitsSurveyOnSomething.json'
+      )
       .as('get-interviewers-SurveyOnSomething');
 
     cy.server()
-      .route('GET', '**/api/campaign/**/survey-units/state-count', 'fixture:stateCount.json')
+      .route(
+        'GET',
+        '**/api/campaign/**/survey-units/state-count',
+        'fixture:stateCount.json'
+      )
       .as('get-state-count');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/survey-units?state=TBR', 'fixture:getSurveyUnitsVqs.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/survey-units?state=TBR',
+        'fixture:getSurveyUnitsVqs.json'
+      )
       .as('get-tbr-vqs');
 
     cy.server()
-      .route('GET', '**/api/campaign/simpsosfqns2020x00/survey-units?state=TBR', 'fixture:getSurveyUnitsSurveyOnSomething.json')
+      .route(
+        'GET',
+        '**/api/campaign/simpsosfqns2020x00/survey-units?state=TBR',
+        'fixture:getSurveyUnitsSurveyOnSomething.json'
+      )
       .as('get-tbr-survOnSmth');
 
     cy.server()
-      .route('GET', '**/api/campaign/!(vqs202fgd1x00|simpsosfqns2020x00)/survey-units?state=TBR', 'fixture:emptyArray.json')
+      .route(
+        'GET',
+        '**/api/campaign/!(vqs202fgd1x00|simpsosfqns2020x00)/survey-units?state=TBR',
+        'fixture:emptyArray.json'
+      )
       .as('get-tbr-other');
 
     cy.server()
@@ -60,31 +91,55 @@ context('sonor', () => {
       .as('validate');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/survey-units/state-count!(?date=1598918400000)', 'fixture:campaignStateCountVqs.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/survey-units/state-count!(?date=1598918400000)',
+        'fixture:campaignStateCountVqs.json'
+      )
       .as('get-campaign-state-count');
 
     cy.server()
-      .route('GET', '**/api/interviewers/survey-units/state-count**', 'fixture:stateCountByInterviewer.json')
+      .route(
+        'GET',
+        '**/api/interviewers/survey-units/state-count**',
+        'fixture:stateCountByInterviewer.json'
+      )
       .as('get-state-count-by-interviewer');
 
     cy.server()
-      .route('GET', '**/api/campaigns/survey-units/state-count**', 'fixture:stateCountByCampaign.json')
+      .route(
+        'GET',
+        '**/api/campaigns/survey-units/state-count**',
+        'fixture:stateCountByCampaign.json'
+      )
       .as('get-state-count-by-campaign');
 
     cy.server()
-      .route('GET', '**/follow/sites/null/api/campaign/vqs202fgd1x00/survey-units/state-count?date=1598918400000', 'fixture:campaignStateCountVqsotherdate.json')
+      .route(
+        'GET',
+        '**/follow/sites/null/api/campaign/vqs202fgd1x00/survey-units/state-count?date=1598918400000',
+        'fixture:campaignStateCountVqsotherdate.json'
+      )
       .as('get-campaign-state-count-other-date');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/survey-units/interviewer/INTW33/state-count**', 'fixture:stateCountInt33.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/survey-units/interviewer/INTW33/state-count**',
+        'fixture:stateCountInt33.json'
+      )
       .as('get-state-count-int-33');
 
     cy.server()
-      .route('GET', '**/api/campaign/**/survey-units/interviewer/!(INTW33)/state-count**', 'fixture:stateCountIntOther.json')
+      .route(
+        'GET',
+        '**/api/campaign/**/survey-units/interviewer/!(INTW33)/state-count**',
+        'fixture:stateCountIntOther.json'
+      )
       .as('get-state-count-int-other');
 
-    cy.visit('/',{
-      onBeforeLoad: win => {
+    cy.visit('/', {
+      onBeforeLoad: (win) => {
         win.fetch = null;
       },
     });
@@ -98,9 +153,15 @@ context('sonor', () => {
     });
 
     // Testing sort by site
-    cy.get('tbody').find('td').first().should('have.text', 'National organizational unit');
+    cy.get('tbody')
+      .find('td')
+      .first()
+      .should('have.text', 'National organizational unit');
     cy.get('th').contains('Site').click();
-    cy.get('tbody').find('td').first().should('have.text', 'South region organizational unit');
+    cy.get('tbody')
+      .find('td')
+      .first()
+      .should('have.text', 'South region organizational unit');
 
     // Testing sort by progress
     cy.get('th').contains(D.completionRate).click();
@@ -140,9 +201,9 @@ context('sonor', () => {
 
     // Testing sort by validated and finalized
     cy.get('th').contains(D.reviewedEnded).click();
-    cy.get('tbody').find('td').eq(9).should('have.text', '1');
-    cy.get('th').contains(D.reviewedEnded).click();
     cy.get('tbody').find('td').eq(9).should('have.text', '4');
+    cy.get('th').contains(D.reviewedEnded).click();
+    cy.get('tbody').find('td').eq(9).should('have.text', '7');
 
     // Testing sort by preparing contact
     cy.get('th').contains(D.preparingContact).click();
@@ -171,7 +232,10 @@ context('sonor', () => {
     // Testing search field filter by site
     cy.get('.SearchFieldInput').clear().type('sou');
     cy.get('tbody').find('tr').should('have.length', 1);
-    cy.get('tbody').find('td').first().should('have.text', 'South region organizational unit');
+    cy.get('tbody')
+      .find('td')
+      .first()
+      .should('have.text', 'South region organizational unit');
 
     cy.get('#datePicker').click().type('2020-08-31');
     cy.get('tbody').find('td').eq(5).should('have.text', '3');
@@ -181,7 +245,7 @@ context('sonor', () => {
     cy.get('#MainScreen');
 
     // Go to monitoring table by interviewers for the first survey
-    cy.get('tbody').find('td').eq(9).find('a').click({force: true});
+    cy.get('tbody').find('td').eq(9).find('a').click({ force: true });
 
     cy.get('tbody').find('td').eq(2).should('have.text', '2.9%');
 
@@ -191,7 +255,11 @@ context('sonor', () => {
     cy.get('tbody').find('td').first().should('have.text', 'Legrand Patrice');
 
     cy.server()
-      .route('GET', '**/api/campaign/**/interviewers', 'fixture:getInterviewersSurveyOnSomething.json')
+      .route(
+        'GET',
+        '**/api/campaign/**/interviewers',
+        'fixture:getInterviewersSurveyOnSomething.json'
+      )
       .as('get-interviewers-SurveyOnSomething');
 
     cy.get('.SearchFieldInput').clear();
@@ -206,7 +274,10 @@ context('sonor', () => {
     // Testing search field filter by survey label
     cy.get('.SearchFieldInput').clear().type('someth');
     cy.get('tbody').find('tr').should('have.length', 2);
-    cy.get('tbody').find('td').first().should('have.text', 'Survey on something 2020');
+    cy.get('tbody')
+      .find('td')
+      .first()
+      .should('have.text', 'Survey on something 2020');
 
     cy.get('.SearchFieldInput').clear();
 

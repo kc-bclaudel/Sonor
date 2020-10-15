@@ -7,8 +7,8 @@ function SurveyListLine({ lineData, allData }) {
   const survey = {
     id: data.id,
     label: data.label,
-    visibilityStartDate: data.visibilityStartDate,
-    treatmentEndDate: data.treatmentEndDate,
+    collectionStartDate: data.collectionStartDate,
+    endDate: data.endDate,
     allSurveys: allData,
   };
 
@@ -44,7 +44,7 @@ function SurveyListLine({ lineData, allData }) {
       </td>
       <td>
         <Link to={portal}>
-          {Utils.convertToDateString(data.treatmentEndDate)}
+          {Utils.convertToDateString(data.endDate)}
         </Link>
       </td>
       <td className="ColumnSpacing" />
