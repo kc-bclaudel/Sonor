@@ -15,8 +15,8 @@ function TimeLine({ props }) {
         <div className="DateRight">{Utils.convertToDateString(endDate)}</div>
       </div>
       <div id="PhaseDisplay">
-        <div className={`${phase === 0 ? ' CurrentPhase' : ''}`}>{D.initialAssignment}</div>
-        <div className={`${phase === 1 ? ' CurrentPhase' : ''}`}>{D.collectionInProgress}</div>
+        <div className={`${phase === 0 ? ' CurrentPhase' : 'PastPhase'}`}>{D.initialAssignment}</div>
+        <div className={`${phase === 1 ? ' CurrentPhase' : phase === 0 ? ' ' : 'PastPhase'}`}>{D.collectionInProgress}</div>
         <div className={`${phase > 1 ? ' CurrentPhase' : ''}`}>{D.collectionOver}</div>
       </div>
       <div id="PhaseMilestones">

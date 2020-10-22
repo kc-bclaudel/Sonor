@@ -114,12 +114,12 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Collection in progress
                       </div>
@@ -578,12 +578,12 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Collection in progress
                     </div>
@@ -1099,12 +1099,12 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Collection in progress
                       </div>
@@ -1647,12 +1647,12 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Collection in progress
                     </div>
@@ -2252,12 +2252,12 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Collection in progress
                       </div>
@@ -2773,12 +2773,12 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Collection in progress
                     </div>
@@ -3351,12 +3351,12 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Collection in progress
                       </div>
@@ -3876,12 +3876,12 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Collection in progress
                     </div>
@@ -4462,12 +4462,12 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Collection in progress
                       </div>
@@ -4983,12 +4983,12 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Collection in progress
                     </div>
@@ -5566,7 +5566,7 @@ Object {
                         Initial assignment
                       </div>
                       <div
-                        class=""
+                        class=" "
                       >
                         Collection in progress
                       </div>
@@ -6087,7 +6087,7 @@ Object {
                       Initial assignment
                     </div>
                     <div
-                      class=""
+                      class=" "
                     >
                       Collection in progress
                     </div>
@@ -6660,7 +6660,7 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class=""
+                        class="PastPhase"
                       >
                         Initial assignment
                       </div>
@@ -7181,7 +7181,7 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class=""
+                      class="PastPhase"
                     >
                       Initial assignment
                     </div>
