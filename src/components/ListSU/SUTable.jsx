@@ -21,7 +21,7 @@ function makeTableForExport(data) {
   return header.concat(data.map((line) => ([
     line.id,
     line.ssech,
-    line.departement,
+    line.departement.substring(0, 2),
     line.city,
     line.interviewer,
     line.idep,

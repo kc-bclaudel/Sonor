@@ -77,7 +77,7 @@ context("sonor", () => {
     cy.get("tbody")
       .eq(1)
       .within(() => {
-        cy.get("td").first().should("have.text", "Dupont Chloé");
+        cy.get("td").first().should("have.text", "Boulanger Emilie");
       });
 
     // Testing page change
@@ -86,7 +86,7 @@ context("sonor", () => {
       .eq(1)
       .find("td")
       .first()
-      .should("have.text", "Dupont Renée");
+      .should("have.text", "Fabres Thierry");
 
     // Testing pagination size change
     cy.get('[data-testid="pagination-size-selector"]').select("10");
@@ -95,7 +95,7 @@ context("sonor", () => {
       .eq(1)
       .find("td")
       .first()
-      .should("have.text", "Dupont Chloé");
+      .should("have.text", "Boulanger Emilie");
 
     // Testing sort by interviewer name
     cy.get("th").contains(D.interviewer).click();
@@ -103,13 +103,13 @@ context("sonor", () => {
       .eq(1)
       .find("td")
       .first()
-      .should("have.text", "Boulanger Emilie");
+      .should("have.text", "Renard Bertrand");
     cy.get("th").contains(D.interviewer).click();
     cy.get("tbody")
       .eq(1)
       .find("td")
       .first()
-      .should("have.text", "Renard Bertrand");
+      .should("have.text", "Boulanger Emilie");
 
     // Testing sort by idep
     cy.get("th").contains(D.idep).click();

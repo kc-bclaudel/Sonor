@@ -76,7 +76,7 @@ class DataFormatter {
           interviewer: `${su.interviewer.interviewerLastName} ${su.interviewer.interviewerFirstName}`,
           idep: su.interviewer.id,
         }));
-        resolve(processedData);
+        resolve(Utils.sortData(processedData, 'id', true));
       });
     });
     Promise.all([p1, p2]).then((data) => {
@@ -134,7 +134,7 @@ class DataFormatter {
             return line;
           });
           if (cb) { cb(processedData); }
-          resolve(processedData);
+          resolve(Utils.sortData(processedData, 'finalizationDate', true));
         });
       });
     });
@@ -144,7 +144,7 @@ class DataFormatter {
     return new Promise((resolve) => {
       this.service.getStatesBySurveyId(surveyId, (data) => {
         if (cb) { cb(data.states); }
-        resolve(data.states);
+        resolve(Utils.sortData(data.states, 'date', true));
       });
     });
   }
@@ -324,7 +324,7 @@ class DataFormatter {
   getDataForCampaignPortal(campaignId, cb) {
     const p1 = new Promise((resolve) => {
       this.service.getInterviewers(campaignId, (data) => {
-        resolve(data);
+        resolve(Utils.sortData(data, 'CPinterviewer', true));
       });
     });
     const p2 = new Promise((resolve) => {

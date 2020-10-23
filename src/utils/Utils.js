@@ -8,7 +8,7 @@ class Utils {
 
   static convertMsToHoursMinutes(millis) {
     const date = new Date(millis);
-    return `${date.getHours()}:${date.getMinutes()}`;
+    return `${date.getHours()}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;
   }
 
   static calculateCompletionRate(data) {
@@ -73,7 +73,7 @@ class Utils {
   }
 
   static getSortFunction(sortOn) {
-    if (['city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site'].includes(sortOn)) {
+    if (['city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site', 'date', 'finalizationDate'].includes(sortOn)) {
       return (a, b) => (a[sortOn] < b[sortOn] ? -1 : 1);
     }
     if (sortOn === 'CPinterviewer') {

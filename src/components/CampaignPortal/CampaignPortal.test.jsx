@@ -33,7 +33,7 @@ jest.mock('../../utils/DataFormatter');
 
 const survey = mocks.surveyVqs;
 const { surveyInfo, surveyInfoPhaseIni, surveyInfoPhaseOngoing } = mocks;
-const data = mocks.campaignPortalData;
+const resp = mocks.campaignPortalData;
 
 const TestingRouter = ({ ComponentWithRedirection }) => (
   <Router history={history}>
@@ -53,7 +53,7 @@ const TestingRouter = ({ ComponentWithRedirection }) => (
 );
 
 DataFormatter.mockImplementation(() => ({
-  getDataForCampaignPortal: (a, c) => (c(data)),
+  getDataForCampaignPortal: (id, cb) => (cb(resp)),
 }));
 
 const mockDataRetreiver = new DataFormatter();
@@ -203,7 +203,7 @@ it('Export table', async () => {
   HTMLAnchorElement.prototype.remove = removeElmMock;
 
   const fileTitle = 'National_organizational_unit_Everyday_life_and_health_survey_2021_Repartition_enqueteurs_8202020.csv';
-  const fileContent = 'data:text/csv;charset=utf-8,Interviewer;Idep;SU%0ADupont%20Chlo%C3%A9;INTW5;84%0ABoulanger%20Jacques;INTW6;55%0AFabres%20Thierry;INTW7;76%0ARenard%20Bertrand;INTW8;84%0ABoulanger%20Emilie;INTW9;55%0ADupont%20Ren%C3%A9e;INTW10;84%0ADelmarre%20Alphonse;INTW11;55%0AUnassigned;%20;14%0AAbandoned;%20;%0ATotal%20organizational%20unit;%20;208';
+  const fileContent = 'data:text/csv;charset=utf-8,Interviewer;Idep;SU%0ABoulanger%20Emilie;INTW9;55%0ABoulanger%20Jacques;INTW6;55%0ADelmarre%20Alphonse;INTW11;55%0ADupont%20Chlo%C3%A9;INTW5;84%0ADupont%20Ren%C3%A9e;INTW10;84%0AFabres%20Thierry;INTW7;76%0ARenard%20Bertrand;INTW8;84%0AUnassigned;%20;14%0AAbandoned;%20;%0ATotal%20organizational%20unit;%20;208';
   screen.getByText('Export').click();
   const downnloadLink = component.baseElement.querySelector('a[download]');
 

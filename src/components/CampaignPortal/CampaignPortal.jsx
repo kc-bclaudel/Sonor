@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link, Redirect } from 'react-router-dom';
@@ -25,7 +25,7 @@ function CampaignPortal({
   const surveyInfo = location.surveyInfos ? location.surveyInfos.surveyInfo : null;
 
   const [data, setData] = useState(initialData);
-  const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [sort, setSort] = useState({ sortOn: 'CPinterviewer', asc: true });
   const [redirect, setRedirect] = useState(!survey ? '/' : null);
 
   useEffect(() => {

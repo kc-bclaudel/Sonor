@@ -24,9 +24,11 @@ class ReviewTable extends React.Component {
 
   componentDidUpdate(prevProps) {
     const { survey, data } = this.props;
-    if (prevProps.survey !== survey || prevProps.data !== data) {
-      const checkboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});
-      this.setState({ checkboxArray, checkAll: false, displayedLines: data });
+    const { checkboxArray } = this.state;
+    if (prevProps.survey !== survey
+      || data.length !== Object.keys(checkboxArray).length) {
+      const newCheckboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});
+      this.setState({ checkboxArray: newCheckboxArray, checkAll: false });
     }
   }
 

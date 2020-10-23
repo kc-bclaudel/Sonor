@@ -48,11 +48,11 @@ function Review({
       });
   }
 
-  function handleSort(property, asc) {
+  const handleSort = useCallback((property, asc) => {
     const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'review', asc);
     setSort(newSort);
     setData(sortedData);
-  }
+  }, [data, sort]);
 
   const surveyTitle = !survey
       || (<div className="SurveyTitle">{survey.label}</div>);
