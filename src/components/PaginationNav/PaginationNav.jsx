@@ -18,7 +18,7 @@ function makePaginationItem(pageNumber, activePage, paginationSize, updateFunc) 
 class PaginationNav {
   static PageSelector({ pagination, updateFunc, numberOfItems }) {
     const update = updateFunc;
-    const numberOfPages = Math.floor((Math.max(numberOfItems, 1) - 1) / pagination.size);
+    let numberOfPages = Math.floor((Math.max(numberOfItems, 1) - 1) / pagination.size);
     const active = pagination.page;
     const items = [];
 
@@ -27,6 +27,9 @@ class PaginationNav {
         items.push(makePaginationItem(number, active, pagination.size, update));
       }
     } else {
+      if(!Number.isInteger((Math.max(numberOfItems, 1) - 1) / pagination.size)){
+        numberOfPages = numberOfPages + 1;
+      }
       const activeForCalc = Math.min(Math.max(active, 4), numberOfPages - 3);
       let numbers = [1, activeForCalc - 1, activeForCalc, activeForCalc + 1, numberOfPages];
       numbers = numbers.slice(0, numbers.indexOf(numberOfPages) + 1);

@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
 import SortIcon from '../SortIcon/SortIcon';
 import Utils from '../../utils/Utils';
-import SurveyListLine from './SurveyListLine'
+import SurveyListLine from './SurveyListLine';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import D from '../../i18n';
 
@@ -85,9 +85,9 @@ class MainScreen extends React.Component {
                           <SortIcon val="collectionEndDate" sort={sort} />
                           {D.collectionEndDate}
                         </th>
-                        <th rowSpan="2" onClick={handleSortFunct('treatmentEndDate')}>
-                          <SortIcon val="treatmentEndDate" sort={sort} />
-                          {D.treatmentEndDate}
+                        <th rowSpan="2" onClick={handleSortFunct('endDate')}>
+                          <SortIcon val="endDate" sort={sort} />
+                          {D.endDate}
                         </th>
                         <th rowSpan="2" className="ColumnSpacing" />
                         <th rowSpan="2" onClick={handleSortFunct('phase')} className="Clickable">

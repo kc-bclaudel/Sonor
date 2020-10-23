@@ -21,7 +21,8 @@ class SurveyUnits extends React.Component {
 
   componentDidUpdate(prevProps) {
     const { survey, data } = this.props;
-    if (prevProps.survey !== survey || prevProps.data !== data) {
+    if (prevProps.survey !== survey
+      || prevProps.data.interviewers.length !== data.interviewers.length) {
       this.setState({ displayedInterviewers: data.interviewers });
     }
   }
@@ -66,8 +67,7 @@ class SurveyUnits extends React.Component {
       <Card className="ViewCard">
         <div className="Title">{D.interviewers}</div>
         {
-          interviewers.length > 0
-          ? (
+          interviewers.length > 0 ? (
             <>
               <Row>
                 <Col xs="6">
@@ -135,7 +135,7 @@ class SurveyUnits extends React.Component {
                 />
               </div>
             </>
-            )
+          )
             : <span>{D.noInterviewers}</span>
         }
       </Card>

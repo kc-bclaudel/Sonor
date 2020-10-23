@@ -15,35 +15,67 @@ context('sonor', () => {
       .as('get-config');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/interviewers', 'fixture:getInterviewersVqs.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/interviewers',
+        'fixture:getInterviewersVqs.json'
+      )
       .as('get-interviewers-vqs');
 
     cy.server()
-      .route('GET', '**/api/campaign/simpsosfqns2020x00/interviewers', 'fixture:getInterviewersSurveyOnSomething.json')
+      .route(
+        'GET',
+        '**/api/campaign/simpsosfqns2020x00/interviewers',
+        'fixture:getInterviewersSurveyOnSomething.json'
+      )
       .as('get-interviewers-SurveyOnSomething');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/survey-units', 'fixture:getSurveyUnitsVqs.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/survey-units',
+        'fixture:getSurveyUnitsVqs.json'
+      )
       .as('get-interviewers-vqs');
 
     cy.server()
-      .route('GET', '**/api/campaign/simpsosfqns2020x00/survey-units', 'fixture:getSurveyUnitsSurveyOnSomething.json')
+      .route(
+        'GET',
+        '**/api/campaign/simpsosfqns2020x00/survey-units',
+        'fixture:getSurveyUnitsSurveyOnSomething.json'
+      )
       .as('get-interviewers-SurveyOnSomething');
 
     cy.server()
-      .route('GET', '**/api/campaign/**/survey-units/state-count', 'fixture:stateCount.json')
+      .route(
+        'GET',
+        '**/api/campaign/**/survey-units/state-count',
+        'fixture:stateCount.json'
+      )
       .as('get-state-count');
 
     cy.server()
-      .route('GET', '**/api/campaign/vqs202fgd1x00/survey-units?state=TBR', 'fixture:getSurveyUnitsVqs.json')
+      .route(
+        'GET',
+        '**/api/campaign/vqs202fgd1x00/survey-units?state=TBR',
+        'fixture:getSurveyUnitsVqs.json'
+      )
       .as('get-tbr-vqs');
 
     cy.server()
-      .route('GET', '**/api/campaign/simpsosfqns2020x00/survey-units?state=TBR', 'fixture:getSurveyUnitsSurveyOnSomething.json')
+      .route(
+        'GET',
+        '**/api/campaign/simpsosfqns2020x00/survey-units?state=TBR',
+        'fixture:getSurveyUnitsSurveyOnSomething.json'
+      )
       .as('get-tbr-survOnSmth');
 
     cy.server()
-      .route('GET', '**/api/campaign/!(vqs202fgd1x00|simpsosfqns2020x00)/survey-units?state=TBR', 'fixture:emptyArray.json')
+      .route(
+        'GET',
+        '**/api/campaign/!(vqs202fgd1x00|simpsosfqns2020x00)/survey-units?state=TBR',
+        'fixture:emptyArray.json'
+      )
       .as('get-tbr-other');
 
     cy.server()
@@ -58,11 +90,11 @@ context('sonor', () => {
       .route('PUT', '**/api/survey-unit/**/state/FIN', 'fixture:status200.json')
       .as('validate');
 
-    cy.visit('/',{
-      onBeforeLoad: win => {
+    cy.visit('/', {
+      onBeforeLoad: (win) => {
         win.fetch = null;
       },
-    })
+    });
 
     // test
     // Main screen view is initially displayed
@@ -73,7 +105,10 @@ context('sonor', () => {
     });
 
     // Survey title should be correct
-    cy.get('.SurveyTitle').should('have.text', 'Everyday life and health survey 2018');
+    cy.get('.SurveyTitle').should(
+      'have.text',
+      'Everyday life and health survey 2018'
+    );
 
     // SUs displayed should be correct
     cy.get('tbody').within(() => {
@@ -81,7 +116,9 @@ context('sonor', () => {
     });
 
     // Select another survey
-    cy.get('[data-testid="Survey_selector"]').select('Survey on something 2020');
+    cy.get('[data-testid="Survey_selector"]').select(
+      'Survey on something 2020'
+    );
     cy.wait(300);
 
     // Survey title should have changed
@@ -96,13 +133,21 @@ context('sonor', () => {
     cy.get('button').contains(D.read).click();
 
     // Verify we now have 16 SUs
-    cy.get('div.card-title').eq(1).should('have.text', `${D.surveyUnitsToReview}16`);
+    cy.get('div.card-title')
+      .eq(1)
+      .should('have.text', `${D.surveyUnitsToReview}16`);
 
     // Testing sort by id
     cy.get('th').contains(D.survey).click();
-    cy.get('tbody').find('td').eq(1).should('have.text', 'Everyday life and health survey 2018');
+    cy.get('tbody')
+      .find('td')
+      .eq(1)
+      .should('have.text', 'Everyday life and health survey 2018');
     cy.get('th').contains(D.survey).click();
-    cy.get('tbody').find('td').eq(1).should('have.text', 'Survey on something 2020');
+    cy.get('tbody')
+      .find('td')
+      .eq(1)
+      .should('have.text', 'Survey on something 2020');
 
     // Testing sort by interviewer
     cy.get('th').contains(D.interviewer).click();
@@ -131,7 +176,10 @@ context('sonor', () => {
     // Testing search field filter by id
     cy.get('.SearchFieldInput').clear().type('some');
     cy.get('tbody').find('tr').should('have.length', 10);
-    cy.get('tbody').find('td').eq(1).should('have.text', 'Survey on something 2020');
+    cy.get('tbody')
+      .find('td')
+      .eq(1)
+      .should('have.text', 'Survey on something 2020');
 
     // Checking and unchecking a checkbox
     cy.get('[type="checkbox"]').eq(2).check();
@@ -152,7 +200,7 @@ context('sonor', () => {
     cy.get('[type="checkbox"]').eq(4).check();
     cy.get('button').contains(D.validate).click();
     cy.get('[data-testid="confirm-validate"]').click();
-    cy.wait(['@get-tbr-vqs','@get-tbr-vqs', '@get-tbr-vqs']);
+    cy.wait(['@get-tbr-vqs', '@get-tbr-vqs', '@get-tbr-vqs']);
     cy.wait(500);
     cy.get('[type="checkbox"]').eq(2).should('not.be.checked');
     cy.get('[type="checkbox"]').eq(4).should('not.be.checked');
@@ -160,6 +208,5 @@ context('sonor', () => {
     // Testing return button
     cy.get('a').contains(D.back).click();
     cy.get('#MainScreen');
-
   });
 });

@@ -161,7 +161,12 @@ th.YellowHeader{
 
 .CurrentPhase {
   background: rgb(249,191,63);
-  color: rgb(19,66,120);
+  color: rgb(139,0,0);
+}
+
+.PastPhase{
+  background: rgb(128,128,128);
+  color: rgb(0,0,0);
 }
 
 #PhaseMilestones{

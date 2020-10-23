@@ -135,7 +135,7 @@ it('Go to portal', async () => {
       }
     />,
   );
-  screen.getAllByText('5/26/2020')[0].click();
+  screen.getAllByText('1/1/2020')[0].click();
 
   // Should redirect to /portal/vqs202fgd1x00
   expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`);
