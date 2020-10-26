@@ -6,19 +6,26 @@ import D from '../i18n';
 const toLocaleDateString = Date.prototype.toLocaleString;
 const getHours = Date.prototype.getUTCHours;
 const getMinutes = Date.prototype.getUTCMinutes;
-Date.prototype.toLocaleDateString = function() {
-  return toLocaleDateString.call(this, 'en-EN', { timeZone: 'UTC',year: "numeric", month: "numeric", day: "numeric" });
+Date.prototype.toLocaleDateString = function () {
+  return toLocaleDateString.call(this, 'en-EN', {
+    timeZone: 'UTC',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  });
 };
-Date.prototype.getHours = function() {
+Date.prototype.getHours = function () {
   return getHours.call(this);
 };
-Date.prototype.getMinutes = function() {
+Date.prototype.getMinutes = function () {
   return getMinutes.call(this);
 };
 const OriginalDate = global.Date;
 jest
   .spyOn(global, 'Date')
-  .mockImplementation((a) => (a ? new OriginalDate(a) : new OriginalDate('2020-08-20T11:01:58.135Z')));
+  .mockImplementation((a) =>
+    a ? new OriginalDate(a) : new OriginalDate('2020-08-20T11:01:58.135Z'),
+  );
 Date.now = jest.fn(() => 1597916474000);
 
 afterEach(cleanup);
@@ -35,22 +42,33 @@ it('Test function convertMsToHoursMinutes', async () => {
 
 it('Test function calculateCompletionRate', async () => {
   // Should equal 7/9
-  expect(Utils.calculateCompletionRate({ tbrCount: 4, finCount: 3, total: 9 })).toEqual(7 / 9);
+  expect(
+    Utils.calculateCompletionRate({ tbrCount: 4, finCount: 3, total: 9 }),
+  ).toEqual(7 / 9);
 });
 
 it('Test isVisible', async () => {
   // Should equal true
-  expect(Utils.isVisible({
-    collectionStartDate: 1590504561350,
-    collectionEndDate: 1622035845000,
-    visibilityStartDate: 1577836800000,
-    treatmentEndDate: 1622025045000,
-  }, '08-20-2020')).toEqual(true);
+  expect(
+    Utils.isVisible(
+      {
+        managementStartDate: 1576801000000,
+        interviewerStartDate: 1575937000000,
+        identificationPhaseStartDate: 1577233000000,
+        collectionStartDate: 1577837800000,
+        collectionEndDate: 1640996200000,
+        endDate: 1641514600000,
+      },
+      '08-20-2020',
+    ),
+  ).toEqual(true);
 });
 
 it('Test getCampaignPhase', async () => {
   // Should equal 0
-  expect(Utils.getCampaignPhase(1620504561350, 1622035845000, 1622025045000)).toEqual(0);
+  expect(
+    Utils.getCampaignPhase(1620504561350, 1622035845000, 1622025045000),
+  ).toEqual(0);
 });
 
 it('Test displayCampaignPhase', async () => {
@@ -68,5 +86,8 @@ it('Test getCampaignPhase treatment over', async () => {
 
 it('Test handleSort default case', async () => {
   // Should return correct object
-  expect(Utils.handleSort('sortOn', [], {}, null, null)).toEqual([{}, { asc: null, sortOn: 'sortOn' }]);
+  expect(Utils.handleSort('sortOn', [], {}, null, null)).toEqual([
+    {},
+    { asc: null, sortOn: 'sortOn' },
+  ]);
 });

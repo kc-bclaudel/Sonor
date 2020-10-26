@@ -1,7 +1,7 @@
 import React from 'react';
 
 function SurveyUnitLine({
-  survey, lineData, isChecked, updateFunc,
+  lineData, isChecked, updateFunc,
 }) {
   const {
     campaignLabel, interviewer, id,

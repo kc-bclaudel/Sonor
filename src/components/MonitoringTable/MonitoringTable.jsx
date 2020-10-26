@@ -195,7 +195,7 @@ class MonitoringTable extends React.Component {
               type="date"
               value={date}
               max={new Date().toJSON().split('T')[0]}
-              min={survey ? new Date(survey.visibilityStartDate).toJSON().split('T')[0] : null}
+              min={survey ? new Date(survey.collectionStartDate).toJSON().split('T')[0] : null}
               onChange={(e) => this.setState({ date: e.target.value }, () => this.refreshData())}
             />
           </Card.Title>

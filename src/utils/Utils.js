@@ -8,7 +8,7 @@ class Utils {
 
   static convertMsToHoursMinutes(millis) {
     const date = new Date(millis);
-    return `${date.getHours()}:${date.getMinutes()}`;
+    return `${date.getHours()}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;
   }
 
   static calculateCompletionRate(data) {
@@ -25,12 +25,12 @@ class Utils {
   static formatForMonitoringTable(stateCount) {
     const line = {};
     line.completionRate = this.calculateCompletionRate(stateCount);
-    line.total = stateCount.total;
+    line.total = stateCount.total - stateCount.nvmCount - stateCount.nvaCount;
     line.notStarted = stateCount.vicCount;
     line.onGoing = this.calculateOngoing(stateCount);
     line.waitingForIntValidation = stateCount.wftCount;
     line.intValidated = stateCount.tbrCount + stateCount.wfsCount;
-    line.demValidated = stateCount.finCount;
+    line.demValidated = stateCount.finCount + stateCount.qnaFinCount;
     line.preparingContact = stateCount.prcCount;
     line.atLeastOneContact = stateCount.aocCount;
     line.appointmentTaken = stateCount.apsCount;
@@ -43,7 +43,7 @@ class Utils {
     return line;
   }
 
-  static getCampaignPhase(collectionStartDate, collectionEndDate, treatmentEndDate) {
+  static getCampaignPhase(collectionStartDate, collectionEndDate, endDate) {
     const now = new Date().getTime();
     if (!collectionStartDate || now < collectionStartDate) {
       return 0;
@@ -51,7 +51,7 @@ class Utils {
     if (!collectionEndDate || now < collectionEndDate) {
       return 1;
     }
-    if (!treatmentEndDate || now < treatmentEndDate) {
+    if (!endDate || now < endDate) {
       return 2;
     }
     return 3;
@@ -73,7 +73,7 @@ class Utils {
   }
 
   static getSortFunction(sortOn) {
-    if (['city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site'].includes(sortOn)) {
+    if (['city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site', 'date', 'finalizationDate'].includes(sortOn)) {
       return (a, b) => (a[sortOn] < b[sortOn] ? -1 : 1);
     }
     if (sortOn === 'CPinterviewer') {
@@ -172,8 +172,8 @@ class Utils {
       dateToUse = new Date(dateToUse).getTime();
     }
     return (
-      survey.visibilityStartDate < dateToUse
-      && (!survey.treatmentEndDate || survey.treatmentEndDate > dateToUse)
+      survey.managementStartDate < dateToUse
+      && (!survey.endDate || survey.endDate > dateToUse)
     );
   }
 

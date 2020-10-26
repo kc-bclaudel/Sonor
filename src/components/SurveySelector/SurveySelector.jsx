@@ -14,8 +14,8 @@ function switchCurrent(surveyObj, idToSwitch) {
   const newSurvey = surveyObj.allSurveys.find((survey) => survey.id === idToSwitch);
   switched.id = newSurvey.id;
   switched.label = newSurvey.label;
-  switched.visibilityStartDate = newSurvey.visibilityStartDate;
-  switched.treatmentEndDate = newSurvey.treatmentEndDate;
+  switched.collectionStartDate = newSurvey.collectionStartDate;
+  switched.endDate = newSurvey.endDate;
   return switched;
 }
 

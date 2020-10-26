@@ -15,7 +15,7 @@ const mainscreen = {
     fr: 'Fin collecte',
     en: 'Collection end date',
   },
-  treatmentEndDate: {
+  endDate: {
     fr: 'Fin traitement',
     en: 'Processing end date',
   },

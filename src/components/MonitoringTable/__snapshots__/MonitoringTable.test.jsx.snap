@@ -86,7 +86,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -264,7 +264,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -680,7 +680,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -858,7 +858,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -1331,7 +1331,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -1509,7 +1509,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -2134,7 +2134,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -2312,7 +2312,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -2994,7 +2994,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -3172,7 +3172,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -3720,7 +3720,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -3898,7 +3898,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -4471,7 +4471,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -4649,7 +4649,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -5026,7 +5026,7 @@ Object {
     </div>
     <a
       download="National_organizational_unit_Avancement_enqueteurs_8202020.csv"
-      href="data:text/csv;charset=utf-8,Last%20name;First%20name;Idep;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;Reviewed%20by%20interviewer;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;2.9%25;832;24;272;0;16;8;232;0;0;40%0ABoulanger;Jacques;INTW6;2.9%25;832;24;272;0;16;8;232;0;0;40%0ADelmarre;Alphonse;INTW11;2.9%25;832;24;272;0;16;8;232;0;0;40%0ADupont;Chlo%C3%A9;INTW5;16.7%25;768;24;56;16;80;56;32;0;0;24%0ADupont;Ren%C3%A9e;INTW10;2.9%25;832;24;272;0;16;8;232;0;0;40%0AFabres;Thierry;INTW7;2.9%25;832;24;272;0;16;8;232;0;0;40%0ARenard;Bertrand;INTW8;2.9%25;832;24;272;0;16;8;232;0;0;40"
+      href="data:text/csv;charset=utf-8,Last%20name;First%20name;Idep;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;2.9%25;832;24;272;0;16;8;232;0;0;40%0ABoulanger;Jacques;INTW6;2.9%25;832;24;272;0;16;8;232;0;0;40%0ADelmarre;Alphonse;INTW11;2.9%25;832;24;272;0;16;8;232;0;0;40%0ADupont;Chlo%C3%A9;INTW5;16.7%25;768;24;56;16;80;56;32;0;0;24%0ADupont;Ren%C3%A9e;INTW10;2.9%25;832;24;272;0;16;8;232;0;0;40%0AFabres;Thierry;INTW7;2.9%25;832;24;272;0;16;8;232;0;0;40%0ARenard;Bertrand;INTW8;2.9%25;832;24;272;0;16;8;232;0;0;40"
     />
   </body>,
   "container": <div>
@@ -5079,7 +5079,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -5257,7 +5257,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -5772,7 +5772,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -5950,7 +5950,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -6417,7 +6417,7 @@ Object {
     </div>
     <a
       download="National_organizational_unit_Everyday_life_and_health_survey_2021_Avancement_enqueteurs_8202020.csv"
-      href="data:text/csv;charset=utf-8,Last%20name;First%20name;Idep;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;Reviewed%20by%20interviewer;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;2.9%25;104;3;34;0;2;1;29;;;5%0ABoulanger;Jacques;INTW6;2.9%25;104;3;34;0;2;1;29;;;5%0ADelmarre;Alphonse;INTW11;2.9%25;104;3;34;0;2;1;29;;;5%0ADupont;Chlo%C3%A9;INTW5;16.7%25;96;3;7;2;10;7;4;;;3%0ADupont;Ren%C3%A9e;INTW10;2.9%25;104;3;34;0;2;1;29;;;5%0AFabres;Thierry;INTW7;2.9%25;104;3;34;0;2;1;29;;;5%0ARenard;Bertrand;INTW8;2.9%25;104;3;34;0;2;1;29;;;5%0ATotal%20organizational%20unit;;;2.9%25;208;22;111;;4;2;29;60;12;10%0ATotal%20France;;;2.9%25;104;;34;0;2;1;29;;;5"
+      href="data:text/csv;charset=utf-8,Last%20name;First%20name;Idep;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;2.9%25;104;3;34;0;2;1;29;;;5%0ABoulanger;Jacques;INTW6;2.9%25;104;3;34;0;2;1;29;;;5%0ADelmarre;Alphonse;INTW11;2.9%25;104;3;34;0;2;1;29;;;5%0ADupont;Chlo%C3%A9;INTW5;16.7%25;96;3;7;2;10;7;4;;;3%0ADupont;Ren%C3%A9e;INTW10;2.9%25;104;3;34;0;2;1;29;;;5%0AFabres;Thierry;INTW7;2.9%25;104;3;34;0;2;1;29;;;5%0ARenard;Bertrand;INTW8;2.9%25;104;3;34;0;2;1;29;;;5%0ATotal%20organizational%20unit;;;2.9%25;208;22;111;;4;2;29;60;12;10%0ATotal%20France;;;2.9%25;104;;34;0;2;1;29;;;5"
     />
   </body>,
   "container": <div>
@@ -6502,7 +6502,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -6680,7 +6680,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -7285,7 +7285,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -7463,7 +7463,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -7777,7 +7777,7 @@ Object {
     </div>
     <a
       download="Everyday_life_and_health_survey_2021_Avancement_sites_8202020.csv"
-      href="data:text/csv;charset=utf-8,Site;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;Reviewed%20by%20interviewer;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ANational%20organizational%20unit;2.9%25;104;22;47;0;2;1;;30;12;5%0ANorth%20region%20organizational%20unit;2.9%25;104;22;47;;2;1;;30;12;5%0ASouth%20region%20organizational%20unit;2.9%25;104;;64;0;2;1;29;30;;5%0ATotal%20France;2.9%25;104;;34;0;2;1;29;;;5"
+      href="data:text/csv;charset=utf-8,Site;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ANational%20organizational%20unit;2.9%25;104;22;47;0;2;1;;30;12;5%0ANorth%20region%20organizational%20unit;2.9%25;104;22;47;;2;1;;30;12;5%0ASouth%20region%20organizational%20unit;2.9%25;104;;64;0;2;1;29;30;;5%0ATotal%20France;2.9%25;104;;34;0;2;1;29;;;5"
     />
   </body>,
   "container": <div>
@@ -7862,7 +7862,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -8040,7 +8040,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -8460,7 +8460,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -8638,7 +8638,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -8995,7 +8995,7 @@ Object {
     </div>
     <a
       download="National_organizational_unit_Avancement_enquetes_8202020.csv"
-      href="data:text/csv;charset=utf-8,Survey;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;Reviewed%20by%20interviewer;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0AEveryday%20life%20and%20health%20survey%202018;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202021;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202022;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202026;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20something%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20something%20else%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202021;4.7%25;720;21;211;2;22;13;178;;;33"
+      href="data:text/csv;charset=utf-8,Survey;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0AEveryday%20life%20and%20health%20survey%202018;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202021;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202022;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202026;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20something%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20something%20else%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202021;4.7%25;720;21;211;2;22;13;178;;;33"
     />
   </body>,
   "container": <div>
@@ -9048,7 +9048,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -9226,7 +9226,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -9866,7 +9866,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -10469,7 +10469,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -11129,7 +11129,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -11732,7 +11732,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -12392,7 +12392,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -12975,7 +12975,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -13470,7 +13470,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-02-20"
             />
@@ -13648,7 +13648,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -14196,7 +14196,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-02-20"
           />
@@ -14374,7 +14374,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
@@ -14897,7 +14897,7 @@ exports[`Select another survey (by interviewer) 1`] = `
 <div
   data-testid="Redirect-survey"
 >
-  {"allSurveys":[{"id":"vqs2021x00","label":"Everyday life and health survey 2021","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504564383},{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504561350}],"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","visibilityStartDate":1590504561350}
+  {"allSurveys":[{"id":"vqs2021x00","label":"Everyday life and health survey 2021","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000},{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000}],"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000}
 </div>
 `;
 
@@ -14905,7 +14905,7 @@ exports[`Select another survey (by site) 1`] = `
 <div
   data-testid="Redirect-survey"
 >
-  {"allSurveys":[{"id":"vqs2021x00","label":"Everyday life and health survey 2021","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504564383},{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","collectionStartDate":1577836800000,"collectionEndDate":1622035845000,"visibilityStartDate":1590504561350}],"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","visibilityStartDate":1590504561350}
+  {"allSurveys":[{"id":"vqs2021x00","label":"Everyday life and health survey 2021","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000},{"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000}],"id":"simpsons2020x00","label":"Survey on the Simpsons tv show 2020","managementStartDate":1576801000000,"interviewerStartDate":1575937000000,"identificationPhaseStartDate":1577233000000,"collectionStartDate":1577837800000,"collectionEndDate":1640996200000,"endDate":1641514600000}
 </div>
 `;
 
@@ -14995,7 +14995,7 @@ Object {
               data-testid="date-picker"
               id="datePicker"
               max="2020-08-20"
-              min="2020-05-26"
+              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -15173,7 +15173,7 @@ Object {
                     </span>
                   </th>
                   <th>
-                    Reviewed by interviewer
+                    To review
                     <span
                       class="sortIcon"
                     >
@@ -15721,7 +15721,7 @@ Object {
             data-testid="date-picker"
             id="datePicker"
             max="2020-08-20"
-            min="2020-05-26"
+            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -15899,7 +15899,7 @@ Object {
                   </span>
                 </th>
                 <th>
-                  Reviewed by interviewer
+                  To review
                   <span
                     class="sortIcon"
                   >
