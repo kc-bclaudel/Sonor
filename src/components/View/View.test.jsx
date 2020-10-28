@@ -14,11 +14,22 @@ const toLocaleDateString = Date.prototype.toLocaleString;
 Date.prototype.toLocaleDateString = function() {
   return toLocaleDateString.call(this, 'en-EN', { timeZone: 'UTC',year: "numeric", month: "numeric", day: "numeric" });
 };
+
+const getHours = Date.prototype.getUTCHours;
+const getMinutes = Date.prototype.getUTCMinutes;
+
+Date.prototype.getHours = function () {
+  return getHours.call(this);
+};
+Date.prototype.getMinutes = function () {
+  return getMinutes.call(this);
+};
 const OriginalDate = global.Date;
+
 jest
   .spyOn(global, 'Date')
   .mockImplementation((a) => (a ? new OriginalDate(a) : new OriginalDate('2020-08-20T11:01:58.135Z')));
-Date.now = jest.fn(() => 1597916474000);
+Date.now = jest.fn(() => 1597914060000);
 
 afterEach(cleanup);
 

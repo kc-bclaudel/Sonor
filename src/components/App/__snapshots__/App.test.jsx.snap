@@ -35,7 +35,7 @@ Object {
                       <div
                         id="appVersion"
                       >
-                        0.1.4
+                        0.1.5
                       </div>
                     </a>
                   </div>
@@ -46,18 +46,6 @@ Object {
                       class="d-inline-flex classTest"
                       id="headerButtonContainer"
                     >
-                      <a
-                        class="ButtonLink"
-                        href="/followUp"
-                      >
-                        <button
-                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                          data-testid="follow-up"
-                          type="button"
-                        >
-                          Follow up
-                        </button>
-                      </a>
                       <li
                         class="dropdown"
                         id="BtnSuivreParent"
@@ -74,6 +62,18 @@ Object {
                           />
                         </button>
                       </li>
+                      <a
+                        class="ButtonLink"
+                        href="/followUp"
+                      >
+                        <button
+                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                          data-testid="follow-up"
+                          type="button"
+                        >
+                          Follow up
+                        </button>
+                      </a>
                       <a
                         class="ButtonLink"
                         href="/review"
@@ -130,7 +130,7 @@ Object {
                             class="col-8"
                           >
                             <button
-                              class="HeaderButton btn btn-primary"
+                              class="HeaderButton btn btn-outline-primary"
                               data-testid="preferences"
                               type="button"
                             >
@@ -146,7 +146,7 @@ Object {
                               tabindex="0"
                             >
                               <i
-                                class="fa fa-question-circle fa-2x"
+                                class="fa fa-question-circle-o fa-2x"
                               />
                             </div>
                           </div>
@@ -183,9 +183,6 @@ Object {
                         data-testid="pagination-size-selector"
                         id="exampleForm.SelectCustom"
                       >
-                        <option>
-                          5
-                        </option>
                         <option>
                           10
                         </option>
@@ -820,6 +817,90 @@ Object {
                           </a>
                         </td>
                       </tr>
+                      <tr
+                        class="WithTableLink"
+                      >
+                        <td>
+                          <a
+                            href="/follow/sites/simpsons2020x00"
+                          >
+                            Survey on the Simpsons tv show 2020
+                          </a>
+                        </td>
+                        <td
+                          class="ColumnSpacing"
+                        />
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          >
+                            1/1/2020
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          >
+                            1/1/2022
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          >
+                            1/7/2022
+                          </a>
+                        </td>
+                        <td
+                          class="ColumnSpacing"
+                        />
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          />
+                        </td>
+                        <td
+                          class="ColumnSpacing"
+                        />
+                        <td>
+                          <a
+                            href="/listSU/simpsons2020x00"
+                          >
+                            4
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/follow/campaign/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                        <td>
+                          0
+                        </td>
+                        <td>
+                          <a
+                            href="/followUp/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/review/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/terminated/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -843,17 +924,6 @@ Object {
                           (current)
                         </span>
                       </span>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        2
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -895,7 +965,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -906,18 +976,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -934,6 +992,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -990,7 +1060,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -1006,7 +1076,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -1043,9 +1113,6 @@ Object {
                       data-testid="pagination-size-selector"
                       id="exampleForm.SelectCustom"
                     >
-                      <option>
-                        5
-                      </option>
                       <option>
                         10
                       </option>
@@ -1680,6 +1747,90 @@ Object {
                         </a>
                       </td>
                     </tr>
+                    <tr
+                      class="WithTableLink"
+                    >
+                      <td>
+                        <a
+                          href="/follow/sites/simpsons2020x00"
+                        >
+                          Survey on the Simpsons tv show 2020
+                        </a>
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/1/2020
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/1/2022
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/7/2022
+                        </a>
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        />
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/listSU/simpsons2020x00"
+                        >
+                          4
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/follow/campaign/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        <a
+                          href="/followUp/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/review/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/terminated/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -1703,17 +1854,6 @@ Object {
                         (current)
                       </span>
                     </span>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      2
-                    </a>
                   </li>
                 </ul>
               </div>
@@ -1881,7 +2021,7 @@ Object {
                       <div
                         id="appVersion"
                       >
-                        0.1.4
+                        0.1.5
                       </div>
                     </a>
                   </div>
@@ -1892,18 +2032,6 @@ Object {
                       class="d-inline-flex classTest"
                       id="headerButtonContainer"
                     >
-                      <a
-                        class="ButtonLink"
-                        href="/followUp"
-                      >
-                        <button
-                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                          data-testid="follow-up"
-                          type="button"
-                        >
-                          Follow up
-                        </button>
-                      </a>
                       <li
                         class="dropdown"
                         id="BtnSuivreParent"
@@ -1920,6 +2048,18 @@ Object {
                           />
                         </button>
                       </li>
+                      <a
+                        class="ButtonLink"
+                        href="/followUp"
+                      >
+                        <button
+                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                          data-testid="follow-up"
+                          type="button"
+                        >
+                          Follow up
+                        </button>
+                      </a>
                       <a
                         class="ButtonLink"
                         href="/review"
@@ -1976,7 +2116,7 @@ Object {
                             class="col-8"
                           >
                             <button
-                              class="HeaderButton btn btn-primary"
+                              class="HeaderButton btn btn-outline-primary"
                               data-testid="preferences"
                               type="button"
                             >
@@ -1992,7 +2132,7 @@ Object {
                               tabindex="0"
                             >
                               <i
-                                class="fa fa-question-circle fa-2x"
+                                class="fa fa-question-circle-o fa-2x"
                               />
                             </div>
                           </div>
@@ -2029,9 +2169,6 @@ Object {
                         data-testid="pagination-size-selector"
                         id="exampleForm.SelectCustom"
                       >
-                        <option>
-                          5
-                        </option>
                         <option>
                           10
                         </option>
@@ -2666,6 +2803,90 @@ Object {
                           </a>
                         </td>
                       </tr>
+                      <tr
+                        class="WithTableLink"
+                      >
+                        <td>
+                          <a
+                            href="/follow/sites/simpsons2020x00"
+                          >
+                            Survey on the Simpsons tv show 2020
+                          </a>
+                        </td>
+                        <td
+                          class="ColumnSpacing"
+                        />
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          >
+                            1/1/2020
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          >
+                            1/1/2022
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          >
+                            1/7/2022
+                          </a>
+                        </td>
+                        <td
+                          class="ColumnSpacing"
+                        />
+                        <td>
+                          <a
+                            href="/portal/simpsons2020x00"
+                          />
+                        </td>
+                        <td
+                          class="ColumnSpacing"
+                        />
+                        <td>
+                          <a
+                            href="/listSU/simpsons2020x00"
+                          >
+                            4
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/follow/campaign/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                        <td>
+                          0
+                        </td>
+                        <td>
+                          <a
+                            href="/followUp/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/review/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="/terminated/simpsons2020x00"
+                          >
+                            0
+                          </a>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -2689,17 +2910,6 @@ Object {
                           (current)
                         </span>
                       </span>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        2
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -2741,7 +2951,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -2752,18 +2962,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -2780,6 +2978,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -2836,7 +3046,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -2852,7 +3062,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -2889,9 +3099,6 @@ Object {
                       data-testid="pagination-size-selector"
                       id="exampleForm.SelectCustom"
                     >
-                      <option>
-                        5
-                      </option>
                       <option>
                         10
                       </option>
@@ -3526,6 +3733,90 @@ Object {
                         </a>
                       </td>
                     </tr>
+                    <tr
+                      class="WithTableLink"
+                    >
+                      <td>
+                        <a
+                          href="/follow/sites/simpsons2020x00"
+                        >
+                          Survey on the Simpsons tv show 2020
+                        </a>
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/1/2020
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/1/2022
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/7/2022
+                        </a>
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        />
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/listSU/simpsons2020x00"
+                        >
+                          4
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/follow/campaign/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        <a
+                          href="/followUp/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/review/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/terminated/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -3549,17 +3840,6 @@ Object {
                         (current)
                       </span>
                     </span>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      2
-                    </a>
                   </li>
                 </ul>
               </div>

@@ -126,7 +126,7 @@ context('sonor', () => {
 
     // SUs displayed should have changed
     cy.get('tbody').within(() => {
-      cy.get('td').eq(3).should('have.text', '4818');
+      cy.get('td').eq(3).should('have.text', '3828');
     });
 
     // Go to review all surveys
@@ -135,7 +135,7 @@ context('sonor', () => {
     // Verify we now have 16 SUs
     cy.get('div.card-title')
       .eq(1)
-      .should('have.text', `${D.surveyUnitsToReview}16`);
+      .should('have.text', `${D.surveyUnitsToReview}26`);
 
     // Testing sort by id
     cy.get('th').contains(D.survey).click();
@@ -160,8 +160,8 @@ context('sonor', () => {
     cy.get('tbody').find('td').eq(3).should('have.text', '4818');
 
     // Testing pagination size change
-    cy.get('[data-testid="pagination-size-selector"]').select('10');
-    cy.get('tbody').find('tr').should('have.length', 10);
+    cy.get('[data-testid="pagination-size-selector"]').select('20');
+    cy.get('tbody').find('tr').should('have.length', 20);
 
     // Testing search field filter by id
     cy.get('.SearchFieldInput').type('1029');
@@ -175,7 +175,7 @@ context('sonor', () => {
 
     // Testing search field filter by id
     cy.get('.SearchFieldInput').clear().type('some');
-    cy.get('tbody').find('tr').should('have.length', 10);
+    cy.get('tbody').find('tr').should('have.length', 20);
     cy.get('tbody')
       .find('td')
       .eq(1)

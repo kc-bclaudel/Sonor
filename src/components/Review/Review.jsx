@@ -71,7 +71,7 @@ function Review({
         <Container fluid>
           <Row>
             <Col>
-              <Link to="/" className="ButtonLink">
+              <Link to="/" className="ButtonLink ReturnButtonLink">
                 <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
               </Link>
             </Col>

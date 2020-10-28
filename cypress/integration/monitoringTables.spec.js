@@ -290,15 +290,15 @@ context('sonor', () => {
 
     // Testing page change
     cy.get('.paginationNav').contains('2').click();
-    cy.get('tbody').find('td').first().should('have.text', 'Fabres Thierry');
+    cy.get('tbody').find('td').first().should('have.text', 'Renard Bertrand');
 
     // Testing pagination size change
-    cy.get('[data-testid="pagination-size-selector"]').select('10');
-    cy.get('tbody').find('tr').should('have.length', 7);
+    cy.get('[data-testid="pagination-size-selector"]').select('20');
+    cy.get('tbody').find('tr').should('have.length', 11);
 
     // Testing search field filter by interviewer
     cy.get('.SearchFieldInput').clear().type('dup');
-    cy.get('tbody').find('tr').should('have.length', 2);
+    cy.get('tbody').find('tr').should('have.length', 3);
     cy.get('tbody').find('td').first().should('have.text', 'Dupont Chloé');
 
     cy.get('#InseeLogo').click();

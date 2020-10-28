@@ -16,7 +16,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -100,9 +100,6 @@ Object {
                         id="exampleForm.SelectCustom"
                       >
                         <option>
-                          5
-                        </option>
-                        <option>
                           10
                         </option>
                         <option>
@@ -126,7 +123,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -146,6 +143,7 @@ Object {
                     <tr>
                       <th
                         data-testid="TableHeader_id_terminated"
+                        id="stateHistoryDate"
                         rowspan="2"
                       >
                         <span
@@ -161,6 +159,7 @@ Object {
                         Identifier
                       </th>
                       <th
+                        id="stateHistoryHour"
                         rowspan="2"
                       >
                         <span
@@ -176,6 +175,7 @@ Object {
                         Survey
                       </th>
                       <th
+                        id="stateHistoryState"
                         rowspan="2"
                       >
                         <span
@@ -195,9 +195,204 @@ Object {
                       >
                         Actions
                       </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                          />
+                        </span>
+                        Finalization date
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1029
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Fabres Thierry
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4817
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1030
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4818
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1032
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
                     <tr>
                       <td
                         class="Clickable"
@@ -228,6 +423,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -251,34 +451,12 @@ Object {
                     </a>
                   </li>
                   <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      2
-                    </a>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      3
-                    </a>
-                  </li>
-                  <li
                     class="page-item active"
                   >
                     <span
                       class="page-link"
                     >
-                      4
+                      2
                       <span
                         class="sr-only"
                       >
@@ -306,7 +484,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -390,9 +568,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -416,7 +591,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -436,6 +611,7 @@ Object {
                   <tr>
                     <th
                       data-testid="TableHeader_id_terminated"
+                      id="stateHistoryDate"
                       rowspan="2"
                     >
                       <span
@@ -451,6 +627,7 @@ Object {
                       Identifier
                     </th>
                     <th
+                      id="stateHistoryHour"
                       rowspan="2"
                     >
                       <span
@@ -466,6 +643,7 @@ Object {
                       Survey
                     </th>
                     <th
+                      id="stateHistoryState"
                       rowspan="2"
                     >
                       <span
@@ -485,9 +663,204 @@ Object {
                     >
                       Actions
                     </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                        />
+                      </span>
+                      Finalization date
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1029
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Fabres Thierry
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4817
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1030
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4818
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1032
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
                   <tr>
                     <td
                       class="Clickable"
@@ -518,6 +891,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -541,34 +919,12 @@ Object {
                   </a>
                 </li>
                 <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    2
-                  </a>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    3
-                  </a>
-                </li>
-                <li
                   class="page-item active"
                 >
                   <span
                     class="page-link"
                   >
-                    4
+                    2
                     <span
                       class="sr-only"
                     >
@@ -653,7 +1009,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -737,9 +1093,6 @@ Object {
                         id="exampleForm.SelectCustom"
                       >
                         <option>
-                          5
-                        </option>
-                        <option>
                           10
                         </option>
                         <option>
@@ -763,7 +1116,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -783,6 +1136,7 @@ Object {
                     <tr>
                       <th
                         data-testid="TableHeader_id_terminated"
+                        id="stateHistoryDate"
                         rowspan="2"
                       >
                         <span
@@ -798,6 +1152,7 @@ Object {
                         Identifier
                       </th>
                       <th
+                        id="stateHistoryHour"
                         rowspan="2"
                       >
                         <span
@@ -813,6 +1168,7 @@ Object {
                         Survey
                       </th>
                       <th
+                        id="stateHistoryState"
                         rowspan="2"
                       >
                         <span
@@ -831,6 +1187,21 @@ Object {
                         rowspan="2"
                       >
                         Actions
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                          />
+                        </span>
+                        Finalization date
                       </th>
                     </tr>
                   </thead>
@@ -865,6 +1236,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -895,6 +1271,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                     <tr>
@@ -927,6 +1308,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -957,6 +1343,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                     <tr>
@@ -989,6 +1380,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -1019,6 +1415,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                     <tr>
@@ -1051,6 +1452,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -1081,6 +1487,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                     <tr>
@@ -1113,6 +1524,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -1143,6 +1559,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                   </tbody>
@@ -1200,7 +1621,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -1284,9 +1705,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -1310,7 +1728,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -1330,6 +1748,7 @@ Object {
                   <tr>
                     <th
                       data-testid="TableHeader_id_terminated"
+                      id="stateHistoryDate"
                       rowspan="2"
                     >
                       <span
@@ -1345,6 +1764,7 @@ Object {
                       Identifier
                     </th>
                     <th
+                      id="stateHistoryHour"
                       rowspan="2"
                     >
                       <span
@@ -1360,6 +1780,7 @@ Object {
                       Survey
                     </th>
                     <th
+                      id="stateHistoryState"
                       rowspan="2"
                     >
                       <span
@@ -1378,6 +1799,21 @@ Object {
                       rowspan="2"
                     >
                       Actions
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                        />
+                      </span>
+                      Finalization date
                     </th>
                   </tr>
                 </thead>
@@ -1412,6 +1848,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -1442,6 +1883,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                   <tr>
@@ -1474,6 +1920,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -1504,6 +1955,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                   <tr>
@@ -1536,6 +1992,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -1566,6 +2027,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                   <tr>
@@ -1598,6 +2064,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -1628,6 +2099,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                   <tr>
@@ -1660,6 +2136,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -1690,6 +2171,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                 </tbody>
@@ -1804,7 +2290,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -1888,9 +2374,6 @@ Object {
                         id="exampleForm.SelectCustom"
                       >
                         <option>
-                          5
-                        </option>
-                        <option>
                           10
                         </option>
                         <option>
@@ -1914,7 +2397,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -1934,6 +2417,7 @@ Object {
                     <tr>
                       <th
                         data-testid="TableHeader_id_terminated"
+                        id="stateHistoryDate"
                         rowspan="2"
                       >
                         <span
@@ -1949,6 +2433,7 @@ Object {
                         Identifier
                       </th>
                       <th
+                        id="stateHistoryHour"
                         rowspan="2"
                       >
                         <span
@@ -1964,6 +2449,7 @@ Object {
                         Survey
                       </th>
                       <th
+                        id="stateHistoryState"
                         rowspan="2"
                       >
                         <span
@@ -1982,6 +2468,21 @@ Object {
                         rowspan="2"
                       >
                         Actions
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                          />
+                        </span>
+                        Finalization date
                       </th>
                     </tr>
                   </thead>
@@ -2016,6 +2517,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -2046,6 +2552,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                     <tr>
@@ -2078,6 +2589,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -2109,6 +2625,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -2139,6 +2660,191 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4813
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1027
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4815
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Fabres Thierry
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1028
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4816
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                   </tbody>
@@ -2176,28 +2882,6 @@ Object {
                       2
                     </a>
                   </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      3
-                    </a>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      4
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -2218,7 +2902,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -2302,9 +2986,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -2328,7 +3009,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -2348,6 +3029,7 @@ Object {
                   <tr>
                     <th
                       data-testid="TableHeader_id_terminated"
+                      id="stateHistoryDate"
                       rowspan="2"
                     >
                       <span
@@ -2363,6 +3045,7 @@ Object {
                       Identifier
                     </th>
                     <th
+                      id="stateHistoryHour"
                       rowspan="2"
                     >
                       <span
@@ -2378,6 +3061,7 @@ Object {
                       Survey
                     </th>
                     <th
+                      id="stateHistoryState"
                       rowspan="2"
                     >
                       <span
@@ -2396,6 +3080,21 @@ Object {
                       rowspan="2"
                     >
                       Actions
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                        />
+                      </span>
+                      Finalization date
                     </th>
                   </tr>
                 </thead>
@@ -2430,6 +3129,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -2460,6 +3164,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                   <tr>
@@ -2492,6 +3201,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -2523,6 +3237,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -2553,6 +3272,191 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4813
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1027
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4815
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Fabres Thierry
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1028
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4816
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                 </tbody>
@@ -2588,28 +3492,6 @@ Object {
                     role="button"
                   >
                     2
-                  </a>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    3
-                  </a>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    4
                   </a>
                 </li>
               </ul>
@@ -2689,7 +3571,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -2773,9 +3655,6 @@ Object {
                         id="exampleForm.SelectCustom"
                       >
                         <option>
-                          5
-                        </option>
-                        <option>
                           10
                         </option>
                         <option>
@@ -2799,7 +3678,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -2819,6 +3698,7 @@ Object {
                     <tr>
                       <th
                         data-testid="TableHeader_id_terminated"
+                        id="stateHistoryDate"
                         rowspan="2"
                       >
                         <span
@@ -2834,6 +3714,7 @@ Object {
                         Identifier
                       </th>
                       <th
+                        id="stateHistoryHour"
                         rowspan="2"
                       >
                         <span
@@ -2849,6 +3730,7 @@ Object {
                         Survey
                       </th>
                       <th
+                        id="stateHistoryState"
                         rowspan="2"
                       >
                         <span
@@ -2867,6 +3749,21 @@ Object {
                         rowspan="2"
                       >
                         Actions
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                          />
+                        </span>
+                        Finalization date
                       </th>
                     </tr>
                   </thead>
@@ -2901,6 +3798,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -2931,6 +3833,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                     <tr>
@@ -2963,6 +3870,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -2994,6 +3906,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -3024,6 +3941,191 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4813
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1027
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4815
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Fabres Thierry
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1028
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4816
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                   </tbody>
@@ -3061,28 +4163,6 @@ Object {
                       2
                     </a>
                   </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      3
-                    </a>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      4
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -3093,7 +4173,7 @@ Object {
                 class="card-title h5"
               >
                 <i
-                  class="fa fa-times fa-sm Clickable"
+                  class="fa fa-times fa-sm Clickable HistoryTableCross"
                   data-testid="close-history"
                   role="button"
                   tabindex="0"
@@ -3106,21 +4186,25 @@ Object {
                 <table
                   class="CustomTable table table-sm table-striped table-bordered table-hover"
                   id="SurveyList"
+                  style="max-width: 0;"
                 >
                   <thead>
                     <tr>
                       <th
                         rowspan="2"
+                        style="width: 0px;"
                       >
                         Date
                       </th>
                       <th
                         rowspan="2"
+                        style="width: 0px;"
                       >
                         Hour
                       </th>
                       <th
                         rowspan="2"
+                        style="width: 0px;"
                       >
                         State
                       </th>
@@ -3178,7 +4262,7 @@ Object {
                       <td
                         class="Clickable"
                       >
-                        AOC
+                        At least one contact made
                       </td>
                     </tr>
                   </tbody>
@@ -3202,7 +4286,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -3286,9 +4370,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -3312,7 +4393,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -3332,6 +4413,7 @@ Object {
                   <tr>
                     <th
                       data-testid="TableHeader_id_terminated"
+                      id="stateHistoryDate"
                       rowspan="2"
                     >
                       <span
@@ -3347,6 +4429,7 @@ Object {
                       Identifier
                     </th>
                     <th
+                      id="stateHistoryHour"
                       rowspan="2"
                     >
                       <span
@@ -3362,6 +4445,7 @@ Object {
                       Survey
                     </th>
                     <th
+                      id="stateHistoryState"
                       rowspan="2"
                     >
                       <span
@@ -3380,6 +4464,21 @@ Object {
                       rowspan="2"
                     >
                       Actions
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                        />
+                      </span>
+                      Finalization date
                     </th>
                   </tr>
                 </thead>
@@ -3414,6 +4513,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -3444,6 +4548,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                   <tr>
@@ -3476,6 +4585,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -3507,6 +4621,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -3537,6 +4656,191 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4813
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1027
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4815
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Fabres Thierry
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1028
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4816
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                 </tbody>
@@ -3574,28 +4878,6 @@ Object {
                     2
                   </a>
                 </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    3
-                  </a>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    4
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
@@ -3606,7 +4888,7 @@ Object {
               class="card-title h5"
             >
               <i
-                class="fa fa-times fa-sm Clickable"
+                class="fa fa-times fa-sm Clickable HistoryTableCross"
                 data-testid="close-history"
                 role="button"
                 tabindex="0"
@@ -3619,21 +4901,25 @@ Object {
               <table
                 class="CustomTable table table-sm table-striped table-bordered table-hover"
                 id="SurveyList"
+                style="max-width: 0;"
               >
                 <thead>
                   <tr>
                     <th
                       rowspan="2"
+                      style="width: 0px;"
                     >
                       Date
                     </th>
                     <th
                       rowspan="2"
+                      style="width: 0px;"
                     >
                       Hour
                     </th>
                     <th
                       rowspan="2"
+                      style="width: 0px;"
                     >
                       State
                     </th>
@@ -3691,7 +4977,7 @@ Object {
                     <td
                       class="Clickable"
                     >
-                      AOC
+                      At least one contact made
                     </td>
                   </tr>
                 </tbody>
@@ -3780,7 +5066,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -3864,9 +5150,6 @@ Object {
                         id="exampleForm.SelectCustom"
                       >
                         <option>
-                          5
-                        </option>
-                        <option>
                           10
                         </option>
                         <option>
@@ -3890,7 +5173,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -3910,6 +5193,7 @@ Object {
                     <tr>
                       <th
                         data-testid="TableHeader_id_terminated"
+                        id="stateHistoryDate"
                         rowspan="2"
                       >
                         <span
@@ -3925,6 +5209,7 @@ Object {
                         Identifier
                       </th>
                       <th
+                        id="stateHistoryHour"
                         rowspan="2"
                       >
                         <span
@@ -3940,6 +5225,7 @@ Object {
                         Survey
                       </th>
                       <th
+                        id="stateHistoryState"
                         rowspan="2"
                       >
                         <span
@@ -3958,6 +5244,21 @@ Object {
                         rowspan="2"
                       >
                         Actions
+                      </th>
+                      <th
+                        rowspan="2"
+                      >
+                        <span
+                          class="sortIcon"
+                        >
+                          <i
+                            class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          />
+                          <i
+                            class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          />
+                        </span>
+                        Finalization date
                       </th>
                     </tr>
                   </thead>
@@ -3992,6 +5293,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -4022,6 +5328,11 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                     <tr>
@@ -4054,6 +5365,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -4085,6 +5401,11 @@ Object {
                           class="fa fa-history HistoryDisplayIcon"
                         />
                       </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
                     </tr>
                     <tr>
                       <td
@@ -4115,6 +5436,191 @@ Object {
                           aria-hidden="true"
                           class="fa fa-history HistoryDisplayIcon"
                         />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1029
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Fabres Thierry
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1030
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        1032
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Dupont Chloé
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4811
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="Clickable"
+                        data-testid="campaign-label"
+                      >
+                        4812
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Everyday life and health survey 2021
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        Boulanger Jacques
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-pencil EditLink"
+                        />
+                        <span />
+                        <i
+                          aria-hidden="true"
+                          class="fa fa-history HistoryDisplayIcon"
+                        />
+                      </td>
+                      <td
+                        class="Clickable"
+                      >
+                        8/20/2020 11:01
                       </td>
                     </tr>
                   </tbody>
@@ -4152,28 +5658,6 @@ Object {
                       2
                     </a>
                   </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      3
-                    </a>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      4
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -4194,7 +5678,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -4278,9 +5762,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -4304,7 +5785,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -4324,6 +5805,7 @@ Object {
                   <tr>
                     <th
                       data-testid="TableHeader_id_terminated"
+                      id="stateHistoryDate"
                       rowspan="2"
                     >
                       <span
@@ -4339,6 +5821,7 @@ Object {
                       Identifier
                     </th>
                     <th
+                      id="stateHistoryHour"
                       rowspan="2"
                     >
                       <span
@@ -4354,6 +5837,7 @@ Object {
                       Survey
                     </th>
                     <th
+                      id="stateHistoryState"
                       rowspan="2"
                     >
                       <span
@@ -4372,6 +5856,21 @@ Object {
                       rowspan="2"
                     >
                       Actions
+                    </th>
+                    <th
+                      rowspan="2"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Finalization date
                     </th>
                   </tr>
                 </thead>
@@ -4406,6 +5905,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -4436,6 +5940,11 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                   <tr>
@@ -4468,6 +5977,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -4499,6 +6013,11 @@ Object {
                         class="fa fa-history HistoryDisplayIcon"
                       />
                     </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
                   </tr>
                   <tr>
                     <td
@@ -4529,6 +6048,191 @@ Object {
                         aria-hidden="true"
                         class="fa fa-history HistoryDisplayIcon"
                       />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1029
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Fabres Thierry
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1030
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      1032
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Dupont Chloé
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4811
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                      data-testid="campaign-label"
+                    >
+                      4812
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Everyday life and health survey 2021
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditLink"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-history HistoryDisplayIcon"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      8/20/2020 11:01
                     </td>
                   </tr>
                 </tbody>
@@ -4564,28 +6268,6 @@ Object {
                     role="button"
                   >
                     2
-                  </a>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    3
-                  </a>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    4
                   </a>
                 </li>
               </ul>

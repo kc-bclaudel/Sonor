@@ -27,7 +27,7 @@ const app = {
     en: 'Display',
   },
   elements: {
-    fr: 'élements',
+    fr: 'éléments',
     en: 'elements',
   },
   // Search field
@@ -44,6 +44,11 @@ const app = {
   validate: {
     fr: 'Valider',
     en: 'Validate',
+  },
+  // Validate button preferences
+  preferencesValidate: {
+    fr: 'OK',
+    en: 'OK',
   },
   // Close button
   close: {

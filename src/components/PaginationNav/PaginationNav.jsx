@@ -78,7 +78,6 @@ class PaginationNav {
               data-testid="pagination-size-selector"
               onChange={(e) => updateFunc({ size: parseInt(e.target.value, 10), page: 1 })}
             >
-              <option>5</option>
               <option>10</option>
               <option>20</option>
               <option>50</option>

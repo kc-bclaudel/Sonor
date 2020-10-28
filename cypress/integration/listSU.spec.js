@@ -65,7 +65,7 @@ context("sonor", () => {
     cy.get("#MainScreen");
     // Click on the allocated cell of first row to go to list su
     cy.get("tbody").within(() => {
-      cy.get("td").contains("4").first().click();
+      cy.get("td").contains("5").first().click();
     });
 
     // Survey title should be correct
@@ -126,7 +126,7 @@ context("sonor", () => {
 
     // Testing page change
     cy.get(".paginationNav").contains("2").click();
-    cy.get("tbody").find("td").first().should("have.text", "1025");
+    cy.get("tbody").find("td").first().should("have.text", "4812");
 
     // Testing pagination size change
     cy.get('[data-testid="pagination-size-selector"]').select("10");
