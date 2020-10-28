@@ -13,7 +13,7 @@ class MainScreen extends React.Component {
 
     this.state = {
       data: [],
-      pagination: { size: 5, page: 1 },
+      pagination: { size: 10, page: 1 },
       sort: { sortOn: null, asc: null },
     };
   }

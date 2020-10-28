@@ -15,7 +15,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -87,7 +87,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -110,668 +110,6 @@ Object {
                         data-testid="pagination-size-selector"
                         id="exampleForm.SelectCustom"
                       >
-                        <option>
-                          5
-                        </option>
-                        <option>
-                          10
-                        </option>
-                        <option>
-                          20
-                        </option>
-                        <option>
-                          50
-                        </option>
-                      </select>
-                    </div>
-                  </form>
-                  <span>
-                     elements
-                  </span>
-                </span>
-              </div>
-              <div
-                class="text-right col-6"
-              >
-                <span>
-                  Result: 
-                  7
-                  /
-                  7
-                   
-                  units
-                </span>
-              </div>
-            </div>
-            <div
-              class="table-responsive"
-            >
-              <table
-                class="CustomTable table table-sm table-striped table-bordered table-hover"
-                id="SUTable"
-              >
-                <thead>
-                  <tr>
-                    <th>
-                      Identifier
-                      <span
-                        class="sortIcon"
-                      >
-                        <i
-                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                        />
-                        <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
-                        />
-                      </span>
-                    </th>
-                    <th>
-                      Ssech
-                      <span
-                        class="sortIcon"
-                      >
-                        <i
-                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                        />
-                        <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                        />
-                      </span>
-                    </th>
-                    <th>
-                      Department
-                      <span
-                        class="sortIcon"
-                      >
-                        <i
-                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                        />
-                        <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                        />
-                      </span>
-                    </th>
-                    <th>
-                      Town
-                      <span
-                        class="sortIcon"
-                      >
-                        <i
-                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                        />
-                        <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                        />
-                      </span>
-                    </th>
-                    <th
-                      data-testid="TableHeader_interviewer_name"
-                    >
-                      Interviewer
-                      <span
-                        class="sortIcon"
-                      >
-                        <i
-                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                        />
-                        <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                        />
-                      </span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      55
-                    </td>
-                    <td>
-                      2
-                    </td>
-                    <td>
-                      62
-                    </td>
-                    <td>
-                      Arras
-                    </td>
-                    <td>
-                      Bertrand Ulysse
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      23
-                    </td>
-                    <td>
-                      1
-                    </td>
-                    <td>
-                      35
-                    </td>
-                    <td>
-                      Rennes
-                    </td>
-                    <td>
-                      Grant Melody
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              class="tableOptionsWrapper"
-            >
-              <button
-                class="btn btn-primary"
-                data-testid="export-button"
-                type="button"
-              >
-                Export
-              </button>
-              <ul
-                class="paginationNav pagination pagination-sm"
-                data-testid="pagination-nav"
-              >
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    1
-                  </a>
-                </li>
-                <li
-                  class="page-item active"
-                >
-                  <span
-                    class="page-link"
-                  >
-                    2
-                    <span
-                      class="sr-only"
-                    >
-                      (current)
-                    </span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      id="ListSU"
-    >
-      <div
-        class="row"
-      >
-        <div
-          class="col"
-        >
-          <a
-            class="ButtonLink"
-            href="/"
-          >
-            <button
-              class="ReturnButton btn btn-primary"
-              data-testid="return-button"
-              type="button"
-            >
-              Back
-            </button>
-          </a>
-        </div>
-        <div
-          class="col-6"
-        >
-          <div
-            class="SurveyTitle"
-          >
-            Everyday life and health survey 2021
-          </div>
-        </div>
-        <div
-          class="col"
-          id="RightCoListSU"
-        >
-          <form
-            class=""
-          >
-            <div
-              class="form-group"
-            >
-              <select
-                class="custom-select custom-select-sm"
-                data-testid="Survey_selector"
-                placeholder="Choose a survey"
-              >
-                <option
-                  disabled=""
-                  value="-1"
-                >
-                  Choose a survey
-                </option>
-                <option
-                  value="simpsons2020x00"
-                >
-                  Survey on the Simpsons tv show 2020
-                </option>
-              </select>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div
-        class="ViewCard card"
-      >
-        <div
-          class="card-title h5"
-        >
-          Survey units allocated to the organizational unit: 
-          7
-        </div>
-        <div>
-          <div
-            class="row"
-          >
-            <div
-              class="text-right col-12"
-            >
-              <span>
-                <input
-                  class="SearchFieldInput"
-                  placeholder="Search"
-                  type="text"
-                  value=""
-                />
-              </span>
-            </div>
-            <div
-              class="col-6"
-            >
-              <span>
-                <span>
-                  Display 
-                </span>
-                <form
-                  class="PageSizeSelector"
-                >
-                  <div
-                    class="form-group"
-                  >
-                    <select
-                      class="custom-select custom-select-sm"
-                      data-testid="pagination-size-selector"
-                      id="exampleForm.SelectCustom"
-                    >
-                      <option>
-                        5
-                      </option>
-                      <option>
-                        10
-                      </option>
-                      <option>
-                        20
-                      </option>
-                      <option>
-                        50
-                      </option>
-                    </select>
-                  </div>
-                </form>
-                <span>
-                   elements
-                </span>
-              </span>
-            </div>
-            <div
-              class="text-right col-6"
-            >
-              <span>
-                Result: 
-                7
-                /
-                7
-                 
-                units
-              </span>
-            </div>
-          </div>
-          <div
-            class="table-responsive"
-          >
-            <table
-              class="CustomTable table table-sm table-striped table-bordered table-hover"
-              id="SUTable"
-            >
-              <thead>
-                <tr>
-                  <th>
-                    Identifier
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    Ssech
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    Department
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    Town
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th
-                    data-testid="TableHeader_interviewer_name"
-                  >
-                    Interviewer
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    55
-                  </td>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    62
-                  </td>
-                  <td>
-                    Arras
-                  </td>
-                  <td>
-                    Bertrand Ulysse
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    23
-                  </td>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    35
-                  </td>
-                  <td>
-                    Rennes
-                  </td>
-                  <td>
-                    Grant Melody
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div
-            class="tableOptionsWrapper"
-          >
-            <button
-              class="btn btn-primary"
-              data-testid="export-button"
-              type="button"
-            >
-              Export
-            </button>
-            <ul
-              class="paginationNav pagination pagination-sm"
-              data-testid="pagination-nav"
-            >
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  1
-                </a>
-              </li>
-              <li
-                class="page-item active"
-              >
-                <span
-                  class="page-link"
-                >
-                  2
-                  <span
-                    class="sr-only"
-                  >
-                    (current)
-                  </span>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`Change pagination size 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        id="ListSU"
-      >
-        <div
-          class="row"
-        >
-          <div
-            class="col"
-          >
-            <a
-              class="ButtonLink"
-              href="/"
-            >
-              <button
-                class="ReturnButton btn btn-primary"
-                data-testid="return-button"
-                type="button"
-              >
-                Back
-              </button>
-            </a>
-          </div>
-          <div
-            class="col-6"
-          >
-            <div
-              class="SurveyTitle"
-            >
-              Everyday life and health survey 2021
-            </div>
-          </div>
-          <div
-            class="col"
-            id="RightCoListSU"
-          >
-            <form
-              class=""
-            >
-              <div
-                class="form-group"
-              >
-                <select
-                  class="custom-select custom-select-sm"
-                  data-testid="Survey_selector"
-                  placeholder="Choose a survey"
-                >
-                  <option
-                    disabled=""
-                    value="-1"
-                  >
-                    Choose a survey
-                  </option>
-                  <option
-                    value="simpsons2020x00"
-                  >
-                    Survey on the Simpsons tv show 2020
-                  </option>
-                </select>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div
-          class="ViewCard card"
-        >
-          <div
-            class="card-title h5"
-          >
-            Survey units allocated to the organizational unit: 
-            7
-          </div>
-          <div>
-            <div
-              class="row"
-            >
-              <div
-                class="text-right col-12"
-              >
-                <span>
-                  <input
-                    class="SearchFieldInput"
-                    placeholder="Search"
-                    type="text"
-                    value=""
-                  />
-                </span>
-              </div>
-              <div
-                class="col-6"
-              >
-                <span>
-                  <span>
-                    Display 
-                  </span>
-                  <form
-                    class="PageSizeSelector"
-                  >
-                    <div
-                      class="form-group"
-                    >
-                      <select
-                        class="custom-select custom-select-sm"
-                        data-testid="pagination-size-selector"
-                        id="exampleForm.SelectCustom"
-                      >
-                        <option>
-                          5
-                        </option>
                         <option>
                           10
                         </option>
@@ -1049,7 +387,7 @@ Object {
           class="col"
         >
           <a
-            class="ButtonLink"
+            class="ButtonLink ReturnButtonLink"
             href="/"
           >
             <button
@@ -1121,7 +459,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -1145,8 +483,806 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
+                        10
                       </option>
+                      <option>
+                        20
+                      </option>
+                      <option>
+                        50
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <span>
+                   elements
+                </span>
+              </span>
+            </div>
+            <div
+              class="text-right col-6"
+            >
+              <span>
+                Result: 
+                7
+                /
+                7
+                 
+                units
+              </span>
+            </div>
+          </div>
+          <div
+            class="table-responsive"
+          >
+            <table
+              class="CustomTable table table-sm table-striped table-bordered table-hover"
+              id="SUTable"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    Identifier
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    Ssech
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    Department
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    Town
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    data-testid="TableHeader_interviewer_name"
+                  >
+                    Interviewer
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    20
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    59
+                  </td>
+                  <td>
+                    Aulnoye-Aimeries
+                  </td>
+                  <td>
+                    Lucas Margie
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    21
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    38
+                  </td>
+                  <td>
+                    Vienne
+                  </td>
+                  <td>
+                    Campbell Carlton
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    62
+                  </td>
+                  <td>
+                    Arras
+                  </td>
+                  <td>
+                    Xern Fabrice
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    29
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    65
+                  </td>
+                  <td>
+                    Belfort
+                  </td>
+                  <td>
+                    Delmare Mathilde
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    33
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    75
+                  </td>
+                  <td>
+                    Paris
+                  </td>
+                  <td>
+                    Antoine Tarje
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    55
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    62
+                  </td>
+                  <td>
+                    Arras
+                  </td>
+                  <td>
+                    Bertrand Ulysse
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    23
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    35
+                  </td>
+                  <td>
+                    Rennes
+                  </td>
+                  <td>
+                    Grant Melody
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="tableOptionsWrapper"
+          >
+            <button
+              class="btn btn-primary"
+              data-testid="export-button"
+              type="button"
+            >
+              Export
+            </button>
+            <ul
+              class="paginationNav pagination pagination-sm"
+              data-testid="pagination-nav"
+            >
+              <li
+                class="page-item active"
+              >
+                <span
+                  class="page-link"
+                >
+                  1
+                  <span
+                    class="sr-only"
+                  >
+                    (current)
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Change pagination size 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        id="ListSU"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink ReturnButtonLink"
+              href="/"
+            >
+              <button
+                class="ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+            id="RightCoListSU"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="card-title h5"
+          >
+            Survey units allocated to the organizational unit: 
+            7
+          </div>
+          <div>
+            <div
+              class="row"
+            >
+              <div
+                class="text-right col-12"
+              >
+                <span>
+                  <input
+                    class="SearchFieldInput"
+                    placeholder="Search"
+                    type="search"
+                    value=""
+                  />
+                </span>
+              </div>
+              <div
+                class="col-6"
+              >
+                <span>
+                  <span>
+                    Display 
+                  </span>
+                  <form
+                    class="PageSizeSelector"
+                  >
+                    <div
+                      class="form-group"
+                    >
+                      <select
+                        class="custom-select custom-select-sm"
+                        data-testid="pagination-size-selector"
+                        id="exampleForm.SelectCustom"
+                      >
+                        <option>
+                          10
+                        </option>
+                        <option>
+                          20
+                        </option>
+                        <option>
+                          50
+                        </option>
+                      </select>
+                    </div>
+                  </form>
+                  <span>
+                     elements
+                  </span>
+                </span>
+              </div>
+              <div
+                class="text-right col-6"
+              >
+                <span>
+                  Result: 
+                  7
+                  /
+                  7
+                   
+                  units
+                </span>
+              </div>
+            </div>
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="SUTable"
+              >
+                <thead>
+                  <tr>
+                    <th>
+                      Identifier
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                        />
+                      </span>
+                    </th>
+                    <th>
+                      Ssech
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                    </th>
+                    <th>
+                      Department
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                    </th>
+                    <th>
+                      Town
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                    </th>
+                    <th
+                      data-testid="TableHeader_interviewer_name"
+                    >
+                      Interviewer
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      20
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      59
+                    </td>
+                    <td>
+                      Aulnoye-Aimeries
+                    </td>
+                    <td>
+                      Lucas Margie
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      21
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      38
+                    </td>
+                    <td>
+                      Vienne
+                    </td>
+                    <td>
+                      Campbell Carlton
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      22
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      62
+                    </td>
+                    <td>
+                      Arras
+                    </td>
+                    <td>
+                      Xern Fabrice
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      29
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      65
+                    </td>
+                    <td>
+                      Belfort
+                    </td>
+                    <td>
+                      Delmare Mathilde
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      33
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      75
+                    </td>
+                    <td>
+                      Paris
+                    </td>
+                    <td>
+                      Antoine Tarje
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      55
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      62
+                    </td>
+                    <td>
+                      Arras
+                    </td>
+                    <td>
+                      Bertrand Ulysse
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      23
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      35
+                    </td>
+                    <td>
+                      Rennes
+                    </td>
+                    <td>
+                      Grant Melody
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <button
+                class="btn btn-primary"
+                data-testid="export-button"
+                type="button"
+              >
+                Export
+              </button>
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    1
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      id="ListSU"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <a
+            class="ButtonLink ReturnButtonLink"
+            href="/"
+          >
+            <button
+              class="ReturnButton btn btn-primary"
+              data-testid="return-button"
+              type="button"
+            >
+              Back
+            </button>
+          </a>
+        </div>
+        <div
+          class="col-6"
+        >
+          <div
+            class="SurveyTitle"
+          >
+            Everyday life and health survey 2021
+          </div>
+        </div>
+        <div
+          class="col"
+          id="RightCoListSU"
+        >
+          <form
+            class=""
+          >
+            <div
+              class="form-group"
+            >
+              <select
+                class="custom-select custom-select-sm"
+                data-testid="Survey_selector"
+                placeholder="Choose a survey"
+              >
+                <option
+                  disabled=""
+                  value="-1"
+                >
+                  Choose a survey
+                </option>
+                <option
+                  value="simpsons2020x00"
+                >
+                  Survey on the Simpsons tv show 2020
+                </option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="card-title h5"
+        >
+          Survey units allocated to the organizational unit: 
+          7
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <div
+              class="text-right col-12"
+            >
+              <span>
+                <input
+                  class="SearchFieldInput"
+                  placeholder="Search"
+                  type="search"
+                  value=""
+                />
+              </span>
+            </div>
+            <div
+              class="col-6"
+            >
+              <span>
+                <span>
+                  Display 
+                </span>
+                <form
+                  class="PageSizeSelector"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <select
+                      class="custom-select custom-select-sm"
+                      data-testid="pagination-size-selector"
+                      id="exampleForm.SelectCustom"
+                    >
                       <option>
                         10
                       </option>
@@ -1481,7 +1617,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -1553,7 +1689,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -1576,9 +1712,6 @@ Object {
                         data-testid="pagination-size-selector"
                         id="exampleForm.SelectCustom"
                       >
-                        <option>
-                          5
-                        </option>
                         <option>
                           10
                         </option>
@@ -1773,6 +1906,40 @@ Object {
                       Antoine Tarje
                     </td>
                   </tr>
+                  <tr>
+                    <td>
+                      55
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      62
+                    </td>
+                    <td>
+                      Arras
+                    </td>
+                    <td>
+                      Bertrand Ulysse
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      23
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      35
+                    </td>
+                    <td>
+                      Rennes
+                    </td>
+                    <td>
+                      Grant Melody
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -1804,17 +1971,6 @@ Object {
                     </span>
                   </span>
                 </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    2
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
@@ -1833,7 +1989,7 @@ Object {
           class="col"
         >
           <a
-            class="ButtonLink"
+            class="ButtonLink ReturnButtonLink"
             href="/"
           >
             <button
@@ -1905,7 +2061,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -1928,9 +2084,6 @@ Object {
                       data-testid="pagination-size-selector"
                       id="exampleForm.SelectCustom"
                     >
-                      <option>
-                        5
-                      </option>
                       <option>
                         10
                       </option>
@@ -2125,6 +2278,40 @@ Object {
                     Antoine Tarje
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    55
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    62
+                  </td>
+                  <td>
+                    Arras
+                  </td>
+                  <td>
+                    Bertrand Ulysse
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    23
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    35
+                  </td>
+                  <td>
+                    Rennes
+                  </td>
+                  <td>
+                    Grant Melody
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -2155,17 +2342,6 @@ Object {
                     (current)
                   </span>
                 </span>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
               </li>
             </ul>
           </div>
@@ -2242,7 +2418,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -2314,7 +2490,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -2337,9 +2513,6 @@ Object {
                         data-testid="pagination-size-selector"
                         id="exampleForm.SelectCustom"
                       >
-                        <option>
-                          5
-                        </option>
                         <option>
                           10
                         </option>
@@ -2534,6 +2707,40 @@ Object {
                       Antoine Tarje
                     </td>
                   </tr>
+                  <tr>
+                    <td>
+                      55
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      62
+                    </td>
+                    <td>
+                      Arras
+                    </td>
+                    <td>
+                      Bertrand Ulysse
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      23
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      35
+                    </td>
+                    <td>
+                      Rennes
+                    </td>
+                    <td>
+                      Grant Melody
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -2565,17 +2772,6 @@ Object {
                     </span>
                   </span>
                 </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    2
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
@@ -2598,7 +2794,7 @@ Object {
           class="col"
         >
           <a
-            class="ButtonLink"
+            class="ButtonLink ReturnButtonLink"
             href="/"
           >
             <button
@@ -2670,7 +2866,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -2693,9 +2889,6 @@ Object {
                       data-testid="pagination-size-selector"
                       id="exampleForm.SelectCustom"
                     >
-                      <option>
-                        5
-                      </option>
                       <option>
                         10
                       </option>
@@ -2890,6 +3083,40 @@ Object {
                     Antoine Tarje
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    55
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    62
+                  </td>
+                  <td>
+                    Arras
+                  </td>
+                  <td>
+                    Bertrand Ulysse
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    23
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    35
+                  </td>
+                  <td>
+                    Rennes
+                  </td>
+                  <td>
+                    Grant Melody
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -2920,17 +3147,6 @@ Object {
                     (current)
                   </span>
                 </span>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
               </li>
             </ul>
           </div>
@@ -3015,7 +3231,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -3087,7 +3303,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -3110,9 +3326,6 @@ Object {
                         data-testid="pagination-size-selector"
                         id="exampleForm.SelectCustom"
                       >
-                        <option>
-                          5
-                        </option>
                         <option>
                           10
                         </option>
@@ -3307,6 +3520,40 @@ Object {
                       Grant Melody
                     </td>
                   </tr>
+                  <tr>
+                    <td>
+                      20
+                    </td>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      59
+                    </td>
+                    <td>
+                      Aulnoye-Aimeries
+                    </td>
+                    <td>
+                      Lucas Margie
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      22
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      62
+                    </td>
+                    <td>
+                      Arras
+                    </td>
+                    <td>
+                      Xern Fabrice
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -3338,17 +3585,6 @@ Object {
                     </span>
                   </span>
                 </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    2
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
@@ -3367,7 +3603,7 @@ Object {
           class="col"
         >
           <a
-            class="ButtonLink"
+            class="ButtonLink ReturnButtonLink"
             href="/"
           >
             <button
@@ -3439,7 +3675,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -3462,9 +3698,6 @@ Object {
                       data-testid="pagination-size-selector"
                       id="exampleForm.SelectCustom"
                     >
-                      <option>
-                        5
-                      </option>
                       <option>
                         10
                       </option>
@@ -3659,6 +3892,40 @@ Object {
                     Grant Melody
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    20
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    59
+                  </td>
+                  <td>
+                    Aulnoye-Aimeries
+                  </td>
+                  <td>
+                    Lucas Margie
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    62
+                  </td>
+                  <td>
+                    Arras
+                  </td>
+                  <td>
+                    Xern Fabrice
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -3689,17 +3956,6 @@ Object {
                     (current)
                   </span>
                 </span>
-              </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
               </li>
             </ul>
           </div>

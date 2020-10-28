@@ -32,7 +32,7 @@ class SUTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pagination: { size: 5, page: 1 },
+      pagination: { size: 10, page: 1 },
       displayedLines: props.data,
     };
   }

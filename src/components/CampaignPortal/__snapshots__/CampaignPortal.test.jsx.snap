@@ -18,7 +18,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -267,9 +267,6 @@ Object {
                               id="exampleForm.SelectCustom"
                             >
                               <option>
-                                5
-                              </option>
-                              <option>
                                 10
                               </option>
                               <option>
@@ -293,992 +290,7 @@ Object {
                         <input
                           class="SearchFieldInput"
                           placeholder="Search"
-                          type="text"
-                          value=""
-                        />
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="table-responsive"
-                  >
-                    <table
-                      class="CustomTable table table-sm table-striped table-bordered table-hover"
-                    >
-                      <tbody>
-                        <tr>
-                          <th
-                            class="Clickable"
-                            data-testid="TableHeader_interviewer_name_portal"
-                          >
-                            <span
-                              class="sortIcon"
-                            >
-                              <i
-                                class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                              />
-                              <i
-                                class="fa fa-fw fa-caret-up sortIconUp iconActive"
-                              />
-                            </span>
-                            Interviewer
-                          </th>
-                          <th
-                            class="Clickable"
-                          >
-                            <span
-                              class="sortIcon"
-                            >
-                              <i
-                                class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                              />
-                              <i
-                                class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                              />
-                            </span>
-                            Idep
-                          </th>
-                          <th
-                            class="Clickable"
-                          >
-                            <span
-                              class="sortIcon"
-                            >
-                              <i
-                                class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                              />
-                              <i
-                                class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                              />
-                            </span>
-                            SU
-                          </th>
-                        </tr>
-                        <tr>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            Fabres
-                             
-                            Thierry
-                          </td>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            INTW7
-                          </td>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            76
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            Renard
-                             
-                            Bertrand
-                          </td>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            INTW8
-                          </td>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            84
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>
-                            Unassigned
-                          </th>
-                          <th />
-                          <th>
-                            14
-                          </th>
-                        </tr>
-                        <tr>
-                          <th>
-                            Abandoned
-                          </th>
-                          <th />
-                          <th />
-                        </tr>
-                        <tr>
-                          <th>
-                            Total organizational unit
-                          </th>
-                          <th />
-                          <th>
-                            208
-                          </th>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div
-                    class="tableOptionsWrapper"
-                  >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
-                    <ul
-                      class="paginationNav pagination pagination-sm"
-                      data-testid="pagination-nav"
-                    >
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          1
-                        </a>
-                      </li>
-                      <li
-                        class="page-item active"
-                      >
-                        <span
-                          class="page-link"
-                        >
-                          2
-                          <span
-                            class="sr-only"
-                          >
-                            (current)
-                          </span>
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      id="CampaignPortal"
-    >
-      <div
-        class="container-fluid"
-      >
-        <div
-          class="row"
-        >
-          <div
-            class="col"
-          >
-            <a
-              class="ButtonLink"
-              href="/"
-            >
-              <button
-                class="ReturnButton btn btn-primary"
-                data-testid="return-button"
-                type="button"
-              >
-                Back
-              </button>
-            </a>
-          </div>
-          <div
-            class="col-6"
-          >
-            <div
-              class="SurveyTitle"
-            >
-              Everyday life and health survey 2021
-            </div>
-          </div>
-          <div
-            class="col"
-          >
-            <form
-              class=""
-            >
-              <div
-                class="form-group"
-              >
-                <select
-                  class="custom-select custom-select-sm"
-                  data-testid="Survey_selector"
-                  placeholder="Choose a survey"
-                >
-                  <option
-                    disabled=""
-                    value="-1"
-                  >
-                    Choose a survey
-                  </option>
-                  <option
-                    value="simpsons2020x00"
-                  >
-                    Survey on the Simpsons tv show 2020
-                  </option>
-                </select>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div
-        class="ViewCard card"
-      >
-        <div
-          class="container-fluid"
-        >
-          <div
-            class="row"
-          >
-            <div
-              class="col"
-            >
-              <div
-                class="ViewCard card"
-              >
-                <div
-                  id="TimeLine"
-                >
-                  <div
-                    id="PhaseMilestones"
-                  >
-                    <div>
-                      8/20/2020
-                    </div>
-                    <div
-                      class="DateCenter"
-                    >
-                      5/26/2020
-                    </div>
-                    <div
-                      class="DateCenter"
-                    >
-                      7/7/2020
-                    </div>
-                    <div
-                      class="DateRight"
-                    >
-                      8/20/2020
-                    </div>
-                  </div>
-                  <div
-                    id="PhaseDisplay"
-                  >
-                    <div
-                      class="PastPhase"
-                    >
-                      Initial assignment
-                    </div>
-                    <div
-                      class="PastPhase"
-                    >
-                      Collection in progress
-                    </div>
-                    <div
-                      class=" CurrentPhase"
-                    >
-                      Collection over
-                    </div>
-                  </div>
-                  <div
-                    id="PhaseMilestones"
-                  >
-                    <div>
-                      Integration
-                    </div>
-                    <div
-                      class="LabelCenter"
-                    >
-                      Start of collection
-                    </div>
-                    <div
-                      class="LabelCenter"
-                    >
-                      End of collection
-                    </div>
-                    <div
-                      class="LabelRight"
-                    >
-                      End of processing
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="row"
-          >
-            <div
-              class="col"
-            >
-              <div
-                class="ViewCard card"
-              >
-                <div>
-                  <div
-                    class="Title card-title h5"
-                  >
-                    Contacts
-                  </div>
-                  <div
-                    class="table-responsive"
-                  >
-                    <table
-                      class="CustomTable table table-sm table-striped table-bordered"
-                    >
-                      <tbody>
-                        <tr
-                          class="Clickable"
-                          data-testid="mail-button"
-                        >
-                          <th>
-                            Functional box
-                          </th>
-                          <td
-                            class=" LightGreyLine"
-                          >
-                            survey@mail.com
-                          </td>
-                        </tr>
-                        <tr>
-                          <th
-                            rowspan="2"
-                          >
-                            CPOS
-                          </th>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            Chloé Dupont
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            01 01 01 01 01
-                          </td>
-                        </tr>
-                        <tr>
-                          <th
-                            rowspan="2"
-                          >
-                            Deputy CPOS
-                          </th>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            Thierry Fabres
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            class="LightGreyLine"
-                          >
-                            02 01 01 01 01
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col"
-            >
-              <div
-                class="ViewCard card"
-              >
-                <div
-                  class="Title"
-                >
-                  Interviewers
-                </div>
-                <div
-                  class="row"
-                >
-                  <div
-                    class="col-6"
-                  >
-                    <span>
-                      <span>
-                        Display 
-                      </span>
-                      <form
-                        class="PageSizeSelector"
-                      >
-                        <div
-                          class="form-group"
-                        >
-                          <select
-                            class="custom-select custom-select-sm"
-                            data-testid="pagination-size-selector"
-                            id="exampleForm.SelectCustom"
-                          >
-                            <option>
-                              5
-                            </option>
-                            <option>
-                              10
-                            </option>
-                            <option>
-                              20
-                            </option>
-                            <option>
-                              50
-                            </option>
-                          </select>
-                        </div>
-                      </form>
-                      <span>
-                         elements
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="text-right col-6"
-                  >
-                    <span>
-                      <input
-                        class="SearchFieldInput"
-                        placeholder="Search"
-                        type="text"
-                        value=""
-                      />
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="table-responsive"
-                >
-                  <table
-                    class="CustomTable table table-sm table-striped table-bordered table-hover"
-                  >
-                    <tbody>
-                      <tr>
-                        <th
-                          class="Clickable"
-                          data-testid="TableHeader_interviewer_name_portal"
-                        >
-                          <span
-                            class="sortIcon"
-                          >
-                            <i
-                              class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                            />
-                            <i
-                              class="fa fa-fw fa-caret-up sortIconUp iconActive"
-                            />
-                          </span>
-                          Interviewer
-                        </th>
-                        <th
-                          class="Clickable"
-                        >
-                          <span
-                            class="sortIcon"
-                          >
-                            <i
-                              class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                            />
-                            <i
-                              class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                            />
-                          </span>
-                          Idep
-                        </th>
-                        <th
-                          class="Clickable"
-                        >
-                          <span
-                            class="sortIcon"
-                          >
-                            <i
-                              class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                            />
-                            <i
-                              class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                            />
-                          </span>
-                          SU
-                        </th>
-                      </tr>
-                      <tr>
-                        <td
-                          class="LightGreyLine"
-                        >
-                          Fabres
-                           
-                          Thierry
-                        </td>
-                        <td
-                          class="LightGreyLine"
-                        >
-                          INTW7
-                        </td>
-                        <td
-                          class="LightGreyLine"
-                        >
-                          76
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="LightGreyLine"
-                        >
-                          Renard
-                           
-                          Bertrand
-                        </td>
-                        <td
-                          class="LightGreyLine"
-                        >
-                          INTW8
-                        </td>
-                        <td
-                          class="LightGreyLine"
-                        >
-                          84
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          Unassigned
-                        </th>
-                        <th />
-                        <th>
-                          14
-                        </th>
-                      </tr>
-                      <tr>
-                        <th>
-                          Abandoned
-                        </th>
-                        <th />
-                        <th />
-                      </tr>
-                      <tr>
-                        <th>
-                          Total organizational unit
-                        </th>
-                        <th />
-                        <th>
-                          208
-                        </th>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div
-                  class="tableOptionsWrapper"
-                >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
-                  <ul
-                    class="paginationNav pagination pagination-sm"
-                    data-testid="pagination-nav"
-                  >
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        1
-                      </a>
-                    </li>
-                    <li
-                      class="page-item active"
-                    >
-                      <span
-                        class="page-link"
-                      >
-                        2
-                        <span
-                          class="sr-only"
-                        >
-                          (current)
-                        </span>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`Change pagination size 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        id="CampaignPortal"
-      >
-        <div
-          class="container-fluid"
-        >
-          <div
-            class="row"
-          >
-            <div
-              class="col"
-            >
-              <a
-                class="ButtonLink"
-                href="/"
-              >
-                <button
-                  class="ReturnButton btn btn-primary"
-                  data-testid="return-button"
-                  type="button"
-                >
-                  Back
-                </button>
-              </a>
-            </div>
-            <div
-              class="col-6"
-            >
-              <div
-                class="SurveyTitle"
-              >
-                Everyday life and health survey 2021
-              </div>
-            </div>
-            <div
-              class="col"
-            >
-              <form
-                class=""
-              >
-                <div
-                  class="form-group"
-                >
-                  <select
-                    class="custom-select custom-select-sm"
-                    data-testid="Survey_selector"
-                    placeholder="Choose a survey"
-                  >
-                    <option
-                      disabled=""
-                      value="-1"
-                    >
-                      Choose a survey
-                    </option>
-                    <option
-                      value="simpsons2020x00"
-                    >
-                      Survey on the Simpsons tv show 2020
-                    </option>
-                  </select>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div
-          class="ViewCard card"
-        >
-          <div
-            class="container-fluid"
-          >
-            <div
-              class="row"
-            >
-              <div
-                class="col"
-              >
-                <div
-                  class="ViewCard card"
-                >
-                  <div
-                    id="TimeLine"
-                  >
-                    <div
-                      id="PhaseMilestones"
-                    >
-                      <div>
-                        8/20/2020
-                      </div>
-                      <div
-                        class="DateCenter"
-                      >
-                        5/26/2020
-                      </div>
-                      <div
-                        class="DateCenter"
-                      >
-                        7/7/2020
-                      </div>
-                      <div
-                        class="DateRight"
-                      >
-                        8/20/2020
-                      </div>
-                    </div>
-                    <div
-                      id="PhaseDisplay"
-                    >
-                      <div
-                        class="PastPhase"
-                      >
-                        Initial assignment
-                      </div>
-                      <div
-                        class="PastPhase"
-                      >
-                        Collection in progress
-                      </div>
-                      <div
-                        class=" CurrentPhase"
-                      >
-                        Collection over
-                      </div>
-                    </div>
-                    <div
-                      id="PhaseMilestones"
-                    >
-                      <div>
-                        Integration
-                      </div>
-                      <div
-                        class="LabelCenter"
-                      >
-                        Start of collection
-                      </div>
-                      <div
-                        class="LabelCenter"
-                      >
-                        End of collection
-                      </div>
-                      <div
-                        class="LabelRight"
-                      >
-                        End of processing
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="row"
-            >
-              <div
-                class="col"
-              >
-                <div
-                  class="ViewCard card"
-                >
-                  <div>
-                    <div
-                      class="Title card-title h5"
-                    >
-                      Contacts
-                    </div>
-                    <div
-                      class="table-responsive"
-                    >
-                      <table
-                        class="CustomTable table table-sm table-striped table-bordered"
-                      >
-                        <tbody>
-                          <tr
-                            class="Clickable"
-                            data-testid="mail-button"
-                          >
-                            <th>
-                              Functional box
-                            </th>
-                            <td
-                              class=" LightGreyLine"
-                            >
-                              survey@mail.com
-                            </td>
-                          </tr>
-                          <tr>
-                            <th
-                              rowspan="2"
-                            >
-                              CPOS
-                            </th>
-                            <td
-                              class="LightGreyLine"
-                            >
-                              Chloé Dupont
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              class="LightGreyLine"
-                            >
-                              01 01 01 01 01
-                            </td>
-                          </tr>
-                          <tr>
-                            <th
-                              rowspan="2"
-                            >
-                              Deputy CPOS
-                            </th>
-                            <td
-                              class="LightGreyLine"
-                            >
-                              Thierry Fabres
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              class="LightGreyLine"
-                            >
-                              02 01 01 01 01
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="col"
-              >
-                <div
-                  class="ViewCard card"
-                >
-                  <div
-                    class="Title"
-                  >
-                    Interviewers
-                  </div>
-                  <div
-                    class="row"
-                  >
-                    <div
-                      class="col-6"
-                    >
-                      <span>
-                        <span>
-                          Display 
-                        </span>
-                        <form
-                          class="PageSizeSelector"
-                        >
-                          <div
-                            class="form-group"
-                          >
-                            <select
-                              class="custom-select custom-select-sm"
-                              data-testid="pagination-size-selector"
-                              id="exampleForm.SelectCustom"
-                            >
-                              <option>
-                                5
-                              </option>
-                              <option>
-                                10
-                              </option>
-                              <option>
-                                20
-                              </option>
-                              <option>
-                                50
-                              </option>
-                            </select>
-                          </div>
-                        </form>
-                        <span>
-                           elements
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      class="text-right col-6"
-                    >
-                      <span>
-                        <input
-                          class="SearchFieldInput"
-                          placeholder="Search"
-                          type="text"
+                          type="search"
                           value=""
                         />
                       </span>
@@ -1551,7 +563,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -1800,8 +812,1152 @@ Object {
                             id="exampleForm.SelectCustom"
                           >
                             <option>
-                              5
+                              10
                             </option>
+                            <option>
+                              20
+                            </option>
+                            <option>
+                              50
+                            </option>
+                          </select>
+                        </div>
+                      </form>
+                      <span>
+                         elements
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="text-right col-6"
+                  >
+                    <span>
+                      <input
+                        class="SearchFieldInput"
+                        placeholder="Search"
+                        type="search"
+                        value=""
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="table-responsive"
+                >
+                  <table
+                    class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  >
+                    <tbody>
+                      <tr>
+                        <th
+                          class="Clickable"
+                          data-testid="TableHeader_interviewer_name_portal"
+                        >
+                          <span
+                            class="sortIcon"
+                          >
+                            <i
+                              class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                            />
+                            <i
+                              class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                            />
+                          </span>
+                          Interviewer
+                        </th>
+                        <th
+                          class="Clickable"
+                        >
+                          <span
+                            class="sortIcon"
+                          >
+                            <i
+                              class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                            />
+                            <i
+                              class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                            />
+                          </span>
+                          Idep
+                        </th>
+                        <th
+                          class="Clickable"
+                        >
+                          <span
+                            class="sortIcon"
+                          >
+                            <i
+                              class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                            />
+                            <i
+                              class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                            />
+                          </span>
+                          SU
+                        </th>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Boulanger
+                           
+                          Emilie
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW9
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          55
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Boulanger
+                           
+                          Jacques
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW6
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          55
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Delmarre
+                           
+                          Alphonse
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW11
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          55
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Dupont
+                           
+                          Chloé
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW5
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          84
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Dupont
+                           
+                          Renée
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW10
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          84
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Fabres
+                           
+                          Thierry
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW7
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          76
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Renard
+                           
+                          Bertrand
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW8
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          84
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          Unassigned
+                        </th>
+                        <th />
+                        <th>
+                          14
+                        </th>
+                      </tr>
+                      <tr>
+                        <th>
+                          Abandoned
+                        </th>
+                        <th />
+                        <th />
+                      </tr>
+                      <tr>
+                        <th>
+                          Total organizational unit
+                        </th>
+                        <th />
+                        <th>
+                          208
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  class="tableOptionsWrapper"
+                >
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
+                  <ul
+                    class="paginationNav pagination pagination-sm"
+                    data-testid="pagination-nav"
+                  >
+                    <li
+                      class="page-item active"
+                    >
+                      <span
+                        class="page-link"
+                      >
+                        1
+                        <span
+                          class="sr-only"
+                        >
+                          (current)
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Change pagination size 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        id="CampaignPortal"
+      >
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <a
+                class="ButtonLink ReturnButtonLink"
+                href="/"
+              >
+                <button
+                  class="ReturnButton btn btn-primary"
+                  data-testid="return-button"
+                  type="button"
+                >
+                  Back
+                </button>
+              </a>
+            </div>
+            <div
+              class="col-6"
+            >
+              <div
+                class="SurveyTitle"
+              >
+                Everyday life and health survey 2021
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="Survey_selector"
+                    placeholder="Choose a survey"
+                  >
+                    <option
+                      disabled=""
+                      value="-1"
+                    >
+                      Choose a survey
+                    </option>
+                    <option
+                      value="simpsons2020x00"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="container-fluid"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <div
+                  class="ViewCard card"
+                >
+                  <div
+                    id="TimeLine"
+                  >
+                    <div
+                      id="PhaseMilestones"
+                    >
+                      <div>
+                        8/20/2020
+                      </div>
+                      <div
+                        class="DateCenter"
+                      >
+                        5/26/2020
+                      </div>
+                      <div
+                        class="DateCenter"
+                      >
+                        7/7/2020
+                      </div>
+                      <div
+                        class="DateRight"
+                      >
+                        8/20/2020
+                      </div>
+                    </div>
+                    <div
+                      id="PhaseDisplay"
+                    >
+                      <div
+                        class="PastPhase"
+                      >
+                        Initial assignment
+                      </div>
+                      <div
+                        class="PastPhase"
+                      >
+                        Collection in progress
+                      </div>
+                      <div
+                        class=" CurrentPhase"
+                      >
+                        Collection over
+                      </div>
+                    </div>
+                    <div
+                      id="PhaseMilestones"
+                    >
+                      <div>
+                        Integration
+                      </div>
+                      <div
+                        class="LabelCenter"
+                      >
+                        Start of collection
+                      </div>
+                      <div
+                        class="LabelCenter"
+                      >
+                        End of collection
+                      </div>
+                      <div
+                        class="LabelRight"
+                      >
+                        End of processing
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <div
+                  class="ViewCard card"
+                >
+                  <div>
+                    <div
+                      class="Title card-title h5"
+                    >
+                      Contacts
+                    </div>
+                    <div
+                      class="table-responsive"
+                    >
+                      <table
+                        class="CustomTable table table-sm table-striped table-bordered"
+                      >
+                        <tbody>
+                          <tr
+                            class="Clickable"
+                            data-testid="mail-button"
+                          >
+                            <th>
+                              Functional box
+                            </th>
+                            <td
+                              class=" LightGreyLine"
+                            >
+                              survey@mail.com
+                            </td>
+                          </tr>
+                          <tr>
+                            <th
+                              rowspan="2"
+                            >
+                              CPOS
+                            </th>
+                            <td
+                              class="LightGreyLine"
+                            >
+                              Chloé Dupont
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="LightGreyLine"
+                            >
+                              01 01 01 01 01
+                            </td>
+                          </tr>
+                          <tr>
+                            <th
+                              rowspan="2"
+                            >
+                              Deputy CPOS
+                            </th>
+                            <td
+                              class="LightGreyLine"
+                            >
+                              Thierry Fabres
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="LightGreyLine"
+                            >
+                              02 01 01 01 01
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col"
+              >
+                <div
+                  class="ViewCard card"
+                >
+                  <div
+                    class="Title"
+                  >
+                    Interviewers
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-6"
+                    >
+                      <span>
+                        <span>
+                          Display 
+                        </span>
+                        <form
+                          class="PageSizeSelector"
+                        >
+                          <div
+                            class="form-group"
+                          >
+                            <select
+                              class="custom-select custom-select-sm"
+                              data-testid="pagination-size-selector"
+                              id="exampleForm.SelectCustom"
+                            >
+                              <option>
+                                10
+                              </option>
+                              <option>
+                                20
+                              </option>
+                              <option>
+                                50
+                              </option>
+                            </select>
+                          </div>
+                        </form>
+                        <span>
+                           elements
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="text-right col-6"
+                    >
+                      <span>
+                        <input
+                          class="SearchFieldInput"
+                          placeholder="Search"
+                          type="search"
+                          value=""
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="table-responsive"
+                  >
+                    <table
+                      class="CustomTable table table-sm table-striped table-bordered table-hover"
+                    >
+                      <tbody>
+                        <tr>
+                          <th
+                            class="Clickable"
+                            data-testid="TableHeader_interviewer_name_portal"
+                          >
+                            <span
+                              class="sortIcon"
+                            >
+                              <i
+                                class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                              />
+                              <i
+                                class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                              />
+                            </span>
+                            Interviewer
+                          </th>
+                          <th
+                            class="Clickable"
+                          >
+                            <span
+                              class="sortIcon"
+                            >
+                              <i
+                                class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                              />
+                              <i
+                                class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                              />
+                            </span>
+                            Idep
+                          </th>
+                          <th
+                            class="Clickable"
+                          >
+                            <span
+                              class="sortIcon"
+                            >
+                              <i
+                                class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                              />
+                              <i
+                                class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                              />
+                            </span>
+                            SU
+                          </th>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Boulanger
+                             
+                            Emilie
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW9
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            55
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Boulanger
+                             
+                            Jacques
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW6
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            55
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Delmarre
+                             
+                            Alphonse
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW11
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            55
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Dupont
+                             
+                            Chloé
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW5
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            84
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Dupont
+                             
+                            Renée
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW10
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            84
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Fabres
+                             
+                            Thierry
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW7
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            76
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Renard
+                             
+                            Bertrand
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW8
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            84
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            Unassigned
+                          </th>
+                          <th />
+                          <th>
+                            14
+                          </th>
+                        </tr>
+                        <tr>
+                          <th>
+                            Abandoned
+                          </th>
+                          <th />
+                          <th />
+                        </tr>
+                        <tr>
+                          <th>
+                            Total organizational unit
+                          </th>
+                          <th />
+                          <th>
+                            208
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div
+                    class="tableOptionsWrapper"
+                  >
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
+                    <ul
+                      class="paginationNav pagination pagination-sm"
+                      data-testid="pagination-nav"
+                    >
+                      <li
+                        class="page-item active"
+                      >
+                        <span
+                          class="page-link"
+                        >
+                          1
+                          <span
+                            class="sr-only"
+                          >
+                            (current)
+                          </span>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      id="CampaignPortal"
+    >
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink ReturnButtonLink"
+              href="/"
+            >
+              <button
+                class="ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <div
+                class="ViewCard card"
+              >
+                <div
+                  id="TimeLine"
+                >
+                  <div
+                    id="PhaseMilestones"
+                  >
+                    <div>
+                      8/20/2020
+                    </div>
+                    <div
+                      class="DateCenter"
+                    >
+                      5/26/2020
+                    </div>
+                    <div
+                      class="DateCenter"
+                    >
+                      7/7/2020
+                    </div>
+                    <div
+                      class="DateRight"
+                    >
+                      8/20/2020
+                    </div>
+                  </div>
+                  <div
+                    id="PhaseDisplay"
+                  >
+                    <div
+                      class="PastPhase"
+                    >
+                      Initial assignment
+                    </div>
+                    <div
+                      class="PastPhase"
+                    >
+                      Collection in progress
+                    </div>
+                    <div
+                      class=" CurrentPhase"
+                    >
+                      Collection over
+                    </div>
+                  </div>
+                  <div
+                    id="PhaseMilestones"
+                  >
+                    <div>
+                      Integration
+                    </div>
+                    <div
+                      class="LabelCenter"
+                    >
+                      Start of collection
+                    </div>
+                    <div
+                      class="LabelCenter"
+                    >
+                      End of collection
+                    </div>
+                    <div
+                      class="LabelRight"
+                    >
+                      End of processing
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <div
+                class="ViewCard card"
+              >
+                <div>
+                  <div
+                    class="Title card-title h5"
+                  >
+                    Contacts
+                  </div>
+                  <div
+                    class="table-responsive"
+                  >
+                    <table
+                      class="CustomTable table table-sm table-striped table-bordered"
+                    >
+                      <tbody>
+                        <tr
+                          class="Clickable"
+                          data-testid="mail-button"
+                        >
+                          <th>
+                            Functional box
+                          </th>
+                          <td
+                            class=" LightGreyLine"
+                          >
+                            survey@mail.com
+                          </td>
+                        </tr>
+                        <tr>
+                          <th
+                            rowspan="2"
+                          >
+                            CPOS
+                          </th>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Chloé Dupont
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            01 01 01 01 01
+                          </td>
+                        </tr>
+                        <tr>
+                          <th
+                            rowspan="2"
+                          >
+                            Deputy CPOS
+                          </th>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Thierry Fabres
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            02 01 01 01 01
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <div
+                class="ViewCard card"
+              >
+                <div
+                  class="Title"
+                >
+                  Interviewers
+                </div>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-6"
+                  >
+                    <span>
+                      <span>
+                        Display 
+                      </span>
+                      <form
+                        class="PageSizeSelector"
+                      >
+                        <div
+                          class="form-group"
+                        >
+                          <select
+                            class="custom-select custom-select-sm"
+                            data-testid="pagination-size-selector"
+                            id="exampleForm.SelectCustom"
+                          >
                             <option>
                               10
                             </option>
@@ -1826,7 +1982,7 @@ Object {
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="text"
+                        type="search"
                         value=""
                       />
                     </span>
@@ -2156,7 +2312,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -2405,9 +2561,6 @@ Object {
                               id="exampleForm.SelectCustom"
                             >
                               <option>
-                                5
-                              </option>
-                              <option>
                                 10
                               </option>
                               <option>
@@ -2431,7 +2584,7 @@ Object {
                         <input
                           class="SearchFieldInput"
                           placeholder="Search"
-                          type="text"
+                          type="search"
                           value=""
                         />
                       </span>
@@ -2588,6 +2741,44 @@ Object {
                           </td>
                         </tr>
                         <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Fabres
+                             
+                            Thierry
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW7
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            76
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Renard
+                             
+                            Bertrand
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW8
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            84
+                          </td>
+                        </tr>
+                        <tr>
                           <th>
                             Unassigned
                           </th>
@@ -2642,17 +2833,6 @@ Object {
                           </span>
                         </span>
                       </li>
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          2
-                        </a>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -2677,7 +2857,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -2926,9 +3106,6 @@ Object {
                             id="exampleForm.SelectCustom"
                           >
                             <option>
-                              5
-                            </option>
-                            <option>
                               10
                             </option>
                             <option>
@@ -2952,7 +3129,7 @@ Object {
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="text"
+                        type="search"
                         value=""
                       />
                     </span>
@@ -3109,6 +3286,44 @@ Object {
                         </td>
                       </tr>
                       <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Fabres
+                           
+                          Thierry
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW7
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          76
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Renard
+                           
+                          Bertrand
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW8
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          84
+                        </td>
+                      </tr>
+                      <tr>
                         <th>
                           Unassigned
                         </th>
@@ -3162,17 +3377,6 @@ Object {
                           (current)
                         </span>
                       </span>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        2
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -3255,7 +3459,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -3504,9 +3708,6 @@ Object {
                               id="exampleForm.SelectCustom"
                             >
                               <option>
-                                5
-                              </option>
-                              <option>
                                 10
                               </option>
                               <option>
@@ -3530,7 +3731,7 @@ Object {
                         <input
                           class="SearchFieldInput"
                           placeholder="Search"
-                          type="text"
+                          type="search"
                           value=""
                         />
                       </span>
@@ -3687,6 +3888,44 @@ Object {
                           </td>
                         </tr>
                         <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Fabres
+                             
+                            Thierry
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW7
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            76
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Renard
+                             
+                            Bertrand
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW8
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            84
+                          </td>
+                        </tr>
+                        <tr>
                           <th>
                             Unassigned
                           </th>
@@ -3741,17 +3980,6 @@ Object {
                           </span>
                         </span>
                       </li>
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          2
-                        </a>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -3780,7 +4008,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -4029,9 +4257,6 @@ Object {
                             id="exampleForm.SelectCustom"
                           >
                             <option>
-                              5
-                            </option>
-                            <option>
                               10
                             </option>
                             <option>
@@ -4055,7 +4280,7 @@ Object {
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="text"
+                        type="search"
                         value=""
                       />
                     </span>
@@ -4212,6 +4437,44 @@ Object {
                         </td>
                       </tr>
                       <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Fabres
+                           
+                          Thierry
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW7
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          76
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Renard
+                           
+                          Bertrand
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW8
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          84
+                        </td>
+                      </tr>
+                      <tr>
                         <th>
                           Unassigned
                         </th>
@@ -4265,17 +4528,6 @@ Object {
                           (current)
                         </span>
                       </span>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        2
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -4366,7 +4618,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -4615,9 +4867,6 @@ Object {
                               id="exampleForm.SelectCustom"
                             >
                               <option>
-                                5
-                              </option>
-                              <option>
                                 10
                               </option>
                               <option>
@@ -4641,7 +4890,7 @@ Object {
                         <input
                           class="SearchFieldInput"
                           placeholder="Search"
-                          type="text"
+                          type="search"
                           value=""
                         />
                       </span>
@@ -4798,6 +5047,44 @@ Object {
                           </td>
                         </tr>
                         <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Boulanger
+                             
+                            Jacques
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW6
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            55
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Boulanger
+                             
+                            Emilie
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW9
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            55
+                          </td>
+                        </tr>
+                        <tr>
                           <th>
                             Unassigned
                           </th>
@@ -4852,17 +5139,6 @@ Object {
                           </span>
                         </span>
                       </li>
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          2
-                        </a>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -4887,7 +5163,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -5136,9 +5412,6 @@ Object {
                             id="exampleForm.SelectCustom"
                           >
                             <option>
-                              5
-                            </option>
-                            <option>
                               10
                             </option>
                             <option>
@@ -5162,7 +5435,7 @@ Object {
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="text"
+                        type="search"
                         value=""
                       />
                     </span>
@@ -5319,6 +5592,44 @@ Object {
                         </td>
                       </tr>
                       <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Boulanger
+                           
+                          Jacques
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW6
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          55
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Boulanger
+                           
+                          Emilie
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW9
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          55
+                        </td>
+                      </tr>
+                      <tr>
                         <th>
                           Unassigned
                         </th>
@@ -5372,17 +5683,6 @@ Object {
                           (current)
                         </span>
                       </span>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        2
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -5465,7 +5765,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -5714,9 +6014,6 @@ Object {
                               id="exampleForm.SelectCustom"
                             >
                               <option>
-                                5
-                              </option>
-                              <option>
                                 10
                               </option>
                               <option>
@@ -5740,7 +6037,7 @@ Object {
                         <input
                           class="SearchFieldInput"
                           placeholder="Search"
-                          type="text"
+                          type="search"
                           value=""
                         />
                       </span>
@@ -5897,6 +6194,44 @@ Object {
                           </td>
                         </tr>
                         <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Fabres
+                             
+                            Thierry
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW7
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            76
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Renard
+                             
+                            Bertrand
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW8
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            84
+                          </td>
+                        </tr>
+                        <tr>
                           <th>
                             Unassigned
                           </th>
@@ -5951,17 +6286,6 @@ Object {
                           </span>
                         </span>
                       </li>
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          2
-                        </a>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -5986,7 +6310,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -6235,9 +6559,6 @@ Object {
                             id="exampleForm.SelectCustom"
                           >
                             <option>
-                              5
-                            </option>
-                            <option>
                               10
                             </option>
                             <option>
@@ -6261,7 +6582,7 @@ Object {
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="text"
+                        type="search"
                         value=""
                       />
                     </span>
@@ -6418,6 +6739,44 @@ Object {
                         </td>
                       </tr>
                       <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Fabres
+                           
+                          Thierry
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW7
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          76
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Renard
+                           
+                          Bertrand
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW8
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          84
+                        </td>
+                      </tr>
+                      <tr>
                         <th>
                           Unassigned
                         </th>
@@ -6471,17 +6830,6 @@ Object {
                           (current)
                         </span>
                       </span>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        2
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -6564,7 +6912,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -6813,9 +7161,6 @@ Object {
                               id="exampleForm.SelectCustom"
                             >
                               <option>
-                                5
-                              </option>
-                              <option>
                                 10
                               </option>
                               <option>
@@ -6839,7 +7184,7 @@ Object {
                         <input
                           class="SearchFieldInput"
                           placeholder="Search"
-                          type="text"
+                          type="search"
                           value=""
                         />
                       </span>
@@ -6996,6 +7341,44 @@ Object {
                           </td>
                         </tr>
                         <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Fabres
+                             
+                            Thierry
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW7
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            76
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            Renard
+                             
+                            Bertrand
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            INTW8
+                          </td>
+                          <td
+                            class="LightGreyLine"
+                          >
+                            84
+                          </td>
+                        </tr>
+                        <tr>
                           <th>
                             Unassigned
                           </th>
@@ -7050,17 +7433,6 @@ Object {
                           </span>
                         </span>
                       </li>
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          2
-                        </a>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -7085,7 +7457,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -7334,9 +7706,6 @@ Object {
                             id="exampleForm.SelectCustom"
                           >
                             <option>
-                              5
-                            </option>
-                            <option>
                               10
                             </option>
                             <option>
@@ -7360,7 +7729,7 @@ Object {
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="text"
+                        type="search"
                         value=""
                       />
                     </span>
@@ -7517,6 +7886,44 @@ Object {
                         </td>
                       </tr>
                       <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Fabres
+                           
+                          Thierry
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW7
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          76
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          Renard
+                           
+                          Bertrand
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          INTW8
+                        </td>
+                        <td
+                          class="LightGreyLine"
+                        >
+                          84
+                        </td>
+                      </tr>
+                      <tr>
                         <th>
                           Unassigned
                         </th>
@@ -7570,17 +7977,6 @@ Object {
                           (current)
                         </span>
                       </span>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        2
-                      </a>
                     </li>
                   </ul>
                 </div>

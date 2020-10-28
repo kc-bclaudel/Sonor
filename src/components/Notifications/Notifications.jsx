@@ -18,7 +18,7 @@ class Notifications extends React.Component {
     this.state = {
       message: '',
       recipients: '',
-      pagination: { size: 6, page: 1 },
+      pagination: { size: 10, page: 1 },
       options: [],
       isLoading: false,
       messageHistory: [],

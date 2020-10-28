@@ -30,7 +30,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.1.4
+                  0.1.5
                 </div>
               </a>
             </div>
@@ -41,18 +41,6 @@ Object {
                 class="d-inline-flex classTest"
                 id="headerButtonContainer"
               >
-                <a
-                  class="ButtonLink"
-                  href="/followUp"
-                >
-                  <button
-                    class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                    data-testid="follow-up"
-                    type="button"
-                  >
-                    Follow up
-                  </button>
-                </a>
                 <li
                   class="dropdown"
                   id="BtnSuivreParent"
@@ -69,6 +57,18 @@ Object {
                     />
                   </button>
                 </li>
+                <a
+                  class="ButtonLink"
+                  href="/followUp"
+                >
+                  <button
+                    class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                    data-testid="follow-up"
+                    type="button"
+                  >
+                    Follow up
+                  </button>
+                </a>
                 <a
                   class="ButtonLink"
                   href="/review"
@@ -125,7 +125,7 @@ Object {
                       class="col-8"
                     >
                       <button
-                        class="HeaderButton btn btn-primary"
+                        class="HeaderButton btn btn-outline-primary"
                         data-testid="preferences"
                         type="button"
                       >
@@ -141,7 +141,7 @@ Object {
                         tabindex="0"
                       >
                         <i
-                          class="fa fa-question-circle fa-2x"
+                          class="fa fa-question-circle-o fa-2x"
                         />
                       </div>
                     </div>
@@ -187,7 +187,7 @@ Object {
               <div
                 id="appVersion"
               >
-                0.1.4
+                0.1.5
               </div>
             </a>
           </div>
@@ -198,18 +198,6 @@ Object {
               class="d-inline-flex classTest"
               id="headerButtonContainer"
             >
-              <a
-                class="ButtonLink"
-                href="/followUp"
-              >
-                <button
-                  class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                  data-testid="follow-up"
-                  type="button"
-                >
-                  Follow up
-                </button>
-              </a>
               <li
                 class="dropdown"
                 id="BtnSuivreParent"
@@ -226,6 +214,18 @@ Object {
                   />
                 </button>
               </li>
+              <a
+                class="ButtonLink"
+                href="/followUp"
+              >
+                <button
+                  class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                  data-testid="follow-up"
+                  type="button"
+                >
+                  Follow up
+                </button>
+              </a>
               <a
                 class="ButtonLink"
                 href="/review"
@@ -282,7 +282,7 @@ Object {
                     class="col-8"
                   >
                     <button
-                      class="HeaderButton btn btn-primary"
+                      class="HeaderButton btn btn-outline-primary"
                       data-testid="preferences"
                       type="button"
                     >
@@ -298,7 +298,7 @@ Object {
                       tabindex="0"
                     >
                       <i
-                        class="fa fa-question-circle fa-2x"
+                        class="fa fa-question-circle-o fa-2x"
                       />
                     </div>
                   </div>

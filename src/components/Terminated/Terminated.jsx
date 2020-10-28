@@ -16,7 +16,7 @@ function Terminated({
   const { survey } = location;
   const { id } = match.params;
   const [data, setData] = useState([]);
-  const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [sort, setSort] = useState({ sortOn: 'finalizationDate', asc: true });
   const [redirect, setRedirect] = useState(!survey && id ? '/' : null);
 
   const fetchData = useCallback(() => {
@@ -52,7 +52,7 @@ function Terminated({
         <Container fluid>
           <Row>
             <Col>
-              <Link to="/" className="ButtonLink">
+              <Link to="/" className="ButtonLink ReturnButtonLink">
                 <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
               </Link>
             </Col>

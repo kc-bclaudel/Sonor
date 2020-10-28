@@ -8,7 +8,6 @@ import logo from './logo_com_externe_semi_bold.png';
 import UserZone from './UserZone';
 import D from '../../i18n';
 import { version } from '../../../package.json';
-
 import './Header.css';
 
 function Header({
@@ -35,14 +34,6 @@ function Header({
           </Col>
           <Col>
             <div className="d-inline-flex classTest" id="headerButtonContainer">
-              <Link to="/followUp" className="ButtonLink">
-                <Button
-                  data-testid="follow-up"
-                  className={`HeaderButton HeaderFocusableButton ${pathname.includes('/followUp') ? ' ButtonActive' : ''}`}
-                >
-                  {D.remind}
-                </Button>
-              </Link>
               <li className="dropdown" id="BtnSuivreParent">
                 <Button
                   id="FollowButton"
@@ -55,6 +46,14 @@ function Header({
                 </Button>
                 {!showDropdown || displayFirstSubMenu(setShowDropdown)}
               </li>
+              <Link to="/followUp" className="ButtonLink">
+                <Button
+                  data-testid="follow-up"
+                  className={`HeaderButton HeaderFocusableButton ${pathname.includes('/followUp') ? ' ButtonActive' : ''}`}
+                >
+                  {D.remind}
+                </Button>
+              </Link>
               <Link to="/review" className="ButtonLink">
                 <Button
                   data-testid="review"

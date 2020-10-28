@@ -189,19 +189,18 @@ Object {
             class="modal-footer"
           >
             <button
-              class="btn btn-primary"
-              data-testid="validate-pref-modif"
-              disabled=""
-              type="button"
-            >
-              Validate
-            </button>
-            <button
-              class="btn btn-primary"
+              class="btn btn-secondary"
               data-testid="close-preferences-button"
               type="button"
             >
               Close
+            </button>
+            <button
+              class="btn btn-primary"
+              data-testid="validate-pref-modif"
+              type="button"
+            >
+              OK
             </button>
           </div>
         </div>

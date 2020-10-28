@@ -8,6 +8,7 @@ import monitoringTable from './labels/labels_monitoringTable';
 import alert from './labels/labels_alert';
 import terminated from './labels/labels_terminated';
 import notifications from './labels/labels_notifications';
+import labeles_states from './labels/labels_states';
 
 const dictionary = {
   ...app,
@@ -20,6 +21,7 @@ const dictionary = {
   ...alert,
   ...terminated,
   ...notifications,
+  ...labeles_states
 };
 
 export default dictionary;

@@ -18,7 +18,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -79,7 +79,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -113,9 +113,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -139,1252 +136,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
-                  value=""
-                />
-              </span>
-            </div>
-          </div>
-          <div
-            class="table-responsive"
-          >
-            <table
-              class="CustomTable table table-sm table-striped table-bordered table-hover"
-              id="FollowUpTable"
-            >
-              <thead>
-                <tr>
-                  <th
-                    data-testid="TableHeader_label"
-                    rowspan="2"
-                  >
-                    Interviewer
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
-                      />
-                    </span>
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                    rowspan="2"
-                  />
-                  <th
-                    class="YellowHeader"
-                    rowspan="2"
-                  >
-                    Completion rate
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                    rowspan="2"
-                  />
-                  <th
-                    colspan="6"
-                  >
-                    Number of survey units
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                    rowspan="2"
-                  />
-                  <th
-                    class="YellowHeader"
-                    colspan="4"
-                  >
-                    Survey units collections ongoing
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    Allocated
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    Not started
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    In progress by interviewer
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    Waiting for interviewer review
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    To review
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th>
-                    Reviewed ended
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  >
-                    Preparing contact
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  >
-                    At least one contact
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  >
-                    Appointment taken
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  >
-                    Interview started
-                    <span
-                      class="sortIcon"
-                    >
-                      <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                      />
-                      <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                      />
-                    </span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Fabres Thierry
-                  </td>
-                  <td
-                    class="ColumnSpacing"
-                  />
-                  <td>
-                    2.9
-                    %
-                  </td>
-                  <td
-                    class="ColumnSpacing"
-                  />
-                  <td>
-                    104
-                  </td>
-                  <td>
-                    3
-                  </td>
-                  <td>
-                    34
-                  </td>
-                  <td>
-                    0
-                  </td>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    1
-                  </td>
-                  <td
-                    class="ColumnSpacing"
-                  />
-                  <td>
-                    29
-                  </td>
-                  <td />
-                  <td />
-                  <td>
-                    5
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Renard Bertrand
-                  </td>
-                  <td
-                    class="ColumnSpacing"
-                  />
-                  <td>
-                    2.9
-                    %
-                  </td>
-                  <td
-                    class="ColumnSpacing"
-                  />
-                  <td>
-                    104
-                  </td>
-                  <td>
-                    3
-                  </td>
-                  <td>
-                    34
-                  </td>
-                  <td>
-                    0
-                  </td>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    1
-                  </td>
-                  <td
-                    class="ColumnSpacing"
-                  />
-                  <td>
-                    29
-                  </td>
-                  <td />
-                  <td />
-                  <td>
-                    5
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>
-                    Total organizational unit
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                  />
-                  <th
-                    class="YellowHeader"
-                  >
-                    2.9
-                    %
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                  />
-                  <th>
-                    208
-                  </th>
-                  <th>
-                    22
-                  </th>
-                  <th>
-                    111
-                  </th>
-                  <th />
-                  <th>
-                    4
-                  </th>
-                  <th>
-                    2
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                  />
-                  <th
-                    class="YellowHeader"
-                  >
-                    29
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  >
-                    60
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  >
-                    12
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  >
-                    10
-                  </th>
-                </tr>
-                <tr>
-                  <th>
-                    Total France
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                  />
-                  <th
-                    class="YellowHeader"
-                  >
-                    2.9
-                    %
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                  />
-                  <th>
-                    104
-                  </th>
-                  <th />
-                  <th>
-                    34
-                  </th>
-                  <th>
-                    0
-                  </th>
-                  <th>
-                    2
-                  </th>
-                  <th>
-                    1
-                  </th>
-                  <th
-                    class="ColumnSpacing"
-                  />
-                  <th
-                    class="YellowHeader"
-                  >
-                    29
-                  </th>
-                  <th
-                    class="YellowHeader"
-                  />
-                  <th
-                    class="YellowHeader"
-                  />
-                  <th
-                    class="YellowHeader"
-                  >
-                    5
-                  </th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-          <div
-            class="tableOptionsWrapper"
-          >
-            <button
-              class="btn btn-primary"
-              data-testid="export-button"
-              type="button"
-            >
-              Export
-            </button>
-            <ul
-              class="paginationNav pagination pagination-sm"
-              data-testid="pagination-nav"
-            >
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  1
-                </a>
-              </li>
-              <li
-                class="page-item active"
-              >
-                <span
-                  class="page-link"
-                >
-                  2
-                  <span
-                    class="sr-only"
-                  >
-                    (current)
-                  </span>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      id="MonitoringTable"
-    >
-      <div
-        class="container-fluid"
-      >
-        <div
-          class="row"
-        >
-          <div
-            class="col"
-          >
-            <a
-              class="ButtonLink"
-              href="/"
-            >
-              <button
-                class="ReturnButton btn btn-primary"
-                data-testid="return-button"
-                type="button"
-              >
-                Back
-              </button>
-            </a>
-          </div>
-          <div
-            class="col-6"
-          >
-            <div
-              class="SurveyTitle"
-            >
-              Everyday life and health survey 2021
-            </div>
-          </div>
-          <div
-            class="col"
-          >
-            <form
-              class=""
-            >
-              <div
-                class="form-group"
-              >
-                <select
-                  class="custom-select custom-select-sm"
-                  data-testid="Survey_selector"
-                  placeholder="Choose a survey"
-                >
-                  <option
-                    disabled=""
-                    value="-1"
-                  >
-                    Choose a survey
-                  </option>
-                  <option
-                    value="simpsons2020x00"
-                  >
-                    Survey on the Simpsons tv show 2020
-                  </option>
-                </select>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div
-        class="ViewCard card"
-      >
-        <div
-          class="card-title h5"
-        >
-          <div
-            class="DateDisplay"
-          >
-            Progression in regard of the state of survey units at the date: 
-          </div>
-          <input
-            class="DateDisplay"
-            data-testid="date-picker"
-            id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
-            type="date"
-            value="2020-08-20"
-          />
-        </div>
-        <div
-          class="row"
-        >
-          <div
-            class="col-6"
-          >
-            <span>
-              <span>
-                Display 
-              </span>
-              <form
-                class="PageSizeSelector"
-              >
-                <div
-                  class="form-group"
-                >
-                  <select
-                    class="custom-select custom-select-sm"
-                    data-testid="pagination-size-selector"
-                    id="exampleForm.SelectCustom"
-                  >
-                    <option>
-                      5
-                    </option>
-                    <option>
-                      10
-                    </option>
-                    <option>
-                      20
-                    </option>
-                    <option>
-                      50
-                    </option>
-                  </select>
-                </div>
-              </form>
-              <span>
-                 elements
-              </span>
-            </span>
-          </div>
-          <div
-            class="text-right col-6"
-          >
-            <span>
-              <input
-                class="SearchFieldInput"
-                placeholder="Search"
-                type="text"
-                value=""
-              />
-            </span>
-          </div>
-        </div>
-        <div
-          class="table-responsive"
-        >
-          <table
-            class="CustomTable table table-sm table-striped table-bordered table-hover"
-            id="FollowUpTable"
-          >
-            <thead>
-              <tr>
-                <th
-                  data-testid="TableHeader_label"
-                  rowspan="2"
-                >
-                  Interviewer
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconActive"
-                    />
-                  </span>
-                </th>
-                <th
-                  class="ColumnSpacing"
-                  rowspan="2"
-                />
-                <th
-                  class="YellowHeader"
-                  rowspan="2"
-                >
-                  Completion rate
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th
-                  class="ColumnSpacing"
-                  rowspan="2"
-                />
-                <th
-                  colspan="6"
-                >
-                  Number of survey units
-                </th>
-                <th
-                  class="ColumnSpacing"
-                  rowspan="2"
-                />
-                <th
-                  class="YellowHeader"
-                  colspan="4"
-                >
-                  Survey units collections ongoing
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  Allocated
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th>
-                  Not started
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th>
-                  In progress by interviewer
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th>
-                  Waiting for interviewer review
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th>
-                  To review
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th>
-                  Reviewed ended
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th
-                  class="YellowHeader"
-                >
-                  Preparing contact
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th
-                  class="YellowHeader"
-                >
-                  At least one contact
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th
-                  class="YellowHeader"
-                >
-                  Appointment taken
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-                <th
-                  class="YellowHeader"
-                >
-                  Interview started
-                  <span
-                    class="sortIcon"
-                  >
-                    <i
-                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
-                    />
-                    <i
-                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
-                    />
-                  </span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  Fabres Thierry
-                </td>
-                <td
-                  class="ColumnSpacing"
-                />
-                <td>
-                  2.9
-                  %
-                </td>
-                <td
-                  class="ColumnSpacing"
-                />
-                <td>
-                  104
-                </td>
-                <td>
-                  3
-                </td>
-                <td>
-                  34
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  1
-                </td>
-                <td
-                  class="ColumnSpacing"
-                />
-                <td>
-                  29
-                </td>
-                <td />
-                <td />
-                <td>
-                  5
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Renard Bertrand
-                </td>
-                <td
-                  class="ColumnSpacing"
-                />
-                <td>
-                  2.9
-                  %
-                </td>
-                <td
-                  class="ColumnSpacing"
-                />
-                <td>
-                  104
-                </td>
-                <td>
-                  3
-                </td>
-                <td>
-                  34
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  1
-                </td>
-                <td
-                  class="ColumnSpacing"
-                />
-                <td>
-                  29
-                </td>
-                <td />
-                <td />
-                <td>
-                  5
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th>
-                  Total organizational unit
-                </th>
-                <th
-                  class="ColumnSpacing"
-                />
-                <th
-                  class="YellowHeader"
-                >
-                  2.9
-                  %
-                </th>
-                <th
-                  class="ColumnSpacing"
-                />
-                <th>
-                  208
-                </th>
-                <th>
-                  22
-                </th>
-                <th>
-                  111
-                </th>
-                <th />
-                <th>
-                  4
-                </th>
-                <th>
-                  2
-                </th>
-                <th
-                  class="ColumnSpacing"
-                />
-                <th
-                  class="YellowHeader"
-                >
-                  29
-                </th>
-                <th
-                  class="YellowHeader"
-                >
-                  60
-                </th>
-                <th
-                  class="YellowHeader"
-                >
-                  12
-                </th>
-                <th
-                  class="YellowHeader"
-                >
-                  10
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  Total France
-                </th>
-                <th
-                  class="ColumnSpacing"
-                />
-                <th
-                  class="YellowHeader"
-                >
-                  2.9
-                  %
-                </th>
-                <th
-                  class="ColumnSpacing"
-                />
-                <th>
-                  104
-                </th>
-                <th />
-                <th>
-                  34
-                </th>
-                <th>
-                  0
-                </th>
-                <th>
-                  2
-                </th>
-                <th>
-                  1
-                </th>
-                <th
-                  class="ColumnSpacing"
-                />
-                <th
-                  class="YellowHeader"
-                >
-                  29
-                </th>
-                <th
-                  class="YellowHeader"
-                />
-                <th
-                  class="YellowHeader"
-                />
-                <th
-                  class="YellowHeader"
-                >
-                  5
-                </th>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        <div
-          class="tableOptionsWrapper"
-        >
-          <button
-            class="btn btn-primary"
-            data-testid="export-button"
-            type="button"
-          >
-            Export
-          </button>
-          <ul
-            class="paginationNav pagination pagination-sm"
-            data-testid="pagination-nav"
-          >
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                1
-              </a>
-            </li>
-            <li
-              class="page-item active"
-            >
-              <span
-                class="page-link"
-              >
-                2
-                <span
-                  class="sr-only"
-                >
-                  (current)
-                </span>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`Change pagination size 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        id="MonitoringTable"
-      >
-        <div
-          class="container-fluid"
-        >
-          <div
-            class="row"
-          >
-            <div
-              class="col"
-            >
-              <a
-                class="ButtonLink"
-                href="/"
-              >
-                <button
-                  class="ReturnButton btn btn-primary"
-                  data-testid="return-button"
-                  type="button"
-                >
-                  Back
-                </button>
-              </a>
-            </div>
-            <div
-              class="col-6"
-            >
-              <div
-                class="SurveyTitle"
-              >
-                Everyday life and health survey 2021
-              </div>
-            </div>
-            <div
-              class="col"
-            >
-              <form
-                class=""
-              >
-                <div
-                  class="form-group"
-                >
-                  <select
-                    class="custom-select custom-select-sm"
-                    data-testid="Survey_selector"
-                    placeholder="Choose a survey"
-                  >
-                    <option
-                      disabled=""
-                      value="-1"
-                    >
-                      Choose a survey
-                    </option>
-                    <option
-                      value="simpsons2020x00"
-                    >
-                      Survey on the Simpsons tv show 2020
-                    </option>
-                  </select>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div
-          class="ViewCard card"
-        >
-          <div
-            class="card-title h5"
-          >
-            <div
-              class="DateDisplay"
-            >
-              Progression in regard of the state of survey units at the date: 
-            </div>
-            <input
-              class="DateDisplay"
-              data-testid="date-picker"
-              id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
-              type="date"
-              value="2020-08-20"
-            />
-          </div>
-          <div
-            class="row"
-          >
-            <div
-              class="col-6"
-            >
-              <span>
-                <span>
-                  Display 
-                </span>
-                <form
-                  class="PageSizeSelector"
-                >
-                  <div
-                    class="form-group"
-                  >
-                    <select
-                      class="custom-select custom-select-sm"
-                      data-testid="pagination-size-selector"
-                      id="exampleForm.SelectCustom"
-                    >
-                      <option>
-                        5
-                      </option>
-                      <option>
-                        10
-                      </option>
-                      <option>
-                        20
-                      </option>
-                      <option>
-                        50
-                      </option>
-                    </select>
-                  </div>
-                </form>
-                <span>
-                   elements
-                </span>
-              </span>
-            </div>
-            <div
-              class="text-right col-6"
-            >
-              <span>
-                <input
-                  class="SearchFieldInput"
-                  placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -2066,7 +818,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -2127,7 +879,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -2161,8 +913,1662 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
+                      10
                     </option>
+                    <option>
+                      20
+                    </option>
+                    <option>
+                      50
+                    </option>
+                  </select>
+                </div>
+              </form>
+              <span>
+                 elements
+              </span>
+            </span>
+          </div>
+          <div
+            class="text-right col-6"
+          >
+            <span>
+              <input
+                class="SearchFieldInput"
+                placeholder="Search"
+                type="search"
+                value=""
+              />
+            </span>
+          </div>
+        </div>
+        <div
+          class="table-responsive"
+        >
+          <table
+            class="CustomTable table table-sm table-striped table-bordered table-hover"
+            id="FollowUpTable"
+          >
+            <thead>
+              <tr>
+                <th
+                  data-testid="TableHeader_label"
+                  rowspan="2"
+                >
+                  Interviewer
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                    />
+                  </span>
+                </th>
+                <th
+                  class="ColumnSpacing"
+                  rowspan="2"
+                />
+                <th
+                  class="YellowHeader"
+                  rowspan="2"
+                >
+                  Completion rate
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th
+                  class="ColumnSpacing"
+                  rowspan="2"
+                />
+                <th
+                  colspan="6"
+                >
+                  Number of survey units
+                </th>
+                <th
+                  class="ColumnSpacing"
+                  rowspan="2"
+                />
+                <th
+                  class="YellowHeader"
+                  colspan="4"
+                >
+                  Survey units collections ongoing
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  Allocated
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th>
+                  Not started
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th>
+                  In progress by interviewer
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th>
+                  Waiting for interviewer review
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th>
+                  To review
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th>
+                  Reviewed ended
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th
+                  class="YellowHeader"
+                >
+                  Preparing contact
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th
+                  class="YellowHeader"
+                >
+                  At least one contact
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th
+                  class="YellowHeader"
+                >
+                  Appointment taken
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+                <th
+                  class="YellowHeader"
+                >
+                  Interview started
+                  <span
+                    class="sortIcon"
+                  >
+                    <i
+                      class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                    />
+                    <i
+                      class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                    />
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Boulanger Emilie
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Boulanger Jacques
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Delmarre Alphonse
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Dupont Chloé
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  16.7
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  96
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  7
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  4
+                </td>
+                <td />
+                <td />
+                <td>
+                  3
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Dupont Renée
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Fabres Thierry
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Renard Bertrand
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>
+                  Total organizational unit
+                </th>
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="YellowHeader"
+                >
+                  2.9
+                  %
+                </th>
+                <th
+                  class="ColumnSpacing"
+                />
+                <th>
+                  208
+                </th>
+                <th>
+                  22
+                </th>
+                <th>
+                  111
+                </th>
+                <th />
+                <th>
+                  4
+                </th>
+                <th>
+                  2
+                </th>
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="YellowHeader"
+                >
+                  29
+                </th>
+                <th
+                  class="YellowHeader"
+                >
+                  60
+                </th>
+                <th
+                  class="YellowHeader"
+                >
+                  12
+                </th>
+                <th
+                  class="YellowHeader"
+                >
+                  10
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  Total France
+                </th>
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="YellowHeader"
+                >
+                  2.9
+                  %
+                </th>
+                <th
+                  class="ColumnSpacing"
+                />
+                <th>
+                  104
+                </th>
+                <th />
+                <th>
+                  34
+                </th>
+                <th>
+                  0
+                </th>
+                <th>
+                  2
+                </th>
+                <th>
+                  1
+                </th>
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="YellowHeader"
+                >
+                  29
+                </th>
+                <th
+                  class="YellowHeader"
+                />
+                <th
+                  class="YellowHeader"
+                />
+                <th
+                  class="YellowHeader"
+                >
+                  5
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div
+          class="tableOptionsWrapper"
+        >
+          <button
+            class="btn btn-primary"
+            data-testid="export-button"
+            type="button"
+          >
+            Export
+          </button>
+          <ul
+            class="paginationNav pagination pagination-sm"
+            data-testid="pagination-nav"
+          >
+            <li
+              class="page-item active"
+            >
+              <span
+                class="page-link"
+              >
+                1
+                <span
+                  class="sr-only"
+                >
+                  (current)
+                </span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Change pagination size 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        id="MonitoringTable"
+      >
+        <div
+          class="container-fluid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col"
+            >
+              <a
+                class="ButtonLink ReturnButtonLink"
+                href="/"
+              >
+                <button
+                  class="ReturnButton btn btn-primary"
+                  data-testid="return-button"
+                  type="button"
+                >
+                  Back
+                </button>
+              </a>
+            </div>
+            <div
+              class="col-6"
+            >
+              <div
+                class="SurveyTitle"
+              >
+                Everyday life and health survey 2021
+              </div>
+            </div>
+            <div
+              class="col"
+            >
+              <form
+                class=""
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="Survey_selector"
+                    placeholder="Choose a survey"
+                  >
+                    <option
+                      disabled=""
+                      value="-1"
+                    >
+                      Choose a survey
+                    </option>
+                    <option
+                      value="simpsons2020x00"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ViewCard card"
+        >
+          <div
+            class="card-title h5"
+          >
+            <div
+              class="DateDisplay"
+            >
+              Progression in regard of the state of survey units at the date : 
+            </div>
+            <input
+              class="DateDisplay"
+              data-testid="date-picker"
+              id="datePicker"
+              max="2020-08-20"
+              min="2020-01-01"
+              type="date"
+              value="2020-08-20"
+            />
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-6"
+            >
+              <span>
+                <span>
+                  Display 
+                </span>
+                <form
+                  class="PageSizeSelector"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <select
+                      class="custom-select custom-select-sm"
+                      data-testid="pagination-size-selector"
+                      id="exampleForm.SelectCustom"
+                    >
+                      <option>
+                        10
+                      </option>
+                      <option>
+                        20
+                      </option>
+                      <option>
+                        50
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <span>
+                   elements
+                </span>
+              </span>
+            </div>
+            <div
+              class="text-right col-6"
+            >
+              <span>
+                <input
+                  class="SearchFieldInput"
+                  placeholder="Search"
+                  type="search"
+                  value=""
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            class="table-responsive"
+          >
+            <table
+              class="CustomTable table table-sm table-striped table-bordered table-hover"
+              id="FollowUpTable"
+            >
+              <thead>
+                <tr>
+                  <th
+                    data-testid="TableHeader_label"
+                    rowspan="2"
+                  >
+                    Interviewer
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                    rowspan="2"
+                  />
+                  <th
+                    class="YellowHeader"
+                    rowspan="2"
+                  >
+                    Completion rate
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                    rowspan="2"
+                  />
+                  <th
+                    colspan="6"
+                  >
+                    Number of survey units
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                    rowspan="2"
+                  />
+                  <th
+                    class="YellowHeader"
+                    colspan="4"
+                  >
+                    Survey units collections ongoing
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    Allocated
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    Not started
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    In progress by interviewer
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    Waiting for interviewer review
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    To review
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th>
+                    Reviewed ended
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  >
+                    Preparing contact
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  >
+                    At least one contact
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  >
+                    Appointment taken
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  >
+                    Interview started
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Boulanger Emilie
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Boulanger Jacques
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Delmarre Alphonse
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Dupont Chloé
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    16.7
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    96
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    7
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    10
+                  </td>
+                  <td>
+                    7
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    4
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    3
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Dupont Renée
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Fabres Thierry
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Renard Bertrand
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>
+                    Total organizational unit
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="YellowHeader"
+                  >
+                    2.9
+                    %
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th>
+                    208
+                  </th>
+                  <th>
+                    22
+                  </th>
+                  <th>
+                    111
+                  </th>
+                  <th />
+                  <th>
+                    4
+                  </th>
+                  <th>
+                    2
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="YellowHeader"
+                  >
+                    29
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  >
+                    60
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  >
+                    12
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  >
+                    10
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    Total France
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="YellowHeader"
+                  >
+                    2.9
+                    %
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th>
+                    104
+                  </th>
+                  <th />
+                  <th>
+                    34
+                  </th>
+                  <th>
+                    0
+                  </th>
+                  <th>
+                    2
+                  </th>
+                  <th>
+                    1
+                  </th>
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="YellowHeader"
+                  >
+                    29
+                  </th>
+                  <th
+                    class="YellowHeader"
+                  />
+                  <th
+                    class="YellowHeader"
+                  />
+                  <th
+                    class="YellowHeader"
+                  >
+                    5
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div
+            class="tableOptionsWrapper"
+          >
+            <button
+              class="btn btn-primary"
+              data-testid="export-button"
+              type="button"
+            >
+              Export
+            </button>
+            <ul
+              class="paginationNav pagination pagination-sm"
+              data-testid="pagination-nav"
+            >
+              <li
+                class="page-item active"
+              >
+                <span
+                  class="page-link"
+                >
+                  1
+                  <span
+                    class="sr-only"
+                  >
+                    (current)
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      id="MonitoringTable"
+    >
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col"
+          >
+            <a
+              class="ButtonLink ReturnButtonLink"
+              href="/"
+            >
+              <button
+                class="ReturnButton btn btn-primary"
+                data-testid="return-button"
+                type="button"
+              >
+                Back
+              </button>
+            </a>
+          </div>
+          <div
+            class="col-6"
+          >
+            <div
+              class="SurveyTitle"
+            >
+              Everyday life and health survey 2021
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <select
+                  class="custom-select custom-select-sm"
+                  data-testid="Survey_selector"
+                  placeholder="Choose a survey"
+                >
+                  <option
+                    disabled=""
+                    value="-1"
+                  >
+                    Choose a survey
+                  </option>
+                  <option
+                    value="simpsons2020x00"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ViewCard card"
+      >
+        <div
+          class="card-title h5"
+        >
+          <div
+            class="DateDisplay"
+          >
+            Progression in regard of the state of survey units at the date : 
+          </div>
+          <input
+            class="DateDisplay"
+            data-testid="date-picker"
+            id="datePicker"
+            max="2020-08-20"
+            min="2020-01-01"
+            type="date"
+            value="2020-08-20"
+          />
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="col-6"
+          >
+            <span>
+              <span>
+                Display 
+              </span>
+              <form
+                class="PageSizeSelector"
+              >
+                <div
+                  class="form-group"
+                >
+                  <select
+                    class="custom-select custom-select-sm"
+                    data-testid="pagination-size-selector"
+                    id="exampleForm.SelectCustom"
+                  >
                     <option>
                       10
                     </option>
@@ -2187,7 +2593,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -2926,7 +3332,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -2987,7 +3393,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -3021,9 +3427,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -3047,7 +3450,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -3480,6 +3883,94 @@ Object {
                     5
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Fabres Thierry
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Renard Bertrand
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
               </tbody>
               <tfoot>
                 <tr>
@@ -3621,17 +4112,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -3652,7 +4132,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -3713,7 +4193,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -3747,9 +4227,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -3773,7 +4250,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -4206,6 +4683,94 @@ Object {
                   5
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Fabres Thierry
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Renard Bertrand
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
@@ -4347,17 +4912,6 @@ Object {
                 </span>
               </span>
             </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -4435,7 +4989,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -4464,7 +5018,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -4498,9 +5052,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -4524,7 +5075,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -4977,6 +5528,102 @@ Object {
                     40
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Fabres Thierry
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    832
+                  </td>
+                  <td>
+                    24
+                  </td>
+                  <td>
+                    272
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    16
+                  </td>
+                  <td>
+                    8
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    232
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    40
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Renard Bertrand
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    832
+                  </td>
+                  <td>
+                    24
+                  </td>
+                  <td>
+                    272
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    16
+                  </td>
+                  <td>
+                    8
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    232
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    40
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -5008,17 +5655,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -5043,7 +5679,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -5072,7 +5708,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -5106,9 +5742,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -5132,7 +5765,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -5585,6 +6218,102 @@ Object {
                   40
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Fabres Thierry
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  832
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  272
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  8
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  232
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Renard Bertrand
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  832
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  272
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  8
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  232
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -5615,17 +6344,6 @@ Object {
                   (current)
                 </span>
               </span>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
             </li>
           </ul>
         </div>
@@ -5704,7 +6422,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -5765,7 +6483,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -5799,9 +6517,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -5825,7 +6540,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -6258,6 +6973,94 @@ Object {
                     5
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Fabres Thierry
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Renard Bertrand
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
               </tbody>
               <tfoot>
                 <tr>
@@ -6399,17 +7202,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -6434,7 +7226,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -6495,7 +7287,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -6529,9 +7321,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -6555,7 +7344,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -6988,6 +7777,94 @@ Object {
                   5
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Fabres Thierry
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Renard Bertrand
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
@@ -7129,17 +8006,6 @@ Object {
                 </span>
               </span>
             </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -7217,7 +8083,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -7278,7 +8144,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -7312,9 +8178,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -7338,7 +8201,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -7794,7 +8657,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -7855,7 +8718,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -7889,9 +8752,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -7915,7 +8775,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -8424,7 +9284,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -8453,7 +9313,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -8487,9 +9347,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -8513,7 +9370,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -8946,6 +9803,138 @@ Object {
                     33
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Survey on something else 2020
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    4.7
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    720
+                  </td>
+                  <td>
+                    21
+                  </td>
+                  <td>
+                    211
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    13
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    178
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    33
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Survey on the Simpsons tv show 2020
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    4.7
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    720
+                  </td>
+                  <td>
+                    21
+                  </td>
+                  <td>
+                    211
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    13
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    178
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    33
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Survey on the Simpsons tv show 2021
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    4.7
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    720
+                  </td>
+                  <td>
+                    21
+                  </td>
+                  <td>
+                    211
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    13
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    178
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    33
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -8977,17 +9966,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -9012,7 +9990,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -9041,7 +10019,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -9075,9 +10053,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -9101,7 +10076,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -9534,6 +10509,138 @@ Object {
                   33
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Survey on something else 2020
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  4.7
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  720
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  211
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  13
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  178
+                </td>
+                <td />
+                <td />
+                <td>
+                  33
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Survey on the Simpsons tv show 2020
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  4.7
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  720
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  211
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  13
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  178
+                </td>
+                <td />
+                <td />
+                <td>
+                  33
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Survey on the Simpsons tv show 2021
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  4.7
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  720
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  211
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  13
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  178
+                </td>
+                <td />
+                <td />
+                <td>
+                  33
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -9564,17 +10671,6 @@ Object {
                   (current)
                 </span>
               </span>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
             </li>
           </ul>
         </div>
@@ -9653,7 +10749,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -9682,7 +10778,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -9715,9 +10811,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -9741,7 +10834,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -10194,6 +11287,102 @@ Object {
                     40
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Fabres Thierry
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    832
+                  </td>
+                  <td>
+                    24
+                  </td>
+                  <td>
+                    272
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    16
+                  </td>
+                  <td>
+                    8
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    232
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    40
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Renard Bertrand
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    832
+                  </td>
+                  <td>
+                    24
+                  </td>
+                  <td>
+                    272
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    16
+                  </td>
+                  <td>
+                    8
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    232
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    40
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -10225,17 +11414,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -10256,7 +11434,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -10285,7 +11463,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -10318,9 +11496,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -10344,7 +11519,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -10797,6 +11972,102 @@ Object {
                   40
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Fabres Thierry
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  832
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  272
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  8
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  232
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Renard Bertrand
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  832
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  272
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  8
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  232
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -10827,17 +12098,6 @@ Object {
                   (current)
                 </span>
               </span>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
             </li>
           </ul>
         </div>
@@ -10916,7 +12176,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -10945,7 +12205,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -10978,9 +12238,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -11004,7 +12261,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -11457,6 +12714,102 @@ Object {
                     40
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Fabres Thierry
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    832
+                  </td>
+                  <td>
+                    24
+                  </td>
+                  <td>
+                    272
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    16
+                  </td>
+                  <td>
+                    8
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    232
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    40
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Renard Bertrand
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    832
+                  </td>
+                  <td>
+                    24
+                  </td>
+                  <td>
+                    272
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    16
+                  </td>
+                  <td>
+                    8
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    232
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    40
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -11488,17 +12841,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -11519,7 +12861,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -11548,7 +12890,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -11581,9 +12923,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -11607,7 +12946,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -12060,6 +13399,102 @@ Object {
                   40
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Fabres Thierry
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  832
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  272
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  8
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  232
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Renard Bertrand
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  832
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  272
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  8
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  232
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -12090,17 +13525,6 @@ Object {
                   (current)
                 </span>
               </span>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
             </li>
           </ul>
         </div>
@@ -12179,7 +13603,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -12208,7 +13632,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -12241,9 +13665,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -12267,7 +13688,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -12700,6 +14121,138 @@ Object {
                     33
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Survey on something else 2020
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    4.7
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    720
+                  </td>
+                  <td>
+                    21
+                  </td>
+                  <td>
+                    211
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    13
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    178
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    33
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Survey on the Simpsons tv show 2020
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    4.7
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    720
+                  </td>
+                  <td>
+                    21
+                  </td>
+                  <td>
+                    211
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    13
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    178
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    33
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Survey on the Simpsons tv show 2021
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    4.7
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    720
+                  </td>
+                  <td>
+                    21
+                  </td>
+                  <td>
+                    211
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    22
+                  </td>
+                  <td>
+                    13
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    178
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    33
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -12731,17 +14284,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -12762,7 +14304,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -12791,7 +14333,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -12824,9 +14366,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -12850,7 +14389,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -13283,6 +14822,138 @@ Object {
                   33
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Survey on something else 2020
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  4.7
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  720
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  211
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  13
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  178
+                </td>
+                <td />
+                <td />
+                <td>
+                  33
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Survey on the Simpsons tv show 2020
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  4.7
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  720
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  211
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  13
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  178
+                </td>
+                <td />
+                <td />
+                <td>
+                  33
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Survey on the Simpsons tv show 2021
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  4.7
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  720
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  211
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  13
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  178
+                </td>
+                <td />
+                <td />
+                <td>
+                  33
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -13313,17 +14984,6 @@ Object {
                   (current)
                 </span>
               </span>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
             </li>
           </ul>
         </div>
@@ -13402,7 +15062,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -13463,7 +15123,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -13497,9 +15157,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -13523,7 +15180,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -13956,6 +15613,94 @@ Object {
                     5
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Fabres Thierry
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Renard Bertrand
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
               </tbody>
               <tfoot>
                 <tr>
@@ -14097,17 +15842,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -14128,7 +15862,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -14189,7 +15923,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -14223,9 +15957,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -14249,7 +15980,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -14682,6 +16413,94 @@ Object {
                   5
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Fabres Thierry
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Renard Bertrand
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
@@ -14823,17 +16642,6 @@ Object {
                 </span>
               </span>
             </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -14927,7 +16735,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -14988,7 +16796,7 @@ Object {
             <div
               class="DateDisplay"
             >
-              Progression in regard of the state of survey units at the date: 
+              Progression in regard of the state of survey units at the date : 
             </div>
             <input
               class="DateDisplay"
@@ -15022,9 +16830,6 @@ Object {
                       id="exampleForm.SelectCustom"
                     >
                       <option>
-                        5
-                      </option>
-                      <option>
                         10
                       </option>
                       <option>
@@ -15048,7 +16853,7 @@ Object {
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="text"
+                  type="search"
                   value=""
                 />
               </span>
@@ -15481,6 +17286,94 @@ Object {
                     5
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    Boulanger Jacques
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Boulanger Emilie
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    2.9
+                    %
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    104
+                  </td>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    34
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td
+                    class="ColumnSpacing"
+                  />
+                  <td>
+                    29
+                  </td>
+                  <td />
+                  <td />
+                  <td>
+                    5
+                  </td>
+                </tr>
               </tbody>
               <tfoot>
                 <tr>
@@ -15622,17 +17515,6 @@ Object {
                   </span>
                 </span>
               </li>
-              <li
-                class="page-item"
-              >
-                <a
-                  class="page-link"
-                  href="#"
-                  role="button"
-                >
-                  2
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -15653,7 +17535,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button
@@ -15714,7 +17596,7 @@ Object {
           <div
             class="DateDisplay"
           >
-            Progression in regard of the state of survey units at the date: 
+            Progression in regard of the state of survey units at the date : 
           </div>
           <input
             class="DateDisplay"
@@ -15748,9 +17630,6 @@ Object {
                     id="exampleForm.SelectCustom"
                   >
                     <option>
-                      5
-                    </option>
-                    <option>
                       10
                     </option>
                     <option>
@@ -15774,7 +17653,7 @@ Object {
               <input
                 class="SearchFieldInput"
                 placeholder="Search"
-                type="text"
+                type="search"
                 value=""
               />
             </span>
@@ -16207,6 +18086,94 @@ Object {
                   5
                 </td>
               </tr>
+              <tr>
+                <td>
+                  Boulanger Jacques
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Boulanger Emilie
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  2.9
+                  %
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  104
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td
+                  class="ColumnSpacing"
+                />
+                <td>
+                  29
+                </td>
+                <td />
+                <td />
+                <td>
+                  5
+                </td>
+              </tr>
             </tbody>
             <tfoot>
               <tr>
@@ -16347,17 +18314,6 @@ Object {
                   (current)
                 </span>
               </span>
-            </li>
-            <li
-              class="page-item"
-            >
-              <a
-                class="page-link"
-                href="#"
-                role="button"
-              >
-                2
-              </a>
             </li>
           </ul>
         </div>

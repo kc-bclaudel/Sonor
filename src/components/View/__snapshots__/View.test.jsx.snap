@@ -32,7 +32,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -43,18 +43,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -71,6 +59,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -127,7 +127,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -143,7 +143,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -180,9 +180,6 @@ Object {
                       data-testid="pagination-size-selector"
                       id="exampleForm.SelectCustom"
                     >
-                      <option>
-                        5
-                      </option>
                       <option>
                         10
                       </option>
@@ -817,6 +814,90 @@ Object {
                         </a>
                       </td>
                     </tr>
+                    <tr
+                      class="WithTableLink"
+                    >
+                      <td>
+                        <a
+                          href="/follow/sites/simpsons2020x00"
+                        >
+                          Survey on the Simpsons tv show 2020
+                        </a>
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/1/2020
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/1/2022
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        >
+                          1/7/2022
+                        </a>
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/portal/simpsons2020x00"
+                        />
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        <a
+                          href="/listSU/simpsons2020x00"
+                        >
+                          4
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/follow/campaign/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        <a
+                          href="/followUp/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/review/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                      <td>
+                        <a
+                          href="/terminated/simpsons2020x00"
+                        >
+                          0
+                        </a>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -840,17 +921,6 @@ Object {
                         (current)
                       </span>
                     </span>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      2
-                    </a>
                   </li>
                 </ul>
               </div>
@@ -888,7 +958,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.4
+                    0.1.5
                   </div>
                 </a>
               </div>
@@ -899,18 +969,6 @@ Object {
                   class="d-inline-flex classTest"
                   id="headerButtonContainer"
                 >
-                  <a
-                    class="ButtonLink"
-                    href="/followUp"
-                  >
-                    <button
-                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                      data-testid="follow-up"
-                      type="button"
-                    >
-                      Follow up
-                    </button>
-                  </a>
                   <li
                     class="dropdown"
                     id="BtnSuivreParent"
@@ -927,6 +985,18 @@ Object {
                       />
                     </button>
                   </li>
+                  <a
+                    class="ButtonLink"
+                    href="/followUp"
+                  >
+                    <button
+                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                      data-testid="follow-up"
+                      type="button"
+                    >
+                      Follow up
+                    </button>
+                  </a>
                   <a
                     class="ButtonLink"
                     href="/review"
@@ -983,7 +1053,7 @@ Object {
                         class="col-8"
                       >
                         <button
-                          class="HeaderButton btn btn-primary"
+                          class="HeaderButton btn btn-outline-primary"
                           data-testid="preferences"
                           type="button"
                         >
@@ -999,7 +1069,7 @@ Object {
                           tabindex="0"
                         >
                           <i
-                            class="fa fa-question-circle fa-2x"
+                            class="fa fa-question-circle-o fa-2x"
                           />
                         </div>
                       </div>
@@ -1036,9 +1106,6 @@ Object {
                     data-testid="pagination-size-selector"
                     id="exampleForm.SelectCustom"
                   >
-                    <option>
-                      5
-                    </option>
                     <option>
                       10
                     </option>
@@ -1673,6 +1740,90 @@ Object {
                       </a>
                     </td>
                   </tr>
+                  <tr
+                    class="WithTableLink"
+                  >
+                    <td>
+                      <a
+                        href="/follow/sites/simpsons2020x00"
+                      >
+                        Survey on the Simpsons tv show 2020
+                      </a>
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      <a
+                        href="/portal/simpsons2020x00"
+                      >
+                        1/1/2020
+                      </a>
+                    </td>
+                    <td>
+                      <a
+                        href="/portal/simpsons2020x00"
+                      >
+                        1/1/2022
+                      </a>
+                    </td>
+                    <td>
+                      <a
+                        href="/portal/simpsons2020x00"
+                      >
+                        1/7/2022
+                      </a>
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      <a
+                        href="/portal/simpsons2020x00"
+                      />
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      <a
+                        href="/listSU/simpsons2020x00"
+                      >
+                        4
+                      </a>
+                    </td>
+                    <td>
+                      <a
+                        href="/follow/campaign/simpsons2020x00"
+                      >
+                        0
+                      </a>
+                    </td>
+                    <td>
+                      0
+                    </td>
+                    <td>
+                      <a
+                        href="/followUp/simpsons2020x00"
+                      >
+                        0
+                      </a>
+                    </td>
+                    <td>
+                      <a
+                        href="/review/simpsons2020x00"
+                      >
+                        0
+                      </a>
+                    </td>
+                    <td>
+                      <a
+                        href="/terminated/simpsons2020x00"
+                      >
+                        0
+                      </a>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -1696,17 +1847,6 @@ Object {
                       (current)
                     </span>
                   </span>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    2
-                  </a>
                 </li>
               </ul>
             </div>
@@ -1801,7 +1941,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -1812,18 +1952,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -1840,6 +1968,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -1896,7 +2036,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -1912,7 +2052,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -1934,7 +2074,7 @@ Object {
                   class="col"
                 >
                   <a
-                    class="ButtonLink"
+                    class="ButtonLink ReturnButtonLink"
                     href="/"
                   >
                     <button
@@ -2038,9 +2178,6 @@ Object {
                             id="exampleForm.SelectCustom"
                           >
                             <option>
-                              5
-                            </option>
-                            <option>
                               10
                             </option>
                             <option>
@@ -2064,7 +2201,7 @@ Object {
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="text"
+                        type="search"
                         value=""
                       />
                     </span>
@@ -2084,6 +2221,7 @@ Object {
                         <tr>
                           <th
                             data-testid="TableHeader_id_terminated"
+                            id="stateHistoryDate"
                             rowspan="2"
                           >
                             <span
@@ -2099,6 +2237,7 @@ Object {
                             Identifier
                           </th>
                           <th
+                            id="stateHistoryHour"
                             rowspan="2"
                           >
                             <span
@@ -2114,6 +2253,7 @@ Object {
                             Survey
                           </th>
                           <th
+                            id="stateHistoryState"
                             rowspan="2"
                           >
                             <span
@@ -2132,6 +2272,21 @@ Object {
                             rowspan="2"
                           >
                             Actions
+                          </th>
+                          <th
+                            rowspan="2"
+                          >
+                            <span
+                              class="sortIcon"
+                            >
+                              <i
+                                class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                              />
+                              <i
+                                class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                              />
+                            </span>
+                            Finalization date
                           </th>
                         </tr>
                       </thead>
@@ -2166,6 +2321,11 @@ Object {
                               class="fa fa-history HistoryDisplayIcon"
                             />
                           </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
                         </tr>
                         <tr>
                           <td
@@ -2196,6 +2356,11 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2228,6 +2393,11 @@ Object {
                               class="fa fa-history HistoryDisplayIcon"
                             />
                           </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
                         </tr>
                         <tr>
                           <td
@@ -2259,6 +2429,11 @@ Object {
                               class="fa fa-history HistoryDisplayIcon"
                             />
                           </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
                         </tr>
                         <tr>
                           <td
@@ -2289,6 +2464,191 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="Clickable"
+                            data-testid="campaign-label"
+                          >
+                            4813
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Everyday life and health survey 2018
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Boulanger Jacques
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-pencil EditLink"
+                            />
+                            <span />
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-history HistoryDisplayIcon"
+                            />
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="Clickable"
+                            data-testid="campaign-label"
+                          >
+                            1027
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Everyday life and health survey 2018
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Dupont Chloé
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-pencil EditLink"
+                            />
+                            <span />
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-history HistoryDisplayIcon"
+                            />
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="Clickable"
+                            data-testid="campaign-label"
+                          >
+                            4815
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Everyday life and health survey 2018
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Fabres Thierry
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-pencil EditLink"
+                            />
+                            <span />
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-history HistoryDisplayIcon"
+                            />
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="Clickable"
+                            data-testid="campaign-label"
+                          >
+                            1028
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Everyday life and health survey 2018
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Dupont Chloé
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-pencil EditLink"
+                            />
+                            <span />
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-history HistoryDisplayIcon"
+                            />
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            class="Clickable"
+                            data-testid="campaign-label"
+                          >
+                            4816
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Everyday life and health survey 2018
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            Boulanger Jacques
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-pencil EditLink"
+                            />
+                            <span />
+                            <i
+                              aria-hidden="true"
+                              class="fa fa-history HistoryDisplayIcon"
+                            />
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
+                            8/20/2020 11:01
                           </td>
                         </tr>
                       </tbody>
@@ -2324,28 +2684,6 @@ Object {
                           role="button"
                         >
                           2
-                        </a>
-                      </li>
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          3
-                        </a>
-                      </li>
-                      <li
-                        class="page-item"
-                      >
-                        <a
-                          class="page-link"
-                          href="#"
-                          role="button"
-                        >
-                          4
                         </a>
                       </li>
                     </ul>
@@ -2386,7 +2724,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.4
+                    0.1.5
                   </div>
                 </a>
               </div>
@@ -2397,18 +2735,6 @@ Object {
                   class="d-inline-flex classTest"
                   id="headerButtonContainer"
                 >
-                  <a
-                    class="ButtonLink"
-                    href="/followUp"
-                  >
-                    <button
-                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                      data-testid="follow-up"
-                      type="button"
-                    >
-                      Follow up
-                    </button>
-                  </a>
                   <li
                     class="dropdown"
                     id="BtnSuivreParent"
@@ -2425,6 +2751,18 @@ Object {
                       />
                     </button>
                   </li>
+                  <a
+                    class="ButtonLink"
+                    href="/followUp"
+                  >
+                    <button
+                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                      data-testid="follow-up"
+                      type="button"
+                    >
+                      Follow up
+                    </button>
+                  </a>
                   <a
                     class="ButtonLink"
                     href="/review"
@@ -2481,7 +2819,7 @@ Object {
                         class="col-8"
                       >
                         <button
-                          class="HeaderButton btn btn-primary"
+                          class="HeaderButton btn btn-outline-primary"
                           data-testid="preferences"
                           type="button"
                         >
@@ -2497,7 +2835,7 @@ Object {
                           tabindex="0"
                         >
                           <i
-                            class="fa fa-question-circle fa-2x"
+                            class="fa fa-question-circle-o fa-2x"
                           />
                         </div>
                       </div>
@@ -2519,7 +2857,7 @@ Object {
                 class="col"
               >
                 <a
-                  class="ButtonLink"
+                  class="ButtonLink ReturnButtonLink"
                   href="/"
                 >
                   <button
@@ -2623,9 +2961,6 @@ Object {
                           id="exampleForm.SelectCustom"
                         >
                           <option>
-                            5
-                          </option>
-                          <option>
                             10
                           </option>
                           <option>
@@ -2649,7 +2984,7 @@ Object {
                     <input
                       class="SearchFieldInput"
                       placeholder="Search"
-                      type="text"
+                      type="search"
                       value=""
                     />
                   </span>
@@ -2669,6 +3004,7 @@ Object {
                       <tr>
                         <th
                           data-testid="TableHeader_id_terminated"
+                          id="stateHistoryDate"
                           rowspan="2"
                         >
                           <span
@@ -2684,6 +3020,7 @@ Object {
                           Identifier
                         </th>
                         <th
+                          id="stateHistoryHour"
                           rowspan="2"
                         >
                           <span
@@ -2699,6 +3036,7 @@ Object {
                           Survey
                         </th>
                         <th
+                          id="stateHistoryState"
                           rowspan="2"
                         >
                           <span
@@ -2717,6 +3055,21 @@ Object {
                           rowspan="2"
                         >
                           Actions
+                        </th>
+                        <th
+                          rowspan="2"
+                        >
+                          <span
+                            class="sortIcon"
+                          >
+                            <i
+                              class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                            />
+                            <i
+                              class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                            />
+                          </span>
+                          Finalization date
                         </th>
                       </tr>
                     </thead>
@@ -2751,6 +3104,11 @@ Object {
                             class="fa fa-history HistoryDisplayIcon"
                           />
                         </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
                       </tr>
                       <tr>
                         <td
@@ -2781,6 +3139,11 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -2813,6 +3176,11 @@ Object {
                             class="fa fa-history HistoryDisplayIcon"
                           />
                         </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
                       </tr>
                       <tr>
                         <td
@@ -2844,6 +3212,11 @@ Object {
                             class="fa fa-history HistoryDisplayIcon"
                           />
                         </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
                       </tr>
                       <tr>
                         <td
@@ -2874,6 +3247,191 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="Clickable"
+                          data-testid="campaign-label"
+                        >
+                          4813
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Everyday life and health survey 2018
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Boulanger Jacques
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-pencil EditLink"
+                          />
+                          <span />
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-history HistoryDisplayIcon"
+                          />
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="Clickable"
+                          data-testid="campaign-label"
+                        >
+                          1027
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Everyday life and health survey 2018
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Dupont Chloé
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-pencil EditLink"
+                          />
+                          <span />
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-history HistoryDisplayIcon"
+                          />
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="Clickable"
+                          data-testid="campaign-label"
+                        >
+                          4815
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Everyday life and health survey 2018
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Fabres Thierry
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-pencil EditLink"
+                          />
+                          <span />
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-history HistoryDisplayIcon"
+                          />
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="Clickable"
+                          data-testid="campaign-label"
+                        >
+                          1028
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Everyday life and health survey 2018
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Dupont Chloé
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-pencil EditLink"
+                          />
+                          <span />
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-history HistoryDisplayIcon"
+                          />
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="Clickable"
+                          data-testid="campaign-label"
+                        >
+                          4816
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Everyday life and health survey 2018
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          Boulanger Jacques
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-pencil EditLink"
+                          />
+                          <span />
+                          <i
+                            aria-hidden="true"
+                            class="fa fa-history HistoryDisplayIcon"
+                          />
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
+                          8/20/2020 11:01
                         </td>
                       </tr>
                     </tbody>
@@ -2909,28 +3467,6 @@ Object {
                         role="button"
                       >
                         2
-                      </a>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        3
-                      </a>
-                    </li>
-                    <li
-                      class="page-item"
-                    >
-                      <a
-                        class="page-link"
-                        href="#"
-                        role="button"
-                      >
-                        4
                       </a>
                     </li>
                   </ul>
@@ -3028,7 +3564,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -3039,18 +3575,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -3067,6 +3591,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -3123,7 +3659,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -3139,7 +3675,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -3163,7 +3699,7 @@ Object {
                   class="col"
                 >
                   <a
-                    class="ButtonLink"
+                    class="ButtonLink ReturnButtonLink"
                     href="/"
                   >
                     <button
@@ -3192,7 +3728,7 @@ Object {
                 <div
                   class="DateDisplay"
                 >
-                  Progression in regard of the state of survey units at the date: 
+                  Progression in regard of the state of survey units at the date : 
                 </div>
                 <input
                   class="DateDisplay"
@@ -3225,9 +3761,6 @@ Object {
                           id="exampleForm.SelectCustom"
                         >
                           <option>
-                            5
-                          </option>
-                          <option>
                             10
                           </option>
                           <option>
@@ -3251,7 +3784,7 @@ Object {
                     <input
                       class="SearchFieldInput"
                       placeholder="Search"
-                      type="text"
+                      type="search"
                       value=""
                     />
                   </span>
@@ -3684,6 +4217,138 @@ Object {
                         33
                       </td>
                     </tr>
+                    <tr>
+                      <td>
+                        Survey on something else 2020
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        4.7
+                        %
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        720
+                      </td>
+                      <td>
+                        21
+                      </td>
+                      <td>
+                        211
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        22
+                      </td>
+                      <td>
+                        13
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        178
+                      </td>
+                      <td />
+                      <td />
+                      <td>
+                        33
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Survey on the Simpsons tv show 2020
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        4.7
+                        %
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        720
+                      </td>
+                      <td>
+                        21
+                      </td>
+                      <td>
+                        211
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        22
+                      </td>
+                      <td>
+                        13
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        178
+                      </td>
+                      <td />
+                      <td />
+                      <td>
+                        33
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Survey on the Simpsons tv show 2021
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        4.7
+                        %
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        720
+                      </td>
+                      <td>
+                        21
+                      </td>
+                      <td>
+                        211
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        22
+                      </td>
+                      <td>
+                        13
+                      </td>
+                      <td
+                        class="ColumnSpacing"
+                      />
+                      <td>
+                        178
+                      </td>
+                      <td />
+                      <td />
+                      <td>
+                        33
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -3714,17 +4379,6 @@ Object {
                         (current)
                       </span>
                     </span>
-                  </li>
-                  <li
-                    class="page-item"
-                  >
-                    <a
-                      class="page-link"
-                      href="#"
-                      role="button"
-                    >
-                      2
-                    </a>
                   </li>
                 </ul>
               </div>
@@ -3762,7 +4416,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.4
+                    0.1.5
                   </div>
                 </a>
               </div>
@@ -3773,18 +4427,6 @@ Object {
                   class="d-inline-flex classTest"
                   id="headerButtonContainer"
                 >
-                  <a
-                    class="ButtonLink"
-                    href="/followUp"
-                  >
-                    <button
-                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                      data-testid="follow-up"
-                      type="button"
-                    >
-                      Follow up
-                    </button>
-                  </a>
                   <li
                     class="dropdown"
                     id="BtnSuivreParent"
@@ -3801,6 +4443,18 @@ Object {
                       />
                     </button>
                   </li>
+                  <a
+                    class="ButtonLink"
+                    href="/followUp"
+                  >
+                    <button
+                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                      data-testid="follow-up"
+                      type="button"
+                    >
+                      Follow up
+                    </button>
+                  </a>
                   <a
                     class="ButtonLink"
                     href="/review"
@@ -3857,7 +4511,7 @@ Object {
                         class="col-8"
                       >
                         <button
-                          class="HeaderButton btn btn-primary"
+                          class="HeaderButton btn btn-outline-primary"
                           data-testid="preferences"
                           type="button"
                         >
@@ -3873,7 +4527,7 @@ Object {
                           tabindex="0"
                         >
                           <i
-                            class="fa fa-question-circle fa-2x"
+                            class="fa fa-question-circle-o fa-2x"
                           />
                         </div>
                       </div>
@@ -3897,7 +4551,7 @@ Object {
                 class="col"
               >
                 <a
-                  class="ButtonLink"
+                  class="ButtonLink ReturnButtonLink"
                   href="/"
                 >
                   <button
@@ -3926,7 +4580,7 @@ Object {
               <div
                 class="DateDisplay"
               >
-                Progression in regard of the state of survey units at the date: 
+                Progression in regard of the state of survey units at the date : 
               </div>
               <input
                 class="DateDisplay"
@@ -3959,9 +4613,6 @@ Object {
                         id="exampleForm.SelectCustom"
                       >
                         <option>
-                          5
-                        </option>
-                        <option>
                           10
                         </option>
                         <option>
@@ -3985,7 +4636,7 @@ Object {
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="text"
+                    type="search"
                     value=""
                   />
                 </span>
@@ -4418,6 +5069,138 @@ Object {
                       33
                     </td>
                   </tr>
+                  <tr>
+                    <td>
+                      Survey on something else 2020
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      4.7
+                      %
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      720
+                    </td>
+                    <td>
+                      21
+                    </td>
+                    <td>
+                      211
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      22
+                    </td>
+                    <td>
+                      13
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      178
+                    </td>
+                    <td />
+                    <td />
+                    <td>
+                      33
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Survey on the Simpsons tv show 2020
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      4.7
+                      %
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      720
+                    </td>
+                    <td>
+                      21
+                    </td>
+                    <td>
+                      211
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      22
+                    </td>
+                    <td>
+                      13
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      178
+                    </td>
+                    <td />
+                    <td />
+                    <td>
+                      33
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Survey on the Simpsons tv show 2021
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      4.7
+                      %
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      720
+                    </td>
+                    <td>
+                      21
+                    </td>
+                    <td>
+                      211
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      22
+                    </td>
+                    <td>
+                      13
+                    </td>
+                    <td
+                      class="ColumnSpacing"
+                    />
+                    <td>
+                      178
+                    </td>
+                    <td />
+                    <td />
+                    <td>
+                      33
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -4448,17 +5231,6 @@ Object {
                       (current)
                     </span>
                   </span>
-                </li>
-                <li
-                  class="page-item"
-                >
-                  <a
-                    class="page-link"
-                    href="#"
-                    role="button"
-                  >
-                    2
-                  </a>
                 </li>
               </ul>
             </div>
@@ -4553,7 +5325,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -4564,18 +5336,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  ButtonActive btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -4592,6 +5352,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  ButtonActive btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -4648,7 +5420,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -4664,7 +5436,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -4688,7 +5460,7 @@ Object {
                   class="col"
                 >
                   <a
-                    class="ButtonLink"
+                    class="ButtonLink ReturnButtonLink"
                     href="/"
                   >
                     <button
@@ -4750,7 +5522,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.4
+                    0.1.5
                   </div>
                 </a>
               </div>
@@ -4761,18 +5533,6 @@ Object {
                   class="d-inline-flex classTest"
                   id="headerButtonContainer"
                 >
-                  <a
-                    class="ButtonLink"
-                    href="/followUp"
-                  >
-                    <button
-                      class="HeaderButton HeaderFocusableButton  ButtonActive btn btn-primary"
-                      data-testid="follow-up"
-                      type="button"
-                    >
-                      Follow up
-                    </button>
-                  </a>
                   <li
                     class="dropdown"
                     id="BtnSuivreParent"
@@ -4789,6 +5549,18 @@ Object {
                       />
                     </button>
                   </li>
+                  <a
+                    class="ButtonLink"
+                    href="/followUp"
+                  >
+                    <button
+                      class="HeaderButton HeaderFocusableButton  ButtonActive btn btn-primary"
+                      data-testid="follow-up"
+                      type="button"
+                    >
+                      Follow up
+                    </button>
+                  </a>
                   <a
                     class="ButtonLink"
                     href="/review"
@@ -4845,7 +5617,7 @@ Object {
                         class="col-8"
                       >
                         <button
-                          class="HeaderButton btn btn-primary"
+                          class="HeaderButton btn btn-outline-primary"
                           data-testid="preferences"
                           type="button"
                         >
@@ -4861,7 +5633,7 @@ Object {
                           tabindex="0"
                         >
                           <i
-                            class="fa fa-question-circle fa-2x"
+                            class="fa fa-question-circle-o fa-2x"
                           />
                         </div>
                       </div>
@@ -4885,7 +5657,7 @@ Object {
                 class="col"
               >
                 <a
-                  class="ButtonLink"
+                  class="ButtonLink ReturnButtonLink"
                   href="/"
                 >
                   <button
@@ -5004,7 +5776,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -5015,18 +5787,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -5043,6 +5803,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -5099,7 +5871,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -5115,7 +5887,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -5136,7 +5908,7 @@ Object {
                 class="col"
               >
                 <a
-                  class="ButtonLink"
+                  class="ButtonLink ReturnButtonLink"
                   href="/"
                 >
                   <button
@@ -5254,7 +6026,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.4
+                    0.1.5
                   </div>
                 </a>
               </div>
@@ -5265,18 +6037,6 @@ Object {
                   class="d-inline-flex classTest"
                   id="headerButtonContainer"
                 >
-                  <a
-                    class="ButtonLink"
-                    href="/followUp"
-                  >
-                    <button
-                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                      data-testid="follow-up"
-                      type="button"
-                    >
-                      Follow up
-                    </button>
-                  </a>
                   <li
                     class="dropdown"
                     id="BtnSuivreParent"
@@ -5293,6 +6053,18 @@ Object {
                       />
                     </button>
                   </li>
+                  <a
+                    class="ButtonLink"
+                    href="/followUp"
+                  >
+                    <button
+                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                      data-testid="follow-up"
+                      type="button"
+                    >
+                      Follow up
+                    </button>
+                  </a>
                   <a
                     class="ButtonLink"
                     href="/review"
@@ -5349,7 +6121,7 @@ Object {
                         class="col-8"
                       >
                         <button
-                          class="HeaderButton btn btn-primary"
+                          class="HeaderButton btn btn-outline-primary"
                           data-testid="preferences"
                           type="button"
                         >
@@ -5365,7 +6137,7 @@ Object {
                           tabindex="0"
                         >
                           <i
-                            class="fa fa-question-circle fa-2x"
+                            class="fa fa-question-circle-o fa-2x"
                           />
                         </div>
                       </div>
@@ -5386,7 +6158,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -5561,7 +6333,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -5572,18 +6344,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -5600,6 +6360,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -5656,7 +6428,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -5672,7 +6444,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -5696,7 +6468,7 @@ Object {
                   class="col"
                 >
                   <a
-                    class="ButtonLink"
+                    class="ButtonLink ReturnButtonLink"
                     href="/"
                   >
                     <button
@@ -5984,7 +6756,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.4
+                    0.1.5
                   </div>
                 </a>
               </div>
@@ -5995,18 +6767,6 @@ Object {
                   class="d-inline-flex classTest"
                   id="headerButtonContainer"
                 >
-                  <a
-                    class="ButtonLink"
-                    href="/followUp"
-                  >
-                    <button
-                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                      data-testid="follow-up"
-                      type="button"
-                    >
-                      Follow up
-                    </button>
-                  </a>
                   <li
                     class="dropdown"
                     id="BtnSuivreParent"
@@ -6023,6 +6783,18 @@ Object {
                       />
                     </button>
                   </li>
+                  <a
+                    class="ButtonLink"
+                    href="/followUp"
+                  >
+                    <button
+                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                      data-testid="follow-up"
+                      type="button"
+                    >
+                      Follow up
+                    </button>
+                  </a>
                   <a
                     class="ButtonLink"
                     href="/review"
@@ -6079,7 +6851,7 @@ Object {
                         class="col-8"
                       >
                         <button
-                          class="HeaderButton btn btn-primary"
+                          class="HeaderButton btn btn-outline-primary"
                           data-testid="preferences"
                           type="button"
                         >
@@ -6095,7 +6867,7 @@ Object {
                           tabindex="0"
                         >
                           <i
-                            class="fa fa-question-circle fa-2x"
+                            class="fa fa-question-circle-o fa-2x"
                           />
                         </div>
                       </div>
@@ -6119,7 +6891,7 @@ Object {
                 class="col"
               >
                 <a
-                  class="ButtonLink"
+                  class="ButtonLink ReturnButtonLink"
                   href="/"
                 >
                   <button
@@ -6464,7 +7236,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.4
+                      0.1.5
                     </div>
                   </a>
                 </div>
@@ -6475,18 +7247,6 @@ Object {
                     class="d-inline-flex classTest"
                     id="headerButtonContainer"
                   >
-                    <a
-                      class="ButtonLink"
-                      href="/followUp"
-                    >
-                      <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="follow-up"
-                        type="button"
-                      >
-                        Follow up
-                      </button>
-                    </a>
                     <li
                       class="dropdown"
                       id="BtnSuivreParent"
@@ -6503,6 +7263,18 @@ Object {
                         />
                       </button>
                     </li>
+                    <a
+                      class="ButtonLink"
+                      href="/followUp"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        data-testid="follow-up"
+                        type="button"
+                      >
+                        Follow up
+                      </button>
+                    </a>
                     <a
                       class="ButtonLink"
                       href="/review"
@@ -6559,7 +7331,7 @@ Object {
                           class="col-8"
                         >
                           <button
-                            class="HeaderButton btn btn-primary"
+                            class="HeaderButton btn btn-outline-primary"
                             data-testid="preferences"
                             type="button"
                           >
@@ -6575,7 +7347,7 @@ Object {
                             tabindex="0"
                           >
                             <i
-                              class="fa fa-question-circle fa-2x"
+                              class="fa fa-question-circle-o fa-2x"
                             />
                           </div>
                         </div>
@@ -6599,7 +7371,7 @@ Object {
                   class="col"
                 >
                   <a
-                    class="ButtonLink"
+                    class="ButtonLink ReturnButtonLink"
                     href="/"
                   >
                     <button
@@ -6665,7 +7437,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.4
+                    0.1.5
                   </div>
                 </a>
               </div>
@@ -6676,18 +7448,6 @@ Object {
                   class="d-inline-flex classTest"
                   id="headerButtonContainer"
                 >
-                  <a
-                    class="ButtonLink"
-                    href="/followUp"
-                  >
-                    <button
-                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                      data-testid="follow-up"
-                      type="button"
-                    >
-                      Follow up
-                    </button>
-                  </a>
                   <li
                     class="dropdown"
                     id="BtnSuivreParent"
@@ -6704,6 +7464,18 @@ Object {
                       />
                     </button>
                   </li>
+                  <a
+                    class="ButtonLink"
+                    href="/followUp"
+                  >
+                    <button
+                      class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                      data-testid="follow-up"
+                      type="button"
+                    >
+                      Follow up
+                    </button>
+                  </a>
                   <a
                     class="ButtonLink"
                     href="/review"
@@ -6760,7 +7532,7 @@ Object {
                         class="col-8"
                       >
                         <button
-                          class="HeaderButton btn btn-primary"
+                          class="HeaderButton btn btn-outline-primary"
                           data-testid="preferences"
                           type="button"
                         >
@@ -6776,7 +7548,7 @@ Object {
                           tabindex="0"
                         >
                           <i
-                            class="fa fa-question-circle fa-2x"
+                            class="fa fa-question-circle-o fa-2x"
                           />
                         </div>
                       </div>
@@ -6800,7 +7572,7 @@ Object {
                 class="col"
               >
                 <a
-                  class="ButtonLink"
+                  class="ButtonLink ReturnButtonLink"
                   href="/"
                 >
                   <button

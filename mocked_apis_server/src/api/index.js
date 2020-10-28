@@ -250,6 +250,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1561932000000,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -261,6 +262,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1561932000000,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -272,6 +274,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -283,6 +286,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -294,6 +298,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -305,6 +310,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -316,6 +322,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -327,6 +334,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW7",
           interviewerFirstName: "Thierry",
@@ -338,6 +346,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -349,6 +358,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -360,6 +370,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW7",
           interviewerFirstName: "Thierry",
@@ -371,6 +382,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -382,6 +394,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1561932000000,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -393,6 +406,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1561932000000,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -404,6 +418,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -415,6 +430,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -442,12 +458,12 @@ export default ({ config, db }) => {
         {
           id: 1,
           date: 1596188129587,
-          type: "ANS",
+          type: "ANV",
         },
         {
           id: 2,
           date: 1596120310000,
-          type: "ANS",
+          type: "ANV",
         },
         {
           id: 3,
@@ -468,6 +484,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1603304314268,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -480,6 +497,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1625090400000,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -492,6 +510,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1561932000000,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -504,6 +523,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1625090400000,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -516,6 +536,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1625090400000,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -528,6 +549,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1625090400000,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -540,6 +562,7 @@ export default ({ config, db }) => {
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
+        finalizationDate: 1625090400000,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -552,6 +575,7 @@ export default ({ config, db }) => {
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
+        finalizationDate: 1625090400000,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",

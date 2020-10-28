@@ -14,7 +14,7 @@ class ReviewTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pagination: { size: 5, page: 1 },
+      pagination: { size: 10, page: 1 },
       checkboxArray: props.data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {}),
       checkAll: false,
       show: false,
@@ -25,6 +25,7 @@ class ReviewTable extends React.Component {
   componentDidUpdate(prevProps) {
     const { survey, data } = this.props;
     const { checkboxArray } = this.state;
+
     if (prevProps.survey !== survey
       || data.length !== Object.keys(checkboxArray).length) {
       const newCheckboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});

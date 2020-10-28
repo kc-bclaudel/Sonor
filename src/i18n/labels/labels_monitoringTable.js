@@ -1,7 +1,7 @@
 const monitoringTable = {
   monitoringTableIntroductionSentence: {
-    fr: 'Avancement selon l\'état des unités enquêtées en date du: ',
-    en: 'Progression in regard of the state of survey units at the date: ',
+    fr: 'Avancement selon l\'état des unités enquêtées en date du : ',
+    en: 'Progression in regard of the state of survey units at the date : ',
   },
   completionRate: {
     fr: 'Taux d\'avancement',

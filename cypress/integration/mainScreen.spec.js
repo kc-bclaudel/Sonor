@@ -43,21 +43,22 @@ context('sonor', () => {
     cy.get('tbody').within(() => {
       cy.get('td')
         .first()
-        .should('have.text', 'Survey on the Simpsons tv show 2020');
+        .should('have.text', 'Survey on the Simpsons tv show 2021');
     });
 
-    // Testing sort by Collection start date
+     // Testing sort by Collection start date
     cy.get('th').contains(D.collectionStartDate).click();
     cy.get('tbody').within(() => {
       cy.get('td')
         .eq(2)
-        .contains(/01\/01\/2020|1\/1\/2020/g);
+        .contains(/10\/12\/2019|12\/10\/2019/g);
     });
+    
     cy.get('th').contains(D.collectionStartDate).click();
     cy.get('tbody').within(() => {
       cy.get('td')
         .eq(2)
-        .contains(/01\/01\/2020|1\/1\/2020/g);
+        .contains(/10\/12\/2019|12\/10\/2019/g);
     });
 
     //LANG=fr_FR.UTF-8
@@ -107,7 +108,7 @@ context('sonor', () => {
     });
     cy.get('th').contains(D.allocated).click();
     cy.get('tbody').within(() => {
-      cy.get('td').eq(8).should('have.text', '4');
+      cy.get('td').eq(8).should('have.text', '5');
     });
 
     // Testing sort by number of su to be processed by interviewer
@@ -162,10 +163,10 @@ context('sonor', () => {
 
     // Testing page change
     cy.get('.paginationNav').contains('2').click();
-    cy.get('tbody').find('tr').should('have.length', 1);
+    cy.get('tbody').find('tr').should('have.length', 2);
 
     // Testing pagination change
-    cy.get('[data-testid="pagination-size-selector"]').select('10');
-    cy.get('tbody').find('tr').should('have.length', 6);
+    cy.get('[data-testid="pagination-size-selector"]').select('20');
+    cy.get('tbody').find('tr').should('have.length', 12);
   });
 });
