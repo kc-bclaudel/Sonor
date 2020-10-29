@@ -18,7 +18,7 @@ Object {
               class="col"
             >
               <a
-                class="ButtonLink"
+                class="ButtonLink ReturnButtonLink"
                 href="/"
               >
                 <button
@@ -96,7 +96,7 @@ Object {
             class="col"
           >
             <a
-              class="ButtonLink"
+              class="ButtonLink ReturnButtonLink"
               href="/"
             >
               <button

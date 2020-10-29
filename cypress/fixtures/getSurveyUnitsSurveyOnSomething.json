@@ -4,6 +4,7 @@
                 "ssech" : "hgSkR29",
                 "location" : "95160",
                 "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW5",
                     "interviewerFirstName" : "Chloé",
@@ -15,6 +16,7 @@
                 "ssech" : "dlcB55jdf",
                 "location" : "90000",
                 "city" : "BELFORT",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW6",
                     "interviewerFirstName" : "Jacques",
@@ -26,6 +28,7 @@
                 "ssech" : "hgSkR29",
                 "location" : "95160",
                 "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW5",
                     "interviewerFirstName" : "Chloé",
@@ -37,6 +40,7 @@
                 "ssech" : "dlcB55jdf",
                 "location" : "90000",
                 "city" : "BELFORT",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW6",
                     "interviewerFirstName" : "Jacques",
@@ -48,6 +52,7 @@
                 "ssech" : "hgSkR29",
                 "location" : "95160",
                 "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW5",
                     "interviewerFirstName" : "Chloé",
@@ -57,8 +62,9 @@
             {
                 "id" : "4813",
                 "ssech" : "dlcB55jdf",
-                "location" : "90000",
-                "city" : "BELFORT",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW6",
                     "interviewerFirstName" : "Jacques",
@@ -70,6 +76,7 @@
                 "ssech" : "hgSkR29",
                 "location" : "95160",
                 "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW5",
                     "interviewerFirstName" : "Chloé",
@@ -79,8 +86,9 @@
             {
                 "id" : "4815",
                 "ssech" : "dlcB55jdf",
-                "location" : "90000",
-                "city" : "BELFORT",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW7",
                     "interviewerFirstName" : "Thierry",
@@ -92,6 +100,7 @@
                 "ssech" : "hgSkR29",
                 "location" : "95160",
                 "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW5",
                     "interviewerFirstName" : "Chloé",
@@ -103,6 +112,7 @@
                 "ssech" : "dlcB55jdf",
                 "location" : "90000",
                 "city" : "BELFORT",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW6",
                     "interviewerFirstName" : "Jacques",
@@ -114,6 +124,7 @@
                 "ssech" : "hgSkR29",
                 "location" : "95160",
                 "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW7",
                     "interviewerFirstName" : "Thierry",
@@ -125,6 +136,7 @@
                 "ssech" : "dlcB55jdf",
                 "location" : "90000",
                 "city" : "BELFORT",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW6",
                     "interviewerFirstName" : "Jacques",
@@ -136,6 +148,7 @@
                 "ssech" : "hgSkR29",
                 "location" : "95160",
                 "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW5",
                     "interviewerFirstName" : "Chloé",
@@ -145,8 +158,129 @@
             {
                 "id" : "4818",
                 "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3819",
+                "ssech" : "dlcB55jdf",
                 "location" : "90000",
                 "city" : "BELFORT",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3820",
+                "ssech" : "dlcB55jdf",
+                "location" : "90000",
+                "city" : "BELFORT",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3821",
+                "ssech" : "dlcB55jdf",
+                "location" : "90000",
+                "city" : "BELFORT",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3822",
+                "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3823",
+                "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3824",
+                "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3825",
+                "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3826",
+                "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3827",
+                "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
+                "interviewer" : {
+                    "id" : "INTW6",
+                    "interviewerFirstName" : "Jacques",
+                    "interviewerLastName" : "Boulanger"
+                }
+            },
+            {
+                "id" : "3828",
+                "ssech" : "dlcB55jdf",
+                "location" : "95160",
+                "city" : "MONTMORENCY",
+                "finalizationDate": 1603347357468,
                 "interviewer" : {
                     "id" : "INTW6",
                     "interviewerFirstName" : "Jacques",

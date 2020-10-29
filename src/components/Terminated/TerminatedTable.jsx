@@ -6,19 +6,26 @@ import displayStateHistoryTable from './DisplayStateHistoryTable';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import SearchField from '../SearchField/SearchField';
 import SortIcon from '../SortIcon/SortIcon';
+import Utils from '../../utils/Utils';
 import D from '../../i18n';
 
 class TerminatedTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pagination: { size: 5, page: 1 },
+      pagination: { size: 10, page: 1 },
       displayData: props.data,
       toggleStateHistory: false,
       stateData: [],
       stateId: '',
     };
     this.queenUrl = `${window.localStorage.getItem('QUEEN_URL_FRONT_END')}`;
+  }
+
+  getMaxWidth(){
+    return [document.getElementById("stateHistoryDate").getBoundingClientRect().width, 
+              document.getElementById("stateHistoryHour").getBoundingClientRect().width,
+              document.getElementById("stateHistoryState").getBoundingClientRect().width]    
   }
 
   toggleStateHistoryTable(e, newStateTitle) {
@@ -64,6 +71,7 @@ class TerminatedTable extends React.Component {
           <span />
           <i className="fa fa-history HistoryDisplayIcon" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
         </td>
+        <td className="Clickable">{Utils.convertToDateString(data.finalizationDate) + " " + Utils.convertMsToHoursMinutes(data.finalizationDate)}</td>
       </tr>
     );
   }
@@ -98,6 +106,7 @@ class TerminatedTable extends React.Component {
             <thead>
               <tr>
                 <th
+                  id="stateHistoryDate"
                   data-testid="TableHeader_id_terminated"
                   rowSpan="2"
                   onClick={handleSortFunct('id')}
@@ -105,11 +114,15 @@ class TerminatedTable extends React.Component {
                   <SortIcon val="id" sort={sort} />
                   {D.identifier}
                 </th>
-                <th rowSpan="2" onClick={handleSortFunct('campaignLabel')}>
+                <th
+                  id="stateHistoryHour"
+                  rowSpan="2" 
+                  onClick={handleSortFunct('campaignLabel')}>
                   <SortIcon val="campaignLabel" sort={sort} />
                   {D.survey}
                 </th>
                 <th
+                  id="stateHistoryState"
                   rowSpan="2"
                   onClick={handleSortFunct('interviewer_terminated')}
                 >
@@ -118,6 +131,13 @@ class TerminatedTable extends React.Component {
                 </th>
                 <th rowSpan="2">
                   {D.listSuActions}
+                </th>
+                <th 
+                  rowSpan="2"
+                  onClick={handleSortFunct('finalizationDate')}
+                >
+                  <SortIcon val="finalizationDate" sort={sort} />
+                  {D.finalizedDate}
                 </th>
               </tr>
             </thead>
@@ -141,7 +161,7 @@ class TerminatedTable extends React.Component {
           </div>
         </div>
         {!toggleStateHistory
-        || displayStateHistoryTable(stateData, stateId, (() => this.hideStateHistoryTable()))}
+        || displayStateHistoryTable(stateData, stateId, (() => this.hideStateHistoryTable()), (() => this.getMaxWidth()))}
       </div>
     );
   }

@@ -33,12 +33,6 @@ body {
   font-size: 13px;
 }
 
-.ReturnButton{
-  margin-left: 20px;
-  /* position: absolute; */
-}
-
-
 .ViewCard{
   padding:20px;
   margin:10px;
@@ -93,7 +87,7 @@ body {
   float:right;
   padding:10px;
   margin:10px;
-  min-width: 310px;
+  min-width: 250px;
   background-color: antiquewhite;
 }
 
@@ -136,7 +130,7 @@ th.YellowHeader{
 }
 
 .SurveyTitle{
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   color: rgb(254,195,45);
   margin:auto;
@@ -214,12 +208,6 @@ th.YellowHeader{
 
 }
 
-
-
-#SUTable{
-
-}
-
 button{
   cursor: pointer;
 }
@@ -230,10 +218,11 @@ button{
 
 #datePicker{
   display:inline;
-}
-
-#dateDisplay{
-  
+  border-radius: .25rem;
+  border: 1px solid #ced4da;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.25rem;
 }
 
 .DateDisplay{
@@ -286,11 +275,18 @@ button{
 
 .SearchFieldInput{
   max-width: 100%;
+  outline-offset: 0px!important;
+  -webkit-appearance: textfield!important;
+}
+
+.SearchFieldInput::-webkit-search-cancel-button{
+  color:red!important;
+  cursor: pointer;
 }
 
 .PageSizeSelector{
   display: inline-block;
-  width: 60px;
+  width: 60px; 
 }
 
 .sortIcon{
@@ -336,26 +332,36 @@ button{
   pointer-events: auto;
   margin-bottom: 5px !important;
 
- }
+}
 
- .alert > p {
+.alert > p {
   margin-bottom: 0;
- }
+}
 
  .WithTableLink > td > a{
   padding: 0 !important;
   color: #212529 !important;
 }
-  a.ButtonLink {
-    padding: 0 !important;
-  }
 
- a:hover {
+a.ButtonLink {
+  padding: 0 !important;
+  width: fit-content;
+}
+
+.ReturnButtonLink {
+  margin-left: 20px;
+}
+
+a:hover {
   text-decoration: none !important;
- }
+}
  
- .HistoryDisplayIcon{
-  padding-left: 5px;
+.HistoryDisplayIcon{
+  padding-left: 15px;
+}
+
+.HistoryTableCross {
+  margin-right: 10px;
 }
 
 #TerminatedTableContainer, #StateHistoryTableContainer{

@@ -1,6 +1,7 @@
 import D from "../../src/i18n";
 
 context("sonor", () => {
+  Object.defineProperty(navigator, 'language', { value: 'en-EN' })
   it("Test finalized", () => {
     cy.server()
       .route("GET", "**/api/user", "fixture:getUser.json")
@@ -129,12 +130,13 @@ context("sonor", () => {
     cy.get("th").contains(D.interviewer).click();
     cy.get("tbody").find("td").eq(2).should("have.text", "Fabres Thierry");
 
+    
     // Testing state history display
     cy.get("th").contains(D.identifier).click();
     cy.get(".HistoryDisplayIcon").first().click();
     cy.wait(150);
-    cy.get("tbody").eq(1).find("td").eq(2).should("have.text", "ANS");
-
+    cy.get("tbody").eq(1).find("td").eq(2).should("have.text", D.ANV);
+    
     // Testing pagination
     cy.get(".paginationNav").contains("3").click();
     cy.get("tbody").find("td").first().should("have.text", "4815");
@@ -142,7 +144,7 @@ context("sonor", () => {
     // Display history of another state
     cy.get(".HistoryDisplayIcon").last().click();
     cy.wait(150);
-    cy.get("tbody").eq(1).find("td").eq(2).should("have.text", "TBR");
+    cy.get("tbody").eq(1).find("td").eq(2).should("have.text", D.TBR);
 
     // Close state history
     cy.get('[data-testid="close-history"]').click();

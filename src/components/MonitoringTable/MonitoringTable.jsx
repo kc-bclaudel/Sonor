@@ -19,7 +19,7 @@ class MonitoringTable extends React.Component {
     const mode = Utils.getMonitoringTableModeFromPath(props.location.pathname);
     const { survey } = props.location;
     this.state = {
-      pagination: { size: 5, page: 1 },
+      pagination: { size: 10, page: 1 },
       displayedLines: [],
       date: null,
       survey,
@@ -100,7 +100,7 @@ class MonitoringTable extends React.Component {
   }
 
   handleExport() {
-    const { data, survey, mode } = this.state;
+    const { data, survey, mode, date } = this.state;
     let fileLabel;
     if (mode === C.BY_SURVEY) {
       fileLabel = `${data.site}_Avancement enquetes`;
@@ -111,7 +111,7 @@ class MonitoringTable extends React.Component {
     } else {
       fileLabel = `${data.site}_${survey.label}_Avancement enqueteurs`;
     }
-    const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
+    const title = `${fileLabel}_${new Date(date).toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data, mode);
     const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);
@@ -173,7 +173,7 @@ class MonitoringTable extends React.Component {
         <Container fluid>
           <Row>
             <Col>
-              <Link to="/" className="ButtonLink">
+              <Link to="/" className="ButtonLink ReturnButtonLink">
                 <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
               </Link>
             </Col>

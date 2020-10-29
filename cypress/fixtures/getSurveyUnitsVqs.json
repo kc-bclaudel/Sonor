@@ -4,6 +4,7 @@
         "ssech" : "hgSkR29",
         "location" : "95160",
         "city" : "MONTMORENCY",
+        "finalizationDate": 1603347357468,
         "interviewer" : {
             "id" : "INTW5",
             "interviewerFirstName" : "Chloé",
@@ -15,6 +16,7 @@
         "ssech" : "dlcB55jdf",
         "location" : "90000",
         "city" : "BELFORT",
+        "finalizationDate": 1603347357468,
         "interviewer" : {
             "id" : "INTW6",
             "interviewerFirstName" : "Jacques",

@@ -82,17 +82,17 @@ class ModalPreferences extends React.Component {
         <Modal.Body>{displaySurveys(selectedPreferences, toggleCheckbox)}</Modal.Body>
         <Modal.Footer>
           <Button
-            data-testid="validate-pref-modif"
-            disabled={!prefsChanged}
-            onClick={() => { this.validateNewPreferences(); hidePreferences(); }}
-          >
-            {D.validate}
-          </Button>
-          <Button
+            variant="secondary"
             data-testid="close-preferences-button"
             onClick={() => hidePreferences()}
           >
             {D.close}
+          </Button>
+          <Button
+            data-testid="validate-pref-modif"
+            onClick={() => {return (prefsChanged) ? (this.validateNewPreferences(), hidePreferences()) : hidePreferences();}}
+          >
+            {D.preferencesValidate}
           </Button>
         </Modal.Footer>
       </Modal>

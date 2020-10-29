@@ -51,7 +51,7 @@ class SearchField extends React.Component {
       <span>
         <input
           className="SearchFieldInput"
-          type="text"
+          type="search"
           placeholder={D.search}
           value={inputValue}
           onChange={(e) => this.updateInputValue(e)}

@@ -86,11 +86,11 @@ context("sonor", () => {
       .eq(1)
       .find("td")
       .first()
-      .should("have.text", "Fabres Thierry");
+      .should("have.text", "Thierry Renée");
 
     // Testing pagination size change
-    cy.get('[data-testid="pagination-size-selector"]').select("10");
-    cy.get("tbody").eq(1).find("tr").should("have.length", 11);
+    cy.get('[data-testid="pagination-size-selector"]').select("20");
+    cy.get("tbody").eq(1).find("tr").should("have.length", 15);
     cy.get("tbody")
       .eq(1)
       .find("td")
@@ -103,7 +103,7 @@ context("sonor", () => {
       .eq(1)
       .find("td")
       .first()
-      .should("have.text", "Renard Bertrand");
+      .should("have.text", "Thierry Renée");
     cy.get("th").contains(D.interviewer).click();
     cy.get("tbody")
       .eq(1)
