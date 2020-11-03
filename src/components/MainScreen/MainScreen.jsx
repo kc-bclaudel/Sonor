@@ -10,7 +10,6 @@ import D from '../../i18n';
 class MainScreen extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       data: [],
       pagination: { size: 10, page: 1 },

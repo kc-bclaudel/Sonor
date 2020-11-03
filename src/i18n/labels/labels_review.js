@@ -12,7 +12,7 @@ const review = {
     en: 'Do you want to validate the selected survey units?',
   },
   noSuToReview: {
-    fr: 'Aucune unité enquêtée à lire pour cette enquête',
+    fr: 'Aucune unité enquêtée à lire',
     en: 'There are no survey unit to review',
   }
 };

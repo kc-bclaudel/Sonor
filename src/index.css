@@ -123,6 +123,10 @@ th.YellowHeader{
   color: rgb(19,66,120);
 }
 
+td{
+  height: fit-content!important;
+}
+
 .ColumnSpacing{
   width: 8px;
   background: white !important;
@@ -248,6 +252,7 @@ button{
   position: absolute;
   right:0;
   top: 0;
+  z-index: 0!important;
 }
 
 .tableOptionsWrapper{
@@ -276,13 +281,13 @@ button{
 .SearchFieldInput{
   max-width: 100%;
   outline-offset: 0px!important;
-  -webkit-appearance: textfield!important;
+  /*-webkit-appearance: textfield!important;*/
 }
 
-.SearchFieldInput::-webkit-search-cancel-button{
+/* .SearchFieldInput::-webkit-search-cancel-button{
   color:red!important;
   cursor: pointer;
-}
+} */
 
 .PageSizeSelector{
   display: inline-block;
@@ -366,4 +371,8 @@ a:hover {
 
 #TerminatedTableContainer, #StateHistoryTableContainer{
   width: -webkit-fill-available;
+}
+
+#ClearSearchInput{
+  cursor: pointer;
 }
