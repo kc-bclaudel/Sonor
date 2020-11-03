@@ -13,6 +13,8 @@ class Utils {
         return D.ANV;
       case 'VIN':
         return D.VIN;
+      case 'VIC':
+        return D.VIC;
       case 'PRC':
         return D.PRC;
       case 'AOC':
@@ -44,7 +46,10 @@ class Utils {
 
   static convertMsToHoursMinutes(millis) {
     const date = new Date(millis);
-    return `${date.getHours()}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;
+/*     if(date.getHours.length === 1){
+      return `${"0" + date.getHours()}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;
+    } */
+    return `${("0" + date.getHours()).slice(-2)}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;
   }
 
   static calculateCompletionRate(data) {

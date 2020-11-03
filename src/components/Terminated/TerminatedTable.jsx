@@ -62,6 +62,7 @@ class TerminatedTable extends React.Component {
         <td className="Clickable" data-testid="campaign-label">{data.id}</td>
         <td className="Clickable">{survey.label}</td>
         <td className="Clickable">{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
+        <td className="Clickable">{Utils.convertToDateString(data.finalizationDate) + " " + Utils.convertMsToHoursMinutes(data.finalizationDate)}</td>
         <td className="Clickable">
           <i
             className="fa fa-pencil EditLink"
@@ -71,7 +72,6 @@ class TerminatedTable extends React.Component {
           <span />
           <i className="fa fa-history HistoryDisplayIcon" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
         </td>
-        <td className="Clickable">{Utils.convertToDateString(data.finalizationDate) + " " + Utils.convertMsToHoursMinutes(data.finalizationDate)}</td>
       </tr>
     );
   }
@@ -129,15 +129,15 @@ class TerminatedTable extends React.Component {
                   <SortIcon val="interviewer_terminated" sort={sort} />
                   {D.interviewer}
                 </th>
-                <th rowSpan="2">
-                  {D.listSuActions}
-                </th>
                 <th 
                   rowSpan="2"
                   onClick={handleSortFunct('finalizationDate')}
                 >
                   <SortIcon val="finalizationDate" sort={sort} />
                   {D.finalizedDate}
+                </th>
+                <th rowSpan="2">
+                  {D.listSuActions}
                 </th>
               </tr>
             </thead>

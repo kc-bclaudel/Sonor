@@ -2197,14 +2197,19 @@ Object {
                   <div
                     class="text-right col-6"
                   >
-                    <span>
+                    <div>
                       <input
                         class="SearchFieldInput"
                         placeholder="Search"
-                        type="search"
+                        type="text"
                         value=""
                       />
-                    </span>
+                      <span
+                        id="ClearSearchInput"
+                      >
+                        ×
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -2271,11 +2276,6 @@ Object {
                           <th
                             rowspan="2"
                           >
-                            Actions
-                          </th>
-                          <th
-                            rowspan="2"
-                          >
                             <span
                               class="sortIcon"
                             >
@@ -2287,6 +2287,11 @@ Object {
                               />
                             </span>
                             Finalization date
+                          </th>
+                          <th
+                            rowspan="2"
+                          >
+                            Actions
                           </th>
                         </tr>
                       </thead>
@@ -2311,6 +2316,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2320,11 +2330,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2347,6 +2352,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2356,11 +2366,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2383,6 +2388,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2392,11 +2402,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2419,6 +2424,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2428,11 +2438,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2455,6 +2460,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2464,11 +2474,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2491,6 +2496,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2500,11 +2510,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2527,6 +2532,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2536,11 +2546,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2563,6 +2568,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2572,11 +2582,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2599,6 +2604,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2608,11 +2618,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                         <tr>
@@ -2635,6 +2640,11 @@ Object {
                           <td
                             class="Clickable"
                           >
+                            8/20/2020 11:01
+                          </td>
+                          <td
+                            class="Clickable"
+                          >
                             <i
                               aria-hidden="true"
                               class="fa fa-pencil EditLink"
@@ -2644,11 +2654,6 @@ Object {
                               aria-hidden="true"
                               class="fa fa-history HistoryDisplayIcon"
                             />
-                          </td>
-                          <td
-                            class="Clickable"
-                          >
-                            8/20/2020 11:01
                           </td>
                         </tr>
                       </tbody>
@@ -2980,14 +2985,19 @@ Object {
                 <div
                   class="text-right col-6"
                 >
-                  <span>
+                  <div>
                     <input
                       class="SearchFieldInput"
                       placeholder="Search"
-                      type="search"
+                      type="text"
                       value=""
                     />
-                  </span>
+                    <span
+                      id="ClearSearchInput"
+                    >
+                      ×
+                    </span>
+                  </div>
                 </div>
               </div>
               <div
@@ -3054,11 +3064,6 @@ Object {
                         <th
                           rowspan="2"
                         >
-                          Actions
-                        </th>
-                        <th
-                          rowspan="2"
-                        >
                           <span
                             class="sortIcon"
                           >
@@ -3070,6 +3075,11 @@ Object {
                             />
                           </span>
                           Finalization date
+                        </th>
+                        <th
+                          rowspan="2"
+                        >
+                          Actions
                         </th>
                       </tr>
                     </thead>
@@ -3094,6 +3104,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3103,11 +3118,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3130,6 +3140,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3139,11 +3154,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3166,6 +3176,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3175,11 +3190,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3202,6 +3212,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3211,11 +3226,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3238,6 +3248,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3247,11 +3262,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3274,6 +3284,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3283,11 +3298,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3310,6 +3320,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3319,11 +3334,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3346,6 +3356,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3355,11 +3370,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3382,6 +3392,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3391,11 +3406,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                       <tr>
@@ -3418,6 +3428,11 @@ Object {
                         <td
                           class="Clickable"
                         >
+                          8/20/2020 11:01
+                        </td>
+                        <td
+                          class="Clickable"
+                        >
                           <i
                             aria-hidden="true"
                             class="fa fa-pencil EditLink"
@@ -3427,11 +3442,6 @@ Object {
                             aria-hidden="true"
                             class="fa fa-history HistoryDisplayIcon"
                           />
-                        </td>
-                        <td
-                          class="Clickable"
-                        >
-                          8/20/2020 11:01
                         </td>
                       </tr>
                     </tbody>
@@ -3780,14 +3790,19 @@ Object {
                 <div
                   class="text-right col-6"
                 >
-                  <span>
+                  <div>
                     <input
                       class="SearchFieldInput"
                       placeholder="Search"
-                      type="search"
+                      type="text"
                       value=""
                     />
-                  </span>
+                    <span
+                      id="ClearSearchInput"
+                    >
+                      ×
+                    </span>
+                  </div>
                 </div>
               </div>
               <div
@@ -4632,14 +4647,19 @@ Object {
               <div
                 class="text-right col-6"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
             </div>
             <div

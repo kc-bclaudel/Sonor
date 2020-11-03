@@ -173,7 +173,7 @@ context('sonor', () => {
     cy.get('tbody').find('tr').should('have.length', 2);
     cy.get('tbody').find('td').eq(2).should('have.text', 'Fabres Thierry');
 
-    // Testing search field filter by id
+    // Testing search field filter by label
     cy.get('.SearchFieldInput').clear().type('some');
     cy.get('tbody').find('tr').should('have.length', 20);
     cy.get('tbody')

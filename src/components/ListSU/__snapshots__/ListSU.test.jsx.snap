@@ -83,14 +83,19 @@ Object {
               <div
                 class="text-right col-12"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
               <div
                 class="col-6"
@@ -455,14 +460,19 @@ Object {
             <div
               class="text-right col-12"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
             <div
               class="col-6"
@@ -884,14 +894,19 @@ Object {
               <div
                 class="text-right col-12"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
               <div
                 class="col-6"
@@ -1256,14 +1271,19 @@ Object {
             <div
               class="text-right col-12"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
             <div
               class="col-6"
@@ -1685,14 +1705,19 @@ Object {
               <div
                 class="text-right col-12"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
               <div
                 class="col-6"
@@ -2057,14 +2082,19 @@ Object {
             <div
               class="text-right col-12"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
             <div
               class="col-6"
@@ -2486,14 +2516,19 @@ Object {
               <div
                 class="text-right col-12"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
               <div
                 class="col-6"
@@ -2862,14 +2897,19 @@ Object {
             <div
               class="text-right col-12"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
             <div
               class="col-6"
@@ -3299,14 +3339,19 @@ Object {
               <div
                 class="text-right col-12"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
               <div
                 class="col-6"
@@ -3671,14 +3716,19 @@ Object {
             <div
               class="text-right col-12"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
             <div
               class="col-6"

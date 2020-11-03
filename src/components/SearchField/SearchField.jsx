@@ -31,6 +31,7 @@ class SearchField extends React.Component {
         inputValue,
       ));
     }
+    
   }
 
   updateInputValue(e) {
@@ -45,18 +46,34 @@ class SearchField extends React.Component {
     ));
   }
 
+  clearSearchFeild() {
+    const {
+      data, searchBy, updateFunc,
+    } = this.props;
+    this.setState({
+      inputValue: '',
+    });
+    updateFunc(getMatchingLines(
+      data,
+      searchBy,
+      '',
+    ));
+  }
+
   render() {
     const { inputValue } = this.state;
     return (
-      <span>
+      <div>
         <input
           className="SearchFieldInput"
-          type="search"
+          type="text"
           placeholder={D.search}
           value={inputValue}
           onChange={(e) => this.updateInputValue(e)}
-        />
-      </span>
+          />
+        <span id="ClearSearchInput" onClick={() => this.clearSearchFeild()}>&times;</span>
+      </div>
+        
     );
   }
 }

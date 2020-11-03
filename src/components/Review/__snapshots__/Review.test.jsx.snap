@@ -89,14 +89,19 @@ Object {
               <div
                 class="text-right col-6"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
             </div>
             <div
@@ -137,7 +142,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                       Interviewer
@@ -506,14 +511,19 @@ Object {
             <div
               class="text-right col-6"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -554,7 +564,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                     Interviewer
@@ -980,14 +990,19 @@ Object {
               <div
                 class="text-right col-6"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
             </div>
             <div
@@ -1028,7 +1043,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                       Interviewer
@@ -1397,14 +1412,19 @@ Object {
             <div
               class="text-right col-6"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -1445,7 +1465,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                     Interviewer
@@ -1871,14 +1891,19 @@ Object {
               <div
                 class="text-right col-6"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
             </div>
             <div
@@ -1919,7 +1944,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                       Interviewer
@@ -2288,14 +2313,19 @@ Object {
             <div
               class="text-right col-6"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -2336,7 +2366,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                     Interviewer
@@ -2794,14 +2824,19 @@ Object {
               <div
                 class="text-right col-6"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
             </div>
             <div
@@ -2842,7 +2877,7 @@ Object {
                           class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
                         />
                       </span>
                       Interviewer
@@ -3061,14 +3096,19 @@ Object {
             <div
               class="text-right col-6"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -3109,7 +3149,7 @@ Object {
                         class="fa fa-fw fa-caret-down sortIconDown iconInactive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
                       />
                     </span>
                     Interviewer
@@ -3393,14 +3433,19 @@ Object {
               <div
                 class="text-right col-6"
               >
-                <span>
+                <div>
                   <input
                     class="SearchFieldInput"
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     value=""
                   />
-                </span>
+                  <span
+                    id="ClearSearchInput"
+                  >
+                    ×
+                  </span>
+                </div>
               </div>
             </div>
             <div
@@ -3438,10 +3483,10 @@ Object {
                         class="sortIcon"
                       >
                         <i
-                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                          class="fa fa-fw fa-caret-down sortIconDown iconActive"
                         />
                         <i
-                          class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
                         />
                       </span>
                       Interviewer
@@ -3452,32 +3497,6 @@ Object {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td
-                      class="Clickable"
-                    >
-                      <input
-                        name="4818"
-                        type="checkbox"
-                        value="4818"
-                      />
-                    </td>
-                    <td
-                      class="Clickable"
-                    >
-                      Survey on the Simpsons tv show 2020
-                    </td>
-                    <td
-                      class="Clickable"
-                    >
-                      Boulanger Jacques
-                    </td>
-                    <td
-                      class="Clickable"
-                    >
-                      4818
-                    </td>
-                  </tr>
                   <tr>
                     <td
                       class="Clickable"
@@ -3502,6 +3521,32 @@ Object {
                       class="Clickable"
                     >
                       1032
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable"
+                    >
+                      <input
+                        name="4818"
+                        type="checkbox"
+                        value="4818"
+                      />
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Survey on the Simpsons tv show 2020
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      Boulanger Jacques
+                    </td>
+                    <td
+                      class="Clickable"
+                    >
+                      4818
                     </td>
                   </tr>
                 </tbody>
@@ -3660,14 +3705,19 @@ Object {
             <div
               class="text-right col-6"
             >
-              <span>
+              <div>
                 <input
                   class="SearchFieldInput"
                   placeholder="Search"
-                  type="search"
+                  type="text"
                   value=""
                 />
-              </span>
+                <span
+                  id="ClearSearchInput"
+                >
+                  ×
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -3705,10 +3755,10 @@ Object {
                       class="sortIcon"
                     >
                       <i
-                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        class="fa fa-fw fa-caret-down sortIconDown iconActive"
                       />
                       <i
-                        class="fa fa-fw fa-caret-up sortIconUp iconActive"
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
                       />
                     </span>
                     Interviewer
@@ -3719,32 +3769,6 @@ Object {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td
-                    class="Clickable"
-                  >
-                    <input
-                      name="4818"
-                      type="checkbox"
-                      value="4818"
-                    />
-                  </td>
-                  <td
-                    class="Clickable"
-                  >
-                    Survey on the Simpsons tv show 2020
-                  </td>
-                  <td
-                    class="Clickable"
-                  >
-                    Boulanger Jacques
-                  </td>
-                  <td
-                    class="Clickable"
-                  >
-                    4818
-                  </td>
-                </tr>
                 <tr>
                   <td
                     class="Clickable"
@@ -3769,6 +3793,32 @@ Object {
                     class="Clickable"
                   >
                     1032
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="Clickable"
+                  >
+                    <input
+                      name="4818"
+                      type="checkbox"
+                      value="4818"
+                    />
+                  </td>
+                  <td
+                    class="Clickable"
+                  >
+                    Survey on the Simpsons tv show 2020
+                  </td>
+                  <td
+                    class="Clickable"
+                  >
+                    Boulanger Jacques
+                  </td>
+                  <td
+                    class="Clickable"
+                  >
+                    4818
                   </td>
                 </tr>
               </tbody>
