@@ -16,7 +16,7 @@ const labeles_states = {
         en: 'Visible to the interviewer and not clickable',
     },
     VIC: {
-        fr: 'Visible enquêteur et cliqu<ble',
+        fr: 'Visible enquêteur et cliquable',
         en: 'Visible to the interviewer and clickable',
     },
     PRC: {

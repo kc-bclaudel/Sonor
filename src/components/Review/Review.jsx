@@ -17,7 +17,7 @@ function Review({
   const { survey } = location;
   const { id } = match.params;
   const [data, setData] = useState([]);
-  const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [sort, setSort] = useState({ sortOn: 'interviewer', asc: true });
   const [redirect, setRedirect] = useState(!survey && id ? '/' : null);
 
   const fetchData = useCallback(() => {
