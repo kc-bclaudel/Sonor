@@ -1811,6 +1811,7 @@ const mocks = {
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1561932000000,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -1826,6 +1827,7 @@ const mocks = {
       ssech: 'dlcB55jdf',
       location: '90000',
       city: 'BELFORT',
+      finalizationDate: 1561932100001,
       interviewer: {
         id: 'INTW6',
         interviewerFirstName: 'Jacques',
@@ -1836,11 +1838,28 @@ const mocks = {
     },
     {
       campaignLabel: 'simpsons2020x00',
-      id: '1023',
+      id: '4814',
+      questionnaireId: 'QXT55',
+      ssech: 'dlcB55jdf',
+      location: '90000',
+      city: 'BELFORT',
+      finalizationDate: 1603304314268,
+      interviewer: {
+        id: 'INTW6',
+        interviewerFirstName: 'Jacques',
+        interviewerLastName: 'Boulanger',
+      },
+      interviewerFirstName: 'Jacques',
+      interviewerLastName: 'Boulanger',
+    },
+    {
+      campaignLabel: 'simpsons2020x00',
+      id: '1024',
       questionnaireId: 'QXT55',
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1613304314269,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -1851,11 +1870,12 @@ const mocks = {
     },
     {
       campaignLabel: 'simpsons2020x00',
-      id: '4811',
+      id: '4812',
       questionnaireId: 'QXT55',
       ssech: 'dlcB55jdf',
       location: '90000',
       city: 'BELFORT',
+      finalizationDate: 1623314314268,
       interviewer: {
         id: 'INTW6',
         interviewerFirstName: 'Jacques',
@@ -1866,11 +1886,12 @@ const mocks = {
     },
     {
       campaignLabel: 'simpsons2020x00',
-      id: '1023',
+      id: '1026',
       questionnaireId: 'QXT55',
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1651932000069,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -1881,11 +1902,12 @@ const mocks = {
     },
     {
       campaignLabel: 'simpsons2020x00',
-      id: '4811',
+      id: '4813',
       questionnaireId: 'QXT55',
       ssech: 'dlcB55jdf',
       location: '90000',
       city: 'BELFORT',
+      finalizationDate: 1661932000000,
       interviewer: {
         id: 'INTW6',
         interviewerFirstName: 'Jacques',
@@ -1896,11 +1918,12 @@ const mocks = {
     },
     {
       campaignLabel: 'simpsons2020x00',
-      id: '1023',
+      id: '1025',
       questionnaireId: 'QXT55',
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1761932000000,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -1908,21 +1931,6 @@ const mocks = {
       },
       interviewerFirstName: 'Chloé',
       interviewerLastName: 'Berlin',
-    },
-    {
-      campaignLabel: 'simpsons2020x00',
-      id: '4811',
-      questionnaireId: 'QXT55',
-      ssech: 'dlcB55jdf',
-      location: '90000',
-      city: 'BELFORT',
-      interviewer: {
-        id: 'INTW6',
-        interviewerFirstName: 'Jacques',
-        interviewerLastName: 'Boulanger',
-      },
-      interviewerFirstName: 'Jacques',
-      interviewerLastName: 'Boulanger',
     },
   ],
   formattedLisSuToReviewSimpsons: [
@@ -2127,6 +2135,7 @@ const mocks = {
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1561932000000,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -2138,6 +2147,7 @@ const mocks = {
       ssech: 'dlcB55jdf',
       location: '90000',
       city: 'BELFORT',
+      finalizationDate: 1561932100001,
       interviewer: {
         id: 'INTW6',
         interviewerFirstName: 'Jacques',
@@ -2149,6 +2159,7 @@ const mocks = {
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1613304314269,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -2160,6 +2171,7 @@ const mocks = {
       ssech: 'dlcB55jdf',
       location: '90000',
       city: 'BELFORT',
+      finalizationDate: 1623314314268,
       interviewer: {
         id: 'INTW6',
         interviewerFirstName: 'Jacques',
@@ -2171,6 +2183,7 @@ const mocks = {
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1761932000000,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -2182,6 +2195,7 @@ const mocks = {
       ssech: 'dlcB55jdf',
       location: '90000',
       city: 'BELFORT',
+      finalizationDate: 1661932000000,
       interviewer: {
         id: 'INTW6',
         interviewerFirstName: 'Jacques',
@@ -2189,10 +2203,11 @@ const mocks = {
       },
     },
     {
-      id: '1027',
+      id: '1026',
       ssech: 'hgSkR29',
       location: '95160',
       city: 'MONTMORENCY',
+      finalizationDate: 1651932000069,
       interviewer: {
         id: 'INTW5',
         interviewerFirstName: 'Chloé',
@@ -2200,14 +2215,15 @@ const mocks = {
       },
     },
     {
-      id: '4815',
+      id: '4814',
       ssech: 'dlcB55jdf',
       location: '90000',
       city: 'BELFORT',
+      finalizationDate: 1603304314268,
       interviewer: {
-        id: 'INTW7',
-        interviewerFirstName: 'Thierry',
-        interviewerLastName: 'Fabres',
+        id: 'INTW6',
+        interviewerFirstName: 'Jacques',
+        interviewerLastName: 'Boulanger',
       },
     },
     {
@@ -3435,6 +3451,7 @@ const mocks = {
         ssech: 'hgSkR29',
         location: '95160',
         city: 'MONTMORENCY',
+        finalizationDate: 1561932000000,
         interviewer: {
           id: 'INTW5',
           interviewerFirstName: 'Chloé',
@@ -3447,6 +3464,7 @@ const mocks = {
         ssech: 'dlcB55jdf',
         location: '90000',
         city: 'BELFORT',
+        finalizationDate: 1561932100001,
         interviewer: {
           id: 'INTW6',
           interviewerFirstName: 'Jacques',
@@ -3455,10 +3473,11 @@ const mocks = {
       },
       {
         campaignLabel: 'simpsons2020x00',
-        id: '1023',
+        id: '1024',
         ssech: 'hgSkR29',
         location: '95160',
         city: 'MONTMORENCY',
+        finalizationDate: 1613304314269,
         interviewer: {
           id: 'INTW5',
           interviewerFirstName: 'Chloé',
@@ -3467,10 +3486,11 @@ const mocks = {
       },
       {
         campaignLabel: 'simpsons2020x00',
-        id: '4811',
+        id: '4812',
         ssech: 'dlcB55jdf',
         location: '90000',
         city: 'BELFORT',
+        finalizationDate: 1623314314268,
         interviewer: {
           id: 'INTW6',
           interviewerFirstName: 'Jacques',
@@ -3479,10 +3499,11 @@ const mocks = {
       },
       {
         campaignLabel: 'simpsons2020x00',
-        id: '1023',
+        id: '1025',
         ssech: 'hgSkR29',
         location: '95160',
         city: 'MONTMORENCY',
+        finalizationDate: 1761932000000,
         interviewer: {
           id: 'INTW5',
           interviewerFirstName: 'Chloé',
@@ -3491,10 +3512,11 @@ const mocks = {
       },
       {
         campaignLabel: 'simpsons2020x00',
-        id: '4811',
+        id: '4813',
         ssech: 'dlcB55jdf',
         location: '90000',
         city: 'BELFORT',
+        finalizationDate: 1661932000000,
         interviewer: {
           id: 'INTW6',
           interviewerFirstName: 'Jacques',
@@ -3503,10 +3525,11 @@ const mocks = {
       },
       {
         campaignLabel: 'simpsons2020x00',
-        id: '1023',
+        id: '1026',
         ssech: 'hgSkR29',
         location: '95160',
         city: 'MONTMORENCY',
+        finalizationDate: 1651932000069,
         interviewer: {
           id: 'INTW5',
           interviewerFirstName: 'Chloé',
@@ -3515,10 +3538,11 @@ const mocks = {
       },
       {
         campaignLabel: 'simpsons2020x00',
-        id: '4811',
+        id: '4814',
         ssech: 'dlcB55jdf',
         location: '90000',
         city: 'BELFORT',
+        finalizationDate: 1603304314268,
         interviewer: {
           id: 'INTW6',
           interviewerFirstName: 'Jacques',

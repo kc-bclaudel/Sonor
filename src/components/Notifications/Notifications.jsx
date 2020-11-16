@@ -11,6 +11,7 @@ import { AsyncTypeahead } from 'react-bootstrap-typeahead';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import D from '../../i18n';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
+import { Fragment } from 'react';
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -93,23 +94,22 @@ class Notifications extends React.Component {
                     <Card.Title>{D.notify}</Card.Title>
                     <span>{`${D.recipients}: `}</span>
                     <div id="recipientWrapper">
-
                       <AsyncTypeahead
-                        id="async-example"
+                        id="async-typehead"
                         isLoading={isLoading}
                         ref={this.typehead}
                         labelKey={(option) => `@${option.id}${option.label ? ` (${option.label.length < 20 ? option.label : `${option.label.slice(0, 20)}...`})` : ''}`}
                         minLength={3}
                         onSearch={(q) => this.handleSearch(q)}
-                        options={options.slice(0, 5)}
-                        renderMenuItemChildren={(option) => (
-                          <fragment>
+                        options={options.slice(0, options.length)}
+                        renderMenuItemChildren={(option) =>(
+                          <Fragment>
                             <span>{`${option.id}${option.label ? ` (${option.label})` : ''}`}</span>
-                          </fragment>
+                          </Fragment>
                         )}
                         multiple
                         size="small"
-                        onChange={(e) => this.updateRecipients(e)}
+                        onChange={(e) =>{this.updateRecipients(e)}}
                       />
                     </div>
                     <span>{`${D.message}: `}</span>

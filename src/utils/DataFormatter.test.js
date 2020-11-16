@@ -5,6 +5,7 @@ import DataFormatter from './DataFormatter';
 import Service from './Service';
 import mocks from '../tests/mock_responses';
 import C from './constants.json';
+import Utils from './Utils';
 
 const toLocaleDateString = Date.prototype.toLocaleString;
 Date.prototype.toLocaleDateString = function() {
@@ -49,7 +50,9 @@ Service.mockImplementation(() => ({
   getInterviewers: jest.fn((id, cb) => (cb(pearlJamMocks.interviewersByCampaign))),
   getNotAttributedByCampaign: jest.fn((id, cb) => (cb(pearlJamMocks.notAttributed))),
   getAbandonedByCampaign: jest.fn((id, cb) => (cb(pearlJamMocks.abandoned))),
-  getTerminatedByCampaign: jest.fn((id, cb) => (cb(pearlJamMocks.terminated))),
+  getTerminatedByCampaign: jest.fn(
+    (id, cb) => {(cb(Utils.sortData(pearlJamMocks.terminated, 'finalizationDate', true)));resolve(Utils.sortData(processedData, 'finalizationDate', true));}
+    ),
   getStatesBySurveyId: jest.fn((id, cb) => (cb(pearlJamMocks.states))),
   getTotalDemByCampaign: jest.fn((id, cb) => (cb(pearlJamMocks.stateCountTotal))),
   getSurveyUnits: jest.fn((id, date, cb) => (cb(pearlJamMocks.surveyUnits))),
