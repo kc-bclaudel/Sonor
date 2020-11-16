@@ -32,7 +32,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.5
+                      0.1.6
                     </div>
                   </a>
                 </div>
@@ -958,7 +958,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.5
+                    0.1.6
                   </div>
                 </a>
               </div>
@@ -1941,7 +1941,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.5
+                      0.1.6
                     </div>
                   </a>
                 </div>
@@ -2316,7 +2316,7 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            6/30/2019 22:00
                           </td>
                           <td
                             class="Clickable"
@@ -2352,7 +2352,7 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            6/30/2019 22:01
                           </td>
                           <td
                             class="Clickable"
@@ -2388,7 +2388,7 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            2/14/2021 12:05
                           </td>
                           <td
                             class="Clickable"
@@ -2424,7 +2424,7 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            6/10/2021 08:38
                           </td>
                           <td
                             class="Clickable"
@@ -2460,7 +2460,7 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            10/31/2025 17:33
                           </td>
                           <td
                             class="Clickable"
@@ -2496,7 +2496,7 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            8/31/2022 07:46
                           </td>
                           <td
                             class="Clickable"
@@ -2517,7 +2517,7 @@ Object {
                             class="Clickable"
                             data-testid="campaign-label"
                           >
-                            1027
+                            1026
                           </td>
                           <td
                             class="Clickable"
@@ -2532,7 +2532,7 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            5/7/2022 14:00
                           </td>
                           <td
                             class="Clickable"
@@ -2553,7 +2553,7 @@ Object {
                             class="Clickable"
                             data-testid="campaign-label"
                           >
-                            4815
+                            4814
                           </td>
                           <td
                             class="Clickable"
@@ -2563,12 +2563,12 @@ Object {
                           <td
                             class="Clickable"
                           >
-                            Fabres Thierry
+                            Boulanger Jacques
                           </td>
                           <td
                             class="Clickable"
                           >
-                            8/20/2020 11:01
+                            10/21/2020 18:18
                           </td>
                           <td
                             class="Clickable"
@@ -2729,7 +2729,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.5
+                    0.1.6
                   </div>
                 </a>
               </div>
@@ -3104,7 +3104,7 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          6/30/2019 22:00
                         </td>
                         <td
                           class="Clickable"
@@ -3140,7 +3140,7 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          6/30/2019 22:01
                         </td>
                         <td
                           class="Clickable"
@@ -3176,7 +3176,7 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          2/14/2021 12:05
                         </td>
                         <td
                           class="Clickable"
@@ -3212,7 +3212,7 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          6/10/2021 08:38
                         </td>
                         <td
                           class="Clickable"
@@ -3248,7 +3248,7 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          10/31/2025 17:33
                         </td>
                         <td
                           class="Clickable"
@@ -3284,7 +3284,7 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          8/31/2022 07:46
                         </td>
                         <td
                           class="Clickable"
@@ -3305,7 +3305,7 @@ Object {
                           class="Clickable"
                           data-testid="campaign-label"
                         >
-                          1027
+                          1026
                         </td>
                         <td
                           class="Clickable"
@@ -3320,7 +3320,7 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          5/7/2022 14:00
                         </td>
                         <td
                           class="Clickable"
@@ -3341,7 +3341,7 @@ Object {
                           class="Clickable"
                           data-testid="campaign-label"
                         >
-                          4815
+                          4814
                         </td>
                         <td
                           class="Clickable"
@@ -3351,12 +3351,12 @@ Object {
                         <td
                           class="Clickable"
                         >
-                          Fabres Thierry
+                          Boulanger Jacques
                         </td>
                         <td
                           class="Clickable"
                         >
-                          8/20/2020 11:01
+                          10/21/2020 18:18
                         </td>
                         <td
                           class="Clickable"
@@ -3574,7 +3574,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.5
+                      0.1.6
                     </div>
                   </a>
                 </div>
@@ -4431,7 +4431,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.5
+                    0.1.6
                   </div>
                 </a>
               </div>
@@ -5345,7 +5345,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.5
+                      0.1.6
                     </div>
                   </a>
                 </div>
@@ -5542,7 +5542,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.5
+                    0.1.6
                   </div>
                 </a>
               </div>
@@ -5796,7 +5796,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.5
+                      0.1.6
                     </div>
                   </a>
                 </div>
@@ -6046,7 +6046,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.5
+                    0.1.6
                   </div>
                 </a>
               </div>
@@ -6353,7 +6353,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.5
+                      0.1.6
                     </div>
                   </a>
                 </div>
@@ -6776,7 +6776,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.5
+                    0.1.6
                   </div>
                 </a>
               </div>
@@ -7256,7 +7256,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.5
+                      0.1.6
                     </div>
                   </a>
                 </div>
@@ -7457,7 +7457,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.1.5
+                    0.1.6
                   </div>
                 </a>
               </div>
