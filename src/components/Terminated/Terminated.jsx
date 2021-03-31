@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, Redirect } from 'react-router-dom';
+import { NotificationManager } from 'react-notifications';
 import SurveySelector from '../SurveySelector/SurveySelector';
 import TerminatedTable from './TerminatedTable';
 import Utils from '../../utils/Utils';
@@ -38,6 +39,18 @@ function Terminated({
     setData(sortedData);
   }
 
+  function validateUpdateComment(suToModifiedSelected, comment){
+    dataRetreiver.updateSurveyUnitsComment(suToModifiedSelected, comment)
+      .then((res) => {
+        if (res.status === 200 || res.status === 201 || res.status === 204) {
+          NotificationManager.success(D.reviewAlertSuccess, D.updateSuccess, 3500);
+        } else {
+          NotificationManager.error(D.reviewAlertError, D.error, 3500);
+        }
+        fetchData();
+      });
+  }
+
   const surveyTitle = !survey || (<div className="SurveyTitle">{survey.label}</div>);
   const surveySelector = !survey || (
     <SurveySelector
@@ -65,7 +78,7 @@ function Terminated({
           </Row>
         </Container>
         <Card className="ViewCard">
-          <Card.Title>
+          <Card.Title className="PageTitle">
             {D.titleListSu}
             {data.length}
           </Card.Title>
@@ -78,6 +91,7 @@ function Terminated({
                   survey={survey}
                   dataRetreiver={dataRetreiver}
                   handleSort={handleSort}
+                  validateUpdateComment={validateUpdateComment}
                 />
               )
               : <span>{D.noSuFinalized}</span>

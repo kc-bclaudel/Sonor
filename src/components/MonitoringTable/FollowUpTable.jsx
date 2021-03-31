@@ -58,7 +58,7 @@ function FollowUpTable({
   );
   let firstColumnTitle;
   let firstColumnSortAttribute;
-  if (mode === C.BY_SURVEY) {
+  if (mode === C.BY_SURVEY || mode === C.BY_SURVEY_ONE_INTERVIEWER) {
     firstColumnTitle = D.survey;
     firstColumnSortAttribute = 'survey';
   } else if (mode === C.BY_SITE) {
@@ -74,58 +74,98 @@ function FollowUpTable({
     <Table id="FollowUpTable" className="CustomTable" bordered striped hover responsive size="sm">
       <thead>
         <tr>
-          <th rowSpan="2" data-testid="TableHeader_label" onClick={handleSortFunct(firstColumnSortAttribute)}>
+          <th className="EmptyHeader" />
+          <th className="ColumnSpacing" />
+          <th className="EmptyHeader" />
+          <th rowSpan="2" className="ColumnSpacing" />
+          <th colSpan="6" className="CenteredText">{D.numberOfSurveyUnits}</th>
+          <th rowSpan="2" className="ColumnSpacing" />
+          <th colSpan="4" className="YellowHeader CenteredText">{D.suCollectionsOngoing}</th>
+        </tr>
+        <tr>
+          <th
+            data-testid="TableHeader_label"
+            onClick={handleSortFunct(firstColumnSortAttribute)}
+            className="Clickable"
+          >
             {firstColumnTitle}
             <SortIcon val={firstColumnSortAttribute} sort={sort} />
           </th>
-          <th rowSpan="2" className="ColumnSpacing" />
-          <th rowSpan="2" className="YellowHeader" onClick={handleSortFunct('completionRate')}>
+          <th className="ColumnSpacing" />
+          <th
+            className="YellowHeader"
+            onClick={handleSortFunct('completionRate')}
+          >
             {D.completionRate}
             <SortIcon val="completionRate" sort={sort} />
           </th>
-          <th rowSpan="2" className="ColumnSpacing" />
-          <th colSpan="6">{D.numberOfSurveyUnits}</th>
-          <th rowSpan="2" className="ColumnSpacing" />
-          <th colSpan="4" className="YellowHeader">{D.suCollectionsOngoing}</th>
-        </tr>
-        <tr>
-          <th onClick={handleSortFunct('total')}>
+          <th
+            onClick={handleSortFunct('total')}
+            className="Clickable"
+          >
             {D.allocated}
             <SortIcon val="total" sort={sort} />
           </th>
-          <th onClick={handleSortFunct('notStarted')}>
+          <th
+            onClick={handleSortFunct('notStarted')}
+            className="Clickable"
+          >
             {D.notStarted}
             <SortIcon val="notStarted" sort={sort} />
           </th>
-          <th onClick={handleSortFunct('onGoing')}>
+          <th
+            onClick={handleSortFunct('onGoing')}
+            className="Clickable"
+          >
             {D.inProgressInterviewer}
             <SortIcon val="onGoing" sort={sort} />
           </th>
-          <th onClick={handleSortFunct('waitingForIntValidation')}>
+          <th
+            onClick={handleSortFunct('waitingForIntValidation')}
+            className="Clickable"
+          >
             {D.waitingForIntReview}
             <SortIcon val="waitingForIntValidation" sort={sort} />
           </th>
-          <th onClick={handleSortFunct('intValidated')}>
+          <th
+            onClick={handleSortFunct('intValidated')}
+            className="Clickable"
+          >
             {D.reviewedByInterviewer}
             <SortIcon val="intValidated" sort={sort} />
           </th>
-          <th onClick={handleSortFunct('demValidated')}>
+          <th
+            onClick={handleSortFunct('demValidated')}
+            className="Clickable"
+          >
             {D.reviewedEnded}
             <SortIcon val="demValidated" sort={sort} />
           </th>
-          <th className="YellowHeader" onClick={handleSortFunct('preparingContact')}>
+          <th
+            className="YellowHeader Clickable"
+            onClick={handleSortFunct('preparingContact')}
+          >
             {D.preparingContact}
             <SortIcon val="preparingContact" sort={sort} />
           </th>
-          <th className="YellowHeader" onClick={handleSortFunct('atLeastOneContact')}>
+          <th
+            className="YellowHeader Clickable"
+            onClick={handleSortFunct('atLeastOneContact')}
+          >
             {D.atLeastOneContact}
             <SortIcon val="atLeastOneContact" sort={sort} />
           </th>
-          <th className="YellowHeader" onClick={handleSortFunct('appointmentTaken')}>
+          <th
+            className="YellowHeader Clickable"
+            onClick={handleSortFunct('appointmentTaken')}
+          >
             {D.appointmentTaken}
             <SortIcon val="appointmentTaken" sort={sort} />
           </th>
-          <th className="YellowHeader" onClick={handleSortFunct('interviewStarted')}>
+          <th
+            className="YellowHeader Clickable"
+            onClick={handleSortFunct('interviewStarted')}
+          >
             {D.interviewStarted}
             <SortIcon val="interviewStarted" sort={sort} />
           </th>

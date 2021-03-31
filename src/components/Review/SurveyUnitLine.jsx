@@ -1,7 +1,7 @@
 import React from 'react';
 
 function SurveyUnitLine({
-  lineData, isChecked, updateFunc,
+  lineData, isChecked, updateFunc, handleShow
 }) {
   const {
     campaignLabel, interviewer, id,
@@ -10,12 +10,25 @@ function SurveyUnitLine({
 
   return (
     <tr>
-      <td className="Clickable">
-        <input key={id} type="checkbox" checked={isChecked} name={id} value={id} onChange={() => updateFunc()} />
+      <td className="CheckboxCol" onClick={() => updateFunc()}>
+        <input key={id} type="checkbox" checked={isChecked} name={id} value={id} />
       </td>
-      <td onClick={() => { window.open(`${queenUrl}/queen/readonly/questionnaire/${lineData.campaignId}/survey-unit/${lineData.id}`); }} className="Clickable">{campaignLabel}</td>
-      <td onClick={() => { window.open(`${queenUrl}/queen/readonly/questionnaire/${lineData.campaignId}/survey-unit/${lineData.id}`); }} className="Clickable">{interviewer}</td>
-      <td onClick={() => { window.open(`${queenUrl}/queen/readonly/questionnaire/${lineData.campaignId}/survey-unit/${lineData.id}`); }} className="Clickable">{id}</td>
+      <td>{campaignLabel}</td>
+      <td>{id}</td>
+      <td>{interviewer}</td>
+      <td>
+          <i
+            className="fa fa-calendar EditLink Clickable"
+            aria-hidden="true"
+            onClick={() => { window.open(`${queenUrl}/queen/readonly/questionnaire/${lineData.campaignId}/survey-unit/${lineData.id}`); }}
+          />
+          <span/>
+          <i
+            className="fa fa-pencil EditCommentSurveyIcon Clickable"
+            aria-hidden="true"
+            onClick={() => handleShow()}
+          />
+      </td>
     </tr>
   );
 }

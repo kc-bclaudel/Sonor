@@ -6,7 +6,7 @@
     margin: 0 !important;
 
 }
-li>span, a {
+li>span, button.selectedSubeMenu, a {
     position: relative;
     display: block;
     padding: 0 16px;
@@ -28,7 +28,21 @@ li {
     list-style: none;
     }
 
-.dropdown-menu .sub-menu {
+button.selectedSubeMenu{
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+    display: block;
+    padding: 0 16px;
+    line-height: inherit;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-menu .sub-menu, .dropdown-menu .sub-menu-level-2 {
   left: 100%;
   position: absolute;
   visibility: hidden;
@@ -36,9 +50,14 @@ li {
   margin-top: -1px;
 }
 
-.dropdown-menu li:hover .sub-menu {
+.dropdown-menu li:hover .sub-menu,  
+.dropdown-menu li:hover .sub-menu li:hover .sub-menu-level-2 {
   visibility: visible;
 } 
+
+.larger-sub-menu{
+  width: 240px;
+}
   
 .dropdown-menu{
   display: block !important;
@@ -75,8 +94,16 @@ li {
   top: 4px;
 }
 
-#SecondDropdown {
+.secondDropdownRow {
   top: 23px !important;
+}
+
+.thirdDropdownRow{
+  top: 46px !important;
+}
+
+.fourthDropdownRow{
+  top: 69px !important;
 }
 
 #appVersion {
@@ -92,10 +119,20 @@ li {
   color: #007bfe !important;
 }
 
-.HeaderFocusableButton:not(:focus) + ul{
-  visibility: hidden;
-}
+/* .HeaderFocusableButton:not(:focus) + ul{
+  opacity: 0;
+} */
 
 #FollowButton{
   margin-bottom: 0;
+}
+
+#headerButtonContainer2{
+  position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.headerRightButton{
+  display: inline-block;
 }

@@ -11,6 +11,7 @@ import Contacts from './Contacts';
 import SurveyUnits from './SurveyUnits';
 import SurveySelector from '../SurveySelector/SurveySelector';
 import D from '../../i18n';
+import './CampaignPortal.css';
 
 function CampaignPortal({
   location, dataRetreiver,
@@ -21,19 +22,37 @@ function CampaignPortal({
   initialData.notAttributed = { count: null };
   initialData.abandoned = { count: null };
   initialData.total = { total: null };
-  const survey = location.surveyInfos ? location.surveyInfos.survey : null;
-  const surveyInfo = location.surveyInfos ? location.surveyInfos.surveyInfo : null;
-
+  const [survey, setSurvey] = useState(location.surveyInfos ? location.surveyInfos.survey : null);
+  const [surveyInfo, setSurveyInfo] = useState(
+    location.surveyInfos ? location.surveyInfos.surveyInfo : null,
+  );
   const [data, setData] = useState(initialData);
   const [sort, setSort] = useState({ sortOn: 'CPinterviewer', asc: true });
-  const [redirect, setRedirect] = useState(!survey ? '/' : null);
+  const [redirect, setRedirect] = useState(!survey && !location.survey ? '/' : null);
+
+  useEffect(() => {
+    setSurvey(location.surveyInfos ? location.surveyInfos.survey : null);
+    setSurveyInfo(location.surveyInfos ? location.surveyInfos.surveyInfo : null);
+  }, [redirect, dataRetreiver, location]);
+
+  useEffect(() => {
+    if (!survey && location.survey) {
+      dataRetreiver.getDataForMainScreen(null, (campaignsData) => {
+        const newSurvey = campaignsData.find((s) => s.id === location.survey.id);
+        newSurvey.allSurveys = campaignsData;
+        setSurvey(newSurvey);
+        setSurveyInfo(campaignsData.find((s) => s.id === location.survey.id));
+        setRedirect(null);
+      });
+    }
+  }, [redirect, dataRetreiver, location, survey]);
 
   useEffect(() => {
     dataRetreiver.getDataForCampaignPortal(!survey || survey.id, (res) => {
       setData(res);
       setRedirect(null);
     });
-  }, [redirect, dataRetreiver, survey]);
+  }, [redirect, dataRetreiver, location, survey]);
 
   function handleSort(property, asc) {
     const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'campaignPortal', asc);
@@ -41,55 +60,62 @@ function CampaignPortal({
     setData(sortedData);
   }
 
-  return redirect
-    ? <Redirect to={redirect} />
-    : (
-      <div id="CampaignPortal">
-        <Container fluid>
-          <Row>
-            <Col>
-              <Link to="/" className="ButtonLink ReturnButtonLink">
-                <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
-              </Link>
-            </Col>
-            <Col xs={6}>
-              <div className="SurveyTitle">{survey.label}</div>
-            </Col>
-            <Col>
-              <SurveySelector
-                survey={survey}
-                updateFunc={(newSurvey) => setRedirect({
-                  pathname: `/portal/${newSurvey.id}`,
-                  surveyInfos: {
-                    survey: newSurvey,
-                    surveyInfo: newSurvey.allSurveys.find((s) => s.id === newSurvey.id),
-                  },
-                })}
-              />
-            </Col>
-          </Row>
-        </Container>
-        <Card className="ViewCard">
+  return !survey || !surveyInfo || (
+    redirect
+      ? <Redirect to={redirect} />
+      : (
+        <div id="CampaignPortal">
           <Container fluid>
             <Row>
               <Col>
-                <Card className="ViewCard">
-                  <TimeLine props={surveyInfo} />
-                </Card>
+                <Link to="/" className="ButtonLink ReturnButtonLink">
+                  <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
+                </Link>
               </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Contacts />
+              <Col xs={6}>
+                <div className="SurveyTitle">{survey.label}</div>
               </Col>
               <Col>
-                <SurveyUnits data={data} survey={survey} sort={sort} handleSortfunc={handleSort} />
+                <SurveySelector
+                  survey={survey}
+                  updateFunc={(newSurvey) => setRedirect({
+                    pathname: `/portal/${newSurvey.id}`,
+                    surveyInfos: {
+                      survey: newSurvey,
+                      surveyInfo: newSurvey.allSurveys.find((s) => s.id === newSurvey.id),
+                    },
+                  })}
+                />
               </Col>
             </Row>
           </Container>
-        </Card>
-      </div>
-    );
+          <Card className="ViewCard">
+            <Container fluid>
+              <Row>
+                <Col>
+                  <Card className="ViewCard">
+                    <TimeLine props={surveyInfo} />
+                  </Card>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Contacts />
+                </Col>
+                <Col>
+                  <SurveyUnits
+                    data={data}
+                    survey={survey}
+                    sort={sort}
+                    handleSortfunc={handleSort}
+                  />
+                </Col>
+              </Row>
+            </Container>
+          </Card>
+        </div>
+      )
+  );
 }
 
 export default CampaignPortal;

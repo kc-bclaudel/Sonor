@@ -56,7 +56,7 @@ class MainScreen extends React.Component {
     return (
       <div id="MainScreen">
         <Card className="ViewCard">
-          <Card.Title>{D.surveyList}</Card.Title>
+          <Card.Title className="PageTitle">{D.surveyList}</Card.Title>
           {
             data.length > 0
               ? (
@@ -67,36 +67,44 @@ class MainScreen extends React.Component {
                   <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
                     <thead>
                       <tr>
-                        <th rowSpan="2" onClick={handleSortFunct('label')}>
+                        <th className="EmptyHeader" />
+                        <th className="ColumnSpacing" />
+                        <th className="EmptyHeader" />
+                        <th className="EmptyHeader" />
+                        <th className="EmptyHeader" />
+                        <th className="ColumnSpacing" />
+                        <th className="EmptyHeader" />
+                        <th className="ColumnSpacing" />
+                        <th colSpan="6" className="CenteredText">{D.surveyUnits}</th>
+                      </tr>
+                      <tr>
+                        <th onClick={handleSortFunct('label')} className="Clickable">
                           <SortIcon val="label" sort={sort} />
                           {D.survey}
                         </th>
-                        <th rowSpan="2" className="ColumnSpacing" />
-                        <th rowSpan="2" onClick={handleSortFunct('collectionStartDate')}>
+                        <th className="ColumnSpacing" />
+                        <th onClick={handleSortFunct('collectionStartDate')} className="Clickable">
                           <SortIcon val="collectionStartDate" sort={sort} />
                           {D.collectionStartDate}
                         </th>
                         <th
-                          rowSpan="2"
                           data-testid="Header-collection-end-date"
                           onClick={handleSortFunct('collectionEndDate')}
+                          className="Clickable"
                         >
                           <SortIcon val="collectionEndDate" sort={sort} />
                           {D.collectionEndDate}
                         </th>
-                        <th rowSpan="2" onClick={handleSortFunct('endDate')}>
+                        <th onClick={handleSortFunct('endDate')} className="Clickable">
                           <SortIcon val="endDate" sort={sort} />
                           {D.endDate}
                         </th>
-                        <th rowSpan="2" className="ColumnSpacing" />
-                        <th rowSpan="2" onClick={handleSortFunct('phase')} className="Clickable">
+                        <th className="ColumnSpacing" />
+                        <th onClick={handleSortFunct('phase')} className="Clickable">
                           <SortIcon val="phase" sort={sort} />
                           {D.phase}
                         </th>
-                        <th rowSpan="2" className="ColumnSpacing" />
-                        <th colSpan="6">{D.surveyUnits}</th>
-                      </tr>
-                      <tr>
+                        <th className="ColumnSpacing" />
                         <th onClick={handleSortFunct('allocated')} className="Clickable">
                           <SortIcon val="allocated" sort={sort} />
                           {D.allocated}

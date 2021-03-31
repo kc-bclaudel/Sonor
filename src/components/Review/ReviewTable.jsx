@@ -8,6 +8,7 @@ import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
 import SurveyUnitLine from './SurveyUnitLine';
 import PaginationNav from '../PaginationNav/PaginationNav';
+import Form from 'react-bootstrap/Form';
 import D from '../../i18n';
 
 class ReviewTable extends React.Component {
@@ -19,15 +20,16 @@ class ReviewTable extends React.Component {
       checkAll: false,
       show: false,
       displayedLines: props.data,
+      showComment: false,
+      suToModifiedSelected: '',
+      oldComment: '',
+      newComment: '',
     };
   }
 
   componentDidUpdate(prevProps) {
     const { survey, data } = this.props;
-    const { checkboxArray } = this.state;
-
-    if (prevProps.survey !== survey
-      || data.length !== Object.keys(checkboxArray).length) {
+    if (prevProps.survey !== survey) {
       const newCheckboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});
       this.setState({ checkboxArray: newCheckboxArray, checkAll: false });
     }
@@ -53,25 +55,34 @@ class ReviewTable extends React.Component {
     this.setState({ show: true });
   }
 
-  validate() {
-    const { validateSU } = this.props;
-    const { checkboxArray } = this.state;
-
-    const lstSUFinalized = Object.entries(checkboxArray)
-      .filter((su) => (su[1]))
-      .map((su) => (su[0]));
-
-    validateSU(lstSUFinalized);
+  handleCloseComment() {
+    this.setState({ showComment: false });
   }
 
-  handleCheckAll(e) {
-    const { checkboxArray } = this.state;
+  handleShowComment(line) {
+    this.setState({ showComment: true, suToModifiedSelected: line.id, });
+    if(line.comments != null){
+      this.setState({oldComment: line.comments[0].value});
+    } else {
+      this.setState({oldComment: ''});
+    }
+  }
+
+  validate() {
+    const { validateUpdateComment } = this.props;
+    const { suToModifiedSelected, newComment } = this.state;
+    //TODO demander si il est possible de modifier les commentaires de plusieurs SU en même temps
+    validateUpdateComment(suToModifiedSelected, newComment);
+  }
+
+  handleCheckAll() {
+    const { checkboxArray, checkAll } = this.state;
     const newCheckboxArray = Object.keys(checkboxArray).reduce(
-      (acc, curr) => { acc[curr] = e.target.checked; return acc; }, {},
+      (acc, curr) => { acc[curr] = !checkAll; return acc; }, {},
     );
     this.setState({
       checkboxArray: newCheckboxArray,
-      checkAll: e.target.checked,
+      checkAll: !checkAll,
     });
   }
 
@@ -93,10 +104,13 @@ class ReviewTable extends React.Component {
   render() {
     const { sort, data, handleSort } = this.props;
     const {
-      displayedLines, pagination, checkboxArray, checkAll, show,
+      displayedLines, pagination, checkboxArray, checkAll, show, showComment,
+      suToModifiedSelected, oldComment
     } = this.state;
     const fieldsToSearch = ['campaignLabel', 'interviewer', 'id'];
     const toggleCheckBox = (i) => { this.toggleCheckBox(i); };
+    const handleCloseComment = () => {this.handleCloseComment()};
+    const handleShowComment = (line) => {this.handleShowComment(line)};
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div>
@@ -117,20 +131,29 @@ class ReviewTable extends React.Component {
         <Table id="SUTable" className="CustomTable" bordered striped hover responsive size="sm">
           <thead>
             <tr>
-              <th><input type="checkbox" name="checkAll" checked={checkAll} onChange={(e) => this.handleCheckAll(e)} /></th>
-              <th onClick={handleSortFunct('campaignLabel')}>
+              <th className="CheckboxCol" onClick={() => this.handleCheckAll()}>
+                <input type="checkbox" name="checkAll" checked={checkAll} />
+              </th>
+              <th onClick={handleSortFunct('campaignLabel')} className="Clickable">
                 <SortIcon val="campaignLabel" sort={sort} />
                 {D.survey}
               </th>
               <th
+               onClick={handleSortFunct('id')}
+               className="Clickable">
+                 <SortIcon val="id" sort={sort} />
+                {D.identifier}
+              </th>
+              <th
                 onClick={handleSortFunct('interviewer')}
                 data-testid="TableHeader_interviewer_name_review"
+                className="Clickable"
               >
                 <SortIcon val="interviewer" sort={sort} />
                 {D.interviewer}
               </th>
               <th>
-                {D.identifier}
+                {D.listSuActions}
               </th>
             </tr>
           </thead>
@@ -141,37 +164,73 @@ class ReviewTable extends React.Component {
                 Math.min(pagination.page * pagination.size, displayedLines.length),
               )
               .map((line) => (
-                <SurveyUnitLine
-                  key={line.id}
-                  lineData={line}
-                  isChecked={checkboxArray[line.id]}
-                  updateFunc={() => toggleCheckBox(line.id)}
-                />
+                  <SurveyUnitLine
+                    key={line.id}
+                    lineData={line}
+                    isChecked={checkboxArray[line.id]}
+                    updateFunc={() => toggleCheckBox(line.id)}
+                    handleShow={() => handleShowComment(line)}
+                  />
               ))}
+              <Modal show={showComment} onHide={() => handleCloseComment()}>
+                <Modal.Header closeButton>
+                  <Modal.Title>{D.modifiedCommentSu + suToModifiedSelected}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <Form.Group as={Col} controlId="formGridState">
+                  <Form.Label>{D.modifiedCommentSuLastComment}</Form.Label>
+                  <Form.Control type="text" defaultValue={oldComment}
+                  onChange={e => this.setState({ newComment: e.target.value })}> 
+                  </Form.Control>
+                  <Form.Text id="passwordHelpBlock" muted>
+                   {D.modifyCommentSuHelpText}
+                  </Form.Text>
+                </Form.Group>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button
+                    variant="secondary"
+                    data-testid="close-modal"
+                    onClick={() => handleCloseComment()}
+                  >
+                    {D.cancel}
+                  </Button>
+                  <Button
+                    variant="primary"
+                    data-testid="confirm-validate"
+                    onClick={() => { this.validate(); 
+                      handleCloseComment(); }}
+                  >
+                    {D.validate}
+                  </Button>
+                </Modal.Footer>
+              </Modal>
           </tbody>
         </Table>
         <div className="tableOptionsWrapper">
+          <button
+            id="btnValider"
+            type="button"
+            className="btn btn-primary"
+            disabled={this.isDisabled()}
+            data-testid="validate-su"
+            onClick={() => this.handleShow()}
+          >
+            {D.validate}
+          </button>
           <PaginationNav.PageSelector
             pagination={pagination}
             updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
             numberOfItems={displayedLines.length}
           />
         </div>
-        <button
-          type="button"
-          className="btn btn-primary"
-          disabled={this.isDisabled()}
-          data-testid="validate-su"
-          onClick={() => this.handleShow()}
-        >
-          {D.validate}
-        </button>
 
         <Modal show={show} onHide={() => this.handleClose()}>
-          <Modal.Header closeButton>
-            <Modal.Title>{D.reviewValidatePopupTitle}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{D.reviewValidatePopupBody}</Modal.Body>
+          <Modal.Body>
+            {D.reviewValidatePopupBodyPart1}
+            {Object.values(checkboxArray).filter((elm) => elm).length}
+            {D.reviewValidatePopupBodyPart2}
+          </Modal.Body>
           <Modal.Footer>
             <Button
               variant="secondary"
@@ -185,7 +244,7 @@ class ReviewTable extends React.Component {
               data-testid="confirm-validate"
               onClick={() => { this.validate(); this.handleClose(); }}
             >
-              {D.validate}
+              {D.popupConfirm}
             </Button>
           </Modal.Footer>
         </Modal>

@@ -40,6 +40,11 @@ const app = {
     fr: 'Choisir une enquête',
     en: 'Choose a survey',
   },
+  // Interviewer selector
+  chooseAnInterviewer: {
+    fr: 'Choisir un enquêteur',
+    en: 'Choose an interviewer',
+  },
   // Validate button
   validate: {
     fr: 'Valider',

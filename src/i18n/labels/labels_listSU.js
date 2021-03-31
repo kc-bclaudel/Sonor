@@ -31,6 +31,26 @@ const listSU = {
     fr: 'Aucune unité enquêtée à afficher',
     en: 'There are no survey units to display',
   },
+  state: {
+    fr: 'Statut provisoire',
+    en: 'Provisional state'
+  },
+  modified: {
+    fr: 'Modifier le statut',
+    en: 'Change the state',
+  },
+  modaleModifiedText: {
+    fr: 'Sélectionner la modalité souhaitée',
+    en: 'Select the desired modality'
+  },
+  validate: {
+    fr: 'Valider',
+    en: 'Validate'
+  },
+  cancel: {
+    fr: 'Annuler',
+    en: 'Cancel'
+  }
 };
 
 export default listSU;

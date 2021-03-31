@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useCallback} from 'react';
 import Button from 'react-bootstrap/Button';
 import { Col, Row } from 'react-bootstrap';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NotificationManager } from 'react-notifications';
-import SurveySelector from '../SurveySelector/SurveySelector';
-import SUTable from './SUTable';
+import CloseSUTable from './CloseSUTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
 
-function ListSU({
+function Close({
   location, dataRetreiver,
 }) {
   const { survey } = location;
@@ -16,15 +15,13 @@ function ListSU({
   const [data, setData] = useState([]);
   const [site, setSite] = useState('');
   const [sort, setSort] = useState({ sortOn: null, asc: null });
-  const [redirect, setRedirect] = useState(!survey ? '/' : null);
 
   const fetchData = useCallback(() => {
-    dataRetreiver.getDataForListSU(!survey || survey.id, (res) => {
-      setData(res.surveyUnits);
+    dataRetreiver.getDataForClosePage((res) => {
+      setData(res);
       setSite(res.site);
-      setRedirect(null);
     });
-  }, [dataRetreiver, survey]);
+  }, [dataRetreiver]);
 
   useEffect(() => {
     fetchData();
@@ -37,9 +34,9 @@ function ListSU({
   }, [data, sort]);
 
   function validateChangingState(lstSUChangingState, state) {
-    if (state === 'non traitée absence enquêteur') {
+    if(state==='non traitée absence enquêteur'){
       state = 'VIN';
-    } else if(state==='non traitée enquêteur') {
+    } else if(state==='non traitée enquêteur'){
       state = 'VIN';
     } else {
       state = 'VIN';
@@ -64,36 +61,26 @@ function ListSU({
     }
   }, [data, handleSort, sort.sortOn]);
 
-  return redirect
-    ? <Redirect to={redirect} />
-    : (
-      <div id="ListSU">
-        <Row>
-          <Col>
-            <Link to="/" className="ButtonLink ReturnButtonLink">
-              <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
-            </Link>
-          </Col>
-          <Col xs={6}>
-            <div className="SurveyTitle">{survey.label}</div>
-          </Col>
-          <Col id="RightCoListSU">
-            <SurveySelector
-              survey={survey}
-              updateFunc={(newSurvey) => setRedirect({ pathname: `/listSU/${newSurvey.id}`, survey: newSurvey })}
-            />
-          </Col>
-        </Row>
-        <SUTable
-          sort={sort}
-          handleSort={handleSort}
-          data={data}
-          survey={survey}
-          site={site}
-          validateChangingState={validateChangingState}
-        />
-      </div>
-    );
+  return (
+    <div id="ListSU">
+      <Row>
+        <Col>
+          <Link to="/" className="ButtonLink ReturnButtonLink">
+            <Button className="ReturnButton" data-testid="return-button">{D.back}</Button>
+          </Link>
+        </Col>
+
+      </Row>
+      <CloseSUTable
+        sort={sort}
+        handleSort={handleSort}
+        data={data}
+        survey={survey}
+        site={site}
+        validateChangingState={validateChangingState}
+      />
+    </div>
+  );
 }
 
-export default ListSU;
+export default Close;

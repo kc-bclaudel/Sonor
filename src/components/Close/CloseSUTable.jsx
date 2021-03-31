@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
 import PaginationNav from '../PaginationNav/PaginationNav';
-import SurveyUnitLine from './SurveyUnitLine';
+import CloseSurveyUnitLine from './CloseSurveyUnitLine';
 import D from '../../i18n';
 
 function makeTableForExport(data) {
@@ -19,7 +19,7 @@ function makeTableForExport(data) {
     D.town,
     D.interviewer,
     D.idep,
-    D.state
+    D.state,
   ]];
 
   return header.concat(data.map((line) => ([
@@ -29,11 +29,11 @@ function makeTableForExport(data) {
     line.city,
     line.interviewer,
     line.idep,
-    line.state
+    line.state,
   ])));
 }
 
-class SUTable extends React.Component {
+class CloseSUTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,7 +50,9 @@ class SUTable extends React.Component {
     const { data } = this.props;
     if (prevProps.data !== data) {
       this.setState({ displayedLines: data });
-      const newCheckboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});
+      const newCheckboxArray = data.reduce(
+        (acc, curr) => { acc[curr.id] = false; return acc; }, {},
+      );
       this.setState({ checkboxArray: newCheckboxArray, checkAll: false });
     }
   }
@@ -99,7 +101,7 @@ class SUTable extends React.Component {
     const lstSUChangingState = Object.entries(checkboxArray)
       .filter((su) => (su[1]))
       .map((su) => (su[0]));
-      validateChangingState(lstSUChangingState, stateModified);
+    validateChangingState(lstSUChangingState, stateModified);
   }
 
   handleExport() {
@@ -128,13 +130,15 @@ class SUTable extends React.Component {
   render() {
     const { data, sort, handleSort } = this.props;
     const fieldsToSearch = ['city', 'interviewer', 'id', 'state'];
-    const { pagination, displayedLines, checkboxArray, checkAll, show } = this.state;
+    const {
+      pagination, displayedLines, checkboxArray, checkAll, show, stateModified,
+    } = this.state;
     const toggleCheckBox = (i) => { this.toggleCheckBox(i); };
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <Card className="ViewCard">
         <Card.Title className="PageTitle">
-          {D.surveyUnitsAllocatedToTheOU}
+          {D.unprocessedSurveyUnitsToClose}
           {data.length}
           {!data.length
             || (
@@ -181,7 +185,11 @@ class SUTable extends React.Component {
                       <th>
                         <input type="checkbox" name="checkAll" checked={checkAll} onChange={(e) => this.handleCheckAll(e)} />
                       </th>
-                      <th onClick={handleSortFunct('id')}  className="Clickable">
+                      <th onClick={handleSortFunct('campaign')} className="Clickable">
+                        {D.identifier}
+                        <SortIcon val="campaign" sort={sort} />
+                      </th>
+                      <th onClick={handleSortFunct('id')} className="Clickable">
                         {D.identifier}
                         <SortIcon val="id" sort={sort} />
                       </th>
@@ -193,9 +201,9 @@ class SUTable extends React.Component {
                         {D.ssech}
                         <SortIcon val="ssech" sort={sort} />
                       </th>
-                      <th onClick={handleSortFunct('departement')} className="Clickable">
+                      <th onClick={handleSortFunct('location')} className="Clickable">
                         {D.department}
-                        <SortIcon val="departement" sort={sort} />
+                        <SortIcon val="location" sort={sort} />
                       </th>
                       <th onClick={handleSortFunct('city')} className="Clickable">
                         {D.town}
@@ -213,45 +221,52 @@ class SUTable extends React.Component {
                         (pagination.page - 1) * pagination.size,
                         Math.min(pagination.page * pagination.size, displayedLines.length),
                       )
-                      .map((line) => (<SurveyUnitLine key={line.id} lineData={line} isChecked={checkboxArray[line.id]}
-                        updateFunc={() => toggleCheckBox(line.id)} />))}
+                      .map((line) => (
+                        <CloseSurveyUnitLine
+                          key={line.id}
+                          lineData={line}
+                          isChecked={checkboxArray[line.id]}
+                          updateFunc={() => toggleCheckBox(line.id)}
+                        />
+                      ))}
                   </tbody>
                 </Table>
                 <div className="tableOptionsWrapper">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    disabled={this.isDisabled()}
+                    data-testid="validate-su"
+                    onClick={() => this.handleShow()}
+                  >
+                    {D.close2}
+                  </button>
                   <PaginationNav.PageSelector
                     pagination={pagination}
                     updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
                     numberOfItems={displayedLines.length}
                   />
                 </div>
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  disabled={this.isDisabled()}
-                  data-testid="validate-su"
-                  onClick={() => this.handleShow()}
-                >
-                  {D.modified}
-                </button>
                 <Modal show={show} onHide={() => this.handleClose()}>
                   <Modal.Header closeButton>
                     <Modal.Title>{D.modaleModifiedText}</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
-                  <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label>{D.state}</Form.Label>
-                    <Form.Control as="select"
-                     custom 
-                     placeholder={D.modaleModifiedText}
-                     defaultValue={-1}
-                     onChange={e => this.setState({stateModified: e.target.value})}
-                     >
-                      <option disabled value={-1} key={-1}>{D.modaleModifiedText}</option>
-                      <option>Non traitée absence enquêteur</option>
-                      <option>Non traitée enquêteur</option>
-                      <option>Droit de retrait</option>
-                    </Form.Control>
-                  </Form.Group>
+                    <Form.Group as={Col} controlId="formGridState">
+                      <Form.Label>{D.state}</Form.Label>
+                      <Form.Control
+                        as="select"
+                        custom
+                        placeholder={D.modaleModifiedText}
+                        defaultValue={-1}
+                        onChange={(e) => this.setState({ stateModified: e.target.value })}
+                      >
+                        <option disabled value={-1} key={-1}>{D.modaleModifiedText}</option>
+                        <option>Non traitée absence enquêteur</option>
+                        <option>Non traitée enquêteur</option>
+                        <option>Droit de retrait</option>
+                      </Form.Control>
+                    </Form.Group>
                   </Modal.Body>
                   <Modal.Footer>
                     <Button
@@ -263,9 +278,12 @@ class SUTable extends React.Component {
                     </Button>
                     <Button
                       variant="primary"
+                      disabled={stateModified === -1}
                       data-testid="confirm-validate"
-                      onClick={() => { this.validate(); 
-                        this.handleClose(); }}
+                      onClick={() => {
+                        this.validate();
+                        this.handleClose();
+                      }}
                     >
                       {D.validate}
                     </Button>
@@ -280,4 +298,4 @@ class SUTable extends React.Component {
   }
 }
 
-export default SUTable;
+export default CloseSUTable;

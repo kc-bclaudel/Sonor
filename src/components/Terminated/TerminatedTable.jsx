@@ -2,6 +2,9 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import displayStateHistoryTable from './DisplayStateHistoryTable';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import SearchField from '../SearchField/SearchField';
@@ -18,6 +21,11 @@ class TerminatedTable extends React.Component {
       toggleStateHistory: false,
       stateData: [],
       stateId: '',
+      showComment: false,
+      suToModifiedSelected: '',
+      oldComment: '',
+      newComment: '',
+
     };
     this.queenUrl = `${window.localStorage.getItem('QUEEN_URL_FRONT_END')}`;
   }
@@ -44,6 +52,27 @@ class TerminatedTable extends React.Component {
     this.setState({ toggleStateHistory: false });
   }
 
+  handleCloseComment() {
+    this.setState({ showComment: false });
+  }
+
+  handleShowComment(line) {
+    this.setState({ showComment: true, suToModifiedSelected: line.id });
+    if(line.comments != null){
+      this.setState({oldComment: line.comments[0].value});
+    } else {
+      this.setState({oldComment: ''});
+    }
+  }
+
+  validate() {
+    const { validateUpdateComment } = this.props;
+    const { suToModifiedSelected, newComment } = this.state;
+    console.log("newComment ", newComment);
+    //TODO demander si il est possible de modifier les commentaires de plusieurs SU en même temps
+    validateUpdateComment(suToModifiedSelected, newComment);
+  }
+
   handlePageChange(pagination) {
     this.setState({ pagination });
   }
@@ -56,21 +85,27 @@ class TerminatedTable extends React.Component {
     });
   }
 
-  surveyListLine(data, survey) {
+  surveyListLine(data, survey, handleShow) {
     return (
       <tr key={data.id}>
-        <td className="Clickable" data-testid="campaign-label">{data.id}</td>
-        <td className="Clickable">{survey.label}</td>
-        <td className="Clickable">{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
-        <td className="Clickable">{Utils.convertToDateString(data.finalizationDate) + " " + Utils.convertMsToHoursMinutes(data.finalizationDate)}</td>
-        <td className="Clickable">
+        <td>{survey.label}</td>
+        <td data-testid="campaign-label">{data.id}</td>
+        <td>{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
+        <td>{Utils.convertToDateString(data.finalizationDate) + " " + Utils.convertMsToHoursMinutes(data.finalizationDate)}</td>
+        <td>
           <i
-            className="fa fa-pencil EditLink"
+            className="fa fa-calendar EditLink Clickable"
             aria-hidden="true"
             onClick={() => { window.open(`${this.queenUrl}/queen/readonly/questionnaire/${survey.id}/survey-unit/${data.id}`); }}
           />
           <span />
-          <i className="fa fa-history HistoryDisplayIcon" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
+          <i
+            className="fa fa-pencil EditCommentSurveyIcon Clickable"
+            aria-hidden="true"
+            onClick={() => handleShow()}
+          />
+          <span />
+          <i className="fa fa-history HistoryDisplayIcon Clickable" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
         </td>
       </tr>
     );
@@ -78,12 +113,15 @@ class TerminatedTable extends React.Component {
 
   render() {
     const {
-      pagination, displayData, stateData, toggleStateHistory, stateId,
+      pagination, displayData, stateData, toggleStateHistory, stateId, showComment,
+      suToModifiedSelected, oldComment
     } = this.state;
     const {
       data, survey, handleSort, sort,
     } = this.props;
     const fieldsToSearch = ['interviewerFirstName', 'interviewerLastName', 'id'];
+    const handleCloseComment = () => {this.handleCloseComment()};
+    const handleShowComment = (id) => {this.handleShowComment(id)};
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div>
@@ -106,15 +144,6 @@ class TerminatedTable extends React.Component {
             <thead>
               <tr>
                 <th
-                  id="stateHistoryDate"
-                  data-testid="TableHeader_id_terminated"
-                  rowSpan="2"
-                  onClick={handleSortFunct('id')}
-                >
-                  <SortIcon val="id" sort={sort} />
-                  {D.identifier}
-                </th>
-                <th
                   id="stateHistoryHour"
                   rowSpan="2" 
                   onClick={handleSortFunct('campaignLabel')}>
@@ -122,16 +151,28 @@ class TerminatedTable extends React.Component {
                   {D.survey}
                 </th>
                 <th
+                  id="stateHistoryDate"
+                  data-testid="TableHeader_id_terminated"
+                  rowSpan="2"
+                  onClick={handleSortFunct('id')}
+                  className="Clickable"
+                >
+                  <SortIcon val="id" sort={sort} />
+                  {D.identifier}
+                </th>
+                <th
                   id="stateHistoryState"
                   rowSpan="2"
                   onClick={handleSortFunct('interviewer_terminated')}
+                  className="Clickable"
                 >
                   <SortIcon val="interviewer_terminated" sort={sort} />
                   {D.interviewer}
                 </th>
-                <th 
+                <th
                   rowSpan="2"
                   onClick={handleSortFunct('finalizationDate')}
+                  className="Clickable"
                 >
                   <SortIcon val="finalizationDate" sort={sort} />
                   {D.finalizedDate}
@@ -148,9 +189,42 @@ class TerminatedTable extends React.Component {
                   Math.min(pagination.page * pagination.size, displayData.length),
                 )
                 .map((line) => (
-                  this.surveyListLine(line, survey)
+                  this.surveyListLine(line, survey, () => handleShowComment(line.id))
                 ))}
             </tbody>
+            <Modal show={showComment} onHide={() => handleCloseComment()}>
+                <Modal.Header closeButton>
+                  <Modal.Title>{D.modifiedCommentSu + suToModifiedSelected}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <Form.Group as={Col} controlId="formGridState">
+                  <Form.Label>{D.modifiedCommentSuLastComment}</Form.Label>
+                  <Form.Control type="text" defaultValue={oldComment}
+                  onChange={e => this.setState({ newComment: e.target.value })}> 
+                  </Form.Control>
+                  <Form.Text id="passwordHelpBlock" muted>
+                   {D.modifyCommentSuHelpText}
+                  </Form.Text>
+                </Form.Group>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button
+                    variant="secondary"
+                    data-testid="close-modal"
+                    onClick={() => handleCloseComment()}
+                  >
+                    {D.cancel}
+                  </Button>
+                  <Button
+                    variant="primary"
+                    data-testid="confirm-validate"
+                    onClick={() => { this.validate(); 
+                      handleCloseComment(); }}
+                  >
+                    {D.validate}
+                  </Button>
+                </Modal.Footer>
+              </Modal>
           </Table>
           <div className="tableOptionsWrapper">
             <PaginationNav.PageSelector

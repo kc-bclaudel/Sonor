@@ -9,7 +9,7 @@ import PaginationNav from '../PaginationNav/PaginationNav';
 import SearchField from '../SearchField/SearchField';
 import SurveySelector from '../SurveySelector/SurveySelector';
 import InterviewerSelector from '../InterviewerSelector/InterviewerSelector';
-import FollowUpTable from './FollowUpTable';
+import CollectionTableDisplay from './CollectionTableDisplay';
 import C from '../../utils/constants.json';
 import D from '../../i18n';
 import Utils from '../../utils/Utils';
@@ -39,6 +39,7 @@ class MonitoringTable extends React.Component {
 
   componentDidUpdate(prevprops) {
     const { location } = this.props;
+
     if (location.pathname !== prevprops.location.pathname) {
       this.refreshData();
     }
@@ -60,7 +61,7 @@ class MonitoringTable extends React.Component {
       surveyToUse = survey;
     }
     if (surveyToUse) {
-      dataRetreiver.getDataForMonitoringTable(
+      dataRetreiver.getDataForCollectionTable(
         surveyToUse, new Date(dateToUse).getTime(), paginationToUse, modeToUse,
         (res) => {
           const newData = {};
@@ -113,19 +114,19 @@ class MonitoringTable extends React.Component {
     } = this.state;
     let fileLabel;
     if (mode === C.BY_SURVEY) {
-      fileLabel = `${data.site}_Avancement enquetes`;
+      fileLabel = `${data.site}_Avancement_collecte enquetes`;
     } else if (mode === C.BY_SURVEY_ONE_INTERVIEWER) {
-      fileLabel = `${interviewer.interviewerFirstName}_${interviewer.interviewerLastName}_Avancement`;
+      fileLabel = `${interviewer.interviewerFirstName}_${interviewer.interviewerLastName}_Avancement_collecte`;
     } else if (mode === C.BY_SITE) {
-      fileLabel = `${survey.label}_Avancement sites`;
+      fileLabel = `${survey.label}_Avancement_collecte sites`;
     } else if (mode === C.BY_INTERVIEWER) {
-      fileLabel = `${data.site}_Avancement enqueteurs`;
+      fileLabel = `${data.site}_Avancement_collecte enqueteurs`;
     } else {
-      fileLabel = `${data.site}_${survey.label}_Avancement enqueteurs`;
+      fileLabel = `${data.site}_${survey.label}_Avancement_collecte enqueteurs`;
     }
     const title = `${fileLabel}_${new Date(date).toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data, mode);
-    const csvContent = `data:text/csv;charset=utf-8,\ufeff${table.map((e) => e.join(';')).join('\n')}`;
+    const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
@@ -163,7 +164,7 @@ class MonitoringTable extends React.Component {
           updateFunc={(newInterviewer) => this.setState({
             interviewer: newInterviewer,
             redirect: {
-              pathname: `/follow/campaigns/interviewer/${newInterviewer.id}`,
+              pathname: `/collection/campaigns/interviewer/${newInterviewer.id}`,
               interviewer: newInterviewer,
             },
           })}
@@ -178,8 +179,8 @@ class MonitoringTable extends React.Component {
             survey: newSurvey,
             redirect: {
               pathname: mode === C.BY_SITE
-                ? `/follow/sites/${newSurvey.id}`
-                : `/follow/campaign/${newSurvey.id}`,
+                ? `/collection/sites/${newSurvey.id}`
+                : `/collection/campaign/${newSurvey.id}`,
               survey: newSurvey,
             },
           })}
@@ -215,7 +216,7 @@ class MonitoringTable extends React.Component {
         </Container>
         <Card className="ViewCard">
           <Card.Title className="PageTitle">
-            <div className="DateDisplay">{D.monitoringTableIntroductionSentence}</div>
+            <div className="DateDisplay">{D.collectionTableIntroductionSentence}</div>
             <input
               id="datePicker"
               data-testid="date-picker"
@@ -254,7 +255,7 @@ class MonitoringTable extends React.Component {
                       />
                     </Col>
                   </Row>
-                  <FollowUpTable
+                  <CollectionTableDisplay
                     data={data}
                     pagination={pagination}
                     displayedLines={displayedLines}
@@ -292,19 +293,22 @@ function getHeaderForExport(mode) {
   return [
     firstColumnTitle,
     '',
-    D.completionRate,
+    D.collectionRate,
+    D.wasteRate,
+    D.outOfScopeRate,
+    '',
+    D.surveysAccepted,
+    D.refusal,
+    D.unreachable,
+    D.otherWastes,
+    D.outOfScope,
+    D.totalProcessed,
+    '',
+    D.absInterviewer,
+    D.otherReason,
+    D.totalClosed,
     '',
     D.allocated,
-    D.notStarted,
-    D.inProgressInterviewer,
-    D.waitingForIntReview,
-    D.reviewedByInterviewer,
-    D.reviewedEnded,
-    '',
-    D.preparingContact,
-    D.atLeastOneContact,
-    D.appointmentTaken,
-    D.interviewStarted,
   ].flat();
 }
 
@@ -316,38 +320,44 @@ function getFooterForExport(data, mode) {
       '',
       '',
       '',
-      `${(data.total.dem.completionRate * 100).toFixed(1)}%`,
+      `${(data.total.dem.collectionRate * 100).toFixed(1)}%`,
+      `${(data.total.dem.wasteRate * 100).toFixed(1)}%`,
+      `${(data.total.dem.outOfScopeRate * 100).toFixed(1)}%`,
       '',
-      data.total.dem.total,
-      data.total.dem.notStarted,
-      data.total.dem.onGoing,
-      data.total.dem.waitingForIntValidation,
-      data.total.dem.intValidated,
-      data.total.dem.demValidated,
+      data.total.dem.surveysAccepted,
+      data.total.dem.refusal,
+      data.total.dem.unreachable,
+      data.total.dem.otherWastes,
+      data.total.dem.outOfScope,
+      data.total.dem.totalProcessed,
       '',
-      data.total.dem.preparingContact,
-      data.total.dem.atLeastOneContact,
-      data.total.dem.appointmentTaken,
-      data.total.dem.interviewStarted,
+      data.total.dem.absInterviewer,
+      data.total.dem.otherReason,
+      data.total.dem.totalClosed,
+      '',
+      data.total.dem.allocated,
     ]);
   }
   if (mode === C.BY_INTERVIEWER_ONE_SURVEY || mode === C.BY_SITE) {
     footer.push([
       mode === C.BY_INTERVIEWER_ONE_SURVEY ? [D.totalFrance, '', ''] : D.totalFrance,
       '',
-      `${(data.total.france.completionRate * 100).toFixed(1)}%`,
+      `${(data.total.france.collectionRate * 100).toFixed(1)}%`,
+      `${(data.total.france.wasteRate * 100).toFixed(1)}%`,
+      `${(data.total.france.outOfScopeRate * 100).toFixed(1)}%`,
       '',
-      data.total.france.total,
-      data.total.france.notStarted,
-      data.total.france.onGoing,
-      data.total.france.waitingForIntValidation,
-      data.total.france.intValidated,
-      data.total.france.demValidated,
+      data.total.france.surveysAccepted,
+      data.total.france.refusal,
+      data.total.france.unreachable,
+      data.total.france.otherWastes,
+      data.total.france.outOfScope,
+      data.total.france.totalProcessed,
       '',
-      data.total.france.preparingContact,
-      data.total.france.atLeastOneContact,
-      data.total.france.appointmentTaken,
-      data.total.france.interviewStarted,
+      data.total.france.absInterviewer,
+      data.total.france.otherReason,
+      data.total.france.totalClosed,
+      '',
+      data.total.france.allocated,
     ].flat());
   }
   return footer;
@@ -357,24 +367,27 @@ function getBodyForExport(data) {
   return data.map((elm) => (
     [
       (elm.interviewerLastName
-        ? [elm.interviewerLastName, elm.interviewerFirstName, elm.interviewerId]
+        ? [elm.interviewerLastName, elm.interviewerFirstName, elm.id]
         : null
       )
       || elm.survey || elm.site,
       '',
-      `${(elm.completionRate * 100).toFixed(1)}%`,
+      `${(elm.collectionRate * 100).toFixed(1)}%`,
+      `${(elm.wasteRate * 100).toFixed(1)}%`,
+      `${(elm.outOfScopeRate * 100).toFixed(1)}%`,
       '',
-      elm.total,
-      elm.notStarted,
-      elm.onGoing,
-      elm.waitingForIntValidation,
-      elm.intValidated,
-      elm.demValidated,
+      elm.surveysAccepted,
+      elm.refusal,
+      elm.unreachable,
+      elm.otherWastes,
+      elm.outOfScope,
+      elm.totalProcessed,
       '',
-      elm.preparingContact,
-      elm.atLeastOneContact,
-      elm.appointmentTaken,
-      elm.interviewStarted,
+      elm.absInterviewer,
+      elm.otherReason,
+      elm.totalClosed,
+      '',
+      elm.allocated,
     ].flat()
   ));
 }

@@ -1,0 +1,8 @@
+.CheckboxCol{
+ width: 20px;
+}
+
+#btnValider:disabled{
+  opacity: 0.3;
+  cursor: not-allowed;
+}

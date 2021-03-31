@@ -15,6 +15,14 @@ const alert = {
     fr: 'Erreur',
     en: 'Error',
   },
+  changingStateAlertSuccess: {
+    fr: 'L\'état des unités enquêtées suivantes ont été changés avec succès',
+    en: 'The state of the following survey units were updated successfully',
+  },
+  changingStateAlertError: {
+    fr: 'Une erreur est survenue. Les unitées enquêtées suivantes n\'ont pas pu être mis à jour',
+    en: 'An error occured. The state of the following survey units could not be updated',
+  },
   reviewAlertSuccess: {
     fr: 'Les unités enquêtées suivantes ont été validées avec succès',
     en: 'The following survey units were validated successfully',

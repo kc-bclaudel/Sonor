@@ -65,7 +65,15 @@ class SurveyUnits extends React.Component {
     function handleSort(property) { return () => { handleSortfunc(property); }; }
     return (
       <Card className="ViewCard">
-        <div className="Title">{D.interviewers}</div>
+        <div className="Title">
+          <span>{D.interviewers}</span>
+          <Button
+            className="ExportButton"
+            onClick={() => this.handleExport()}
+          >
+            Export
+          </Button>
+        </div>
         {
           interviewers.length > 0 ? (
             <>
@@ -127,7 +135,6 @@ class SurveyUnits extends React.Component {
                 </tbody>
               </Table>
               <div className="tableOptionsWrapper">
-                <Button onClick={() => this.handleExport()}>Export</Button>
                 <PaginationNav.PageSelector
                   pagination={pagination}
                   updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}

@@ -63,6 +63,22 @@ class Utils {
           + data.insCount;
   }
 
+  static calculateCollectionRate(outcomes, stateCount) {
+    return outcomes.inaCount / (stateCount.total - stateCount.ntaCount);
+  }
+
+  static calculateWasteRate(outcomes, stateCount) {
+    return (outcomes.refCount
+        + outcomes.impCount
+        + outcomes.iniCount
+        + outcomes.alaCount
+        + outcomes.wamCount
+        + stateCount.ntaCount
+        + stateCount.nteCount
+        + stateCount.ddrCount
+    ) / stateCount.total;
+  }
+
   static formatForMonitoringTable(stateCount) {
     const line = {};
     line.completionRate = this.calculateCompletionRate(stateCount);
@@ -80,6 +96,26 @@ class Utils {
     line.interviewerFirstName = stateCount.interviewerFirstName;
     line.interviewerFirstName = stateCount.interviewerLastName;
     line.interviewerId = stateCount.interviewerId;
+
+    return line;
+  }
+
+  static formatForCollectionTable(initialObject, outcomes, stateCount) {
+    const line = initialObject;
+
+    line.collectionRate = this.calculateCollectionRate(outcomes, stateCount);
+    line.wasteRate = this.calculateWasteRate(outcomes, stateCount);
+    line.outOfScopeRate = outcomes.oosCount / stateCount.total;
+    line.surveysAccepted = outcomes.inaCount;
+    line.refusal = outcomes.refCount;
+    line.unreachable = outcomes.impCount;
+    line.otherWastes = outcomes.iniCount + outcomes.alaCount + outcomes.wamCount;
+    line.outOfScope = outcomes.oosCount;
+    line.totalProcessed = stateCount.tbrCount + stateCount.finCount;
+    line.absInterviewer = stateCount.ntaCount;
+    line.otherReason = stateCount.nteCount + stateCount.ddrCount;
+    line.totalClosed = stateCount.ntaCount + stateCount.nteCount + stateCount.ddrCount;
+    line.allocated = stateCount.total;
 
     return line;
   }
@@ -114,7 +150,7 @@ class Utils {
   }
 
   static getSortFunction(sortOn) {
-    if (['city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site', 'date', 'finalizationDate'].includes(sortOn)) {
+    if (['city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site', 'date', 'finalizationDate', 'state'].includes(sortOn)) {
       return (a, b) => (a[sortOn] < b[sortOn] ? -1 : 1);
     }
     if (sortOn === 'CPinterviewer') {
@@ -194,9 +230,25 @@ class Utils {
     return this.formatForMonitoringTable(result);
   }
 
+  static sumElms(data) {
+    const result = {};
+    data
+      .forEach((elm) => {
+        Object.keys(elm)
+          .filter((key) => !isNaN(elm[key]))
+          .forEach((key) => {
+            result[key] = (result[key] + elm[key]) || elm[key];
+          });
+      });
+    return result;
+  }
+
   static getMonitoringTableModeFromPath(path) {
     if (path.includes('/sites/')) {
       return C.BY_SITE;
+    }
+    if (path.includes('/interviewer')) {
+      return C.BY_SURVEY_ONE_INTERVIEWER;
     }
     if (path.includes('/campaigns')) {
       return C.BY_SURVEY;
