@@ -21,7 +21,7 @@ class ReviewTable extends React.Component {
       show: false,
       displayedLines: props.data,
       showComment: false,
-      suToModifiedSelected: '',
+      suToModifySelected: '',
       oldComment: '',
       newComment: '',
     };
@@ -60,19 +60,24 @@ class ReviewTable extends React.Component {
   }
 
   handleShowComment(line) {
-    this.setState({ showComment: true, suToModifiedSelected: line.id, });
-    if(line.comments != null){
-      this.setState({oldComment: line.comments[0].value});
+    this.setState({ showComment: true, suToModifySelected: line.id });
+    if (line.comments != null) {
+      let comToSet = '';
+      const comment = line.comments.find((c) => c.type === 'MANAGEMENT');
+      if (comment) {
+        comToSet = comment.value;
+      }
+      this.setState({ oldComment: comToSet });
     } else {
-      this.setState({oldComment: ''});
+      this.setState({ oldComment: '' });
     }
   }
 
   validate() {
     const { validateUpdateComment } = this.props;
-    const { suToModifiedSelected, newComment } = this.state;
+    const { suToModifySelected, newComment } = this.state;
     //TODO demander si il est possible de modifier les commentaires de plusieurs SU en même temps
-    validateUpdateComment(suToModifiedSelected, newComment);
+    validateUpdateComment(suToModifySelected, newComment);
   }
 
   handleCheckAll() {
@@ -105,7 +110,7 @@ class ReviewTable extends React.Component {
     const { sort, data, handleSort } = this.props;
     const {
       displayedLines, pagination, checkboxArray, checkAll, show, showComment,
-      suToModifiedSelected, oldComment
+      suToModifySelected, oldComment,
     } = this.state;
     const fieldsToSearch = ['campaignLabel', 'interviewer', 'id'];
     const toggleCheckBox = (i) => { this.toggleCheckBox(i); };
@@ -139,9 +144,10 @@ class ReviewTable extends React.Component {
                 {D.survey}
               </th>
               <th
-               onClick={handleSortFunct('id')}
-               className="Clickable">
-                 <SortIcon val="id" sort={sort} />
+                onClick={handleSortFunct('id')}
+                className="Clickable"
+              >
+                <SortIcon val="id" sort={sort} />
                 {D.identifier}
               </th>
               <th
@@ -174,16 +180,19 @@ class ReviewTable extends React.Component {
               ))}
               <Modal show={showComment} onHide={() => handleCloseComment()}>
                 <Modal.Header closeButton>
-                  <Modal.Title>{D.modifiedCommentSu + suToModifiedSelected}</Modal.Title>
+                  <Modal.Title>{D.modifiedCommentSu + suToModifySelected}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>{D.modifiedCommentSuLastComment}</Form.Label>
-                  <Form.Control type="text" defaultValue={oldComment}
-                  onChange={e => this.setState({ newComment: e.target.value })}> 
-                  </Form.Control>
+                  <Form.Control
+                    type="text" 
+                    as="textarea"
+                    defaultValue={oldComment}
+                    onChange={(e) => this.setState({ newComment: e.target.value })}
+                  />
                   <Form.Text id="passwordHelpBlock" muted>
-                   {D.modifyCommentSuHelpText}
+                    {D.modifyCommentSuHelpText}
                   </Form.Text>
                 </Form.Group>
                 </Modal.Body>

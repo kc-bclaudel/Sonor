@@ -5,7 +5,15 @@ function getMatchingLines(data, searchBy, str) {
   const s = str.toLowerCase().split(' ');
 
   const matchingLines = data.filter((line) => {
-    const toSearch = searchBy.map((fieldName) => (line[fieldName] ? line[fieldName].toLowerCase() : ''));
+
+    if (line.interviewer && typeof line.interviewer === 'object') {
+      Object.values(line.interviewer).join(' ');
+    }
+    const toSearch = searchBy.map((fieldName) => (line[fieldName]
+      ? typeof line.interviewer === 'string'
+        ? line[fieldName].toLowerCase()
+        : Object.values(line[fieldName]).join(' ').toLowerCase()
+      : ''));
     return (!s.some((word) => !toSearch.some((field) => field.includes(word))));
   });
   return matchingLines;

@@ -49,13 +49,13 @@ function Review({
       });
   }
 
-  function validateUpdateComment(suToModifiedSelected, comment){
-    dataRetreiver.updateSurveyUnitsComment(suToModifiedSelected, comment)
+  function validateUpdateComment(suToModifySelected, comment) {
+    dataRetreiver.updateSurveyUnitsComment(suToModifySelected, comment)
       .then((res) => {
         if (res.status === 200 || res.status === 201 || res.status === 204) {
-          NotificationManager.success(D.reviewAlertSuccess, D.updateSuccess, 3500);
+          NotificationManager.success(D.commentUpdateSuccess, D.updateSuccess, 3500);
         } else {
-          NotificationManager.error(D.reviewAlertError, D.error, 3500);
+          NotificationManager.error(D.commentUpdateError, D.error, 3500);
         }
         fetchData();
       });

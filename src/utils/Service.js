@@ -49,11 +49,36 @@ class Service {
       });
   }
 
+  putCloseSurveyUnit(su, closingCause, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/closing-cause/${closingCause}`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+
+  putClosingCauseSurveyUnit(su, closingCause, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/closing-cause/${closingCause}`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+
   putSurveyUnitComment(su, comment, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
     options.method = 'PUT';
-    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/comment/${comment}`, options)
+    options.body = JSON.stringify(comment);
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/comment`, options)
       .then((res) => cb(res))
       .catch((e) => {
         console.log(e);
@@ -224,6 +249,46 @@ class Service {
   getInterviewersContactOutcomes(campaignId, idep, date, cb) {
     return new Promise((resolve) => {
       fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
+  }
+
+  getContactOutcomesNotAttributed(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
+  }
+
+  getStateCountNotAttributed(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed/state-count?date=${date}`, this.makeOptions())
         .then((res) => res.json())
         .then((data) => {
           if (cb) {

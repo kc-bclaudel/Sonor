@@ -8,6 +8,38 @@ import D from '../../i18n';
 function CollectionTableDisplay({
   data, sort, displayedLines, pagination, mode, handleSort,
 }) {
+  const notAttributedRow = mode !== C.BY_INTERVIEWER_ONE_SURVEY || (
+    <tr>
+      <th>{D.unitsNotAffected}</th>
+      <th className="ColumnSpacing" />
+      <th className="YellowHeader">
+        {(data.notAttributed.collectionRate * 100).toFixed(1)}
+        %
+      </th>
+      <th className="YellowHeader">
+        {(data.notAttributed.wasteRate * 100).toFixed(1)}
+        %
+      </th>
+      <th className="YellowHeader">
+        {(data.notAttributed.outOfScopeRate * 100).toFixed(1)}
+        %
+      </th>
+      <th className="ColumnSpacing" />
+      <th>{data.notAttributed.surveysAccepted}</th>
+      <th>{data.notAttributed.refusal}</th>
+      <th>{data.notAttributed.unreachable}</th>
+      <th>{data.notAttributed.otherWastes}</th>
+      <th>{data.notAttributed.outOfScope}</th>
+      <th>{data.notAttributed.totalProcessed}</th>
+      <th className="ColumnSpacing" />
+      <th className="YellowHeader">{data.notAttributed.absInterviewer}</th>
+      <th className="YellowHeader">{data.notAttributed.otherReason}</th>
+      <th className="YellowHeader">{data.notAttributed.totalClosed}</th>
+      <th className="ColumnSpacing" />
+      <th className="YellowHeader">{data.notAttributed.allocated}</th>
+    </tr>
+  );
+
   const totalDemRow = mode !== C.BY_INTERVIEWER_ONE_SURVEY || (
     <tr>
       <th>{D.totalDEM}</th>
@@ -42,6 +74,7 @@ function CollectionTableDisplay({
 
   const tableFooter = (mode !== C.BY_INTERVIEWER_ONE_SURVEY && mode !== C.BY_SITE) || (
     <tfoot>
+      {notAttributedRow}
       {totalDemRow}
       <tr>
         <th>{D.totalFrance}</th>

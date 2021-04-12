@@ -902,134 +902,7 @@ api.get("/survey-units/closable", (req, res) => {
     res.json(mockResponse);
   });
 
-  // api.get("/campaign/:id/survey-units?state=NTA", (req, res) => {
-  //   const mockResponse = [
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "1323",
-  //       ssech: "hgSkR29",
-  //       location: "95160",
-  //       city: "MONTMORENCY",
-  //       finalizationDate: 1603304314268,
-  //       interviewer: {
-  //         id: "INTW5",
-  //         interviewerFirstName: "Chloé",
-  //         interviewerLastName: "Berlin",
-  //       }
-  //     },
-  //   ]
-  //   res.json(mockResponse);
-  // });
-  // api.get("/campaign/:id/survey-units?state=FIN", (req, res) => {
-  //   const mockResponse = [
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "1223",
-  //       ssech: "hgSkR29",
-  //       location: "95160",
-  //       city: "MONTMORENCY",
-  //       finalizationDate: 1603304314268,
-  //       interviewer: {
-  //         id: "INTW5",
-  //         interviewerFirstName: "Chloé",
-  //         interviewerLastName: "Berlin",
-  //       }
-  //     },
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "4811",
-  //       ssech: "dlcB55jdf",
-  //       location: "90000",
-  //       city: "BELFORT",
-  //       finalizationDate: 1625090400000,
-  //       interviewer: {
-  //         id: "INTW6",
-  //         interviewerFirstName: "Jacques",
-  //         interviewerLastName: "Boulanger",
-  //       },
-  //     },
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "1023",
-  //       ssech: "hgSkR29",
-  //       location: "95160",
-  //       city: "MONTMORENCY",
-  //       finalizationDate: 1561932000000,
-  //       interviewer: {
-  //         id: "INTW5",
-  //         interviewerFirstName: "Chloé",
-  //         interviewerLastName: "Berlin",
-  //       },
-  //     },
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "4811",
-  //       ssech: "dlcB55jdf",
-  //       location: "90000",
-  //       city: "BELFORT",
-  //       finalizationDate: 1625090400000,
-  //       interviewer: {
-  //         id: "INTW6",
-  //         interviewerFirstName: "Jacques",
-  //         interviewerLastName: "Boulanger",
-  //       },
-  //     },
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "1023",
-  //       ssech: "hgSkR29",
-  //       location: "95160",
-  //       city: "MONTMORENCY",
-  //       finalizationDate: 1625090400000,
-  //       interviewer: {
-  //         id: "INTW5",
-  //         interviewerFirstName: "Chloé",
-  //         interviewerLastName: "Berlin",
-  //       },
-  //     },
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "4811",
-  //       ssech: "dlcB55jdf",
-  //       location: "90000",
-  //       city: "BELFORT",
-  //       finalizationDate: 1625090400000,
-  //       interviewer: {
-  //         id: "INTW6",
-  //         interviewerFirstName: "Jacques",
-  //         interviewerLastName: "Boulanger",
-  //       },
-  //     },
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "1023",
-  //       ssech: "hgSkR29",
-  //       location: "95160",
-  //       city: "MONTMORENCY",
-  //       finalizationDate: 1625090400000,
-  //       interviewer: {
-  //         id: "INTW5",
-  //         interviewerFirstName: "Chloé",
-  //         interviewerLastName: "Berlin",
-  //       },
-  //     },
-  //     {
-  //       campaignLabel: "simpsons2020x00",
-  //       id: "4811",
-  //       ssech: "dlcB55jdf",
-  //       location: "90000",
-  //       city: "BELFORT",
-  //       finalizationDate: 1625090400000,
-  //       interviewer: {
-  //         id: "INTW6",
-  //         interviewerFirstName: "Jacques",
-  //         interviewerLastName: "Boulanger",
-  //       },
-  //     },
-  //   ];
 
-  //   res.json(mockResponse);
-  // });
 
   api.get("/campaign/:id/survey-units/not-attributed", (req, res) => {
     const mockResponse = {
@@ -1081,9 +954,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       };
 
@@ -1143,9 +1016,9 @@ api.get("/survey-units/closable", (req, res) => {
           qnaCount: 3,
           qnaFinCount: 3,
           nvaCount: 0,
-          ntaCount: 2,
-          nteCount: 2,
-          ddrCount: 2,
+          npaCount: 2,
+          npiCount: 2,
+          rowCount: 2,
           total: 104,
         },
         {
@@ -1168,9 +1041,9 @@ api.get("/survey-units/closable", (req, res) => {
           qnaCount: 3,
           qnaFinCount: 3,
           nvaCount: 0,
-          ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+          npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
           total: 104,
         },
         {
@@ -1193,9 +1066,9 @@ api.get("/survey-units/closable", (req, res) => {
           qnaCount: 3,
           qnaFinCount: 3,
           nvaCount: 0,
-          ntaCount: 2,
-          nteCount: 2,
-          ddrCount: 2,
+          npaCount: 2,
+          npiCount: 2,
+          rowCount: 2,
           total: 104,
         },
       ],
@@ -1216,9 +1089,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
     };
@@ -1390,7 +1263,7 @@ api.get("/survey-units/closable", (req, res) => {
     ];
     res.json(mockResponse);
   });
-   // TODO state des clotures à ajouter (ntaCount, nteCount et ddrCount)
+   // TODO state des clotures à ajouter (npaCount, npiCount et rowCount)
   api.get("/campaigns/survey-units/state-count", (req, res) => {
     const date = new Date(Number(req.query.date));
     const day = date.getDay();
@@ -1418,9 +1291,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
       {
@@ -1444,9 +1317,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
       {
@@ -1470,9 +1343,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
       {
@@ -1496,9 +1369,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
       {
@@ -1522,9 +1395,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
       {
@@ -1548,9 +1421,9 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
       {
@@ -1574,16 +1447,16 @@ api.get("/survey-units/closable", (req, res) => {
         qnaCount: 3,
         qnaFinCount: 3,
         nvaCount: 0,
-        ntaCount: 2,
-        nteCount: 2,
-        ddrCount: 2,
+        npaCount: 2,
+        npiCount: 2,
+        rowCount: 2,
         total: 104,
       },
     ];
     res.json(mockResponse);
   });
 
-  // TODO state des clotures à ajouter (ntaCount, nteCount et ddrCount)
+  // TODO state des clotures à ajouter (npaCount, npiCount et rowCount)
   api.get("/interviewers/survey-units/state-count", (req, res) => {
     const date = new Date(Number(req.query.date));
     const day = date.getDay();
@@ -1759,6 +1632,53 @@ api.get("/survey-units/closable", (req, res) => {
         total: 104,
       },
     ];
+    res.json(mockResponse);
+  });
+
+   api.get("/campaign/:id/survey-units/not-attributed/state-count", (req, res) => {
+    const date = new Date(Number(req.query.date));
+    const day = date.getDay();
+    const month = date.getMonth();
+
+    const mockResponse = {
+        nvmCount: 22,
+        nnsCount: 22,
+        anvCount: 22,
+        vinCount: 22,
+        vicCount: 22,
+        prcCount: 29,
+        aocCount: 30,
+        apsCount: 12,
+        insCount: 5,
+        wftCount: 0,
+        wfsCount: 0,
+        tbrCount: 2,
+        finCount: 1,
+        qnaCount: 3,
+        qnaFinCount: 3,
+        nvaCount: 0,
+        npaCount: 0,
+        npiCount: 1,
+        rowCount: 0,
+        total: 104,
+      };
+    res.json(mockResponse);
+  });
+
+      api.get("/campaign/:id/survey-units/not-attributed/contact-outcomes", (req, res) => {
+    const date = new Date(Number(req.query.date));
+    const day = date.getDay();
+    const month = date.getMonth();
+
+    const mockResponse = {
+        inaCount: 33,
+        refCount: 2,
+        impCount: 5,
+        iniCount:11,
+        alaCount: 9,
+        wamCount: 7,
+        oosCount: 8,
+      };
     res.json(mockResponse);
   });
 

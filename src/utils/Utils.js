@@ -64,7 +64,7 @@ class Utils {
   }
 
   static calculateCollectionRate(outcomes, stateCount) {
-    return outcomes.inaCount / (stateCount.total - stateCount.ntaCount);
+    return outcomes.inaCount / (stateCount.total - stateCount.npaCount);
   }
 
   static calculateWasteRate(outcomes, stateCount) {
@@ -73,9 +73,9 @@ class Utils {
         + outcomes.iniCount
         + outcomes.alaCount
         + outcomes.wamCount
-        + stateCount.ntaCount
-        + stateCount.nteCount
-        + stateCount.ddrCount
+        + stateCount.npaCount
+        + stateCount.npiCount
+        + stateCount.rowCount
     ) / stateCount.total;
   }
 
@@ -112,9 +112,9 @@ class Utils {
     line.otherWastes = outcomes.iniCount + outcomes.alaCount + outcomes.wamCount;
     line.outOfScope = outcomes.oosCount;
     line.totalProcessed = stateCount.tbrCount + stateCount.finCount;
-    line.absInterviewer = stateCount.ntaCount;
-    line.otherReason = stateCount.nteCount + stateCount.ddrCount;
-    line.totalClosed = stateCount.ntaCount + stateCount.nteCount + stateCount.ddrCount;
+    line.absInterviewer = stateCount.npaCount;
+    line.otherReason = stateCount.npiCount + stateCount.rowCount;
+    line.totalClosed = stateCount.npaCount + stateCount.npiCount + stateCount.rowCount;
     line.allocated = stateCount.total;
 
     return line;

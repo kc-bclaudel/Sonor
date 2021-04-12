@@ -99,7 +99,7 @@ class SUTable extends React.Component {
     const lstSUChangingState = Object.entries(checkboxArray)
       .filter((su) => (su[1]))
       .map((su) => (su[0]));
-      validateChangingState(lstSUChangingState, stateModified);
+    validateChangingState(lstSUChangingState, stateModified);
   }
 
   handleExport() {
@@ -238,20 +238,20 @@ class SUTable extends React.Component {
                     <Modal.Title>{D.modaleModifiedText}</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
-                  <Form.Group as={Col} controlId="formGridState">
-                    <Form.Label>{D.state}</Form.Label>
-                    <Form.Control as="select"
-                     custom 
-                     placeholder={D.modaleModifiedText}
-                     defaultValue={-1}
-                     onChange={e => this.setState({stateModified: e.target.value})}
-                     >
-                      <option disabled value={-1} key={-1}>{D.modaleModifiedText}</option>
-                      <option>Non traitée absence enquêteur</option>
-                      <option>Non traitée enquêteur</option>
-                      <option>Droit de retrait</option>
-                    </Form.Control>
-                  </Form.Group>
+                    <Form.Group as={Col} controlId="formGridState">
+                      <Form.Label>{D.state}</Form.Label>
+                      <Form.Control
+                        as="select"
+                        custom
+                        placeholder={D.modaleModifiedText}
+                        defaultValue={-1}
+                        onChange={(e) => this.setState({ stateModified: e.target.value })}
+                      >
+                        <option disabled value={-1} key={-1}>{D.modaleModifiedText}</option>
+                        <option>{D.NPA}</option>
+                        <option>{D.NPI}</option>
+                      </Form.Control>
+                    </Form.Group>
                   </Modal.Body>
                   <Modal.Footer>
                     <Button
@@ -264,8 +264,10 @@ class SUTable extends React.Component {
                     <Button
                       variant="primary"
                       data-testid="confirm-validate"
-                      onClick={() => { this.validate(); 
-                        this.handleClose(); }}
+                      onClick={() => {
+                        this.validate();
+                        this.handleClose();
+                      }}
                     >
                       {D.validate}
                     </Button>

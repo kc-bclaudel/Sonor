@@ -34,7 +34,11 @@ const review = {
   popupConfirm: {
     fr: 'Ok',
     en: 'Ok'
-  }
+  },
+  unaffected: {
+    fr: 'Non affectée',
+    en: 'Unaffected',
+  },
 };
 
 export default review;

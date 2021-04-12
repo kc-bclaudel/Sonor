@@ -337,6 +337,28 @@ function getFooterForExport(data, mode) {
       '',
       data.total.dem.allocated,
     ]);
+    footer.push([
+      D.unitsNotAffected,
+      '',
+      '',
+      '',
+      `${(data.notAttributed.collectionRate * 100).toFixed(1)}%`,
+      `${(data.notAttributed.wasteRate * 100).toFixed(1)}%`,
+      `${(data.notAttributed.outOfScopeRate * 100).toFixed(1)}%`,
+      '',
+      data.notAttributed.surveysAccepted,
+      data.notAttributed.refusal,
+      data.notAttributed.unreachable,
+      data.notAttributed.otherWastes,
+      data.notAttributed.outOfScope,
+      data.notAttributed.totalProcessed,
+      '',
+      data.notAttributed.absInterviewer,
+      data.notAttributed.otherReason,
+      data.notAttributed.totalClosed,
+      '',
+      data.notAttributed.allocated,
+    ]);
   }
   if (mode === C.BY_INTERVIEWER_ONE_SURVEY || mode === C.BY_SITE) {
     footer.push([

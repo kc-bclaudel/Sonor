@@ -59,6 +59,22 @@ const labeles_states = {
         fr: 'UE non visible gestionnaire',
         en: 'Not available to all',
     },
+    NPA: {
+        fr: 'Non traitée absence enquêteur',
+        en: 'Not processed interviewer absence',
+    },
+    NPI: {
+        fr: 'Non traitée enquêteur',
+        en: 'Not processed interviewer',
+    },
+    ROW: {
+        fr: 'Droit de retrait',
+        en: 'Right of withdrawal',
+    },
+    CLO: {
+        fr: 'Clôturée',
+        en: 'Closed',
+    },
 };
       
 export default labeles_states;

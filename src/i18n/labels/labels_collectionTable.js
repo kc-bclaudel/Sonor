@@ -7,6 +7,10 @@ const monitoringTable = {
     fr: 'Taux de collecte',
     en: 'Collection rate',
   },
+  unitsNotAffected: {
+    fr: 'Unités non affectées',
+    en: 'Units not affected',
+  },
   wasteRate: {
     fr: 'Taux de déchet',
     en: 'Waste rate',

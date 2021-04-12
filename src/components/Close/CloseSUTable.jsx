@@ -129,7 +129,7 @@ class CloseSUTable extends React.Component {
 
   render() {
     const { data, sort, handleSort } = this.props;
-    const fieldsToSearch = ['city', 'interviewer', 'id', 'state'];
+    const fieldsToSearch = ['campaign', 'id', 'city', 'state', 'interviewer'];
     const {
       pagination, displayedLines, checkboxArray, checkAll, show, stateModified,
     } = this.state;
@@ -186,7 +186,7 @@ class CloseSUTable extends React.Component {
                         <input type="checkbox" name="checkAll" checked={checkAll} onChange={(e) => this.handleCheckAll(e)} />
                       </th>
                       <th onClick={handleSortFunct('campaign')} className="Clickable">
-                        {D.identifier}
+                        {D.survey}
                         <SortIcon val="campaign" sort={sort} />
                       </th>
                       <th onClick={handleSortFunct('id')} className="Clickable">
@@ -262,9 +262,8 @@ class CloseSUTable extends React.Component {
                         onChange={(e) => this.setState({ stateModified: e.target.value })}
                       >
                         <option disabled value={-1} key={-1}>{D.modaleModifiedText}</option>
-                        <option>Non traitée absence enquêteur</option>
-                        <option>Non traitée enquêteur</option>
-                        <option>Droit de retrait</option>
+                        <option>{D.NPA}</option>
+                        <option>{D.NPI}</option>
                       </Form.Control>
                     </Form.Group>
                   </Modal.Body>

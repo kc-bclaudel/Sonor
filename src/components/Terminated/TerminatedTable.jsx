@@ -22,7 +22,7 @@ class TerminatedTable extends React.Component {
       stateData: [],
       stateId: '',
       showComment: false,
-      suToModifiedSelected: '',
+      suToModifySelected: '',
       oldComment: '',
       newComment: '',
 
@@ -57,20 +57,23 @@ class TerminatedTable extends React.Component {
   }
 
   handleShowComment(line) {
-    this.setState({ showComment: true, suToModifiedSelected: line.id });
-    if(line.comments != null){
-      this.setState({oldComment: line.comments[0].value});
+    this.setState({ showComment: true, suToModifySelected: line.id });
+    if (line.comments != null) {
+      let comToSet = '';
+      const comment = line.comments.find((c) => c.type === 'MANAGEMENT');
+      if (comment) {
+        comToSet = comment.value;
+      }
+      this.setState({ oldComment: comToSet });
     } else {
-      this.setState({oldComment: ''});
+      this.setState({ oldComment: '' });
     }
   }
 
   validate() {
     const { validateUpdateComment } = this.props;
-    const { suToModifiedSelected, newComment } = this.state;
-    console.log("newComment ", newComment);
-    //TODO demander si il est possible de modifier les commentaires de plusieurs SU en même temps
-    validateUpdateComment(suToModifiedSelected, newComment);
+    const { suToModifySelected, newComment } = this.state;
+    validateUpdateComment(suToModifySelected, newComment);
   }
 
   handlePageChange(pagination) {
@@ -114,14 +117,14 @@ class TerminatedTable extends React.Component {
   render() {
     const {
       pagination, displayData, stateData, toggleStateHistory, stateId, showComment,
-      suToModifiedSelected, oldComment
+      suToModifySelected, oldComment,
     } = this.state;
     const {
       data, survey, handleSort, sort,
     } = this.props;
     const fieldsToSearch = ['interviewerFirstName', 'interviewerLastName', 'id'];
-    const handleCloseComment = () => {this.handleCloseComment()};
-    const handleShowComment = (id) => {this.handleShowComment(id)};
+    const handleCloseComment = () => { this.handleCloseComment(); };
+    const handleShowComment = (id) => { this.handleShowComment(id); };
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div>
@@ -189,21 +192,24 @@ class TerminatedTable extends React.Component {
                   Math.min(pagination.page * pagination.size, displayData.length),
                 )
                 .map((line) => (
-                  this.surveyListLine(line, survey, () => handleShowComment(line.id))
+                  this.surveyListLine(line, survey, () => handleShowComment(line))
                 ))}
             </tbody>
             <Modal show={showComment} onHide={() => handleCloseComment()}>
                 <Modal.Header closeButton>
-                  <Modal.Title>{D.modifiedCommentSu + suToModifiedSelected}</Modal.Title>
+                  <Modal.Title>{D.modifiedCommentSu + suToModifySelected}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>{D.modifiedCommentSuLastComment}</Form.Label>
-                  <Form.Control type="text" defaultValue={oldComment}
-                  onChange={e => this.setState({ newComment: e.target.value })}> 
-                  </Form.Control>
+                  <Form.Control
+                    type="text" 
+                    as="textarea"
+                    defaultValue={oldComment}
+                    onChange={(e) => this.setState({ newComment: e.target.value })}
+                  />
                   <Form.Text id="passwordHelpBlock" muted>
-                   {D.modifyCommentSuHelpText}
+                    {D.modifyCommentSuHelpText}
                   </Form.Text>
                 </Form.Group>
                 </Modal.Body>

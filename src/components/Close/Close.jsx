@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -34,14 +34,13 @@ function Close({
   }, [data, sort]);
 
   function validateChangingState(lstSUChangingState, state) {
-    if(state==='non traitée absence enquêteur'){
-      state = 'VIN';
-    } else if(state==='non traitée enquêteur'){
-      state = 'VIN';
-    } else {
-      state = 'VIN';
+    let closingCause;
+    if (state === D.NPA) {
+      closingCause = 'NPA';
+    } else if (state === D.NPI) {
+      closingCause = 'NPI';
     }
-    dataRetreiver.updateSurveyUnitsState(lstSUChangingState, state)
+    dataRetreiver.closeSurveyUnits(lstSUChangingState, closingCause)
       .then((response) => {
         if (response.some(
           (res) => !(res.status === 200 || res.status === 201 || res.status === 204),
@@ -77,7 +76,9 @@ function Close({
         data={data}
         survey={survey}
         site={site}
-        validateChangingState={validateChangingState}
+        validateChangingState={
+          (lstSUChangingState, stateModified) => validateChangingState(lstSUChangingState, stateModified)
+        }
       />
     </div>
   );

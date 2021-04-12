@@ -39,6 +39,15 @@ const alert = {
     fr: 'Impossible de récupérer les données depuis le serveur.',
     en: 'Could not retreive data from the server.',
   },
+
+  commentUpdateSuccess: {
+    fr: 'Le commentaire a été mis à jour.',
+    en: 'The comment has been updated',
+  },
+  commentUpdateError: {
+    fr: 'L\'édition du commentaire a échouée.',
+    en: 'Could not update the comment.',
+  },
 };
 
 export default alert;

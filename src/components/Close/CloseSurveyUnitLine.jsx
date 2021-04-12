@@ -1,4 +1,5 @@
 import React from 'react';
+import D from '../../i18n';
 
 function CloseSurveyUnitLine({ lineData, isChecked, updateFunc }) {
   const {
@@ -15,7 +16,7 @@ function CloseSurveyUnitLine({ lineData, isChecked, updateFunc }) {
       <td>{ssech}</td>
       <td>{location ? location.substring(0, 2) : null}</td>
       <td>{city}</td>
-      <td>{state}</td>
+      <td>{state ? D[state] : ''}</td>
     </tr>
   );
 }

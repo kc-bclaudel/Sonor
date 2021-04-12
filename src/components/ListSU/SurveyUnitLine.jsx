@@ -1,4 +1,5 @@
 import React from 'react';
+import D from '../../i18n';
 
 function SurveyUnitLine({ lineData, isChecked, updateFunc }) {
   const {
@@ -14,7 +15,7 @@ function SurveyUnitLine({ lineData, isChecked, updateFunc }) {
       <td>{ssech}</td>
       <td>{departement.substring(0, 2)}</td>
       <td>{city}</td>
-      <td>{state}</td>
+      <td>{state ? D[state] : ''}</td>
     </tr>
   );
 }
