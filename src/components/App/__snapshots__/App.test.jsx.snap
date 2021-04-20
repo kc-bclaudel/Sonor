@@ -22,6 +22,7 @@ Object {
                 >
                   <div
                     class="col-md-auto"
+                    id="logoCol"
                   >
                     <a
                       class="ButtonLink"
@@ -35,7 +36,7 @@ Object {
                       <div
                         id="appVersion"
                       >
-                        0.1.6
+                        0.2.0
                       </div>
                     </a>
                   </div>
@@ -74,34 +75,77 @@ Object {
                           Follow up
                         </button>
                       </a>
-                      <a
-                        class="ButtonLink"
-                        href="/review"
+                      <li
+                        class="dropdown"
+                        id="BtnReviewParent"
                       >
                         <button
-                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                          class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
                           data-testid="review"
                           type="button"
                         >
                           Review
+                          <b
+                            class="caret"
+                          />
                         </button>
-                      </a>
+                      </li>
                       <a
                         class="ButtonLink"
-                        href="/notifications"
+                        href="/close"
                       >
                         <button
                           class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                          data-testid="notifications"
                           type="button"
                         >
-                          Notify
+                          Close
                         </button>
                       </a>
                     </div>
                   </div>
                   <div
                     class="col"
+                  >
+                    <div
+                      class="d-inline-flex classTest"
+                      id="headerButtonContainer2"
+                    >
+                      <li
+                        class="dropdown headerRightButton"
+                        id="BtnSuivreParent"
+                      >
+                        <a
+                          class="ButtonLink"
+                          href="/notifications"
+                        >
+                          <button
+                            class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                            data-testid="notifications"
+                            type="button"
+                          >
+                            Notify
+                          </button>
+                        </a>
+                      </li>
+                      <li
+                        class="dropdown headerRightButton"
+                        id="BtnSuivreParent"
+                      >
+                        <button
+                          class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
+                          data-toggle="dropdown"
+                          type="button"
+                        >
+                          Useful informations
+                          <b
+                            class="caret"
+                          />
+                        </button>
+                      </li>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-auto"
                   >
                     <div
                       class="card"
@@ -164,7 +208,7 @@ Object {
                 class="ViewCard card"
               >
                 <div
-                  class="card-title h5"
+                  class="PageTitle card-title h5"
                 >
                   List of surveys
                 </div>
@@ -209,7 +253,39 @@ Object {
                     <thead>
                       <tr>
                         <th
-                          rowspan="2"
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="ColumnSpacing"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="ColumnSpacing"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="ColumnSpacing"
+                        />
+                        <th
+                          class="CenteredText"
+                          colspan="6"
+                        >
+                          Survey Units
+                        </th>
+                      </tr>
+                      <tr>
+                        <th
+                          class="Clickable"
                         >
                           <span
                             class="sortIcon"
@@ -225,10 +301,9 @@ Object {
                         </th>
                         <th
                           class="ColumnSpacing"
-                          rowspan="2"
                         />
                         <th
-                          rowspan="2"
+                          class="Clickable"
                         >
                           <span
                             class="sortIcon"
@@ -243,8 +318,8 @@ Object {
                           Collection start date
                         </th>
                         <th
+                          class="Clickable"
                           data-testid="Header-collection-end-date"
-                          rowspan="2"
                         >
                           <span
                             class="sortIcon"
@@ -259,7 +334,7 @@ Object {
                           Collection end date
                         </th>
                         <th
-                          rowspan="2"
+                          class="Clickable"
                         >
                           <span
                             class="sortIcon"
@@ -275,11 +350,9 @@ Object {
                         </th>
                         <th
                           class="ColumnSpacing"
-                          rowspan="2"
                         />
                         <th
                           class="Clickable"
-                          rowspan="2"
                         >
                           <span
                             class="sortIcon"
@@ -295,15 +368,7 @@ Object {
                         </th>
                         <th
                           class="ColumnSpacing"
-                          rowspan="2"
                         />
-                        <th
-                          colspan="6"
-                        >
-                          Survey Units
-                        </th>
-                      </tr>
-                      <tr>
                         <th
                           class="Clickable"
                         >
@@ -952,6 +1017,7 @@ Object {
               >
                 <div
                   class="col-md-auto"
+                  id="logoCol"
                 >
                   <a
                     class="ButtonLink"
@@ -965,7 +1031,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.6
+                      0.2.0
                     </div>
                   </a>
                 </div>
@@ -1004,34 +1070,77 @@ Object {
                         Follow up
                       </button>
                     </a>
-                    <a
-                      class="ButtonLink"
-                      href="/review"
+                    <li
+                      class="dropdown"
+                      id="BtnReviewParent"
                     >
                       <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
                         data-testid="review"
                         type="button"
                       >
                         Review
+                        <b
+                          class="caret"
+                        />
                       </button>
-                    </a>
+                    </li>
                     <a
                       class="ButtonLink"
-                      href="/notifications"
+                      href="/close"
                     >
                       <button
                         class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="notifications"
                         type="button"
                       >
-                        Notify
+                        Close
                       </button>
                     </a>
                   </div>
                 </div>
                 <div
                   class="col"
+                >
+                  <div
+                    class="d-inline-flex classTest"
+                    id="headerButtonContainer2"
+                  >
+                    <li
+                      class="dropdown headerRightButton"
+                      id="BtnSuivreParent"
+                    >
+                      <a
+                        class="ButtonLink"
+                        href="/notifications"
+                      >
+                        <button
+                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                          data-testid="notifications"
+                          type="button"
+                        >
+                          Notify
+                        </button>
+                      </a>
+                    </li>
+                    <li
+                      class="dropdown headerRightButton"
+                      id="BtnSuivreParent"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
+                        data-toggle="dropdown"
+                        type="button"
+                      >
+                        Useful informations
+                        <b
+                          class="caret"
+                        />
+                      </button>
+                    </li>
+                  </div>
+                </div>
+                <div
+                  class="col-md-auto"
                 >
                   <div
                     class="card"
@@ -1094,7 +1203,7 @@ Object {
               class="ViewCard card"
             >
               <div
-                class="card-title h5"
+                class="PageTitle card-title h5"
               >
                 List of surveys
               </div>
@@ -1139,7 +1248,39 @@ Object {
                   <thead>
                     <tr>
                       <th
-                        rowspan="2"
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="ColumnSpacing"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="ColumnSpacing"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="ColumnSpacing"
+                      />
+                      <th
+                        class="CenteredText"
+                        colspan="6"
+                      >
+                        Survey Units
+                      </th>
+                    </tr>
+                    <tr>
+                      <th
+                        class="Clickable"
                       >
                         <span
                           class="sortIcon"
@@ -1155,10 +1296,9 @@ Object {
                       </th>
                       <th
                         class="ColumnSpacing"
-                        rowspan="2"
                       />
                       <th
-                        rowspan="2"
+                        class="Clickable"
                       >
                         <span
                           class="sortIcon"
@@ -1173,8 +1313,8 @@ Object {
                         Collection start date
                       </th>
                       <th
+                        class="Clickable"
                         data-testid="Header-collection-end-date"
-                        rowspan="2"
                       >
                         <span
                           class="sortIcon"
@@ -1189,7 +1329,7 @@ Object {
                         Collection end date
                       </th>
                       <th
-                        rowspan="2"
+                        class="Clickable"
                       >
                         <span
                           class="sortIcon"
@@ -1205,11 +1345,9 @@ Object {
                       </th>
                       <th
                         class="ColumnSpacing"
-                        rowspan="2"
                       />
                       <th
                         class="Clickable"
-                        rowspan="2"
                       >
                         <span
                           class="sortIcon"
@@ -1225,15 +1363,7 @@ Object {
                       </th>
                       <th
                         class="ColumnSpacing"
-                        rowspan="2"
                       />
-                      <th
-                        colspan="6"
-                      >
-                        Survey Units
-                      </th>
-                    </tr>
-                    <tr>
                       <th
                         class="Clickable"
                       >
@@ -2008,6 +2138,7 @@ Object {
                 >
                   <div
                     class="col-md-auto"
+                    id="logoCol"
                   >
                     <a
                       class="ButtonLink"
@@ -2021,7 +2152,7 @@ Object {
                       <div
                         id="appVersion"
                       >
-                        0.1.6
+                        0.2.0
                       </div>
                     </a>
                   </div>
@@ -2060,34 +2191,77 @@ Object {
                           Follow up
                         </button>
                       </a>
-                      <a
-                        class="ButtonLink"
-                        href="/review"
+                      <li
+                        class="dropdown"
+                        id="BtnReviewParent"
                       >
                         <button
-                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                          class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
                           data-testid="review"
                           type="button"
                         >
                           Review
+                          <b
+                            class="caret"
+                          />
                         </button>
-                      </a>
+                      </li>
                       <a
                         class="ButtonLink"
-                        href="/notifications"
+                        href="/close"
                       >
                         <button
                           class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                          data-testid="notifications"
                           type="button"
                         >
-                          Notify
+                          Close
                         </button>
                       </a>
                     </div>
                   </div>
                   <div
                     class="col"
+                  >
+                    <div
+                      class="d-inline-flex classTest"
+                      id="headerButtonContainer2"
+                    >
+                      <li
+                        class="dropdown headerRightButton"
+                        id="BtnSuivreParent"
+                      >
+                        <a
+                          class="ButtonLink"
+                          href="/notifications"
+                        >
+                          <button
+                            class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                            data-testid="notifications"
+                            type="button"
+                          >
+                            Notify
+                          </button>
+                        </a>
+                      </li>
+                      <li
+                        class="dropdown headerRightButton"
+                        id="BtnSuivreParent"
+                      >
+                        <button
+                          class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
+                          data-toggle="dropdown"
+                          type="button"
+                        >
+                          Useful informations
+                          <b
+                            class="caret"
+                          />
+                        </button>
+                      </li>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-auto"
                   >
                     <div
                       class="card"
@@ -2150,7 +2324,7 @@ Object {
                 class="ViewCard card"
               >
                 <div
-                  class="card-title h5"
+                  class="PageTitle card-title h5"
                 >
                   List of surveys
                 </div>
@@ -2195,7 +2369,39 @@ Object {
                     <thead>
                       <tr>
                         <th
-                          rowspan="2"
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="ColumnSpacing"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="ColumnSpacing"
+                        />
+                        <th
+                          class="EmptyHeader"
+                        />
+                        <th
+                          class="ColumnSpacing"
+                        />
+                        <th
+                          class="CenteredText"
+                          colspan="6"
+                        >
+                          Survey Units
+                        </th>
+                      </tr>
+                      <tr>
+                        <th
+                          class="Clickable"
                         >
                           <span
                             class="sortIcon"
@@ -2211,10 +2417,9 @@ Object {
                         </th>
                         <th
                           class="ColumnSpacing"
-                          rowspan="2"
                         />
                         <th
-                          rowspan="2"
+                          class="Clickable"
                         >
                           <span
                             class="sortIcon"
@@ -2229,8 +2434,8 @@ Object {
                           Collection start date
                         </th>
                         <th
+                          class="Clickable"
                           data-testid="Header-collection-end-date"
-                          rowspan="2"
                         >
                           <span
                             class="sortIcon"
@@ -2245,7 +2450,7 @@ Object {
                           Collection end date
                         </th>
                         <th
-                          rowspan="2"
+                          class="Clickable"
                         >
                           <span
                             class="sortIcon"
@@ -2261,11 +2466,9 @@ Object {
                         </th>
                         <th
                           class="ColumnSpacing"
-                          rowspan="2"
                         />
                         <th
                           class="Clickable"
-                          rowspan="2"
                         >
                           <span
                             class="sortIcon"
@@ -2281,15 +2484,7 @@ Object {
                         </th>
                         <th
                           class="ColumnSpacing"
-                          rowspan="2"
                         />
-                        <th
-                          colspan="6"
-                        >
-                          Survey Units
-                        </th>
-                      </tr>
-                      <tr>
                         <th
                           class="Clickable"
                         >
@@ -2938,6 +3133,7 @@ Object {
               >
                 <div
                   class="col-md-auto"
+                  id="logoCol"
                 >
                   <a
                     class="ButtonLink"
@@ -2951,7 +3147,7 @@ Object {
                     <div
                       id="appVersion"
                     >
-                      0.1.6
+                      0.2.0
                     </div>
                   </a>
                 </div>
@@ -2990,34 +3186,77 @@ Object {
                         Follow up
                       </button>
                     </a>
-                    <a
-                      class="ButtonLink"
-                      href="/review"
+                    <li
+                      class="dropdown"
+                      id="BtnReviewParent"
                     >
                       <button
-                        class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                        class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
                         data-testid="review"
                         type="button"
                       >
                         Review
+                        <b
+                          class="caret"
+                        />
                       </button>
-                    </a>
+                    </li>
                     <a
                       class="ButtonLink"
-                      href="/notifications"
+                      href="/close"
                     >
                       <button
                         class="HeaderButton HeaderFocusableButton  btn btn-primary"
-                        data-testid="notifications"
                         type="button"
                       >
-                        Notify
+                        Close
                       </button>
                     </a>
                   </div>
                 </div>
                 <div
                   class="col"
+                >
+                  <div
+                    class="d-inline-flex classTest"
+                    id="headerButtonContainer2"
+                  >
+                    <li
+                      class="dropdown headerRightButton"
+                      id="BtnSuivreParent"
+                    >
+                      <a
+                        class="ButtonLink"
+                        href="/notifications"
+                      >
+                        <button
+                          class="HeaderButton HeaderFocusableButton  btn btn-primary"
+                          data-testid="notifications"
+                          type="button"
+                        >
+                          Notify
+                        </button>
+                      </a>
+                    </li>
+                    <li
+                      class="dropdown headerRightButton"
+                      id="BtnSuivreParent"
+                    >
+                      <button
+                        class="HeaderButton HeaderFocusableButton dropdown-toggle  btn btn-primary"
+                        data-toggle="dropdown"
+                        type="button"
+                      >
+                        Useful informations
+                        <b
+                          class="caret"
+                        />
+                      </button>
+                    </li>
+                  </div>
+                </div>
+                <div
+                  class="col-md-auto"
                 >
                   <div
                     class="card"
@@ -3080,7 +3319,7 @@ Object {
               class="ViewCard card"
             >
               <div
-                class="card-title h5"
+                class="PageTitle card-title h5"
               >
                 List of surveys
               </div>
@@ -3125,7 +3364,39 @@ Object {
                   <thead>
                     <tr>
                       <th
-                        rowspan="2"
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="ColumnSpacing"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="ColumnSpacing"
+                      />
+                      <th
+                        class="EmptyHeader"
+                      />
+                      <th
+                        class="ColumnSpacing"
+                      />
+                      <th
+                        class="CenteredText"
+                        colspan="6"
+                      >
+                        Survey Units
+                      </th>
+                    </tr>
+                    <tr>
+                      <th
+                        class="Clickable"
                       >
                         <span
                           class="sortIcon"
@@ -3141,10 +3412,9 @@ Object {
                       </th>
                       <th
                         class="ColumnSpacing"
-                        rowspan="2"
                       />
                       <th
-                        rowspan="2"
+                        class="Clickable"
                       >
                         <span
                           class="sortIcon"
@@ -3159,8 +3429,8 @@ Object {
                         Collection start date
                       </th>
                       <th
+                        class="Clickable"
                         data-testid="Header-collection-end-date"
-                        rowspan="2"
                       >
                         <span
                           class="sortIcon"
@@ -3175,7 +3445,7 @@ Object {
                         Collection end date
                       </th>
                       <th
-                        rowspan="2"
+                        class="Clickable"
                       >
                         <span
                           class="sortIcon"
@@ -3191,11 +3461,9 @@ Object {
                       </th>
                       <th
                         class="ColumnSpacing"
-                        rowspan="2"
                       />
                       <th
                         class="Clickable"
-                        rowspan="2"
                       >
                         <span
                           class="sortIcon"
@@ -3211,15 +3479,7 @@ Object {
                       </th>
                       <th
                         class="ColumnSpacing"
-                        rowspan="2"
                       />
-                      <th
-                        colspan="6"
-                      >
-                        Survey Units
-                      </th>
-                    </tr>
-                    <tr>
                       <th
                         class="Clickable"
                       >

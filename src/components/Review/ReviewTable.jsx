@@ -4,11 +4,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
+import Form from 'react-bootstrap/Form';
 import SortIcon from '../SortIcon/SortIcon';
 import SearchField from '../SearchField/SearchField';
 import SurveyUnitLine from './SurveyUnitLine';
 import PaginationNav from '../PaginationNav/PaginationNav';
-import Form from 'react-bootstrap/Form';
 import D from '../../i18n';
 
 class ReviewTable extends React.Component {
@@ -73,6 +73,13 @@ class ReviewTable extends React.Component {
     }
   }
 
+  view(line) {
+    const { viewSU } = this.props;
+    if (!line.viewed) {
+      viewSU(line.id);
+    }
+  }
+
   validate() {
     const { validateUpdateComment } = this.props;
     const { suToModifySelected, newComment } = this.state;
@@ -114,8 +121,9 @@ class ReviewTable extends React.Component {
     } = this.state;
     const fieldsToSearch = ['campaignLabel', 'interviewer', 'id'];
     const toggleCheckBox = (i) => { this.toggleCheckBox(i); };
-    const handleCloseComment = () => {this.handleCloseComment()};
-    const handleShowComment = (line) => {this.handleShowComment(line)};
+    const view = (line) => { this.view(line); };
+    const handleCloseComment = () => { this.handleCloseComment(); };
+    const handleShowComment = (line) => { this.handleShowComment(line); };
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
       <div>
@@ -170,13 +178,14 @@ class ReviewTable extends React.Component {
                 Math.min(pagination.page * pagination.size, displayedLines.length),
               )
               .map((line) => (
-                  <SurveyUnitLine
-                    key={line.id}
-                    lineData={line}
-                    isChecked={checkboxArray[line.id]}
-                    updateFunc={() => toggleCheckBox(line.id)}
-                    handleShow={() => handleShowComment(line)}
-                  />
+                <SurveyUnitLine
+                  key={line.id}
+                  lineData={line}
+                  isChecked={checkboxArray[line.id]}
+                  view={() => view(line)}
+                  updateFunc={() => toggleCheckBox(line.id)}
+                  handleShow={() => handleShowComment(line)}
+                />
               ))}
               <Modal show={showComment} onHide={() => handleCloseComment()}>
                 <Modal.Header closeButton>

@@ -38,7 +38,7 @@ function NotificationHistory({ setMessageView, messageHistory }) {
                   .join(', ')}
               </td>
               <td>
-               {msg.text}
+                {msg.text}
               </td>
             </tr>
           ))}

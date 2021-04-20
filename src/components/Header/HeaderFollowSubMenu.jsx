@@ -4,7 +4,6 @@ import D from '../../i18n';
 import './Header.css';
 
 function HeaderFollowSubMenu({ toggle, setModal }) {
-
   function useOutsideAlerter(ref) {
     useEffect(() => {
       function handleClickOutside(event) {

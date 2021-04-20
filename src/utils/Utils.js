@@ -2,9 +2,8 @@ import D from '../i18n';
 import C from './constants.json';
 
 class Utils {
-
-  static getLabelFromStateType(stateType){
-    switch(stateType){
+  static getLabelFromStateType(stateType) {
+    switch (stateType) {
       case 'NVM':
         return D.NVM;
       case 'NNS':
@@ -35,7 +34,7 @@ class Utils {
         return D.QNA;
       case 'NVA':
         return D.NVA;
-      default :
+      default:
         return stateType;
     }
   }
@@ -46,7 +45,7 @@ class Utils {
 
   static convertMsToHoursMinutes(millis) {
     const date = new Date(millis);
-/*     if(date.getHours.length === 1){
+    /*     if(date.getHours.length === 1){
       return `${"0" + date.getHours()}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;
     } */
     return `${("0" + date.getHours()).slice(-2)}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;

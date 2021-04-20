@@ -31,7 +31,7 @@ const alert = {
     fr: 'Une erreur est survenue. Les unitées enquêtées suivantes n\'ont pas pu être validées',
     en: 'An error occured. The following survey units could not be validated',
   },
-  verifyInternetCo:  {
+  verifyInternetCo: {
     fr: 'Veuillez vérifier votre connexion internet.',
     en: 'Please check your internet connection.',
   },

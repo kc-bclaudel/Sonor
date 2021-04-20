@@ -49,6 +49,11 @@ function Review({
       });
   }
 
+  function viewSU(suId) {
+    dataRetreiver.viewSurveyUnit(suId);
+    fetchData();
+  }
+
   function validateUpdateComment(suToModifySelected, comment) {
     dataRetreiver.updateSurveyUnitsComment(suToModifySelected, comment)
       .then((res) => {
@@ -110,6 +115,7 @@ function Review({
                   survey={survey}
                   handleSort={handleSort}
                   validateSU={validateSU}
+                  viewSU={viewSU}
                   validateUpdateComment={validateUpdateComment}
                 />
               )

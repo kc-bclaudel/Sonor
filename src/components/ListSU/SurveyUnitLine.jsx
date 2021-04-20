@@ -3,7 +3,7 @@ import D from '../../i18n';
 
 function SurveyUnitLine({ lineData, isChecked, updateFunc }) {
   const {
-    id, ssech, departement, city, interviewer, state
+    id, ssech, departement, city, interviewer, state,
   } = lineData;
   return (
     <tr>

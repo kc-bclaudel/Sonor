@@ -27,7 +27,7 @@ function Contacts() {
                 onClick={() => { window.location.assign('mailto:survey@mail.com'); }}
               >
                 <th className="ContactsLeftHeader">{D.functionalBox}</th>
-                <td className=" LightGreyLine">survey@mail.com</td>
+                <td className=" LightGreyLine MailLink">survey@mail.com</td>
               </tr>
             </OverlayTrigger>
             <tr>

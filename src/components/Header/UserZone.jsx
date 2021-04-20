@@ -18,7 +18,7 @@ function UserZone({ user, date, showPreferences }) {
       <div className="UserZoneButtons">
         <Row>
           <Col xs="8">
-            <Button 
+            <Button
               variant="outline-primary"
               className="HeaderButton"
               data-testid="preferences"
@@ -34,7 +34,7 @@ function UserZone({ user, date, showPreferences }) {
               role="link"
               tabIndex="0"
             >
-              <i className="fa fa-question-circle-o fa-2x"/>
+              <i className="fa fa-question-circle-o fa-2x" />
             </div>
           </Col>
         </Row>

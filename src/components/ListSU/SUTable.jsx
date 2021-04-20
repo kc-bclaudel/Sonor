@@ -19,7 +19,7 @@ function makeTableForExport(data) {
     D.town,
     D.interviewer,
     D.idep,
-    D.state
+    D.state,
   ]];
 
   return header.concat(data.map((line) => ([
@@ -29,7 +29,7 @@ function makeTableForExport(data) {
     line.city,
     line.interviewer,
     line.idep,
-    line.state
+    line.state,
   ])));
 }
 
@@ -50,7 +50,9 @@ class SUTable extends React.Component {
     const { data } = this.props;
     if (prevProps.data !== data) {
       this.setState({ displayedLines: data });
-      const newCheckboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});
+      const newCheckboxArray = data.reduce((acc, curr) => {
+        acc[curr.id] = false; return acc;
+      }, {});
       this.setState({ checkboxArray: newCheckboxArray, checkAll: false });
     }
   }
@@ -128,7 +130,9 @@ class SUTable extends React.Component {
   render() {
     const { data, sort, handleSort } = this.props;
     const fieldsToSearch = ['city', 'interviewer', 'id', 'state'];
-    const { pagination, displayedLines, checkboxArray, checkAll, show } = this.state;
+    const {
+      pagination, displayedLines, checkboxArray, checkAll, show,
+    } = this.state;
     const toggleCheckBox = (i) => { this.toggleCheckBox(i); };
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
@@ -181,7 +185,7 @@ class SUTable extends React.Component {
                       <th>
                         <input type="checkbox" name="checkAll" checked={checkAll} onChange={(e) => this.handleCheckAll(e)} />
                       </th>
-                      <th onClick={handleSortFunct('id')}  className="Clickable">
+                      <th onClick={handleSortFunct('id')} className="Clickable">
                         {D.identifier}
                         <SortIcon val="id" sort={sort} />
                       </th>
@@ -213,8 +217,14 @@ class SUTable extends React.Component {
                         (pagination.page - 1) * pagination.size,
                         Math.min(pagination.page * pagination.size, displayedLines.length),
                       )
-                      .map((line) => (<SurveyUnitLine key={line.id} lineData={line} isChecked={checkboxArray[line.id]}
-                        updateFunc={() => toggleCheckBox(line.id)} />))}
+                      .map((line) => (
+                        <SurveyUnitLine
+                          key={line.id}
+                          lineData={line}
+                          isChecked={checkboxArray[line.id]}
+                          updateFunc={() => toggleCheckBox(line.id)}
+                        />
+                      ))}
                   </tbody>
                 </Table>
                 <div className="tableOptionsWrapper">

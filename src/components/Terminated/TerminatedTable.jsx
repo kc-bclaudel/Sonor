@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import displayStateHistoryTable from './DisplayStateHistoryTable';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import SearchField from '../SearchField/SearchField';
@@ -30,10 +32,12 @@ class TerminatedTable extends React.Component {
     this.queenUrl = `${window.localStorage.getItem('QUEEN_URL_FRONT_END')}`;
   }
 
-  getMaxWidth(){
-    return [document.getElementById("stateHistoryDate").getBoundingClientRect().width, 
-              document.getElementById("stateHistoryHour").getBoundingClientRect().width,
-              document.getElementById("stateHistoryState").getBoundingClientRect().width]    
+  getMaxWidth() {
+    return [
+      document.getElementById('stateHistoryDate').getBoundingClientRect().width,
+      document.getElementById('stateHistoryHour').getBoundingClientRect().width,
+      document.getElementById('stateHistoryState').getBoundingClientRect().width,
+    ];
   }
 
   toggleStateHistoryTable(e, newStateTitle) {
@@ -94,21 +98,49 @@ class TerminatedTable extends React.Component {
         <td>{survey.label}</td>
         <td data-testid="campaign-label">{data.id}</td>
         <td>{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
-        <td>{Utils.convertToDateString(data.finalizationDate) + " " + Utils.convertMsToHoursMinutes(data.finalizationDate)}</td>
+        <td>{`${Utils.convertToDateString(data.finalizationDate)} ${Utils.convertMsToHoursMinutes(data.finalizationDate)}`}</td>
+        <td>{data.reading ? D.yes : D.no}</td>
         <td>
-          <i
-            className="fa fa-calendar EditLink Clickable"
-            aria-hidden="true"
-            onClick={() => { window.open(`${this.queenUrl}/queen/readonly/questionnaire/${survey.id}/survey-unit/${data.id}`); }}
-          />
+          <OverlayTrigger
+            placement="top"
+            overlay={(
+              <Tooltip>
+                {D.questionnaire}
+              </Tooltip>
+            )}
+          >
+            <i
+              className="fa fa-calendar EditLink Clickable"
+              aria-hidden="true"
+              onClick={() => { window.open(`${this.queenUrl}/queen/readonly/questionnaire/${survey.id}/survey-unit/${data.id}`); }}
+            />
+          </OverlayTrigger>
           <span />
-          <i
-            className="fa fa-pencil EditCommentSurveyIcon Clickable"
-            aria-hidden="true"
-            onClick={() => handleShow()}
-          />
+          <OverlayTrigger
+            placement="top"
+            overlay={(
+              <Tooltip>
+                {D.comment}
+              </Tooltip>
+            )}
+          >
+            <i
+              className="fa fa-pencil EditCommentSurveyIcon Clickable"
+              aria-hidden="true"
+              onClick={() => handleShow()}
+            />
+          </OverlayTrigger>
           <span />
-          <i className="fa fa-history HistoryDisplayIcon Clickable" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
+          <OverlayTrigger
+            placement="top"
+            overlay={(
+              <Tooltip>
+                {D.history}
+              </Tooltip>
+            )}
+          >
+            <i className="fa fa-history HistoryDisplayIcon Clickable" aria-hidden="true" onClick={(e) => { this.toggleStateHistoryTable(e, data.id); }} />
+          </OverlayTrigger>
         </td>
       </tr>
     );
@@ -148,8 +180,9 @@ class TerminatedTable extends React.Component {
               <tr>
                 <th
                   id="stateHistoryHour"
-                  rowSpan="2" 
-                  onClick={handleSortFunct('campaignLabel')}>
+                  rowSpan="2"
+                  onClick={handleSortFunct('campaignLabel')}
+                >
                   <SortIcon val="campaignLabel" sort={sort} />
                   {D.survey}
                 </th>
@@ -180,6 +213,14 @@ class TerminatedTable extends React.Component {
                   <SortIcon val="finalizationDate" sort={sort} />
                   {D.finalizedDate}
                 </th>
+                <th
+                  rowSpan="2"
+                  onClick={handleSortFunct('reading')}
+                  className="Clickable"
+                >
+                  <SortIcon val="reading" sort={sort} />
+                  {D.reading}
+                </th>
                 <th rowSpan="2">
                   {D.listSuActions}
                 </th>
@@ -196,14 +237,14 @@ class TerminatedTable extends React.Component {
                 ))}
             </tbody>
             <Modal show={showComment} onHide={() => handleCloseComment()}>
-                <Modal.Header closeButton>
-                  <Modal.Title>{D.modifiedCommentSu + suToModifySelected}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
+              <Modal.Header closeButton>
+                <Modal.Title>{D.modifiedCommentSu + suToModifySelected}</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
                 <Form.Group as={Col} controlId="formGridState">
                   <Form.Label>{D.modifiedCommentSuLastComment}</Form.Label>
                   <Form.Control
-                    type="text" 
+                    type="text"
                     as="textarea"
                     defaultValue={oldComment}
                     onChange={(e) => this.setState({ newComment: e.target.value })}
@@ -212,25 +253,27 @@ class TerminatedTable extends React.Component {
                     {D.modifyCommentSuHelpText}
                   </Form.Text>
                 </Form.Group>
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button
-                    variant="secondary"
-                    data-testid="close-modal"
-                    onClick={() => handleCloseComment()}
-                  >
-                    {D.cancel}
-                  </Button>
-                  <Button
-                    variant="primary"
-                    data-testid="confirm-validate"
-                    onClick={() => { this.validate(); 
-                      handleCloseComment(); }}
-                  >
-                    {D.validate}
-                  </Button>
-                </Modal.Footer>
-              </Modal>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button
+                  variant="secondary"
+                  data-testid="close-modal"
+                  onClick={() => handleCloseComment()}
+                >
+                  {D.cancel}
+                </Button>
+                <Button
+                  variant="primary"
+                  data-testid="confirm-validate"
+                  onClick={() => {
+                    this.validate();
+                    handleCloseComment();
+                  }}
+                >
+                  {D.validate}
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </Table>
           <div className="tableOptionsWrapper">
             <PaginationNav.PageSelector
@@ -241,7 +284,11 @@ class TerminatedTable extends React.Component {
           </div>
         </div>
         {!toggleStateHistory
-        || displayStateHistoryTable(stateData, stateId, (() => this.hideStateHistoryTable()), (() => this.getMaxWidth()))}
+        || displayStateHistoryTable(
+          stateData,
+          stateId,
+          (() => this.hideStateHistoryTable()), (() => this.getMaxWidth()),
+        )}
       </div>
     );
   }

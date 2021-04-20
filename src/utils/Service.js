@@ -171,6 +171,21 @@ class Service {
       });
   }
 
+  putSurveyUnitViewed(surveyId, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${surveyId}/viewed`, options)
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+
   getTotalDemByCampaign(campaignId, cb) {
     fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count`, this.makeOptions())
       .then((res) => res.json())

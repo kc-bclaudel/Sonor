@@ -15,7 +15,7 @@ function NotificationSender({ dataRetreiver, fetchMessageHistory, sender }) {
   const typehead = useRef(null);
 
   function sendMessage() {
-    dataRetreiver.postMessage({ text: message, recipients, sender}, () => {
+    dataRetreiver.postMessage({ text: message, recipients, sender }, () => {
       fetchMessageHistory();
     });
     typehead.current.clear();
@@ -30,7 +30,7 @@ function NotificationSender({ dataRetreiver, fetchMessageHistory, sender }) {
   function handleSearch(query) {
     setIsLoading(true);
     dataRetreiver.verifyName(query.replace('@', ''), (res) => {
-      res.push({ id: D.notifyAll});
+      res.push({ id: D.notifyAll });
       setOptions(res);
       setIsLoading(false);
     });

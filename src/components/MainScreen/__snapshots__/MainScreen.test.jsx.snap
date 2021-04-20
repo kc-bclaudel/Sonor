@@ -12,7 +12,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -57,7 +57,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -73,10 +105,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -91,8 +122,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -107,7 +138,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -123,11 +154,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
                     class="Clickable"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -143,15 +172,7 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
-                  <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
                   <th
                     class="Clickable"
                   >
@@ -787,7 +808,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -832,7 +853,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -848,10 +901,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -866,8 +918,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -882,7 +934,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -898,11 +950,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
                   class="Clickable"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -918,15 +968,7 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
-                <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
                 <th
                   class="Clickable"
                 >
@@ -1619,7 +1661,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -1664,7 +1706,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -1680,10 +1754,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -1698,8 +1771,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -1714,7 +1787,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -1730,11 +1803,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
                     class="Clickable"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -1750,15 +1821,7 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
-                  <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
                   <th
                     class="Clickable"
                   >
@@ -2394,7 +2457,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -2439,7 +2502,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -2455,10 +2550,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -2473,8 +2567,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -2489,7 +2583,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -2505,11 +2599,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
                   class="Clickable"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -2525,15 +2617,7 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
-                <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
                 <th
                   class="Clickable"
                 >
@@ -3226,7 +3310,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -3271,7 +3355,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -3287,10 +3403,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -3305,8 +3420,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -3321,7 +3436,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -3337,11 +3452,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
                     class="Clickable"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -3357,15 +3470,7 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
-                  <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
                   <th
                     class="Clickable"
                   >
@@ -4001,7 +4106,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -4046,7 +4151,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -4062,10 +4199,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -4080,8 +4216,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -4096,7 +4232,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -4112,11 +4248,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
                   class="Clickable"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -4132,15 +4266,7 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
-                <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
                 <th
                   class="Clickable"
                 >
@@ -4873,7 +4999,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -4918,7 +5044,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -4934,10 +5092,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -4952,8 +5109,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -4968,7 +5125,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable"
                   >
                     <span
                       class="sortIcon"
@@ -4984,11 +5141,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
                     class="Clickable"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -5004,15 +5159,7 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
-                  <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
                   <th
                     class="Clickable"
                   >
@@ -5648,7 +5795,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -5693,7 +5840,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -5709,10 +5888,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -5727,8 +5905,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -5743,7 +5921,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable"
                 >
                   <span
                     class="sortIcon"
@@ -5759,11 +5937,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
                   class="Clickable"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -5779,15 +5955,7 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
-                <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
                 <th
                   class="Clickable"
                 >

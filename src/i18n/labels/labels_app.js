@@ -1,5 +1,5 @@
 const app = {
-  //Keycloak
+  // Keycloak
   cannotAuth: {
     fr: 'Autentification impossible',
     en: 'Unable to authenticate',
@@ -71,6 +71,14 @@ const app = {
   initializing: {
     fr: 'Initialisation ...',
     en: 'Initializing...',
+  },
+  yes: {
+    fr: 'Oui',
+    en: 'Yes',
+  },
+  no: {
+    fr: 'Non',
+    en: 'No',
   },
 };
 

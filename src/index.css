@@ -154,9 +154,7 @@ td{
   border: 2px solid black;
   position: relative;
   display: inline-block;
-  width:32%;
   text-align: center;
-
 }
 
 .CurrentPhase {
@@ -180,8 +178,6 @@ td{
   position: relative;
   display: inline-flex;
   margin: auto;
-  width:32%;
- 
 }
 
 #PhaseMilestones div.DateCenter{
@@ -200,6 +196,24 @@ td{
   text-indent: -110px;
 }
 
+@media only screen and (max-width: 850px) {
+  div.PhaseSmall{
+    width: 32%; 
+  }
+  div.PhaseLarge{
+    width: 32%;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  div.PhaseSmall{
+    width: 24%; 
+  }
+  div.PhaseLarge{
+    width: 49%;
+  }
+}
+
 #TimeLine{
   position: relative;
 }
@@ -211,7 +225,10 @@ td{
 
 #Contacts{
   position: absolute;
+}
 
+.MailLink{
+  text-decoration: underline;
 }
 
 button{
@@ -246,7 +263,7 @@ button{
   }
   #appVersion {
     display:none;
-}
+  }
 }
 
 #headerButtonContainer{
@@ -406,4 +423,8 @@ a:hover {
 
 .VerticallyCentered {
   vertical-align: middle !important;
+}
+
+.notViewed {
+  font-weight: bold;
 }

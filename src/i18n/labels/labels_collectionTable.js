@@ -62,8 +62,7 @@ const monitoringTable = {
   surveyUnitsClosedManagement: {
     fr: 'Unités enquqêtées clôturées gestionnaire',
     en: 'Survey units closed by management',
-  }
- 
+  },
 };
 
 export default monitoringTable;

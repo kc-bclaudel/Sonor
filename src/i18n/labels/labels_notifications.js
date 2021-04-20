@@ -33,7 +33,7 @@ const alert = {
   },
   notifyAll: {
     fr: 'Tous',
-    en: 'All'
+    en: 'All',
   },
 
 };

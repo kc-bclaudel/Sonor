@@ -33,7 +33,7 @@ const listSU = {
   },
   state: {
     fr: 'Statut provisoire',
-    en: 'Provisional state'
+    en: 'Provisional state',
   },
   modified: {
     fr: 'Modifier le statut',
@@ -41,16 +41,16 @@ const listSU = {
   },
   modaleModifiedText: {
     fr: 'Sélectionner la modalité souhaitée',
-    en: 'Select the desired modality'
+    en: 'Select the desired modality',
   },
   validate: {
     fr: 'Valider',
-    en: 'Validate'
+    en: 'Validate',
   },
   cancel: {
     fr: 'Annuler',
-    en: 'Cancel'
-  }
+    en: 'Cancel',
+  },
 };
 
 export default listSU;

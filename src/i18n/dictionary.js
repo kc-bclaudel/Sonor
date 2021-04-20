@@ -9,7 +9,7 @@ import collectionTable from './labels/labels_collectionTable';
 import alert from './labels/labels_alert';
 import terminated from './labels/labels_terminated';
 import notifications from './labels/labels_notifications';
-import labeles_states from './labels/labels_states';
+import labelesStates from './labels/labels_states';
 import close from './labels/labels_close';
 
 const dictionary = {
@@ -24,7 +24,7 @@ const dictionary = {
   ...alert,
   ...terminated,
   ...notifications,
-  ...labeles_states,
+  ...labelesStates,
   ...close,
 };
 

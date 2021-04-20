@@ -126,6 +126,13 @@ export default ({ config, db }) => {
     res.status(200).json(mockResponse);
   })
 
+  api.put("/survey-unit/:id/viewed", (req, res) => {
+    const mockResponse = {
+      hello: "hello",
+    };
+    res.status(200).json(mockResponse);
+  })
+
   //TODO Review/Finalized updateComment
   api.put("/survey-unit/:id/comment/:comment", (req, res) => {
     const mockResponse = {
@@ -336,6 +343,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1561932000000,
+        reading: true,
+        viewed: false,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -358,6 +367,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1561932000000,
+        reading: true,
+        viewed: false,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -380,6 +391,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
+        reading: true,
+        viewed: false,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -402,6 +415,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1603304314268,
+        reading: true,
+        viewed: false,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -424,6 +439,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
+        reading: true,
+        viewed: true,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -446,6 +463,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1603304314268,
+        reading: true,
+        viewed: true,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -468,6 +487,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
+        reading: true,
+        viewed: true,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -490,6 +511,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1603304314268,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW7",
           interviewerFirstName: "Thierry",
@@ -512,6 +535,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -534,6 +559,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1603304314268,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -556,6 +583,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW7",
           interviewerFirstName: "Thierry",
@@ -568,6 +597,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1603304314268,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -580,6 +611,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1561932000000,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -592,6 +625,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1561932000000,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -604,6 +639,8 @@ export default ({ config, db }) => {
         location: "95160",
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -616,6 +653,8 @@ export default ({ config, db }) => {
         location: "90000",
         city: "BELFORT",
         finalizationDate: 1603304314268,
+        reading: false,
+        viewed: true,
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -626,7 +665,6 @@ export default ({ config, db }) => {
 
     res.json([
       ...mockResponse,
-
     ]);
   });
 

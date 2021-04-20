@@ -90,7 +90,8 @@ function ListSU({
           survey={survey}
           site={site}
           validateChangingState={
-            (lstSUChangingState, stateModified) => validateChangingState(lstSUChangingState, stateModified)
+            (lstSUChangingState,
+              stateModified) => validateChangingState(lstSUChangingState, stateModified)
           }
         />
       </div>

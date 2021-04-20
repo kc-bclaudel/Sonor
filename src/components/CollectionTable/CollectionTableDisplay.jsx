@@ -247,7 +247,10 @@ function CollectionTableDisplay({
             Math.min(pagination.page * pagination.size, displayedLines.length),
           )
           .map((line) => (
-            <CollectionTableDisplayLine key={line.interviewerId || line.survey || line.site} data={line} />
+            <CollectionTableDisplayLine
+              key={line.interviewerId || line.survey || line.site}
+              data={line}
+            />
           ))}
       </tbody>
       {tableFooter}

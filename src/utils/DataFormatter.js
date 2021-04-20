@@ -238,7 +238,17 @@ class DataFormatter {
     });
   }
 
-  //TODO add comment
+  viewSurveyUnit(suId, cb) {
+    return new Promise((resolve) => {
+      this.service.putSurveyUnitViewed(suId, (data) => {
+        if (cb) {
+          cb(data);
+        }
+        resolve(data);
+      });
+    });
+  }
+
   getListSUToReview(surveyId) {
     return new Promise((resolve) => {
       this.service.getSurveys((res) => {
@@ -258,6 +268,7 @@ class DataFormatter {
                       ? su.interviewer.id
                       : '',
                     id: su.id,
+                    viewed: su.viewed,
                     comments: su.comments,
                   }))
                     .sort((a, b) => (a.interviewer > b.interviewer ? 1 : -1));
@@ -530,7 +541,7 @@ class DataFormatter {
     let site;
 
     if (mode === BY_SURVEY_ONE_INTERVIEWER) {
-      this.getSurveyByInterviewerDataForMonitoringTable(survey, date, (data) =>{
+      this.getSurveyByInterviewerDataForMonitoringTable(survey, date, (data) => {
         cb(data);
       });
     } else {
