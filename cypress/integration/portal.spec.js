@@ -7,7 +7,7 @@ context("sonor", () => {
       .as("get-user");
 
     cy.server()
-      .route("GET", "**/api/campaigns", "fixture:getSurveys.json")
+      .route("GET", "**/api/campaigns", "fixture:getCampaigns.json")
       .as("get-campaigns");
 
     cy.server()
@@ -129,7 +129,7 @@ context("sonor", () => {
       .eq(1)
       .find("td")
       .first()
-      .should("have.text", "Boulanger Jacques");
+      .should("have.text", "Boulanger Emilie");
     cy.get("tbody").eq(1).find("tr").should("have.length", 6);
 
     // Testing return button

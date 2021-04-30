@@ -1,0 +1,21 @@
+
+/* Column sizes */
+
+#TerminatedTableContainer .ColCampaign{
+  width: 28%;
+}
+#TerminatedTableContainer .ColId{
+  width: 16%;
+}
+#TerminatedTableContainer .ColInterviewer{
+  width: 22%;
+}
+#TerminatedTableContainer .ColFinalizationDate{
+  width: 14%;
+}
+#TerminatedTableContainer .ColReading{
+  width: 10%;
+}
+#TerminatedTableContainer .ColAction{
+  width: 10%;
+}

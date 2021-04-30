@@ -10,6 +10,7 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import ReviewTable from './ReviewTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
+import './Review.css';
 
 function Review({
   location, dataRetreiver, match,
@@ -43,6 +44,23 @@ function Review({
             .filter((x, index) => !(response[index].status === 200 || response[index].status === 201 || response[index].status === 204)).join(', ')}.`, D.error, 3500);
         } else {
           NotificationManager.success(`${D.reviewAlertSuccess}: ${lstSUFinalized.join(', ')}.`, D.updateSuccess, 3500);
+        }
+        fetchData();
+      });
+  }
+
+  function viewSU(suId) {
+    dataRetreiver.updateSurveyUnitViewed(suId);
+    fetchData();
+  }
+
+  function validateUpdateComment(suToModifySelected, comment) {
+    dataRetreiver.updateSurveyUnitsComment(suToModifySelected, comment)
+      .then((res) => {
+        if (res.status === 200 || res.status === 201 || res.status === 204) {
+          NotificationManager.success(D.commentUpdateSuccess, D.updateSuccess, 3500);
+        } else {
+          NotificationManager.error(D.commentUpdateError, D.error, 3500);
         }
         fetchData();
       });
@@ -84,7 +102,7 @@ function Review({
           </Row>
         </Container>
         <Card className="ViewCard">
-          <Card.Title>
+          <Card.Title className="PageTitle">
             {D.surveyUnitsToReview}
             {data.length}
           </Card.Title>
@@ -97,6 +115,8 @@ function Review({
                   survey={survey}
                   handleSort={handleSort}
                   validateSU={validateSU}
+                  viewSU={viewSU}
+                  validateUpdateComment={validateUpdateComment}
                 />
               )
               : <span>{D.noSuToReview}</span>

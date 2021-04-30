@@ -1,0 +1,28 @@
+/* Column sizes */
+
+#SUTable .ColCheckbox {
+  width: 1%;
+}
+
+#SUTable .ColId {
+  width: 15%;
+}
+#SUTable .ColInterviewer {
+  width: 20%;
+}
+
+#SUTable .ColSsech {
+  width: 11%;
+}
+
+#SUTable .ColDepartement {
+  width: 13%;
+}
+
+#SUTable .ColCity {
+  width: 20%;
+}
+
+#SUTable .ColState {
+  width: 13%;
+}

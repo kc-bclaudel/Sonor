@@ -1,0 +1,100 @@
+[
+  {
+    "campaign": {
+      "id": "simpsons2020x00",
+      "label": "Survey on the Simpsons tv show 2020"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "campaign": {
+      "id": "simpsosfqns2020x00",
+      "label": "Survey on something 2020"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "campaign": {
+      "id": "vqs2fsqe021x00",
+      "label": "Everyday life and health survey 2022"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "campaign": {
+      "id": "simpsonqsdfsqes2020x00",
+      "label": "Survey on something else 2020"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "campaign": {
+      "id": "vqs2qfsdfsqe021x00",
+      "label": "Everyday life and health survey 2026"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "campaign": {
+      "id": "simpsonkgs2020x00",
+      "label": "Survey on the Simpsons tv show 2021"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "campaign": {
+      "id": "vqs202fgd1x00",
+      "label": "Everyday life and health survey 2018"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  }
+]

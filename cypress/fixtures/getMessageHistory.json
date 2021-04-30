@@ -1,0 +1,146 @@
+[
+   {
+      "id":1,
+      "text":"bonjour",
+      "typedRecipients":[
+         {
+            "id":"INTW1",
+            "type":"interviewer",
+            "label":"Margie Lucas"
+         }
+      ],
+      "date":1619535704036
+   },
+   {
+      "id":2,
+      "text":"message de test",
+      "typedRecipients":[
+         {
+            "id":"simpsons2020x00",
+            "type":"campaign",
+            "label":"Survey on the Simpsons tv show 2020"
+         }
+      ],
+      "date":1619540838668
+   },
+   {
+      "id":3,
+      "text":"message 3",
+      "typedRecipients":[
+         {
+            "id":"OU-NATIONAL",
+            "type":"organization",
+            "label":"National organizational unit"
+         }
+      ],
+      "date":1619598627334
+   },
+   {
+      "id":4,
+      "text":"test",
+      "typedRecipients":[
+         {
+            "id":"INTW1",
+            "type":"interviewer",
+            "label":"Margie Lucas"
+         }
+      ],
+      "date":1619598639348
+   },
+   {
+      "id":5,
+      "text":"test",
+      "typedRecipients":[
+         {
+            "id":"INTW1",
+            "type":"interviewer",
+            "label":"Margie Lucas"
+         }
+      ],
+      "date":1619598651545
+   },
+   {
+      "id":6,
+      "text":"test 2",
+      "typedRecipients":[
+         {
+            "id":"INTW1",
+            "type":"interviewer",
+            "label":"Margie Lucas"
+         }
+      ],
+      "date":1619598663072
+   },
+   {
+      "id":7,
+      "text":"test 3",
+      "typedRecipients":[
+         {
+            "id":"INTW2",
+            "type":"interviewer",
+            "label":"Carlton Campbell"
+         }
+      ],
+      "date":1619598671474
+   },
+   {
+      "id":8,
+      "text":"test 4",
+      "typedRecipients":[
+         {
+            "id":"INTW4",
+            "type":"interviewer",
+            "label":"Melody Grant"
+         }
+      ],
+      "date":1619598683542
+   },
+   {
+      "id":9,
+      "text":"test 5",
+      "typedRecipients":[
+         {
+            "id":"INTW3",
+            "type":"interviewer",
+            "label":"Gerald Edwards"
+         }
+      ],
+      "date":1619598695148
+   },
+   {
+      "id":10,
+      "text":"test 6",
+      "typedRecipients":[
+         {
+            "id":"vqs2021x00",
+            "type":"campaign",
+            "label":"Everyday life and health survey 2021"
+         }
+      ],
+      "date":1619598710107
+   },
+   {
+      "id":11,
+      "text":"test 7",
+      "typedRecipients":[
+         {
+            "id":"INTW3",
+            "type":"interviewer",
+            "label":"Gerald Edwards"
+         }
+      ],
+      "date":1619598731208
+   },
+   {
+      "id":12,
+      "text":"",
+      "typedRecipients":[
+         {
+            "id":"INTW1",
+            "type":"interviewer",
+            "label":"Margie Lucas"
+         }
+      ],
+      "date":1619640883239
+   }
+]

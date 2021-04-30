@@ -42,7 +42,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             Survey units to review : 
             9
@@ -113,13 +113,18 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="CheckboxCol"
+                    >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColCampaign"
+                    >
                       <span
                         class="sortIcon"
                       >
@@ -133,6 +138,22 @@ Object {
                       Survey
                     </th>
                     <th
+                      class="Clickable ColId"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -147,244 +168,390 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
-                      Identifier
+                    <th
+                      class="ColAction"
+                    >
+                      Actions
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1032
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1032
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4819"
+                        readonly=""
                         type="checkbox"
                         value="4819"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4819
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4819
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4818
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4818
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4817"
+                        readonly=""
                         type="checkbox"
                         value="4817"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4817
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4817
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4816"
+                        readonly=""
                         type="checkbox"
                         value="4816"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4816
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4816
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4813"
+                        readonly=""
                         type="checkbox"
                         value="4813"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4813
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4813
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4812"
+                        readonly=""
                         type="checkbox"
                         value="4812"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4812
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4812
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4811"
+                        readonly=""
                         type="checkbox"
                         value="4811"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4811
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4811
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1099"
+                        readonly=""
                         type="checkbox"
                         value="1099"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1099
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1099
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
                 </tbody>
@@ -393,6 +560,15 @@ Object {
             <div
               class="tableOptionsWrapper"
             >
+              <button
+                class="btn btn-primary"
+                data-testid="validate-su"
+                disabled=""
+                id="btnValider"
+                type="button"
+              >
+                Validate
+              </button>
               <ul
                 class="paginationNav pagination pagination-sm"
                 data-testid="pagination-nav"
@@ -413,14 +589,6 @@ Object {
                 </li>
               </ul>
             </div>
-            <button
-              class="btn btn-primary"
-              data-testid="validate-su"
-              disabled=""
-              type="button"
-            >
-              Validate
-            </button>
           </div>
         </div>
       </div>
@@ -464,7 +632,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           Survey units to review : 
           9
@@ -535,13 +703,18 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="CheckboxCol"
+                  >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColCampaign"
+                  >
                     <span
                       class="sortIcon"
                     >
@@ -555,6 +728,22 @@ Object {
                     Survey
                   </th>
                   <th
+                    class="Clickable ColId"
+                  >
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                    Identifier
+                  </th>
+                  <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -569,244 +758,390 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
-                    Identifier
+                  <th
+                    class="ColAction"
+                  >
+                    Actions
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1032
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1032
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4819"
+                      readonly=""
                       type="checkbox"
                       value="4819"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4819
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4819
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4818
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4818
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4817"
+                      readonly=""
                       type="checkbox"
                       value="4817"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4817
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4817
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4816"
+                      readonly=""
                       type="checkbox"
                       value="4816"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4816
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4816
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4813"
+                      readonly=""
                       type="checkbox"
                       value="4813"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4813
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4813
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4812"
+                      readonly=""
                       type="checkbox"
                       value="4812"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4812
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4812
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4811"
+                      readonly=""
                       type="checkbox"
                       value="4811"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4811
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4811
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1099"
+                      readonly=""
                       type="checkbox"
                       value="1099"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1099
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1099
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -815,6 +1150,15 @@ Object {
           <div
             class="tableOptionsWrapper"
           >
+            <button
+              class="btn btn-primary"
+              data-testid="validate-su"
+              disabled=""
+              id="btnValider"
+              type="button"
+            >
+              Validate
+            </button>
             <ul
               class="paginationNav pagination pagination-sm"
               data-testid="pagination-nav"
@@ -835,14 +1179,6 @@ Object {
               </li>
             </ul>
           </div>
-          <button
-            class="btn btn-primary"
-            data-testid="validate-su"
-            disabled=""
-            type="button"
-          >
-            Validate
-          </button>
         </div>
       </div>
     </div>
@@ -943,7 +1279,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             Survey units to review : 
             9
@@ -1014,13 +1350,18 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="CheckboxCol"
+                    >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColCampaign"
+                    >
                       <span
                         class="sortIcon"
                       >
@@ -1034,6 +1375,22 @@ Object {
                       Survey
                     </th>
                     <th
+                      class="Clickable ColId"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -1048,244 +1405,390 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
-                      Identifier
+                    <th
+                      class="ColAction"
+                    >
+                      Actions
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1032
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1032
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4819"
+                        readonly=""
                         type="checkbox"
                         value="4819"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4819
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4819
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4818
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4818
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4817"
+                        readonly=""
                         type="checkbox"
                         value="4817"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4817
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4817
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4816"
+                        readonly=""
                         type="checkbox"
                         value="4816"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4816
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4816
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4813"
+                        readonly=""
                         type="checkbox"
                         value="4813"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4813
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4813
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4812"
+                        readonly=""
                         type="checkbox"
                         value="4812"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4812
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4812
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4811"
+                        readonly=""
                         type="checkbox"
                         value="4811"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4811
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4811
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1099"
+                        readonly=""
                         type="checkbox"
                         value="1099"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1099
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1099
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
                 </tbody>
@@ -1294,6 +1797,15 @@ Object {
             <div
               class="tableOptionsWrapper"
             >
+              <button
+                class="btn btn-primary"
+                data-testid="validate-su"
+                disabled=""
+                id="btnValider"
+                type="button"
+              >
+                Validate
+              </button>
               <ul
                 class="paginationNav pagination pagination-sm"
                 data-testid="pagination-nav"
@@ -1314,14 +1826,6 @@ Object {
                 </li>
               </ul>
             </div>
-            <button
-              class="btn btn-primary"
-              data-testid="validate-su"
-              disabled=""
-              type="button"
-            >
-              Validate
-            </button>
           </div>
         </div>
       </div>
@@ -1365,7 +1869,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           Survey units to review : 
           9
@@ -1436,13 +1940,18 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="CheckboxCol"
+                  >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColCampaign"
+                  >
                     <span
                       class="sortIcon"
                     >
@@ -1456,6 +1965,22 @@ Object {
                     Survey
                   </th>
                   <th
+                    class="Clickable ColId"
+                  >
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                    Identifier
+                  </th>
+                  <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -1470,244 +1995,390 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
-                    Identifier
+                  <th
+                    class="ColAction"
+                  >
+                    Actions
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1032
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1032
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4819"
+                      readonly=""
                       type="checkbox"
                       value="4819"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4819
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4819
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4818
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4818
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4817"
+                      readonly=""
                       type="checkbox"
                       value="4817"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4817
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4817
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4816"
+                      readonly=""
                       type="checkbox"
                       value="4816"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4816
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4816
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4813"
+                      readonly=""
                       type="checkbox"
                       value="4813"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4813
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4813
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4812"
+                      readonly=""
                       type="checkbox"
                       value="4812"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4812
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4812
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4811"
+                      readonly=""
                       type="checkbox"
                       value="4811"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4811
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4811
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1099"
+                      readonly=""
                       type="checkbox"
                       value="1099"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1099
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1099
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -1716,6 +2387,15 @@ Object {
           <div
             class="tableOptionsWrapper"
           >
+            <button
+              class="btn btn-primary"
+              data-testid="validate-su"
+              disabled=""
+              id="btnValider"
+              type="button"
+            >
+              Validate
+            </button>
             <ul
               class="paginationNav pagination pagination-sm"
               data-testid="pagination-nav"
@@ -1736,14 +2416,6 @@ Object {
               </li>
             </ul>
           </div>
-          <button
-            class="btn btn-primary"
-            data-testid="validate-su"
-            disabled=""
-            type="button"
-          >
-            Validate
-          </button>
         </div>
       </div>
     </div>
@@ -1844,7 +2516,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             Survey units to review : 
             9
@@ -1915,13 +2587,18 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="CheckboxCol"
+                    >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColCampaign"
+                    >
                       <span
                         class="sortIcon"
                       >
@@ -1935,6 +2612,22 @@ Object {
                       Survey
                     </th>
                     <th
+                      class="Clickable ColId"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -1949,244 +2642,390 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
-                      Identifier
+                    <th
+                      class="ColAction"
+                    >
+                      Actions
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1032
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1032
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4819"
+                        readonly=""
                         type="checkbox"
                         value="4819"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4819
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4819
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4818
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4818
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4817"
+                        readonly=""
                         type="checkbox"
                         value="4817"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4817
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4817
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4816"
+                        readonly=""
                         type="checkbox"
                         value="4816"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4816
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4816
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4813"
+                        readonly=""
                         type="checkbox"
                         value="4813"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4813
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4813
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4812"
+                        readonly=""
                         type="checkbox"
                         value="4812"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4812
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4812
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4811"
+                        readonly=""
                         type="checkbox"
                         value="4811"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4811
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4811
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1099"
+                        readonly=""
                         type="checkbox"
                         value="1099"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1099
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1099
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
                 </tbody>
@@ -2195,6 +3034,15 @@ Object {
             <div
               class="tableOptionsWrapper"
             >
+              <button
+                class="btn btn-primary"
+                data-testid="validate-su"
+                disabled=""
+                id="btnValider"
+                type="button"
+              >
+                Validate
+              </button>
               <ul
                 class="paginationNav pagination pagination-sm"
                 data-testid="pagination-nav"
@@ -2215,14 +3063,6 @@ Object {
                 </li>
               </ul>
             </div>
-            <button
-              class="btn btn-primary"
-              data-testid="validate-su"
-              disabled=""
-              type="button"
-            >
-              Validate
-            </button>
           </div>
         </div>
       </div>
@@ -2266,7 +3106,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           Survey units to review : 
           9
@@ -2337,13 +3177,18 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="CheckboxCol"
+                  >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColCampaign"
+                  >
                     <span
                       class="sortIcon"
                     >
@@ -2357,6 +3202,22 @@ Object {
                     Survey
                   </th>
                   <th
+                    class="Clickable ColId"
+                  >
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                    Identifier
+                  </th>
+                  <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -2371,244 +3232,390 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
-                    Identifier
+                  <th
+                    class="ColAction"
+                  >
+                    Actions
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1032
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1032
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4819"
+                      readonly=""
                       type="checkbox"
                       value="4819"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4819
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4819
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4818
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4818
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4817"
+                      readonly=""
                       type="checkbox"
                       value="4817"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4817
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4817
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4816"
+                      readonly=""
                       type="checkbox"
                       value="4816"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4816
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4816
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4813"
+                      readonly=""
                       type="checkbox"
                       value="4813"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4813
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4813
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4812"
+                      readonly=""
                       type="checkbox"
                       value="4812"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4812
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4812
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4811"
+                      readonly=""
                       type="checkbox"
                       value="4811"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4811
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4811
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1099"
+                      readonly=""
                       type="checkbox"
                       value="1099"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1099
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1099
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -2617,6 +3624,15 @@ Object {
           <div
             class="tableOptionsWrapper"
           >
+            <button
+              class="btn btn-primary"
+              data-testid="validate-su"
+              disabled=""
+              id="btnValider"
+              type="button"
+            >
+              Validate
+            </button>
             <ul
               class="paginationNav pagination pagination-sm"
               data-testid="pagination-nav"
@@ -2637,14 +3653,6 @@ Object {
               </li>
             </ul>
           </div>
-          <button
-            class="btn btn-primary"
-            data-testid="validate-su"
-            disabled=""
-            type="button"
-          >
-            Validate
-          </button>
         </div>
       </div>
     </div>
@@ -2777,7 +3785,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             Survey units to review : 
             2
@@ -2848,13 +3856,18 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="CheckboxCol"
+                    >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColCampaign"
+                    >
                       <span
                         class="sortIcon"
                       >
@@ -2868,6 +3881,22 @@ Object {
                       Survey
                     </th>
                     <th
+                      class="Clickable ColId"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -2882,62 +3911,96 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
-                      Identifier
+                    <th
+                      class="ColAction"
+                    >
+                      Actions
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1032
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1032
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4818
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4818
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
                 </tbody>
@@ -2946,6 +4009,15 @@ Object {
             <div
               class="tableOptionsWrapper"
             >
+              <button
+                class="btn btn-primary"
+                data-testid="validate-su"
+                disabled=""
+                id="btnValider"
+                type="button"
+              >
+                Validate
+              </button>
               <ul
                 class="paginationNav pagination pagination-sm"
                 data-testid="pagination-nav"
@@ -2966,14 +4038,6 @@ Object {
                 </li>
               </ul>
             </div>
-            <button
-              class="btn btn-primary"
-              data-testid="validate-su"
-              disabled=""
-              type="button"
-            >
-              Validate
-            </button>
           </div>
         </div>
       </div>
@@ -3049,7 +4113,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           Survey units to review : 
           2
@@ -3120,13 +4184,18 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="CheckboxCol"
+                  >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColCampaign"
+                  >
                     <span
                       class="sortIcon"
                     >
@@ -3140,6 +4209,22 @@ Object {
                     Survey
                   </th>
                   <th
+                    class="Clickable ColId"
+                  >
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                    Identifier
+                  </th>
+                  <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -3154,62 +4239,96 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
-                    Identifier
+                  <th
+                    class="ColAction"
+                  >
+                    Actions
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1032
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1032
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4818
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4818
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -3218,6 +4337,15 @@ Object {
           <div
             class="tableOptionsWrapper"
           >
+            <button
+              class="btn btn-primary"
+              data-testid="validate-su"
+              disabled=""
+              id="btnValider"
+              type="button"
+            >
+              Validate
+            </button>
             <ul
               class="paginationNav pagination pagination-sm"
               data-testid="pagination-nav"
@@ -3238,14 +4366,6 @@ Object {
               </li>
             </ul>
           </div>
-          <button
-            class="btn btn-primary"
-            data-testid="validate-su"
-            disabled=""
-            type="button"
-          >
-            Validate
-          </button>
         </div>
       </div>
     </div>
@@ -3386,7 +4506,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             Survey units to review : 
             2
@@ -3457,13 +4577,18 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="CheckboxCol"
+                    >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColCampaign"
+                    >
                       <span
                         class="sortIcon"
                       >
@@ -3477,6 +4602,22 @@ Object {
                       Survey
                     </th>
                     <th
+                      class="Clickable ColId"
+                    >
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                      Identifier
+                    </th>
+                    <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -3491,62 +4632,96 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
-                      Identifier
+                    <th
+                      class="ColAction"
+                    >
+                      Actions
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      1032
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Dupont Chloé
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      1032
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
-                  <tr>
+                  <tr
+                    class="notViewed"
+                  >
                     <td
-                      class="Clickable"
+                      class="CheckboxCol"
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColCampaign"
                     >
                       Survey on the Simpsons tv show 2020
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColId"
+                    >
+                      4818
+                    </td>
+                    <td
+                      class="ColInterviewer"
                     >
                       Boulanger Jacques
                     </td>
                     <td
-                      class="Clickable"
+                      class="ColAction"
                     >
-                      4818
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-calendar EditLink Clickable"
+                      />
+                      <span />
+                      <i
+                        aria-hidden="true"
+                        class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                      />
                     </td>
                   </tr>
                 </tbody>
@@ -3555,6 +4730,15 @@ Object {
             <div
               class="tableOptionsWrapper"
             >
+              <button
+                class="btn btn-primary"
+                data-testid="validate-su"
+                disabled=""
+                id="btnValider"
+                type="button"
+              >
+                Validate
+              </button>
               <ul
                 class="paginationNav pagination pagination-sm"
                 data-testid="pagination-nav"
@@ -3575,14 +4759,6 @@ Object {
                 </li>
               </ul>
             </div>
-            <button
-              class="btn btn-primary"
-              data-testid="validate-su"
-              disabled=""
-              type="button"
-            >
-              Validate
-            </button>
           </div>
         </div>
       </div>
@@ -3658,7 +4834,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           Survey units to review : 
           2
@@ -3729,13 +4905,18 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="CheckboxCol"
+                  >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColCampaign"
+                  >
                     <span
                       class="sortIcon"
                     >
@@ -3749,6 +4930,22 @@ Object {
                     Survey
                   </th>
                   <th
+                    class="Clickable ColId"
+                  >
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                    Identifier
+                  </th>
+                  <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -3763,62 +4960,96 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
-                    Identifier
+                  <th
+                    class="ColAction"
+                  >
+                    Actions
                   </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    1032
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Dupont Chloé
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    1032
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
-                <tr>
+                <tr
+                  class="notViewed"
+                >
                   <td
-                    class="Clickable"
+                    class="CheckboxCol"
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColCampaign"
                   >
                     Survey on the Simpsons tv show 2020
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColId"
+                  >
+                    4818
+                  </td>
+                  <td
+                    class="ColInterviewer"
                   >
                     Boulanger Jacques
                   </td>
                   <td
-                    class="Clickable"
+                    class="ColAction"
                   >
-                    4818
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-calendar EditLink Clickable"
+                    />
+                    <span />
+                    <i
+                      aria-hidden="true"
+                      class="fa fa-pencil EditCommentSurveyIcon Clickable"
+                    />
                   </td>
                 </tr>
               </tbody>
@@ -3827,6 +5058,15 @@ Object {
           <div
             class="tableOptionsWrapper"
           >
+            <button
+              class="btn btn-primary"
+              data-testid="validate-su"
+              disabled=""
+              id="btnValider"
+              type="button"
+            >
+              Validate
+            </button>
             <ul
               class="paginationNav pagination pagination-sm"
               data-testid="pagination-nav"
@@ -3847,14 +5087,6 @@ Object {
               </li>
             </ul>
           </div>
-          <button
-            class="btn btn-primary"
-            data-testid="validate-su"
-            disabled=""
-            type="button"
-          >
-            Validate
-          </button>
         </div>
       </div>
     </div>

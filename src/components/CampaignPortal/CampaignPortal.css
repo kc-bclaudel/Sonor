@@ -1,0 +1,15 @@
+.ContactsLeftHeader{
+  width: 30%;
+}
+
+/* Column sizes */
+
+#CampaignPortal .ColInterviewerName{
+  width: 48%;
+}
+#CampaignPortal .ColIdep{
+  width: 32%;
+}
+#CampaignPortal .ColUeNb{
+  width: 20%;
+}

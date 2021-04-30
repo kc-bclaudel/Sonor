@@ -25,6 +25,74 @@ class Service {
     };
   }
 
+  // -------------------------- //
+  // Survey-Units service begin //
+  // -------------------------- //
+  getSurveyUnits(campaignId, state, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units?${state ? `state=${state}` : ''}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+        });
+    });
+  }
+
+  getSurveyUnitsClosable(cb) {
+    fetch(`${baseUrlPearlJam}/api/survey-units/closable`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
+  }
+
+  getSurveyUnitsNotAttributedByCampaign(campaignId, cb) {
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((err) => {
+        cb({ count: null });
+        console.log(err);
+      });
+  }
+
+  getSurveyUnitsAbandonedByCampaign(campaignId, cb) {
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/abandoned`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((err) => {
+        cb({ count: null });
+        console.log(err);
+      });
+  }
+
+  getStatesBySurveyUnit(su, cb) {
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/states`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
+  }
+
   putSurveyUnitToValidate(su, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
@@ -37,6 +105,73 @@ class Service {
       });
   }
 
+  putSurveyUnitStateToChange(su, state, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/state/${state}`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+
+  putSurveyUnitClose(su, closingCause, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/close/${closingCause}`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+
+  putSurveyUnitClosingCause(su, closingCause, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/closing-cause/${closingCause}`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+
+  putSurveyUnitComment(su, comment, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    options.body = JSON.stringify(comment);
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/comment`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+
+  putSurveyUnitViewed(su, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/viewed`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+  // ------------------------- //
+  // Survey-Units service end //
+  // ------------------------- //
+
+  // -------------------------- //
+  // Preferences service begin //
+  // -------------------------- //
   putPreferences(preferences, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
@@ -46,7 +181,13 @@ class Service {
       .then((res) => cb(res))
       .catch(console.log);
   }
+  // ------------------------ //
+  // Preferences service end //
+  // ------------------------ //
 
+  // -------------------- //
+  // Users service begin //
+  // -------------------- //
   getUser(cb) {
     return new Promise((resolve) => {
       fetch(`${baseUrlPearlJam}/api/user`, this.makeOptions())
@@ -64,8 +205,14 @@ class Service {
         });
     });
   }
+  // ------------------ //
+  // Users service end //
+  // ------------------ //
 
-  getSurveys(cb) {
+  // ----------------------- //
+  // Campaigns service begin //
+  // ----------------------- //
+  getCampaigns(cb) {
     fetch(`${baseUrlPearlJam}/api/campaigns`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
@@ -77,64 +224,105 @@ class Service {
       });
   }
 
-  getInterviewersByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch(console.log);
+  getCampaignsByInterviewer(idep, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/interviewer/${idep}/campaigns`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb([]);
+          }
+          resolve([]);
+        });
+    });
+  }
+  // --------------------- //
+  // Campaigns service end //
+  // --------------------- //
+
+  // -------------------------- //
+  // State counts service begin //
+  // -------------------------- //
+  getStateCount(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    });
   }
 
-  getNotAttributedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((err) => {
-        cb({ count: null });
-        console.log(err);
-      });
+  getStateCountNotAttributed(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed/state-count?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
   }
 
-  getAbandonedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/abandoned`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((err) => {
-        cb({ count: null });
-        console.log(err);
-      });
+  getStateCountByInterviewer(campaignId, idep, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
   }
 
-  getTerminatedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units?state=FIN`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
-      });
+  getStateCountByCampaign(date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaigns/survey-units/state-count?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    });
   }
 
-  getStatesBySurveyId(surveyId, cb) {
-    fetch(`${baseUrlPearlJam}/api/survey-unit/${surveyId}/states`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
-      });
-  }
-
-  getTotalDemByCampaign(campaignId, cb) {
+  getStateCountTotalByCampaign(campaignId, cb) {
     fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
@@ -145,73 +333,123 @@ class Service {
         NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
       });
   }
+  // ------------------------ //
+  // State count service end //
+  // ------------------------ //
 
-  getSurveyUnits(campaignId, state, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units${state ? `?state=${state}` : ''}`, this.makeOptions())
+  // ------------------------------- //
+  // Contact outcomes service begin //
+  // ------------------------------- //
+  getContactOutcomes(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    });
+  }
+
+  getContactOutcomesNotAttributed(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
+  }
+
+  getContactOutcomesByInterviewer(campaignId, idep, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
+  }
+
+  getContactOutcomesByCampaign(date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaigns/survey-units/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    });
+  }
+  // ----------------------------- //
+  // Contact outcomes service end //
+  // ----------------------------- //
+
+  // --------------------------- //
+  // Interviewers service begin //
+  // --------------------------- //
+  getInterviewers(cb) {
+    fetch(`${baseUrlPearlJam}/api/interviewers`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
       })
       .catch((e) => {
         console.log(e);
-        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+        cb([]);
       });
   }
 
-  getInterviewers(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch(console.log);
+  getInterviewersByCampaign(campaignId, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch(console.log);
+    });
   }
+  // ------------------------- //
+  // Interviewers service end //
+  // ------------------------- //
 
-  getInterviewersStateCount(campaignId, idep, date, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        cb(null);
-      });
-  }
-
-  getStateCount(campaignId, date, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }
-
-  getStateCountByCampaign(date, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaigns/survey-units/state-count?date=${date}`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }
-
-  getStateCountByInterviewer(date, cb) {
-    fetch(`${baseUrlPearlJam}/api/interviewers/survey-units/state-count?date=${date}`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }
-
+  // ----------------------------- //
+  // Questionnaires service begin //
+  // ----------------------------- //
   getQuestionnaireId(campaignId, cb) {
     fetch(`${baseUrlQueen}/api/campaign/${campaignId}/questionnaire-id`, this.makeOptions())
       .then((res) => res.json())
@@ -223,7 +461,13 @@ class Service {
         cb();
       });
   }
+  // --------------------------- //
+  // Questionnaires service end //
+  // --------------------------- //
 
+  // ---------------------------- //
+  // Notifications service begin //
+  // ---------------------------- //
   postMessage(body, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
@@ -264,6 +508,9 @@ class Service {
         cb([]);
       });
   }
+  // -------------------------- //
+  // Notifications service end //
+  // -------------------------- //
 }
 
 export default Service;

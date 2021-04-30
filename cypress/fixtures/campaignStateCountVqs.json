@@ -19,7 +19,10 @@
       "finCount": 4,
       "qnaCount": 3,
       "qnaFinCount": 3,
-      "nvaCount": 0,
+      "npaCount": 3,
+        "npiCount": 1,
+        "rowCount": 1,
+        "nvaCount": 0,
       "total": 104
     },
     {
@@ -41,7 +44,10 @@
       "finCount": 1,
       "qnaCount": 3,
       "qnaFinCount": 3,
-      "nvaCount": 0,
+      "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
       "total": 88
     },
     {
@@ -63,7 +69,10 @@
       "finCount": 1,
       "qnaCount": 3,
       "qnaFinCount": 3,
-      "nvaCount": 0,
+      "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
       "total": 104
     }
   ],
@@ -83,7 +92,10 @@
     "finCount": 1,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 104
   }
 }

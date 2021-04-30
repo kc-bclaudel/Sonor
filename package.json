@@ -1,9 +1,10 @@
 {
   "name": "sonor",
-  "version": "0.1.6",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
+    "async-wait-until": "^2.0.5",
     "awesome-debounce-promise": "^2.1.0",
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
@@ -25,6 +26,7 @@
     "react-test-renderer": "^16.13.1",
     "react-transition-group": "^4.4.1",
     "test": "^0.6.0",
+    "user-event": "^4.0.0",
     "whatwg-fetch": "^3.4.0"
   },
   "scripts": {

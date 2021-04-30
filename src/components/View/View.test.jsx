@@ -6,7 +6,7 @@ import {
 import { NotificationManager } from 'react-notifications';
 import DataFormatter from '../../utils/DataFormatter';
 import View from './View';
-import mocks from '../../tests/mock_responses';
+import mocks from '../../tests/mocks';
 import C from '../../utils/constants.json';
 import D from '../../i18n';
 

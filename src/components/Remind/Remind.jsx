@@ -39,7 +39,7 @@ function Remind({
         </Row>
       </Container>
       <Card className="ViewCard">
-        <Card.Title>
+        <Card.Title className="PageTitle">
           {D.developmentInProgress}
         </Card.Title>
       </Card>

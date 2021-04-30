@@ -1,0 +1,167 @@
+[
+  {
+    "interviewer": {
+      "id": "INTW5",
+      "interviewerFirstName": "Chloé",
+      "interviewerLastName": "Dupont"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW6",
+      "interviewerFirstName": "Jacques",
+      "interviewerLastName": "Boulanger"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW7",
+      "interviewerFirstName": "Thierry",
+      "interviewerLastName": "Fabres"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW8",
+      "interviewerFirstName": "Bertrand",
+      "interviewerLastName": "Renard"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW9",
+      "interviewerFirstName": "Emilie",
+      "interviewerLastName": "Boulanger"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW10",
+      "interviewerFirstName": "Renée",
+      "interviewerLastName": "Dupont"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW11",
+      "interviewerFirstName": "Alphonse",
+      "interviewerLastName": "Delmarre"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW12",
+      "interviewerFirstName": "Simon",
+      "interviewerLastName": "Demaziere"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW13",
+      "interviewerFirstName": "Emilie",
+      "interviewerLastName": "Boulanger"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW14",
+      "interviewerFirstName": "Theirry",
+      "interviewerLastName": "Fabres"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  },
+  {
+    "interviewer": {
+      "id": "INTW15",
+      "interviewerFirstName": "Rene",
+      "interviewerLastName": "Dupont"
+    },
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 95
+  }
+]

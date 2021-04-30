@@ -7,7 +7,7 @@ import D from '../../i18n';
 function displayStateHistoryTable(stateData, stateId, hideStateHistoryTable, maxWidth) {
   return (
     <div id="StateHistoryTableContainer">
-      <Card.Title>
+      <Card.Title className="PageTitle">
         <i
           className="fa fa-times fa-sm Clickable HistoryTableCross"
           role="button"
@@ -34,9 +34,9 @@ function displayStateHistoryTable(stateData, stateId, hideStateHistoryTable, max
         <tbody>
           {stateData.map((data) => (
             <tr key={data.id}>
-              <td className="Clickable" data-testid="campaign-label">{Utils.convertToDateString(data.date)}</td>
-              <td className="Clickable">{Utils.convertMsToHoursMinutes(data.date)}</td>
-              <td className="Clickable">{Utils.getLabelFromStateType(data.type)}</td>
+              <td data-testid="campaign-label">{Utils.convertToDateString(data.date)}</td>
+              <td>{Utils.convertMsToHoursMinutes(data.date)}</td>
+              <td>{Utils.getLabelFromStateType(data.type)}</td>
             </tr>
           ))}
         </tbody>

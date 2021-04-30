@@ -6,6 +6,7 @@ import Utils from '../../utils/Utils';
 import SurveyListLine from './SurveyListLine';
 import PaginationNav from '../PaginationNav/PaginationNav';
 import D from '../../i18n';
+import './MainScreen.css';
 
 class MainScreen extends React.Component {
   constructor(props) {
@@ -56,7 +57,7 @@ class MainScreen extends React.Component {
     return (
       <div id="MainScreen">
         <Card className="ViewCard">
-          <Card.Title>{D.surveyList}</Card.Title>
+          <Card.Title className="PageTitle">{D.surveyList}</Card.Title>
           {
             data.length > 0
               ? (
@@ -67,57 +68,65 @@ class MainScreen extends React.Component {
                   <Table id="SurveyList" className="CustomTable" bordered striped hover responsive size="sm">
                     <thead>
                       <tr>
-                        <th rowSpan="2" onClick={handleSortFunct('label')}>
+                        <th className="EmptyHeader ColSurvey" />
+                        <th className="ColumnSpacing" />
+                        <th className="EmptyHeader ColCollectionStartDate" />
+                        <th className="EmptyHeader ColCollectionEndDate" />
+                        <th className="EmptyHeader ColEndDate" />
+                        <th className="ColumnSpacing" />
+                        <th className="EmptyHeader ColPhase" />
+                        <th className="ColumnSpacing" />
+                        <th colSpan="6" className="CenteredText">{D.surveyUnits}</th>
+                      </tr>
+                      <tr>
+                        <th onClick={handleSortFunct('label')} className="Clickable ColSurvey">
                           <SortIcon val="label" sort={sort} />
                           {D.survey}
                         </th>
-                        <th rowSpan="2" className="ColumnSpacing" />
-                        <th rowSpan="2" onClick={handleSortFunct('collectionStartDate')}>
+                        <th className="ColumnSpacing" />
+                        <th onClick={handleSortFunct('collectionStartDate')} className="Clickable ColCollectionStartDate">
                           <SortIcon val="collectionStartDate" sort={sort} />
                           {D.collectionStartDate}
                         </th>
                         <th
-                          rowSpan="2"
                           data-testid="Header-collection-end-date"
                           onClick={handleSortFunct('collectionEndDate')}
+                          className="Clickable ColCollectionEndDate"
                         >
                           <SortIcon val="collectionEndDate" sort={sort} />
                           {D.collectionEndDate}
                         </th>
-                        <th rowSpan="2" onClick={handleSortFunct('endDate')}>
+                        <th onClick={handleSortFunct('endDate')} className="Clickable ColEndDate">
                           <SortIcon val="endDate" sort={sort} />
                           {D.endDate}
                         </th>
-                        <th rowSpan="2" className="ColumnSpacing" />
-                        <th rowSpan="2" onClick={handleSortFunct('phase')} className="Clickable">
+                        <th className="ColumnSpacing" />
+                        <th onClick={handleSortFunct('phase')} className="Clickable ColPhase">
                           <SortIcon val="phase" sort={sort} />
                           {D.phase}
                         </th>
-                        <th rowSpan="2" className="ColumnSpacing" />
-                        <th colSpan="6">{D.surveyUnits}</th>
-                      </tr>
-                      <tr>
-                        <th onClick={handleSortFunct('allocated')} className="Clickable">
+                        <th className="ColumnSpacing" />
+                        <th onClick={handleSortFunct('allocated')} className="Clickable ColAllocated">
                           <SortIcon val="allocated" sort={sort} />
                           {D.allocated}
                         </th>
-                        <th onClick={handleSortFunct('toProcessInterviewer')} className="Clickable">
+                        <th onClick={handleSortFunct('toProcessInterviewer')} className="Clickable ColToProcessInterviewer">
                           <SortIcon val="toProcessInterviewer" sort={sort} />
                           {D.toTreatInterviewer}
                         </th>
-                        <th onClick={handleSortFunct('toAffect')} className="Clickable">
+                        <th onClick={handleSortFunct('toAffect')} className="Clickable ColToAffect">
                           <SortIcon val="toAffect" sort={sort} />
                           {D.toBeAssigned}
                         </th>
-                        <th onClick={handleSortFunct('toFollowUp')} className="Clickable">
+                        <th onClick={handleSortFunct('toFollowUp')} className="Clickable ColToFollowUp">
                           <SortIcon val="toFollowUp" sort={sort} />
                           {D.toRemind}
                         </th>
-                        <th onClick={handleSortFunct('toReview')} className="Clickable">
+                        <th onClick={handleSortFunct('toReview')} className="Clickable ColToReview">
                           <SortIcon val="toReview" sort={sort} />
                           {D.toBeReviewed}
                         </th>
-                        <th onClick={handleSortFunct('finalized')} className="Clickable">
+                        <th onClick={handleSortFunct('finalized')} className="Clickable ColFinalized">
                           <SortIcon val="finalized" sort={sort} />
                           {D.terminated}
                         </th>

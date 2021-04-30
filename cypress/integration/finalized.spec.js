@@ -8,7 +8,7 @@ context("sonor", () => {
       .as("get-user");
 
     cy.server()
-      .route("GET", "**/api/campaigns", "fixture:getSurveys.json")
+      .route("GET", "**/api/campaigns", "fixture:getCampaigns.json")
       .as("get-campaigns");
 
     cy.server()
@@ -72,7 +72,15 @@ context("sonor", () => {
       .as("get-finalized-survOnSmth");
 
     cy.server()
-      .route("GET", "**/api/survey-unit/1023/states", "fixture:states1023.json")
+      .route(
+        "GET",
+        "**/api/campaign/**/survey-units?state=CLO",
+        "fixture:emptyList.json"
+      )
+      .as("get-finalized-survOnSmth");
+
+    cy.server()
+      .route("GET", "**/api/survey-unit/1024/states", "fixture:states1023.json")
       .as("get-states-1023");
 
     cy.server()
@@ -101,7 +109,7 @@ context("sonor", () => {
 
     // SUs displayed should be correct
     cy.get("tbody").within(() => {
-      cy.get("td").first().should("have.text", "1032");
+      cy.get("td").eq(1).should("have.text", "1032");
     });
 
     // Select another survey
@@ -115,14 +123,14 @@ context("sonor", () => {
 
     // SUs displayed should have changed
     cy.get("tbody").within(() => {
-      cy.get("td").first().should("have.text", "1023");
+      cy.get("td").eq(1).should("have.text", "1023");
     });
 
     // Testing sort by id
     cy.get("th").contains(D.identifier).click();
-    cy.get("tbody").find("td").first().should("have.text", "1023");
+    cy.get("tbody").find("td").eq(1).should("have.text", "1023");
     cy.get("th").contains(D.identifier).click();
-    cy.get("tbody").find("td").first().should("have.text", "4818");
+    cy.get("tbody").find("td").eq(1).should("have.text", "4818");
 
     // Testing sort by interviewerf
     cy.get("th").contains(D.interviewer).click();
@@ -133,13 +141,13 @@ context("sonor", () => {
     
     // Testing state history display
     cy.get("th").contains(D.identifier).click();
-    cy.get(".HistoryDisplayIcon").first().click();
+    cy.get(".HistoryDisplayIcon").eq(1).click();
     cy.wait(150);
     cy.get("tbody").eq(1).find("td").eq(2).should("have.text", D.ANV);
     
     // Testing pagination
     cy.get(".paginationNav").contains("3").click();
-    cy.get("tbody").find("td").first().should("have.text", "4815");
+    cy.get("tbody").find("td").eq(1).should("have.text", "4815");
 
     // Display history of another state
     cy.get(".HistoryDisplayIcon").last().click();
@@ -157,7 +165,7 @@ context("sonor", () => {
     // Testing search field filter by id
     cy.get(".SearchFieldInput").type("1029");
     cy.get("tbody").find("tr").should("have.length", 1);
-    cy.get("tbody").find("td").first().should("have.text", "1029");
+    cy.get("tbody").find("td").eq(1).should("have.text", "1029");
 
     // Testing search field filter by interviewer
     cy.get(".SearchFieldInput").clear().type("thi");
