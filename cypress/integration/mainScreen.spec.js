@@ -22,7 +22,6 @@ context('sonor', () => {
 
     // test
     // Main screen view is initially displayed
-
     cy.get('#MainScreen');
     cy.wait([
       '@get-campaigns',
@@ -46,50 +45,49 @@ context('sonor', () => {
         .should('have.text', 'Survey on the Simpsons tv show 2021');
     });
 
-     // Testing sort by Collection start date
-    cy.get('th').contains(D.collectionStartDate).click();
-    cy.get('tbody').within(() => {
-      cy.get('td')
-        .eq(2)
-        .contains(/10\/12\/2019|12\/10\/2019/g);
-    });
+    //  // Testing sort by Collection start date
+    // cy.get('th').contains(D.collectionStartDate).click();
+    // cy.get('tbody').within(() => {
+    //   cy.get('td')
+    //     .eq(2)
+    //     .contains(/10\/12\/2019|12\/10\/2019/g);
+    // });
     
-    cy.get('th').contains(D.collectionStartDate).click();
-    cy.get('tbody').within(() => {
-      cy.get('td')
-        .eq(2)
-        .contains(/10\/12\/2019|12\/10\/2019/g);
-    });
+    // cy.get('th').contains(D.collectionStartDate).click();
+    // cy.get('tbody').within(() => {
+    //   cy.get('td')
+    //     .eq(2)
+    //     .contains(/10\/12\/2019|12\/10\/2019/g);
+    // });
 
-    //LANG=fr_FR.UTF-8
 
-    // Testing sort by Collection end date
-    cy.get('th').contains(D.collectionEndDate).click();
-    cy.get('tbody').within(() => {
-      cy.get('td')
-        .eq(3)
-        .contains(/01\/01\/2022|1\/1\/2022/g);
-    });
-    cy.get('th').contains(D.collectionEndDate).click();
-    cy.get('tbody').within(() => {
-      cy.get('td')
-        .eq(3)
-        .contains(/01\/01\/2022|1\/1\/2022/g);
-    });
+    // // Testing sort by Collection end date
+    // cy.get('th').contains(D.collectionEndDate).click();
+    // cy.get('tbody').within(() => {
+    //   cy.get('td')
+    //     .eq(3)
+    //     .contains(/01\/01\/2022|1\/1\/2022/g);
+    // });
+    // cy.get('th').contains(D.collectionEndDate).click();
+    // cy.get('tbody').within(() => {
+    //   cy.get('td')
+    //     .eq(3)
+    //     .contains(/01\/01\/2022|1\/1\/2022/g);
+    // });
 
-    // Testing sort by treatment end date
-    cy.get('th').contains(D.endDate).click();
-    cy.get('tbody').within(() => {
-      cy.get('td')
-        .eq(4)
-        .contains(/07\/01\/2022|1\/7\/2022/g);
-    });
-    cy.get('th').contains(D.endDate).click();
-    cy.get('tbody').within(() => {
-      cy.get('td')
-        .eq(4)
-        .contains(/07\/01\/2022|1\/7\/2022/g);
-    });
+    // // Testing sort by treatment end date
+    // cy.get('th').contains(D.endDate).click();
+    // cy.get('tbody').within(() => {
+    //   cy.get('td')
+    //     .eq(4)
+    //     .contains(/07\/01\/2022|1\/7\/2022/g);
+    // });
+    // cy.get('th').contains(D.endDate).click();
+    // cy.get('tbody').within(() => {
+    //   cy.get('td')
+    //     .eq(4)
+    //     .contains(/07\/01\/2022|1\/7\/2022/g);
+    // });
 
     // Testing sort by phase
     cy.get('th').contains(D.phase).click();
@@ -165,7 +163,6 @@ context('sonor', () => {
     cy.get('.paginationNav').contains('2').click();
     cy.wait(1500);
     cy.get('tbody').find('tr').should('have.length', 2);
-
 
     // Testing pagination change
     cy.get('[data-testid="pagination-size-selector"]').select('20');
