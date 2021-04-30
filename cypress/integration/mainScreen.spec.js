@@ -29,7 +29,7 @@ context('sonor', () => {
       '@get-campaigns',
       '@get-campaigns',
     ]);
-    cy.wait(3500);
+    cy.wait(1500);
 
     // Testing sort by Survey
     cy.get('tbody').within(() => {
@@ -38,13 +38,10 @@ context('sonor', () => {
         .should('have.text', 'Everyday life and health survey 2018');
     });
 
-    cy.get('th').contains(D.survey).click();
-    cy.wait(500);
-    cy.get('tbody').within(() => {
-      cy.get('td')
-        .first()
-        .should('have.text', 'Survey on the Simpsons tv show 2021');
-    });
+    cy.get('#MainScreen').find('thead').find('tr').eq(1)
+      .find('th').first().click();
+    cy.wait(1500);
+
 
      // Testing sort by Collection start date
     cy.get('th').contains(D.collectionStartDate).click();
@@ -61,7 +58,6 @@ context('sonor', () => {
         .eq(2)
         .contains(/10\/12\/2019|12\/10\/2019/g);
     });
-
 
     // Testing sort by Collection end date
     cy.get('th').contains(D.collectionEndDate).click();
