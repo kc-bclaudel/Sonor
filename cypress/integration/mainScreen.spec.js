@@ -30,7 +30,7 @@ context('sonor', () => {
       '@get-campaigns',
       '@get-campaigns',
     ]);
-    cy.wait(1500);
+    cy.wait(3500);
 
     // Testing sort by Survey
     cy.get('tbody').within(() => {
@@ -163,10 +163,14 @@ context('sonor', () => {
 
     // Testing page change
     cy.get('.paginationNav').contains('2').click();
+    cy.wait(1500);
     cy.get('tbody').find('tr').should('have.length', 2);
+
 
     // Testing pagination change
     cy.get('[data-testid="pagination-size-selector"]').select('20');
+    cy.wait(1500);
     cy.get('tbody').find('tr').should('have.length', 12);
+    
   });
 });
