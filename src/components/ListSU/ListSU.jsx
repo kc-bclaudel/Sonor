@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, {
+  useState, useEffect, useCallback, useRef,
+} from 'react';
 import Button from 'react-bootstrap/Button';
 import { Col, Row } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
@@ -7,12 +9,14 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import SUTable from './SUTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
+import './ListSU.css';
 
 function ListSU({
   location, dataRetreiver,
 }) {
   const { survey } = location;
 
+  const isMounted = useRef(false);
   const [data, setData] = useState([]);
   const [site, setSite] = useState('');
   const [sort, setSort] = useState({ sortOn: null, asc: null });
@@ -20,14 +24,21 @@ function ListSU({
 
   const fetchData = useCallback(() => {
     dataRetreiver.getDataForListSU(!survey || survey.id, (res) => {
-      setData(res.surveyUnits);
-      setSite(res.site);
-      setRedirect(null);
+      if (isMounted.current) {
+        setData(res.surveyUnits);
+        setSite(res.site);
+        setRedirect(null);
+      }
     });
   }, [dataRetreiver, survey]);
 
   useEffect(() => {
+    isMounted.current = true;
+
     fetchData();
+    return () => {
+      isMounted.current = false;
+    };
   }, [fetchData]);
 
   const handleSort = useCallback((property, asc) => {

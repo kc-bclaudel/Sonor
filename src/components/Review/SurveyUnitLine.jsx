@@ -13,12 +13,12 @@ function SurveyUnitLine({
   return (
     <tr className={viewed ? '' : 'notViewed'}>
       <td className="CheckboxCol" onClick={() => updateFunc()}>
-        <input key={id} type="checkbox" checked={isChecked} name={id} value={id} />
+        <input key={id} type="checkbox" readOnly checked={isChecked} name={id} value={id} />
       </td>
-      <td>{campaignLabel}</td>
-      <td>{id}</td>
-      <td>{interviewer}</td>
-      <td>
+      <td className="ColCampaign">{campaignLabel}</td>
+      <td className="ColId">{id}</td>
+      <td className="ColInterviewer">{interviewer}</td>
+      <td className="ColAction">
         <OverlayTrigger
           placement="top"
           overlay={(

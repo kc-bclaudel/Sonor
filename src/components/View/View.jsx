@@ -30,6 +30,7 @@ class View extends React.Component {
   }
 
   componentDidMount() {
+    this.componentIsMounted = true;
     this.loadPreferences();
   }
 
@@ -61,13 +62,8 @@ class View extends React.Component {
   render() {
     const { showPreferences, preferences, redirect } = this.state;
     const { userData } = this.props;
-    //let redirect;
-    // if (prefsUpdated) {
-    //   redirect = <Redirect to="/" />;
-    //   this.setState({ prefsUpdated: false });
-    // }
     return (
-      <div>
+      <>
         <Router>
           {redirect}
           <div>
@@ -99,7 +95,7 @@ class View extends React.Component {
           updatePreferences={(prefs) => this.updatePreferences(prefs)}
         />
         <NotificationContainer />
-      </div>
+      </>
     );
   }
 }

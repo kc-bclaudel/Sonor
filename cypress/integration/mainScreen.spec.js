@@ -7,7 +7,7 @@ context('sonor', () => {
       .as('get-user');
 
     cy.server()
-      .route('GET', '**/api/campaigns', 'fixture:getSurveys.json')
+      .route('GET', '**/api/campaigns', 'fixture:getCampaigns.json')
       .as('get-campaigns');
 
     cy.server()

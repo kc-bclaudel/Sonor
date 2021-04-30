@@ -26,6 +26,7 @@ function HeaderUsefulInfosSubMenu({ toggle, setModal }) {
         <button
           type="button"
           className="selectedSubeMenu"
+          data-testid="campaign-portal-link"
           onClick={() => setModal(D.collectionOrganization, 'portal')}
           tabIndex={0}
         >
@@ -36,6 +37,7 @@ function HeaderUsefulInfosSubMenu({ toggle, setModal }) {
         <button
           type="button"
           className="selectedSubeMenu"
+          data-testid="list-su-link"
           onClick={() => setModal(D.unitsAllocatedToSite, 'listSU')}
           tabIndex={0}
         >

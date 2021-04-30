@@ -50,7 +50,7 @@ function Review({
   }
 
   function viewSU(suId) {
-    dataRetreiver.viewSurveyUnit(suId);
+    dataRetreiver.updateSurveyUnitViewed(suId);
     fetchData();
   }
 

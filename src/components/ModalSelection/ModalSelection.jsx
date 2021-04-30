@@ -19,7 +19,7 @@ function ModalSelection({
   }, [dataRetreiver]);
 
   const updateInterviewers = useCallback(() => {
-    dataRetreiver.getSiteInterviewers((data) => {
+    dataRetreiver.getInterviewers((data) => {
       setInterviewers({ allInterviewers: data });
     });
   }, [dataRetreiver]);

@@ -13,8 +13,9 @@ import CollectionTableDisplay from './CollectionTableDisplay';
 import C from '../../utils/constants.json';
 import D from '../../i18n';
 import Utils from '../../utils/Utils';
+import './CollectionTable.css';
 
-class MonitoringTable extends React.Component {
+class CollectionTable extends React.Component {
   constructor(props) {
     super(props);
     const mode = Utils.getMonitoringTableModeFromPath(props.location.pathname);
@@ -31,18 +32,23 @@ class MonitoringTable extends React.Component {
         ? '/' : null,
       loading: true,
     };
+    this.componentIsMounted = false;
   }
 
   componentDidMount() {
+    this.componentIsMounted = true;
     this.refreshData();
   }
 
   componentDidUpdate(prevprops) {
     const { location } = this.props;
-
     if (location.pathname !== prevprops.location.pathname) {
       this.refreshData();
     }
+  }
+
+  componentWillUnmount() {
+    this.componentIsMounted = false;
   }
 
   async refreshData() {
@@ -68,27 +74,29 @@ class MonitoringTable extends React.Component {
           Object.assign(newData, res);
           newData.date = dateToUse;
           newData.pagination = paginationToUse;
-          this.setState({
-            date: dateToUse,
-            survey,
-            interviewer,
-            displayedLines: newData.linesDetails,
-            data: newData,
-            mode: modeToUse,
-            redirect: null,
-            loading: false,
-            sort: { sortOn: null, asc: null },
-          }, () => {
-            let firstColumnSortAttribute;
-            if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
-              firstColumnSortAttribute = 'survey';
-            } else if (modeToUse === C.BY_SITE) {
-              firstColumnSortAttribute = 'site';
-            } else {
-              firstColumnSortAttribute = 'CPinterviewer';
-            }
-            this.handleSort(firstColumnSortAttribute, true);
-          });
+          if (this.componentIsMounted) {
+            this.setState({
+              date: dateToUse,
+              survey,
+              interviewer,
+              displayedLines: newData.linesDetails,
+              data: newData,
+              mode: modeToUse,
+              redirect: null,
+              loading: false,
+              sort: { sortOn: null, asc: null },
+            }, () => {
+              let firstColumnSortAttribute;
+              if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
+                firstColumnSortAttribute = 'survey';
+              } else if (modeToUse === C.BY_SITE) {
+                firstColumnSortAttribute = 'site';
+              } else {
+                firstColumnSortAttribute = 'CPinterviewer';
+              }
+              this.handleSort(firstColumnSortAttribute, true);
+            });
+          }
         },
       );
     } else {
@@ -126,7 +134,7 @@ class MonitoringTable extends React.Component {
     }
     const title = `${fileLabel}_${new Date(date).toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data, mode);
-    const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
+    const csvContent = `data:text/csv;charset=utf-8,\ufeff${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
@@ -198,7 +206,7 @@ class MonitoringTable extends React.Component {
     }
 
     return (
-      <div id="MonitoringTable">
+      <div id="CollectionTable">
         <Container fluid>
           <Row>
             <Col>
@@ -422,4 +430,4 @@ function makeTableForExport(data, mode) {
   return [header].concat(body, footer);
 }
 
-export default MonitoringTable;
+export default CollectionTable;

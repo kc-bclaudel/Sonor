@@ -61,7 +61,7 @@ function Terminated({
 
   return redirect ? <Redirect to={redirect} />
     : (
-      <div>
+      <>
         <Container fluid>
           <Row>
             <Col>
@@ -97,7 +97,7 @@ function Terminated({
               : <span>{D.noSuFinalized}</span>
           }
         </Card>
-      </div>
+      </>
     );
 }
 

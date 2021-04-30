@@ -118,11 +118,12 @@ Object {
                     >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCampaign"
                     >
                       <span
                         class="sortIcon"
@@ -137,7 +138,7 @@ Object {
                       Survey
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       <span
                         class="sortIcon"
@@ -152,7 +153,7 @@ Object {
                       Identifier
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -167,7 +168,9 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
+                    <th
+                      class="ColAction"
+                    >
                       Actions
                     </th>
                   </tr>
@@ -181,20 +184,29 @@ Object {
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1032
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -214,20 +226,29 @@ Object {
                     >
                       <input
                         name="4819"
+                        readonly=""
                         type="checkbox"
                         value="4819"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4819
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -247,20 +268,29 @@ Object {
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4818
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -280,20 +310,29 @@ Object {
                     >
                       <input
                         name="4817"
+                        readonly=""
                         type="checkbox"
                         value="4817"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4817
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -313,20 +352,29 @@ Object {
                     >
                       <input
                         name="4816"
+                        readonly=""
                         type="checkbox"
                         value="4816"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4816
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -346,20 +394,29 @@ Object {
                     >
                       <input
                         name="4813"
+                        readonly=""
                         type="checkbox"
                         value="4813"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4813
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -379,20 +436,29 @@ Object {
                     >
                       <input
                         name="4812"
+                        readonly=""
                         type="checkbox"
                         value="4812"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4812
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -412,20 +478,29 @@ Object {
                     >
                       <input
                         name="4811"
+                        readonly=""
                         type="checkbox"
                         value="4811"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4811
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -445,20 +520,29 @@ Object {
                     >
                       <input
                         name="1099"
+                        readonly=""
                         type="checkbox"
                         value="1099"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1099
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -624,11 +708,12 @@ Object {
                   >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCampaign"
                   >
                     <span
                       class="sortIcon"
@@ -643,7 +728,7 @@ Object {
                     Survey
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     <span
                       class="sortIcon"
@@ -658,7 +743,7 @@ Object {
                     Identifier
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -673,7 +758,9 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
+                  <th
+                    class="ColAction"
+                  >
                     Actions
                   </th>
                 </tr>
@@ -687,20 +774,29 @@ Object {
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1032
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -720,20 +816,29 @@ Object {
                   >
                     <input
                       name="4819"
+                      readonly=""
                       type="checkbox"
                       value="4819"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4819
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -753,20 +858,29 @@ Object {
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4818
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -786,20 +900,29 @@ Object {
                   >
                     <input
                       name="4817"
+                      readonly=""
                       type="checkbox"
                       value="4817"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4817
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -819,20 +942,29 @@ Object {
                   >
                     <input
                       name="4816"
+                      readonly=""
                       type="checkbox"
                       value="4816"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4816
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -852,20 +984,29 @@ Object {
                   >
                     <input
                       name="4813"
+                      readonly=""
                       type="checkbox"
                       value="4813"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4813
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -885,20 +1026,29 @@ Object {
                   >
                     <input
                       name="4812"
+                      readonly=""
                       type="checkbox"
                       value="4812"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4812
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -918,20 +1068,29 @@ Object {
                   >
                     <input
                       name="4811"
+                      readonly=""
                       type="checkbox"
                       value="4811"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4811
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -951,20 +1110,29 @@ Object {
                   >
                     <input
                       name="1099"
+                      readonly=""
                       type="checkbox"
                       value="1099"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1099
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1187,11 +1355,12 @@ Object {
                     >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCampaign"
                     >
                       <span
                         class="sortIcon"
@@ -1206,7 +1375,7 @@ Object {
                       Survey
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       <span
                         class="sortIcon"
@@ -1221,7 +1390,7 @@ Object {
                       Identifier
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -1236,7 +1405,9 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
+                    <th
+                      class="ColAction"
+                    >
                       Actions
                     </th>
                   </tr>
@@ -1250,20 +1421,29 @@ Object {
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1032
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1283,20 +1463,29 @@ Object {
                     >
                       <input
                         name="4819"
+                        readonly=""
                         type="checkbox"
                         value="4819"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4819
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1316,20 +1505,29 @@ Object {
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4818
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1349,20 +1547,29 @@ Object {
                     >
                       <input
                         name="4817"
+                        readonly=""
                         type="checkbox"
                         value="4817"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4817
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1382,20 +1589,29 @@ Object {
                     >
                       <input
                         name="4816"
+                        readonly=""
                         type="checkbox"
                         value="4816"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4816
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1415,20 +1631,29 @@ Object {
                     >
                       <input
                         name="4813"
+                        readonly=""
                         type="checkbox"
                         value="4813"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4813
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1448,20 +1673,29 @@ Object {
                     >
                       <input
                         name="4812"
+                        readonly=""
                         type="checkbox"
                         value="4812"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4812
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1481,20 +1715,29 @@ Object {
                     >
                       <input
                         name="4811"
+                        readonly=""
                         type="checkbox"
                         value="4811"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4811
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1514,20 +1757,29 @@ Object {
                     >
                       <input
                         name="1099"
+                        readonly=""
                         type="checkbox"
                         value="1099"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1099
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -1693,11 +1945,12 @@ Object {
                   >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCampaign"
                   >
                     <span
                       class="sortIcon"
@@ -1712,7 +1965,7 @@ Object {
                     Survey
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     <span
                       class="sortIcon"
@@ -1727,7 +1980,7 @@ Object {
                     Identifier
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -1742,7 +1995,9 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
+                  <th
+                    class="ColAction"
+                  >
                     Actions
                   </th>
                 </tr>
@@ -1756,20 +2011,29 @@ Object {
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1032
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1789,20 +2053,29 @@ Object {
                   >
                     <input
                       name="4819"
+                      readonly=""
                       type="checkbox"
                       value="4819"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4819
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1822,20 +2095,29 @@ Object {
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4818
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1855,20 +2137,29 @@ Object {
                   >
                     <input
                       name="4817"
+                      readonly=""
                       type="checkbox"
                       value="4817"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4817
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1888,20 +2179,29 @@ Object {
                   >
                     <input
                       name="4816"
+                      readonly=""
                       type="checkbox"
                       value="4816"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4816
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1921,20 +2221,29 @@ Object {
                   >
                     <input
                       name="4813"
+                      readonly=""
                       type="checkbox"
                       value="4813"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4813
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1954,20 +2263,29 @@ Object {
                   >
                     <input
                       name="4812"
+                      readonly=""
                       type="checkbox"
                       value="4812"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4812
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -1987,20 +2305,29 @@ Object {
                   >
                     <input
                       name="4811"
+                      readonly=""
                       type="checkbox"
                       value="4811"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4811
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -2020,20 +2347,29 @@ Object {
                   >
                     <input
                       name="1099"
+                      readonly=""
                       type="checkbox"
                       value="1099"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1099
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -2256,11 +2592,12 @@ Object {
                     >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCampaign"
                     >
                       <span
                         class="sortIcon"
@@ -2275,7 +2612,7 @@ Object {
                       Survey
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       <span
                         class="sortIcon"
@@ -2290,7 +2627,7 @@ Object {
                       Identifier
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -2305,7 +2642,9 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
+                    <th
+                      class="ColAction"
+                    >
                       Actions
                     </th>
                   </tr>
@@ -2319,20 +2658,29 @@ Object {
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1032
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2352,20 +2700,29 @@ Object {
                     >
                       <input
                         name="4819"
+                        readonly=""
                         type="checkbox"
                         value="4819"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4819
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2385,20 +2742,29 @@ Object {
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4818
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2418,20 +2784,29 @@ Object {
                     >
                       <input
                         name="4817"
+                        readonly=""
                         type="checkbox"
                         value="4817"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4817
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2451,20 +2826,29 @@ Object {
                     >
                       <input
                         name="4816"
+                        readonly=""
                         type="checkbox"
                         value="4816"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4816
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2484,20 +2868,29 @@ Object {
                     >
                       <input
                         name="4813"
+                        readonly=""
                         type="checkbox"
                         value="4813"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4813
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2517,20 +2910,29 @@ Object {
                     >
                       <input
                         name="4812"
+                        readonly=""
                         type="checkbox"
                         value="4812"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4812
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2550,20 +2952,29 @@ Object {
                     >
                       <input
                         name="4811"
+                        readonly=""
                         type="checkbox"
                         value="4811"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4811
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2583,20 +2994,29 @@ Object {
                     >
                       <input
                         name="1099"
+                        readonly=""
                         type="checkbox"
                         value="1099"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1099
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -2762,11 +3182,12 @@ Object {
                   >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCampaign"
                   >
                     <span
                       class="sortIcon"
@@ -2781,7 +3202,7 @@ Object {
                     Survey
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     <span
                       class="sortIcon"
@@ -2796,7 +3217,7 @@ Object {
                     Identifier
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -2811,7 +3232,9 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
+                  <th
+                    class="ColAction"
+                  >
                     Actions
                   </th>
                 </tr>
@@ -2825,20 +3248,29 @@ Object {
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1032
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -2858,20 +3290,29 @@ Object {
                   >
                     <input
                       name="4819"
+                      readonly=""
                       type="checkbox"
                       value="4819"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4819
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -2891,20 +3332,29 @@ Object {
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4818
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -2924,20 +3374,29 @@ Object {
                   >
                     <input
                       name="4817"
+                      readonly=""
                       type="checkbox"
                       value="4817"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4817
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -2957,20 +3416,29 @@ Object {
                   >
                     <input
                       name="4816"
+                      readonly=""
                       type="checkbox"
                       value="4816"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4816
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -2990,20 +3458,29 @@ Object {
                   >
                     <input
                       name="4813"
+                      readonly=""
                       type="checkbox"
                       value="4813"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4813
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -3023,20 +3500,29 @@ Object {
                   >
                     <input
                       name="4812"
+                      readonly=""
                       type="checkbox"
                       value="4812"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4812
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -3056,20 +3542,29 @@ Object {
                   >
                     <input
                       name="4811"
+                      readonly=""
                       type="checkbox"
                       value="4811"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4811
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -3089,20 +3584,29 @@ Object {
                   >
                     <input
                       name="1099"
+                      readonly=""
                       type="checkbox"
                       value="1099"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1099
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -3357,11 +3861,12 @@ Object {
                     >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCampaign"
                     >
                       <span
                         class="sortIcon"
@@ -3376,7 +3881,7 @@ Object {
                       Survey
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       <span
                         class="sortIcon"
@@ -3391,7 +3896,7 @@ Object {
                       Identifier
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -3406,7 +3911,9 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
+                    <th
+                      class="ColAction"
+                    >
                       Actions
                     </th>
                   </tr>
@@ -3420,20 +3927,29 @@ Object {
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1032
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -3453,20 +3969,29 @@ Object {
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4818
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -3664,11 +4189,12 @@ Object {
                   >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCampaign"
                   >
                     <span
                       class="sortIcon"
@@ -3683,7 +4209,7 @@ Object {
                     Survey
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     <span
                       class="sortIcon"
@@ -3698,7 +4224,7 @@ Object {
                     Identifier
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -3713,7 +4239,9 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
+                  <th
+                    class="ColAction"
+                  >
                     Actions
                   </th>
                 </tr>
@@ -3727,20 +4255,29 @@ Object {
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1032
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -3760,20 +4297,29 @@ Object {
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4818
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -4036,11 +4582,12 @@ Object {
                     >
                       <input
                         name="checkAll"
+                        readonly=""
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCampaign"
                     >
                       <span
                         class="sortIcon"
@@ -4055,7 +4602,7 @@ Object {
                       Survey
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       <span
                         class="sortIcon"
@@ -4070,7 +4617,7 @@ Object {
                       Identifier
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name_review"
                     >
                       <span
@@ -4085,7 +4632,9 @@ Object {
                       </span>
                       Interviewer
                     </th>
-                    <th>
+                    <th
+                      class="ColAction"
+                    >
                       Actions
                     </th>
                   </tr>
@@ -4099,20 +4648,29 @@ Object {
                     >
                       <input
                         name="1032"
+                        readonly=""
                         type="checkbox"
                         value="1032"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       1032
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Dupont Chloé
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -4132,20 +4690,29 @@ Object {
                     >
                       <input
                         name="4818"
+                        readonly=""
                         type="checkbox"
                         value="4818"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColCampaign"
+                    >
                       Survey on the Simpsons tv show 2020
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       4818
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Boulanger Jacques
                     </td>
-                    <td>
+                    <td
+                      class="ColAction"
+                    >
                       <i
                         aria-hidden="true"
                         class="fa fa-calendar EditLink Clickable"
@@ -4343,11 +4910,12 @@ Object {
                   >
                     <input
                       name="checkAll"
+                      readonly=""
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCampaign"
                   >
                     <span
                       class="sortIcon"
@@ -4362,7 +4930,7 @@ Object {
                     Survey
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     <span
                       class="sortIcon"
@@ -4377,7 +4945,7 @@ Object {
                     Identifier
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name_review"
                   >
                     <span
@@ -4392,7 +4960,9 @@ Object {
                     </span>
                     Interviewer
                   </th>
-                  <th>
+                  <th
+                    class="ColAction"
+                  >
                     Actions
                   </th>
                 </tr>
@@ -4406,20 +4976,29 @@ Object {
                   >
                     <input
                       name="1032"
+                      readonly=""
                       type="checkbox"
                       value="1032"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     1032
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Dupont Chloé
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"
@@ -4439,20 +5018,29 @@ Object {
                   >
                     <input
                       name="4818"
+                      readonly=""
                       type="checkbox"
                       value="4818"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColCampaign"
+                  >
                     Survey on the Simpsons tv show 2020
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     4818
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Boulanger Jacques
                   </td>
-                  <td>
+                  <td
+                    class="ColAction"
+                  >
                     <i
                       aria-hidden="true"
                       class="fa fa-calendar EditLink Clickable"

@@ -10,65 +10,65 @@ function CollectionTableDisplay({
 }) {
   const notAttributedRow = mode !== C.BY_INTERVIEWER_ONE_SURVEY || (
     <tr>
-      <th>{D.unitsNotAffected}</th>
+      <th className="ColFirstCol">{D.unitsNotAffected}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">
+      <th className="YellowHeader ColCollectionRate">
         {(data.notAttributed.collectionRate * 100).toFixed(1)}
         %
       </th>
-      <th className="YellowHeader">
+      <th className="YellowHeader ColWasteRate">
         {(data.notAttributed.wasteRate * 100).toFixed(1)}
         %
       </th>
-      <th className="YellowHeader">
+      <th className="YellowHeader ColOOSRate">
         {(data.notAttributed.outOfScopeRate * 100).toFixed(1)}
         %
       </th>
       <th className="ColumnSpacing" />
-      <th>{data.notAttributed.surveysAccepted}</th>
-      <th>{data.notAttributed.refusal}</th>
-      <th>{data.notAttributed.unreachable}</th>
-      <th>{data.notAttributed.otherWastes}</th>
-      <th>{data.notAttributed.outOfScope}</th>
-      <th>{data.notAttributed.totalProcessed}</th>
+      <th className="ColSurveyAcepted">{data.notAttributed.surveysAccepted}</th>
+      <th className="ColRefusal">{data.notAttributed.refusal}</th>
+      <th className="ColUnreachable">{data.notAttributed.unreachable}</th>
+      <th className="ColOtherWastes">{data.notAttributed.otherWastes}</th>
+      <th className="ColOOS">{data.notAttributed.outOfScope}</th>
+      <th className="ColTotalProcessed">{data.notAttributed.totalProcessed}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">{data.notAttributed.absInterviewer}</th>
-      <th className="YellowHeader">{data.notAttributed.otherReason}</th>
-      <th className="YellowHeader">{data.notAttributed.totalClosed}</th>
+      <th className="YellowHeader ColAbsInterviewer">{data.notAttributed.absInterviewer}</th>
+      <th className="YellowHeader ColOtherReason">{data.notAttributed.otherReason}</th>
+      <th className="YellowHeader ColTotalClosed">{data.notAttributed.totalClosed}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">{data.notAttributed.allocated}</th>
+      <th className="YellowHeader ColAllocated">{data.notAttributed.allocated}</th>
     </tr>
   );
 
   const totalDemRow = mode !== C.BY_INTERVIEWER_ONE_SURVEY || (
     <tr>
-      <th>{D.totalDEM}</th>
+      <th className="ColFirstCol">{D.totalDEM}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">
+      <th className="YellowHeader ColCollectionRate">
         {(data.total.dem.collectionRate * 100).toFixed(1)}
         %
       </th>
-      <th className="YellowHeader">
+      <th className="YellowHeader ColWasteRate">
         {(data.total.dem.wasteRate * 100).toFixed(1)}
         %
       </th>
-      <th className="YellowHeader">
+      <th className="YellowHeader ColOOSRate">
         {(data.total.dem.outOfScopeRate * 100).toFixed(1)}
         %
       </th>
       <th className="ColumnSpacing" />
-      <th>{data.total.dem.surveysAccepted}</th>
-      <th>{data.total.dem.refusal}</th>
-      <th>{data.total.dem.unreachable}</th>
-      <th>{data.total.dem.otherWastes}</th>
-      <th>{data.total.dem.outOfScope}</th>
-      <th>{data.total.dem.totalProcessed}</th>
+      <th className="ColSurveyAcepted">{data.total.dem.surveysAccepted}</th>
+      <th className="ColRefusal">{data.total.dem.refusal}</th>
+      <th className="ColUnreachable">{data.total.dem.unreachable}</th>
+      <th className="ColOtherWastes">{data.total.dem.otherWastes}</th>
+      <th className="ColOOS">{data.total.dem.outOfScope}</th>
+      <th className="ColTotalProcessed">{data.total.dem.totalProcessed}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">{data.total.dem.absInterviewer}</th>
-      <th className="YellowHeader">{data.total.dem.otherReason}</th>
-      <th className="YellowHeader">{data.total.dem.totalClosed}</th>
+      <th className="YellowHeader ColAbsInterviewer">{data.total.dem.absInterviewer}</th>
+      <th className="YellowHeader ColOtherReason">{data.total.dem.otherReason}</th>
+      <th className="YellowHeader ColTotalClosed">{data.total.dem.totalClosed}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">{data.total.dem.allocated}</th>
+      <th className="YellowHeader ColAllocated">{data.total.dem.allocated}</th>
     </tr>
   );
 
@@ -77,33 +77,33 @@ function CollectionTableDisplay({
       {notAttributedRow}
       {totalDemRow}
       <tr>
-        <th>{D.totalFrance}</th>
+        <th className="ColFirstCol">{D.totalFrance}</th>
         <th className="ColumnSpacing" />
-        <th className="YellowHeader">
+        <th className="YellowHeader ColCollectionRate">
           {(data.total.france.collectionRate * 100).toFixed(1)}
           %
         </th>
-        <th className="YellowHeader">
+        <th className="YellowHeader ColWasteRate">
           {(data.total.france.wasteRate * 100).toFixed(1)}
           %
         </th>
-        <th className="YellowHeader">
+        <th className="YellowHeader ColOOSRate">
           {(data.total.france.outOfScopeRate * 100).toFixed(1)}
           %
         </th>
         <th className="ColumnSpacing" />
-        <th>{data.total.france.surveysAccepted}</th>
-        <th>{data.total.france.refusal}</th>
-        <th>{data.total.france.unreachable}</th>
-        <th>{data.total.france.otherWastes}</th>
-        <th>{data.total.france.outOfScope}</th>
-        <th>{data.total.france.totalProcessed}</th>
+        <th className="ColSurveyAcepted">{data.total.france.surveysAccepted}</th>
+        <th className="ColRefusal">{data.total.france.refusal}</th>
+        <th className="ColUnreachable">{data.total.france.unreachable}</th>
+        <th className="ColOtherWastes">{data.total.france.otherWastes}</th>
+        <th className="ColOOS">{data.total.france.outOfScope}</th>
+        <th className="ColTotalProcessed">{data.total.france.totalProcessed}</th>
         <th className="ColumnSpacing" />
-        <th className="YellowHeader">{data.total.france.absInterviewer}</th>
-        <th className="YellowHeader">{data.total.france.otherReason}</th>
-        <th className="YellowHeader">{data.total.france.totalClosed}</th>
+        <th className="YellowHeader ColAbsInterviewer">{data.total.france.absInterviewer}</th>
+        <th className="YellowHeader ColOtherReason">{data.total.france.otherReason}</th>
+        <th className="YellowHeader ColTotalClosed">{data.total.france.totalClosed}</th>
         <th className="ColumnSpacing" />
-        <th className="YellowHeader">{data.total.france.allocated}</th>
+        <th className="YellowHeader ColAllocated">{data.total.france.allocated}</th>
       </tr>
     </tfoot>
   );
@@ -125,11 +125,11 @@ function CollectionTableDisplay({
     <Table id="FollowUpTable" className="CustomTable" bordered striped hover responsive size="sm">
       <thead>
         <tr>
-          <th className="EmptyHeader" />
+          <th className="EmptyHeader ColFirstCol" />
           <th className="ColumnSpacing" />
-          <th className="EmptyHeader" />
-          <th className="EmptyHeader" />
-          <th className="EmptyHeader" />
+          <th className="EmptyHeader ColCollectionRate" />
+          <th className="EmptyHeader ColWasteRate" />
+          <th className="EmptyHeader ColOOSRate" />
           <th rowSpan="2" className="ColumnSpacing" />
           <th colSpan="6" className="CenteredText">{D.surveyUnitsProcessedInterviewer}</th>
           <th rowSpan="2" className="ColumnSpacing" />
@@ -141,14 +141,14 @@ function CollectionTableDisplay({
           <th
             data-testid="TableHeader_label"
             onClick={handleSortFunct(firstColumnSortAttribute)}
-            className="Clickable"
+            className="Clickable ColFirstCol"
           >
             {firstColumnTitle}
             <SortIcon val={firstColumnSortAttribute} sort={sort} />
           </th>
           <th className="ColumnSpacing" />
           <th
-            className="YellowHeader Clickable"
+            className="YellowHeader Clickable ColCollectionRate"
             onClick={handleSortFunct('collectionRate')}
           >
             {D.collectionRate}
@@ -156,83 +156,83 @@ function CollectionTableDisplay({
           </th>
           <th
             onClick={handleSortFunct('wasteRate')}
-            className="YellowHeader Clickable"
+            className="YellowHeader Clickable ColWasteRate"
           >
             {D.wasteRate}
             <SortIcon val="wasteRate" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('outOfScopeRate')}
-            className="YellowHeader Clickable"
+            className="YellowHeader Clickable ColOOSRate"
           >
             {D.outOfScopeRate}
             <SortIcon val="outOfScopeRate" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('surveysAccepted')}
-            className="Clickable"
+            className="Clickable ColSurveyAccepted"
           >
             {D.surveysAccepted}
             <SortIcon val="surveysAccepted" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('refusal')}
-            className="Clickable"
+            className="Clickable ColRefusal"
           >
             {D.refusal}
             <SortIcon val="refusal" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('unreachable')}
-            className="Clickable"
+            className="Clickable ColUnreachable"
           >
             {D.unreachable}
             <SortIcon val="unreachable" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('otherWastes')}
-            className="Clickable"
+            className="Clickable ColOtherWastes"
           >
             {D.otherWastes}
             <SortIcon val="otherWastes" sort={sort} />
           </th>
           <th
-            className="Clickable"
+            className="Clickable ColOOS"
             onClick={handleSortFunct('outOfScope')}
           >
             {D.outOfScope}
             <SortIcon val="outOfScope" sort={sort} />
           </th>
           <th
-            className="Clickable"
+            className="Clickable ColTotalProcessed"
             onClick={handleSortFunct('totalProcessed')}
           >
             {D.totalProcessed}
             <SortIcon val="totalProcessed" sort={sort} />
           </th>
           <th
-            className="Clickable"
+            className="Clickable ColAbsInterviewer"
             onClick={handleSortFunct('absInterviewer')}
           >
             {D.absInterviewer}
             <SortIcon val="absInterviewer" sort={sort} />
           </th>
           <th
-            className="Clickable"
+            className="Clickable ColOtherReason"
             onClick={handleSortFunct('otherReason')}
           >
             {D.otherReason}
             <SortIcon val="otherReason" sort={sort} />
           </th>
           <th
-            className="Clickable"
+            className="Clickable ColTotalClosed"
             onClick={handleSortFunct('totalClosed')}
           >
             {D.totalClosed}
             <SortIcon val="totalClosed" sort={sort} />
           </th>
           <th
-            className="Clickable"
+            className="Clickable ColAllocated"
             onClick={handleSortFunct('allocated')}
           >
             {D.allocated}
@@ -248,7 +248,7 @@ function CollectionTableDisplay({
           )
           .map((line) => (
             <CollectionTableDisplayLine
-              key={line.interviewerId || line.survey || line.site}
+              key={line.id || line.interviewerId || line.survey || line.site}
               data={line}
             />
           ))}

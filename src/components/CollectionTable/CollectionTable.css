@@ -1,0 +1,45 @@
+
+/* Column sizes */
+
+.ColFirstCol{
+  width: 26%;
+}
+.ColCollectionRate{
+  width: 5.5%;
+}
+.ColWasteRate{
+  width: 5.5%;
+}
+.ColOOSRate{
+  width: 5.5%;
+}
+.ColSurveyAcepted{
+  width: 5.5%;
+}
+.ColRefusal{
+  width: 5.5%;
+}
+.ColUnreachable{
+  width: 5.5%;
+}
+.ColOtherWastes{
+  width: 5.5%;
+}
+.ColOOS{
+  width: 5.5%;
+}
+.ColTotalProcessed{
+  width: 5.5%;
+}
+.ColAbsInterviewer{
+  width: 5.5%;
+}
+.ColOtherReason{
+  width: 5.5%;
+}
+.ColTotalClosed{
+  width: 5.5%;
+}
+.ColAllocated{
+  width: 5.5%;
+}

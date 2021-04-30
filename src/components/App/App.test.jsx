@@ -7,7 +7,7 @@ import Keycloak from 'keycloak-js';
 import { NotificationManager } from 'react-notifications';
 import DataFormatter from '../../utils/DataFormatter';
 import App from './App';
-import mocks from '../../tests/mock_responses';
+import mocks from '../../tests/mocks';
 import C from '../../utils/constants.json';
 
 const toLocaleDateString = Date.prototype.toLocaleString;

@@ -45,7 +45,7 @@ class SurveyUnits extends React.Component {
 
     const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data);
-    const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
+    const csvContent = `data:text/csv;charset=utf-8,\ufeff${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
@@ -97,16 +97,16 @@ class SurveyUnits extends React.Component {
                     <th
                       data-testid="TableHeader_interviewer_name_portal"
                       onClick={handleSort('CPinterviewer')}
-                      className="Clickable"
+                      className="Clickable ColInterviewerName"
                     >
                       <SortIcon val="CPinterviewer" sort={sort} />
                       {D.interviewer}
                     </th>
-                    <th onClick={handleSort('CPidep')} className="Clickable">
+                    <th onClick={handleSort('CPidep')} className="Clickable ColIdep">
                       <SortIcon val="CPidep" sort={sort} />
                       {D.idep}
                     </th>
-                    <th onClick={handleSort('CPue')} className="Clickable">
+                    <th onClick={handleSort('CPue')} className="Clickable ColUeNb">
                       <SortIcon val="CPue" sort={sort} />
                       {D.SU}
                     </th>

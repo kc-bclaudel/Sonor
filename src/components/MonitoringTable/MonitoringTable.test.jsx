@@ -8,7 +8,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import DataFormatter from '../../utils/DataFormatter';
 import MonitoringTable from './MonitoringTable';
-import mocks from '../../tests/mock_responses';
+import mocks from '../../tests/mocks';
 import C from '../../utils/constants.json';
 
 const history = createMemoryHistory();
@@ -28,11 +28,13 @@ afterEach(cleanup);
 jest.mock('../../utils/DataFormatter');
 
 const survey = mocks.surveyVqs;
+const interviewer = mocks.interviewerINTW5;
 const {
   respModeByInterviewers1Survey,
   respModeBySite,
   respModeBySurvey,
   respModeByInterviewer,
+  respModeBySurveyOneInterviewer,
   mainScreenData,
 } = mocks;
 
@@ -41,10 +43,11 @@ const TestingRouter = ({ ComponentWithRedirection }) => (
     <Switch>
       <Route exact path="/follow/campaign/vqs2021x00" component={() => <ComponentWithRedirection />} />
       <Route exact path="/follow/sites/vqs2021x00" component={() => <ComponentWithRedirection />} />
+      <Route exact path="/follow/campaigns/interviewer/INTW7" component={() => <ComponentWithRedirection />} />
+      <Route exact path="/follow/campaigns/interviewer/INTW5" component={() => <ComponentWithRedirection />} />
       <Route exact path="/follow/campaigns" component={() => <ComponentWithRedirection />} />
-      <Route exact path="/follow/interviewers" component={() => <ComponentWithRedirection />} />
       <Route
-        path='*'
+        path="*"
         component={(routeProps) => (
           <div>
             <div data-testid="Redirect-url">{JSON.stringify(routeProps.history.location.pathname)}</div>
@@ -67,12 +70,16 @@ const mockGetDataForMonitoringTable = jest.fn(
       case C.BY_SITE: 
         cb(respModeBySite);
         break;
-      case C.BY_SURVEY: 
+      case C.BY_SURVEY:
         cb(respModeBySurvey);
         break;
       case C.BY_INTERVIEWER: 
         cb(respModeByInterviewer);
         break;
+      case C.BY_SURVEY_ONE_INTERVIEWER: 
+        cb(respModeBySurveyOneInterviewer);
+        break;
+        
     }
   } 
 );
@@ -242,26 +249,25 @@ it('Component did update', () => {
   );
 })
 
-it('Reloading the page with no survey set (F5) by interviewer 1 survey', async () => {
+it('Reloading the page with no survey set (F5) by interviewer 1 survey (Campaign > Progress by interviewer)', async () => {
 
   const pathname = '/follow/campaign/vqs2021x00';
-  history.push(pathname);
 
   const redirectUrl = '/';
 
   const component = render(
     <TestingRouter
-    ComponentWithRedirection={
-      () => <MonitoringTable location={{ pathname }} dataRetreiver={mockDataRetreiver} />
-    }
-  />,
+      ComponentWithRedirection={
+        () => <MonitoringTable location={{ pathname }} dataRetreiver={mockDataRetreiver} />
+      }
+    />,
   );
 
   // Should redirect to '/'
   expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`);
 });
 
-it('Reloading the page with no survey set (F5) by site', async () => {
+it('Reloading the page with no survey set (F5) by site (Campaign > Progress by site)', async () => {
 
   const pathname = '/follow/sites/vqs2021x00';
   history.push(pathname);
@@ -270,51 +276,35 @@ it('Reloading the page with no survey set (F5) by site', async () => {
 
   const component = render(
     <TestingRouter
-    ComponentWithRedirection={
-      () => <MonitoringTable location={{ pathname }} dataRetreiver={mockDataRetreiver} />
-    }
-  />,
+      ComponentWithRedirection={
+        () => <MonitoringTable location={{ pathname }} dataRetreiver={mockDataRetreiver} />
+      }
+    />,
   );
 
   // Should redirect to '/'
   expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`);
 });
 
-it('Reloading the page with no survey set (F5) by interviewers', async () => {
-  const pathname = '/follow/interviewers';
+it('Reloading the page with no survey set (F5) by survey for an interviewer (Interviewer > Progress by campaign)', async () => {
+  const pathname = '/follow/campaigns/interviewer/INTW7';
   history.push(pathname);
 
-  const component = render(
-    <Router history={history}>
-      <MonitoringTable location={{ pathname }} dataRetreiver={mockDataRetreiver} />
-    </Router>,
-  );
-
-  await waitForElement(() => screen.getByTestId('pagination-nav'));
-
-  // Should call getDataForMainScreen and display the page anyway
-  expect(mockGetDataForMainScreen).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
-});
-
-it('Reloading the page with no survey set (F5) by interviewers', async () => {
-  const pathname = '/follow/interviewers';
-  history.push(pathname);
+  const redirectUrl = '/';
 
   const component = render(
-    <Router history={history}>
-      <MonitoringTable location={{ pathname }} dataRetreiver={mockDataRetreiver} />
-    </Router>,
+    <TestingRouter
+      ComponentWithRedirection={
+        () => <MonitoringTable location={{ pathname }} dataRetreiver={mockDataRetreiver} />
+      }
+    />,
   );
 
-  await waitForElement(() => screen.getByTestId('pagination-nav'));
-
-  // Should call getDataForMainScreen and display the page anyway
-  expect(mockGetDataForMainScreen).toHaveBeenCalled();
-  expect(component).toMatchSnapshot();
+  // Should redirect to '/'
+  expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`);
 });
 
-it('Reloading the page with no survey set (F5) by survey', async () => {
+it('Reloading the page with no survey set (F5) by survey (Site > Progress)', async () => {
   const pathname = '/follow/campaigns';
   history.push(pathname);
 
@@ -346,7 +336,7 @@ it('Export table by interviewer one survey', async () => {
   HTMLAnchorElement.prototype.remove = removeElmMock;
 
   const fileTitle = 'National_organizational_unit_Everyday_life_and_health_survey_2021_Avancement_enqueteurs_8202020.csv';
-  const fileContent = 'data:text/csv;charset=utf-8,Last%20name;First%20name;Idep;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;2.9%25;104;3;34;0;2;1;29;;;5%0ABoulanger;Jacques;INTW6;2.9%25;104;3;34;0;2;1;29;;;5%0ADelmarre;Alphonse;INTW11;2.9%25;104;3;34;0;2;1;29;;;5%0ADupont;Chlo%C3%A9;INTW5;16.7%25;96;3;7;2;10;7;4;;;3%0ADupont;Ren%C3%A9e;INTW10;2.9%25;104;3;34;0;2;1;29;;;5%0AFabres;Thierry;INTW7;2.9%25;104;3;34;0;2;1;29;;;5%0ARenard;Bertrand;INTW8;2.9%25;104;3;34;0;2;1;29;;;5%0ATotal%20organizational%20unit;;;2.9%25;208;22;111;;4;2;29;60;12;10%0ATotal%20France;;;2.9%25;104;;34;0;2;1;29;;;5';
+  const fileContent = 'data:text/csv;charset=utf-8,%EF%BB%BFLast%20name;First%20name;Idep;;Completion%20rate;;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;;2.9%25;;104;3;34;0;2;1;;29;;;5%0ABoulanger;Jacques;INTW6;;2.9%25;;104;3;34;0;2;1;;29;;;5%0ADelmarre;Alphonse;INTW11;;2.9%25;;104;3;34;0;2;1;;29;;;5%0ADupont;Chlo%C3%A9;INTW5;;16.7%25;;96;3;7;2;10;7;;4;;;3%0ADupont;Ren%C3%A9e;INTW10;;2.9%25;;104;3;34;0;2;1;;29;;;5%0AFabres;Thierry;INTW7;;2.9%25;;104;3;34;0;2;1;;29;;;5%0ARenard;Bertrand;INTW8;;2.9%25;;104;3;34;0;2;1;;29;;;5%0ATotal%20organizational%20unit;;;;2.9%25;;208;22;111;;4;2;;29;60;12;10%0ATotal%20France;;;;2.9%25;;104;;34;0;2;1;;29;;;5';
   screen.getByTestId('export-button').click();
   const downnloadLink = component.baseElement.querySelector('a[download]');
 
@@ -381,7 +371,7 @@ it('Export table by site', async () => {
   HTMLAnchorElement.prototype.remove = removeElmMock;
 
   const fileTitle = 'Everyday_life_and_health_survey_2021_Avancement_sites_8202020.csv';
-  const fileContent = 'data:text/csv;charset=utf-8,Site;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ANational%20organizational%20unit;2.9%25;104;22;47;0;2;1;;30;12;5%0ANorth%20region%20organizational%20unit;2.9%25;104;22;47;;2;1;;30;12;5%0ASouth%20region%20organizational%20unit;2.9%25;104;;64;0;2;1;29;30;;5%0ATotal%20France;2.9%25;104;;34;0;2;1;29;;;5';
+  const fileContent = 'data:text/csv;charset=utf-8,%EF%BB%BFSite;;Completion%20rate;;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ANational%20organizational%20unit;;2.9%25;;104;22;47;0;2;1;;;30;12;5%0ANorth%20region%20organizational%20unit;;2.9%25;;104;22;47;;2;1;;;30;12;5%0ASouth%20region%20organizational%20unit;;2.9%25;;104;;64;0;2;1;;29;30;;5%0ATotal%20France;;2.9%25;;104;;34;0;2;1;;29;;;5';
   screen.getByTestId('export-button').click();
   const downnloadLink = component.baseElement.querySelector('a[download]');
 
@@ -401,13 +391,13 @@ it('Export table by site', async () => {
   downnloadLink.remove();
 });
 
-it('Export table by interviewer', async () => {
-  const pathname = '/follow/interviewers';
+it('Export table by survey for an interviewer', async () => {
+  const pathname = '/follow/campaigns/interviewer/INTW5';
   history.push(pathname);
 
   const component = render(
     <Router history={history}>
-      <MonitoringTable location={{ survey, pathname }} dataRetreiver={mockDataRetreiver} />
+      <MonitoringTable location={{ interviewer, pathname }} dataRetreiver={mockDataRetreiver} />
     </Router>,
   );
 
@@ -417,8 +407,8 @@ it('Export table by interviewer', async () => {
 
   await waitForElement(() => screen.getByTestId('pagination-nav'));
 
-  const fileTitle = 'National_organizational_unit_Avancement_enqueteurs_8202020.csv';
-  const fileContent = 'data:text/csv;charset=utf-8,Last%20name;First%20name;Idep;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0ABoulanger;Emilie;INTW9;2.9%25;832;24;272;0;16;8;232;0;0;40%0ABoulanger;Jacques;INTW6;2.9%25;832;24;272;0;16;8;232;0;0;40%0ADelmarre;Alphonse;INTW11;2.9%25;832;24;272;0;16;8;232;0;0;40%0ADupont;Chlo%C3%A9;INTW5;16.7%25;768;24;56;16;80;56;32;0;0;24%0ADupont;Ren%C3%A9e;INTW10;2.9%25;832;24;272;0;16;8;232;0;0;40%0AFabres;Thierry;INTW7;2.9%25;832;24;272;0;16;8;232;0;0;40%0ARenard;Bertrand;INTW8;2.9%25;832;24;272;0;16;8;232;0;0;40';
+  const fileTitle = 'Chloé_Dupont_Avancement_8202020.csv';
+  const fileContent = 'data:text/csv;charset=utf-8,%EF%BB%BFSurvey;;Completion%20rate;;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0AEveryday%20life%20and%20health%20survey%202018;;4.7%25;;720;21;211;2;22;13;;178;;;33%0AEveryday%20life%20and%20health%20survey%202021;;4.7%25;;720;21;211;2;22;13;;178;;;33%0AEveryday%20life%20and%20health%20survey%202022;;4.7%25;;720;21;211;2;22;13;;178;;;33%0AEveryday%20life%20and%20health%20survey%202026;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20something%202020;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20something%20else%202020;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202020;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202021;;4.7%25;;720;21;211;2;22;13;;178;;;33';
   screen.getByTestId('export-button').click();
   const downnloadLink = component.baseElement.querySelector('a[download]');
 
@@ -455,7 +445,7 @@ it('Export table by survey', async () => {
   await waitForElement(() => screen.getByTestId('pagination-nav'));
 
   const fileTitle = 'National_organizational_unit_Avancement_enquetes_8202020.csv';
-  const fileContent = 'data:text/csv;charset=utf-8,Survey;Completion%20rate;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0AEveryday%20life%20and%20health%20survey%202018;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202021;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202022;4.7%25;720;21;211;2;22;13;178;;;33%0AEveryday%20life%20and%20health%20survey%202026;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20something%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20something%20else%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202020;4.7%25;720;21;211;2;22;13;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202021;4.7%25;720;21;211;2;22;13;178;;;33';
+  const fileContent = 'data:text/csv;charset=utf-8,%EF%BB%BFSurvey;;Completion%20rate;;Allocated;Not%20started;In%20progress%20by%20interviewer;Waiting%20for%20interviewer%20review;To%20review;Reviewed%20ended;;Preparing%20contact;At%20least%20one%20contact;Appointment%20taken;Interview%20started%0AEveryday%20life%20and%20health%20survey%202018;;4.7%25;;720;21;211;2;22;13;;178;;;33%0AEveryday%20life%20and%20health%20survey%202021;;4.7%25;;720;21;211;2;22;13;;178;;;33%0AEveryday%20life%20and%20health%20survey%202022;;4.7%25;;720;21;211;2;22;13;;178;;;33%0AEveryday%20life%20and%20health%20survey%202026;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20something%202020;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20something%20else%202020;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202020;;4.7%25;;720;21;211;2;22;13;;178;;;33%0ASurvey%20on%20the%20Simpsons%20tv%20show%202021;;4.7%25;;720;21;211;2;22;13;;178;;;33';
   screen.getByTestId('export-button').click();
   const downnloadLink = component.baseElement.querySelector('a[download]');
 

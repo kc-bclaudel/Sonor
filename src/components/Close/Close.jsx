@@ -6,6 +6,7 @@ import { NotificationManager } from 'react-notifications';
 import CloseSUTable from './CloseSUTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
+import './Close.css';
 
 function Close({
   location, dataRetreiver,

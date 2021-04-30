@@ -27,7 +27,7 @@ function HeaderReviewSubMenu({ toggle, setModal }) {
         <Link
           to="/review"
           className="selectedSubeMenu"
-          data-testid="follow-by-survey"
+          data-testid="review-link"
           onClick={() => toggle(false)}
         >
           {D.unitsOfSite}

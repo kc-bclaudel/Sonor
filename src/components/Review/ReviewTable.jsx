@@ -30,7 +30,10 @@ class ReviewTable extends React.Component {
   componentDidUpdate(prevProps) {
     const { survey, data } = this.props;
     if (prevProps.survey !== survey) {
-      const newCheckboxArray = data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {});
+      const newCheckboxArray = data.reduce(
+        (acc, curr) => { acc[curr.id] = false; return acc; },
+        {},
+      );
       this.setState({ checkboxArray: newCheckboxArray, checkAll: false });
     }
   }
@@ -80,11 +83,19 @@ class ReviewTable extends React.Component {
     }
   }
 
-  validate() {
+  validateComment() {
     const { validateUpdateComment } = this.props;
     const { suToModifySelected, newComment } = this.state;
-    //TODO demander si il est possible de modifier les commentaires de plusieurs SU en même temps
     validateUpdateComment(suToModifySelected, newComment);
+  }
+
+  validateSU() {
+    const { validateSU } = this.props;
+    const { checkboxArray } = this.state;
+    const ids = Object.entries(checkboxArray)
+      .filter((su) => (su[1]))
+      .map((su) => (su[0]));
+    validateSU(ids);
   }
 
   handleCheckAll() {
@@ -145,15 +156,15 @@ class ReviewTable extends React.Component {
           <thead>
             <tr>
               <th className="CheckboxCol" onClick={() => this.handleCheckAll()}>
-                <input type="checkbox" name="checkAll" checked={checkAll} />
+                <input type="checkbox" name="checkAll" readOnly checked={checkAll} />
               </th>
-              <th onClick={handleSortFunct('campaignLabel')} className="Clickable">
+              <th onClick={handleSortFunct('campaignLabel')} className="Clickable ColCampaign">
                 <SortIcon val="campaignLabel" sort={sort} />
                 {D.survey}
               </th>
               <th
                 onClick={handleSortFunct('id')}
-                className="Clickable"
+                className="Clickable ColId"
               >
                 <SortIcon val="id" sort={sort} />
                 {D.identifier}
@@ -161,12 +172,12 @@ class ReviewTable extends React.Component {
               <th
                 onClick={handleSortFunct('interviewer')}
                 data-testid="TableHeader_interviewer_name_review"
-                className="Clickable"
+                className="Clickable ColInterviewer"
               >
                 <SortIcon val="interviewer" sort={sort} />
                 {D.interviewer}
               </th>
-              <th>
+              <th className="ColAction">
                 {D.listSuActions}
               </th>
             </tr>
@@ -192,18 +203,18 @@ class ReviewTable extends React.Component {
                   <Modal.Title>{D.modifiedCommentSu + suToModifySelected}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <Form.Group as={Col} controlId="formGridState">
-                  <Form.Label>{D.modifiedCommentSuLastComment}</Form.Label>
-                  <Form.Control
-                    type="text" 
-                    as="textarea"
-                    defaultValue={oldComment}
-                    onChange={(e) => this.setState({ newComment: e.target.value })}
-                  />
-                  <Form.Text id="passwordHelpBlock" muted>
-                    {D.modifyCommentSuHelpText}
-                  </Form.Text>
-                </Form.Group>
+                  <Form.Group as={Col} controlId="formGridState">
+                    <Form.Label>{D.modifiedCommentSuLastComment}</Form.Label>
+                    <Form.Control
+                      type="text"
+                      as="textarea"
+                      defaultValue={oldComment}
+                      onChange={(e) => this.setState({ newComment: e.target.value })}
+                    />
+                    <Form.Text id="passwordHelpBlock" muted>
+                      {D.modifyCommentSuHelpText}
+                    </Form.Text>
+                  </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
                   <Button
@@ -215,9 +226,11 @@ class ReviewTable extends React.Component {
                   </Button>
                   <Button
                     variant="primary"
-                    data-testid="confirm-validate"
-                    onClick={() => { this.validate(); 
-                      handleCloseComment(); }}
+                    data-testid="confirm-update-comment"
+                    onClick={() => {
+                      this.validateComment();
+                      handleCloseComment();
+                    }}
                   >
                     {D.validate}
                   </Button>
@@ -244,6 +257,7 @@ class ReviewTable extends React.Component {
         </div>
 
         <Modal show={show} onHide={() => this.handleClose()}>
+          <Modal.Header closeButton />
           <Modal.Body>
             {D.reviewValidatePopupBodyPart1}
             {Object.values(checkboxArray).filter((elm) => elm).length}
@@ -260,7 +274,7 @@ class ReviewTable extends React.Component {
             <Button
               variant="primary"
               data-testid="confirm-validate"
-              onClick={() => { this.validate(); this.handleClose(); }}
+              onClick={() => { this.validateSU(); this.handleClose(); }}
             >
               {D.popupConfirm}
             </Button>

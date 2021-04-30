@@ -25,6 +25,74 @@ class Service {
     };
   }
 
+  // -------------------------- //
+  // Survey-Units service begin //
+  // -------------------------- //
+  getSurveyUnits(campaignId, state, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units?${state ? `state=${state}` : ''}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+        });
+    });
+  }
+
+  getSurveyUnitsClosable(cb) {
+    fetch(`${baseUrlPearlJam}/api/survey-units/closable`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
+  }
+
+  getSurveyUnitsNotAttributedByCampaign(campaignId, cb) {
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((err) => {
+        cb({ count: null });
+        console.log(err);
+      });
+  }
+
+  getSurveyUnitsAbandonedByCampaign(campaignId, cb) {
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/abandoned`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((err) => {
+        cb({ count: null });
+        console.log(err);
+      });
+  }
+
+  getStatesBySurveyUnit(su, cb) {
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/states`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
+  }
+
   putSurveyUnitToValidate(su, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
@@ -49,11 +117,11 @@ class Service {
       });
   }
 
-  putCloseSurveyUnit(su, closingCause, cb) {
+  putSurveyUnitClose(su, closingCause, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
     options.method = 'PUT';
-    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/closing-cause/${closingCause}`, options)
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/close/${closingCause}`, options)
       .then((res) => cb(res))
       .catch((e) => {
         console.log(e);
@@ -61,7 +129,7 @@ class Service {
       });
   }
 
-  putClosingCauseSurveyUnit(su, closingCause, cb) {
+  putSurveyUnitClosingCause(su, closingCause, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
     options.method = 'PUT';
@@ -86,6 +154,24 @@ class Service {
       });
   }
 
+  putSurveyUnitViewed(su, cb) {
+    const options = {};
+    Object.assign(options, this.makeOptions());
+    options.method = 'PUT';
+    fetch(`${baseUrlPearlJam}/api/survey-unit/${su}/viewed`, options)
+      .then((res) => cb(res))
+      .catch((e) => {
+        console.log(e);
+        cb();
+      });
+  }
+  // ------------------------- //
+  // Survey-Units service end //
+  // ------------------------- //
+
+  // -------------------------- //
+  // Preferences service begin //
+  // -------------------------- //
   putPreferences(preferences, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
@@ -95,7 +181,13 @@ class Service {
       .then((res) => cb(res))
       .catch(console.log);
   }
+  // ------------------------ //
+  // Preferences service end //
+  // ------------------------ //
 
+  // -------------------- //
+  // Users service begin //
+  // -------------------- //
   getUser(cb) {
     return new Promise((resolve) => {
       fetch(`${baseUrlPearlJam}/api/user`, this.makeOptions())
@@ -113,8 +205,14 @@ class Service {
         });
     });
   }
+  // ------------------ //
+  // Users service end //
+  // ------------------ //
 
-  getSurveys(cb) {
+  // ----------------------- //
+  // Campaigns service begin //
+  // ----------------------- //
+  getCampaigns(cb) {
     fetch(`${baseUrlPearlJam}/api/campaigns`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
@@ -126,81 +224,9 @@ class Service {
       });
   }
 
-  getInterviewersByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch(console.log);
-  }
-
-  getNotAttributedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((err) => {
-        cb({ count: null });
-        console.log(err);
-      });
-  }
-
-  getAbandonedByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/abandoned`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((err) => {
-        cb({ count: null });
-        console.log(err);
-      });
-  }
-
-  getStatesBySurveyId(surveyId, cb) {
-    fetch(`${baseUrlPearlJam}/api/survey-unit/${surveyId}/states`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
-      });
-  }
-
-  putSurveyUnitViewed(surveyId, cb) {
-    const options = {};
-    Object.assign(options, this.makeOptions());
-    options.method = 'PUT';
-    fetch(`${baseUrlPearlJam}/api/survey-unit/${surveyId}/viewed`, options)
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        cb();
-      });
-  }
-
-  getTotalDemByCampaign(campaignId, cb) {
-    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
-      });
-  }
-
-  getSurveyUnits(campaignId, state, cb) {
+  getCampaignsByInterviewer(idep, cb) {
     return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units?${state ? `state=${state}` : ''}`, this.makeOptions())
+      fetch(`${baseUrlPearlJam}/api/interviewer/${idep}/campaigns`, this.makeOptions())
         .then((res) => res.json())
         .then((data) => {
           if (cb) {
@@ -210,40 +236,23 @@ class Service {
         })
         .catch((e) => {
           console.log(e);
-          NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+          if (cb) {
+            cb([]);
+          }
+          resolve([]);
         });
     });
   }
+  // --------------------- //
+  // Campaigns service end //
+  // --------------------- //
 
-  getClosable(cb) {
-    fetch(`${baseUrlPearlJam}/api/survey-units/closable`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
-      });
-  }
-
-  getInterviewers(campaignId, cb) {
+  // -------------------------- //
+  // State counts service begin //
+  // -------------------------- //
+  getStateCount(campaignId, date, cb) {
     return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
-        .then((res) => res.json())
-        .then((data) => {
-          if (cb) {
-            cb(data);
-          }
-          resolve(data);
-        })
-        .catch(console.log);
-    });
-  }
-
-  getInterviewersStateCount(campaignId, idep, date, cb) {
-    return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.makeOptions())
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.makeOptions())
         .then((res) => res.json())
         .then((data) => {
           if (cb) {
@@ -253,50 +262,6 @@ class Service {
         })
         .catch((e) => {
           console.log(e);
-          if (cb) {
-            cb(null);
-          }
-          resolve(null);
-        });
-    });
-  }
-
-  getInterviewersContactOutcomes(campaignId, idep, date, cb) {
-    return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/contact-outcomes?date=${date}`, this.makeOptions())
-        .then((res) => res.json())
-        .then((data) => {
-          if (cb) {
-            cb(data);
-          }
-          resolve(data);
-        })
-        .catch((e) => {
-          console.log(e);
-          if (cb) {
-            cb(null);
-          }
-          resolve(null);
-        });
-    });
-  }
-
-  getContactOutcomesNotAttributed(campaignId, date, cb) {
-    return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed/contact-outcomes?date=${date}`, this.makeOptions())
-        .then((res) => res.json())
-        .then((data) => {
-          if (cb) {
-            cb(data);
-          }
-          resolve(data);
-        })
-        .catch((e) => {
-          console.log(e);
-          if (cb) {
-            cb(null);
-          }
-          resolve(null);
         });
     });
   }
@@ -321,9 +286,9 @@ class Service {
     });
   }
 
-  getStateCount(campaignId, date, cb) {
+  getStateCountByInterviewer(campaignId, idep, date, cb) {
     return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count?date=${date}`, this.makeOptions())
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/state-count?date=${date}`, this.makeOptions())
         .then((res) => res.json())
         .then((data) => {
           if (cb) {
@@ -333,22 +298,10 @@ class Service {
         })
         .catch((e) => {
           console.log(e);
-        });
-    });
-  }
-
-  getContactOutcomes(campaignId, date, cb) {
-    return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/contact-outcomes?date=${date}`, this.makeOptions())
-        .then((res) => res.json())
-        .then((data) => {
           if (cb) {
-            cb(data);
+            cb(null);
           }
-          resolve(data);
-        })
-        .catch((e) => {
-          console.log(e);
+          resolve(null);
         });
     });
   }
@@ -369,6 +322,80 @@ class Service {
     });
   }
 
+  getStateCountTotalByCampaign(campaignId, cb) {
+    fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/state-count`, this.makeOptions())
+      .then((res) => res.json())
+      .then((data) => {
+        cb(data);
+      })
+      .catch((e) => {
+        console.log(e);
+        NotificationManager.error(`${D.cannotRetreiveData} ${D.verifyInternetCo}`, D.error, 10000);
+      });
+  }
+  // ------------------------ //
+  // State count service end //
+  // ------------------------ //
+
+  // ------------------------------- //
+  // Contact outcomes service begin //
+  // ------------------------------- //
+  getContactOutcomes(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    });
+  }
+
+  getContactOutcomesNotAttributed(campaignId, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/not-attributed/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
+  }
+
+  getContactOutcomesByInterviewer(campaignId, idep, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/contact-outcomes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
+  }
+
   getContactOutcomesByCampaign(date, cb) {
     return new Promise((resolve) => {
       fetch(`${baseUrlPearlJam}/api/campaigns/survey-units/contact-outcomes?date=${date}`, this.makeOptions())
@@ -384,18 +411,45 @@ class Service {
         });
     });
   }
+  // ----------------------------- //
+  // Contact outcomes service end //
+  // ----------------------------- //
 
-  getStateCountByInterviewer(date, cb) {
-    fetch(`${baseUrlPearlJam}/api/interviewers/survey-units/state-count?date=${date}`, this.makeOptions())
+  // --------------------------- //
+  // Interviewers service begin //
+  // --------------------------- //
+  getInterviewers(cb) {
+    fetch(`${baseUrlPearlJam}/api/interviewers`, this.makeOptions())
       .then((res) => res.json())
       .then((data) => {
         cb(data);
       })
       .catch((e) => {
         console.log(e);
+        cb([]);
       });
   }
 
+  getInterviewersByCampaign(campaignId, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/interviewers`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch(console.log);
+    });
+  }
+  // ------------------------- //
+  // Interviewers service end //
+  // ------------------------- //
+
+  // ----------------------------- //
+  // Questionnaires service begin //
+  // ----------------------------- //
   getQuestionnaireId(campaignId, cb) {
     fetch(`${baseUrlQueen}/api/campaign/${campaignId}/questionnaire-id`, this.makeOptions())
       .then((res) => res.json())
@@ -407,7 +461,13 @@ class Service {
         cb();
       });
   }
+  // --------------------------- //
+  // Questionnaires service end //
+  // --------------------------- //
 
+  // ---------------------------- //
+  // Notifications service begin //
+  // ---------------------------- //
   postMessage(body, cb) {
     const options = {};
     Object.assign(options, this.makeOptions());
@@ -448,38 +508,9 @@ class Service {
         cb([]);
       });
   }
-
-  getCampaignsOfInterviewer(interviewerId, cb) {
-    return new Promise((resolve) => {
-      fetch(`${baseUrlPearlJam}/api/interviewer/${interviewerId}/campaigns`, this.makeOptions())
-        .then((res) => res.json())
-        .then((data) => {
-          if (cb) {
-            cb(data);
-          }
-          resolve(data);
-        })
-        .catch((e) => {
-          console.log(e);
-          if (cb) {
-            cb([]);
-          }
-          resolve([]);
-        });
-    });
-  }
-
-  getSiteInterviewers(cb) {
-    fetch(`${baseUrlPearlJam}/api/interviewers`, this.makeOptions())
-      .then((res) => res.json())
-      .then((data) => {
-        cb(data);
-      })
-      .catch((e) => {
-        console.log(e);
-        cb([]);
-      });
-  }
+  // -------------------------- //
+  // Notifications service end //
+  // -------------------------- //
 }
 
 export default Service;

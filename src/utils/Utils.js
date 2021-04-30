@@ -148,36 +148,71 @@ class Utils {
     }
   }
 
-  static getSortFunction(sortOn) {
-    if (['city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'label', 'id', 'survey', 'site', 'date', 'finalizationDate', 'state'].includes(sortOn)) {
-      return (a, b) => (a[sortOn] < b[sortOn] ? -1 : 1);
+  static getSortFunction(sortOn, desc, mainSort) {
+    let mult = 1;
+    if (desc) {
+      mult = -1;
+    }
+    let mainSortFunc;
+    if (mainSort) {
+      mainSortFunc = Utils.getSortFunction(mainSort);
+    }
+
+    const labelsSimpleSort = [
+      'city', 'departement', 'ssech', 'campaignLabel', 'interviewer', 'campaign',
+      'label', 'id', 'survey', 'site', 'date', 'finalizationDate', 'state',
+    ];
+    if (labelsSimpleSort.includes(sortOn)) {
+      return (a, b) => {
+        if (a[sortOn] < b[sortOn]) {
+          return -1 * mult;
+        }
+        if (a[sortOn] !== b[sortOn]) {
+          return 1 * mult;
+        }
+        return mainSort ? mainSortFunc(a, b) : 0;
+      };
     }
     if (sortOn === 'CPinterviewer') {
-      return (a, b) => (
-        (a.interviewerLastName + a.interviewerFirstName)
-        < (b.interviewerLastName + b.interviewerFirstName) ? -1 : 1
-      );
+      return (a, b) => {
+        const aString = (a.interviewerLastName + a.interviewerFirstName);
+        const bString = (b.interviewerLastName + b.interviewerFirstName);
+        if (aString < bString) {
+          return -1 * mult;
+        }
+        if (aString !== bString) {
+          return 1 * mult;
+        }
+        return mainSort ? mainSortFunc(a, b) : 0;
+      };
     }
-    if (sortOn === 'interviewer_terminated') {
-      return (a, b) => (
-        (a.interviewer.interviewerLastName + a.interviewer.interviewerFirstName)
-        < (b.interviewer.interviewerLastName + b.interviewer.interviewerFirstName) ? -1 : 1
-      );
+    if (['interviewer_terminated','interviewer_closable'].includes(sortOn)) {
+      return (a, b) => {
+        const aString = (a.interviewer.interviewerLastName + a.interviewer.interviewerFirstName);
+        const bString = (b.interviewer.interviewerLastName + b.interviewer.interviewerFirstName);
+        if (aString < bString) {
+          return -1 * mult;
+        }
+        if (aString !== bString) {
+          return 1 * mult;
+        }
+        return mainSort ? mainSortFunc(a, b) : 0;
+      };
     }
-    return (a, b) => a[sortOn] - b[sortOn];
+    return (a, b) => (a[sortOn] === b[sortOn] && mainSort
+      ? mainSortFunc(a, b)
+      : (a[sortOn] - b[sortOn]) * mult
+    );
   }
 
-  static sortData(data, sortOn, asc) {
+  static sortData(data, sortOn, asc, mainSortAttr) {
     const sortedData = [...data];
     const attrs = {
       CPue: 'surveyUnitCount',
       CPidep: 'id',
     };
     const sortBy = attrs[sortOn] || sortOn;
-    sortedData.sort(this.getSortFunction(sortBy));
-    if (sortOn && !asc) {
-      sortedData.reverse();
-    }
+    sortedData.sort(this.getSortFunction(sortBy, sortOn && !asc, mainSortAttr));
     return sortedData;
   }
 
@@ -277,21 +312,36 @@ class Utils {
     let sortedData = {};
     switch (view) {
       case 'mainScreen':
+        sortedData = this.sortData(data, sortOn, newOrder, 'label');
+        break;
       case 'listSU':
+        sortedData = this.sortData(data, sortOn, newOrder, 'id');
+        break;
       case 'terminated':
-        sortedData = this.sortData(data, sortOn, newOrder);
+        sortedData = this.sortData(data, sortOn, newOrder, 'campaignLabel');
         break;
       case 'campaignPortal':
         Object.assign(sortedData, data);
-        sortedData.interviewers = this.sortData(data.interviewers, sortOn, newOrder);
+        sortedData.interviewers = this.sortData(data.interviewers, sortOn, newOrder, 'CPinterviewer');
         break;
-      case 'monitoringTable':
+      case 'monitoringTable': {
         Object.assign(sortedData, data);
-        sortedData.linesDetails = this.sortData(data.linesDetails, sortOn, newOrder);
+        let mainAttr;
+        if (data.linesDetails.length > 0) {
+          if (data.linesDetails[0].site) {
+            mainAttr = 'site';
+          } else if (data.linesDetails[0].survey) {
+            mainAttr = 'survey';
+          } else {
+            mainAttr = 'CPinterviewer';
+          }
+        }
+        sortedData.linesDetails = this.sortData(data.linesDetails, sortOn, newOrder, mainAttr);
         break;
+      }
       case 'review':
         Object.assign(sortedData, data);
-        sortedData = this.sortData(data, sortOn, newOrder);
+        sortedData = this.sortData(data, sortOn, newOrder, 'interviewer');
         break;
       default:
         Object.assign(sortedData, data);

@@ -25,33 +25,33 @@ function CollectionTableDisplayLine({ data }) {
     : null;
   return (
     <tr>
-      <td>{interviewerName || survey || site}</td>
+      <td className="ColFirstCol">{interviewerName || survey || site}</td>
       <td className="ColumnSpacing" />
-      <td>
+      <td className="ColCollectionRate">
         {(collectionRate * 100).toFixed(1)}
         %
       </td>
-      <td>
+      <td className="ColWasteRate">
         {(wasteRate * 100).toFixed(1)}
         %
       </td>
-      <td>
+      <td className="ColOOSRate">
         {(outOfScopeRate * 100).toFixed(1)}
         %
       </td>
       <td className="ColumnSpacing" />
-      <td>{surveysAccepted}</td>
-      <td>{refusal}</td>
-      <td>{unreachable}</td>
-      <td>{otherWastes}</td>
-      <td>{outOfScope}</td>
-      <td>{totalProcessed}</td>
+      <td className="ColSurveyAcepted">{surveysAccepted}</td>
+      <td className="ColRefusal">{refusal}</td>
+      <td className="ColUnreachable">{unreachable}</td>
+      <td className="ColOtherWastes">{otherWastes}</td>
+      <td className="ColOOS">{outOfScope}</td>
+      <td className="ColTotalProcessed">{totalProcessed}</td>
       <td className="ColumnSpacing" />
-      <td>{absInterviewer}</td>
-      <td>{otherReason}</td>
-      <td>{totalClosed}</td>
+      <td className="ColAbsInterviewer">{absInterviewer}</td>
+      <td className="ColOtherReason">{otherReason}</td>
+      <td className="ColTotalClosed">{totalClosed}</td>
       <td className="ColumnSpacing" />
-      <td>{allocated}</td>
+      <td className="ColAllocated">{allocated}</td>
     </tr>
   );
 }

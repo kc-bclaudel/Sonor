@@ -2,6 +2,10 @@ import { version } from "../../package.json";
 import { Router } from "express";
 import facets from "./facets";
 
+const hashCode = function(s){
+  return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
+}
+
 export default ({ config, db }) => {
   let api = Router();
 
@@ -336,9 +340,14 @@ export default ({ config, db }) => {
 
   //TODO add comments 
   api.get("/campaign/:id/survey-units", (req, res) => {
+    let unicityString = req.params.id;
+    if(req.query.state){
+      unicityString += req.query.state;
+    }
+    const unicityCode = Math.abs(hashCode(unicityString));
     const mockResponse = [
       {
-        id: "1023",
+        id: "1023" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -362,7 +371,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "4811",
+        id: "4811" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
@@ -386,7 +395,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "1024",
+        id: "1024" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -410,10 +419,10 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "4812",
+        id: "4812" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
-        city: "BELFORT",
+        city: "BRIVE-LA-GAILLARDE",
         finalizationDate: 1603304314268,
         reading: true,
         viewed: false,
@@ -434,7 +443,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "1025",
+        id: "1025" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -458,7 +467,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "4813",
+        id: "4813" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
@@ -482,7 +491,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "1027",
+        id: "1027" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -506,7 +515,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "4815",
+        id: "4815" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
@@ -530,7 +539,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "1028",
+        id: "1028" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -554,7 +563,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "4816",
+        id: "4816" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
@@ -578,7 +587,7 @@ export default ({ config, db }) => {
         ]
       },
       {
-        id: "1029",
+        id: "1029" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -592,7 +601,7 @@ export default ({ config, db }) => {
         },
       },
       {
-        id: "4817",
+        id: "4817" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
@@ -606,7 +615,7 @@ export default ({ config, db }) => {
         },
       },
       {
-        id: "1030",
+        id: "1030" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -620,7 +629,7 @@ export default ({ config, db }) => {
         },
       },
       {
-        id: "4818",
+        id: "4818" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",
@@ -634,7 +643,7 @@ export default ({ config, db }) => {
         },
       },
       {
-        id: "1032",
+        id: "1032" + unicityCode,
         ssech: "hgSkR29",
         location: "95160",
         city: "MONTMORENCY",
@@ -648,7 +657,7 @@ export default ({ config, db }) => {
         },
       },
       {
-        id: "4819",
+        id: "4819" + unicityCode,
         ssech: "dlcB55jdf",
         location: "90000",
         city: "BELFORT",

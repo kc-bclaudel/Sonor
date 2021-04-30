@@ -1,0 +1,39 @@
+
+/* Column sizes */
+
+#MonitoringTable .ColFirstCol{
+  width: 26%;
+}
+#MonitoringTable .ColCompletionRate{
+  width: 7%;
+}
+#MonitoringTable .ColAllocated{
+  width: 7%;
+}
+#MonitoringTable .ColNotStarted{
+  width: 7%;
+}
+#MonitoringTable .ColOngoing{
+  width: 7%;
+}
+#MonitoringTable .ColWaitingForIntVal{
+  width: 7%;
+}
+#MonitoringTable .ColIntVal{
+  width: 7%;
+}
+#MonitoringTable .ColDemVal{
+  width: 7%;
+}
+#MonitoringTable .ColPreparingContact{
+  width: 7%;
+}
+#MonitoringTable .ColAtLeastOneContact{
+  width: 7%;
+}
+#MonitoringTable .ColAppointmentTaken{
+  width: 7%;
+}
+#MonitoringTable .ColInterviewStarted{
+  width: 7%;
+}

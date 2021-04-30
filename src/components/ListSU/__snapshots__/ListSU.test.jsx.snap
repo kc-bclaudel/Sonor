@@ -161,14 +161,16 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="ColCheckbox"
+                    >
                       <input
                         name="checkAll"
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       Identifier
                       <span
@@ -183,6 +185,7 @@ Object {
                       </span>
                     </th>
                     <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name"
                     >
                       Interviewer
@@ -198,7 +201,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColSsech"
                     >
                       Ssech
                       <span
@@ -213,7 +216,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColDepartement"
                     >
                       Department
                       <span
@@ -228,7 +231,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCity"
                     >
                       Town
                       <span
@@ -243,7 +246,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColState"
                     >
                       Provisional state
                       <span
@@ -262,7 +265,7 @@ Object {
                 <tbody>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="20"
@@ -270,26 +273,38 @@ Object {
                         value="20"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       20
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Lucas Margie
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       59
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Aulnoye-Aimeries
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="21"
@@ -297,26 +312,38 @@ Object {
                         value="21"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       21
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Campbell Carlton
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       38
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Vienne
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="22"
@@ -324,26 +351,38 @@ Object {
                         value="22"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       22
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Xern Fabrice
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="29"
@@ -351,26 +390,38 @@ Object {
                         value="29"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       29
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Delmare Mathilde
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       65
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Belfort
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="33"
@@ -378,26 +429,38 @@ Object {
                         value="33"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       33
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Antoine Tarje
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       75
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Paris
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="55"
@@ -405,26 +468,38 @@ Object {
                         value="55"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       55
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Bertrand Ulysse
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="23"
@@ -432,22 +507,34 @@ Object {
                         value="23"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       23
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Grant Melody
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       35
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Rennes
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                 </tbody>
               </table>
@@ -645,14 +732,16 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="ColCheckbox"
+                  >
                     <input
                       name="checkAll"
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     Identifier
                     <span
@@ -667,6 +756,7 @@ Object {
                     </span>
                   </th>
                   <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name"
                   >
                     Interviewer
@@ -682,7 +772,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColSsech"
                   >
                     Ssech
                     <span
@@ -697,7 +787,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColDepartement"
                   >
                     Department
                     <span
@@ -712,7 +802,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCity"
                   >
                     Town
                     <span
@@ -727,7 +817,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColState"
                   >
                     Provisional state
                     <span
@@ -746,7 +836,7 @@ Object {
               <tbody>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="20"
@@ -754,26 +844,38 @@ Object {
                       value="20"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     20
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Lucas Margie
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     59
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Aulnoye-Aimeries
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="21"
@@ -781,26 +883,38 @@ Object {
                       value="21"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     21
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Campbell Carlton
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     38
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Vienne
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="22"
@@ -808,26 +922,38 @@ Object {
                       value="22"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     22
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Xern Fabrice
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="29"
@@ -835,26 +961,38 @@ Object {
                       value="29"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     29
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Delmare Mathilde
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     65
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Belfort
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="33"
@@ -862,26 +1000,38 @@ Object {
                       value="33"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     33
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Antoine Tarje
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     75
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Paris
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="55"
@@ -889,26 +1039,38 @@ Object {
                       value="55"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     55
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Bertrand Ulysse
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="23"
@@ -916,22 +1078,34 @@ Object {
                       value="23"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     23
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Grant Melody
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     35
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Rennes
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
               </tbody>
             </table>
@@ -1186,14 +1360,16 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="ColCheckbox"
+                    >
                       <input
                         name="checkAll"
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       Identifier
                       <span
@@ -1208,6 +1384,7 @@ Object {
                       </span>
                     </th>
                     <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name"
                     >
                       Interviewer
@@ -1223,7 +1400,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColSsech"
                     >
                       Ssech
                       <span
@@ -1238,7 +1415,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColDepartement"
                     >
                       Department
                       <span
@@ -1253,7 +1430,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCity"
                     >
                       Town
                       <span
@@ -1268,7 +1445,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColState"
                     >
                       Provisional state
                       <span
@@ -1287,7 +1464,7 @@ Object {
                 <tbody>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="20"
@@ -1295,26 +1472,38 @@ Object {
                         value="20"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       20
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Lucas Margie
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       59
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Aulnoye-Aimeries
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="21"
@@ -1322,26 +1511,38 @@ Object {
                         value="21"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       21
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Campbell Carlton
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       38
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Vienne
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="22"
@@ -1349,26 +1550,38 @@ Object {
                         value="22"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       22
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Xern Fabrice
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="29"
@@ -1376,26 +1589,38 @@ Object {
                         value="29"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       29
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Delmare Mathilde
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       65
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Belfort
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="33"
@@ -1403,26 +1628,38 @@ Object {
                         value="33"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       33
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Antoine Tarje
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       75
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Paris
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="55"
@@ -1430,26 +1667,38 @@ Object {
                         value="55"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       55
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Bertrand Ulysse
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="23"
@@ -1457,22 +1706,34 @@ Object {
                         value="23"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       23
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Grant Melody
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       35
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Rennes
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                 </tbody>
               </table>
@@ -1670,14 +1931,16 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="ColCheckbox"
+                  >
                     <input
                       name="checkAll"
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     Identifier
                     <span
@@ -1692,6 +1955,7 @@ Object {
                     </span>
                   </th>
                   <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name"
                   >
                     Interviewer
@@ -1707,7 +1971,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColSsech"
                   >
                     Ssech
                     <span
@@ -1722,7 +1986,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColDepartement"
                   >
                     Department
                     <span
@@ -1737,7 +2001,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCity"
                   >
                     Town
                     <span
@@ -1752,7 +2016,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColState"
                   >
                     Provisional state
                     <span
@@ -1771,7 +2035,7 @@ Object {
               <tbody>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="20"
@@ -1779,26 +2043,38 @@ Object {
                       value="20"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     20
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Lucas Margie
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     59
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Aulnoye-Aimeries
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="21"
@@ -1806,26 +2082,38 @@ Object {
                       value="21"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     21
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Campbell Carlton
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     38
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Vienne
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="22"
@@ -1833,26 +2121,38 @@ Object {
                       value="22"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     22
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Xern Fabrice
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="29"
@@ -1860,26 +2160,38 @@ Object {
                       value="29"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     29
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Delmare Mathilde
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     65
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Belfort
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="33"
@@ -1887,26 +2199,38 @@ Object {
                       value="33"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     33
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Antoine Tarje
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     75
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Paris
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="55"
@@ -1914,26 +2238,38 @@ Object {
                       value="55"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     55
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Bertrand Ulysse
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="23"
@@ -1941,22 +2277,34 @@ Object {
                       value="23"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     23
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Grant Melody
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     35
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Rennes
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
               </tbody>
             </table>
@@ -2211,14 +2559,16 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="ColCheckbox"
+                    >
                       <input
                         name="checkAll"
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       Identifier
                       <span
@@ -2233,6 +2583,7 @@ Object {
                       </span>
                     </th>
                     <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name"
                     >
                       Interviewer
@@ -2248,7 +2599,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColSsech"
                     >
                       Ssech
                       <span
@@ -2263,7 +2614,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColDepartement"
                     >
                       Department
                       <span
@@ -2278,7 +2629,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCity"
                     >
                       Town
                       <span
@@ -2293,7 +2644,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColState"
                     >
                       Provisional state
                       <span
@@ -2312,7 +2663,7 @@ Object {
                 <tbody>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="20"
@@ -2320,26 +2671,38 @@ Object {
                         value="20"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       20
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Lucas Margie
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       59
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Aulnoye-Aimeries
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="21"
@@ -2347,26 +2710,38 @@ Object {
                         value="21"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       21
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Campbell Carlton
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       38
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Vienne
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="22"
@@ -2374,26 +2749,38 @@ Object {
                         value="22"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       22
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Xern Fabrice
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="29"
@@ -2401,26 +2788,38 @@ Object {
                         value="29"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       29
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Delmare Mathilde
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       65
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Belfort
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="33"
@@ -2428,26 +2827,38 @@ Object {
                         value="33"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       33
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Antoine Tarje
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       75
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Paris
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="55"
@@ -2455,26 +2866,38 @@ Object {
                         value="55"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       55
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Bertrand Ulysse
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="23"
@@ -2482,22 +2905,34 @@ Object {
                         value="23"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       23
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Grant Melody
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       35
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Rennes
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                 </tbody>
               </table>
@@ -2695,14 +3130,16 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="ColCheckbox"
+                  >
                     <input
                       name="checkAll"
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     Identifier
                     <span
@@ -2717,6 +3154,7 @@ Object {
                     </span>
                   </th>
                   <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name"
                   >
                     Interviewer
@@ -2732,7 +3170,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColSsech"
                   >
                     Ssech
                     <span
@@ -2747,7 +3185,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColDepartement"
                   >
                     Department
                     <span
@@ -2762,7 +3200,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCity"
                   >
                     Town
                     <span
@@ -2777,7 +3215,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColState"
                   >
                     Provisional state
                     <span
@@ -2796,7 +3234,7 @@ Object {
               <tbody>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="20"
@@ -2804,26 +3242,38 @@ Object {
                       value="20"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     20
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Lucas Margie
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     59
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Aulnoye-Aimeries
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="21"
@@ -2831,26 +3281,38 @@ Object {
                       value="21"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     21
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Campbell Carlton
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     38
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Vienne
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="22"
@@ -2858,26 +3320,38 @@ Object {
                       value="22"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     22
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Xern Fabrice
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="29"
@@ -2885,26 +3359,38 @@ Object {
                       value="29"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     29
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Delmare Mathilde
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     65
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Belfort
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="33"
@@ -2912,26 +3398,38 @@ Object {
                       value="33"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     33
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Antoine Tarje
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     75
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Paris
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="55"
@@ -2939,26 +3437,38 @@ Object {
                       value="55"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     55
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Bertrand Ulysse
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="23"
@@ -2966,22 +3476,34 @@ Object {
                       value="23"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     23
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Grant Melody
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     35
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Rennes
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
               </tbody>
             </table>
@@ -3146,10 +3668,17 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             Survey units allocated to the organizational unit: 
             7
+            <button
+              class="ExportButton btn btn-primary"
+              data-testid="export-button"
+              type="button"
+            >
+              Export
+            </button>
           </div>
           <div>
             <div
@@ -3229,7 +3758,17 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="ColCheckbox"
+                    >
+                      <input
+                        name="checkAll"
+                        type="checkbox"
+                      />
+                    </th>
+                    <th
+                      class="Clickable ColId"
+                    >
                       Identifier
                       <span
                         class="sortIcon"
@@ -3242,7 +3781,25 @@ Object {
                         />
                       </span>
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColInterviewer"
+                      data-testid="TableHeader_interviewer_name"
+                    >
+                      Interviewer
+                      <span
+                        class="sortIcon"
+                      >
+                        <i
+                          class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                        />
+                        <i
+                          class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                        />
+                      </span>
+                    </th>
+                    <th
+                      class="Clickable ColSsech"
+                    >
                       Ssech
                       <span
                         class="sortIcon"
@@ -3255,7 +3812,9 @@ Object {
                         />
                       </span>
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColDepartement"
+                    >
                       Department
                       <span
                         class="sortIcon"
@@ -3268,7 +3827,9 @@ Object {
                         />
                       </span>
                     </th>
-                    <th>
+                    <th
+                      class="Clickable ColCity"
+                    >
                       Town
                       <span
                         class="sortIcon"
@@ -3282,9 +3843,9 @@ Object {
                       </span>
                     </th>
                     <th
-                      data-testid="TableHeader_interviewer_name"
+                      class="Clickable ColState"
                     >
-                      Interviewer
+                      Provisional state
                       <span
                         class="sortIcon"
                       >
@@ -3300,123 +3861,277 @@ Object {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
+                    <td
+                      class="Clickable ColCheckbox"
+                    >
+                      <input
+                        name="20"
+                        type="checkbox"
+                        value="20"
+                      />
+                    </td>
+                    <td
+                      class="ColId"
+                    >
                       20
                     </td>
-                    <td>
-                      1
-                    </td>
-                    <td>
-                      59
-                    </td>
-                    <td>
-                      Aulnoye-Aimeries
-                    </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Lucas Margie
                     </td>
+                    <td
+                      class="ColSsech"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="ColDepartement"
+                    >
+                      59
+                    </td>
+                    <td
+                      class="ColCity"
+                    >
+                      Aulnoye-Aimeries
+                    </td>
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
-                    <td>
+                    <td
+                      class="Clickable ColCheckbox"
+                    >
+                      <input
+                        name="21"
+                        type="checkbox"
+                        value="21"
+                      />
+                    </td>
+                    <td
+                      class="ColId"
+                    >
                       21
                     </td>
-                    <td>
-                      1
-                    </td>
-                    <td>
-                      38
-                    </td>
-                    <td>
-                      Vienne
-                    </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Campbell Carlton
                     </td>
+                    <td
+                      class="ColSsech"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="ColDepartement"
+                    >
+                      38
+                    </td>
+                    <td
+                      class="ColCity"
+                    >
+                      Vienne
+                    </td>
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
-                    <td>
+                    <td
+                      class="Clickable ColCheckbox"
+                    >
+                      <input
+                        name="22"
+                        type="checkbox"
+                        value="22"
+                      />
+                    </td>
+                    <td
+                      class="ColId"
+                    >
                       22
                     </td>
-                    <td>
-                      2
-                    </td>
-                    <td>
-                      62
-                    </td>
-                    <td>
-                      Arras
-                    </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Xern Fabrice
                     </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      29
-                    </td>
-                    <td>
-                      1
-                    </td>
-                    <td>
-                      65
-                    </td>
-                    <td>
-                      Belfort
-                    </td>
-                    <td>
-                      Delmare Mathilde
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      33
-                    </td>
-                    <td>
-                      1
-                    </td>
-                    <td>
-                      75
-                    </td>
-                    <td>
-                      Paris
-                    </td>
-                    <td>
-                      Antoine Tarje
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      55
-                    </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td>
-                      Bertrand Ulysse
-                    </td>
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
-                    <td>
-                      23
+                    <td
+                      class="Clickable ColCheckbox"
+                    >
+                      <input
+                        name="29"
+                        type="checkbox"
+                        value="29"
+                      />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
+                      29
+                    </td>
+                    <td
+                      class="ColInterviewer"
+                    >
+                      Delmare Mathilde
+                    </td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
-                      35
+                    <td
+                      class="ColDepartement"
+                    >
+                      65
                     </td>
-                    <td>
-                      Rennes
+                    <td
+                      class="ColCity"
+                    >
+                      Belfort
                     </td>
-                    <td>
+                    <td
+                      class="ColState"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable ColCheckbox"
+                    >
+                      <input
+                        name="33"
+                        type="checkbox"
+                        value="33"
+                      />
+                    </td>
+                    <td
+                      class="ColId"
+                    >
+                      33
+                    </td>
+                    <td
+                      class="ColInterviewer"
+                    >
+                      Antoine Tarje
+                    </td>
+                    <td
+                      class="ColSsech"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="ColDepartement"
+                    >
+                      75
+                    </td>
+                    <td
+                      class="ColCity"
+                    >
+                      Paris
+                    </td>
+                    <td
+                      class="ColState"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable ColCheckbox"
+                    >
+                      <input
+                        name="55"
+                        type="checkbox"
+                        value="55"
+                      />
+                    </td>
+                    <td
+                      class="ColId"
+                    >
+                      55
+                    </td>
+                    <td
+                      class="ColInterviewer"
+                    >
+                      Bertrand Ulysse
+                    </td>
+                    <td
+                      class="ColSsech"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="ColDepartement"
+                    >
+                      62
+                    </td>
+                    <td
+                      class="ColCity"
+                    >
+                      Arras
+                    </td>
+                    <td
+                      class="ColState"
+                    />
+                  </tr>
+                  <tr>
+                    <td
+                      class="Clickable ColCheckbox"
+                    >
+                      <input
+                        name="23"
+                        type="checkbox"
+                        value="23"
+                      />
+                    </td>
+                    <td
+                      class="ColId"
+                    >
+                      23
+                    </td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Grant Melody
                     </td>
+                    <td
+                      class="ColSsech"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="ColDepartement"
+                    >
+                      35
+                    </td>
+                    <td
+                      class="ColCity"
+                    >
+                      Rennes
+                    </td>
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                 </tbody>
               </table>
@@ -3424,13 +4139,6 @@ Object {
             <div
               class="tableOptionsWrapper"
             >
-              <button
-                class="btn btn-primary"
-                data-testid="export-button"
-                type="button"
-              >
-                Export
-              </button>
               <ul
                 class="paginationNav pagination pagination-sm"
                 data-testid="pagination-nav"
@@ -3451,13 +4159,21 @@ Object {
                 </li>
               </ul>
             </div>
+            <button
+              class="btn btn-primary"
+              data-testid="validate-su"
+              disabled=""
+              type="button"
+            >
+              Change the state
+            </button>
           </div>
         </div>
       </div>
     </div>
     <a
       download="National_organizational_unit_Everyday_life_and_health_survey_2021_UE_confiees_8202020.csv"
-      href="data:text/csv;charset=utf-8,Identifier;Ssech;Department;Town;Interviewer;Idep%0A20;1;59;Aulnoye-Aimeries;Lucas%20Margie;INTW1%0A21;1;38;Vienne;Campbell%20Carlton;INTW2%0A22;2;62;Arras;Xern%20Fabrice;INTW4%0A29;1;65;Belfort;Delmare%20Mathilde;INTW12%0A33;1;75;Paris;Antoine%20Tarje;INTW14%0A55;2;62;Arras;Bertrand%20Ulysse;INTW4%0A23;1;35;Rennes;Grant%20Melody;INTW4"
+      href="data:text/csv;charset=utf-8,%EF%BB%BFIdentifier;Interviewer;Idep;Ssech;Department;Town;Provisional%20state%0A20;Lucas%20Margie;INTW1;1;59;Aulnoye-Aimeries;%0A21;Campbell%20Carlton;INTW2;1;38;Vienne;%0A22;Xern%20Fabrice;INTW4;2;62;Arras;%0A29;Delmare%20Mathilde;INTW12;1;65;Belfort;%0A33;Antoine%20Tarje;INTW14;1;75;Paris;%0A55;Bertrand%20Ulysse;INTW4;2;62;Arras;%0A23;Grant%20Melody;INTW4;1;35;Rennes;"
     />
   </body>,
   "container": <div>
@@ -3527,10 +4243,17 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           Survey units allocated to the organizational unit: 
           7
+          <button
+            class="ExportButton btn btn-primary"
+            data-testid="export-button"
+            type="button"
+          >
+            Export
+          </button>
         </div>
         <div>
           <div
@@ -3610,7 +4333,17 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="ColCheckbox"
+                  >
+                    <input
+                      name="checkAll"
+                      type="checkbox"
+                    />
+                  </th>
+                  <th
+                    class="Clickable ColId"
+                  >
                     Identifier
                     <span
                       class="sortIcon"
@@ -3623,7 +4356,25 @@ Object {
                       />
                     </span>
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColInterviewer"
+                    data-testid="TableHeader_interviewer_name"
+                  >
+                    Interviewer
+                    <span
+                      class="sortIcon"
+                    >
+                      <i
+                        class="fa fa-fw fa-caret-down sortIconDown iconInactive"
+                      />
+                      <i
+                        class="fa fa-fw fa-caret-up sortIconUp iconInactive"
+                      />
+                    </span>
+                  </th>
+                  <th
+                    class="Clickable ColSsech"
+                  >
                     Ssech
                     <span
                       class="sortIcon"
@@ -3636,7 +4387,9 @@ Object {
                       />
                     </span>
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColDepartement"
+                  >
                     Department
                     <span
                       class="sortIcon"
@@ -3649,7 +4402,9 @@ Object {
                       />
                     </span>
                   </th>
-                  <th>
+                  <th
+                    class="Clickable ColCity"
+                  >
                     Town
                     <span
                       class="sortIcon"
@@ -3663,9 +4418,9 @@ Object {
                     </span>
                   </th>
                   <th
-                    data-testid="TableHeader_interviewer_name"
+                    class="Clickable ColState"
                   >
-                    Interviewer
+                    Provisional state
                     <span
                       class="sortIcon"
                     >
@@ -3681,123 +4436,277 @@ Object {
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <td
+                    class="Clickable ColCheckbox"
+                  >
+                    <input
+                      name="20"
+                      type="checkbox"
+                      value="20"
+                    />
+                  </td>
+                  <td
+                    class="ColId"
+                  >
                     20
                   </td>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    59
-                  </td>
-                  <td>
-                    Aulnoye-Aimeries
-                  </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Lucas Margie
                   </td>
+                  <td
+                    class="ColSsech"
+                  >
+                    1
+                  </td>
+                  <td
+                    class="ColDepartement"
+                  >
+                    59
+                  </td>
+                  <td
+                    class="ColCity"
+                  >
+                    Aulnoye-Aimeries
+                  </td>
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
-                  <td>
+                  <td
+                    class="Clickable ColCheckbox"
+                  >
+                    <input
+                      name="21"
+                      type="checkbox"
+                      value="21"
+                    />
+                  </td>
+                  <td
+                    class="ColId"
+                  >
                     21
                   </td>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    38
-                  </td>
-                  <td>
-                    Vienne
-                  </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Campbell Carlton
                   </td>
+                  <td
+                    class="ColSsech"
+                  >
+                    1
+                  </td>
+                  <td
+                    class="ColDepartement"
+                  >
+                    38
+                  </td>
+                  <td
+                    class="ColCity"
+                  >
+                    Vienne
+                  </td>
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
-                  <td>
+                  <td
+                    class="Clickable ColCheckbox"
+                  >
+                    <input
+                      name="22"
+                      type="checkbox"
+                      value="22"
+                    />
+                  </td>
+                  <td
+                    class="ColId"
+                  >
                     22
                   </td>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    62
-                  </td>
-                  <td>
-                    Arras
-                  </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Xern Fabrice
                   </td>
-                </tr>
-                <tr>
-                  <td>
-                    29
-                  </td>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    65
-                  </td>
-                  <td>
-                    Belfort
-                  </td>
-                  <td>
-                    Delmare Mathilde
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    33
-                  </td>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    75
-                  </td>
-                  <td>
-                    Paris
-                  </td>
-                  <td>
-                    Antoine Tarje
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    55
-                  </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td>
-                    Bertrand Ulysse
-                  </td>
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
-                  <td>
-                    23
+                  <td
+                    class="Clickable ColCheckbox"
+                  >
+                    <input
+                      name="29"
+                      type="checkbox"
+                      value="29"
+                    />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
+                    29
+                  </td>
+                  <td
+                    class="ColInterviewer"
+                  >
+                    Delmare Mathilde
+                  </td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
-                    35
+                  <td
+                    class="ColDepartement"
+                  >
+                    65
                   </td>
-                  <td>
-                    Rennes
+                  <td
+                    class="ColCity"
+                  >
+                    Belfort
                   </td>
-                  <td>
+                  <td
+                    class="ColState"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    class="Clickable ColCheckbox"
+                  >
+                    <input
+                      name="33"
+                      type="checkbox"
+                      value="33"
+                    />
+                  </td>
+                  <td
+                    class="ColId"
+                  >
+                    33
+                  </td>
+                  <td
+                    class="ColInterviewer"
+                  >
+                    Antoine Tarje
+                  </td>
+                  <td
+                    class="ColSsech"
+                  >
+                    1
+                  </td>
+                  <td
+                    class="ColDepartement"
+                  >
+                    75
+                  </td>
+                  <td
+                    class="ColCity"
+                  >
+                    Paris
+                  </td>
+                  <td
+                    class="ColState"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    class="Clickable ColCheckbox"
+                  >
+                    <input
+                      name="55"
+                      type="checkbox"
+                      value="55"
+                    />
+                  </td>
+                  <td
+                    class="ColId"
+                  >
+                    55
+                  </td>
+                  <td
+                    class="ColInterviewer"
+                  >
+                    Bertrand Ulysse
+                  </td>
+                  <td
+                    class="ColSsech"
+                  >
+                    2
+                  </td>
+                  <td
+                    class="ColDepartement"
+                  >
+                    62
+                  </td>
+                  <td
+                    class="ColCity"
+                  >
+                    Arras
+                  </td>
+                  <td
+                    class="ColState"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    class="Clickable ColCheckbox"
+                  >
+                    <input
+                      name="23"
+                      type="checkbox"
+                      value="23"
+                    />
+                  </td>
+                  <td
+                    class="ColId"
+                  >
+                    23
+                  </td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Grant Melody
                   </td>
+                  <td
+                    class="ColSsech"
+                  >
+                    1
+                  </td>
+                  <td
+                    class="ColDepartement"
+                  >
+                    35
+                  </td>
+                  <td
+                    class="ColCity"
+                  >
+                    Rennes
+                  </td>
+                  <td
+                    class="ColState"
+                  />
                 </tr>
               </tbody>
             </table>
@@ -3805,13 +4714,6 @@ Object {
           <div
             class="tableOptionsWrapper"
           >
-            <button
-              class="btn btn-primary"
-              data-testid="export-button"
-              type="button"
-            >
-              Export
-            </button>
             <ul
               class="paginationNav pagination pagination-sm"
               data-testid="pagination-nav"
@@ -3832,6 +4734,14 @@ Object {
               </li>
             </ul>
           </div>
+          <button
+            class="btn btn-primary"
+            data-testid="validate-su"
+            disabled=""
+            type="button"
+          >
+            Change the state
+          </button>
         </div>
       </div>
     </div>
@@ -4059,14 +4969,16 @@ Object {
               >
                 <thead>
                   <tr>
-                    <th>
+                    <th
+                      class="ColCheckbox"
+                    >
                       <input
                         name="checkAll"
                         type="checkbox"
                       />
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColId"
                     >
                       Identifier
                       <span
@@ -4081,6 +4993,7 @@ Object {
                       </span>
                     </th>
                     <th
+                      class="Clickable ColInterviewer"
                       data-testid="TableHeader_interviewer_name"
                     >
                       Interviewer
@@ -4096,7 +5009,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColSsech"
                     >
                       Ssech
                       <span
@@ -4111,7 +5024,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColDepartement"
                     >
                       Department
                       <span
@@ -4126,7 +5039,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColCity"
                     >
                       Town
                       <span
@@ -4141,7 +5054,7 @@ Object {
                       </span>
                     </th>
                     <th
-                      class="Clickable"
+                      class="Clickable ColState"
                     >
                       Provisional state
                       <span
@@ -4160,7 +5073,7 @@ Object {
                 <tbody>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="33"
@@ -4168,26 +5081,38 @@ Object {
                         value="33"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       33
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Antoine Tarje
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       75
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Paris
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="55"
@@ -4195,26 +5120,38 @@ Object {
                         value="55"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       55
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Bertrand Ulysse
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="21"
@@ -4222,26 +5159,38 @@ Object {
                         value="21"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       21
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Campbell Carlton
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       38
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Vienne
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="29"
@@ -4249,26 +5198,38 @@ Object {
                         value="29"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       29
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Delmare Mathilde
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       65
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Belfort
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="23"
@@ -4276,26 +5237,38 @@ Object {
                         value="23"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       23
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Grant Melody
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       35
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Rennes
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="20"
@@ -4303,26 +5276,38 @@ Object {
                         value="20"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       20
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Lucas Margie
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       1
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       59
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Aulnoye-Aimeries
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                   <tr>
                     <td
-                      class="Clickable"
+                      class="Clickable ColCheckbox"
                     >
                       <input
                         name="22"
@@ -4330,22 +5315,34 @@ Object {
                         value="22"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="ColId"
+                    >
                       22
                     </td>
-                    <td>
+                    <td
+                      class="ColInterviewer"
+                    >
                       Xern Fabrice
                     </td>
-                    <td>
+                    <td
+                      class="ColSsech"
+                    >
                       2
                     </td>
-                    <td>
+                    <td
+                      class="ColDepartement"
+                    >
                       62
                     </td>
-                    <td>
+                    <td
+                      class="ColCity"
+                    >
                       Arras
                     </td>
-                    <td />
+                    <td
+                      class="ColState"
+                    />
                   </tr>
                 </tbody>
               </table>
@@ -4543,14 +5540,16 @@ Object {
             >
               <thead>
                 <tr>
-                  <th>
+                  <th
+                    class="ColCheckbox"
+                  >
                     <input
                       name="checkAll"
                       type="checkbox"
                     />
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColId"
                   >
                     Identifier
                     <span
@@ -4565,6 +5564,7 @@ Object {
                     </span>
                   </th>
                   <th
+                    class="Clickable ColInterviewer"
                     data-testid="TableHeader_interviewer_name"
                   >
                     Interviewer
@@ -4580,7 +5580,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColSsech"
                   >
                     Ssech
                     <span
@@ -4595,7 +5595,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColDepartement"
                   >
                     Department
                     <span
@@ -4610,7 +5610,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColCity"
                   >
                     Town
                     <span
@@ -4625,7 +5625,7 @@ Object {
                     </span>
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColState"
                   >
                     Provisional state
                     <span
@@ -4644,7 +5644,7 @@ Object {
               <tbody>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="33"
@@ -4652,26 +5652,38 @@ Object {
                       value="33"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     33
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Antoine Tarje
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     75
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Paris
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="55"
@@ -4679,26 +5691,38 @@ Object {
                       value="55"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     55
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Bertrand Ulysse
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="21"
@@ -4706,26 +5730,38 @@ Object {
                       value="21"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     21
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Campbell Carlton
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     38
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Vienne
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="29"
@@ -4733,26 +5769,38 @@ Object {
                       value="29"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     29
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Delmare Mathilde
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     65
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Belfort
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="23"
@@ -4760,26 +5808,38 @@ Object {
                       value="23"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     23
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Grant Melody
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     35
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Rennes
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="20"
@@ -4787,26 +5847,38 @@ Object {
                       value="20"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     20
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Lucas Margie
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     1
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     59
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Aulnoye-Aimeries
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
                 <tr>
                   <td
-                    class="Clickable"
+                    class="Clickable ColCheckbox"
                   >
                     <input
                       name="22"
@@ -4814,22 +5886,34 @@ Object {
                       value="22"
                     />
                   </td>
-                  <td>
+                  <td
+                    class="ColId"
+                  >
                     22
                   </td>
-                  <td>
+                  <td
+                    class="ColInterviewer"
+                  >
                     Xern Fabrice
                   </td>
-                  <td>
+                  <td
+                    class="ColSsech"
+                  >
                     2
                   </td>
-                  <td>
+                  <td
+                    class="ColDepartement"
+                  >
                     62
                   </td>
-                  <td>
+                  <td
+                    class="ColCity"
+                  >
                     Arras
                   </td>
-                  <td />
+                  <td
+                    class="ColState"
+                  />
                 </tr>
               </tbody>
             </table>

@@ -13,6 +13,7 @@ import SearchField from '../SearchField/SearchField';
 import SortIcon from '../SortIcon/SortIcon';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
+import './Terminated.css';
 
 class TerminatedTable extends React.Component {
   constructor(props) {
@@ -95,12 +96,12 @@ class TerminatedTable extends React.Component {
   surveyListLine(data, survey, handleShow) {
     return (
       <tr key={data.id}>
-        <td>{survey.label}</td>
-        <td data-testid="campaign-label">{data.id}</td>
-        <td>{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
-        <td>{`${Utils.convertToDateString(data.finalizationDate)} ${Utils.convertMsToHoursMinutes(data.finalizationDate)}`}</td>
-        <td>{data.reading ? D.yes : D.no}</td>
-        <td>
+        <td className="ColCampaign">{survey.label}</td>
+        <td className="ColId" data-testid="campaign-label">{data.id}</td>
+        <td className="ColInterviewer">{`${data.interviewer.interviewerLastName} ${data.interviewer.interviewerFirstName}`}</td>
+        <td className="ColFinalizationDate">{`${Utils.convertToDateString(data.finalizationDate)} ${Utils.convertMsToHoursMinutes(data.finalizationDate)}`}</td>
+        <td className="ColReading">{data.reading ? D.yes : D.no}</td>
+        <td className="ColAction">
           <OverlayTrigger
             placement="top"
             overlay={(
@@ -159,7 +160,7 @@ class TerminatedTable extends React.Component {
     const handleShowComment = (id) => { this.handleShowComment(id); };
     function handleSortFunct(property) { return () => { handleSort(property); }; }
     return (
-      <div>
+      <>
         <Row>
           <Col xs="6">
             <PaginationNav.SizeSelector
@@ -182,6 +183,7 @@ class TerminatedTable extends React.Component {
                   id="stateHistoryHour"
                   rowSpan="2"
                   onClick={handleSortFunct('campaignLabel')}
+                  className="Clickable ColCampaign"
                 >
                   <SortIcon val="campaignLabel" sort={sort} />
                   {D.survey}
@@ -191,7 +193,7 @@ class TerminatedTable extends React.Component {
                   data-testid="TableHeader_id_terminated"
                   rowSpan="2"
                   onClick={handleSortFunct('id')}
-                  className="Clickable"
+                  className="Clickable ColId"
                 >
                   <SortIcon val="id" sort={sort} />
                   {D.identifier}
@@ -200,7 +202,7 @@ class TerminatedTable extends React.Component {
                   id="stateHistoryState"
                   rowSpan="2"
                   onClick={handleSortFunct('interviewer_terminated')}
-                  className="Clickable"
+                  className="Clickable ColInterviewer"
                 >
                   <SortIcon val="interviewer_terminated" sort={sort} />
                   {D.interviewer}
@@ -208,7 +210,7 @@ class TerminatedTable extends React.Component {
                 <th
                   rowSpan="2"
                   onClick={handleSortFunct('finalizationDate')}
-                  className="Clickable"
+                  className="Clickable ColFinalizationDate"
                 >
                   <SortIcon val="finalizationDate" sort={sort} />
                   {D.finalizedDate}
@@ -216,12 +218,12 @@ class TerminatedTable extends React.Component {
                 <th
                   rowSpan="2"
                   onClick={handleSortFunct('reading')}
-                  className="Clickable"
+                  className="Clickable ColReading"
                 >
                   <SortIcon val="reading" sort={sort} />
                   {D.reading}
                 </th>
-                <th rowSpan="2">
+                <th rowSpan="2" className="ColAction">
                   {D.listSuActions}
                 </th>
               </tr>
@@ -289,7 +291,7 @@ class TerminatedTable extends React.Component {
           stateId,
           (() => this.hideStateHistoryTable()), (() => this.getMaxWidth()),
         )}
-      </div>
+      </>
     );
   }
 }

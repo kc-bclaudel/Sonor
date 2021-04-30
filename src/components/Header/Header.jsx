@@ -130,6 +130,7 @@ function Header({
                 <Button
                   className={`HeaderButton HeaderFocusableButton dropdown-toggle ${pathname.includes('/listSU/') || pathname.includes('/portal/') ? ' ButtonActive' : ''}`}
                   data-toggle="dropdown"
+                  data-testid="useful-infos-button"
                   onClick={() => { setShowUsefulInfosDropdown(true); }}
                 >
                   {D.usefulInformations}
@@ -147,7 +148,7 @@ function Header({
               </li>
             </div>
           </Col>
-          <Col md="auto">
+          <Col>
             <UserZone user={user} date={new Date()} showPreferences={showPreferences} />
           </Col>
         </Row>

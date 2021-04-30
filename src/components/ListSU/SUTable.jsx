@@ -14,21 +14,21 @@ import D from '../../i18n';
 function makeTableForExport(data) {
   const header = [[
     D.identifier,
+    D.interviewer,
+    D.idep,
     D.ssech,
     D.department,
     D.town,
-    D.interviewer,
-    D.idep,
     D.state,
   ]];
 
   return header.concat(data.map((line) => ([
     line.id,
+    line.interviewer,
+    line.idep,
     line.ssech,
     line.departement.substring(0, 2),
     line.city,
-    line.interviewer,
-    line.idep,
     line.state,
   ])));
 }
@@ -109,7 +109,7 @@ class SUTable extends React.Component {
     const fileLabel = `${site}_${survey.label}_UE_confiees`;
     const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data);
-    const csvContent = `data:text/csv;charset=utf-8,${table.map((e) => e.join(';')).join('\n')}`;
+    const csvContent = `data:text/csv;charset=utf-8,\ufeff${table.map((e) => e.join(';')).join('\n')}`;
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
@@ -182,30 +182,34 @@ class SUTable extends React.Component {
                 <Table id="SUTable" className="CustomTable" bordered striped hover responsive size="sm">
                   <thead>
                     <tr>
-                      <th>
+                      <th className="ColCheckbox">
                         <input type="checkbox" name="checkAll" checked={checkAll} onChange={(e) => this.handleCheckAll(e)} />
                       </th>
-                      <th onClick={handleSortFunct('id')} className="Clickable">
+                      <th onClick={handleSortFunct('id')} className="Clickable ColId">
                         {D.identifier}
                         <SortIcon val="id" sort={sort} />
                       </th>
-                      <th data-testid="TableHeader_interviewer_name" onClick={handleSortFunct('interviewer')}>
+                      <th
+                        data-testid="TableHeader_interviewer_name"
+                        onClick={handleSortFunct('interviewer')}
+                        className="Clickable ColInterviewer"
+                      >
                         {D.interviewer}
                         <SortIcon val="interviewer" sort={sort} />
                       </th>
-                      <th onClick={handleSortFunct('ssech')} className="Clickable">
+                      <th onClick={handleSortFunct('ssech')} className="Clickable ColSsech">
                         {D.ssech}
                         <SortIcon val="ssech" sort={sort} />
                       </th>
-                      <th onClick={handleSortFunct('departement')} className="Clickable">
+                      <th onClick={handleSortFunct('departement')} className="Clickable ColDepartement">
                         {D.department}
                         <SortIcon val="departement" sort={sort} />
                       </th>
-                      <th onClick={handleSortFunct('city')} className="Clickable">
+                      <th onClick={handleSortFunct('city')} className="Clickable ColCity">
                         {D.town}
                         <SortIcon val="city" sort={sort} />
                       </th>
-                      <th onClick={handleSortFunct('state')} className="Clickable">
+                      <th onClick={handleSortFunct('state')} className="Clickable ColState">
                         {D.state}
                         <SortIcon val="state" sort={sort} />
                       </th>

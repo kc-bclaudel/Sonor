@@ -18,6 +18,7 @@ function NotificationHistory({ setMessageView, messageHistory }) {
             Math.min(pagination.page * pagination.size, messageHistory.length),
           ).map((msg) => (
             <tr
+              key={msg.id}
               className="HistoryLine"
               onClick={() => {
                 setMessageView(msg);

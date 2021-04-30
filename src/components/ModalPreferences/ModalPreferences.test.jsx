@@ -4,7 +4,7 @@ import {
   render, screen, cleanup,
 } from '@testing-library/react';
 import ModalPreferences from './ModalPreferences';
-import mocks from '../../tests/mock_responses';
+import mocks from '../../tests/mocks';
 
 const toLocaleDateString = Date.prototype.toLocaleString;
 Date.prototype.toLocaleDateString = function() {

@@ -47,6 +47,7 @@ function NotificationSender({ dataRetreiver, fetchMessageHistory, sender }) {
       <div id="recipientWrapper">
         <AsyncTypeahead
           id="async-typehead"
+          data-testid="recipients-field"
           isLoading={isLoading}
           ref={typehead}
           labelKey={
@@ -56,6 +57,9 @@ function NotificationSender({ dataRetreiver, fetchMessageHistory, sender }) {
           }
           minLength={1}
           onSearch={(q) => handleSearch(q)}
+          onInputChange={ (text, e) => {
+            handleSearch(text)
+          }}
           options={options.slice(0, options.length)}
           renderMenuItemChildren={(option) => (
             <span>{`${option.id}${option.label ? ` (${option.label})` : ''}`}</span>

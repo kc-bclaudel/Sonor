@@ -1,0 +1,26 @@
+/* Column sizes */
+#CloseSUTable .ColCheckbox{
+  width: 1%;
+}
+#CloseSUTable .ColCampaign{
+  width: 20%;
+}
+
+#CloseSUTable .ColId{
+  width: 12%;
+}
+#CloseSUTable .ColInterviewer{
+  width: 16%;
+}
+#CloseSUTable .ColSsech{
+  width: 8%;
+}
+#CloseSUTable .ColLocation{
+  width: 11%;
+}
+#CloseSUTable .ColCity{
+  width: 18%;
+}
+#CloseSUTable .ColState{
+  width: 14%;
+}

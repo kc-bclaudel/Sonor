@@ -28,7 +28,7 @@ function CampaignPortal({
   );
   const [data, setData] = useState(initialData);
   const [sort, setSort] = useState({ sortOn: 'CPinterviewer', asc: true });
-  const [redirect, setRedirect] = useState(!survey && !location.survey ? '/' : null);
+  const [redirect, setRedirect] = useState(!survey && !location.survey ? { pathname: '/' } : null);
 
   useEffect(() => {
     setSurvey(location.surveyInfos ? location.surveyInfos.survey : null);
@@ -60,10 +60,10 @@ function CampaignPortal({
     setData(sortedData);
   }
 
-  return !survey || !surveyInfo || (
+  return (
     redirect
       ? <Redirect to={redirect} />
-      : (
+      : !survey || !surveyInfo || (
         <div id="CampaignPortal">
           <Container fluid>
             <Row>

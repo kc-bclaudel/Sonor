@@ -31,9 +31,11 @@ class MonitoringTable extends React.Component {
         ? '/' : null,
       loading: true,
     };
+    this.componentIsMounted = false;
   }
 
   componentDidMount() {
+    this.componentIsMounted = true;
     this.refreshData();
   }
 
@@ -42,6 +44,10 @@ class MonitoringTable extends React.Component {
     if (location.pathname !== prevprops.location.pathname) {
       this.refreshData();
     }
+  }
+
+  componentWillUnmount() {
+    this.componentIsMounted = false;
   }
 
   async refreshData() {
@@ -67,27 +73,29 @@ class MonitoringTable extends React.Component {
           Object.assign(newData, res);
           newData.date = dateToUse;
           newData.pagination = paginationToUse;
-          this.setState({
-            date: dateToUse,
-            survey,
-            interviewer,
-            displayedLines: newData.linesDetails,
-            data: newData,
-            mode: modeToUse,
-            redirect: null,
-            loading: false,
-            sort: { sortOn: null, asc: null },
-          }, () => {
-            let firstColumnSortAttribute;
-            if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
-              firstColumnSortAttribute = 'survey';
-            } else if (modeToUse === C.BY_SITE) {
-              firstColumnSortAttribute = 'site';
-            } else {
-              firstColumnSortAttribute = 'CPinterviewer';
-            }
-            this.handleSort(firstColumnSortAttribute, true);
-          });
+          if (this.componentIsMounted) {
+            this.setState({
+              date: dateToUse,
+              survey,
+              interviewer,
+              displayedLines: newData.linesDetails,
+              data: newData,
+              mode: modeToUse,
+              redirect: null,
+              loading: false,
+              sort: { sortOn: null, asc: null },
+            }, () => {
+              let firstColumnSortAttribute;
+              if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
+                firstColumnSortAttribute = 'survey';
+              } else if (modeToUse === C.BY_SITE) {
+                firstColumnSortAttribute = 'site';
+              } else {
+                firstColumnSortAttribute = 'CPinterviewer';
+              }
+              this.handleSort(firstColumnSortAttribute, true);
+            });
+          }
         },
       );
     } else {

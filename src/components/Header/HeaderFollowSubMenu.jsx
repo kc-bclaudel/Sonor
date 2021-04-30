@@ -43,7 +43,7 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
             <Link
               to="/collection/campaigns"
               className="selectedSubeMenu"
-              data-testid="follow-by-survey"
+              data-testid="collection-by-survey"
               onClick={() => toggle(false)}
             >
               {D.collection}
@@ -52,7 +52,10 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
         </ul>
       </li>
       <li>
-        <span className="selectedSubeMenu">
+        <span
+          className="selectedSubeMenu"
+          data-testid="survey-sub-menu-line"
+        >
           {D.survey}
           <i className="fa fa-caret-right fa-xs subMenucaret" />
         </span>
@@ -67,6 +70,7 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <button
                   type="button"
                   className="selectedSubeMenu"
+                  data-testid="progress-by-site"
                   onClick={() => setModal(D.progressBySite, 'follow/sites')}
                   tabIndex={0}
                 >
@@ -77,6 +81,7 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <button
                   type="button"
                   className="selectedSubeMenu"
+                  data-testid="follow-by-interviewer"
                   onClick={() => setModal(D.progressByInterviewer, 'follow/campaign')}
                   tabIndex={0}
                 >
@@ -87,6 +92,7 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <button
                   type="button"
                   className="selectedSubeMenu"
+                  data-testid="collection-by-site"
                   onClick={() => setModal(D.collectionBySite, 'collection/sites')}
                   tabIndex={0}
                 >
@@ -97,6 +103,7 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <button
                   type="button"
                   className="selectedSubeMenu"
+                  data-testid="collection-by-interviewer"
                   onClick={() => setModal(D.collectionByInterviewer, 'collection/campaign')}
                   tabIndex={0}
                 >
@@ -107,7 +114,6 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <Link
                   to="/"
                   className="selectedSubeMenu"
-                  data-testid="follow-by-survey"
                   onClick={() => toggle(false)}
                 >
                   {D.unitsToAffect}
@@ -135,7 +141,6 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <Link
                   to="/"
                   className="selectedSubeMenu"
-                  data-testid="follow-by-survey"
                   onClick={() => toggle(false)}
                 >
                   {D.siteProgress}
@@ -145,7 +150,6 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <Link
                   to="/"
                   className="selectedSubeMenu"
-                  data-testid="follow-by-survey"
                   onClick={() => toggle(false)}
                 >
                   {D.siteCollection}
@@ -171,6 +175,7 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <button
                   type="button"
                   className="selectedSubeMenu"
+                  data-testid="progress-by-survey-one-interviewer"
                   onClick={() => setModal(D.progressBySurvey, 'follow/campaigns/interviewer', true)}
                   tabIndex={0}
                 >
@@ -181,6 +186,7 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <button
                   type="button"
                   className="selectedSubeMenu"
+                  data-testid="collection-by-survey-one-interviewer"
                   onClick={() => setModal(D.collectionBySurvey, 'collection/campaigns/interviewer', true)}
                   tabIndex={0}
                 >
@@ -199,7 +205,6 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <Link
                   to="/"
                   className="selectedSubeMenu"
-                  data-testid="follow-by-survey"
                   onClick={() => toggle(false)}
                 >
                   {D.progression}
@@ -209,7 +214,6 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 <Link
                   to="/"
                   className="selectedSubeMenu"
-                  data-testid="follow-by-survey"
                   onClick={() => toggle(false)}
                 >
                   {D.collection}

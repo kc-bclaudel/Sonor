@@ -4,30 +4,31 @@ import SortIcon from '../SortIcon/SortIcon';
 import FollowUpTableLine from './FollowUpTableLine';
 import C from '../../utils/constants.json';
 import D from '../../i18n';
+import './MonitoringTable.css';
 
 function FollowUpTable({
   data, sort, displayedLines, pagination, mode, handleSort,
 }) {
   const totalDemRow = mode !== C.BY_INTERVIEWER_ONE_SURVEY || (
     <tr>
-      <th>{D.totalDEM}</th>
+      <th className="ColFirstCol">{D.totalDEM}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">
+      <th className="YellowHeader ColCompletionRate">
         {(data.total.dem.completionRate * 100).toFixed(1)}
         %
       </th>
       <th className="ColumnSpacing" />
-      <th>{data.total.dem.total}</th>
-      <th>{data.total.dem.notStarted}</th>
-      <th>{data.total.dem.onGoing}</th>
-      <th>{data.total.dem.waitingForIntValidation}</th>
-      <th>{data.total.dem.intValidated}</th>
-      <th>{data.total.dem.demValidated}</th>
+      <th className="ColAllocated">{data.total.dem.total}</th>
+      <th className="ColNotStarted">{data.total.dem.notStarted}</th>
+      <th className="ColOngoing">{data.total.dem.onGoing}</th>
+      <th className="ColWaitingForIntVal">{data.total.dem.waitingForIntValidation}</th>
+      <th className="ColIntVal">{data.total.dem.intValidated}</th>
+      <th className="ColDemVal">{data.total.dem.demValidated}</th>
       <th className="ColumnSpacing" />
-      <th className="YellowHeader">{data.total.dem.preparingContact}</th>
-      <th className="YellowHeader">{data.total.dem.atLeastOneContact}</th>
-      <th className="YellowHeader">{data.total.dem.appointmentTaken}</th>
-      <th className="YellowHeader">{data.total.dem.interviewStarted}</th>
+      <th className="YellowHeader ColPreparingContact">{data.total.dem.preparingContact}</th>
+      <th className="YellowHeader ColAtLeastOneContact">{data.total.dem.atLeastOneContact}</th>
+      <th className="YellowHeader ColAppointmentTaken">{data.total.dem.appointmentTaken}</th>
+      <th className="YellowHeader ColInterviewStarted">{data.total.dem.interviewStarted}</th>
     </tr>
   );
 
@@ -35,24 +36,24 @@ function FollowUpTable({
     <tfoot>
       {totalDemRow}
       <tr>
-        <th>{D.totalFrance}</th>
+        <th className="ColFirstCol">{D.totalFrance}</th>
         <th className="ColumnSpacing" />
-        <th className="YellowHeader">
+        <th className="YellowHeader ColCompletionRate">
           {(data.total.france.completionRate * 100).toFixed(1)}
           %
         </th>
         <th className="ColumnSpacing" />
-        <th>{data.total.france.total}</th>
-        <th>{data.total.france.notStarted}</th>
-        <th>{data.total.france.onGoing}</th>
-        <th>{data.total.france.waitingForIntValidation}</th>
-        <th>{data.total.france.intValidated}</th>
-        <th>{data.total.france.demValidated}</th>
+        <th className="ColAllocated">{data.total.france.total}</th>
+        <th className="ColNotStarted">{data.total.france.notStarted}</th>
+        <th className="ColOngoing">{data.total.france.onGoing}</th>
+        <th className="ColWaitingForIntVal">{data.total.france.waitingForIntValidation}</th>
+        <th className="ColIntVal">{data.total.france.intValidated}</th>
+        <th className="ColDemVal">{data.total.france.demValidated}</th>
         <th className="ColumnSpacing" />
-        <th className="YellowHeader">{data.total.france.preparingContact}</th>
-        <th className="YellowHeader">{data.total.france.atLeastOneContact}</th>
-        <th className="YellowHeader">{data.total.france.appointmentTaken}</th>
-        <th className="YellowHeader">{data.total.france.interviewStarted}</th>
+        <th className="YellowHeader ColPreparingContact">{data.total.france.preparingContact}</th>
+        <th className="YellowHeader ColAtLeastOneContact">{data.total.france.atLeastOneContact}</th>
+        <th className="YellowHeader ColAppointmentTaken">{data.total.france.appointmentTaken}</th>
+        <th className="YellowHeader ColInterviewStarted">{data.total.france.interviewStarted}</th>
       </tr>
     </tfoot>
   );
@@ -74,9 +75,9 @@ function FollowUpTable({
     <Table id="FollowUpTable" className="CustomTable" bordered striped hover responsive size="sm">
       <thead>
         <tr>
-          <th className="EmptyHeader" />
+          <th className="EmptyHeader ColFirstCol" />
           <th className="ColumnSpacing" />
-          <th className="EmptyHeader" />
+          <th className="EmptyHeader ColCompletionRate" />
           <th rowSpan="2" className="ColumnSpacing" />
           <th colSpan="6" className="CenteredText">{D.numberOfSurveyUnits}</th>
           <th rowSpan="2" className="ColumnSpacing" />
@@ -86,14 +87,14 @@ function FollowUpTable({
           <th
             data-testid="TableHeader_label"
             onClick={handleSortFunct(firstColumnSortAttribute)}
-            className="Clickable"
+            className="Clickable ColFirstCol"
           >
             {firstColumnTitle}
             <SortIcon val={firstColumnSortAttribute} sort={sort} />
           </th>
           <th className="ColumnSpacing" />
           <th
-            className="YellowHeader"
+            className="YellowHeader ColCompletionRate"
             onClick={handleSortFunct('completionRate')}
           >
             {D.completionRate}
@@ -101,69 +102,69 @@ function FollowUpTable({
           </th>
           <th
             onClick={handleSortFunct('total')}
-            className="Clickable"
+            className="Clickable ColAllocated"
           >
             {D.allocated}
             <SortIcon val="total" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('notStarted')}
-            className="Clickable"
+            className="Clickable ColNotStarted"
           >
             {D.notStarted}
             <SortIcon val="notStarted" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('onGoing')}
-            className="Clickable"
+            className="Clickable ColOngoing"
           >
             {D.inProgressInterviewer}
             <SortIcon val="onGoing" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('waitingForIntValidation')}
-            className="Clickable"
+            className="Clickable ColWaitingForIntVal"
           >
             {D.waitingForIntReview}
             <SortIcon val="waitingForIntValidation" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('intValidated')}
-            className="Clickable"
+            className="Clickable ColIntVal"
           >
             {D.reviewedByInterviewer}
             <SortIcon val="intValidated" sort={sort} />
           </th>
           <th
             onClick={handleSortFunct('demValidated')}
-            className="Clickable"
+            className="Clickable ColDemVal"
           >
             {D.reviewedEnded}
             <SortIcon val="demValidated" sort={sort} />
           </th>
           <th
-            className="YellowHeader Clickable"
+            className="YellowHeader Clickable ColPreparingContact"
             onClick={handleSortFunct('preparingContact')}
           >
             {D.preparingContact}
             <SortIcon val="preparingContact" sort={sort} />
           </th>
           <th
-            className="YellowHeader Clickable"
+            className="YellowHeader Clickable ColAtLeastOneContact"
             onClick={handleSortFunct('atLeastOneContact')}
           >
             {D.atLeastOneContact}
             <SortIcon val="atLeastOneContact" sort={sort} />
           </th>
           <th
-            className="YellowHeader Clickable"
+            className="YellowHeader Clickable ColAppointmentTaken"
             onClick={handleSortFunct('appointmentTaken')}
           >
             {D.appointmentTaken}
             <SortIcon val="appointmentTaken" sort={sort} />
           </th>
           <th
-            className="YellowHeader Clickable"
+            className="YellowHeader Clickable ColInterviewStarted"
             onClick={handleSortFunct('interviewStarted')}
           >
             {D.interviewStarted}

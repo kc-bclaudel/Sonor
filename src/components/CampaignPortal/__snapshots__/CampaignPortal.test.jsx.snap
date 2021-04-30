@@ -326,7 +326,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -342,7 +342,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -357,7 +357,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -374,133 +374,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -886,7 +886,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -902,7 +902,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -917,7 +917,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -934,133 +934,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -1503,7 +1503,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -1519,7 +1519,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -1534,7 +1534,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -1551,133 +1551,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -2063,7 +2063,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -2079,7 +2079,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -2094,7 +2094,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -2111,133 +2111,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -2680,7 +2680,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -2696,7 +2696,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -2711,7 +2711,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -2728,133 +2728,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -3240,7 +3240,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -3256,7 +3256,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -3271,7 +3271,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -3288,133 +3288,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -3857,7 +3857,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -3873,7 +3873,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -3888,7 +3888,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -3905,133 +3905,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -4096,7 +4096,7 @@ Object {
     </div>
     <a
       download="National_organizational_unit_Everyday_life_and_health_survey_2021_Repartition_enqueteurs_8202020.csv"
-      href="data:text/csv;charset=utf-8,Interviewer;Idep;SU%0ABoulanger%20Emilie;INTW9;55%0ABoulanger%20Jacques;INTW6;55%0ADelmarre%20Alphonse;INTW11;55%0ADupont%20Chlo%C3%A9;INTW5;84%0ADupont%20Ren%C3%A9e;INTW10;84%0AFabres%20Thierry;INTW7;76%0ARenard%20Bertrand;INTW8;84%0AUnassigned;%20;14%0AAbandoned;%20;%0ATotal%20organizational%20unit;%20;208"
+      href="data:text/csv;charset=utf-8,%EF%BB%BFInterviewer;Idep;SU%0ABoulanger%20Emilie;INTW9;55%0ABoulanger%20Jacques;INTW6;55%0ADelmarre%20Alphonse;INTW11;55%0ADupont%20Chlo%C3%A9;INTW5;84%0ADupont%20Ren%C3%A9e;INTW10;84%0AFabres%20Thierry;INTW7;76%0ARenard%20Bertrand;INTW8;84%0AUnassigned;%20;14%0AAbandoned;%20;%0ATotal%20organizational%20unit;%20;208"
     />
   </body>,
   "container": <div>
@@ -4421,7 +4421,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -4437,7 +4437,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -4452,7 +4452,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -4469,133 +4469,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -5046,7 +5046,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -5062,7 +5062,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -5077,7 +5077,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -5094,133 +5094,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
@@ -5606,7 +5606,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -5622,7 +5622,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -5637,7 +5637,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -5654,133 +5654,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
@@ -6223,7 +6223,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -6239,7 +6239,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -6254,7 +6254,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -6271,133 +6271,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -6783,7 +6783,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -6799,7 +6799,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -6814,7 +6814,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -6831,133 +6831,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -7400,7 +7400,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -7416,7 +7416,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -7431,7 +7431,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -7448,133 +7448,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -7960,7 +7960,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -7976,7 +7976,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -7991,7 +7991,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -8008,133 +8008,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
