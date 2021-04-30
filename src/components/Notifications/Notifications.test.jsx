@@ -21,10 +21,17 @@ configure({adapter: new Adapter()});
 const history = createMemoryHistory(); 
 
 const toLocaleDateString = Date.prototype.toLocaleString;
+const getHours = Date.prototype.getUTCHours;
+const getMinutes = Date.prototype.getUTCMinutes;
 Date.prototype.toLocaleDateString = function() {
   return toLocaleDateString.call(this, 'en-EN', { timeZone: 'UTC',year: "numeric", month: "numeric", day: "numeric" });
 };
-
+Date.prototype.getHours = function() {
+  return getHours.call(this);
+};
+Date.prototype.getMinutes = function() {
+  return getMinutes.call(this);
+};
 
 (global).document.createRange = () => ({
   setStart: () => {},
