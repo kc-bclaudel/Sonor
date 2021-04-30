@@ -38,7 +38,7 @@ context('sonor', () => {
         .first()
         .should('have.text', 'Everyday life and health survey 2018');
     });
-    ////////////////////////////
+
     cy.get('th').contains(D.survey).click();
     cy.get('tbody').within(() => {
       cy.get('td')

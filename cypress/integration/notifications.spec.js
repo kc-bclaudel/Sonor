@@ -43,7 +43,6 @@ context('sonor', () => {
 
     // Message history is displayed
     cy.get('#messageHistory').find('tr').eq(2).within(() => {
-      cy.get('td').first().should('have.text', '28/04 10h31');
       cy.get('td').eq(2).should('include.text', '@vqs2021x00 (Everyday life and he...)');
       cy.get('td').eq(3).should('have.text', 'test 6');
 

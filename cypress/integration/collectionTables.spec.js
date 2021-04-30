@@ -189,7 +189,9 @@ context('sonor', () => {
     // Click on the review cell of first row to go to collection table by site
     cy.get('button').contains(D.follow).click();
     cy.get('button').contains(D.collectionBySite).click({ force: true });
+    cy.wait(1000)
     cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
+    cy.wait(3000)
 
     // Testing sort by site
     cy.get('tbody')
@@ -299,8 +301,9 @@ context('sonor', () => {
     // Go to monitoring table by interviewers for the first survey
     cy.get('button').contains(D.follow).click();
     cy.get('button').contains(D.collectionByInterviewer).click({ force: true });
+    cy.wait(1000)
     cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
-
+    cy.wait(3000)
     cy.get('tbody').find('td').eq(2).should('have.text', '2.9%');
 
     // Testing search field filter by interviewer
@@ -323,7 +326,7 @@ context('sonor', () => {
     cy.get('[data-testid="collection-by-survey"]').click({ force: true });
     
     cy.wait(['@get-state-count-by-campaign', '@get-contact-outcomes-by-campaign']);
-    cy.wait(1500);
+    cy.wait(3000);
     cy.get('tbody').find('td').eq(2).should('have.text', '3.2%');
 
     // Testing search field filter by survey label
