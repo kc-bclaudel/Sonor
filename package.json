@@ -35,7 +35,7 @@
     "cypress:run": "cypress run",
     "cypress:test": "start-server-and-test start http://localhost:3000 cypress:run",
     "test": "react-scripts test",
-    "build": "react-scripts build"
+    "build": "react-scripts build && copy-and-watch configuration/configuration.json build"
   },
   "browserslist": {
     "production": [
@@ -55,6 +55,7 @@
     "@testing-library/dom": "^7.22.2",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "copy-and-watch": "^0.1.5",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.3",
     "eslint": "^6.6.0",
