@@ -60,7 +60,7 @@ const monitoringTable = {
     en: 'Survey units processed interviewer',
   },
   surveyUnitsClosedManagement: {
-    fr: 'Unités enquqêtées clôturées gestionnaire',
+    fr: 'Unités enquêtées clôturées gestionnaire',
     en: 'Survey units closed by management',
   },
 };
