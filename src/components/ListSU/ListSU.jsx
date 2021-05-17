@@ -1,36 +1,72 @@
-import React, { useState, useEffect, useCallback} from 'react';
+import React, {
+  useState, useEffect, useCallback, useRef,
+} from 'react';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import { Col, Row } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
+import { NotificationManager } from 'react-notifications';
 import SurveySelector from '../SurveySelector/SurveySelector';
 import SUTable from './SUTable';
 import Utils from '../../utils/Utils';
 import D from '../../i18n';
+import './ListSU.css';
 
 function ListSU({
   location, dataRetreiver,
 }) {
   const { survey } = location;
 
+  const isMounted = useRef(false);
   const [data, setData] = useState([]);
   const [site, setSite] = useState('');
   const [sort, setSort] = useState({ sortOn: null, asc: null });
   const [redirect, setRedirect] = useState(!survey ? '/' : null);
 
-  useEffect(() => {
+  const fetchData = useCallback(() => {
     dataRetreiver.getDataForListSU(!survey || survey.id, (res) => {
-      setData(res.surveyUnits);
-      setSite(res.site);
-      setRedirect(null);
+      if (isMounted.current) {
+        setData(res.surveyUnits);
+        setSite(res.site);
+        setRedirect(null);
+      }
     });
-  }, [redirect, dataRetreiver, survey]);
+  }, [dataRetreiver, survey]);
+
+  useEffect(() => {
+    isMounted.current = true;
+
+    fetchData();
+    return () => {
+      isMounted.current = false;
+    };
+  }, [fetchData]);
 
   const handleSort = useCallback((property, asc) => {
     const [sortedData, newSort] = Utils.handleSort(property, data, sort, 'listSU', asc);
     setSort(newSort);
     setData(sortedData);
   }, [data, sort]);
+
+  function validateChangingState(lstSUChangingState, state) {
+    let closingCause;
+    if (state === D.NPA) {
+      closingCause = 'NPA';
+    } else if (state === D.NPI) {
+      closingCause = 'NPI';
+    }
+    dataRetreiver.tagWithClosingCauseSurveyUnits(lstSUChangingState, closingCause)
+      .then((response) => {
+        if (response.some(
+          (res) => !(res.status === 200 || res.status === 201 || res.status === 204),
+        )) {
+          NotificationManager.error(`${D.changingStateAlertError}: ${lstSUChangingState
+            .filter((x, index) => !(response[index].status === 200 || response[index].status === 201 || response[index].status === 204)).join(', ')}.`, D.error, 3500);
+        } else {
+          NotificationManager.success(`${D.changingStateAlertSuccess}: ${lstSUChangingState.join(', ')}.`, D.updateSuccess, 3500);
+        }
+        fetchData();
+      });
+  }
 
   useEffect(() => {
     if (sort.sortOn === null) {
@@ -58,25 +94,17 @@ function ListSU({
             />
           </Col>
         </Row>
-        <Card className="ViewCard">
-          <Card.Title>
-            {D.surveyUnitsAllocatedToTheOU}
-            {data.length}
-          </Card.Title>
-          {
-            data.length > 0
-              ? (
-                <SUTable
-                  sort={sort}
-                  handleSort={handleSort}
-                  data={data}
-                  survey={survey}
-                  site={site}
-                />
-              )
-              : <span>{D.noListSuToDisplay}</span>
+        <SUTable
+          sort={sort}
+          handleSort={handleSort}
+          data={data}
+          survey={survey}
+          site={site}
+          validateChangingState={
+            (lstSUChangingState,
+              stateModified) => validateChangingState(lstSUChangingState, stateModified)
           }
-        </Card>
+        />
       </div>
     );
 }

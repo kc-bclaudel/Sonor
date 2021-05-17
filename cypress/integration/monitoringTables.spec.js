@@ -7,7 +7,7 @@ context('sonor', () => {
       .as('get-user');
 
     cy.server()
-      .route('GET', '**/api/campaigns', 'fixture:getSurveys.json')
+      .route('GET', '**/api/campaigns', 'fixture:getCampaigns.json')
       .as('get-campaigns');
 
     cy.server()
@@ -33,62 +33,10 @@ context('sonor', () => {
     cy.server()
       .route(
         'GET',
-        '**/api/campaign/vqs202fgd1x00/survey-units',
-        'fixture:getSurveyUnitsVqs.json'
-      )
-      .as('get-interviewers-vqs');
-
-    cy.server()
-      .route(
-        'GET',
-        '**/api/campaign/simpsosfqns2020x00/survey-units',
-        'fixture:getSurveyUnitsSurveyOnSomething.json'
-      )
-      .as('get-interviewers-SurveyOnSomething');
-
-    cy.server()
-      .route(
-        'GET',
         '**/api/campaign/**/survey-units/state-count',
         'fixture:stateCount.json'
       )
       .as('get-state-count');
-
-    cy.server()
-      .route(
-        'GET',
-        '**/api/campaign/vqs202fgd1x00/survey-units?state=TBR',
-        'fixture:getSurveyUnitsVqs.json'
-      )
-      .as('get-tbr-vqs');
-
-    cy.server()
-      .route(
-        'GET',
-        '**/api/campaign/simpsosfqns2020x00/survey-units?state=TBR',
-        'fixture:getSurveyUnitsSurveyOnSomething.json'
-      )
-      .as('get-tbr-survOnSmth');
-
-    cy.server()
-      .route(
-        'GET',
-        '**/api/campaign/!(vqs202fgd1x00|simpsosfqns2020x00)/survey-units?state=TBR',
-        'fixture:emptyArray.json'
-      )
-      .as('get-tbr-other');
-
-    cy.server()
-      .route('GET', '**/api/survey-unit/1023/states', 'fixture:states1023.json')
-      .as('get-states-1023');
-
-    cy.server()
-      .route('GET', '**/api/survey-unit/4818/states', 'fixture:states4818.json')
-      .as('get-states-4811');
-
-    cy.server()
-      .route('PUT', '**/api/survey-unit/**/state/FIN', 'fixture:status200.json')
-      .as('validate');
 
     cy.server()
       .route(
@@ -283,14 +231,16 @@ context('sonor', () => {
 
     // Go to monitoring table by interviewer all surveys
     cy.get('#BtnSuivreParent').click();
-    cy.get('a[data-testid="follow-by-interviewer"]').click({ force: true });
-    cy.wait(['@get-state-count-by-interviewer']);
-    cy.wait(1500);
+    cy.get('button[data-testid="follow-by-interviewer"]').click({ force: true });
+
+    cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
+    cy.wait(3000);
+
     cy.get('tbody').find('td').eq(2).should('have.text', '24.2%');
 
     // Testing page change
     cy.get('.paginationNav').contains('2').click();
-    cy.get('tbody').find('td').first().should('have.text', 'Renard Bertrand');
+    cy.get('tbody').find('td').first().should('have.text', 'Thierry Renée');
 
     // Testing pagination size change
     cy.get('[data-testid="pagination-size-selector"]').select('20');
@@ -301,7 +251,7 @@ context('sonor', () => {
     cy.get('tbody').find('tr').should('have.length', 3);
     cy.get('tbody').find('td').first().should('have.text', 'Dupont Chloé');
 
-    cy.get('#InseeLogo').click();
+    cy.get('.ReturnButton').click();
     cy.get('#MainScreen');
   });
 });

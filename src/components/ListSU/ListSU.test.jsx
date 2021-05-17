@@ -2,13 +2,13 @@
 import React from 'react';
 import { act } from 'react-dom/test-utils';
 import {
-  render, screen, fireEvent, cleanup, waitForElement,
+  render, screen, fireEvent, cleanup, waitForElement, wait,
 } from '@testing-library/react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import DataFormatter from '../../utils/DataFormatter';
 import ListSU from './ListSU';
-import mocks from '../../tests/mock_responses';
+import mocks from '../../tests/mocks';
 
 const history = createMemoryHistory();
 
@@ -36,7 +36,7 @@ const resp = mocks.listSU;
 const TestingRouter = ({ ComponentWithRedirection }) => (
   <Router history={history}>
     <Switch>
-      <Route path="/listSU/vqs2021x00" render={() => <ComponentWithRedirection />} />
+      <Route path="/listSU/vqs2021x00" component={() => <ComponentWithRedirection />} />
       <Route
         path="*"
         render={(routeProps) => (
@@ -140,7 +140,7 @@ it('Reloading the page with no survey set (F5)', async () => {
   });
 
   // Should redirect to '/'
-  expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`);
+  await wait(() => expect(screen.getByTestId('Redirect-url').innerHTML).toEqual(`\"${redirectUrl}\"`));
 });
 
 it('Export table', async () => {
@@ -155,7 +155,7 @@ it('Export table', async () => {
   HTMLAnchorElement.prototype.remove = removeElmMock;
 
   const fileTitle = 'National_organizational_unit_Everyday_life_and_health_survey_2021_UE_confiees_8202020.csv';
-  const fileContent = 'data:text/csv;charset=utf-8,Identifier;Ssech;Department;Town;Interviewer;Idep%0A20;1;59;Aulnoye-Aimeries;Lucas%20Margie;INTW1%0A21;1;38;Vienne;Campbell%20Carlton;INTW2%0A22;2;62;Arras;Xern%20Fabrice;INTW4%0A29;1;65;Belfort;Delmare%20Mathilde;INTW12%0A33;1;75;Paris;Antoine%20Tarje;INTW14%0A55;2;62;Arras;Bertrand%20Ulysse;INTW4%0A23;1;35;Rennes;Grant%20Melody;INTW4';
+  const fileContent = 'data:text/csv;charset=utf-8,%EF%BB%BFIdentifier;Interviewer;Idep;Ssech;Department;Town;Provisional%20state%0A20;Lucas%20Margie;INTW1;1;59;Aulnoye-Aimeries;%0A21;Campbell%20Carlton;INTW2;1;38;Vienne;%0A22;Xern%20Fabrice;INTW4;2;62;Arras;%0A29;Delmare%20Mathilde;INTW12;1;65;Belfort;%0A33;Antoine%20Tarje;INTW14;1;75;Paris;%0A55;Bertrand%20Ulysse;INTW4;2;62;Arras;%0A23;Grant%20Melody;INTW4;1;35;Rennes;';
   screen.getByTestId('export-button').click();
   const downnloadLink = component.baseElement.querySelector('a[download]');
 

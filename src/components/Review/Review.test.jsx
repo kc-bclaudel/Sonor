@@ -8,7 +8,7 @@ import { createMemoryHistory } from 'history';
 import { NotificationManager } from 'react-notifications';
 import DataFormatter from '../../utils/DataFormatter';
 import Review from './Review';
-import mocks from '../../tests/mock_responses';
+import mocks from '../../tests/mocks';
 import D from '../../i18n';
 
 const history = createMemoryHistory();
@@ -49,6 +49,7 @@ const mockGetDataForReview = jest.fn((s, cb) => {
 const mockDataFormatter = DataFormatter.mockImplementation(() => ({
   getDataForReview: mockGetDataForReview,
   finalizeSurveyUnits: mockFinalizeSurveyUnits,
+  updateSurveyUnitViewed: jest.fn(() => ({ status: 200 })),
 }));
 
 const mockSuccess = jest.fn();
@@ -420,12 +421,9 @@ it('Click on the 3 cells of a SU line', async () => {
 
   window.open = jest.fn();
 
-  const firstLineElements = component.baseElement.querySelectorAll('tbody')[0].querySelectorAll('td');
-  firstLineElements[1].click();
-  firstLineElements[2].click();
-  firstLineElements[3].click();
-  screen.getByTestId('validate-su').click();
+  const questionnaireButton = component.baseElement.querySelectorAll('tbody')[0].querySelectorAll('.fa-calendar')[0];
+  questionnaireButton.click();
 
   // window.open should have been called 3 times
-  expect(window.open).toHaveBeenCalledTimes(3);
+  expect(window.open).toHaveBeenCalledTimes(1);
 });

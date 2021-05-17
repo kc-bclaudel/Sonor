@@ -1,0 +1,36 @@
+
+/* Column sizes */
+
+#MainScreen .ColSurvey{
+  width: 24%;
+}
+#MainScreen .ColCollectionStartDate{
+  width: 10%;
+}
+#MainScreen .ColCollectionEndDate{
+  width: 10%;
+}
+#MainScreen .ColEndDate{
+  width: 10%;
+}
+#MainScreen .ColPhase{
+  width: 12%;
+}
+#MainScreen .ColAllocated{
+  width: 5%;
+}
+#MainScreen .ColToProcessInterviewer{
+  width: 5%;
+}
+#MainScreen .ColToAffect{
+  width: 5%;
+}
+#MainScreen .ColToFollowUp{
+  width: 5%;
+}
+#MainScreen .ColToReview{
+  width: 5%;
+}
+#MainScreen .ColFinalized{
+  width: 5%;
+}

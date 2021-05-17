@@ -4,7 +4,6 @@ import {
   render, fireEvent, cleanup,
 } from '@testing-library/react';
 import SearchField from './SearchField';
-import mocks from '../../tests/mock_responses';
 
 afterEach(cleanup);
 

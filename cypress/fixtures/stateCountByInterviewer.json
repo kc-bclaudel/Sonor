@@ -20,7 +20,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -44,7 +47,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -68,7 +74,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -92,7 +101,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -116,7 +128,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -140,7 +155,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -164,7 +182,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -188,7 +209,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -212,7 +236,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -236,7 +263,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   },
   {
@@ -260,7 +290,10 @@
     "finCount": 2,
     "qnaCount": 3,
     "qnaFinCount": 3,
-    "nvaCount": 0,
+    "npaCount": 2,
+        "npiCount": 3,
+        "rowCount": 4,
+        "nvaCount": 0,
     "total": 95
   }
 ]

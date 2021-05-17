@@ -9,21 +9,21 @@ function TimeLine({ props }) {
   return (
     <div id="TimeLine">
       <div id="PhaseMilestones">
-        <div>{Utils.convertToDateString(managementStartDate)}</div>
-        <div className="DateCenter">{Utils.convertToDateString(collectionStartDate)}</div>
-        <div className="DateCenter">{Utils.convertToDateString(collectionEndDate)}</div>
-        <div className="DateRight">{Utils.convertToDateString(endDate)}</div>
+        <div className="PhaseSmall">{Utils.convertToDateString(managementStartDate)}</div>
+        <div className="DateCenter PhaseLarge">{Utils.convertToDateString(collectionStartDate)}</div>
+        <div className="DateCenter PhaseSmall">{Utils.convertToDateString(collectionEndDate)}</div>
+        <div className="DateRight PhaseSmall">{Utils.convertToDateString(endDate)}</div>
       </div>
       <div id="PhaseDisplay">
-        <div className={`${phase === 0 ? ' CurrentPhase' : 'PastPhase'}`}>{D.initialAssignment}</div>
-        <div className={`${phase === 1 ? ' CurrentPhase' : phase === 0 ? ' ' : 'PastPhase'}`}>{D.collectionInProgress}</div>
-        <div className={`${phase > 1 ? ' CurrentPhase' : ''}`}>{D.collectionOver}</div>
+        <div className={`PhaseSmall ${phase === 0 ? ' CurrentPhase' : 'PastPhase'}`} >{D.initialAssignment}</div>
+        <div className={`PhaseLarge ${phase === 1 ? ' CurrentPhase' : phase === 0 ? ' ' : 'PastPhase'}`}>{D.collectionInProgress}</div>
+        <div className={`PhaseSmall ${phase > 1 ? ' CurrentPhase' : ''}`}>{D.collectionOver}</div>
       </div>
       <div id="PhaseMilestones">
-        <div>{D.integration}</div>
-        <div className="LabelCenter">{D.startOfCollection}</div>
-        <div className="LabelCenter">{D.endOfCollection}</div>
-        <div className="LabelRight">{D.endOfTreatment}</div>
+        <div className="PhaseSmall">{D.integration}</div>
+        <div className="LabelCenter PhaseLarge">{D.startOfCollection}</div>
+        <div className="LabelCenter PhaseSmall">{D.endOfCollection}</div>
+        <div className="LabelRight PhaseSmall">{D.endOfTreatment}</div>
       </div>
     </div>
   );

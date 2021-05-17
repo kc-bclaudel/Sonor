@@ -91,21 +91,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         8/20/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseLarge"
                       >
                         5/26/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseSmall"
                       >
                         7/7/2020
                       </div>
                       <div
-                        class="DateRight"
+                        class="DateRight PhaseSmall"
                       >
                         8/20/2020
                       </div>
@@ -114,17 +116,17 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class="PastPhase"
+                        class="PhaseSmall PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class="PastPhase"
+                        class="PhaseLarge PastPhase"
                       >
                         Collection in progress
                       </div>
                       <div
-                        class=" CurrentPhase"
+                        class="PhaseSmall  CurrentPhase"
                       >
                         Collection over
                       </div>
@@ -132,21 +134,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         Integration
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseLarge"
                       >
                         Start of collection
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseSmall"
                       >
                         End of collection
                       </div>
                       <div
-                        class="LabelRight"
+                        class="LabelRight PhaseSmall"
                       >
                         End of processing
                       </div>
@@ -181,17 +185,20 @@ Object {
                             class="Clickable"
                             data-testid="mail-button"
                           >
-                            <th>
+                            <th
+                              class="ContactsLeftHeader"
+                            >
                               Functional box
                             </th>
                             <td
-                              class=" LightGreyLine"
+                              class=" LightGreyLine MailLink"
                             >
                               survey@mail.com
                             </td>
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               CPOS
@@ -211,6 +218,7 @@ Object {
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               Deputy CPOS
@@ -243,7 +251,15 @@ Object {
                   <div
                     class="Title"
                   >
-                    Interviewers
+                    <span>
+                      Interviewers
+                    </span>
+                    <button
+                      class="ExportButton btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
                   </div>
                   <div
                     class="row"
@@ -310,7 +326,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -326,7 +342,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -341,7 +357,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -358,133 +374,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -520,12 +536,6 @@ Object {
                   <div
                     class="tableOptionsWrapper"
                   >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                     <ul
                       class="paginationNav pagination pagination-sm"
                       data-testid="pagination-nav"
@@ -641,21 +651,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       8/20/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseLarge"
                     >
                       5/26/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseSmall"
                     >
                       7/7/2020
                     </div>
                     <div
-                      class="DateRight"
+                      class="DateRight PhaseSmall"
                     >
                       8/20/2020
                     </div>
@@ -664,17 +676,17 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class="PastPhase"
+                      class="PhaseSmall PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class="PastPhase"
+                      class="PhaseLarge PastPhase"
                     >
                       Collection in progress
                     </div>
                     <div
-                      class=" CurrentPhase"
+                      class="PhaseSmall  CurrentPhase"
                     >
                       Collection over
                     </div>
@@ -682,21 +694,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       Integration
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseLarge"
                     >
                       Start of collection
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseSmall"
                     >
                       End of collection
                     </div>
                     <div
-                      class="LabelRight"
+                      class="LabelRight PhaseSmall"
                     >
                       End of processing
                     </div>
@@ -731,17 +745,20 @@ Object {
                           class="Clickable"
                           data-testid="mail-button"
                         >
-                          <th>
+                          <th
+                            class="ContactsLeftHeader"
+                          >
                             Functional box
                           </th>
                           <td
-                            class=" LightGreyLine"
+                            class=" LightGreyLine MailLink"
                           >
                             survey@mail.com
                           </td>
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             CPOS
@@ -761,6 +778,7 @@ Object {
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             Deputy CPOS
@@ -793,7 +811,15 @@ Object {
                 <div
                   class="Title"
                 >
-                  Interviewers
+                  <span>
+                    Interviewers
+                  </span>
+                  <button
+                    class="ExportButton btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
                 </div>
                 <div
                   class="row"
@@ -860,7 +886,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -876,7 +902,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -891,7 +917,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -908,133 +934,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -1070,12 +1096,6 @@ Object {
                 <div
                   class="tableOptionsWrapper"
                 >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
                   <ul
                     class="paginationNav pagination pagination-sm"
                     data-testid="pagination-nav"
@@ -1248,21 +1268,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         8/20/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseLarge"
                       >
                         5/26/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseSmall"
                       >
                         7/7/2020
                       </div>
                       <div
-                        class="DateRight"
+                        class="DateRight PhaseSmall"
                       >
                         8/20/2020
                       </div>
@@ -1271,17 +1293,17 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class="PastPhase"
+                        class="PhaseSmall PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class="PastPhase"
+                        class="PhaseLarge PastPhase"
                       >
                         Collection in progress
                       </div>
                       <div
-                        class=" CurrentPhase"
+                        class="PhaseSmall  CurrentPhase"
                       >
                         Collection over
                       </div>
@@ -1289,21 +1311,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         Integration
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseLarge"
                       >
                         Start of collection
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseSmall"
                       >
                         End of collection
                       </div>
                       <div
-                        class="LabelRight"
+                        class="LabelRight PhaseSmall"
                       >
                         End of processing
                       </div>
@@ -1338,17 +1362,20 @@ Object {
                             class="Clickable"
                             data-testid="mail-button"
                           >
-                            <th>
+                            <th
+                              class="ContactsLeftHeader"
+                            >
                               Functional box
                             </th>
                             <td
-                              class=" LightGreyLine"
+                              class=" LightGreyLine MailLink"
                             >
                               survey@mail.com
                             </td>
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               CPOS
@@ -1368,6 +1395,7 @@ Object {
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               Deputy CPOS
@@ -1400,7 +1428,15 @@ Object {
                   <div
                     class="Title"
                   >
-                    Interviewers
+                    <span>
+                      Interviewers
+                    </span>
+                    <button
+                      class="ExportButton btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
                   </div>
                   <div
                     class="row"
@@ -1467,7 +1503,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -1483,7 +1519,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -1498,7 +1534,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -1515,133 +1551,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -1677,12 +1713,6 @@ Object {
                   <div
                     class="tableOptionsWrapper"
                   >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                     <ul
                       class="paginationNav pagination pagination-sm"
                       data-testid="pagination-nav"
@@ -1798,21 +1828,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       8/20/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseLarge"
                     >
                       5/26/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseSmall"
                     >
                       7/7/2020
                     </div>
                     <div
-                      class="DateRight"
+                      class="DateRight PhaseSmall"
                     >
                       8/20/2020
                     </div>
@@ -1821,17 +1853,17 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class="PastPhase"
+                      class="PhaseSmall PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class="PastPhase"
+                      class="PhaseLarge PastPhase"
                     >
                       Collection in progress
                     </div>
                     <div
-                      class=" CurrentPhase"
+                      class="PhaseSmall  CurrentPhase"
                     >
                       Collection over
                     </div>
@@ -1839,21 +1871,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       Integration
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseLarge"
                     >
                       Start of collection
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseSmall"
                     >
                       End of collection
                     </div>
                     <div
-                      class="LabelRight"
+                      class="LabelRight PhaseSmall"
                     >
                       End of processing
                     </div>
@@ -1888,17 +1922,20 @@ Object {
                           class="Clickable"
                           data-testid="mail-button"
                         >
-                          <th>
+                          <th
+                            class="ContactsLeftHeader"
+                          >
                             Functional box
                           </th>
                           <td
-                            class=" LightGreyLine"
+                            class=" LightGreyLine MailLink"
                           >
                             survey@mail.com
                           </td>
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             CPOS
@@ -1918,6 +1955,7 @@ Object {
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             Deputy CPOS
@@ -1950,7 +1988,15 @@ Object {
                 <div
                   class="Title"
                 >
-                  Interviewers
+                  <span>
+                    Interviewers
+                  </span>
+                  <button
+                    class="ExportButton btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
                 </div>
                 <div
                   class="row"
@@ -2017,7 +2063,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -2033,7 +2079,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -2048,7 +2094,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -2065,133 +2111,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -2227,12 +2273,6 @@ Object {
                 <div
                   class="tableOptionsWrapper"
                 >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
                   <ul
                     class="paginationNav pagination pagination-sm"
                     data-testid="pagination-nav"
@@ -2405,21 +2445,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         8/20/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseLarge"
                       >
                         5/26/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseSmall"
                       >
                         7/7/2020
                       </div>
                       <div
-                        class="DateRight"
+                        class="DateRight PhaseSmall"
                       >
                         8/20/2020
                       </div>
@@ -2428,17 +2470,17 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class="PastPhase"
+                        class="PhaseSmall PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class="PastPhase"
+                        class="PhaseLarge PastPhase"
                       >
                         Collection in progress
                       </div>
                       <div
-                        class=" CurrentPhase"
+                        class="PhaseSmall  CurrentPhase"
                       >
                         Collection over
                       </div>
@@ -2446,21 +2488,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         Integration
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseLarge"
                       >
                         Start of collection
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseSmall"
                       >
                         End of collection
                       </div>
                       <div
-                        class="LabelRight"
+                        class="LabelRight PhaseSmall"
                       >
                         End of processing
                       </div>
@@ -2495,17 +2539,20 @@ Object {
                             class="Clickable"
                             data-testid="mail-button"
                           >
-                            <th>
+                            <th
+                              class="ContactsLeftHeader"
+                            >
                               Functional box
                             </th>
                             <td
-                              class=" LightGreyLine"
+                              class=" LightGreyLine MailLink"
                             >
                               survey@mail.com
                             </td>
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               CPOS
@@ -2525,6 +2572,7 @@ Object {
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               Deputy CPOS
@@ -2557,7 +2605,15 @@ Object {
                   <div
                     class="Title"
                   >
-                    Interviewers
+                    <span>
+                      Interviewers
+                    </span>
+                    <button
+                      class="ExportButton btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
                   </div>
                   <div
                     class="row"
@@ -2624,7 +2680,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -2640,7 +2696,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -2655,7 +2711,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -2672,133 +2728,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -2834,12 +2890,6 @@ Object {
                   <div
                     class="tableOptionsWrapper"
                   >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                     <ul
                       class="paginationNav pagination pagination-sm"
                       data-testid="pagination-nav"
@@ -2955,21 +3005,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       8/20/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseLarge"
                     >
                       5/26/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseSmall"
                     >
                       7/7/2020
                     </div>
                     <div
-                      class="DateRight"
+                      class="DateRight PhaseSmall"
                     >
                       8/20/2020
                     </div>
@@ -2978,17 +3030,17 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class="PastPhase"
+                      class="PhaseSmall PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class="PastPhase"
+                      class="PhaseLarge PastPhase"
                     >
                       Collection in progress
                     </div>
                     <div
-                      class=" CurrentPhase"
+                      class="PhaseSmall  CurrentPhase"
                     >
                       Collection over
                     </div>
@@ -2996,21 +3048,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       Integration
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseLarge"
                     >
                       Start of collection
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseSmall"
                     >
                       End of collection
                     </div>
                     <div
-                      class="LabelRight"
+                      class="LabelRight PhaseSmall"
                     >
                       End of processing
                     </div>
@@ -3045,17 +3099,20 @@ Object {
                           class="Clickable"
                           data-testid="mail-button"
                         >
-                          <th>
+                          <th
+                            class="ContactsLeftHeader"
+                          >
                             Functional box
                           </th>
                           <td
-                            class=" LightGreyLine"
+                            class=" LightGreyLine MailLink"
                           >
                             survey@mail.com
                           </td>
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             CPOS
@@ -3075,6 +3132,7 @@ Object {
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             Deputy CPOS
@@ -3107,7 +3165,15 @@ Object {
                 <div
                   class="Title"
                 >
-                  Interviewers
+                  <span>
+                    Interviewers
+                  </span>
+                  <button
+                    class="ExportButton btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
                 </div>
                 <div
                   class="row"
@@ -3174,7 +3240,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -3190,7 +3256,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -3205,7 +3271,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -3222,133 +3288,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -3384,12 +3450,6 @@ Object {
                 <div
                   class="tableOptionsWrapper"
                 >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
                   <ul
                     class="paginationNav pagination pagination-sm"
                     data-testid="pagination-nav"
@@ -3562,21 +3622,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         8/20/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseLarge"
                       >
                         5/26/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseSmall"
                       >
                         7/7/2020
                       </div>
                       <div
-                        class="DateRight"
+                        class="DateRight PhaseSmall"
                       >
                         8/20/2020
                       </div>
@@ -3585,17 +3647,17 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class="PastPhase"
+                        class="PhaseSmall PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class="PastPhase"
+                        class="PhaseLarge PastPhase"
                       >
                         Collection in progress
                       </div>
                       <div
-                        class=" CurrentPhase"
+                        class="PhaseSmall  CurrentPhase"
                       >
                         Collection over
                       </div>
@@ -3603,21 +3665,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         Integration
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseLarge"
                       >
                         Start of collection
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseSmall"
                       >
                         End of collection
                       </div>
                       <div
-                        class="LabelRight"
+                        class="LabelRight PhaseSmall"
                       >
                         End of processing
                       </div>
@@ -3652,17 +3716,20 @@ Object {
                             class="Clickable"
                             data-testid="mail-button"
                           >
-                            <th>
+                            <th
+                              class="ContactsLeftHeader"
+                            >
                               Functional box
                             </th>
                             <td
-                              class=" LightGreyLine"
+                              class=" LightGreyLine MailLink"
                             >
                               survey@mail.com
                             </td>
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               CPOS
@@ -3682,6 +3749,7 @@ Object {
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               Deputy CPOS
@@ -3714,7 +3782,15 @@ Object {
                   <div
                     class="Title"
                   >
-                    Interviewers
+                    <span>
+                      Interviewers
+                    </span>
+                    <button
+                      class="ExportButton btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
                   </div>
                   <div
                     class="row"
@@ -3781,7 +3857,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -3797,7 +3873,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -3812,7 +3888,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -3829,133 +3905,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -3991,12 +4067,6 @@ Object {
                   <div
                     class="tableOptionsWrapper"
                   >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                     <ul
                       class="paginationNav pagination pagination-sm"
                       data-testid="pagination-nav"
@@ -4026,7 +4096,7 @@ Object {
     </div>
     <a
       download="National_organizational_unit_Everyday_life_and_health_survey_2021_Repartition_enqueteurs_8202020.csv"
-      href="data:text/csv;charset=utf-8,Interviewer;Idep;SU%0ABoulanger%20Emilie;INTW9;55%0ABoulanger%20Jacques;INTW6;55%0ADelmarre%20Alphonse;INTW11;55%0ADupont%20Chlo%C3%A9;INTW5;84%0ADupont%20Ren%C3%A9e;INTW10;84%0AFabres%20Thierry;INTW7;76%0ARenard%20Bertrand;INTW8;84%0AUnassigned;%20;14%0AAbandoned;%20;%0ATotal%20organizational%20unit;%20;208"
+      href="data:text/csv;charset=utf-8,%EF%BB%BFInterviewer;Idep;SU%0ABoulanger%20Emilie;INTW9;55%0ABoulanger%20Jacques;INTW6;55%0ADelmarre%20Alphonse;INTW11;55%0ADupont%20Chlo%C3%A9;INTW5;84%0ADupont%20Ren%C3%A9e;INTW10;84%0AFabres%20Thierry;INTW7;76%0ARenard%20Bertrand;INTW8;84%0AUnassigned;%20;14%0AAbandoned;%20;%0ATotal%20organizational%20unit;%20;208"
     />
   </body>,
   "container": <div>
@@ -4116,21 +4186,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       8/20/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseLarge"
                     >
                       5/26/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseSmall"
                     >
                       7/7/2020
                     </div>
                     <div
-                      class="DateRight"
+                      class="DateRight PhaseSmall"
                     >
                       8/20/2020
                     </div>
@@ -4139,17 +4211,17 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class="PastPhase"
+                      class="PhaseSmall PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class="PastPhase"
+                      class="PhaseLarge PastPhase"
                     >
                       Collection in progress
                     </div>
                     <div
-                      class=" CurrentPhase"
+                      class="PhaseSmall  CurrentPhase"
                     >
                       Collection over
                     </div>
@@ -4157,21 +4229,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       Integration
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseLarge"
                     >
                       Start of collection
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseSmall"
                     >
                       End of collection
                     </div>
                     <div
-                      class="LabelRight"
+                      class="LabelRight PhaseSmall"
                     >
                       End of processing
                     </div>
@@ -4206,17 +4280,20 @@ Object {
                           class="Clickable"
                           data-testid="mail-button"
                         >
-                          <th>
+                          <th
+                            class="ContactsLeftHeader"
+                          >
                             Functional box
                           </th>
                           <td
-                            class=" LightGreyLine"
+                            class=" LightGreyLine MailLink"
                           >
                             survey@mail.com
                           </td>
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             CPOS
@@ -4236,6 +4313,7 @@ Object {
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             Deputy CPOS
@@ -4268,7 +4346,15 @@ Object {
                 <div
                   class="Title"
                 >
-                  Interviewers
+                  <span>
+                    Interviewers
+                  </span>
+                  <button
+                    class="ExportButton btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
                 </div>
                 <div
                   class="row"
@@ -4335,7 +4421,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -4351,7 +4437,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -4366,7 +4452,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -4383,133 +4469,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -4545,12 +4631,6 @@ Object {
                 <div
                   class="tableOptionsWrapper"
                 >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
                   <ul
                     class="paginationNav pagination pagination-sm"
                     data-testid="pagination-nav"
@@ -4731,21 +4811,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         8/20/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseLarge"
                       >
                         5/26/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseSmall"
                       >
                         7/7/2020
                       </div>
                       <div
-                        class="DateRight"
+                        class="DateRight PhaseSmall"
                       >
                         8/20/2020
                       </div>
@@ -4754,17 +4836,17 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class="PastPhase"
+                        class="PhaseSmall PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class="PastPhase"
+                        class="PhaseLarge PastPhase"
                       >
                         Collection in progress
                       </div>
                       <div
-                        class=" CurrentPhase"
+                        class="PhaseSmall  CurrentPhase"
                       >
                         Collection over
                       </div>
@@ -4772,21 +4854,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         Integration
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseLarge"
                       >
                         Start of collection
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseSmall"
                       >
                         End of collection
                       </div>
                       <div
-                        class="LabelRight"
+                        class="LabelRight PhaseSmall"
                       >
                         End of processing
                       </div>
@@ -4821,17 +4905,20 @@ Object {
                             class="Clickable"
                             data-testid="mail-button"
                           >
-                            <th>
+                            <th
+                              class="ContactsLeftHeader"
+                            >
                               Functional box
                             </th>
                             <td
-                              class=" LightGreyLine"
+                              class=" LightGreyLine MailLink"
                             >
                               survey@mail.com
                             </td>
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               CPOS
@@ -4851,6 +4938,7 @@ Object {
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               Deputy CPOS
@@ -4883,7 +4971,15 @@ Object {
                   <div
                     class="Title"
                   >
-                    Interviewers
+                    <span>
+                      Interviewers
+                    </span>
+                    <button
+                      class="ExportButton btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
                   </div>
                   <div
                     class="row"
@@ -4950,7 +5046,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -4966,7 +5062,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -4981,7 +5077,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -4998,133 +5094,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
@@ -5160,12 +5256,6 @@ Object {
                   <div
                     class="tableOptionsWrapper"
                   >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                     <ul
                       class="paginationNav pagination pagination-sm"
                       data-testid="pagination-nav"
@@ -5281,21 +5371,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       8/20/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseLarge"
                     >
                       5/26/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseSmall"
                     >
                       7/7/2020
                     </div>
                     <div
-                      class="DateRight"
+                      class="DateRight PhaseSmall"
                     >
                       8/20/2020
                     </div>
@@ -5304,17 +5396,17 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class="PastPhase"
+                      class="PhaseSmall PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class="PastPhase"
+                      class="PhaseLarge PastPhase"
                     >
                       Collection in progress
                     </div>
                     <div
-                      class=" CurrentPhase"
+                      class="PhaseSmall  CurrentPhase"
                     >
                       Collection over
                     </div>
@@ -5322,21 +5414,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       Integration
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseLarge"
                     >
                       Start of collection
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseSmall"
                     >
                       End of collection
                     </div>
                     <div
-                      class="LabelRight"
+                      class="LabelRight PhaseSmall"
                     >
                       End of processing
                     </div>
@@ -5371,17 +5465,20 @@ Object {
                           class="Clickable"
                           data-testid="mail-button"
                         >
-                          <th>
+                          <th
+                            class="ContactsLeftHeader"
+                          >
                             Functional box
                           </th>
                           <td
-                            class=" LightGreyLine"
+                            class=" LightGreyLine MailLink"
                           >
                             survey@mail.com
                           </td>
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             CPOS
@@ -5401,6 +5498,7 @@ Object {
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             Deputy CPOS
@@ -5433,7 +5531,15 @@ Object {
                 <div
                   class="Title"
                 >
-                  Interviewers
+                  <span>
+                    Interviewers
+                  </span>
+                  <button
+                    class="ExportButton btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
                 </div>
                 <div
                   class="row"
@@ -5500,7 +5606,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -5516,7 +5622,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -5531,7 +5637,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -5548,133 +5654,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
@@ -5710,12 +5816,6 @@ Object {
                 <div
                   class="tableOptionsWrapper"
                 >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
                   <ul
                     class="paginationNav pagination pagination-sm"
                     data-testid="pagination-nav"
@@ -5888,21 +5988,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         8/20/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseLarge"
                       >
                         5/14/2021
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseSmall"
                       >
                         1/13/2022
                       </div>
                       <div
-                        class="DateRight"
+                        class="DateRight PhaseSmall"
                       >
                         8/20/2020
                       </div>
@@ -5911,17 +6013,17 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class=" CurrentPhase"
+                        class="PhaseSmall  CurrentPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class=" "
+                        class="PhaseLarge  "
                       >
                         Collection in progress
                       </div>
                       <div
-                        class=""
+                        class="PhaseSmall "
                       >
                         Collection over
                       </div>
@@ -5929,21 +6031,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         Integration
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseLarge"
                       >
                         Start of collection
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseSmall"
                       >
                         End of collection
                       </div>
                       <div
-                        class="LabelRight"
+                        class="LabelRight PhaseSmall"
                       >
                         End of processing
                       </div>
@@ -5978,17 +6082,20 @@ Object {
                             class="Clickable"
                             data-testid="mail-button"
                           >
-                            <th>
+                            <th
+                              class="ContactsLeftHeader"
+                            >
                               Functional box
                             </th>
                             <td
-                              class=" LightGreyLine"
+                              class=" LightGreyLine MailLink"
                             >
                               survey@mail.com
                             </td>
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               CPOS
@@ -6008,6 +6115,7 @@ Object {
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               Deputy CPOS
@@ -6040,7 +6148,15 @@ Object {
                   <div
                     class="Title"
                   >
-                    Interviewers
+                    <span>
+                      Interviewers
+                    </span>
+                    <button
+                      class="ExportButton btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
                   </div>
                   <div
                     class="row"
@@ -6107,7 +6223,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -6123,7 +6239,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -6138,7 +6254,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -6155,133 +6271,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -6317,12 +6433,6 @@ Object {
                   <div
                     class="tableOptionsWrapper"
                   >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                     <ul
                       class="paginationNav pagination pagination-sm"
                       data-testid="pagination-nav"
@@ -6438,21 +6548,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       8/20/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseLarge"
                     >
                       5/14/2021
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseSmall"
                     >
                       1/13/2022
                     </div>
                     <div
-                      class="DateRight"
+                      class="DateRight PhaseSmall"
                     >
                       8/20/2020
                     </div>
@@ -6461,17 +6573,17 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class=" CurrentPhase"
+                      class="PhaseSmall  CurrentPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class=" "
+                      class="PhaseLarge  "
                     >
                       Collection in progress
                     </div>
                     <div
-                      class=""
+                      class="PhaseSmall "
                     >
                       Collection over
                     </div>
@@ -6479,21 +6591,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       Integration
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseLarge"
                     >
                       Start of collection
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseSmall"
                     >
                       End of collection
                     </div>
                     <div
-                      class="LabelRight"
+                      class="LabelRight PhaseSmall"
                     >
                       End of processing
                     </div>
@@ -6528,17 +6642,20 @@ Object {
                           class="Clickable"
                           data-testid="mail-button"
                         >
-                          <th>
+                          <th
+                            class="ContactsLeftHeader"
+                          >
                             Functional box
                           </th>
                           <td
-                            class=" LightGreyLine"
+                            class=" LightGreyLine MailLink"
                           >
                             survey@mail.com
                           </td>
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             CPOS
@@ -6558,6 +6675,7 @@ Object {
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             Deputy CPOS
@@ -6590,7 +6708,15 @@ Object {
                 <div
                   class="Title"
                 >
-                  Interviewers
+                  <span>
+                    Interviewers
+                  </span>
+                  <button
+                    class="ExportButton btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
                 </div>
                 <div
                   class="row"
@@ -6657,7 +6783,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -6673,7 +6799,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -6688,7 +6814,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -6705,133 +6831,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -6867,12 +6993,6 @@ Object {
                 <div
                   class="tableOptionsWrapper"
                 >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
                   <ul
                     class="paginationNav pagination pagination-sm"
                     data-testid="pagination-nav"
@@ -7045,21 +7165,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         8/20/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseLarge"
                       >
                         5/26/2020
                       </div>
                       <div
-                        class="DateCenter"
+                        class="DateCenter PhaseSmall"
                       >
                         5/26/2021
                       </div>
                       <div
-                        class="DateRight"
+                        class="DateRight PhaseSmall"
                       >
                         8/20/2020
                       </div>
@@ -7068,17 +7190,17 @@ Object {
                       id="PhaseDisplay"
                     >
                       <div
-                        class="PastPhase"
+                        class="PhaseSmall PastPhase"
                       >
                         Initial assignment
                       </div>
                       <div
-                        class=" CurrentPhase"
+                        class="PhaseLarge  CurrentPhase"
                       >
                         Collection in progress
                       </div>
                       <div
-                        class=""
+                        class="PhaseSmall "
                       >
                         Collection over
                       </div>
@@ -7086,21 +7208,23 @@ Object {
                     <div
                       id="PhaseMilestones"
                     >
-                      <div>
+                      <div
+                        class="PhaseSmall"
+                      >
                         Integration
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseLarge"
                       >
                         Start of collection
                       </div>
                       <div
-                        class="LabelCenter"
+                        class="LabelCenter PhaseSmall"
                       >
                         End of collection
                       </div>
                       <div
-                        class="LabelRight"
+                        class="LabelRight PhaseSmall"
                       >
                         End of processing
                       </div>
@@ -7135,17 +7259,20 @@ Object {
                             class="Clickable"
                             data-testid="mail-button"
                           >
-                            <th>
+                            <th
+                              class="ContactsLeftHeader"
+                            >
                               Functional box
                             </th>
                             <td
-                              class=" LightGreyLine"
+                              class=" LightGreyLine MailLink"
                             >
                               survey@mail.com
                             </td>
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               CPOS
@@ -7165,6 +7292,7 @@ Object {
                           </tr>
                           <tr>
                             <th
+                              class="VerticallyCentered ContactsLeftHeader"
                               rowspan="2"
                             >
                               Deputy CPOS
@@ -7197,7 +7325,15 @@ Object {
                   <div
                     class="Title"
                   >
-                    Interviewers
+                    <span>
+                      Interviewers
+                    </span>
+                    <button
+                      class="ExportButton btn btn-primary"
+                      type="button"
+                    >
+                      Export
+                    </button>
                   </div>
                   <div
                     class="row"
@@ -7264,7 +7400,7 @@ Object {
                       <tbody>
                         <tr>
                           <th
-                            class="Clickable"
+                            class="Clickable ColInterviewerName"
                             data-testid="TableHeader_interviewer_name_portal"
                           >
                             <span
@@ -7280,7 +7416,7 @@ Object {
                             Interviewer
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColIdep"
                           >
                             <span
                               class="sortIcon"
@@ -7295,7 +7431,7 @@ Object {
                             Idep
                           </th>
                           <th
-                            class="Clickable"
+                            class="Clickable ColUeNb"
                           >
                             <span
                               class="sortIcon"
@@ -7312,133 +7448,133 @@ Object {
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Emilie
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW9
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Boulanger
                              
                             Jacques
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW6
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Delmarre
                              
                             Alphonse
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW11
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             55
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Chloé
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW5
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Dupont
                              
                             Renée
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW10
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Fabres
                              
                             Thierry
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW7
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             76
                           </td>
                         </tr>
                         <tr>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColInterviewerName"
                           >
                             Renard
                              
                             Bertrand
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColIdep"
                           >
                             INTW8
                           </td>
                           <td
-                            class="LightGreyLine"
+                            class="LightGreyLine ColUeNb"
                           >
                             84
                           </td>
@@ -7474,12 +7610,6 @@ Object {
                   <div
                     class="tableOptionsWrapper"
                   >
-                    <button
-                      class="btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                     <ul
                       class="paginationNav pagination pagination-sm"
                       data-testid="pagination-nav"
@@ -7595,21 +7725,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       8/20/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseLarge"
                     >
                       5/26/2020
                     </div>
                     <div
-                      class="DateCenter"
+                      class="DateCenter PhaseSmall"
                     >
                       5/26/2021
                     </div>
                     <div
-                      class="DateRight"
+                      class="DateRight PhaseSmall"
                     >
                       8/20/2020
                     </div>
@@ -7618,17 +7750,17 @@ Object {
                     id="PhaseDisplay"
                   >
                     <div
-                      class="PastPhase"
+                      class="PhaseSmall PastPhase"
                     >
                       Initial assignment
                     </div>
                     <div
-                      class=" CurrentPhase"
+                      class="PhaseLarge  CurrentPhase"
                     >
                       Collection in progress
                     </div>
                     <div
-                      class=""
+                      class="PhaseSmall "
                     >
                       Collection over
                     </div>
@@ -7636,21 +7768,23 @@ Object {
                   <div
                     id="PhaseMilestones"
                   >
-                    <div>
+                    <div
+                      class="PhaseSmall"
+                    >
                       Integration
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseLarge"
                     >
                       Start of collection
                     </div>
                     <div
-                      class="LabelCenter"
+                      class="LabelCenter PhaseSmall"
                     >
                       End of collection
                     </div>
                     <div
-                      class="LabelRight"
+                      class="LabelRight PhaseSmall"
                     >
                       End of processing
                     </div>
@@ -7685,17 +7819,20 @@ Object {
                           class="Clickable"
                           data-testid="mail-button"
                         >
-                          <th>
+                          <th
+                            class="ContactsLeftHeader"
+                          >
                             Functional box
                           </th>
                           <td
-                            class=" LightGreyLine"
+                            class=" LightGreyLine MailLink"
                           >
                             survey@mail.com
                           </td>
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             CPOS
@@ -7715,6 +7852,7 @@ Object {
                         </tr>
                         <tr>
                           <th
+                            class="VerticallyCentered ContactsLeftHeader"
                             rowspan="2"
                           >
                             Deputy CPOS
@@ -7747,7 +7885,15 @@ Object {
                 <div
                   class="Title"
                 >
-                  Interviewers
+                  <span>
+                    Interviewers
+                  </span>
+                  <button
+                    class="ExportButton btn btn-primary"
+                    type="button"
+                  >
+                    Export
+                  </button>
                 </div>
                 <div
                   class="row"
@@ -7814,7 +7960,7 @@ Object {
                     <tbody>
                       <tr>
                         <th
-                          class="Clickable"
+                          class="Clickable ColInterviewerName"
                           data-testid="TableHeader_interviewer_name_portal"
                         >
                           <span
@@ -7830,7 +7976,7 @@ Object {
                           Interviewer
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColIdep"
                         >
                           <span
                             class="sortIcon"
@@ -7845,7 +7991,7 @@ Object {
                           Idep
                         </th>
                         <th
-                          class="Clickable"
+                          class="Clickable ColUeNb"
                         >
                           <span
                             class="sortIcon"
@@ -7862,133 +8008,133 @@ Object {
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Emilie
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW9
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Boulanger
                            
                           Jacques
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW6
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Delmarre
                            
                           Alphonse
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW11
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           55
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Chloé
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW5
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Dupont
                            
                           Renée
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW10
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Fabres
                            
                           Thierry
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW7
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           76
                         </td>
                       </tr>
                       <tr>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColInterviewerName"
                         >
                           Renard
                            
                           Bertrand
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColIdep"
                         >
                           INTW8
                         </td>
                         <td
-                          class="LightGreyLine"
+                          class="LightGreyLine ColUeNb"
                         >
                           84
                         </td>
@@ -8024,12 +8170,6 @@ Object {
                 <div
                   class="tableOptionsWrapper"
                 >
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                  >
-                    Export
-                  </button>
                   <ul
                     class="paginationNav pagination pagination-sm"
                     data-testid="pagination-nav"

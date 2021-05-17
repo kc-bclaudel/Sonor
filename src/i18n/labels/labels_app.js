@@ -1,5 +1,5 @@
 const app = {
-  //Keycloak
+  // Keycloak
   cannotAuth: {
     fr: 'Autentification impossible',
     en: 'Unable to authenticate',
@@ -40,6 +40,11 @@ const app = {
     fr: 'Choisir une enquête',
     en: 'Choose a survey',
   },
+  // Interviewer selector
+  chooseAnInterviewer: {
+    fr: 'Choisir un enquêteur',
+    en: 'Choose an interviewer',
+  },
   // Validate button
   validate: {
     fr: 'Valider',
@@ -66,6 +71,14 @@ const app = {
   initializing: {
     fr: 'Initialisation ...',
     en: 'Initializing...',
+  },
+  yes: {
+    fr: 'Oui',
+    en: 'Yes',
+  },
+  no: {
+    fr: 'Non',
+    en: 'No',
   },
 };
 

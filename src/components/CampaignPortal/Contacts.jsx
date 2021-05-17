@@ -26,19 +26,19 @@ function Contacts() {
                 data-testid="mail-button"
                 onClick={() => { window.location.assign('mailto:survey@mail.com'); }}
               >
-                <th>{D.functionalBox}</th>
-                <td className=" LightGreyLine">survey@mail.com</td>
+                <th className="ContactsLeftHeader">{D.functionalBox}</th>
+                <td className=" LightGreyLine MailLink">survey@mail.com</td>
               </tr>
             </OverlayTrigger>
             <tr>
-              <th rowSpan="2">{D.cpos}</th>
+              <th rowSpan="2" className="VerticallyCentered ContactsLeftHeader">{D.cpos}</th>
               <td className="LightGreyLine">Chloé Dupont</td>
             </tr>
             <tr>
               <td className="LightGreyLine">01 01 01 01 01</td>
             </tr>
             <tr>
-              <th rowSpan="2">{D.deputyCpos}</th>
+              <th rowSpan="2" className="VerticallyCentered ContactsLeftHeader">{D.deputyCpos}</th>
               <td className="LightGreyLine">Thierry Fabres</td>
             </tr>
             <tr>

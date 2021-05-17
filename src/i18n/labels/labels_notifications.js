@@ -23,9 +23,17 @@ const alert = {
     fr: 'Notifier',
     en: 'Notify',
   },
+  notifyInterviewers: {
+    fr: 'Notifier aux enquêteurs',
+    en: 'Notify interviewers',
+  },
   history: {
     fr: 'Historique',
     en: 'History',
+  },
+  notifyAll: {
+    fr: 'Tous',
+    en: 'All',
   },
 
 };

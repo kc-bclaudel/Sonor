@@ -7,7 +7,9 @@ import Header from '../Header/Header';
 import MainScreen from '../MainScreen/MainScreen';
 import CampaignPortal from '../CampaignPortal/CampaignPortal';
 import ListSU from '../ListSU/ListSU';
+import Close from '../Close/Close';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
+import CollectionTable from '../CollectionTable/CollectionTable';
 import Review from '../Review/Review';
 import Remind from '../Remind/Remind';
 import Notifications from '../Notifications/Notifications';
@@ -22,18 +24,19 @@ class View extends React.Component {
     this.state = {
       showPreferences: false,
       preferences: {},
-      prefsUpdated: false,
+      redirect: null,
     };
     this.dataRetreiver = new DataFormatter(props.keycloak);
   }
 
   componentDidMount() {
+    this.componentIsMounted = true;
     this.loadPreferences();
   }
 
   loadPreferences() {
     this.dataRetreiver.getPreferences((preferences) => {
-      this.setState({ preferences, prefsUpdated: true });
+      this.setState({ preferences, redirect: <Redirect to="/" /> });
     });
   }
 
@@ -57,20 +60,16 @@ class View extends React.Component {
   }
 
   render() {
-    const { showPreferences, preferences, prefsUpdated } = this.state;
+    const { showPreferences, preferences, redirect } = this.state;
     const { userData } = this.props;
-    let redirect;
-    if (prefsUpdated) {
-      redirect = <Redirect to="/" />;
-      this.setState({ prefsUpdated: false });
-    }
     return (
-      <div>
+      <>
         <Router>
           {redirect}
           <div>
             <Header
               user={userData}
+              dataRetreiver={this.dataRetreiver}
               showPreferences={() => {
                 this.showPreferences();
               }}
@@ -79,10 +78,12 @@ class View extends React.Component {
               <Route path="/review/:id?" component={(routeProps) => <Review dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/followUp" component={(routeProps) => <Remind dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/follow" component={(routeProps) => <MonitoringTable dataRetreiver={this.dataRetreiver} {...routeProps} />} />
+              <Route path="/collection" component={(routeProps) => <CollectionTable dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/terminated/:id" component={(routeProps) => <Terminated dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/listSU/:id" component={(routeProps) => <ListSU dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/portal/:id" component={(routeProps) => <CampaignPortal dataRetreiver={this.dataRetreiver} {...routeProps} />} />
-              <Route path="/notifications" component={(routeProps) => <Notifications dataRetreiver={this.dataRetreiver} {...routeProps} />} />
+              <Route path="/notifications" component={(routeProps) => <Notifications dataRetreiver={this.dataRetreiver} {...routeProps} user={userData}/>} />
+              <Route path="/close" component={(routeProps) => <Close dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/" component={() => <MainScreen preferences={preferences} dataRetreiver={this.dataRetreiver} />} />
             </Switch>
           </div>
@@ -94,7 +95,7 @@ class View extends React.Component {
           updatePreferences={(prefs) => this.updatePreferences(prefs)}
         />
         <NotificationContainer />
-      </div>
+      </>
     );
   }
 }

@@ -57,9 +57,11 @@ textarea {
 
 #mainCard {
   position: relative;
+  display:inline-block;
   left: 5%;
   right:5%;
   width:90%;
+  height: 75%;
 }
 
 .card{
@@ -75,6 +77,8 @@ textarea {
 
 #mailCardCol{
   max-width: 50%;
+  display: inline-block;
+  width: 50%;
 }
 
 #messageHistory{
@@ -91,4 +95,18 @@ td {
 
 .sender{
   width: 50px; 
+}
+
+#historyCol{
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+#notificationReturnButton{
+  margin: 0 0 10px 15px
+}
+
+.HistoryLine{
+  cursor: pointer;
 }

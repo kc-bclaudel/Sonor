@@ -1,0 +1,53 @@
+{
+  "organizationUnits": [
+    {
+      "idDem": "OU-SOUTH",
+      "labelDem": "South region organizational unit",
+      "isLocal": true,
+      "inaCount": 3,
+      "refCount": 7,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+      "total": 104
+    },
+    {
+      "idDem": "OU-NORTH",
+      "labelDem": "North region organizational unit",
+      "isLocal": true,
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+      "total": 88
+    },
+    {
+      "idDem": "OU-NATIONAL",
+      "labelDem": "National organizational unit",
+      "isLocal": false,
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+      "total": 104
+    }
+  ],
+  "france": {
+      "inaCount": 3,
+      "refCount": 2,
+      "impCount": 5,
+      "iniCount":11,
+      "alaCount": 9,
+      "wamCount": 7,
+      "oosCount": 8,
+    "total": 104
+  }
+}

@@ -74,7 +74,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             Page in development
           </div>
@@ -152,7 +152,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           Page in development
         </div>

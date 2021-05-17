@@ -12,7 +12,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -57,7 +57,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader ColSurvey"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionStartDate"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionEndDate"
+                  />
+                  <th
+                    class="EmptyHeader ColEndDate"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColPhase"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable ColSurvey"
                   >
                     <span
                       class="sortIcon"
@@ -73,10 +105,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable ColCollectionStartDate"
                   >
                     <span
                       class="sortIcon"
@@ -91,8 +122,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable ColCollectionEndDate"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -107,7 +138,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable ColEndDate"
                   >
                     <span
                       class="sortIcon"
@@ -123,11 +154,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    class="Clickable"
-                    rowspan="2"
+                    class="Clickable ColPhase"
                   >
                     <span
                       class="sortIcon"
@@ -143,17 +172,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
-                  <th
-                    class="Clickable"
+                    class="Clickable ColAllocated"
                   >
                     <span
                       class="sortIcon"
@@ -168,7 +189,7 @@ Object {
                     Allocated
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToProcessInterviewer"
                   >
                     <span
                       class="sortIcon"
@@ -183,7 +204,7 @@ Object {
                     To treat by interviewer
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToAffect"
                   >
                     <span
                       class="sortIcon"
@@ -198,7 +219,7 @@ Object {
                     To be assigned
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToFollowUp"
                   >
                     <span
                       class="sortIcon"
@@ -213,7 +234,7 @@ Object {
                     To follow up
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToReview"
                   >
                     <span
                       class="sortIcon"
@@ -228,7 +249,7 @@ Object {
                     To be reviewed
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColFinalized"
                   >
                     <span
                       class="sortIcon"
@@ -248,7 +269,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs202fgd1x00"
                     >
@@ -258,21 +281,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
@@ -282,7 +311,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     />
@@ -290,38 +321,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs202fgd1x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs202fgd1x00"
                     >
@@ -332,7 +375,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2021x00"
                     >
@@ -342,21 +387,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
@@ -366,7 +417,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     />
@@ -374,38 +427,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2021x00"
                     >
@@ -416,7 +481,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2qfsdfsqe021x00"
                     >
@@ -426,21 +493,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
@@ -450,7 +523,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     />
@@ -458,38 +533,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2qfsdfsqe021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2qfsdfsqe021x00"
                     >
@@ -500,7 +587,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsosfqns2020x00"
                     >
@@ -510,21 +599,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
@@ -534,7 +629,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     />
@@ -542,38 +639,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsosfqns2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsosfqns2020x00"
                     >
@@ -584,7 +693,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsonqsdfsqes2020x00"
                     >
@@ -594,21 +705,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
@@ -618,7 +735,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     />
@@ -626,38 +745,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsonqsdfsqes2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsonqsdfsqes2020x00"
                     >
@@ -668,7 +799,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsons2020x00"
                     >
@@ -678,21 +811,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
@@ -702,7 +841,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     />
@@ -710,38 +851,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsons2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsons2020x00"
                     >
@@ -787,7 +940,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -832,7 +985,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader ColSurvey"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColCollectionStartDate"
+                />
+                <th
+                  class="EmptyHeader ColCollectionEndDate"
+                />
+                <th
+                  class="EmptyHeader ColEndDate"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColPhase"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable ColSurvey"
                 >
                   <span
                     class="sortIcon"
@@ -848,10 +1033,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable ColCollectionStartDate"
                 >
                   <span
                     class="sortIcon"
@@ -866,8 +1050,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable ColCollectionEndDate"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -882,7 +1066,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable ColEndDate"
                 >
                   <span
                     class="sortIcon"
@@ -898,11 +1082,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  class="Clickable"
-                  rowspan="2"
+                  class="Clickable ColPhase"
                 >
                   <span
                     class="sortIcon"
@@ -918,17 +1100,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
-                <th
-                  class="Clickable"
+                  class="Clickable ColAllocated"
                 >
                   <span
                     class="sortIcon"
@@ -943,7 +1117,7 @@ Object {
                   Allocated
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToProcessInterviewer"
                 >
                   <span
                     class="sortIcon"
@@ -958,7 +1132,7 @@ Object {
                   To treat by interviewer
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToAffect"
                 >
                   <span
                     class="sortIcon"
@@ -973,7 +1147,7 @@ Object {
                   To be assigned
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToFollowUp"
                 >
                   <span
                     class="sortIcon"
@@ -988,7 +1162,7 @@ Object {
                   To follow up
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToReview"
                 >
                   <span
                     class="sortIcon"
@@ -1003,7 +1177,7 @@ Object {
                   To be reviewed
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColFinalized"
                 >
                   <span
                     class="sortIcon"
@@ -1023,7 +1197,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs202fgd1x00"
                   >
@@ -1033,21 +1209,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
@@ -1057,7 +1239,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   />
@@ -1065,38 +1249,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs202fgd1x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs202fgd1x00"
                   >
@@ -1107,7 +1303,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2021x00"
                   >
@@ -1117,21 +1315,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
@@ -1141,7 +1345,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   />
@@ -1149,38 +1355,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2021x00"
                   >
@@ -1191,7 +1409,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2qfsdfsqe021x00"
                   >
@@ -1201,21 +1421,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
@@ -1225,7 +1451,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   />
@@ -1233,38 +1461,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2qfsdfsqe021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2qfsdfsqe021x00"
                   >
@@ -1275,7 +1515,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsosfqns2020x00"
                   >
@@ -1285,21 +1527,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
@@ -1309,7 +1557,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   />
@@ -1317,38 +1567,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsosfqns2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsosfqns2020x00"
                   >
@@ -1359,7 +1621,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsonqsdfsqes2020x00"
                   >
@@ -1369,21 +1633,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
@@ -1393,7 +1663,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   />
@@ -1401,38 +1673,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsonqsdfsqes2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsonqsdfsqes2020x00"
                   >
@@ -1443,7 +1727,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsons2020x00"
                   >
@@ -1453,21 +1739,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
@@ -1477,7 +1769,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   />
@@ -1485,38 +1779,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsons2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsons2020x00"
                   >
@@ -1619,7 +1925,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -1664,7 +1970,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader ColSurvey"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionStartDate"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionEndDate"
+                  />
+                  <th
+                    class="EmptyHeader ColEndDate"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColPhase"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable ColSurvey"
                   >
                     <span
                       class="sortIcon"
@@ -1680,10 +2018,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable ColCollectionStartDate"
                   >
                     <span
                       class="sortIcon"
@@ -1698,8 +2035,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable ColCollectionEndDate"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -1714,7 +2051,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable ColEndDate"
                   >
                     <span
                       class="sortIcon"
@@ -1730,11 +2067,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    class="Clickable"
-                    rowspan="2"
+                    class="Clickable ColPhase"
                   >
                     <span
                       class="sortIcon"
@@ -1750,17 +2085,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
-                  <th
-                    class="Clickable"
+                    class="Clickable ColAllocated"
                   >
                     <span
                       class="sortIcon"
@@ -1775,7 +2102,7 @@ Object {
                     Allocated
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToProcessInterviewer"
                   >
                     <span
                       class="sortIcon"
@@ -1790,7 +2117,7 @@ Object {
                     To treat by interviewer
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToAffect"
                   >
                     <span
                       class="sortIcon"
@@ -1805,7 +2132,7 @@ Object {
                     To be assigned
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToFollowUp"
                   >
                     <span
                       class="sortIcon"
@@ -1820,7 +2147,7 @@ Object {
                     To follow up
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToReview"
                   >
                     <span
                       class="sortIcon"
@@ -1835,7 +2162,7 @@ Object {
                     To be reviewed
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColFinalized"
                   >
                     <span
                       class="sortIcon"
@@ -1855,7 +2182,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs202fgd1x00"
                     >
@@ -1865,21 +2194,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
@@ -1889,7 +2224,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     />
@@ -1897,38 +2234,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs202fgd1x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs202fgd1x00"
                     >
@@ -1939,7 +2288,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2021x00"
                     >
@@ -1949,21 +2300,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
@@ -1973,7 +2330,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     />
@@ -1981,38 +2340,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2021x00"
                     >
@@ -2023,7 +2394,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2qfsdfsqe021x00"
                     >
@@ -2033,21 +2406,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
@@ -2057,7 +2436,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     />
@@ -2065,38 +2446,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2qfsdfsqe021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2qfsdfsqe021x00"
                     >
@@ -2107,7 +2500,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsosfqns2020x00"
                     >
@@ -2117,21 +2512,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
@@ -2141,7 +2542,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     />
@@ -2149,38 +2552,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsosfqns2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsosfqns2020x00"
                     >
@@ -2191,7 +2606,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsonqsdfsqes2020x00"
                     >
@@ -2201,21 +2618,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
@@ -2225,7 +2648,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     />
@@ -2233,38 +2658,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsonqsdfsqes2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsonqsdfsqes2020x00"
                     >
@@ -2275,7 +2712,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsons2020x00"
                     >
@@ -2285,21 +2724,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
@@ -2309,7 +2754,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     />
@@ -2317,38 +2764,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsons2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsons2020x00"
                     >
@@ -2394,7 +2853,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -2439,7 +2898,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader ColSurvey"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColCollectionStartDate"
+                />
+                <th
+                  class="EmptyHeader ColCollectionEndDate"
+                />
+                <th
+                  class="EmptyHeader ColEndDate"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColPhase"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable ColSurvey"
                 >
                   <span
                     class="sortIcon"
@@ -2455,10 +2946,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable ColCollectionStartDate"
                 >
                   <span
                     class="sortIcon"
@@ -2473,8 +2963,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable ColCollectionEndDate"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -2489,7 +2979,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable ColEndDate"
                 >
                   <span
                     class="sortIcon"
@@ -2505,11 +2995,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  class="Clickable"
-                  rowspan="2"
+                  class="Clickable ColPhase"
                 >
                   <span
                     class="sortIcon"
@@ -2525,17 +3013,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
-                <th
-                  class="Clickable"
+                  class="Clickable ColAllocated"
                 >
                   <span
                     class="sortIcon"
@@ -2550,7 +3030,7 @@ Object {
                   Allocated
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToProcessInterviewer"
                 >
                   <span
                     class="sortIcon"
@@ -2565,7 +3045,7 @@ Object {
                   To treat by interviewer
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToAffect"
                 >
                   <span
                     class="sortIcon"
@@ -2580,7 +3060,7 @@ Object {
                   To be assigned
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToFollowUp"
                 >
                   <span
                     class="sortIcon"
@@ -2595,7 +3075,7 @@ Object {
                   To follow up
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToReview"
                 >
                   <span
                     class="sortIcon"
@@ -2610,7 +3090,7 @@ Object {
                   To be reviewed
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColFinalized"
                 >
                   <span
                     class="sortIcon"
@@ -2630,7 +3110,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs202fgd1x00"
                   >
@@ -2640,21 +3122,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
@@ -2664,7 +3152,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   />
@@ -2672,38 +3162,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs202fgd1x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs202fgd1x00"
                   >
@@ -2714,7 +3216,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2021x00"
                   >
@@ -2724,21 +3228,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
@@ -2748,7 +3258,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   />
@@ -2756,38 +3268,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2021x00"
                   >
@@ -2798,7 +3322,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2qfsdfsqe021x00"
                   >
@@ -2808,21 +3334,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
@@ -2832,7 +3364,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   />
@@ -2840,38 +3374,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2qfsdfsqe021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2qfsdfsqe021x00"
                   >
@@ -2882,7 +3428,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsosfqns2020x00"
                   >
@@ -2892,21 +3440,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
@@ -2916,7 +3470,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   />
@@ -2924,38 +3480,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsosfqns2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsosfqns2020x00"
                   >
@@ -2966,7 +3534,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsonqsdfsqes2020x00"
                   >
@@ -2976,21 +3546,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
@@ -3000,7 +3576,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   />
@@ -3008,38 +3586,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsonqsdfsqes2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsonqsdfsqes2020x00"
                   >
@@ -3050,7 +3640,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsons2020x00"
                   >
@@ -3060,21 +3652,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
@@ -3084,7 +3682,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   />
@@ -3092,38 +3692,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsons2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsons2020x00"
                   >
@@ -3226,7 +3838,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -3271,7 +3883,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader ColSurvey"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionStartDate"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionEndDate"
+                  />
+                  <th
+                    class="EmptyHeader ColEndDate"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColPhase"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable ColSurvey"
                   >
                     <span
                       class="sortIcon"
@@ -3287,10 +3931,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable ColCollectionStartDate"
                   >
                     <span
                       class="sortIcon"
@@ -3305,8 +3948,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable ColCollectionEndDate"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -3321,7 +3964,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable ColEndDate"
                   >
                     <span
                       class="sortIcon"
@@ -3337,11 +3980,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    class="Clickable"
-                    rowspan="2"
+                    class="Clickable ColPhase"
                   >
                     <span
                       class="sortIcon"
@@ -3357,17 +3998,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
-                  <th
-                    class="Clickable"
+                    class="Clickable ColAllocated"
                   >
                     <span
                       class="sortIcon"
@@ -3382,7 +4015,7 @@ Object {
                     Allocated
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToProcessInterviewer"
                   >
                     <span
                       class="sortIcon"
@@ -3397,7 +4030,7 @@ Object {
                     To treat by interviewer
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToAffect"
                   >
                     <span
                       class="sortIcon"
@@ -3412,7 +4045,7 @@ Object {
                     To be assigned
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToFollowUp"
                   >
                     <span
                       class="sortIcon"
@@ -3427,7 +4060,7 @@ Object {
                     To follow up
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToReview"
                   >
                     <span
                       class="sortIcon"
@@ -3442,7 +4075,7 @@ Object {
                     To be reviewed
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColFinalized"
                   >
                     <span
                       class="sortIcon"
@@ -3462,7 +4095,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs202fgd1x00"
                     >
@@ -3472,21 +4107,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
@@ -3496,7 +4137,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     />
@@ -3504,38 +4147,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs202fgd1x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs202fgd1x00"
                     >
@@ -3546,7 +4201,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2021x00"
                     >
@@ -3556,21 +4213,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
@@ -3580,7 +4243,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     />
@@ -3588,38 +4253,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2021x00"
                     >
@@ -3630,7 +4307,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2qfsdfsqe021x00"
                     >
@@ -3640,21 +4319,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
@@ -3664,7 +4349,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     />
@@ -3672,38 +4359,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2qfsdfsqe021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2qfsdfsqe021x00"
                     >
@@ -3714,7 +4413,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsosfqns2020x00"
                     >
@@ -3724,21 +4425,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
@@ -3748,7 +4455,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     />
@@ -3756,38 +4465,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsosfqns2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsosfqns2020x00"
                     >
@@ -3798,7 +4519,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsonqsdfsqes2020x00"
                     >
@@ -3808,21 +4531,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
@@ -3832,7 +4561,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     />
@@ -3840,38 +4571,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsonqsdfsqes2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsonqsdfsqes2020x00"
                     >
@@ -3882,7 +4625,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsons2020x00"
                     >
@@ -3892,21 +4637,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
@@ -3916,7 +4667,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     />
@@ -3924,38 +4677,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsons2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsons2020x00"
                     >
@@ -4001,7 +4766,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -4046,7 +4811,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader ColSurvey"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColCollectionStartDate"
+                />
+                <th
+                  class="EmptyHeader ColCollectionEndDate"
+                />
+                <th
+                  class="EmptyHeader ColEndDate"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColPhase"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable ColSurvey"
                 >
                   <span
                     class="sortIcon"
@@ -4062,10 +4859,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable ColCollectionStartDate"
                 >
                   <span
                     class="sortIcon"
@@ -4080,8 +4876,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable ColCollectionEndDate"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -4096,7 +4892,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable ColEndDate"
                 >
                   <span
                     class="sortIcon"
@@ -4112,11 +4908,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  class="Clickable"
-                  rowspan="2"
+                  class="Clickable ColPhase"
                 >
                   <span
                     class="sortIcon"
@@ -4132,17 +4926,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
-                <th
-                  class="Clickable"
+                  class="Clickable ColAllocated"
                 >
                   <span
                     class="sortIcon"
@@ -4157,7 +4943,7 @@ Object {
                   Allocated
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToProcessInterviewer"
                 >
                   <span
                     class="sortIcon"
@@ -4172,7 +4958,7 @@ Object {
                   To treat by interviewer
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToAffect"
                 >
                   <span
                     class="sortIcon"
@@ -4187,7 +4973,7 @@ Object {
                   To be assigned
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToFollowUp"
                 >
                   <span
                     class="sortIcon"
@@ -4202,7 +4988,7 @@ Object {
                   To follow up
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToReview"
                 >
                   <span
                     class="sortIcon"
@@ -4217,7 +5003,7 @@ Object {
                   To be reviewed
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColFinalized"
                 >
                   <span
                     class="sortIcon"
@@ -4237,7 +5023,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs202fgd1x00"
                   >
@@ -4247,21 +5035,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
@@ -4271,7 +5065,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   />
@@ -4279,38 +5075,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs202fgd1x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs202fgd1x00"
                   >
@@ -4321,7 +5129,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2021x00"
                   >
@@ -4331,21 +5141,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
@@ -4355,7 +5171,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   />
@@ -4363,38 +5181,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2021x00"
                   >
@@ -4405,7 +5235,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2qfsdfsqe021x00"
                   >
@@ -4415,21 +5247,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
@@ -4439,7 +5277,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   />
@@ -4447,38 +5287,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2qfsdfsqe021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2qfsdfsqe021x00"
                   >
@@ -4489,7 +5341,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsosfqns2020x00"
                   >
@@ -4499,21 +5353,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
@@ -4523,7 +5383,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   />
@@ -4531,38 +5393,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsosfqns2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsosfqns2020x00"
                   >
@@ -4573,7 +5447,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsonqsdfsqes2020x00"
                   >
@@ -4583,21 +5459,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
@@ -4607,7 +5489,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   />
@@ -4615,38 +5499,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsonqsdfsqes2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsonqsdfsqes2020x00"
                   >
@@ -4657,7 +5553,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsons2020x00"
                   >
@@ -4667,21 +5565,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
@@ -4691,7 +5595,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   />
@@ -4699,38 +5605,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsons2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsons2020x00"
                   >
@@ -4873,7 +5791,7 @@ Object {
           class="ViewCard card"
         >
           <div
-            class="card-title h5"
+            class="PageTitle card-title h5"
           >
             List of surveys
           </div>
@@ -4918,7 +5836,39 @@ Object {
               <thead>
                 <tr>
                   <th
-                    rowspan="2"
+                    class="EmptyHeader ColSurvey"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionStartDate"
+                  />
+                  <th
+                    class="EmptyHeader ColCollectionEndDate"
+                  />
+                  <th
+                    class="EmptyHeader ColEndDate"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="EmptyHeader ColPhase"
+                  />
+                  <th
+                    class="ColumnSpacing"
+                  />
+                  <th
+                    class="CenteredText"
+                    colspan="6"
+                  >
+                    Survey Units
+                  </th>
+                </tr>
+                <tr>
+                  <th
+                    class="Clickable ColSurvey"
                   >
                     <span
                       class="sortIcon"
@@ -4934,10 +5884,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    rowspan="2"
+                    class="Clickable ColCollectionStartDate"
                   >
                     <span
                       class="sortIcon"
@@ -4952,8 +5901,8 @@ Object {
                     Collection start date
                   </th>
                   <th
+                    class="Clickable ColCollectionEndDate"
                     data-testid="Header-collection-end-date"
-                    rowspan="2"
                   >
                     <span
                       class="sortIcon"
@@ -4968,7 +5917,7 @@ Object {
                     Collection end date
                   </th>
                   <th
-                    rowspan="2"
+                    class="Clickable ColEndDate"
                   >
                     <span
                       class="sortIcon"
@@ -4984,11 +5933,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    class="Clickable"
-                    rowspan="2"
+                    class="Clickable ColPhase"
                   >
                     <span
                       class="sortIcon"
@@ -5004,17 +5951,9 @@ Object {
                   </th>
                   <th
                     class="ColumnSpacing"
-                    rowspan="2"
                   />
                   <th
-                    colspan="6"
-                  >
-                    Survey Units
-                  </th>
-                </tr>
-                <tr>
-                  <th
-                    class="Clickable"
+                    class="Clickable ColAllocated"
                   >
                     <span
                       class="sortIcon"
@@ -5029,7 +5968,7 @@ Object {
                     Allocated
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToProcessInterviewer"
                   >
                     <span
                       class="sortIcon"
@@ -5044,7 +5983,7 @@ Object {
                     To treat by interviewer
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToAffect"
                   >
                     <span
                       class="sortIcon"
@@ -5059,7 +5998,7 @@ Object {
                     To be assigned
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToFollowUp"
                   >
                     <span
                       class="sortIcon"
@@ -5074,7 +6013,7 @@ Object {
                     To follow up
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColToReview"
                   >
                     <span
                       class="sortIcon"
@@ -5089,7 +6028,7 @@ Object {
                     To be reviewed
                   </th>
                   <th
-                    class="Clickable"
+                    class="Clickable ColFinalized"
                   >
                     <span
                       class="sortIcon"
@@ -5109,7 +6048,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs202fgd1x00"
                     >
@@ -5119,21 +6060,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     >
@@ -5143,7 +6090,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs202fgd1x00"
                     />
@@ -5151,38 +6100,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs202fgd1x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs202fgd1x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs202fgd1x00"
                     >
@@ -5193,7 +6154,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2021x00"
                     >
@@ -5203,21 +6166,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     >
@@ -5227,7 +6196,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2021x00"
                     />
@@ -5235,38 +6206,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2021x00"
                     >
@@ -5277,7 +6260,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/vqs2qfsdfsqe021x00"
                     >
@@ -5287,21 +6272,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     >
@@ -5311,7 +6302,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/vqs2qfsdfsqe021x00"
                     />
@@ -5319,38 +6312,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/vqs2qfsdfsqe021x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/vqs2qfsdfsqe021x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/vqs2qfsdfsqe021x00"
                     >
@@ -5361,7 +6366,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsosfqns2020x00"
                     >
@@ -5371,21 +6378,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     >
@@ -5395,7 +6408,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsosfqns2020x00"
                     />
@@ -5403,38 +6418,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsosfqns2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsosfqns2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsosfqns2020x00"
                     >
@@ -5445,7 +6472,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsonqsdfsqes2020x00"
                     >
@@ -5455,21 +6484,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     >
@@ -5479,7 +6514,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsonqsdfsqes2020x00"
                     />
@@ -5487,38 +6524,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsonqsdfsqes2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsonqsdfsqes2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsonqsdfsqes2020x00"
                     >
@@ -5529,7 +6578,9 @@ Object {
                 <tr
                   class="WithTableLink"
                 >
-                  <td>
+                  <td
+                    class="ColSurvey"
+                  >
                     <a
                       href="/follow/sites/simpsons2020x00"
                     >
@@ -5539,21 +6590,27 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColCollectionStartDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2020
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColCollectionEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
                       1/1/2022
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColEndDate"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     >
@@ -5563,7 +6620,9 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColPhase"
+                  >
                     <a
                       href="/portal/simpsons2020x00"
                     />
@@ -5571,38 +6630,50 @@ Object {
                   <td
                     class="ColumnSpacing"
                   />
-                  <td>
+                  <td
+                    class="ColAllocated"
+                  >
                     <a
                       href="/listSU/simpsons2020x00"
                     >
                       4
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToProcessInterviewer"
+                  >
                     <a
                       href="/follow/campaign/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToAffect"
+                  >
                     0
                   </td>
-                  <td>
+                  <td
+                    class="ColToFollowUp"
+                  >
                     <a
                       href="/followUp/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColToReview"
+                  >
                     <a
                       href="/review/simpsons2020x00"
                     >
                       0
                     </a>
                   </td>
-                  <td>
+                  <td
+                    class="ColFinalized"
+                  >
                     <a
                       href="/terminated/simpsons2020x00"
                     >
@@ -5648,7 +6719,7 @@ Object {
         class="ViewCard card"
       >
         <div
-          class="card-title h5"
+          class="PageTitle card-title h5"
         >
           List of surveys
         </div>
@@ -5693,7 +6764,39 @@ Object {
             <thead>
               <tr>
                 <th
-                  rowspan="2"
+                  class="EmptyHeader ColSurvey"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColCollectionStartDate"
+                />
+                <th
+                  class="EmptyHeader ColCollectionEndDate"
+                />
+                <th
+                  class="EmptyHeader ColEndDate"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="EmptyHeader ColPhase"
+                />
+                <th
+                  class="ColumnSpacing"
+                />
+                <th
+                  class="CenteredText"
+                  colspan="6"
+                >
+                  Survey Units
+                </th>
+              </tr>
+              <tr>
+                <th
+                  class="Clickable ColSurvey"
                 >
                   <span
                     class="sortIcon"
@@ -5709,10 +6812,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  rowspan="2"
+                  class="Clickable ColCollectionStartDate"
                 >
                   <span
                     class="sortIcon"
@@ -5727,8 +6829,8 @@ Object {
                   Collection start date
                 </th>
                 <th
+                  class="Clickable ColCollectionEndDate"
                   data-testid="Header-collection-end-date"
-                  rowspan="2"
                 >
                   <span
                     class="sortIcon"
@@ -5743,7 +6845,7 @@ Object {
                   Collection end date
                 </th>
                 <th
-                  rowspan="2"
+                  class="Clickable ColEndDate"
                 >
                   <span
                     class="sortIcon"
@@ -5759,11 +6861,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  class="Clickable"
-                  rowspan="2"
+                  class="Clickable ColPhase"
                 >
                   <span
                     class="sortIcon"
@@ -5779,17 +6879,9 @@ Object {
                 </th>
                 <th
                   class="ColumnSpacing"
-                  rowspan="2"
                 />
                 <th
-                  colspan="6"
-                >
-                  Survey Units
-                </th>
-              </tr>
-              <tr>
-                <th
-                  class="Clickable"
+                  class="Clickable ColAllocated"
                 >
                   <span
                     class="sortIcon"
@@ -5804,7 +6896,7 @@ Object {
                   Allocated
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToProcessInterviewer"
                 >
                   <span
                     class="sortIcon"
@@ -5819,7 +6911,7 @@ Object {
                   To treat by interviewer
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToAffect"
                 >
                   <span
                     class="sortIcon"
@@ -5834,7 +6926,7 @@ Object {
                   To be assigned
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToFollowUp"
                 >
                   <span
                     class="sortIcon"
@@ -5849,7 +6941,7 @@ Object {
                   To follow up
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColToReview"
                 >
                   <span
                     class="sortIcon"
@@ -5864,7 +6956,7 @@ Object {
                   To be reviewed
                 </th>
                 <th
-                  class="Clickable"
+                  class="Clickable ColFinalized"
                 >
                   <span
                     class="sortIcon"
@@ -5884,7 +6976,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs202fgd1x00"
                   >
@@ -5894,21 +6988,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   >
@@ -5918,7 +7018,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs202fgd1x00"
                   />
@@ -5926,38 +7028,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs202fgd1x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs202fgd1x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs202fgd1x00"
                   >
@@ -5968,7 +7082,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2021x00"
                   >
@@ -5978,21 +7094,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   >
@@ -6002,7 +7124,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2021x00"
                   />
@@ -6010,38 +7134,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2021x00"
                   >
@@ -6052,7 +7188,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/vqs2qfsdfsqe021x00"
                   >
@@ -6062,21 +7200,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   >
@@ -6086,7 +7230,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/vqs2qfsdfsqe021x00"
                   />
@@ -6094,38 +7240,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/vqs2qfsdfsqe021x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/vqs2qfsdfsqe021x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/vqs2qfsdfsqe021x00"
                   >
@@ -6136,7 +7294,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsosfqns2020x00"
                   >
@@ -6146,21 +7306,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   >
@@ -6170,7 +7336,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsosfqns2020x00"
                   />
@@ -6178,38 +7346,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsosfqns2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsosfqns2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsosfqns2020x00"
                   >
@@ -6220,7 +7400,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsonqsdfsqes2020x00"
                   >
@@ -6230,21 +7412,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   >
@@ -6254,7 +7442,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsonqsdfsqes2020x00"
                   />
@@ -6262,38 +7452,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsonqsdfsqes2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsonqsdfsqes2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsonqsdfsqes2020x00"
                   >
@@ -6304,7 +7506,9 @@ Object {
               <tr
                 class="WithTableLink"
               >
-                <td>
+                <td
+                  class="ColSurvey"
+                >
                   <a
                     href="/follow/sites/simpsons2020x00"
                   >
@@ -6314,21 +7518,27 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColCollectionStartDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2020
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColCollectionEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
                     1/1/2022
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColEndDate"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   >
@@ -6338,7 +7548,9 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColPhase"
+                >
                   <a
                     href="/portal/simpsons2020x00"
                   />
@@ -6346,38 +7558,50 @@ Object {
                 <td
                   class="ColumnSpacing"
                 />
-                <td>
+                <td
+                  class="ColAllocated"
+                >
                   <a
                     href="/listSU/simpsons2020x00"
                   >
                     4
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToProcessInterviewer"
+                >
                   <a
                     href="/follow/campaign/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToAffect"
+                >
                   0
                 </td>
-                <td>
+                <td
+                  class="ColToFollowUp"
+                >
                   <a
                     href="/followUp/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColToReview"
+                >
                   <a
                     href="/review/simpsons2020x00"
                   >
                     0
                   </a>
                 </td>
-                <td>
+                <td
+                  class="ColFinalized"
+                >
                   <a
                     href="/terminated/simpsons2020x00"
                   >

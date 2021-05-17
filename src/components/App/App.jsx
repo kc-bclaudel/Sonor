@@ -41,10 +41,13 @@ class App extends React.Component {
           this.setState({ keycloak, authenticated, data });
         });
         // Update 20 seconds before expiracy
-        const updateInterval = (keycloak.tokenParsed.exp + keycloak.timeSkew) * 1000 - new Date().getTime() - 20000;
+        const updateInterval = (keycloak.tokenParsed.exp + keycloak.timeSkew)
+          * 1000
+          - new Date().getTime()
+          - 20000;
         setInterval(() => {
           keycloak.updateToken(100).error(() => {
-            console.error('Failed to refresh token');
+            throw new Error('Failed to refresh token');
           });
         }, updateInterval);
       });

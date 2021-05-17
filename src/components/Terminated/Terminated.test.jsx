@@ -7,7 +7,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import DataFormatter from '../../utils/DataFormatter';
 import Terminated from './Terminated';
-import mocks from '../../tests/mock_responses';
+import mocks from '../../tests/mocks';
 
 const history = createMemoryHistory();
 

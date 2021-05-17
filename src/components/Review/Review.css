@@ -1,0 +1,27 @@
+.CheckboxCol{
+ width: 20px;
+}
+
+#btnValider:disabled{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+
+/* Column sizes */
+
+#Review .CheckboxCol{
+  width: 1%;
+}
+#Review .ColCampaign{
+  width: 40%;
+}
+#Review .ColId{
+  width: 23%;
+}
+#Review .ColInterviewer{
+  width: 35%;
+}
+#Review .ColAction{
+  width: 1%;
+}

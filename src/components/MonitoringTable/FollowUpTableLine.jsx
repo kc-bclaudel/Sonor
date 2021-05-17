@@ -23,24 +23,24 @@ function FollowUpTableLine({ data }) {
     : null;
   return (
     <tr>
-      <td>{interviewerName || survey || site}</td>
+      <td className="ColFirstCol">{interviewerName || survey || site}</td>
       <td className="ColumnSpacing" />
-      <td>
+      <td className="ColCompletionRate">
         {(completionRate * 100).toFixed(1)}
         %
       </td>
       <td className="ColumnSpacing" />
-      <td>{total}</td>
-      <td>{notStarted}</td>
-      <td>{onGoing}</td>
-      <td>{waitingForIntValidation}</td>
-      <td>{intValidated}</td>
-      <td>{demValidated}</td>
+      <td className="ColAllocated">{total}</td>
+      <td className="ColNotStarted">{notStarted}</td>
+      <td className="ColOngoing">{onGoing}</td>
+      <td className="ColWaitingForIntVal">{waitingForIntValidation}</td>
+      <td className="ColIntVal">{intValidated}</td>
+      <td className="ColDemVal">{demValidated}</td>
       <td className="ColumnSpacing" />
-      <td>{preparingContact}</td>
-      <td>{atLeastOneContact}</td>
-      <td>{appointmentTaken}</td>
-      <td>{interviewStarted}</td>
+      <td className="ColPreparingContact">{preparingContact}</td>
+      <td className="ColAtLeastOneContact">{atLeastOneContact}</td>
+      <td className="ColAppointmentTaken">{appointmentTaken}</td>
+      <td className="ColInterviewStarted">{interviewStarted}</td>
     </tr>
   );
 }

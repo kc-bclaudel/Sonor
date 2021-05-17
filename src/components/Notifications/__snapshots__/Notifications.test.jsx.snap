@@ -1,0 +1,1365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Change page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        id="Container"
+      >
+        <a
+          class="ButtonLink ReturnButtonLink"
+          href="/"
+        >
+          <button
+            class="ReturnButton btn btn-primary"
+            data-testid="return-button"
+            id="notificationReturnButton"
+            type="button"
+          >
+            Back
+          </button>
+        </a>
+        <div
+          class="card"
+          id="mainCard"
+        >
+          <div
+            class="col"
+            id="mailCardCol"
+          >
+            <div
+              class="card"
+              id="mailCard"
+            >
+              <div
+                class="card-title h5"
+              >
+                Notify interviewers
+              </div>
+              <span>
+                Recipients : 
+              </span>
+              <div
+                id="recipientWrapper"
+              >
+                <div
+                  class="rbt"
+                  style="outline: none; position: relative;"
+                  tabindex="-1"
+                >
+                  <div
+                    class="rbt-input-multi form-control rbt-input form-control-sm"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="rbt-input-wrapper"
+                    >
+                      <div
+                        style="display: flex; flex: 1; height: 100%; position: relative;"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-haspopup="listbox"
+                          autocomplete="off"
+                          class="rbt-input-main"
+                          style="background-color: transparent; border: 0px; box-shadow: none; cursor: inherit; outline: none; padding: 0px; width: 100%; z-index: 1;"
+                          type="text"
+                          value=""
+                        />
+                        <input
+                          aria-hidden="true"
+                          class="rbt-input-hint"
+                          readonly=""
+                          style="background-color: transparent; border-color: transparent; box-shadow: none; color: rgba(0, 0, 0, 0.35); left: 0px; pointer-events: none; position: absolute; top: 0px; width: 100%; border-style: inset inset inset inset; border-width: 0px 0px 0px 0px; line-height: normal; padding: 0px 0px 0px 0px;"
+                          tabindex="-1"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span>
+                Message : 
+              </span>
+              <textarea
+                id="message"
+                type="textarea"
+              />
+              <button
+                class="btn btn-primary"
+                id="sendButton"
+                type="button"
+              >
+                <i
+                  class="fa fa-fw fa-paper-plane"
+                />
+                 
+                Send
+              </button>
+            </div>
+          </div>
+          <div
+            class="col"
+            id="historyCol"
+          >
+            <div
+              class="card"
+              id="NotificationHistory"
+            >
+              <div
+                class="card-title h5"
+              >
+                History
+              </div>
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="messageHistory"
+                >
+                  <tbody>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h32
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW3 (Gerald Edwards)
+                      </td>
+                      <td>
+                        test 7
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tableOptionsWrapper"
+              >
+                <ul
+                  class="paginationNav pagination pagination-sm"
+                  data-testid="pagination-nav"
+                >
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      1
+                    </a>
+                  </li>
+                  <li
+                    class="page-item active"
+                  >
+                    <span
+                      class="page-link"
+                    >
+                      2
+                      <span
+                        class="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="textwidth"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      id="Container"
+    >
+      <a
+        class="ButtonLink ReturnButtonLink"
+        href="/"
+      >
+        <button
+          class="ReturnButton btn btn-primary"
+          data-testid="return-button"
+          id="notificationReturnButton"
+          type="button"
+        >
+          Back
+        </button>
+      </a>
+      <div
+        class="card"
+        id="mainCard"
+      >
+        <div
+          class="col"
+          id="mailCardCol"
+        >
+          <div
+            class="card"
+            id="mailCard"
+          >
+            <div
+              class="card-title h5"
+            >
+              Notify interviewers
+            </div>
+            <span>
+              Recipients : 
+            </span>
+            <div
+              id="recipientWrapper"
+            >
+              <div
+                class="rbt"
+                style="outline: none; position: relative;"
+                tabindex="-1"
+              >
+                <div
+                  class="rbt-input-multi form-control rbt-input form-control-sm"
+                  tabindex="-1"
+                >
+                  <div
+                    class="rbt-input-wrapper"
+                  >
+                    <div
+                      style="display: flex; flex: 1; height: 100%; position: relative;"
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-haspopup="listbox"
+                        autocomplete="off"
+                        class="rbt-input-main"
+                        style="background-color: transparent; border: 0px; box-shadow: none; cursor: inherit; outline: none; padding: 0px; width: 100%; z-index: 1;"
+                        type="text"
+                        value=""
+                      />
+                      <input
+                        aria-hidden="true"
+                        class="rbt-input-hint"
+                        readonly=""
+                        style="background-color: transparent; border-color: transparent; box-shadow: none; color: rgba(0, 0, 0, 0.35); left: 0px; pointer-events: none; position: absolute; top: 0px; width: 100%; border-style: inset inset inset inset; border-width: 0px 0px 0px 0px; line-height: normal; padding: 0px 0px 0px 0px;"
+                        tabindex="-1"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span>
+              Message : 
+            </span>
+            <textarea
+              id="message"
+              type="textarea"
+            />
+            <button
+              class="btn btn-primary"
+              id="sendButton"
+              type="button"
+            >
+              <i
+                class="fa fa-fw fa-paper-plane"
+              />
+               
+              Send
+            </button>
+          </div>
+        </div>
+        <div
+          class="col"
+          id="historyCol"
+        >
+          <div
+            class="card"
+            id="NotificationHistory"
+          >
+            <div
+              class="card-title h5"
+            >
+              History
+            </div>
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="messageHistory"
+              >
+                <tbody>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h32
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW3 (Gerald Edwards)
+                    </td>
+                    <td>
+                      test 7
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    1
+                  </a>
+                </li>
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    2
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="textwidth"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Component is correctly displayed 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        id="Container"
+      >
+        <a
+          class="ButtonLink ReturnButtonLink"
+          href="/"
+        >
+          <button
+            class="ReturnButton btn btn-primary"
+            data-testid="return-button"
+            id="notificationReturnButton"
+            type="button"
+          >
+            Back
+          </button>
+        </a>
+        <div
+          class="card"
+          id="mainCard"
+        >
+          <div
+            class="col"
+            id="mailCardCol"
+          >
+            <div
+              class="card"
+              id="mailCard"
+            >
+              <div
+                class="card-title h5"
+              >
+                Notify interviewers
+              </div>
+              <span>
+                Recipients : 
+              </span>
+              <div
+                id="recipientWrapper"
+              >
+                <div
+                  class="rbt"
+                  style="outline: none; position: relative;"
+                  tabindex="-1"
+                >
+                  <div
+                    class="rbt-input-multi form-control rbt-input form-control-sm"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="rbt-input-wrapper"
+                    >
+                      <div
+                        style="display: flex; flex: 1; height: 100%; position: relative;"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-haspopup="listbox"
+                          autocomplete="off"
+                          class="rbt-input-main"
+                          style="background-color: transparent; border: 0px; box-shadow: none; cursor: inherit; outline: none; padding: 0px; width: 100%; z-index: 1;"
+                          type="text"
+                          value=""
+                        />
+                        <input
+                          aria-hidden="true"
+                          class="rbt-input-hint"
+                          readonly=""
+                          style="background-color: transparent; border-color: transparent; box-shadow: none; color: rgba(0, 0, 0, 0.35); left: 0px; pointer-events: none; position: absolute; top: 0px; width: 100%; border-style: inset inset inset inset; border-width: 0px 0px 0px 0px; line-height: normal; padding: 0px 0px 0px 0px;"
+                          tabindex="-1"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span>
+                Message : 
+              </span>
+              <textarea
+                id="message"
+                type="textarea"
+              />
+              <button
+                class="btn btn-primary"
+                id="sendButton"
+                type="button"
+              >
+                <i
+                  class="fa fa-fw fa-paper-plane"
+                />
+                 
+                Send
+              </button>
+            </div>
+          </div>
+          <div
+            class="col"
+            id="historyCol"
+          >
+            <div
+              class="card"
+              id="NotificationHistory"
+            >
+              <div
+                class="card-title h5"
+              >
+                History
+              </div>
+              <div
+                class="table-responsive"
+              >
+                <table
+                  class="CustomTable table table-sm table-striped table-bordered table-hover"
+                  id="messageHistory"
+                >
+                  <tbody>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h32
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW3 (Gerald Edwards)
+                      </td>
+                      <td>
+                        test 7
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h31
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @vqs2021x00 (Everyday life and he...)
+                      </td>
+                      <td>
+                        test 6
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h31
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW3 (Gerald Edwards)
+                      </td>
+                      <td>
+                        test 5
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h31
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW4 (Melody Grant)
+                      </td>
+                      <td>
+                        test 4
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h31
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW2 (Carlton Campbell)
+                      </td>
+                      <td>
+                        test 3
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h31
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW1 (Margie Lucas)
+                      </td>
+                      <td>
+                        test 2
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h30
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW1 (Margie Lucas)
+                      </td>
+                      <td>
+                        test
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h30
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @INTW1 (Margie Lucas)
+                      </td>
+                      <td>
+                        test
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/28/ 08h30
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @OU-NATIONAL (National organizatio...)
+                      </td>
+                      <td>
+                        message 3
+                      </td>
+                    </tr>
+                    <tr
+                      class="HistoryLine"
+                    >
+                      <td
+                        class="time"
+                      >
+                        4/27/ 16h27
+                      </td>
+                      <td
+                        class="sender"
+                      >
+                        <b>
+                          From: 
+                        </b>
+                      </td>
+                      <td
+                        class="recipients"
+                      >
+                        <b>
+                          To: 
+                        </b>
+                        @simpsons2020x00 (Survey on the Simpso...)
+                      </td>
+                      <td>
+                        message de test
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="tableOptionsWrapper"
+              >
+                <ul
+                  class="paginationNav pagination pagination-sm"
+                  data-testid="pagination-nav"
+                >
+                  <li
+                    class="page-item active"
+                  >
+                    <span
+                      class="page-link"
+                    >
+                      1
+                      <span
+                        class="sr-only"
+                      >
+                        (current)
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="page-item"
+                  >
+                    <a
+                      class="page-link"
+                      href="#"
+                      role="button"
+                    >
+                      2
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="textwidth"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      id="Container"
+    >
+      <a
+        class="ButtonLink ReturnButtonLink"
+        href="/"
+      >
+        <button
+          class="ReturnButton btn btn-primary"
+          data-testid="return-button"
+          id="notificationReturnButton"
+          type="button"
+        >
+          Back
+        </button>
+      </a>
+      <div
+        class="card"
+        id="mainCard"
+      >
+        <div
+          class="col"
+          id="mailCardCol"
+        >
+          <div
+            class="card"
+            id="mailCard"
+          >
+            <div
+              class="card-title h5"
+            >
+              Notify interviewers
+            </div>
+            <span>
+              Recipients : 
+            </span>
+            <div
+              id="recipientWrapper"
+            >
+              <div
+                class="rbt"
+                style="outline: none; position: relative;"
+                tabindex="-1"
+              >
+                <div
+                  class="rbt-input-multi form-control rbt-input form-control-sm"
+                  tabindex="-1"
+                >
+                  <div
+                    class="rbt-input-wrapper"
+                  >
+                    <div
+                      style="display: flex; flex: 1; height: 100%; position: relative;"
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-haspopup="listbox"
+                        autocomplete="off"
+                        class="rbt-input-main"
+                        style="background-color: transparent; border: 0px; box-shadow: none; cursor: inherit; outline: none; padding: 0px; width: 100%; z-index: 1;"
+                        type="text"
+                        value=""
+                      />
+                      <input
+                        aria-hidden="true"
+                        class="rbt-input-hint"
+                        readonly=""
+                        style="background-color: transparent; border-color: transparent; box-shadow: none; color: rgba(0, 0, 0, 0.35); left: 0px; pointer-events: none; position: absolute; top: 0px; width: 100%; border-style: inset inset inset inset; border-width: 0px 0px 0px 0px; line-height: normal; padding: 0px 0px 0px 0px;"
+                        tabindex="-1"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span>
+              Message : 
+            </span>
+            <textarea
+              id="message"
+              type="textarea"
+            />
+            <button
+              class="btn btn-primary"
+              id="sendButton"
+              type="button"
+            >
+              <i
+                class="fa fa-fw fa-paper-plane"
+              />
+               
+              Send
+            </button>
+          </div>
+        </div>
+        <div
+          class="col"
+          id="historyCol"
+        >
+          <div
+            class="card"
+            id="NotificationHistory"
+          >
+            <div
+              class="card-title h5"
+            >
+              History
+            </div>
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="CustomTable table table-sm table-striped table-bordered table-hover"
+                id="messageHistory"
+              >
+                <tbody>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h32
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW3 (Gerald Edwards)
+                    </td>
+                    <td>
+                      test 7
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h31
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @vqs2021x00 (Everyday life and he...)
+                    </td>
+                    <td>
+                      test 6
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h31
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW3 (Gerald Edwards)
+                    </td>
+                    <td>
+                      test 5
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h31
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW4 (Melody Grant)
+                    </td>
+                    <td>
+                      test 4
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h31
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW2 (Carlton Campbell)
+                    </td>
+                    <td>
+                      test 3
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h31
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW1 (Margie Lucas)
+                    </td>
+                    <td>
+                      test 2
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h30
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW1 (Margie Lucas)
+                    </td>
+                    <td>
+                      test
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h30
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @INTW1 (Margie Lucas)
+                    </td>
+                    <td>
+                      test
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/28/ 08h30
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @OU-NATIONAL (National organizatio...)
+                    </td>
+                    <td>
+                      message 3
+                    </td>
+                  </tr>
+                  <tr
+                    class="HistoryLine"
+                  >
+                    <td
+                      class="time"
+                    >
+                      4/27/ 16h27
+                    </td>
+                    <td
+                      class="sender"
+                    >
+                      <b>
+                        From: 
+                      </b>
+                    </td>
+                    <td
+                      class="recipients"
+                    >
+                      <b>
+                        To: 
+                      </b>
+                      @simpsons2020x00 (Survey on the Simpso...)
+                    </td>
+                    <td>
+                      message de test
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="tableOptionsWrapper"
+            >
+              <ul
+                class="paginationNav pagination pagination-sm"
+                data-testid="pagination-nav"
+              >
+                <li
+                  class="page-item active"
+                >
+                  <span
+                    class="page-link"
+                  >
+                    1
+                    <span
+                      class="sr-only"
+                    >
+                      (current)
+                    </span>
+                  </span>
+                </li>
+                <li
+                  class="page-item"
+                >
+                  <a
+                    class="page-link"
+                    href="#"
+                    role="button"
+                  >
+                    2
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="textwidth"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
