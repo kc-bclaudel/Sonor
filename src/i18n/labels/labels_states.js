@@ -1,4 +1,4 @@
-const labelesStates = {
+const labelsStates = {
   NVM: {
     fr: 'UE non visible gestionnaire',
     en: 'Not visible to management',
@@ -77,4 +77,4 @@ const labelesStates = {
   },
 };
 
-export default labelesStates;
+export default labelsStates;

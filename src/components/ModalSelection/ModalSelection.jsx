@@ -68,7 +68,7 @@ function ModalSelection({
                     }}
                   />
                 )
-  }
+            }
           </Modal.Body>
         </Modal>
       </>

@@ -1,6 +1,6 @@
-const monitoringTable = {
+const collectionTable = {
   collectionTableIntroductionSentence: {
-    fr: 'Statistique sur les unités traitées par les enquêteurs ou clôturées par le site en date du : ',
+    fr: 'Statistique sur les unités traitées par les enquêteurs ou closes par le site en date du : ',
     en: 'Statistics on units processed by interviewers or closed by site at the date : ',
   },
   collectionRate: {
@@ -52,7 +52,7 @@ const monitoringTable = {
     en: 'Other reason',
   },
   totalClosed: {
-    fr: 'Total clôturées',
+    fr: 'Total closes',
     en: 'Total closed',
   },
   surveyUnitsProcessedInterviewer: {
@@ -60,9 +60,9 @@ const monitoringTable = {
     en: 'Survey units processed interviewer',
   },
   surveyUnitsClosedManagement: {
-    fr: 'Unités enquqêtées clôturées gestionnaire',
+    fr: 'Unités enquêtées closes gestionnaire',
     en: 'Survey units closed by management',
   },
 };
 
-export default monitoringTable;
+export default collectionTable;

@@ -106,7 +106,7 @@ class CloseSUTable extends React.Component {
 
   handleExport() {
     const { data } = this.props;
-    const fileLabel = 'UE_à_cloturer';
+    const fileLabel = 'UE_à_clore';
     const title = `${fileLabel}_${new Date().toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
     const table = makeTableForExport(data);
     const csvContent = `data:text/csv;charset=utf-8,\ufeff${table.map((e) => e.join(';')).join('\n')}`;
@@ -205,13 +205,13 @@ class CloseSUTable extends React.Component {
                         {D.ssech}
                         <SortIcon val="ssech" sort={sort} />
                       </th>
-                      <th onClick={handleSortFunct('location')} className="Clickable ColLocation">
-                        {D.department}
-                        <SortIcon val="location" sort={sort} />
+                      <th onClick={handleSortFunct('contact_outcome')} className="Clickable ColLocation">
+                        {D.contactOutcome}
+                        <SortIcon val="contact_outcome" sort={sort} />
                       </th>
-                      <th onClick={handleSortFunct('city')} className="Clickable ColCity">
-                        {D.town}
-                        <SortIcon val="city" sort={sort} />
+                      <th onClick={handleSortFunct('questionnaire_state')} className="Clickable ColCity">
+                        {D.questionnaireState}
+                        <SortIcon val="questionnaire_state" sort={sort} />
                       </th>
                       <th onClick={handleSortFunct('state')} className="Clickable ColState">
                         {D.state}

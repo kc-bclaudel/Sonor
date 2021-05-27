@@ -145,6 +145,7 @@ class DataFormatter {
             ? su.interviewer.id
             : '',
           state: su.state,
+          closingCause: su.closingCause,
         }));
         resolve(Utils.sortData(processedData, 'id', true));
       });
@@ -692,6 +693,88 @@ class DataFormatter {
               },
             );
           });
+      });
+  }
+
+  async getDataForProvisionalStatusTable(chosenElm, givenDate, pagination, mode, cb) {
+    // Adding 24h to take all states added before the next day into account
+    const date = givenDate + 86400000;
+    switch (mode) {
+      case BY_INTERVIEWER_ONE_SURVEY:
+        this.getDataForProvisionalStatusTableByInterviewerOneSuvey(chosenElm, date, (data) => {
+          console.log(data);
+          cb(data);
+        });
+        break;
+      case BY_SURVEY_ONE_INTERVIEWER:
+        this.getDataForProvisionalStatusTableBySurveyOneInterviewer(chosenElm, date, (data) => {
+          console.log(data);
+          cb(data);
+        });
+        break;
+      default:
+        cb();
+    }
+  }
+
+  async getDataForProvisionalStatusTableByInterviewerOneSuvey(survey, date, cb) {
+    this.service.getInterviewersByCampaign(survey.id).then((interviewers) => {
+      const promises = interviewers.map((interviewer) => new Promise((resolve) => {
+        const datas = [
+          { interviewer },
+          this.service.getClosingCausesByInterviewer(
+            survey.id,
+            interviewer.id,
+            date,
+          ),
+        ];
+        Promise.all(datas).then((data) => {
+          resolve(
+            Utils.formatForProvisionalStatusTable(
+              data[0],
+              data[1],
+            ),
+          );
+        });
+      }));
+      Promise.all(promises).then((data) => {
+        cb({
+          linesDetails: data
+            .filter((lineData) => lineData.allocated)
+            .map((lineData) => lineData),
+        });
+      });
+    });
+  }
+
+  async getDataForProvisionalStatusTableBySurveyOneInterviewer(interviewer, date, cb) {
+    this.service.getCampaignsByInterviewer(interviewer.id)
+      .then((campaigns) => {
+        const promises = campaigns.map((c) => new Promise((resolve) => {
+          const datas = [
+            { survey: c.label },
+            this.service.getClosingCausesByInterviewer(
+              c.id,
+              interviewer.id,
+              date,
+            ),
+          ];
+          Promise.all(datas).then((data) => {
+            resolve(
+              Utils.formatForProvisionalStatusTable(
+                data[0],
+                data[1],
+              ),
+            );
+          });
+        }));
+        Promise.all(promises).then((data) => {
+          cb({
+            linesDetails: data
+              .filter((lineData) => lineData.total)
+              .map((lineData) => lineData),
+          });
+        });
       });
   }
 

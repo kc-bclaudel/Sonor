@@ -51,6 +51,14 @@ const listSU = {
     fr: 'Annuler',
     en: 'Cancel',
   },
+  contactOutcome: {
+    fr: 'Issue des contacts',
+    en: 'Contact outcome',
+  },
+  questionnaireState: {
+    fr: 'État du questionnaire',
+    en: 'Questionnaire state',
+  },
 };
 
 export default listSU;

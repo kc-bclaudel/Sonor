@@ -133,7 +133,7 @@ function CollectionTableDisplay({
           <th rowSpan="2" className="ColumnSpacing" />
           <th colSpan="6" className="CenteredText">{D.surveyUnitsProcessedInterviewer}</th>
           <th rowSpan="2" className="ColumnSpacing" />
-          <th colSpan="3" className="CenteredText">{D.surveyUnitsProcessedInterviewer}</th>
+          <th colSpan="3" className="CenteredText">{D.surveyUnitsClosedManagement}</th>
           <th rowSpan="2" className="ColumnSpacing" />
           <th className="EmptyHeader" />
         </tr>

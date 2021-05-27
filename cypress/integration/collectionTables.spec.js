@@ -1,7 +1,7 @@
 import D from '../../src/i18n';
 
 context('sonor', () => {
-  it('Test monitoring tables', () => {
+  it('Test collection tables', () => {
     cy.server()
       .route('GET', '**/api/user', 'fixture:getUser.json')
       .as('get-user');
