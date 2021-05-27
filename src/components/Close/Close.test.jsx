@@ -118,7 +118,7 @@ it('Export table', async () => {
   const removeElmMock = jest.fn();
   HTMLAnchorElement.prototype.remove = removeElmMock;
 
-  const fileTitle = 'UE_à_cloturer_8202020.csv';
+  const fileTitle = 'UE_à_clore_8202020.csv';
   const fileContent = 'data:text/csv;charset=utf-8,%EF%BB%BFSurvey;Identifier;Interviewer;Ssech;Department;Town;Provisional%20state%0ASimpsons;1023;Dupont%20Chlo%C3%A9;hgSkR29;95;MONTMORENCY;ANS%0ASimpsons;4811;Boulanger%20Jacques;dlcB55jdf;90;BELFORT;ANS%0ASimpsons;1024;Dupont%20Chlo%C3%A9;hgSkR29;95;MONTMORENCY;ANS%0AVQS;4812;Boulanger%20Jacques;dlcB55jdf;90;BELFORT;ANS%0AVQS;1025;Dupont%20Chlo%C3%A9;hgSkR29;95;MONTMORENCY;ANS%0AVQS;4813;Boulanger%20Jacques;dlcB55jdf;90;BELFORT;ANS%0AVQS;1027;Dupont%20Chlo%C3%A9;hgSkR29;95;MONTMORENCY;ANS%0AVQS;4815;Fabres%20Thierry;dlcB55jdf;90;BELFORT;ANS%0AVQS;1028;Dupont%20Chlo%C3%A9;hgSkR29;95;MONTMORENCY;ANS%0AVQS;4816;Boulanger%20Jacques;dlcB55jdf;90;BELFORT;ANS%0AVQS;1029;Fabres%20Thierry;hgSkR29;95;MONTMORENCY;ANS%0AVQS;4817;Boulanger%20Jacques;dlcB55jdf;90;BELFORT;ANS%0AVQS;1030;Dupont%20Chlo%C3%A9;hgSkR29;95;MONTMORENCY;ANS%0ALC%202020;4818;Boulanger%20Jacques;dlcB55jdf;90;BELFORT;ANS%0ALC%202020;1032;Dupont%20Chlo%C3%A9;hgSkR29;95;MONTMORENCY;ANS%0ALC%202020;4819;Boulanger%20Jacques;dlcB55jdf;90;BELFORT;ANS';
   screen.getByTestId('export-button').click();
   const downnloadLink = component.baseElement.querySelector('a[download]');

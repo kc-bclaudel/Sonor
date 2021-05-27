@@ -411,8 +411,34 @@ class Service {
         });
     });
   }
-  // ----------------------------- //
+  // ---------------------------- //
   // Contact outcomes service end //
+  // ---------------------------- //
+
+  // ---------------------------- //
+  // Closing causes service start //
+  // ---------------------------- //
+  getClosingCausesByInterviewer(campaignId, idep, date, cb) {
+    return new Promise((resolve) => {
+      fetch(`${baseUrlPearlJam}/api/campaign/${campaignId}/survey-units/interviewer/${idep}/closing-causes?date=${date}`, this.makeOptions())
+        .then((res) => res.json())
+        .then((data) => {
+          if (cb) {
+            cb(data);
+          }
+          resolve(data);
+        })
+        .catch((e) => {
+          console.log(e);
+          if (cb) {
+            cb(null);
+          }
+          resolve(null);
+        });
+    });
+  }
+  // ----------------------------- //
+  // Closing causes service end //
   // ----------------------------- //
 
   // --------------------------- //

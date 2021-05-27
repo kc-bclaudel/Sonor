@@ -1,7 +1,7 @@
 import D from '../../src/i18n';
 
 context('sonor', () => {
-  it('Test finalized', () => {
+  it('Test Close', () => {
     cy.server()
       .route('GET', '**/api/user', 'fixture:getUser.json')
       .as('get-user');
@@ -21,7 +21,6 @@ context('sonor', () => {
     cy.server()
       .route('PUT', '**/api/survey-unit/1024/close/NPA', 'fixture:status200.json')
       .as('close-1024');
-    
     cy.server()
       .route('PUT', '**/api/survey-unit/4815/close/NPA', 'fixture:status200.json')
       .as('close-4815');

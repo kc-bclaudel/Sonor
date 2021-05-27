@@ -8,7 +8,7 @@ const header = {
     en: 'Interviewers',
   },
   close2: {
-    fr: 'Clôturer',
+    fr: 'Clore',
     en: 'Close',
   },
   progression: {
@@ -63,6 +63,10 @@ const header = {
     fr: 'Collecte par enquêteur',
     en: 'Collection by interviewer',
   },
+  provisionalStatusByInterviewer: {
+    fr: 'Status provisoire par enquêteur',
+    en: 'Provisional status by interviewer',
+  },
   unitsToAffect: {
     fr: 'Unités à affecter',
     en: 'Units to affect',
@@ -90,6 +94,10 @@ const header = {
   progressBySurvey: {
     fr: 'Avancement par enquête',
     en: 'Progress by survey',
+  },
+  provisionalStatusBySurvey: {
+    fr: 'Status provisoire par enquête',
+    en: 'Provisional status by survey',
   },
   collection: {
     fr: 'Collecte',

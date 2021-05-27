@@ -47,14 +47,14 @@ function ListSU({
     setData(sortedData);
   }, [data, sort]);
 
-  function validateChangingState(lstSUChangingState, state) {
-    let closingCause;
-    if (state === D.NPA) {
-      closingCause = 'NPA';
-    } else if (state === D.NPI) {
-      closingCause = 'NPI';
+  function validateChangingState(lstSUChangingState, closingCause) {
+    let cc;
+    if (closingCause === D.NPA) {
+      cc = 'NPA';
+    } else if (closingCause === D.NPI) {
+      cc = 'NPI';
     }
-    dataRetreiver.tagWithClosingCauseSurveyUnits(lstSUChangingState, closingCause)
+    dataRetreiver.tagWithClosingCauseSurveyUnits(lstSUChangingState, cc)
       .then((response) => {
         if (response.some(
           (res) => !(res.status === 200 || res.status === 201 || res.status === 204),

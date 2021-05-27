@@ -338,7 +338,6 @@ export default ({ config, db }) => {
     res.json(mockResponse);
   });
 
-  //TODO add comments 
   api.get("/campaign/:id/survey-units", (req, res) => {
     let unicityString = req.params.id;
     if(req.query.state){
@@ -353,6 +352,7 @@ export default ({ config, db }) => {
         city: "MONTMORENCY",
         finalizationDate: 1561932000000,
         reading: true,
+        state: 'CLO',
         viewed: false,
         interviewer: {
           id: "INTW5",
@@ -378,6 +378,7 @@ export default ({ config, db }) => {
         finalizationDate: 1561932000000,
         reading: true,
         viewed: false,
+        state: 'TBR',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -402,6 +403,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: true,
         viewed: false,
+        state: 'FIN',
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -426,6 +428,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: true,
         viewed: false,
+        state: 'VIN',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -450,6 +453,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: true,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -474,6 +478,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: true,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -498,6 +503,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: true,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -522,6 +528,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: false,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW7",
           interviewerFirstName: "Thierry",
@@ -546,6 +553,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: false,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -570,6 +578,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: false,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -594,6 +603,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: false,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW7",
           interviewerFirstName: "Thierry",
@@ -608,6 +618,7 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: false,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -622,6 +633,7 @@ export default ({ config, db }) => {
         finalizationDate: 1561932000000,
         reading: false,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -636,6 +648,7 @@ export default ({ config, db }) => {
         finalizationDate: 1561932000000,
         reading: false,
         viewed: true,
+        state: 'VIN',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -650,6 +663,8 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: false,
         viewed: true,
+        state: 'VIN',
+        closingCause: 'NPA',
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -664,6 +679,8 @@ export default ({ config, db }) => {
         finalizationDate: 1603304314268,
         reading: false,
         viewed: true,
+        state: 'VIN',
+        closingCause: 'NPI',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -677,9 +694,7 @@ export default ({ config, db }) => {
     ]);
   });
 
-
-// TODO api à dev pour la page cloturer
-api.get("/survey-units/closable", (req, res) => {
+  api.get("/survey-units/closable", (req, res) => {
     const mockResponse = [
       {
         id: "1023",
@@ -693,7 +708,10 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Dupont",
         },
         campaign:"Simpsons",
-        state: "ANS"
+        state: "VIC",
+        questionnaireState: 'INIT',
+        contactOutcome: 'INA',
+        closingCause: "NPI",
       },
       {
         id: "4811",
@@ -707,7 +725,10 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Boulanger",
         },
         campaign:"Simpsons",
-        state: "ANS"
+        state: "VIC",
+        questionnaireState: 'INIT',
+        contactOutcome: 'INA',
+        closingCause: "NPA",
       },
       {
         id: "1024",
@@ -721,7 +742,9 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Dupont",
         },
         campaign:"Simpsons",
-        state: "ANS"
+        questionnaireState: 'TO_EXTRACT',
+        contactOutcome: 'INA',
+        state: "VIC"
       },
       {
         id: "4812",
@@ -735,7 +758,8 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Boulanger",
         },
         campaign:"VQS",
-        state: "ANS"
+        questionnaireState: 'NULL',
+        state: "VIC"
       },
       {
         id: "1025",
@@ -749,7 +773,8 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Dupont",
         },
         campaign:"VQS",
-        state: "ANS"
+        questionnaireState: 'NULL',
+        state: "VIC"
       },
       {
         id: "4813",
@@ -763,7 +788,8 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Boulanger",
         },
         campaign:"VQS",
-        state: "ANS"
+        questionnaireState: 'NULL',
+        state: "VIC"
       },
       {
         id: "1027",
@@ -777,7 +803,8 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Dupont",
         },
         campaign:"VQS",
-        state: "ANS",
+        questionnaireState: 'NULL',
+        state: "VIC",
      
       },
       {
@@ -792,7 +819,8 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Fabres",
         },
         campaign:"VQS",
-        state: "ANS"
+        questionnaireState: 'NULL',
+        state: "VIC"
       },
       {
         id: "1028",
@@ -806,7 +834,8 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Dupont",
         },
         campaign:"VQS",
-        state: "ANS"
+        questionnaireState: 'NULL',
+        state: "VIC"
       },
       {
         id: "4816",
@@ -820,7 +849,8 @@ api.get("/survey-units/closable", (req, res) => {
           interviewerLastName: "Boulanger",
         },
         campaign:"VQS",
-        state: "ANS",
+        state: "VIC",
+        questionnaireState: 'NULL',
         comments: [
           {
               "type": "managementComment",
@@ -839,7 +869,8 @@ api.get("/survey-units/closable", (req, res) => {
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
         campaign:"VQS",
-        state: "ANS",
+        questionnaireState: 'NULL',
+        state: "VIC",
         interviewer: {
           id: "INTW7",
           interviewerFirstName: "Thierry",
@@ -853,7 +884,8 @@ api.get("/survey-units/closable", (req, res) => {
         city: "BELFORT",
         finalizationDate: 1603304314268,
         campaign:"VQS",
-        state: "ANS",
+        questionnaireState: 'NULL',
+        state: "VIC",
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -867,7 +899,8 @@ api.get("/survey-units/closable", (req, res) => {
         city: "MONTMORENCY",
         finalizationDate: 1561932000000,
         campaign:"VQS",
-        state: "ANS",
+        questionnaireState: 'NULL',
+        state: "VIC",
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -881,7 +914,8 @@ api.get("/survey-units/closable", (req, res) => {
         city: "BELFORT",
         finalizationDate: 1561932000000,
         campaign:"LC 2020",
-        state: "ANS",
+        questionnaireState: 'NULL',
+        state: "VIC",
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -895,7 +929,8 @@ api.get("/survey-units/closable", (req, res) => {
         city: "MONTMORENCY",
         finalizationDate: 1603304314268,
         campaign:"LC 2020",
-        state: "ANS",
+        state: "VIC",
+        questionnaireState: 'NULL',
         interviewer: {
           id: "INTW5",
           interviewerFirstName: "Chloé",
@@ -909,7 +944,8 @@ api.get("/survey-units/closable", (req, res) => {
         city: "BELFORT",
         finalizationDate: 1603304314268,
         campaign:"LC 2020",
-        state: "ANS",
+        state: "VIC",
+        questionnaireState: 'NULL',
         interviewer: {
           id: "INTW6",
           interviewerFirstName: "Jacques",
@@ -949,8 +985,6 @@ api.get("/survey-units/closable", (req, res) => {
     res.json(mockResponse);
   });
 
-
-
   api.get("/campaign/:id/survey-units/not-attributed", (req, res) => {
     const mockResponse = {
       count: 0,
@@ -974,10 +1008,7 @@ api.get("/survey-units/closable", (req, res) => {
     res.json(mockResponse);
   });
 
-  // TODO ajouter les nouveaux états
-  api.get(
-    "/campaign/:id/survey-units/interviewer/:idep/state-count",
-    (req, res) => {
+  api.get( "/campaign/:id/survey-units/interviewer/:idep/state-count", (req, res) => {
       const date = new Date(req.query.date);
       const day = date.getDay();
       const month = date.getMonth();
@@ -1011,7 +1042,21 @@ api.get("/survey-units/closable", (req, res) => {
     }
   );
 
-  // TODO: à dev sur pearlJam pour collectionTable (date en query param)
+  api.get( "/campaign/:id/survey-units/interviewer/:idep/closing-causes", (req, res) => {
+    const date = new Date(req.query.date);
+    const day = date.getDay();
+    const month = date.getMonth();
+    let mockResponse;
+    mockResponse = {
+      npiCount: 22,
+      npaCount: 22,
+      rowCount: 22,
+      total: 66,
+    };
+    res.json(mockResponse);
+  }
+);
+
   api.get(
     "/campaign/:id/survey-units/interviewer/:idep/contact-outcomes",
     (req, res) => {
