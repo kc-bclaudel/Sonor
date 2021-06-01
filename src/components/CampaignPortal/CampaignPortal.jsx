@@ -38,18 +38,20 @@ function CampaignPortal({
 
   useEffect(() => {
     if (!survey && location.survey) {
+      setIsLoading(true);
       dataRetreiver.getDataForMainScreen(null, (campaignsData) => {
         const newSurvey = campaignsData.find((s) => s.id === location.survey.id);
         newSurvey.allSurveys = campaignsData;
         setSurvey(newSurvey);
         setSurveyInfo(campaignsData.find((s) => s.id === location.survey.id));
+        setIsLoading(false);
         setRedirect(null);
       });
     }
   }, [redirect, dataRetreiver, location, survey]);
 
   useEffect(() => {
-    if(survey){
+    if (survey) {
       setIsLoading(true);
       dataRetreiver.getDataForCampaignPortal(!survey || survey.id, (res) => {
         setData(res);

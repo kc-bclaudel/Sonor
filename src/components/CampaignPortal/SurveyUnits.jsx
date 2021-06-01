@@ -58,7 +58,7 @@ class SurveyUnits extends React.Component {
 
   render() {
     const {
-      data, sort, handleSortfunc, isLoading
+      data, sort, handleSortfunc, isLoading,
     } = this.props;
     const {
       abandoned, notAttributed, total, interviewers,
