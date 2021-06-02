@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Spinner from 'react-bootstrap/Spinner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, Redirect } from 'react-router-dom';
@@ -23,7 +24,7 @@ class ProvisionalStatusTable extends React.Component {
     this.state = {
       pagination: { size: 10, page: 1 },
       displayedLines: [],
-      date: null,
+      date: new Date().toISOString().slice(0, 10),
       survey,
       interviewer,
       mode,
@@ -67,33 +68,36 @@ class ProvisionalStatusTable extends React.Component {
       surveyToUse = survey;
     }
     if (surveyToUse) {
+      this.setState({ loading: true });
       dataRetreiver.getDataForProvisionalStatusTable(
         surveyToUse, new Date(dateToUse).getTime(), paginationToUse, modeToUse,
         (res) => {
-          const newData = {};
-          Object.assign(newData, res);
-          newData.date = dateToUse;
-          newData.pagination = paginationToUse;
-          if (this.componentIsMounted) {
-            this.setState({
-              date: dateToUse,
-              survey,
-              interviewer,
-              displayedLines: newData.linesDetails,
-              data: newData,
-              mode: modeToUse,
-              redirect: null,
-              loading: false,
-              sort: { sortOn: null, asc: null },
-            }, () => {
-              let firstColumnSortAttribute;
-              if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
-                firstColumnSortAttribute = 'survey';
-              } else {
-                firstColumnSortAttribute = 'CPinterviewer';
-              }
-              this.handleSort(firstColumnSortAttribute, true);
-            });
+          if (dateToUse === this.state.date) {
+            const newData = {};
+            Object.assign(newData, res);
+            newData.date = dateToUse;
+            newData.pagination = paginationToUse;
+            if (this.componentIsMounted) {
+              this.setState({
+                date: dateToUse,
+                survey,
+                interviewer,
+                displayedLines: newData.linesDetails,
+                data: newData,
+                mode: modeToUse,
+                redirect: null,
+                loading: false,
+                sort: { sortOn: null, asc: null },
+              }, () => {
+                let firstColumnSortAttribute;
+                if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
+                  firstColumnSortAttribute = 'survey';
+                } else {
+                  firstColumnSortAttribute = 'CPinterviewer';
+                }
+                this.handleSort(firstColumnSortAttribute, true);
+              });
+            }
           }
         },
       );
@@ -127,9 +131,6 @@ class ProvisionalStatusTable extends React.Component {
 
     if (redirect) {
       return <Redirect to={redirect} />;
-    }
-    if (loading) {
-      return [];
     }
 
     let tableTitle = false;
@@ -197,50 +198,60 @@ class ProvisionalStatusTable extends React.Component {
               className="DateDisplay"
               type="date"
               value={date}
-              max={new Date().toJSON().split('T')[0]}
-              min={survey ? new Date(survey.collectionStartDate).toJSON().split('T')[0] : null}
               onChange={(e) => this.setState({ date: e.target.value }, () => this.refreshData())}
             />
           </Card.Title>
           {
-            data.linesDetails.length > 0
-              ? (
-                <>
-                  <Row>
-                    <Col xs="6">
-                      <PaginationNav.SizeSelector
-                        updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-                      />
-                    </Col>
-                    <Col xs="6" className="text-right">
-                      <SearchField
-                        data={data.linesDetails}
-                        searchBy={fieldsToSearch}
-                        updateFunc={
-                          (matchingInterviewers) => this.updateInterviewers(matchingInterviewers)
-                        }
-                      />
-                    </Col>
-                  </Row>
-                  <ProvisionalStatusTableDisplay
-                    data={data}
-                    pagination={pagination}
-                    displayedLines={displayedLines}
-                    mode={mode}
-                    handleSort={(property) => this.handleSort(property)}
-                    sort={sort}
-                  />
-                  <div className="tableOptionsWrapper">
-                    <PaginationNav.PageSelector
-                      pagination={pagination}
-                      updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-                      numberOfItems={displayedLines.length}
-                    />
-                  </div>
-                </>
-              )
-              : <span>{D.nothingToDisplay}</span>
-        }
+          loading
+            ? <Spinner className="loadingSpinner" animation="border" variant="primary" />
+            : (
+              <>
+                {
+                  data.linesDetails.length > 0
+                    ? (
+                      <>
+                        <Row>
+                          <Col xs="6">
+                            <PaginationNav.SizeSelector
+                              updateFunc={(newPagination) => {
+                                this.handlePageChange(newPagination);
+                              }}
+                            />
+                          </Col>
+                          <Col xs="6" className="text-right">
+                            <SearchField
+                              data={data.linesDetails}
+                              searchBy={fieldsToSearch}
+                              updateFunc={
+                                (matchingInterviewers) => this.updateInterviewers(matchingInterviewers)
+                              }
+                            />
+                          </Col>
+                        </Row>
+                        <ProvisionalStatusTableDisplay
+                          data={data}
+                          pagination={pagination}
+                          displayedLines={displayedLines}
+                          mode={mode}
+                          handleSort={(property) => this.handleSort(property)}
+                          sort={sort}
+                        />
+                        <div className="tableOptionsWrapper">
+                          <PaginationNav.PageSelector
+                            pagination={pagination}
+                            updateFunc={(newPagination) => {
+                              this.handlePageChange(newPagination);
+                            }}
+                            numberOfItems={displayedLines.length}
+                          />
+                        </div>
+                      </>
+                    )
+                    : <span>{D.nothingToDisplay}</span>
+              }
+              </>
+            )
+          }
         </Card>
       </div>
     );

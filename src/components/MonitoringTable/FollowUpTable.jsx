@@ -14,8 +14,12 @@ function FollowUpTable({
       <th className="ColFirstCol">{D.totalDEM}</th>
       <th className="ColumnSpacing" />
       <th className="YellowHeader ColCompletionRate">
-        {(data.total.dem.completionRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(data.total.dem.completionRate) || (
+          <>
+            {(data.total.dem.completionRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </th>
       <th className="ColumnSpacing" />
       <th className="ColAllocated">{data.total.dem.total}</th>
@@ -39,8 +43,12 @@ function FollowUpTable({
         <th className="ColFirstCol">{D.totalFrance}</th>
         <th className="ColumnSpacing" />
         <th className="YellowHeader ColCompletionRate">
-          {(data.total.france.completionRate * 100).toFixed(1)}
-          %
+          {Number.isNaN(data.total.france.completionRate) || (
+            <>
+              {(data.total.france.completionRate * 100).toFixed(1)}
+              %
+            </>
+          )}
         </th>
         <th className="ColumnSpacing" />
         <th className="ColAllocated">{data.total.france.total}</th>

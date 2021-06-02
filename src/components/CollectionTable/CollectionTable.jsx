@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Spinner from 'react-bootstrap/Spinner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, Redirect } from 'react-router-dom';
@@ -23,7 +24,7 @@ class CollectionTable extends React.Component {
     this.state = {
       pagination: { size: 10, page: 1 },
       displayedLines: [],
-      date: null,
+      date: new Date().toISOString().slice(0, 10),
       survey,
       interviewer,
       mode,
@@ -52,6 +53,7 @@ class CollectionTable extends React.Component {
   }
 
   async refreshData() {
+    this.setState({ loading: true });
     const { dataRetreiver, location } = this.props;
     const { survey, interviewer } = location;
     const { date } = this.state;
@@ -74,7 +76,8 @@ class CollectionTable extends React.Component {
           Object.assign(newData, res);
           newData.date = dateToUse;
           newData.pagination = paginationToUse;
-          if (this.componentIsMounted) {
+          const lastDate = this.state.date;
+          if (this.componentIsMounted && lastDate === dateToUse) {
             this.setState({
               date: dateToUse,
               survey,
@@ -158,9 +161,6 @@ class CollectionTable extends React.Component {
     if (redirect) {
       return <Redirect to={redirect} />;
     }
-    if (loading) {
-      return [];
-    }
 
     let tableTitle = false;
     let selector = false;
@@ -231,10 +231,9 @@ class CollectionTable extends React.Component {
               className="DateDisplay"
               type="date"
               value={date}
-              max={new Date().toJSON().split('T')[0]}
-              min={survey ? new Date(survey.collectionStartDate).toJSON().split('T')[0] : null}
               onChange={(e) => this.setState({ date: e.target.value }, () => this.refreshData())}
             />
+            {loading || (
             <Button
               className="ExportButton"
               data-testid="export-button"
@@ -242,46 +241,53 @@ class CollectionTable extends React.Component {
             >
               Export
             </Button>
+            )}
           </Card.Title>
-          {
-            data.linesDetails.length > 0
-              ? (
-                <>
-                  <Row>
-                    <Col xs="6">
-                      <PaginationNav.SizeSelector
-                        updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-                      />
-                    </Col>
-                    <Col xs="6" className="text-right">
-                      <SearchField
-                        data={data.linesDetails}
-                        searchBy={fieldsToSearch}
-                        updateFunc={
-                          (matchingInterviewers) => this.updateInterviewers(matchingInterviewers)
-                        }
-                      />
-                    </Col>
-                  </Row>
-                  <CollectionTableDisplay
-                    data={data}
-                    pagination={pagination}
-                    displayedLines={displayedLines}
-                    mode={mode}
-                    handleSort={(property) => this.handleSort(property)}
-                    sort={sort}
-                  />
-                  <div className="tableOptionsWrapper">
-                    <PaginationNav.PageSelector
-                      pagination={pagination}
-                      updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
-                      numberOfItems={displayedLines.length}
-                    />
-                  </div>
-                </>
-              )
-              : <span>{D.nothingToDisplay}</span>
-        }
+          {loading
+            ? <Spinner className="loadingSpinner" animation="border" variant="primary" />
+            : (
+              <>
+                {
+                  data.linesDetails.length > 0
+                    ? (
+                      <>
+                        <Row>
+                          <Col xs="6">
+                            <PaginationNav.SizeSelector
+                              updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                            />
+                          </Col>
+                          <Col xs="6" className="text-right">
+                            <SearchField
+                              data={data.linesDetails}
+                              searchBy={fieldsToSearch}
+                              updateFunc={
+                                (matchingInterviewers) => this.updateInterviewers(matchingInterviewers)
+                              }
+                            />
+                          </Col>
+                        </Row>
+                        <CollectionTableDisplay
+                          data={data}
+                          pagination={pagination}
+                          displayedLines={displayedLines}
+                          mode={mode}
+                          handleSort={(property) => this.handleSort(property)}
+                          sort={sort}
+                        />
+                        <div className="tableOptionsWrapper">
+                          <PaginationNav.PageSelector
+                            pagination={pagination}
+                            updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                            numberOfItems={displayedLines.length}
+                          />
+                        </div>
+                      </>
+                    )
+                    : <span>{D.nothingToDisplay}</span>
+                }
+              </>
+            )}
         </Card>
       </div>
     );

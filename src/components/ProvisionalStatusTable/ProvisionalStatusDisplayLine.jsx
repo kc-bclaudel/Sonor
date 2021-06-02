@@ -7,7 +7,6 @@ function ProvisionalStatusTableDisplayLine({ data }) {
     survey,
     npiCount,
     npaCount,
-    rowCount,
     total,
     allocated,
   } = data;

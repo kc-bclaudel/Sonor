@@ -16,11 +16,14 @@ function Close({
   const [data, setData] = useState([]);
   const [site, setSite] = useState('');
   const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(() => {
+    setIsLoading(true);
     dataRetreiver.getDataForClosePage((res) => {
       setData(res);
       setSite(res.site);
+      setIsLoading(false);
     });
   }, [dataRetreiver]);
 
@@ -77,6 +80,7 @@ function Close({
         data={data}
         survey={survey}
         site={site}
+        isLoading={isLoading}
         validateChangingState={
           (lstSUChangingState,
             stateModified) => validateChangingState(lstSUChangingState, stateModified)

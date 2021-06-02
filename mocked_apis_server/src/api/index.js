@@ -689,9 +689,12 @@ export default ({ config, db }) => {
       },
     ];
 
-    res.json([
-      ...mockResponse,
-    ]);
+    setTimeout(() => {
+        res.json([
+            ...mockResponse,
+          ]);
+      }, 5000);
+    
   });
 
   api.get("/survey-units/closable", (req, res) => {
@@ -1545,7 +1548,10 @@ export default ({ config, db }) => {
         total: 104,
       },
     ];
-    res.json(mockResponse);
+
+    setTimeout(()=>{
+      res.json(mockResponse);
+    }, 5000)
   });
 
   // TODO state des clotures à ajouter (npaCount, npiCount et rowCount)

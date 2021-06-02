@@ -428,3 +428,7 @@ a:hover {
 .notViewed {
   font-weight: bold;
 }
+
+.loadingSpinner{
+  margin: auto;
+}

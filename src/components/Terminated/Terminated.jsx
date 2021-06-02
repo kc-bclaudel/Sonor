@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, Redirect } from 'react-router-dom';
@@ -19,13 +20,16 @@ function Terminated({
   const [data, setData] = useState([]);
   const [sort, setSort] = useState({ sortOn: 'finalizationDate', asc: true });
   const [redirect, setRedirect] = useState(!survey && id ? '/' : null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(() => {
+    setIsLoading(true);
     let surveyId = null;
     if (survey) surveyId = survey.id;
     dataRetreiver.getListSuTerminated(surveyId, (res) => {
       setData(res);
       setRedirect(null);
+      setIsLoading(false);
     });
   }, [dataRetreiver, survey]);
 
@@ -80,22 +84,30 @@ function Terminated({
         <Card className="ViewCard">
           <Card.Title className="PageTitle">
             {D.titleListSu}
-            {data.length}
+            {isLoading ? '' : data.length}
           </Card.Title>
           {
-            data.length > 0
-              ? (
-                <TerminatedTable
-                  data={data}
-                  sort={sort}
-                  survey={survey}
-                  dataRetreiver={dataRetreiver}
-                  handleSort={handleSort}
-                  validateUpdateComment={validateUpdateComment}
-                />
-              )
-              : <span>{D.noSuFinalized}</span>
-          }
+          isLoading
+            ? <Spinner className="loadingSpinner" animation="border" variant="primary" />
+            : (
+              <>
+                {
+                  data.length > 0
+                    ? (
+                      <TerminatedTable
+                        data={data}
+                        sort={sort}
+                        survey={survey}
+                        dataRetreiver={dataRetreiver}
+                        handleSort={handleSort}
+                        validateUpdateComment={validateUpdateComment}
+                      />
+                    )
+                    : <span>{D.noSuFinalized}</span>
+                }
+              </>
+            )
+        }
         </Card>
       </>
     );

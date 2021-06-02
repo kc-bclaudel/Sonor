@@ -60,7 +60,7 @@ const collectionTable = {
     en: 'Survey units processed interviewer',
   },
   surveyUnitsClosedManagement: {
-    fr: 'Unités enquêtées closes gestionnaire',
+    fr: 'Unités enquêtées clôturées gestionnaire',
     en: 'Survey units closed by management',
   },
 };

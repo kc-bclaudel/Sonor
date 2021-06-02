@@ -3,20 +3,37 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import D from '../../i18n';
 
-function displaySurveys(preferences, toggleCheckbox) {
-  const lines = Object.keys(preferences).map((key) => (
-    <tr className="PreferenceRow" key={key}>
-      <td className="PreferenceCheckbox">
-        <input
-          className="Clickable"
-          type="checkbox"
-          checked={preferences[key].preference}
-          onChange={() => toggleCheckbox(key)}
-        />
-      </td>
-      <td>{preferences[key].label}</td>
-    </tr>
-  ));
+function displaySurveys(preferences, toggleCheckbox){
+  var lines = [];
+  if(preferences != null){
+    lines = Object.keys(preferences).map((key) => (
+      <tr className="PreferenceRow" key={key}>
+        <td className="PreferenceCheckbox">
+          <input
+            className="Clickable"
+            type="checkbox"
+            checked={preferences[key].preference}
+            onChange={() => toggleCheckbox(key)}
+          />
+        </td>
+        <td>{preferences[key].label}</td>
+      </tr>
+    ));
+  } else {
+    lines = Object.keys(preferences).map((key) => (
+      <tr className="PreferenceRow" key={key}>
+        <td className="PreferenceCheckbox">
+          <input
+            className="Clickable"
+            type="checkbox"
+            checked="true"
+            onChange={() => toggleCheckbox(key)}
+          />
+        </td>
+        <td>{preferences[key].label}</td>
+      </tr>
+    ));
+  }
 
   return (
     <table>

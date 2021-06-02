@@ -21,12 +21,15 @@ function ListSU({
   const [site, setSite] = useState('');
   const [sort, setSort] = useState({ sortOn: null, asc: null });
   const [redirect, setRedirect] = useState(!survey ? '/' : null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(() => {
+    setIsLoading(true);
     dataRetreiver.getDataForListSU(!survey || survey.id, (res) => {
       if (isMounted.current) {
         setData(res.surveyUnits);
         setSite(res.site);
+        setIsLoading(false);
         setRedirect(null);
       }
     });
@@ -100,6 +103,7 @@ function ListSU({
           data={data}
           survey={survey}
           site={site}
+          isLoading={isLoading}
           validateChangingState={
             (lstSUChangingState,
               stateModified) => validateChangingState(lstSUChangingState, stateModified)

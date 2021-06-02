@@ -29,6 +29,7 @@ function CampaignPortal({
   const [data, setData] = useState(initialData);
   const [sort, setSort] = useState({ sortOn: 'CPinterviewer', asc: true });
   const [redirect, setRedirect] = useState(!survey && !location.survey ? { pathname: '/' } : null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setSurvey(location.surveyInfos ? location.surveyInfos.survey : null);
@@ -48,10 +49,14 @@ function CampaignPortal({
   }, [redirect, dataRetreiver, location, survey]);
 
   useEffect(() => {
-    dataRetreiver.getDataForCampaignPortal(!survey || survey.id, (res) => {
-      setData(res);
-      setRedirect(null);
-    });
+    if(survey){
+      setIsLoading(true);
+      dataRetreiver.getDataForCampaignPortal(!survey || survey.id, (res) => {
+        setData(res);
+        setRedirect(null);
+        setIsLoading(false);
+      });
+    }
   }, [redirect, dataRetreiver, location, survey]);
 
   function handleSort(property, asc) {
@@ -107,6 +112,7 @@ function CampaignPortal({
                     data={data}
                     survey={survey}
                     sort={sort}
+                    isLoading={isLoading}
                     handleSortfunc={handleSort}
                   />
                 </Col>
