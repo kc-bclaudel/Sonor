@@ -13,16 +13,28 @@ function CollectionTableDisplay({
       <th className="ColFirstCol">{D.unitsNotAffected}</th>
       <th className="ColumnSpacing" />
       <th className="YellowHeader ColCollectionRate">
-        {(data.notAttributed.collectionRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(data.notAttributed.collectionRate) || (
+          <>
+            {(data.notAttributed.collectionRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </th>
       <th className="YellowHeader ColWasteRate">
-        {(data.notAttributed.wasteRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(data.notAttributed.wasteRate) || (
+          <>
+            {(data.notAttributed.wasteRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </th>
       <th className="YellowHeader ColOOSRate">
-        {(data.notAttributed.outOfScopeRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(data.notAttributed.outOfScopeRate) || (
+          <>
+            {(data.notAttributed.outOfScopeRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </th>
       <th className="ColumnSpacing" />
       <th className="ColSurveyAcepted">{data.notAttributed.surveysAccepted}</th>
@@ -45,16 +57,28 @@ function CollectionTableDisplay({
       <th className="ColFirstCol">{D.totalDEM}</th>
       <th className="ColumnSpacing" />
       <th className="YellowHeader ColCollectionRate">
-        {(data.total.dem.collectionRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(data.total.dem.collectionRate) || (
+          <>
+            {(data.total.dem.collectionRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </th>
       <th className="YellowHeader ColWasteRate">
-        {(data.total.dem.wasteRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(data.total.dem.wasteRate) || (
+          <>
+            {(data.total.dem.wasteRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </th>
       <th className="YellowHeader ColOOSRate">
-        {(data.total.dem.outOfScopeRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(data.total.dem.outOfScopeRate) || (
+          <>
+            {(data.total.dem.outOfScopeRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </th>
       <th className="ColumnSpacing" />
       <th className="ColSurveyAcepted">{data.total.dem.surveysAccepted}</th>
@@ -80,16 +104,28 @@ function CollectionTableDisplay({
         <th className="ColFirstCol">{D.totalFrance}</th>
         <th className="ColumnSpacing" />
         <th className="YellowHeader ColCollectionRate">
-          {(data.total.france.collectionRate * 100).toFixed(1)}
-          %
+          {Number.isNaN(data.total.france.collectionRate) || (
+            <>
+              {(data.total.france.collectionRate * 100).toFixed(1)}
+              %
+            </>
+          )}
         </th>
         <th className="YellowHeader ColWasteRate">
-          {(data.total.france.wasteRate * 100).toFixed(1)}
-          %
+          {Number.isNaN(data.total.france.wasteRate) || (
+            <>
+              {(data.total.france.wasteRate * 100).toFixed(1)}
+              %
+            </>
+          )}
         </th>
         <th className="YellowHeader ColOOSRate">
-          {(data.total.france.outOfScopeRate * 100).toFixed(1)}
-          %
+          {Number.isNaN(data.total.france.outOfScopeRate) || (
+            <>
+              {(data.total.france.outOfScopeRate * 100).toFixed(1)}
+              %
+            </>
+          )}
         </th>
         <th className="ColumnSpacing" />
         <th className="ColSurveyAcepted">{data.total.france.surveysAccepted}</th>
@@ -133,7 +169,7 @@ function CollectionTableDisplay({
           <th rowSpan="2" className="ColumnSpacing" />
           <th colSpan="6" className="CenteredText">{D.surveyUnitsProcessedInterviewer}</th>
           <th rowSpan="2" className="ColumnSpacing" />
-          <th colSpan="3" className="CenteredText">{D.surveyUnitsProcessedInterviewer}</th>
+          <th colSpan="3" className="CenteredText">{D.surveyUnitsClosedManagement}</th>
           <th rowSpan="2" className="ColumnSpacing" />
           <th className="EmptyHeader" />
         </tr>

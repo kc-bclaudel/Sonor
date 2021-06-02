@@ -111,13 +111,15 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                 </button>
               </li>
               <li>
-                <Link
-                  to="/"
+                <button
+                  type="button"
                   className="selectedSubeMenu"
-                  onClick={() => toggle(false)}
+                  data-testid="provisional-status-by-interviewer"
+                  onClick={() => setModal(D.provisionalStatusByInterviewer, 'provisionalstatus/campaign')}
+                  tabIndex={0}
                 >
-                  {D.unitsToAffect}
-                </Link>
+                  {D.provisionalStatusByInterviewer}
+                </button>
               </li>
               <li>
                 <button
@@ -191,6 +193,17 @@ function HeaderFollowSubMenu({ toggle, setModal }) {
                   tabIndex={0}
                 >
                   {D.collectionBySurvey}
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  className="selectedSubeMenu"
+                  data-testid="provisional-status-by-survey-one-interviewer"
+                  onClick={() => setModal(D.provisionalStatusBySurvey, 'provisionalstatus/campaigns/interviewer', true)}
+                  tabIndex={0}
+                >
+                  {D.provisionalStatusBySurvey}
                 </button>
               </li>
             </ul>

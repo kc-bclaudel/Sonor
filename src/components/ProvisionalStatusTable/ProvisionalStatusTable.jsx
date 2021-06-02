@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
+import Spinner from 'react-bootstrap/Spinner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, Redirect } from 'react-router-dom';
@@ -10,12 +10,13 @@ import PaginationNav from '../PaginationNav/PaginationNav';
 import SearchField from '../SearchField/SearchField';
 import SurveySelector from '../SurveySelector/SurveySelector';
 import InterviewerSelector from '../InterviewerSelector/InterviewerSelector';
-import FollowUpTable from './FollowUpTable';
+import ProvisionalStatusTableDisplay from './ProvisionalStatusTableDisplay';
 import C from '../../utils/constants.json';
 import D from '../../i18n';
 import Utils from '../../utils/Utils';
+import './ProvisionalStatusTable.css';
 
-class MonitoringTable extends React.Component {
+class ProvisionalStatusTable extends React.Component {
   constructor(props) {
     super(props);
     const mode = Utils.getMonitoringTableModeFromPath(props.location.pathname);
@@ -27,7 +28,7 @@ class MonitoringTable extends React.Component {
       survey,
       interviewer,
       mode,
-      redirect: ((mode === C.BY_INTERVIEWER_ONE_SURVEY || mode === C.BY_SITE) && !survey)
+      redirect: (mode === C.BY_INTERVIEWER_ONE_SURVEY && !survey)
         || (mode === C.BY_SURVEY_ONE_INTERVIEWER && !interviewer)
         ? '/' : null,
       loading: true,
@@ -52,7 +53,6 @@ class MonitoringTable extends React.Component {
   }
 
   async refreshData() {
-    this.setState({ loading: true });
     const { dataRetreiver, location } = this.props;
     const { survey, interviewer } = location;
     const { date } = this.state;
@@ -68,36 +68,36 @@ class MonitoringTable extends React.Component {
       surveyToUse = survey;
     }
     if (surveyToUse) {
-      dataRetreiver.getDataForMonitoringTable(
+      this.setState({ loading: true });
+      dataRetreiver.getDataForProvisionalStatusTable(
         surveyToUse, new Date(dateToUse).getTime(), paginationToUse, modeToUse,
         (res) => {
-          const newData = {};
-          Object.assign(newData, res);
-          newData.date = dateToUse;
-          newData.pagination = paginationToUse;
-          const lastDate = this.state.date;
-          if (this.componentIsMounted && lastDate === dateToUse) {
-            this.setState({
-              date: dateToUse,
-              survey,
-              interviewer,
-              displayedLines: newData.linesDetails,
-              data: newData,
-              mode: modeToUse,
-              redirect: null,
-              loading: false,
-              sort: { sortOn: null, asc: null },
-            }, () => {
-              let firstColumnSortAttribute;
-              if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
-                firstColumnSortAttribute = 'survey';
-              } else if (modeToUse === C.BY_SITE) {
-                firstColumnSortAttribute = 'site';
-              } else {
-                firstColumnSortAttribute = 'CPinterviewer';
-              }
-              this.handleSort(firstColumnSortAttribute, true);
-            });
+          if (dateToUse === this.state.date) {
+            const newData = {};
+            Object.assign(newData, res);
+            newData.date = dateToUse;
+            newData.pagination = paginationToUse;
+            if (this.componentIsMounted) {
+              this.setState({
+                date: dateToUse,
+                survey,
+                interviewer,
+                displayedLines: newData.linesDetails,
+                data: newData,
+                mode: modeToUse,
+                redirect: null,
+                loading: false,
+                sort: { sortOn: null, asc: null },
+              }, () => {
+                let firstColumnSortAttribute;
+                if (modeToUse === C.BY_SURVEY || modeToUse === C.BY_SURVEY_ONE_INTERVIEWER) {
+                  firstColumnSortAttribute = 'survey';
+                } else {
+                  firstColumnSortAttribute = 'CPinterviewer';
+                }
+                this.handleSort(firstColumnSortAttribute, true);
+              });
+            }
           }
         },
       );
@@ -116,34 +116,6 @@ class MonitoringTable extends React.Component {
       pagination: { size: pagination.size, page: 1 },
       displayedLines: matchingLines,
     });
-  }
-
-  handleExport() {
-    const {
-      data, survey, mode, date, interviewer,
-    } = this.state;
-    let fileLabel;
-    if (mode === C.BY_SURVEY) {
-      fileLabel = `${data.site}_Avancement enquetes`;
-    } else if (mode === C.BY_SURVEY_ONE_INTERVIEWER) {
-      fileLabel = `${interviewer.interviewerFirstName}_${interviewer.interviewerLastName}_Avancement`;
-    } else if (mode === C.BY_SITE) {
-      fileLabel = `${survey.label}_Avancement sites`;
-    } else if (mode === C.BY_INTERVIEWER) {
-      fileLabel = `${data.site}_Avancement enqueteurs`;
-    } else {
-      fileLabel = `${data.site}_${survey.label}_Avancement enqueteurs`;
-    }
-    const title = `${fileLabel}_${new Date(date).toLocaleDateString().replace(/\//g, '')}.csv`.replace(/ /g, '_');
-    const table = makeTableForExport(data, mode);
-    const csvContent = `data:text/csv;charset=utf-8,\ufeff${table.map((e) => e.join(';')).join('\n')}`;
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement('a');
-    link.setAttribute('href', encodedUri);
-    link.setAttribute('download', title);
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
   }
 
   handleSort(property, asc) {
@@ -171,13 +143,13 @@ class MonitoringTable extends React.Component {
           updateFunc={(newInterviewer) => this.setState({
             interviewer: newInterviewer,
             redirect: {
-              pathname: `/follow/campaigns/interviewer/${newInterviewer.id}`,
+              pathname: `/collection/campaigns/interviewer/${newInterviewer.id}`,
               interviewer: newInterviewer,
             },
           })}
         />
       );
-    } else if (!!survey && (mode === C.BY_INTERVIEWER_ONE_SURVEY || mode === C.BY_SITE)) {
+    } else if (!!survey && (mode === C.BY_INTERVIEWER_ONE_SURVEY)) {
       tableTitle = (<div className="SurveyTitle">{survey.label}</div>);
       selector = (
         <SurveySelector
@@ -185,9 +157,7 @@ class MonitoringTable extends React.Component {
           updateFunc={(newSurvey) => this.setState({
             survey: newSurvey,
             redirect: {
-              pathname: mode === C.BY_SITE
-                ? `/follow/sites/${newSurvey.id}`
-                : `/follow/campaign/${newSurvey.id}`,
+              pathname: `/provisionalStatus/campaign/${newSurvey.id}`,
               survey: newSurvey,
             },
           })}
@@ -196,16 +166,14 @@ class MonitoringTable extends React.Component {
     }
 
     let fieldsToSearch;
-    if (mode === C.BY_SURVEY || mode === C.BY_SURVEY_ONE_INTERVIEWER) {
+    if (mode === C.BY_SURVEY_ONE_INTERVIEWER) {
       fieldsToSearch = ['survey'];
-    } else if (mode === C.BY_SITE) {
-      fieldsToSearch = ['site'];
     } else {
       fieldsToSearch = ['interviewerFirstName', 'interviewerLastName'];
     }
 
     return (
-      <div id="MonitoringTable">
+      <div id="ProvisionalStatusTable">
         <Container fluid>
           <Row>
             <Col>
@@ -223,7 +191,7 @@ class MonitoringTable extends React.Component {
         </Container>
         <Card className="ViewCard">
           <Card.Title className="PageTitle">
-            <div className="DateDisplay">{D.monitoringTableIntroductionSentence}</div>
+            <div className="DateDisplay">{D.provisionalStatusTableIntroductionSentence}</div>
             <input
               id="datePicker"
               data-testid="date-picker"
@@ -232,17 +200,9 @@ class MonitoringTable extends React.Component {
               value={date}
               onChange={(e) => this.setState({ date: e.target.value }, () => this.refreshData())}
             />
-            {loading || (
-            <Button
-              className="ExportButton"
-              data-testid="export-button"
-              onClick={() => this.handleExport()}
-            >
-              Export
-            </Button>
-            )}
           </Card.Title>
-          {loading
+          {
+          loading
             ? <Spinner className="loadingSpinner" animation="border" variant="primary" />
             : (
               <>
@@ -253,7 +213,9 @@ class MonitoringTable extends React.Component {
                         <Row>
                           <Col xs="6">
                             <PaginationNav.SizeSelector
-                              updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                              updateFunc={(newPagination) => {
+                                this.handlePageChange(newPagination);
+                              }}
                             />
                           </Col>
                           <Col xs="6" className="text-right">
@@ -266,7 +228,7 @@ class MonitoringTable extends React.Component {
                             />
                           </Col>
                         </Row>
-                        <FollowUpTable
+                        <ProvisionalStatusTableDisplay
                           data={data}
                           pagination={pagination}
                           displayedLines={displayedLines}
@@ -277,7 +239,9 @@ class MonitoringTable extends React.Component {
                         <div className="tableOptionsWrapper">
                           <PaginationNav.PageSelector
                             pagination={pagination}
-                            updateFunc={(newPagination) => { this.handlePageChange(newPagination); }}
+                            updateFunc={(newPagination) => {
+                              this.handlePageChange(newPagination);
+                            }}
                             numberOfItems={displayedLines.length}
                           />
                         </div>
@@ -286,119 +250,12 @@ class MonitoringTable extends React.Component {
                     : <span>{D.nothingToDisplay}</span>
               }
               </>
-            )}
+            )
+          }
         </Card>
       </div>
     );
   }
 }
 
-function getHeaderForExport(mode) {
-  let firstColumnTitle;
-  if (mode === C.BY_SURVEY || mode === C.BY_SURVEY_ONE_INTERVIEWER) {
-    firstColumnTitle = D.survey;
-  } else if (mode === C.BY_SITE) {
-    firstColumnTitle = D.site;
-  } else {
-    firstColumnTitle = [D.lastName, D.firstName, D.idep];
-  }
-
-  return [
-    firstColumnTitle,
-    '',
-    D.completionRate,
-    '',
-    D.allocated,
-    D.notStarted,
-    D.inProgressInterviewer,
-    D.waitingForIntReview,
-    D.reviewedByInterviewer,
-    D.reviewedEnded,
-    '',
-    D.preparingContact,
-    D.atLeastOneContact,
-    D.appointmentTaken,
-    D.interviewStarted,
-  ].flat();
-}
-
-function getFooterForExport(data, mode) {
-  const footer = [];
-  if (mode === C.BY_INTERVIEWER_ONE_SURVEY) {
-    footer.push([
-      D.totalDEM,
-      '',
-      '',
-      '',
-      `${(data.total.dem.completionRate * 100).toFixed(1)}%`,
-      '',
-      data.total.dem.total,
-      data.total.dem.notStarted,
-      data.total.dem.onGoing,
-      data.total.dem.waitingForIntValidation,
-      data.total.dem.intValidated,
-      data.total.dem.demValidated,
-      '',
-      data.total.dem.preparingContact,
-      data.total.dem.atLeastOneContact,
-      data.total.dem.appointmentTaken,
-      data.total.dem.interviewStarted,
-    ]);
-  }
-  if (mode === C.BY_INTERVIEWER_ONE_SURVEY || mode === C.BY_SITE) {
-    footer.push([
-      mode === C.BY_INTERVIEWER_ONE_SURVEY ? [D.totalFrance, '', ''] : D.totalFrance,
-      '',
-      `${(data.total.france.completionRate * 100).toFixed(1)}%`,
-      '',
-      data.total.france.total,
-      data.total.france.notStarted,
-      data.total.france.onGoing,
-      data.total.france.waitingForIntValidation,
-      data.total.france.intValidated,
-      data.total.france.demValidated,
-      '',
-      data.total.france.preparingContact,
-      data.total.france.atLeastOneContact,
-      data.total.france.appointmentTaken,
-      data.total.france.interviewStarted,
-    ].flat());
-  }
-  return footer;
-}
-
-function getBodyForExport(data) {
-  return data.map((elm) => (
-    [
-      (elm.interviewerLastName
-        ? [elm.interviewerLastName, elm.interviewerFirstName, elm.interviewerId]
-        : null
-      )
-      || elm.survey || elm.site,
-      '',
-      `${(elm.completionRate * 100).toFixed(1)}%`,
-      '',
-      elm.total,
-      elm.notStarted,
-      elm.onGoing,
-      elm.waitingForIntValidation,
-      elm.intValidated,
-      elm.demValidated,
-      '',
-      elm.preparingContact,
-      elm.atLeastOneContact,
-      elm.appointmentTaken,
-      elm.interviewStarted,
-    ].flat()
-  ));
-}
-
-function makeTableForExport(data, mode) {
-  const header = getHeaderForExport(mode);
-  const body = getBodyForExport(data.linesDetails);
-  const footer = getFooterForExport(data, mode);
-
-  return [header].concat(body, footer);
-}
-
-export default MonitoringTable;
+export default ProvisionalStatusTable;

@@ -16,11 +16,14 @@ function Close({
   const [data, setData] = useState([]);
   const [site, setSite] = useState('');
   const [sort, setSort] = useState({ sortOn: null, asc: null });
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(() => {
+    setIsLoading(true);
     dataRetreiver.getDataForClosePage((res) => {
       setData(res);
       setSite(res.site);
+      setIsLoading(false);
     });
   }, [dataRetreiver]);
 
@@ -34,14 +37,14 @@ function Close({
     setData(sortedData);
   }, [data, sort]);
 
-  function validateChangingState(lstSUChangingState, state) {
-    let closingCause;
-    if (state === D.NPA) {
-      closingCause = 'NPA';
-    } else if (state === D.NPI) {
-      closingCause = 'NPI';
+  function validateChangingState(lstSUChangingState, closingCause) {
+    let cc;
+    if (closingCause === D.NPA) {
+      cc = 'NPA';
+    } else if (closingCause === D.NPI) {
+      cc = 'NPI';
     }
-    dataRetreiver.closeSurveyUnits(lstSUChangingState, closingCause)
+    dataRetreiver.closeSurveyUnits(lstSUChangingState, cc)
       .then((response) => {
         if (response.some(
           (res) => !(res.status === 200 || res.status === 201 || res.status === 204),
@@ -77,6 +80,7 @@ function Close({
         data={data}
         survey={survey}
         site={site}
+        isLoading={isLoading}
         validateChangingState={
           (lstSUChangingState,
             stateModified) => validateChangingState(lstSUChangingState, stateModified)

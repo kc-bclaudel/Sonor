@@ -1,7 +1,7 @@
 import D from '../../src/i18n';
 
 context('sonor', () => {
-  it('Test monitoring tables', () => {
+  it('Test collection tables', () => {
     cy.server()
       .route('GET', '**/api/user', 'fixture:getUser.json')
       .as('get-user');
@@ -294,7 +294,7 @@ context('sonor', () => {
 
     cy.get('#datePicker').click().type('2020-08-31');
     cy.wait(500);
-    cy.get('tbody').find('td').eq(7).should('have.text', '7');
+    cy.get('tbody').find('td').eq(7).should('have.text', '2');
 
     // Return to main screen
     cy.get('a').contains(D.back).click();

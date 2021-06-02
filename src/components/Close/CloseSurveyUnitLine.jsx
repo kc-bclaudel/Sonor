@@ -3,7 +3,7 @@ import D from '../../i18n';
 
 function CloseSurveyUnitLine({ lineData, isChecked, updateFunc }) {
   const {
-    campaign, id, ssech, location, city, interviewer, state,
+    campaign, id, ssech, contactOutcome, questionnaireState, interviewer, closingCause,
   } = lineData;
   return (
     <tr>
@@ -14,9 +14,9 @@ function CloseSurveyUnitLine({ lineData, isChecked, updateFunc }) {
       <td className="ColId">{id}</td>
       <td className="ColInterviewer">{`${interviewer.interviewerLastName} ${interviewer.interviewerFirstName}`}</td>
       <td className="ColSsech">{ssech}</td>
-      <td className="ColLocation">{location ? location.substring(0, 2) : null}</td>
-      <td className="ColCity">{city}</td>
-      <td className="ColState">{state ? D[state] : ''}</td>
+      <td className="ColLocation">{contactOutcome ? D[contactOutcome] : ''}</td>
+      <td className="ColCity">{questionnaireState ? D[questionnaireState] : ''}</td>
+      <td className="ColState">{closingCause ? D[closingCause] : ''}</td>
     </tr>
   );
 }

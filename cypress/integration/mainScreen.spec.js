@@ -29,7 +29,7 @@ context('sonor', () => {
       '@get-campaigns',
       '@get-campaigns',
     ]);
-    cy.wait(1500);
+    cy.wait(2000);
 
     // Testing sort by Survey
     cy.get('tbody').within(() => {
@@ -40,12 +40,12 @@ context('sonor', () => {
 
     cy.get('#MainScreen').find('thead').find('tr').eq(1)
       .find('th').first().click();
-    cy.wait(1500);
+    cy.wait(2000);
 
 
      // Testing sort by Collection start date
     cy.get('th').contains(D.collectionStartDate).click();
-    cy.wait(500);
+    cy.wait(800);
     cy.get('tbody').within(() => {
       cy.get('td')
         .eq(2)
@@ -61,14 +61,14 @@ context('sonor', () => {
 
     // Testing sort by Collection end date
     cy.get('th').contains(D.collectionEndDate).click();
-    cy.wait(500);
+    cy.wait(800);
     cy.get('tbody').within(() => {
       cy.get('td')
         .eq(3)
         .contains(/01\/01\/2022|1\/1\/2022/g);
     });
     cy.get('th').contains(D.collectionEndDate).click();
-    cy.wait(500);
+    cy.wait(800);
     cy.get('tbody').within(() => {
       cy.get('td')
         .eq(3)

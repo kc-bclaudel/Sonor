@@ -32,7 +32,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.3.0
+                    0.4.1
                   </div>
                 </a>
               </div>
@@ -1154,7 +1154,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.3.0
+                  0.4.1
                 </div>
               </a>
             </div>
@@ -2333,7 +2333,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.3.0
+                    0.4.1
                   </div>
                 </a>
               </div>
@@ -3281,7 +3281,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.3.0
+                  0.4.1
                 </div>
               </a>
             </div>
@@ -4286,7 +4286,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.3.0
+                    0.4.1
                   </div>
                 </a>
               </div>
@@ -4500,7 +4500,6 @@ Object {
                 class="DateDisplay"
                 data-testid="date-picker"
                 id="datePicker"
-                max="2020-08-20"
                 type="date"
                 value="2020-08-20"
               />
@@ -5398,7 +5397,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.3.0
+                  0.4.1
                 </div>
               </a>
             </div>
@@ -5612,7 +5611,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
               type="date"
               value="2020-08-20"
             />
@@ -6567,7 +6565,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.3.0
+                    0.4.1
                   </div>
                 </a>
               </div>
@@ -6807,7 +6805,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.3.0
+                  0.4.1
                 </div>
               </a>
             </div>
@@ -7104,7 +7102,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.3.0
+                    0.4.1
                   </div>
                 </a>
               </div>
@@ -7359,11 +7357,11 @@ Object {
               class="PageTitle card-title h5"
             >
               Survey units allocated to the organizational unit: 
-              0
+              
             </div>
-            <span>
-              There are no survey units to display
-            </span>
+            <div
+              class="loadingSpinner spinner-border text-primary"
+            />
           </div>
         </div>
       </div>
@@ -7397,7 +7395,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.3.0
+                  0.4.1
                 </div>
               </a>
             </div>
@@ -7652,11 +7650,11 @@ Object {
             class="PageTitle card-title h5"
           >
             Survey units allocated to the organizational unit: 
-            0
+            
           </div>
-          <span>
-            There are no survey units to display
-          </span>
+          <div
+            class="loadingSpinner spinner-border text-primary"
+          />
         </div>
       </div>
     </div>
@@ -7747,7 +7745,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.3.0
+                    0.4.1
                   </div>
                 </a>
               </div>
@@ -8182,16 +8180,10 @@ Object {
                       <span>
                         Interviewers
                       </span>
-                      <button
-                        class="ExportButton btn btn-primary"
-                        type="button"
-                      >
-                        Export
-                      </button>
                     </div>
-                    <span>
-                      The is no interviewer associated with this survey
-                    </span>
+                    <div
+                      class="loadingSpinner spinner-border text-primary"
+                    />
                   </div>
                 </div>
               </div>
@@ -8229,7 +8221,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.3.0
+                  0.4.1
                 </div>
               </a>
             </div>
@@ -8664,16 +8656,10 @@ Object {
                     <span>
                       Interviewers
                     </span>
-                    <button
-                      class="ExportButton btn btn-primary"
-                      type="button"
-                    >
-                      Export
-                    </button>
                   </div>
-                  <span>
-                    The is no interviewer associated with this survey
-                  </span>
+                  <div
+                    class="loadingSpinner spinner-border text-primary"
+                  />
                 </div>
               </div>
             </div>
@@ -8768,7 +8754,7 @@ Object {
                   <div
                     id="appVersion"
                   >
-                    0.3.0
+                    0.4.1
                   </div>
                 </a>
               </div>
@@ -9912,7 +9898,7 @@ Object {
                 <div
                   id="appVersion"
                 >
-                  0.3.0
+                  0.4.1
                 </div>
               </a>
             </div>

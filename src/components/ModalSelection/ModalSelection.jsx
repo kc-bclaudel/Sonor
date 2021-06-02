@@ -6,7 +6,7 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import InterviewerSelector from '../InterviewerSelector/InterviewerSelector';
 
 function ModalSelection({
-  linkTo, title, show, setShow, dataRetreiver, interviewerMode,
+  linkTo, title, show, setShow, dataRetreiver, interviewerMode
 }) {
   const [redirect, setRedirect] = useState(null);
   const [surveys, setSurveys] = useState(null);
@@ -14,7 +14,11 @@ function ModalSelection({
 
   const updateSurveys = useCallback(() => {
     dataRetreiver.getDataForMainScreen(null, (data) => {
-      setSurveys({ allSurveys: data });
+      setSurveys({
+        allSurveys: data.filter(
+          (survey) => survey.preference === true,
+        ),
+      });
     });
   }, [dataRetreiver]);
 
@@ -68,7 +72,7 @@ function ModalSelection({
                     }}
                   />
                 )
-  }
+            }
           </Modal.Body>
         </Modal>
       </>

@@ -10,6 +10,7 @@ import ListSU from '../ListSU/ListSU';
 import Close from '../Close/Close';
 import MonitoringTable from '../MonitoringTable/MonitoringTable';
 import CollectionTable from '../CollectionTable/CollectionTable';
+import ProvisionalStatusTable from '../ProvisionalStatusTable/ProvisionalStatusTable';
 import Review from '../Review/Review';
 import Remind from '../Remind/Remind';
 import Notifications from '../Notifications/Notifications';
@@ -79,10 +80,11 @@ class View extends React.Component {
               <Route path="/followUp" component={(routeProps) => <Remind dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/follow" component={(routeProps) => <MonitoringTable dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/collection" component={(routeProps) => <CollectionTable dataRetreiver={this.dataRetreiver} {...routeProps} />} />
+              <Route path="/provisionalstatus" component={(routeProps) => <ProvisionalStatusTable dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/terminated/:id" component={(routeProps) => <Terminated dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/listSU/:id" component={(routeProps) => <ListSU dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/portal/:id" component={(routeProps) => <CampaignPortal dataRetreiver={this.dataRetreiver} {...routeProps} />} />
-              <Route path="/notifications" component={(routeProps) => <Notifications dataRetreiver={this.dataRetreiver} {...routeProps} user={userData}/>} />
+              <Route path="/notifications" component={(routeProps) => <Notifications dataRetreiver={this.dataRetreiver} {...routeProps} user={userData} />} />
               <Route path="/close" component={(routeProps) => <Close dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/" component={() => <MainScreen preferences={preferences} dataRetreiver={this.dataRetreiver} />} />
             </Switch>

@@ -28,16 +28,28 @@ function CollectionTableDisplayLine({ data }) {
       <td className="ColFirstCol">{interviewerName || survey || site}</td>
       <td className="ColumnSpacing" />
       <td className="ColCollectionRate">
-        {(collectionRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(collectionRate) || (
+          <>
+            {Number.isNaN(collectionRate) ? '' : (collectionRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </td>
       <td className="ColWasteRate">
-        {(wasteRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(wasteRate) || (
+          <>
+            {Number.isNaN(wasteRate) ? '' : (wasteRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </td>
       <td className="ColOOSRate">
-        {(outOfScopeRate * 100).toFixed(1)}
-        %
+        {Number.isNaN(outOfScopeRate) || (
+          <>
+            {Number.isNaN(outOfScopeRate) ? '' : (outOfScopeRate * 100).toFixed(1)}
+            %
+          </>
+        )}
       </td>
       <td className="ColumnSpacing" />
       <td className="ColSurveyAcepted">{surveysAccepted}</td>

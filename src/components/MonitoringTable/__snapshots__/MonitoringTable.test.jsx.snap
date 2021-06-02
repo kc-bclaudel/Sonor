@@ -85,8 +85,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -1106,8 +1104,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -2184,8 +2180,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -3205,8 +3199,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -4283,8 +4275,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -5304,8 +5294,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -6382,8 +6370,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -7407,8 +7393,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -8485,8 +8469,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -9170,8 +9152,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -9876,8 +9856,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -10799,8 +10777,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />
@@ -11831,7 +11807,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
               type="date"
               value="2020-08-20"
             />
@@ -12809,7 +12784,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
             type="date"
             value="2020-08-20"
           />
@@ -13784,7 +13758,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
               type="date"
               value="2020-08-20"
             />
@@ -14702,7 +14675,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
             type="date"
             value="2020-08-20"
           />
@@ -15709,8 +15681,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-02-20"
             />
@@ -16730,8 +16700,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-02-20"
           />
@@ -17824,8 +17792,6 @@ Object {
               class="DateDisplay"
               data-testid="date-picker"
               id="datePicker"
-              max="2020-08-20"
-              min="2020-01-01"
               type="date"
               value="2020-08-20"
             />
@@ -18845,8 +18811,6 @@ Object {
             class="DateDisplay"
             data-testid="date-picker"
             id="datePicker"
-            max="2020-08-20"
-            min="2020-01-01"
             type="date"
             value="2020-08-20"
           />

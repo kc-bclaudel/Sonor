@@ -21,12 +21,15 @@ function ListSU({
   const [site, setSite] = useState('');
   const [sort, setSort] = useState({ sortOn: null, asc: null });
   const [redirect, setRedirect] = useState(!survey ? '/' : null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(() => {
+    setIsLoading(true);
     dataRetreiver.getDataForListSU(!survey || survey.id, (res) => {
       if (isMounted.current) {
         setData(res.surveyUnits);
         setSite(res.site);
+        setIsLoading(false);
         setRedirect(null);
       }
     });
@@ -47,14 +50,14 @@ function ListSU({
     setData(sortedData);
   }, [data, sort]);
 
-  function validateChangingState(lstSUChangingState, state) {
-    let closingCause;
-    if (state === D.NPA) {
-      closingCause = 'NPA';
-    } else if (state === D.NPI) {
-      closingCause = 'NPI';
+  function validateChangingState(lstSUChangingState, closingCause) {
+    let cc;
+    if (closingCause === D.NPA) {
+      cc = 'NPA';
+    } else if (closingCause === D.NPI) {
+      cc = 'NPI';
     }
-    dataRetreiver.tagWithClosingCauseSurveyUnits(lstSUChangingState, closingCause)
+    dataRetreiver.tagWithClosingCauseSurveyUnits(lstSUChangingState, cc)
       .then((response) => {
         if (response.some(
           (res) => !(res.status === 200 || res.status === 201 || res.status === 204),
@@ -100,6 +103,7 @@ function ListSU({
           data={data}
           survey={survey}
           site={site}
+          isLoading={isLoading}
           validateChangingState={
             (lstSUChangingState,
               stateModified) => validateChangingState(lstSUChangingState, stateModified)

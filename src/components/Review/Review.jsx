@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,13 +21,16 @@ function Review({
   const [data, setData] = useState([]);
   const [sort, setSort] = useState({ sortOn: 'interviewer', asc: true });
   const [redirect, setRedirect] = useState(!survey && id ? '/' : null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = useCallback(() => {
+    setIsLoading(true);
     let surveyId = null;
     if (survey) surveyId = survey.id;
     dataRetreiver.getDataForReview(surveyId, (res) => {
       setData(res);
       setRedirect(null);
+      setIsLoading(false);
     });
   }, [dataRetreiver, survey]);
 
@@ -104,22 +108,30 @@ function Review({
         <Card className="ViewCard">
           <Card.Title className="PageTitle">
             {D.surveyUnitsToReview}
-            {data.length}
+            {isLoading ? '' : data.length}
           </Card.Title>
           {
-            data.length > 0
-              ? (
-                <ReviewTable
-                  data={data}
-                  sort={sort}
-                  survey={survey}
-                  handleSort={handleSort}
-                  validateSU={validateSU}
-                  viewSU={viewSU}
-                  validateUpdateComment={validateUpdateComment}
-                />
+            isLoading
+              ? <Spinner className="loadingSpinner" animation="border" variant="primary" />
+              : (
+                <>
+                  {
+                    data.length > 0
+                      ? (
+                        <ReviewTable
+                          data={data}
+                          sort={sort}
+                          survey={survey}
+                          handleSort={handleSort}
+                          validateSU={validateSU}
+                          viewSU={viewSU}
+                          validateUpdateComment={validateUpdateComment}
+                        />
+                      )
+                      : <span>{D.noSuToReview}</span>
+                  }
+                </>
               )
-              : <span>{D.noSuToReview}</span>
           }
         </Card>
       </div>

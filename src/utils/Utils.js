@@ -119,6 +119,24 @@ class Utils {
     return line;
   }
 
+  static formatForProvisionalStatusTable(initialObject, closingCauses) {
+    const line = {};
+    if (initialObject.interviewer) {
+      line.interviewerFirstName = initialObject.interviewer.interviewerFirstName;
+      line.interviewerLastName = initialObject.interviewer.interviewerLastName;
+      line.interviewerId = initialObject.interviewer.id;
+    }
+    if (initialObject.survey) {
+      line.survey = initialObject.survey;
+    }
+    line.npiCount = closingCauses.npiCount;
+    line.npaCount = closingCauses.npaCount;
+    line.rowCount = closingCauses.rowCount;
+    line.total = closingCauses.npaCount + closingCauses.npiCount + closingCauses.rowCount;
+    line.allocated = closingCauses.total;
+    return line;
+  }
+
   static getCampaignPhase(collectionStartDate, collectionEndDate, endDate) {
     const now = new Date().getTime();
     if (!collectionStartDate || now < collectionStartDate) {
@@ -186,7 +204,7 @@ class Utils {
         return mainSort ? mainSortFunc(a, b) : 0;
       };
     }
-    if (['interviewer_terminated','interviewer_closable'].includes(sortOn)) {
+    if (['interviewer_terminated', 'interviewer_closable'].includes(sortOn)) {
       return (a, b) => {
         const aString = (a.interviewer.interviewerLastName + a.interviewer.interviewerFirstName);
         const bString = (b.interviewer.interviewerLastName + b.interviewer.interviewerFirstName);

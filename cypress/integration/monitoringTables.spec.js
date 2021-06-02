@@ -186,7 +186,7 @@ context('sonor', () => {
       .should('have.text', 'South region organizational unit');
 
     cy.get('#datePicker').click().type('2020-08-31');
-    cy.get('tbody').find('td').eq(5).should('have.text', '3');
+    cy.get('tbody').find('td').eq(5).should('have.text', '22');
 
     // Return to main screen
     cy.get('a').contains(D.back).click();
