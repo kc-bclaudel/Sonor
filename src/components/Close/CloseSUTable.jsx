@@ -292,7 +292,7 @@ class CloseSUTable extends React.Component {
                             </Button>
                             <Button
                               variant="primary"
-                              disabled={stateModified === -1}
+                              disabled={!stateModified || stateModified === -1}
                               data-testid="confirm-validate"
                               onClick={() => {
                                 this.validate();

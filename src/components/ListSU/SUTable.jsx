@@ -134,7 +134,7 @@ class SUTable extends React.Component {
     } = this.props;
     const fieldsToSearch = ['city', 'interviewer', 'id', 'state'];
     const {
-      pagination, displayedLines, checkboxArray, checkAll, show,
+      pagination, displayedLines, checkboxArray, checkAll, show, stateModified,
     } = this.state;
     const toggleCheckBox = (i) => { this.toggleCheckBox(i); };
     function handleSortFunct(property) { return () => { handleSort(property); }; }
@@ -287,6 +287,7 @@ class SUTable extends React.Component {
                             </Button>
                             <Button
                               variant="primary"
+                              disabled={!stateModified || stateModified === -1}
                               data-testid="confirm-validate"
                               onClick={() => {
                                 this.validate();

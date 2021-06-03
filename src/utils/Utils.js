@@ -2,42 +2,6 @@ import D from '../i18n';
 import C from './constants.json';
 
 class Utils {
-  static getLabelFromStateType(stateType) {
-    switch (stateType) {
-      case 'NVM':
-        return D.NVM;
-      case 'NNS':
-        return D.NNS;
-      case 'ANV':
-        return D.ANV;
-      case 'VIN':
-        return D.VIN;
-      case 'VIC':
-        return D.VIC;
-      case 'PRC':
-        return D.PRC;
-      case 'AOC':
-        return D.AOC;
-      case 'APS':
-        return D.APS;
-      case 'INS':
-        return D.INS;
-      case 'WFT':
-        return D.WFT;
-      case 'WFS':
-        return D.WFS;
-      case 'TBR':
-        return D.TBR;
-      case 'FIN':
-        return D.FIN;
-      case 'QNA':
-        return D.QNA;
-      case 'NVA':
-        return D.NVA;
-      default:
-        return stateType;
-    }
-  }
 
   static convertToDateString(timestamp, locales, options) {
     return new Date(timestamp).toLocaleDateString(locales, options);

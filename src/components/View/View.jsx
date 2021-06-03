@@ -26,6 +26,7 @@ class View extends React.Component {
       showPreferences: false,
       preferences: {},
       redirect: null,
+      loadingPreferences: true,
     };
     this.dataRetreiver = new DataFormatter(props.keycloak);
   }
@@ -36,8 +37,9 @@ class View extends React.Component {
   }
 
   loadPreferences() {
+    this.setState({ loadingPreferences: true });
     this.dataRetreiver.getPreferences((preferences) => {
-      this.setState({ preferences, redirect: <Redirect to="/" /> });
+      this.setState({ preferences, loadingPreferences: false, redirect: <Redirect to="/" /> });
     });
   }
 
@@ -61,7 +63,9 @@ class View extends React.Component {
   }
 
   render() {
-    const { showPreferences, preferences, redirect } = this.state;
+    const {
+      showPreferences, preferences, redirect, loadingPreferences,
+    } = this.state;
     const { userData } = this.props;
     return (
       <>
@@ -86,7 +90,7 @@ class View extends React.Component {
               <Route path="/portal/:id" component={(routeProps) => <CampaignPortal dataRetreiver={this.dataRetreiver} {...routeProps} />} />
               <Route path="/notifications" component={(routeProps) => <Notifications dataRetreiver={this.dataRetreiver} {...routeProps} user={userData} />} />
               <Route path="/close" component={(routeProps) => <Close dataRetreiver={this.dataRetreiver} {...routeProps} />} />
-              <Route path="/" component={() => <MainScreen preferences={preferences} dataRetreiver={this.dataRetreiver} />} />
+              <Route path="/" component={() => <MainScreen preferences={preferences} loadingPreferences={loadingPreferences} dataRetreiver={this.dataRetreiver} />} />
             </Switch>
           </div>
         </Router>

@@ -131,13 +131,6 @@ Object {
                         4/28/ 08h32
                       </td>
                       <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
-                      </td>
-                      <td
                         class="recipients"
                       >
                         <b>
@@ -320,13 +313,6 @@ Object {
                       class="time"
                     >
                       4/28/ 08h32
-                    </td>
-                    <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
                     </td>
                     <td
                       class="recipients"
@@ -570,13 +556,6 @@ Object {
                         4/28/ 08h32
                       </td>
                       <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
-                      </td>
-                      <td
                         class="recipients"
                       >
                         <b>
@@ -595,13 +574,6 @@ Object {
                         class="time"
                       >
                         4/28/ 08h31
-                      </td>
-                      <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
                       </td>
                       <td
                         class="recipients"
@@ -624,13 +596,6 @@ Object {
                         4/28/ 08h31
                       </td>
                       <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
-                      </td>
-                      <td
                         class="recipients"
                       >
                         <b>
@@ -649,13 +614,6 @@ Object {
                         class="time"
                       >
                         4/28/ 08h31
-                      </td>
-                      <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
                       </td>
                       <td
                         class="recipients"
@@ -678,13 +636,6 @@ Object {
                         4/28/ 08h31
                       </td>
                       <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
-                      </td>
-                      <td
                         class="recipients"
                       >
                         <b>
@@ -703,13 +654,6 @@ Object {
                         class="time"
                       >
                         4/28/ 08h31
-                      </td>
-                      <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
                       </td>
                       <td
                         class="recipients"
@@ -732,13 +676,6 @@ Object {
                         4/28/ 08h30
                       </td>
                       <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
-                      </td>
-                      <td
                         class="recipients"
                       >
                         <b>
@@ -759,13 +696,6 @@ Object {
                         4/28/ 08h30
                       </td>
                       <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
-                      </td>
-                      <td
                         class="recipients"
                       >
                         <b>
@@ -784,13 +714,6 @@ Object {
                         class="time"
                       >
                         4/28/ 08h30
-                      </td>
-                      <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
                       </td>
                       <td
                         class="recipients"
@@ -811,13 +734,6 @@ Object {
                         class="time"
                       >
                         4/27/ 16h27
-                      </td>
-                      <td
-                        class="sender"
-                      >
-                        <b>
-                          From: 
-                        </b>
                       </td>
                       <td
                         class="recipients"
@@ -1004,13 +920,6 @@ Object {
                       4/28/ 08h32
                     </td>
                     <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
-                    </td>
-                    <td
                       class="recipients"
                     >
                       <b>
@@ -1029,13 +938,6 @@ Object {
                       class="time"
                     >
                       4/28/ 08h31
-                    </td>
-                    <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
                     </td>
                     <td
                       class="recipients"
@@ -1058,13 +960,6 @@ Object {
                       4/28/ 08h31
                     </td>
                     <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
-                    </td>
-                    <td
                       class="recipients"
                     >
                       <b>
@@ -1083,13 +978,6 @@ Object {
                       class="time"
                     >
                       4/28/ 08h31
-                    </td>
-                    <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
                     </td>
                     <td
                       class="recipients"
@@ -1112,13 +1000,6 @@ Object {
                       4/28/ 08h31
                     </td>
                     <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
-                    </td>
-                    <td
                       class="recipients"
                     >
                       <b>
@@ -1137,13 +1018,6 @@ Object {
                       class="time"
                     >
                       4/28/ 08h31
-                    </td>
-                    <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
                     </td>
                     <td
                       class="recipients"
@@ -1166,13 +1040,6 @@ Object {
                       4/28/ 08h30
                     </td>
                     <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
-                    </td>
-                    <td
                       class="recipients"
                     >
                       <b>
@@ -1193,13 +1060,6 @@ Object {
                       4/28/ 08h30
                     </td>
                     <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
-                    </td>
-                    <td
                       class="recipients"
                     >
                       <b>
@@ -1218,13 +1078,6 @@ Object {
                       class="time"
                     >
                       4/28/ 08h30
-                    </td>
-                    <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
                     </td>
                     <td
                       class="recipients"
@@ -1245,13 +1098,6 @@ Object {
                       class="time"
                     >
                       4/27/ 16h27
-                    </td>
-                    <td
-                      class="sender"
-                    >
-                      <b>
-                        From: 
-                      </b>
                     </td>
                     <td
                       class="recipients"
