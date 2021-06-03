@@ -75,6 +75,10 @@ const labelsStates = {
     fr: 'Clôturée',
     en: 'Closed',
   },
+  ANS: {
+    fr: 'Assignée non commencée',
+    en: 'Assigned not started',
+  },
 };
 
 export default labelsStates;

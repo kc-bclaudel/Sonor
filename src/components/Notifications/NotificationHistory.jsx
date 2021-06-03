@@ -24,13 +24,10 @@ function NotificationHistory({ setMessageView, messageHistory }) {
                 setMessageView(msg);
               }}
             >
-              <td className="time">{`${new Date(msg.date).toLocaleDateString().slice(0, 5)} ${(`0${new Date(msg.date).getHours()}`).slice(-2)}h${(`0${new Date(msg.date).getMinutes()}`).slice(-2)}`}</td>
-              <td className="sender">
-                <b>
-                  {`${D.from}: `}
-                </b>
-                {msg.sender}
+              <td className="time">
+                {`${new Date(msg.date).toLocaleDateString().slice(0, 5)} ${(`0${new Date(msg.date).getHours()}`).slice(-2)}h${(`0${new Date(msg.date).getMinutes()}`).slice(-2)}`}
               </td>
+
               <td className="recipients">
                 <b>
                   {`${D.to}: `}
@@ -39,7 +36,13 @@ function NotificationHistory({ setMessageView, messageHistory }) {
                   .join(', ')}
               </td>
               <td>
-                {msg.text}
+                {msg.text.split(/\n\r?/g)
+                  .map((line, index) => (index ? (
+                    <>
+                      <br />
+                      {line}
+                    </>
+                  ) : line))}
               </td>
             </tr>
           ))}
