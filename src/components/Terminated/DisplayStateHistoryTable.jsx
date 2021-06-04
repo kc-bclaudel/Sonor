@@ -36,7 +36,7 @@ function displayStateHistoryTable(stateData, stateId, hideStateHistoryTable, max
             <tr key={data.id}>
               <td data-testid="campaign-label">{Utils.convertToDateString(data.date)}</td>
               <td>{Utils.convertMsToHoursMinutes(data.date)}</td>
-              <td>{Utils.getLabelFromStateType(data.type)}</td>
+              <td>{data.type ? D[data.type] : ''}</td>
             </tr>
           ))}
         </tbody>

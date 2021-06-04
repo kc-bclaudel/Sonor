@@ -49,7 +49,7 @@ function CampaignPortal({
   }, [redirect, dataRetreiver, location, survey]);
 
   useEffect(() => {
-    if(survey){
+    if (survey) {
       setIsLoading(true);
       dataRetreiver.getDataForCampaignPortal(!survey || survey.id, (res) => {
         setData(res);

@@ -26,7 +26,8 @@ class MainScreen extends React.Component {
 
   componentDidUpdate(prevProps) {
     const { preferences } = this.props;
-    if (prevProps.preferences !== preferences) {
+    const { isLoading } = this.state;
+    if (prevProps.preferences !== preferences && !isLoading) {
       this.fetchData();
     }
   }
@@ -56,6 +57,7 @@ class MainScreen extends React.Component {
 
   render() {
     const handleSort = (property) => this.handleSort(property);
+    const { loadingPreferences } = this.props;
     const {
       pagination, data, sort, isLoading,
     } = this.state;
@@ -65,7 +67,7 @@ class MainScreen extends React.Component {
         <Card className="ViewCard">
           <Card.Title className="PageTitle">{D.surveyList}</Card.Title>
           {
-            isLoading
+            isLoading || loadingPreferences
               ? <Spinner className="loadingSpinner" animation="border" variant="primary" />
               : (
                 <>

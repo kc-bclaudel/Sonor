@@ -116,7 +116,7 @@ const header = {
     en: 'Units allocated to the site',
   },
   collectionOrganization: {
-    fr: 'Organisation de la collecte',
+    fr: 'Organisation des collectes',
     en: 'Collection organization',
   },
 };

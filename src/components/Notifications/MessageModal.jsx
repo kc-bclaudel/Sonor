@@ -36,7 +36,17 @@ function MessageModal({ messageView, setMessageView }) {
                 .join(', ')}
             </div>
             <hr />
-            {messageView ? messageView.text : ''}
+            {
+            messageView
+              ? messageView.text.split(/\n\r?/g)
+                .map((line, index) => (index ? (
+                  <>
+                    <br />
+                    {line}
+                  </>
+                ) : line))
+              : ''
+            }
           </Modal.Body>
           <Modal.Footer>
             <Button
