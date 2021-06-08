@@ -3,36 +3,40 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import D from '../../i18n';
 
-function displaySurveys(preferences, toggleCheckbox){
-  var lines = [];
-  if(preferences != null){
-    lines = Object.keys(preferences).map((key) => (
-      <tr className="PreferenceRow" key={key}>
-        <td className="PreferenceCheckbox">
-          <input
-            className="Clickable"
-            type="checkbox"
-            checked={preferences[key].preference}
-            onChange={() => toggleCheckbox(key)}
-          />
-        </td>
-        <td>{preferences[key].label}</td>
-      </tr>
-    ));
+function displaySurveys(preferences, toggleCheckbox) {
+  let lines = [];
+  if (preferences != null) {
+    lines = Object.keys(preferences)
+      .sort((a, b) => (preferences[a].label > preferences[b].label ? 1 : -1))
+      .map((key) => (
+        <tr className="PreferenceRow" key={key}>
+          <td className="PreferenceCheckbox">
+            <input
+              className="Clickable"
+              type="checkbox"
+              checked={preferences[key].preference}
+              onChange={() => toggleCheckbox(key)}
+            />
+          </td>
+          <td>{preferences[key].label}</td>
+        </tr>
+      ));
   } else {
-    lines = Object.keys(preferences).map((key) => (
-      <tr className="PreferenceRow" key={key}>
-        <td className="PreferenceCheckbox">
-          <input
-            className="Clickable"
-            type="checkbox"
-            checked="true"
-            onChange={() => toggleCheckbox(key)}
-          />
-        </td>
-        <td>{preferences[key].label}</td>
-      </tr>
-    ));
+    lines = Object.keys(preferences)
+      .sort((a, b) => (preferences[a].label > preferences[b].label ? 1 : -1))
+      .map((key) => (
+        <tr className="PreferenceRow" key={key}>
+          <td className="PreferenceCheckbox">
+            <input
+              className="Clickable"
+              type="checkbox"
+              checked="true"
+              onChange={() => toggleCheckbox(key)}
+            />
+          </td>
+          <td>{preferences[key].label}</td>
+        </tr>
+      ));
   }
 
   return (
