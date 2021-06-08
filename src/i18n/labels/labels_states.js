@@ -60,12 +60,12 @@ const labelsStates = {
     en: 'Not available to all',
   },
   NPA: {
-    fr: 'Non traitée absence enquêteur',
-    en: 'Not processed interviewer absence',
+    fr: 'Absence enquêteur (maladie, démission...)',
+    en: 'Interviewer absence (Sickness, resignation...)',
   },
   NPI: {
-    fr: 'Non traitée enquêteur',
-    en: 'Not processed interviewer',
+    fr: 'Manque de temps enquêteur',
+    en: 'Not enough time interviewer',
   },
   ROW: {
     fr: 'Droit de retrait',

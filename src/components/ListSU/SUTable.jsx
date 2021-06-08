@@ -40,7 +40,12 @@ class SUTable extends React.Component {
     this.state = {
       pagination: { size: 10, page: 1 },
       displayedLines: props.data,
-      checkboxArray: props.data.reduce((acc, curr) => { acc[curr.id] = false; return acc; }, {}),
+      checkboxArray: props.data.reduce((acc, curr) => {
+        if (curr.state !== 'CLO' && curr.state !== 'TBR' && curr.state !== 'FIN') {
+          acc[curr.id] = false;
+        }
+        return acc;
+      }, {}),
       checkAll: false,
       show: false,
       stateModified: '',
@@ -52,7 +57,10 @@ class SUTable extends React.Component {
     if (prevProps.data !== data) {
       this.setState({ displayedLines: data });
       const newCheckboxArray = data.reduce((acc, curr) => {
-        acc[curr.id] = false; return acc;
+        if (curr.state !== 'CLO' && curr.state !== 'TBR' && curr.state !== 'FIN') {
+          acc[curr.id] = false;
+        }
+        return acc;
       }, {});
       this.setState({ checkboxArray: newCheckboxArray, checkAll: false });
     }
