@@ -702,13 +702,11 @@ class DataFormatter {
     switch (mode) {
       case BY_INTERVIEWER_ONE_SURVEY:
         this.getDataForProvisionalStatusTableByInterviewerOneSuvey(chosenElm, date, (data) => {
-          console.log(data);
           cb(data);
         });
         break;
       case BY_SURVEY_ONE_INTERVIEWER:
         this.getDataForProvisionalStatusTableBySurveyOneInterviewer(chosenElm, date, (data) => {
-          console.log(data);
           cb(data);
         });
         break;
@@ -740,8 +738,7 @@ class DataFormatter {
       Promise.all(promises).then((data) => {
         cb({
           linesDetails: data
-            .filter((lineData) => lineData.allocated)
-            .map((lineData) => lineData),
+            .filter((lineData) => lineData.allocated),
         });
       });
     });

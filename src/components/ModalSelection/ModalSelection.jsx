@@ -6,7 +6,7 @@ import SurveySelector from '../SurveySelector/SurveySelector';
 import InterviewerSelector from '../InterviewerSelector/InterviewerSelector';
 
 function ModalSelection({
-  linkTo, title, show, setShow, dataRetreiver, interviewerMode
+  linkTo, title, show, setShow, dataRetreiver, interviewerMode,
 }) {
   const [redirect, setRedirect] = useState(null);
   const [surveys, setSurveys] = useState(null);
@@ -34,7 +34,7 @@ function ModalSelection({
     } else {
       updateSurveys();
     }
-  }, [dataRetreiver, updateSurveys, updateInterviewers, interviewerMode]);
+  }, [dataRetreiver, updateSurveys, updateInterviewers, interviewerMode, show]);
 
   useEffect(() => {
     setRedirect(null);

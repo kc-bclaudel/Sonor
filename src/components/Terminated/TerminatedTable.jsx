@@ -113,7 +113,7 @@ class TerminatedTable extends React.Component {
             <i
               className="fa fa-calendar EditLink Clickable"
               aria-hidden="true"
-              onClick={() => { window.open(`${this.queenUrl}/queen/readonly/questionnaire/${survey.id}/survey-unit/${data.id}`); }}
+              onClick={() => { window.open(`${this.queenUrl}/queen/readonly/survey-unit/${data.id}`); }}
             />
           </OverlayTrigger>
           <span />
