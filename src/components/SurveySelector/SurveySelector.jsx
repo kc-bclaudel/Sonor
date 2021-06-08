@@ -5,6 +5,7 @@ import D from '../../i18n';
 function createSelectOptions(campaigns, currentId) {
   return campaigns
     .filter((campaign) => (campaign.id !== currentId))
+    .sort((a, b) => (a.label > b.label ? 1 : -1))
     .map((campaign) => (<option key={campaign.id} value={campaign.id}>{campaign.label}</option>));
 }
 

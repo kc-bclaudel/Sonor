@@ -208,6 +208,8 @@ it('Change preferences', async () => {
 
   const newPrefs = [
     'simpsons2020x00',
+    'simpsosfqns2020x00',
+    'vqs2fsqe021x00',
     'simpsonqsdfsqes2020x00',
     'vqs2qfsdfsqe021x00',
     'vqs202fgd1x00',
@@ -234,7 +236,7 @@ it('Change preferences (error response)', async () => {
 
   const boxes = component.baseElement.querySelectorAll('input[type="checkbox"]');
 
-  boxes[6].click();
+  boxes[7].click();
 
   screen.getByTestId('validate-pref-modif').click();
 
