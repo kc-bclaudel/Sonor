@@ -69,7 +69,7 @@ Object {
                     />
                   </td>
                   <td>
-                    Survey on the Simpsons tv show 2020
+                    Everyday life and health survey 2018
                   </td>
                 </tr>
                 <tr
@@ -95,13 +95,12 @@ Object {
                     class="PreferenceCheckbox"
                   >
                     <input
-                      checked=""
                       class="Clickable"
                       type="checkbox"
                     />
                   </td>
                   <td>
-                    Survey on something 2020
+                    Everyday life and health survey 2022
                   </td>
                 </tr>
                 <tr
@@ -111,12 +110,29 @@ Object {
                     class="PreferenceCheckbox"
                   >
                     <input
+                      checked=""
                       class="Clickable"
                       type="checkbox"
                     />
                   </td>
                   <td>
-                    Everyday life and health survey 2022
+                    Everyday life and health survey 2026
+                  </td>
+                </tr>
+                <tr
+                  class="PreferenceRow"
+                >
+                  <td
+                    class="PreferenceCheckbox"
+                  >
+                    <input
+                      checked=""
+                      class="Clickable"
+                      type="checkbox"
+                    />
+                  </td>
+                  <td>
+                    Survey on something 2020
                   </td>
                 </tr>
                 <tr
@@ -148,7 +164,7 @@ Object {
                     />
                   </td>
                   <td>
-                    Everyday life and health survey 2026
+                    Survey on the Simpsons tv show 2020
                   </td>
                 </tr>
                 <tr
@@ -164,22 +180,6 @@ Object {
                   </td>
                   <td>
                     Survey on the Simpsons tv show 2021
-                  </td>
-                </tr>
-                <tr
-                  class="PreferenceRow"
-                >
-                  <td
-                    class="PreferenceCheckbox"
-                  >
-                    <input
-                      checked=""
-                      class="Clickable"
-                      type="checkbox"
-                    />
-                  </td>
-                  <td>
-                    Everyday life and health survey 2018
                   </td>
                 </tr>
               </tbody>

@@ -30,7 +30,7 @@ function SurveyUnitLine({
           <i
             className="fa fa-calendar EditLink Clickable"
             aria-hidden="true"
-            onClick={() => { view(lineData); window.open(`${queenUrl}/queen/readonly/questionnaire/${lineData.campaignId}/survey-unit/${lineData.id}`); }}
+            onClick={() => { view(lineData); window.open(`${queenUrl}/queen/readonly/survey-unit/${lineData.id}`); }}
           />
         </OverlayTrigger>
         <span />
