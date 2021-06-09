@@ -72,6 +72,7 @@ class ProvisionalStatusTable extends React.Component {
       dataRetreiver.getDataForProvisionalStatusTable(
         surveyToUse, new Date(dateToUse).getTime(), paginationToUse, modeToUse,
         (res) => {
+          console.log(res)
           if (dateToUse === this.state.date) {
             const newData = {};
             Object.assign(newData, res);
@@ -143,7 +144,7 @@ class ProvisionalStatusTable extends React.Component {
           updateFunc={(newInterviewer) => this.setState({
             interviewer: newInterviewer,
             redirect: {
-              pathname: `/collection/campaigns/interviewer/${newInterviewer.id}`,
+              pathname: `/provisionalStatus/campaigns/interviewer/${newInterviewer.id}`,
               interviewer: newInterviewer,
             },
           })}
@@ -229,9 +230,9 @@ class ProvisionalStatusTable extends React.Component {
                           </Col>
                         </Row>
                         <ProvisionalStatusTableDisplay
-                          data={data}
                           pagination={pagination}
                           displayedLines={displayedLines}
+                          total={data.total}
                           mode={mode}
                           handleSort={(property) => this.handleSort(property)}
                           sort={sort}

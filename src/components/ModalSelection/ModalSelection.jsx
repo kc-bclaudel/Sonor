@@ -16,7 +16,7 @@ function ModalSelection({
     dataRetreiver.getDataForMainScreen(null, (data) => {
       setSurveys({
         allSurveys: data.filter(
-          (survey) => survey.preference === true,
+          (survey) => survey.preference,
         ),
       });
     });
@@ -34,11 +34,15 @@ function ModalSelection({
     } else {
       updateSurveys();
     }
-  }, [dataRetreiver, updateSurveys, updateInterviewers, interviewerMode, show]);
+  }, [dataRetreiver, updateSurveys, updateInterviewers, interviewerMode]);
+
 
   useEffect(() => {
     setRedirect(null);
-  }, [show]);
+    if (!interviewerMode) {
+      updateSurveys();
+    }
+  }, [show, interviewerMode, updateSurveys]);
 
   return redirect
     ? <Redirect to={redirect} />
