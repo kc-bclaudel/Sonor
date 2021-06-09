@@ -6,7 +6,7 @@ import C from '../../utils/constants.json';
 import D from '../../i18n';
 
 function ProvisionalStatusTableDisplay({
-  sort, displayedLines, pagination, mode, handleSort,
+  sort, displayedLines, pagination, mode, handleSort, total
 }) {
   let firstColumnTitle;
   let firstColumnSortAttribute;
@@ -22,6 +22,17 @@ function ProvisionalStatusTableDisplay({
   }
   function handleSortFunct(property) { return () => { handleSort(property); }; }
 
+  const footer = mode === C.BY_SURVEY_ONE_INTERVIEWER || (
+    <tr>
+      <th>{D.totalDEM}</th>
+      <td className="ColumnSpacing" />
+      <th>{total.npaCount}</th>
+      <th>{total.npiCount}</th>
+      <th>{total.total}</th>
+      <td className="ColumnSpacing" />
+      <th>{total.allocated}</th>
+    </tr>
+  );
   return (
     <Table id="FollowUpTable" className="CustomTable" bordered striped hover responsive size="sm">
       <thead>
@@ -84,6 +95,7 @@ function ProvisionalStatusTableDisplay({
             />
           ))}
       </tbody>
+      {footer}
     </Table>
   );
 }

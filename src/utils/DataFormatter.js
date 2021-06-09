@@ -739,9 +739,20 @@ class DataFormatter {
         cb({
           linesDetails: data
             .filter((lineData) => lineData.allocated),
+          total: data.reduce((acc, curr) => {
+            acc.npiCount += curr.npiCount;
+            acc.npaCount += curr.npaCount;
+            acc.total += curr.total;
+            acc.allocated += curr.allocated;
+            return acc;
+          }, {
+            allocated: 0, npiCount: 0, npaCount: 0, total: 0,
+          }),
         });
       });
     });
+
+
   }
 
   async getDataForProvisionalStatusTableBySurveyOneInterviewer(interviewer, date, cb) {
@@ -768,7 +779,7 @@ class DataFormatter {
         Promise.all(promises).then((data) => {
           cb({
             linesDetails: data
-              .filter((lineData) => lineData.total)
+              .filter((lineData) => lineData.allocated)
               .map((lineData) => lineData),
           });
         });

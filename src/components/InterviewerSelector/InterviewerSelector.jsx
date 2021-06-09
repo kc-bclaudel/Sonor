@@ -5,6 +5,7 @@ import D from '../../i18n';
 function createSelectOptions(allInterviewers, currentId) {
   return allInterviewers
     .filter((interviewer) => (interviewer.id !== currentId))
+    .sort((a, b) => (`${a.interviewerLastName} ${a.interviewerFirstName}` > `${b.interviewerLastName} ${b.interviewerFirstName}` ? 1 : -1))
     .map((interviewer) => (
       <option key={interviewer.id} value={interviewer.id}>
         {`${interviewer.interviewerFirstName} ${interviewer.interviewerLastName}`}

@@ -51,7 +51,7 @@ class CloseSUTable extends React.Component {
     const { data } = this.props;
     if (prevProps.data !== data) {
       this.setState({ displayedLines: data });
-      const newCheckboxArray = data
+      const newCheckboxArray = Array.isArray(data)
         ? data.reduce(
           (acc, curr) => { acc[curr.id] = false; return acc; }, {},
         )

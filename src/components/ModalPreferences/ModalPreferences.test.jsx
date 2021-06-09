@@ -65,12 +65,8 @@ it('Check a box, uncheck another, validate', async () => {
   boxes[2].click();
 
   const newPrefs = [
-    'simpsons2020x00',
-    'simpsosfqns2020x00',
-    'vqs2fsqe021x00',
-    'simpsonqsdfsqes2020x00',
-    'vqs2qfsdfsqe021x00',
-    'vqs202fgd1x00',
+    'vqs2021x00',
+    'simpsonkgs2020x00',
   ];
 
   screen.getByTestId('validate-pref-modif').click();
