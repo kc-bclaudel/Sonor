@@ -11762,6 +11762,21 @@ Object {
                       Jacques Boulanger
                     </option>
                     <option
+                      value="INTW9"
+                    >
+                      Emilie Boulanger
+                    </option>
+                    <option
+                      value="INTW11"
+                    >
+                      Alphonse Delmarre
+                    </option>
+                    <option
+                      value="INTW10"
+                    >
+                      Renée Dupont
+                    </option>
+                    <option
                       value="INTW7"
                     >
                       Thierry Fabres
@@ -11770,21 +11785,6 @@ Object {
                       value="INTW8"
                     >
                       Bertrand Renard
-                    </option>
-                    <option
-                      value="INTW9"
-                    >
-                      Emilie Boulanger
-                    </option>
-                    <option
-                      value="INTW10"
-                    >
-                      Renée Dupont
-                    </option>
-                    <option
-                      value="INTW11"
-                    >
-                      Alphonse Delmarre
                     </option>
                   </select>
                 </div>
@@ -12739,6 +12739,21 @@ Object {
                     Jacques Boulanger
                   </option>
                   <option
+                    value="INTW9"
+                  >
+                    Emilie Boulanger
+                  </option>
+                  <option
+                    value="INTW11"
+                  >
+                    Alphonse Delmarre
+                  </option>
+                  <option
+                    value="INTW10"
+                  >
+                    Renée Dupont
+                  </option>
+                  <option
                     value="INTW7"
                   >
                     Thierry Fabres
@@ -12747,21 +12762,6 @@ Object {
                     value="INTW8"
                   >
                     Bertrand Renard
-                  </option>
-                  <option
-                    value="INTW9"
-                  >
-                    Emilie Boulanger
-                  </option>
-                  <option
-                    value="INTW10"
-                  >
-                    Renée Dupont
-                  </option>
-                  <option
-                    value="INTW11"
-                  >
-                    Alphonse Delmarre
                   </option>
                 </select>
               </div>
