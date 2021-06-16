@@ -23,6 +23,10 @@ const labelsStateDatas = {
     fr: 'Inexistant',
     en: 'Null',
   },
+  UNAVAILABLE: {
+    fr: 'Indisponible',
+    en: 'Unavailable',
+  },
 };
 
 export default labelsStateDatas;
