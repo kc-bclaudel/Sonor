@@ -168,6 +168,26 @@ class Utils {
         return mainSort ? mainSortFunc(a, b) : 0;
       };
     }
+    if (sortOn === 'contact_outcome') {
+      return (a, b) => {
+        if (!a.contactOutcome && !!b.contactOutcome) {
+          return -1 * mult;
+        }
+        if (!!a.contactOutcome && !b.contactOutcome) {
+          return 1 * mult;
+        }
+        if (!a.contactOutcome && !b.contactOutcome) {
+          return mainSort ? mainSortFunc(a, b) : 0;
+        }
+        if (D[a.contactOutcome] < D[b.contactOutcome]) {
+          return -1 * mult;
+        }
+        if (a.contactOutcome !== b.contactOutcome) {
+          return 1 * mult;
+        }
+        return mainSort ? mainSortFunc(a, b) : 0;
+      };
+    }
     if (['interviewer_terminated', 'interviewer_closable'].includes(sortOn)) {
       return (a, b) => {
         const aString = (a.interviewer.interviewerLastName + a.interviewer.interviewerFirstName);
