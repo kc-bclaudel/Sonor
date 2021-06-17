@@ -9,7 +9,7 @@ const labelsContactOutcomes = {
   },
   REF: {
     en: 'Refusal',
-    fr: 'Refusal',
+    fr: 'Refus',
   },
   INI: {
     en: 'Interview impossible',
