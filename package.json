@@ -1,6 +1,6 @@
 {
   "name": "sonor",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

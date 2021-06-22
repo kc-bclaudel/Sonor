@@ -43,8 +43,13 @@ class ReviewTable extends React.Component {
   }
 
   updateLines(matchingLines) {
-    const { pagination } = this.state;
+    const { pagination, checkboxArray } = this.state;
+    const newCheckboxArray = Object.keys(checkboxArray).reduce(
+      (acc, curr) => { acc[curr] = false; return acc; }, {},
+    );
     this.setState({
+      checkboxArray: newCheckboxArray,
+      checkAll: false,
       pagination: { size: pagination.size, page: 1 },
       displayedLines: matchingLines,
     });
