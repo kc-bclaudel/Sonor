@@ -210,23 +210,23 @@ context('sonor', () => {
     cy.get('th').contains(D.collectionRate).click();
     cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
     cy.get('th').contains(D.collectionRate).click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '37.2%');
+    cy.get('tbody').find('td').eq(2).should('have.text', '38.4%');
 
     // Testing sort by wasteRate
     cy.get('th').contains(D.wasteRate).click();
-    cy.get('tbody').find('td').eq(3).should('have.text', '37.5%');
+    cy.get('tbody').find('td').eq(3).should('have.text', '19.8%');
     cy.get('th').contains(D.wasteRate).click();
-    cy.get('tbody').find('td').eq(3).should('have.text', '50.0%');
+    cy.get('tbody').find('td').eq(3).should('have.text', '24.4%');
 
     // Testing sort by not outOfScopeRate
     cy.get('th').contains(D.outOfScopeRate).click();
-    cy.get('tbody').find('td').eq(4).should('have.text', '7.7%');
+    cy.get('tbody').find('td').eq(4).should('have.text', '19.6%');
     cy.get('th').contains(D.outOfScopeRate).click();
-    cy.get('tbody').find('td').eq(4).should('have.text', '10.2%');
+    cy.get('tbody').find('td').eq(4).should('have.text', '19.8%');
 
     // Testing sort by surveysAccepted
     cy.get('th').contains(D.surveysAccepted).click();
-    cy.get('tbody').find('td').eq(6).should('have.text', '32');
+    cy.get('tbody').find('td').eq(6).should('have.text', '33');
     cy.get('th').contains(D.surveysAccepted).click();
     cy.get('tbody').find('td').eq(6).should('have.text', '33');
 
@@ -244,15 +244,15 @@ context('sonor', () => {
 
     // Testing sort by otherWastes
     cy.get('th').contains(D.otherWastes).click();
-    cy.get('tbody').find('td').eq(9).should('have.text', '27');
+    cy.get('tbody').find('td').eq(9).should('have.text', '11');
     cy.get('th').contains(D.otherWastes).click();
-    cy.get('tbody').find('td').eq(9).should('have.text', '28');
+    cy.get('tbody').find('td').eq(9).should('have.text', '12');
 
     // Testing sort by outOfScope
     cy.get('th').contains(D.outOfScope).click();
-    cy.get('tbody').find('td').eq(10).should('have.text', '8');
+    cy.get('tbody').find('td').eq(10).should('have.text', '17');
     cy.get('th').contains(D.outOfScope).click();
-    cy.get('tbody').find('td').eq(10).should('have.text', '9');
+    cy.get('tbody').find('td').eq(10).should('have.text', '19');
 
     // Testing sort by at totalProcessed
     cy.get('th').contains(D.totalProcessed).click();
@@ -308,7 +308,7 @@ context('sonor', () => {
     cy.wait(13000)
     cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
     cy.wait(13000)
-    cy.get('tbody').find('td').eq(2).should('have.text', '2.9%');
+    cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
 
 
     //Testing search field filter by interviewer
@@ -336,7 +336,7 @@ context('sonor', () => {
     
     cy.wait(['@get-state-count-by-campaign', '@get-contact-outcomes-by-campaign']);
     cy.wait(3000);
-    cy.get('tbody').find('td').eq(2).should('have.text', '3.2%');
+    cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
 
     // Testing search field filter by survey label
@@ -356,7 +356,7 @@ context('sonor', () => {
 
     cy.wait(3000);
 
-    cy.get('tbody').find('td').eq(2).should('have.text', '1.1%');
+    cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
     cy.get('tbody').find('tr').should('have.length', 3);
 

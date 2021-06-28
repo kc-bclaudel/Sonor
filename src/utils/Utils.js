@@ -33,13 +33,11 @@ class Utils {
   static calculateWasteRate(outcomes, stateCount) {
     return (outcomes.refCount
         + outcomes.impCount
-        + outcomes.iniCount
-        + outcomes.alaCount
-        + outcomes.wamCount
-        + stateCount.npaCount
+        + outcomes.utrCount
+        + outcomes.acpCount
+        + outcomes.nerCount
         + stateCount.npiCount
-        + stateCount.rowCount
-    ) / stateCount.total;
+    ) / (stateCount.total - stateCount.npaCount);
   }
 
   static formatForMonitoringTable(stateCount) {
@@ -68,12 +66,12 @@ class Utils {
 
     line.collectionRate = this.calculateCollectionRate(outcomes, stateCount);
     line.wasteRate = this.calculateWasteRate(outcomes, stateCount);
-    line.outOfScopeRate = outcomes.oosCount / stateCount.total;
+    line.outOfScopeRate = (outcomes.ucdCount + outcomes.alaCount + outcomes.dcdCount + outcomes.nuhCount) / (stateCount.total - stateCount.npaCount);
     line.surveysAccepted = outcomes.inaCount;
     line.refusal = outcomes.refCount;
     line.unreachable = outcomes.impCount;
-    line.otherWastes = outcomes.iniCount + outcomes.alaCount + outcomes.wamCount;
-    line.outOfScope = outcomes.oosCount;
+    line.otherWastes = outcomes.utrCount + outcomes.acpCount + outcomes.nerCount;
+    line.outOfScope = outcomes.ucdCount + outcomes.alaCount + outcomes.nuhCount;
     line.totalProcessed = stateCount.tbrCount + stateCount.finCount;
     line.absInterviewer = stateCount.npaCount;
     line.otherReason = stateCount.npiCount + stateCount.rowCount;
