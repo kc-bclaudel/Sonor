@@ -188,11 +188,11 @@ context('sonor', () => {
     cy.get('#MainScreen');
     // Click on the review cell of first row to go to collection table by site
     cy.get('button').contains(D.follow).click();
-    cy.wait(1000)
+    cy.wait(1500)
     cy.get('button').contains(D.collectionBySite).click({ force: true });
-    cy.wait(1000)
+    cy.wait(1500)
     cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
-    cy.wait(3000)
+    cy.wait(3500)
 
     // Testing sort by site
     cy.get('tbody')
@@ -200,7 +200,7 @@ context('sonor', () => {
       .first()
       .should('have.text', 'National organizational unit');
     cy.get('th').contains('Site').click();
-    cy.wait(1500)
+    cy.wait(2000)
     cy.get('tbody')
       .find('td')
       .first()
@@ -293,12 +293,12 @@ context('sonor', () => {
       .should('have.text', 'South region organizational unit');
 
     cy.get('#datePicker').click().type('2020-08-31');
-    cy.wait(500);
+    cy.wait(1000);
     cy.get('tbody').find('td').eq(7).should('have.text', '2');
 
     // Return to main screen
     cy.get('a').contains(D.back).click();
-    cy.wait(500)
+    cy.wait(1000)
     cy.get('#MainScreen');
 
     // Go to monitoring table by interviewers for the first survey
@@ -313,9 +313,9 @@ context('sonor', () => {
 
     //Testing search field filter by interviewer
     cy.get('.SearchFieldInput').clear();
-    cy.wait(500)
+    cy.wait(1500)
     cy.get('.SearchFieldInput').type('leg');
-    cy.wait(500)
+    cy.wait(1500)
     cy.get('tbody').find('tr').should('have.length', 1);
     cy.get('tbody').find('td').first().should('have.text', 'Legrand Patrice');
 
@@ -331,11 +331,11 @@ context('sonor', () => {
 
     // Go to collection table by survey
     cy.get('button').contains(D.follow).click();
-    cy.wait(500)
+    cy.wait(1500)
     cy.get('[data-testid="collection-by-survey"]').click({ force: true });
     
     cy.wait(['@get-state-count-by-campaign', '@get-contact-outcomes-by-campaign']);
-    cy.wait(3000);
+    cy.wait(4000);
     cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
 
@@ -354,7 +354,7 @@ context('sonor', () => {
     cy.get('[data-testid="collection-by-survey-one-interviewer"]').click({ force: true });
     cy.get('[data-testid="Interviewer_selector"]').select('INTW5');
 
-    cy.wait(3000);
+    cy.wait(4000);
 
     cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
