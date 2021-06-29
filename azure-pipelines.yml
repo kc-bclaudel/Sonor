@@ -18,9 +18,9 @@ steps:
 - script:
     npm install
   displayName: 'npm install'
-- script:
-    CI=true npm run test
-  displayName: 'run unit tests'
+# - script:
+#     CI=true npm run test
+#   displayName: 'run unit tests'
 - script:
     npm run cypress:test
   displayName: 'run end to end tests'

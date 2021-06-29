@@ -1,10 +1,13 @@
 {
-      "inaCount": 0,
-      "refCount": 1,
-      "impCount": 2,
-      "iniCount":12,
-      "alaCount": 9,
-      "wamCount": 6,
-      "oosCount": 8,
+  "inaCount":33,
+  "refCount":2,
+  "impCount":5,
+  "ucdCount":11,
+  "utrCount":9,
+  "alaCount":7,
+  "acpCount":2,
+  "dcdCount":1,
+  "nuhCount":1,
+  "nerCount":1,
   "total": 95
 }

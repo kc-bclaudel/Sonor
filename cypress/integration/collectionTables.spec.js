@@ -186,13 +186,14 @@ context('sonor', () => {
     // test
     // Main screen view is initially displayed
     cy.get('#MainScreen');
+    cy.wait(1500);
     // Click on the review cell of first row to go to collection table by site
     cy.get('button').contains(D.follow).click();
-    cy.wait(1000)
+    cy.wait(8000);
     cy.get('button').contains(D.collectionBySite).click({ force: true });
-    cy.wait(1000)
+    cy.wait(8000);
     cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
-    cy.wait(3000)
+    cy.wait(13500);
 
     // Testing sort by site
     cy.get('tbody')
@@ -200,7 +201,7 @@ context('sonor', () => {
       .first()
       .should('have.text', 'National organizational unit');
     cy.get('th').contains('Site').click();
-    cy.wait(1500)
+    cy.wait(2000);
     cy.get('tbody')
       .find('td')
       .first()
@@ -208,84 +209,103 @@ context('sonor', () => {
 
     // Testing sort by collectionRate
     cy.get('th').contains(D.collectionRate).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
     cy.get('th').contains(D.collectionRate).click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '37.2%');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(2).should('have.text', '38.4%');
 
     // Testing sort by wasteRate
     cy.get('th').contains(D.wasteRate).click();
-    cy.get('tbody').find('td').eq(3).should('have.text', '37.5%');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(3).should('have.text', '19.8%');
     cy.get('th').contains(D.wasteRate).click();
-    cy.get('tbody').find('td').eq(3).should('have.text', '50.0%');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(3).should('have.text', '24.4%');
 
     // Testing sort by not outOfScopeRate
     cy.get('th').contains(D.outOfScopeRate).click();
-    cy.get('tbody').find('td').eq(4).should('have.text', '7.7%');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(4).should('have.text', '19.6%');
     cy.get('th').contains(D.outOfScopeRate).click();
-    cy.get('tbody').find('td').eq(4).should('have.text', '10.2%');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(4).should('have.text', '19.8%');
 
     // Testing sort by surveysAccepted
     cy.get('th').contains(D.surveysAccepted).click();
-    cy.get('tbody').find('td').eq(6).should('have.text', '32');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(6).should('have.text', '33');
     cy.get('th').contains(D.surveysAccepted).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(6).should('have.text', '33');
 
     // Testing sort by refusal
     cy.get('th').contains(D.refusal).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(7).should('have.text', '2');
     cy.get('th').contains(D.refusal).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(7).should('have.text', '3');
 
     // Testing sort by unreachable
     cy.get('th').contains(D.unreachable).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(8).should('have.text', '4');
     cy.get('th').contains(D.unreachable).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(8).should('have.text', '5');
 
     // Testing sort by otherWastes
     cy.get('th').contains(D.otherWastes).click();
-    cy.get('tbody').find('td').eq(9).should('have.text', '27');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(9).should('have.text', '11');
     cy.get('th').contains(D.otherWastes).click();
-    cy.get('tbody').find('td').eq(9).should('have.text', '28');
-
-    // Testing sort by outOfScope
-    cy.get('th').contains(D.outOfScope).click();
-    cy.get('tbody').find('td').eq(10).should('have.text', '8');
-    cy.get('th').contains(D.outOfScope).click();
-    cy.get('tbody').find('td').eq(10).should('have.text', '9');
+    cy.wait(500);
+    cy.get('tbody').find('td').eq(9).should('have.text', '12');
 
     // Testing sort by at totalProcessed
     cy.get('th').contains(D.totalProcessed).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(11).should('have.text', '2');
     cy.get('th').contains(D.totalProcessed).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(11).should('have.text', '6');
 
     // Testing sort by absInterviewer
     cy.get('th').contains(D.absInterviewer).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(13).should('have.text', '2');
     cy.get('th').contains(D.absInterviewer).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(13).should('have.text', '3');
 
     // Testing sort by otherReason
     cy.get('th').contains(D.otherReason).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(14).should('have.text', '2');
     cy.get('th').contains(D.otherReason).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(14).should('have.text', '7');
 
     // Testing sort by totalClosed
     cy.get('th').contains(D.totalClosed).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(15).should('have.text', '5');
     cy.get('th').contains(D.totalClosed).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(15).should('have.text', '9');
 
     // Testing sort by allocated
     cy.get('th').contains(D.allocated).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(17).should('have.text', '88');
     cy.get('th').contains(D.allocated).click();
+    cy.wait(500);
     cy.get('tbody').find('td').eq(17).should('have.text', '104');
         
     // Testing search field filter by site
     cy.get('.SearchFieldInput').clear().type('sou');
+    cy.wait(1500);
     cy.get('tbody').find('tr').should('have.length', 1);
     cy.get('tbody')
       .find('td')
@@ -293,12 +313,12 @@ context('sonor', () => {
       .should('have.text', 'South region organizational unit');
 
     cy.get('#datePicker').click().type('2020-08-31');
-    cy.wait(500);
+    cy.wait(1000);
     cy.get('tbody').find('td').eq(7).should('have.text', '2');
 
     // Return to main screen
     cy.get('a').contains(D.back).click();
-    cy.wait(500)
+    cy.wait(1000)
     cy.get('#MainScreen');
 
     // Go to monitoring table by interviewers for the first survey
@@ -308,14 +328,14 @@ context('sonor', () => {
     cy.wait(13000)
     cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
     cy.wait(13000)
-    cy.get('tbody').find('td').eq(2).should('have.text', '2.9%');
+    cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
 
 
     //Testing search field filter by interviewer
     cy.get('.SearchFieldInput').clear();
-    cy.wait(500)
+    cy.wait(1500)
     cy.get('.SearchFieldInput').type('leg');
-    cy.wait(500)
+    cy.wait(1500)
     cy.get('tbody').find('tr').should('have.length', 1);
     cy.get('tbody').find('td').first().should('have.text', 'Legrand Patrice');
 
@@ -331,12 +351,12 @@ context('sonor', () => {
 
     // Go to collection table by survey
     cy.get('button').contains(D.follow).click();
-    cy.wait(500)
+    cy.wait(1500)
     cy.get('[data-testid="collection-by-survey"]').click({ force: true });
     
     cy.wait(['@get-state-count-by-campaign', '@get-contact-outcomes-by-campaign']);
-    cy.wait(3000);
-    cy.get('tbody').find('td').eq(2).should('have.text', '3.2%');
+    cy.wait(4000);
+    cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
 
     // Testing search field filter by survey label
@@ -354,9 +374,9 @@ context('sonor', () => {
     cy.get('[data-testid="collection-by-survey-one-interviewer"]').click({ force: true });
     cy.get('[data-testid="Interviewer_selector"]').select('INTW5');
 
-    cy.wait(3000);
+    cy.wait(4000);
 
-    cy.get('tbody').find('td').eq(2).should('have.text', '1.1%');
+    cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
     cy.get('tbody').find('tr').should('have.length', 3);
 
