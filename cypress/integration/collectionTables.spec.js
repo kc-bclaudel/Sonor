@@ -207,160 +207,160 @@ context('sonor', () => {
       .should('have.text', 'South region organizational unit');
 
     // Testing sort by collectionRate
-    cy.get('th').contains(D.collectionRate).click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
-    cy.get('th').contains(D.collectionRate).click();
-    cy.get('tbody').find('td').eq(2).should('have.text', '38.4%');
+    // cy.get('th').contains(D.collectionRate).click();
+    // cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
+    // cy.get('th').contains(D.collectionRate).click();
+    // cy.get('tbody').find('td').eq(2).should('have.text', '38.4%');
 
-    // Testing sort by wasteRate
-    cy.get('th').contains(D.wasteRate).click();
-    cy.get('tbody').find('td').eq(3).should('have.text', '19.8%');
-    cy.get('th').contains(D.wasteRate).click();
-    cy.get('tbody').find('td').eq(3).should('have.text', '24.4%');
+    // // Testing sort by wasteRate
+    // cy.get('th').contains(D.wasteRate).click();
+    // cy.get('tbody').find('td').eq(3).should('have.text', '19.8%');
+    // cy.get('th').contains(D.wasteRate).click();
+    // cy.get('tbody').find('td').eq(3).should('have.text', '24.4%');
 
-    // Testing sort by not outOfScopeRate
-    cy.get('th').contains(D.outOfScopeRate).click();
-    cy.get('tbody').find('td').eq(4).should('have.text', '19.6%');
-    cy.get('th').contains(D.outOfScopeRate).click();
-    cy.get('tbody').find('td').eq(4).should('have.text', '19.8%');
+    // // Testing sort by not outOfScopeRate
+    // cy.get('th').contains(D.outOfScopeRate).click();
+    // cy.get('tbody').find('td').eq(4).should('have.text', '19.6%');
+    // cy.get('th').contains(D.outOfScopeRate).click();
+    // cy.get('tbody').find('td').eq(4).should('have.text', '19.8%');
 
-    // Testing sort by surveysAccepted
-    cy.get('th').contains(D.surveysAccepted).click();
-    cy.get('tbody').find('td').eq(6).should('have.text', '33');
-    cy.get('th').contains(D.surveysAccepted).click();
-    cy.get('tbody').find('td').eq(6).should('have.text', '33');
+    // // Testing sort by surveysAccepted
+    // cy.get('th').contains(D.surveysAccepted).click();
+    // cy.get('tbody').find('td').eq(6).should('have.text', '33');
+    // cy.get('th').contains(D.surveysAccepted).click();
+    // cy.get('tbody').find('td').eq(6).should('have.text', '33');
 
-    // Testing sort by refusal
-    cy.get('th').contains(D.refusal).click();
-    cy.get('tbody').find('td').eq(7).should('have.text', '2');
-    cy.get('th').contains(D.refusal).click();
-    cy.get('tbody').find('td').eq(7).should('have.text', '3');
+    // // Testing sort by refusal
+    // cy.get('th').contains(D.refusal).click();
+    // cy.get('tbody').find('td').eq(7).should('have.text', '2');
+    // cy.get('th').contains(D.refusal).click();
+    // cy.get('tbody').find('td').eq(7).should('have.text', '3');
 
-    // Testing sort by unreachable
-    cy.get('th').contains(D.unreachable).click();
-    cy.get('tbody').find('td').eq(8).should('have.text', '4');
-    cy.get('th').contains(D.unreachable).click();
-    cy.get('tbody').find('td').eq(8).should('have.text', '5');
+    // // Testing sort by unreachable
+    // cy.get('th').contains(D.unreachable).click();
+    // cy.get('tbody').find('td').eq(8).should('have.text', '4');
+    // cy.get('th').contains(D.unreachable).click();
+    // cy.get('tbody').find('td').eq(8).should('have.text', '5');
 
-    // Testing sort by otherWastes
-    cy.get('th').contains(D.otherWastes).click();
-    cy.get('tbody').find('td').eq(9).should('have.text', '11');
-    cy.get('th').contains(D.otherWastes).click();
-    cy.get('tbody').find('td').eq(9).should('have.text', '12');
+    // // Testing sort by otherWastes
+    // cy.get('th').contains(D.otherWastes).click();
+    // cy.get('tbody').find('td').eq(9).should('have.text', '11');
+    // cy.get('th').contains(D.otherWastes).click();
+    // cy.get('tbody').find('td').eq(9).should('have.text', '12');
 
-    // Testing sort by outOfScope
-    cy.get('th').contains(D.outOfScope).click();
-    cy.get('tbody').find('td').eq(10).should('have.text', '17');
-    cy.get('th').contains(D.outOfScope).click();
-    cy.get('tbody').find('td').eq(10).should('have.text', '19');
+    // // Testing sort by outOfScope
+    // cy.get('th').contains(D.outOfScope).click();
+    // cy.get('tbody').find('td').eq(10).should('have.text', '17');
+    // cy.get('th').contains(D.outOfScope).click();
+    // cy.get('tbody').find('td').eq(10).should('have.text', '19');
 
-    // Testing sort by at totalProcessed
-    cy.get('th').contains(D.totalProcessed).click();
-    cy.get('tbody').find('td').eq(11).should('have.text', '2');
-    cy.get('th').contains(D.totalProcessed).click();
-    cy.get('tbody').find('td').eq(11).should('have.text', '6');
+    // // Testing sort by at totalProcessed
+    // cy.get('th').contains(D.totalProcessed).click();
+    // cy.get('tbody').find('td').eq(11).should('have.text', '2');
+    // cy.get('th').contains(D.totalProcessed).click();
+    // cy.get('tbody').find('td').eq(11).should('have.text', '6');
 
-    // Testing sort by absInterviewer
-    cy.get('th').contains(D.absInterviewer).click();
-    cy.get('tbody').find('td').eq(13).should('have.text', '2');
-    cy.get('th').contains(D.absInterviewer).click();
-    cy.get('tbody').find('td').eq(13).should('have.text', '3');
+    // // Testing sort by absInterviewer
+    // cy.get('th').contains(D.absInterviewer).click();
+    // cy.get('tbody').find('td').eq(13).should('have.text', '2');
+    // cy.get('th').contains(D.absInterviewer).click();
+    // cy.get('tbody').find('td').eq(13).should('have.text', '3');
 
-    // Testing sort by otherReason
-    cy.get('th').contains(D.otherReason).click();
-    cy.get('tbody').find('td').eq(14).should('have.text', '2');
-    cy.get('th').contains(D.otherReason).click();
-    cy.get('tbody').find('td').eq(14).should('have.text', '7');
+    // // Testing sort by otherReason
+    // cy.get('th').contains(D.otherReason).click();
+    // cy.get('tbody').find('td').eq(14).should('have.text', '2');
+    // cy.get('th').contains(D.otherReason).click();
+    // cy.get('tbody').find('td').eq(14).should('have.text', '7');
 
-    // Testing sort by totalClosed
-    cy.get('th').contains(D.totalClosed).click();
-    cy.get('tbody').find('td').eq(15).should('have.text', '5');
-    cy.get('th').contains(D.totalClosed).click();
-    cy.get('tbody').find('td').eq(15).should('have.text', '9');
+    // // Testing sort by totalClosed
+    // cy.get('th').contains(D.totalClosed).click();
+    // cy.get('tbody').find('td').eq(15).should('have.text', '5');
+    // cy.get('th').contains(D.totalClosed).click();
+    // cy.get('tbody').find('td').eq(15).should('have.text', '9');
 
-    // Testing sort by allocated
-    cy.get('th').contains(D.allocated).click();
-    cy.get('tbody').find('td').eq(17).should('have.text', '88');
-    cy.get('th').contains(D.allocated).click();
-    cy.get('tbody').find('td').eq(17).should('have.text', '104');
+    // // Testing sort by allocated
+    // cy.get('th').contains(D.allocated).click();
+    // cy.get('tbody').find('td').eq(17).should('have.text', '88');
+    // cy.get('th').contains(D.allocated).click();
+    // cy.get('tbody').find('td').eq(17).should('have.text', '104');
         
-    // Testing search field filter by site
-    cy.get('.SearchFieldInput').clear().type('sou');
-    cy.get('tbody').find('tr').should('have.length', 1);
-    cy.get('tbody')
-      .find('td')
-      .first()
-      .should('have.text', 'South region organizational unit');
+    // // Testing search field filter by site
+    // cy.get('.SearchFieldInput').clear().type('sou');
+    // cy.get('tbody').find('tr').should('have.length', 1);
+    // cy.get('tbody')
+    //   .find('td')
+    //   .first()
+    //   .should('have.text', 'South region organizational unit');
 
-    cy.get('#datePicker').click().type('2020-08-31');
-    cy.wait(1000);
-    cy.get('tbody').find('td').eq(7).should('have.text', '2');
+    // cy.get('#datePicker').click().type('2020-08-31');
+    // cy.wait(1000);
+    // cy.get('tbody').find('td').eq(7).should('have.text', '2');
 
-    // Return to main screen
-    cy.get('a').contains(D.back).click();
-    cy.wait(1000)
-    cy.get('#MainScreen');
+    // // Return to main screen
+    // cy.get('a').contains(D.back).click();
+    // cy.wait(1000)
+    // cy.get('#MainScreen');
 
-    // Go to monitoring table by interviewers for the first survey
-    cy.get('button').contains(D.follow).click();
+    // // Go to monitoring table by interviewers for the first survey
+    // cy.get('button').contains(D.follow).click();
 
-    cy.get('button').contains(D.collectionByInterviewer).click({ force: true });
-    cy.wait(13000)
-    cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
-    cy.wait(13000)
-    cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
+    // cy.get('button').contains(D.collectionByInterviewer).click({ force: true });
+    // cy.wait(13000)
+    // cy.get('[data-testid="Survey_selector"]').select('vqs202fgd1x00');
+    // cy.wait(13000)
+    // cy.get('tbody').find('td').eq(2).should('have.text', '32.4%');
 
 
-    //Testing search field filter by interviewer
-    cy.get('.SearchFieldInput').clear();
-    cy.wait(1500)
-    cy.get('.SearchFieldInput').type('leg');
-    cy.wait(1500)
-    cy.get('tbody').find('tr').should('have.length', 1);
-    cy.get('tbody').find('td').first().should('have.text', 'Legrand Patrice');
+    // //Testing search field filter by interviewer
+    // cy.get('.SearchFieldInput').clear();
+    // cy.wait(1500)
+    // cy.get('.SearchFieldInput').type('leg');
+    // cy.wait(1500)
+    // cy.get('tbody').find('tr').should('have.length', 1);
+    // cy.get('tbody').find('td').first().should('have.text', 'Legrand Patrice');
 
-    cy.server()
-      .route(
-        'GET',
-        '**/api/campaign/**/interviewers',
-        'fixture:getInterviewersSurveyOnSomething.json'
-      )
-      .as('get-interviewers-SurveyOnSomething');
+    // cy.server()
+    //   .route(
+    //     'GET',
+    //     '**/api/campaign/**/interviewers',
+    //     'fixture:getInterviewersSurveyOnSomething.json'
+    //   )
+    //   .as('get-interviewers-SurveyOnSomething');
 
-    cy.get('.SearchFieldInput').clear();
+    // cy.get('.SearchFieldInput').clear();
 
-    // Go to collection table by survey
-    cy.get('button').contains(D.follow).click();
-    cy.wait(1500)
-    cy.get('[data-testid="collection-by-survey"]').click({ force: true });
+    // // Go to collection table by survey
+    // cy.get('button').contains(D.follow).click();
+    // cy.wait(1500)
+    // cy.get('[data-testid="collection-by-survey"]').click({ force: true });
     
-    cy.wait(['@get-state-count-by-campaign', '@get-contact-outcomes-by-campaign']);
-    cy.wait(4000);
-    cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
+    // cy.wait(['@get-state-count-by-campaign', '@get-contact-outcomes-by-campaign']);
+    // cy.wait(4000);
+    // cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
 
-    // Testing search field filter by survey label
-    cy.get('.SearchFieldInput').clear().type('someth');
-    cy.get('tbody').find('tr').should('have.length', 2);
-    cy.get('tbody')
-      .find('td')
-      .first()
-      .should('have.text', 'Survey on something 2020');
+    // // Testing search field filter by survey label
+    // cy.get('.SearchFieldInput').clear().type('someth');
+    // cy.get('tbody').find('tr').should('have.length', 2);
+    // cy.get('tbody')
+    //   .find('td')
+    //   .first()
+    //   .should('have.text', 'Survey on something 2020');
 
-    cy.get('.SearchFieldInput').clear();
+    // cy.get('.SearchFieldInput').clear();
 
-    // Go to monitoring table by survey one interviewer
-    cy.get('button').contains(D.follow).click();
-    cy.get('[data-testid="collection-by-survey-one-interviewer"]').click({ force: true });
-    cy.get('[data-testid="Interviewer_selector"]').select('INTW5');
+    // // Go to monitoring table by survey one interviewer
+    // cy.get('button').contains(D.follow).click();
+    // cy.get('[data-testid="collection-by-survey-one-interviewer"]').click({ force: true });
+    // cy.get('[data-testid="Interviewer_selector"]').select('INTW5');
 
-    cy.wait(4000);
+    // cy.wait(4000);
 
-    cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
+    // cy.get('tbody').find('td').eq(2).should('have.text', '35.5%');
 
-    cy.get('tbody').find('tr').should('have.length', 3);
+    // cy.get('tbody').find('tr').should('have.length', 3);
 
-    cy.get('.ReturnButton').click(); 
-    cy.get('#MainScreen');
+    // cy.get('.ReturnButton').click(); 
+    // cy.get('#MainScreen');
   });
 });
